@@ -1,0 +1,21 @@
+no ReLU in store+detector        : KL 72.327 acc 0.099 agree 0.101
+no ReLU in cancellers            : KL 605.523 acc 0.060 agree 0.060
+no ReLU in keep gate             : KL 9.117 acc 0.547 agree 0.550
+no ReLU in late gate             : KL 2116.483 acc 0.082 agree 0.081
+no ReLU in memory                : KL 7.969 acc 0.443 agree 0.449
+no ReLU in memory without 15     : KL 7.555 acc 0.418 agree 0.424
+no ReLU in memory without 3, 15  : KL 7.708 acc 0.423 agree 0.429
+no ReLU in neuron 0              : KL 1.633 acc 0.765 agree 0.776
+no ReLU in neuron 3              : KL 0.037 acc 0.944 agree 0.979
+no ReLU in neuron 10             : KL 0.035 acc 0.944 agree 0.981
+no ReLU in neuron 11             : KL 0.018 acc 0.950 agree 0.988
+no ReLU in neuron 12             : KL 0.002 acc 0.953 agree 0.995
+no ReLU in neuron 13             : KL 0.001 acc 0.953 agree 0.999
+no ReLU in neuron 14             : KL 0.023 acc 0.950 agree 0.988
+no ReLU in neuron 15             : KL 0.343 acc 0.881 agree 0.907
+--- switching kept only in some memory neurons
+memory linear except [0, 15]     : KL 0.256 acc 0.895 agree 0.916
+memory linear except [0]         : KL 1.088 acc 0.798 agree 0.815
+memory linear except [15]        : KL 7.555 acc 0.418 agree 0.424
+memory linear except [0, 14, 15] : KL 0.233 acc 0.899 agree 0.922
+memory linear except [0, 3, 15]  : KL 0.237 acc 0.898 agree 0.921

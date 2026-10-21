@@ -1,0 +1,10 @@
+v2 error vs true accuracy across the 200 copies: correlation -0.69; mean error for copies above 92% +0.22, below 88% +0.98
+copy 9: truth 83.20%
+  v2    85.46%: third>0: est 86.16% (wrong 5.42/6.86/1.56) truth 84.18% (wrong 5.36/6.12/4.34) | third<0: est 73.30% (wrong 9.60/8.78/8.32) truth 66.31% (wrong 8.07/3.95/21.68)
+  final 84.71%: third>0: est 85.76% (wrong 5.76/6.92/1.57) truth 84.18% (wrong 5.36/6.12/4.34) | third<0: est 66.55% (wrong 7.64/3.71/22.10) truth 66.31% (wrong 8.07/3.95/21.68)
+copy 100: truth 84.01%
+  v2    86.06%: third>0: est 86.66% (wrong 5.10/6.71/1.52) truth 84.88% (wrong 5.06/5.89/4.17) | third<0: est 75.68% (wrong 8.99/7.86/7.47) truth 68.99% (wrong 7.67/3.42/19.92)
+  final 85.50%: third>0: est 86.45% (wrong 5.32/6.72/1.52) truth 84.88% (wrong 5.06/5.89/4.17) | third<0: est 69.08% (wrong 7.23/3.18/20.51) truth 68.99% (wrong 7.67/3.42/19.92)
+copy 62: truth 83.83%
+  v2    85.75%: third>0: est 86.28% (wrong 4.69/7.45/1.58) truth 84.66% (wrong 4.73/6.63/3.98) | third<0: est 76.61% (wrong 6.42/8.73/8.24) truth 69.42% (wrong 5.60/4.04/20.95)
+  final 84.94%: third>0: est 85.86% (wrong 5.06/7.49/1.59) truth 84.66% (wrong 4.73/6.63/3.98) | third<0: est 69.11% (wrong 5.31/3.86/21.71) truth 69.42% (wrong 5.60/4.04/20.95)

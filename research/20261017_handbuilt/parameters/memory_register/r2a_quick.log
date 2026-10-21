@@ -1,0 +1,46 @@
+== 14 cols
+  row 1: rel err fwd 0.164  back 2.197  both 0.153
+  row 2: rel err fwd 0.104  back 0.700  both 0.077
+  row 3: rel err fwd 0.104  back 3.596  both 0.073
+  row 4: rel err fwd 0.153  back 0.901  both 0.108
+  row 5: rel err fwd 0.213  back 4.375  both 0.161
+  row 6: rel err fwd 0.251  back 4.799  both 0.207
+  row 7: rel err fwd 0.246  back 4.054  both 0.256
+  row 8: rel err fwd 0.436  back 4.080  both 0.397
+== 16 cols
+  row 1: rel err fwd 0.250  back 2.133  both 0.244
+  row 2: rel err fwd 0.143  back 1.313  both 0.123
+  row 3: rel err fwd 0.119  back 0.767  both 0.101
+  row 4: rel err fwd 0.180  back 0.208  both 0.145
+  row 5: rel err fwd 0.210  back 2.642  both 0.158
+  row 6: rel err fwd 0.276  back 2.532  both 0.227
+  row 7: rel err fwd 0.354  back 7.169  both 0.361
+  row 8: rel err fwd 0.499  back 1.594  both 0.424
+cols 14 rows [1, 2, 4, 5, 7] mode f: quick net (minus structure) +56.7 at g 0.92
+cols 14 rows [1, 2, 4, 5, 7] mode fb: quick net (minus structure) +68.1 at g 0.89
+cols 14 rows [1, 4, 7] mode f: quick net (minus structure) +16.1 at g 0.87
+cols 14 rows [1, 4, 7] mode fb: quick net (minus structure) +19.4 at g 0.85
+cols 14 rows [1, 3, 5, 7] mode f: quick net (minus structure) +33.1 at g 0.91
+cols 14 rows [1, 3, 5, 7] mode fb: quick net (minus structure) +39.8 at g 0.89
+cols 14 rows [2, 5, 7] mode f: quick net (minus structure) +12.2 at g 0.94
+cols 14 rows [2, 5, 7] mode fb: quick net (minus structure) +15.8 at g 0.91
+cols 14 rows [1, 2, 4, 5, 7, 8] mode f: quick net (minus structure) +63.5 at g 0.92
+cols 14 rows [1, 2, 4, 5, 7, 8] mode fb: quick net (minus structure) +76.2 at g 0.90
+cols 14 rows [1, 3, 5, 7] mode f: quick net (minus structure) +33.1 at g 0.91
+cols 14 rows [1, 3, 5, 7] mode fb: quick net (minus structure) +39.8 at g 0.89
+cols 14 rows [2, 4, 6, 8] mode f: quick net (minus structure) +25.3 at g 0.93
+cols 14 rows [2, 4, 6, 8] mode fb: quick net (minus structure) +34.7 at g 0.91
+cols 16 rows [1, 2, 4, 5, 7] mode f: quick net (minus structure) +51.0 at g 0.90
+cols 16 rows [1, 2, 4, 5, 7] mode fb: quick net (minus structure) +61.7 at g 0.85
+cols 16 rows [1, 4, 7] mode f: quick net (minus structure) +11.1 at g 0.84
+cols 16 rows [1, 4, 7] mode fb: quick net (minus structure) +14.7 at g 0.80
+cols 16 rows [1, 3, 5, 7] mode f: quick net (minus structure) +29.0 at g 0.91
+cols 16 rows [1, 3, 5, 7] mode fb: quick net (minus structure) +35.3 at g 0.86
+cols 16 rows [2, 5, 7] mode f: quick net (minus structure) +10.9 at g 0.93
+cols 16 rows [2, 5, 7] mode fb: quick net (minus structure) +14.8 at g 0.88
+cols 16 rows [1, 2, 4, 5, 7, 8] mode f: quick net (minus structure) +56.4 at g 0.91
+cols 16 rows [1, 2, 4, 5, 7, 8] mode fb: quick net (minus structure) +69.9 at g 0.87
+cols 16 rows [1, 3, 5, 7] mode f: quick net (minus structure) +29.0 at g 0.91
+cols 16 rows [1, 3, 5, 7] mode fb: quick net (minus structure) +35.3 at g 0.86
+cols 16 rows [2, 4, 6, 8] mode f: quick net (minus structure) +24.8 at g 0.92
+cols 16 rows [2, 4, 6, 8] mode fb: quick net (minus structure) +35.5 at g 0.88

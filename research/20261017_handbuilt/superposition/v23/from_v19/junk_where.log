@@ -1,0 +1,7 @@
+no wrap 94.20%, wrap 0.1 89.72%
+leftover nonzero at positions after the largest only? max |leftover| before the largest: 1.08e-01
+remove the leftover at the largest                      : 90.66%
+remove the leftover after the largest, not the largest  : 90.97%
+remove the leftover at the second                       : 92.20%
+remove the leftover at the third                        : 90.00%
+leftover at the largest: positive on 29% of lists, median 0.000

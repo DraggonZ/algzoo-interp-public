@@ -1,0 +1,8 @@
+small numbers: variance 0.572, covariance 0.038
+example: true 0.9532; run-3 estimate 0.9611 (+0.79); with blur 0.9584 (+0.52); cost 8166 runs' worth
+0: true 0.9101; run-3 estimate 0.9119 (+0.18); with blur 0.8892 (-2.09); cost 8365 runs' worth
+1: true 0.8804; run-3 estimate 0.8671 (-1.33); with blur 0.8538 (-2.66); cost 8392 runs' worth
+2: true 0.9485; run-3 estimate 0.9478 (-0.07); with blur 0.9387 (-0.98); cost 8186 runs' worth
+3: true 0.9320; run-3 estimate 0.9352 (+0.32); with blur 0.9310 (-0.10); cost 8287 runs' worth
+4: true 0.8898; run-3 estimate 0.8792 (-1.06); with blur 0.8665 (-2.33); cost 8459 runs' worth
+RMSE over six: run-3 0.78 points; with blur 1.74

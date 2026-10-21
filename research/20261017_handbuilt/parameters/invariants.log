@@ -1,0 +1,50 @@
+off in the most common pattern: [np.int64(4), np.int64(5), np.int64(9)]
+cosine of each row with the direction of a number k = 0..3 steps after it entered:
+  into  0: -0.007 -0.221 -0.146 -0.108
+  into  1: -0.002 -0.025 -0.014 +0.030
+  into  2: -0.000 +0.032 +0.048 +0.035
+  into  3: -0.004 +0.005 -0.027 +0.003
+  into  4: +0.000 -0.009 -0.005 +0.002
+  into  5: +0.434 -0.215 -0.192 -0.183
+  into  6: +0.002 +0.012 +0.056 +0.073
+  into  7: +0.001 +0.035 +0.022 +0.001
+  into  8: +0.004 -0.008 -0.044 -0.051
+  into  9: +0.686 -0.064 -0.045 -0.022
+  into 10: -0.001 +0.024 +0.022 +0.008
+  into 11: +0.000 +0.006 -0.024 -0.270
+  into 12: +0.000 -0.194 -0.420 -0.351
+  into 13: -0.001 -0.278 -0.022 +0.167
+  into 14: -0.009 -0.166 -0.095 -0.057
+  into 15: -0.003 -0.242 -0.034 -0.003
+  readout 0 (centred): -0.025 -0.022 -0.109 -0.104
+  readout 1 (centred): -0.025 -0.113 -0.084 -0.050
+  readout 2 (centred): -0.026 -0.057 -0.031 -0.021
+  readout 3 (centred): -0.024 -0.001 +0.007 -0.033
+  readout 4 (centred): -0.024 +0.015 +0.002 -0.045
+  readout 5 (centred): -0.029 +0.039 -0.027 +0.134
+  readout 6 (centred): -0.035 -0.039 +0.163 +0.145
+  readout 7 (centred): -0.034 +0.134 +0.140 +0.065
+  readout 8 (centred): -0.028 +0.172 +0.075 +0.060
+  readout 9 (centred): +0.348 -0.116 -0.086 -0.112
+
+ARC 0.95314; every number shifted by a: +0.1: 0.9557, +0.3: 0.9555, +1.0: 0.9401, -0.3: 0.9195, -1.0: 0.5461
+
+rule A' on all 14 non-gate rows: cost 1.94 points
+  row  0 alone: cost +2.41; weight change 0.0183
+  row  1 alone: cost +0.54; weight change 0.0036
+  row  2 alone: cost +0.02; weight change 0.0002
+  row  3 alone: cost +0.25; weight change 0.0106
+  row  4 alone: cost -0.01; weight change 0.0004
+  row  6 alone: cost +0.18; weight change 0.0014
+  row  7 alone: cost +0.10; weight change 0.0008
+  row  8 alone: cost +0.92; weight change 0.0054
+  row 10 alone: cost +0.05; weight change 0.0012
+  row 11 alone: cost +0.00; weight change 0.0007
+  row 12 alone: cost +0.00; weight change 0.0002
+  row 13 alone: cost +0.03; weight change 0.0016
+  row 14 alone: cost +1.19; weight change 0.0166
+  row 15 alone: cost +0.21; weight change 0.0079
+rule A' on readout 0-8: cost 0.79 points
+rule A' on readout 0-9: cost 72.09 points
+
+two-class rule (A on 0, 1, 2, 4, 7, 14, 15; A' on 3, 6, 10-13): cost 0.54 points

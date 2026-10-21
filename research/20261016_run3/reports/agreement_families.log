@@ -1,0 +1,16 @@
+2nd_argmax 16x10 (ARC's model, seeds 0-4) #0: accuracy 95.32%, reduced minus full +0.02 points; answers changed 3.3%; replaced inputs cause 1.49 points of mistakes and fix 1.47
+2nd_argmax 16x10 (ARC's model, seeds 0-4) #1: accuracy 91.03%, reduced minus full +0.09 points; answers changed 6.8%; replaced inputs cause 3.31 points of mistakes and fix 3.23
+2nd_argmax 16x10 (ARC's model, seeds 0-4) #2: accuracy 88.05%, reduced minus full +1.36 points; answers changed 8.5%; replaced inputs cause 4.60 points of mistakes and fix 3.24
+2nd_argmax 16x10 (ARC's model, seeds 0-4) #3: accuracy 94.86%, reduced minus full -0.03 points; answers changed 4.5%; replaced inputs cause 2.05 points of mistakes and fix 2.08
+2nd_argmax 16x10 (ARC's model, seeds 0-4) #4: accuracy 93.22%, reduced minus full -0.25 points; answers changed 5.3%; replaced inputs cause 2.28 points of mistakes and fix 2.54
+2nd_argmax 16x10 (ARC's model, seeds 0-4) #5: accuracy 88.96%, reduced minus full -0.07 points; answers changed 7.4%; replaced inputs cause 3.39 points of mistakes and fix 3.45
+2nd_argmax 32x10 #0: accuracy 99.45%, reduced minus full -0.05 points; answers changed 0.6%; replaced inputs cause 0.27 points of mistakes and fix 0.31
+2nd_argmax 32x10 #1: accuracy 99.33%, reduced minus full +0.06 points; answers changed 0.5%; replaced inputs cause 0.28 points of mistakes and fix 0.22
+2nd_argmax 32x10 #2: accuracy 99.15%, reduced minus full +0.04 points; answers changed 0.8%; replaced inputs cause 0.40 points of mistakes and fix 0.36
+2nd_argmax 32x10 #3: accuracy 99.27%, reduced minus full +0.02 points; answers changed 0.6%; replaced inputs cause 0.28 points of mistakes and fix 0.26
+2nd_argmax 32x10 #4: accuracy 99.08%, reduced minus full +0.20 points; answers changed 0.8%; replaced inputs cause 0.46 points of mistakes and fix 0.26
+argmedian 32x11 #0: accuracy 67.36%, reduced minus full +0.30 points; answers changed 26.2%; replaced inputs cause 10.46 points of mistakes and fix 10.15
+argmedian 32x11 #1: accuracy 68.10%, reduced minus full -0.11 points; answers changed 24.9%; replaced inputs cause 9.69 points of mistakes and fix 9.80
+argmedian 32x11 #2: accuracy 73.27%, reduced minus full +2.76 points; answers changed 25.4%; replaced inputs cause 11.99 points of mistakes and fix 9.22
+argmedian 32x11 #3: accuracy 73.95%, reduced minus full +4.34 points; answers changed 24.1%; replaced inputs cause 12.33 points of mistakes and fix 7.98
+argmedian 32x11 #4: accuracy 74.82%, reduced minus full +0.10 points; answers changed 24.6%; replaced inputs cause 10.38 points of mistakes and fix 10.28

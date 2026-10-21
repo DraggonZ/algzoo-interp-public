@@ -1,0 +1,6 @@
+share of steps on, by input as a fraction of the largest so far (rows: canceller 1, 6, 7, 8)
+ratio bins       -1.00  0.50  0.70  0.80  0.90  0.95  1.00  1.05  1.10  1.30
+canceller 1: on  0.97  0.79  0.69  0.57  0.40  0.29  0.23  0.16  0.07  0.00   fit: -9.8 x + 8.9 m1 -> alpha 0.91
+canceller 6: on  0.98  0.87  0.75  0.62  0.50  0.44  0.27  0.09  0.01  0.00   fit: -10.4 x + 9.4 m1 -> alpha 0.91
+canceller 7: on  1.00  1.00  0.95  0.84  0.69  0.58  0.08  0.00  0.00  0.00   fit: -13.1 x + 12.2 m1 -> alpha 0.93
+canceller 8: on  0.95  0.61  0.45  0.36  0.28  0.20  0.14  0.09  0.04  0.00   fit: -10.9 x + 8.6 m1 -> alpha 0.79

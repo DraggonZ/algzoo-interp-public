@@ -1,0 +1,14 @@
+position 1 trained : memory moves per unit, median: forgotten number nan (n=0), kept number 10.501 (n=23092), ratio nan
+position 1 v18     : memory moves per unit, median: forgotten number nan (n=0), kept number 0.250 (n=23092), ratio nan
+position 2 trained : memory moves per unit, median: forgotten number 0.385 (n=6550), kept number 13.863 (n=30719), ratio 0.028
+position 2 v18     : memory moves per unit, median: forgotten number 0.250 (n=6550), kept number 0.250 (n=30719), ratio 1.000
+position 3 trained : memory moves per unit, median: forgotten number 0.449 (n=14830), kept number 18.831 (n=31578), ratio 0.024
+position 3 v18     : memory moves per unit, median: forgotten number 0.250 (n=14830), kept number 0.250 (n=31578), ratio 1.000
+position 4 trained : memory moves per unit, median: forgotten number 0.491 (n=22771), kept number 17.524 (n=29826), ratio 0.028
+position 4 v18     : memory moves per unit, median: forgotten number 0.250 (n=22771), kept number 0.250 (n=29826), ratio 1.000
+position 5 trained : memory moves per unit, median: forgotten number 0.561 (n=29751), kept number 22.485 (n=26137), ratio 0.025
+position 5 v18     : memory moves per unit, median: forgotten number 0.250 (n=29751), kept number 0.250 (n=26137), ratio 1.000
+position 6 trained : memory moves per unit, median: forgotten number 0.620 (n=35936), kept number 20.520 (n=22448), ratio 0.030
+position 6 v18     : memory moves per unit, median: forgotten number 0.250 (n=35936), kept number 0.250 (n=22448), ratio 1.000
+position 7 trained : memory moves per unit, median: forgotten number 0.679 (n=40736), kept number 24.352 (n=18763), ratio 0.028
+position 7 v18     : memory moves per unit, median: forgotten number 0.250 (n=40736), kept number 0.250 (n=18763), ratio 1.000

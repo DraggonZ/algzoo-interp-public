@@ -1,0 +1,11 @@
+trained: all 0.953 | onepos 0.224 last 0.944 step8 0.973 row 0.962 ord 0.962 | wrong third 0.61 largest 0.15
+all 0.613  w 0.8 F 1.0 hide 1.0 | onepos 0.083 last 0.995 step8 0.112 row 0.514 ord 0.693 | wrong third 0.06 largest 0.77
+all 0.611  w 0.9 F 1.0 hide 1.0 | onepos 0.084 last 0.995 step8 0.109 row 0.512 ord 0.691 | wrong third 0.07 largest 0.74
+all 0.606  w 0.7 F 1.0 hide 1.0 | onepos 0.079 last 0.991 step8 0.114 row 0.476 ord 0.700 | wrong third 0.06 largest 0.79
+all 0.588  w 0.5 F 1.0 hide 1.2 | onepos 0.105 last 0.917 step8 0.125 row 0.468 ord 0.681 | wrong third 0.23 largest 0.47
+all 0.587  w 0.5 F 1.0 hide 1.0 | onepos 0.083 last 0.917 step8 0.127 row 0.435 ord 0.695 | wrong third 0.10 largest 0.78
+all 0.582  w 0.9 F 0.5 hide 1.0 | onepos 0.082 last 0.994 step8 0.085 row 0.479 ord 0.657 | wrong third 0.05 largest 0.79
+all 0.578  w 0.8 F 0.5 hide 1.0 | onepos 0.077 last 0.949 step8 0.077 row 0.480 ord 0.659 | wrong third 0.06 largest 0.82
+all 0.575  w 0.9 F 0.2 hide 1.0 | onepos 0.080 last 0.920 step8 0.080 row 0.480 ord 0.658 | wrong third 0.06 largest 0.83
+all 0.574  w 0.7 F 0.5 hide 1.0 | onepos 0.080 last 0.901 step8 0.081 row 0.480 ord 0.659 | wrong third 0.06 largest 0.84
+all 0.570  w 0.5 F 0.5 hide 1.0 | onepos 0.090 last 0.849 step8 0.094 row 0.480 ord 0.659 | wrong third 0.06 largest 0.86

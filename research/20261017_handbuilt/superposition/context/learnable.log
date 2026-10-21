@@ -1,0 +1,4 @@
+F1 positions                : held-out accuracy 81.0% (always 'second' 79.3%), AUC 0.785
+F2 + ratios                 : held-out accuracy 86.1% (always 'second' 79.3%), AUC 0.897
+F3 + kept smaller numbers   : held-out accuracy 86.9% (always 'second' 79.3%), AUC 0.907
+F4 all values               : held-out accuracy 88.6% (always 'second' 79.3%), AUC 0.936

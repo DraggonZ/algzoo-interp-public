@@ -1,0 +1,7 @@
+score_memory_rule_v2.py sha256 45d18216a799; rule r5b_write_only.py
+192 weights covered, 1 constants, 1 kinds; relative weight error 0.2509; structure 151 bits; lookup table 1916 bits
+  share 0.001: constants 6 bits (6.2 each) + structure 151 + rest 1713; net +45
+  share 0.002: constants 6 bits (5.7 each) + structure 151 + rest 1728; net +31
+  share 0.005: constants 5 bits (5.0 each) + structure 151 + rest 1780; net -21
+KL from ARC 9.3935 (budget 0.02); accuracy 0.4596 (ARC 0.9531)
+NET +45.5

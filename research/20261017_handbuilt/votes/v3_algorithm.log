@@ -1,0 +1,7 @@
+dip w = 0.8 (trimmed wave: neighbours at 0.00 of peak): accuracy 0.9900, agrees with ARC 0.953
+dip w = 0.7 (trimmed wave: neighbours at 0.22 of peak): accuracy 0.9559, agrees with ARC 0.924
+dip w = 0.6 (trimmed wave: neighbours at 0.42 of peak): accuracy 0.9174, agrees with ARC 0.887
+dip w = 0.5 (trimmed wave: neighbours at 0.53 of peak): accuracy 0.8898, agrees with ARC 0.861
+dip w = 0.4 (trimmed wave: neighbours at 0.61 of peak): accuracy 0.8690, agrees with ARC 0.841
+dip w = 0.2 (trimmed wave: neighbours at 0.71 of peak): accuracy 0.8374, agrees with ARC 0.810
+dip w = 0.0 (trimmed wave: neighbours at 0.77 of peak): accuracy 0.8062, agrees with ARC 0.782

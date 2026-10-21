@@ -1,0 +1,8 @@
+ARC                                      acc 0.9529 agree 1.000 ARC-mistakes 1.00 | near-tie error before 0.23 after 0.34 mixed 0.33
+equal sizes, no discount (fair)          acc 0.9903 agree 0.955 ARC-mistakes 0.09 | near-tie error before 0.00 after 0.01 mixed 0.00
+measured fading, no discount             acc 0.6670 agree 0.662 ARC-mistakes 0.35 | near-tie error before 0.67 after 0.49 mixed 0.54
+measured fading, discount 0.7, cap 1     acc 0.8292 agree 0.819 ARC-mistakes 0.31 | near-tie error before 0.33 after 0.55 mixed 0.53
+measured fading, discount 0.7, no cap    acc 0.8228 agree 0.813 ARC-mistakes 0.31 | near-tie error before 0.37 after 0.56 mixed 0.54
+measured fading, discount 0.5, cap 1     acc 0.8406 agree 0.830 ARC-mistakes 0.31 | near-tie error before 0.40 after 0.50 mixed 0.50
+measured fading, discount 0.6, cap 1     acc 0.8517 agree 0.839 ARC-mistakes 0.28 | near-tie error before 0.36 after 0.51 mixed 0.45
+measured fading, discount 0.8, cap 1     acc 0.7990 agree 0.790 ARC-mistakes 0.31 | near-tie error before 0.31 after 0.60 mixed 0.53

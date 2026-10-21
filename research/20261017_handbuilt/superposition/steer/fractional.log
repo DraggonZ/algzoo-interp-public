@@ -1,0 +1,6 @@
+a +0.25: names second-1  10.2% | the second  54.8% | second+1   4.3%
+a +0.50: names second-1  16.9% | the second  27.5% | second+1   6.6%
+a +0.75: names second-1  21.9% | the second  20.3% | second+1   6.4%
+a +1.00: names second-1  22.9% | the second  18.2% | second+1   6.1%
+a -0.50: names second-1   5.2% | the second  21.7% | second+1  18.5%
+a -1.00: names second-1   7.7% | the second  11.7% | second+1  13.1%

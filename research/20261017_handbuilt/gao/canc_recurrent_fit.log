@@ -1,0 +1,5 @@
+own clipped rotation, drive from register waves + input       (24): angle median 0.55 deg; accuracy 0.881
+own clipped rotation, drive from general menu                 (30): angle median 0.40 deg; accuracy 0.914
+own clipped rotation, drive from our account's quantities     ( 5): angle median 4.63 deg; accuracy 0.407
+own clipped rotation, drive from the input alone              ( 1): angle median 12.54 deg; accuracy 0.211
+plain register-wave formulas:           accuracy 0.708

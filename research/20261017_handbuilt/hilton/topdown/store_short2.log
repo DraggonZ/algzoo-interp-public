@@ -1,0 +1,6 @@
+                                                           all  coin flips   middle    clear
+both weights by age and by P/L bin (108 numbers)         74.8%      64.2%      78.0%      82.0%
+age table on the largest only (9 numbers)                63.9%      59.0%      67.1%      65.7%
+largest + previous largest, no switch (18)               74.7%      63.8%      77.4%      82.7%
+largest + previous largest with the half switch (27)     75.1%      64.3%      78.3%      82.8%
+fitted correction (93)                                   81.9%      69.7%      86.3%      89.8%

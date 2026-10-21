@@ -1,0 +1,7 @@
+mean change over rows 1-8 per column: [-0.04  0.05  0.11  0.01  0.44  0.01  0.11 -0.11  0.07  0.07  0.03  0.05
+  0.02  0.02  0.06 -0.01]
+row-specific rms 0.028, common rms 0.125
+full change            +192.8
+common part only       +190.8
+row-specific only      +179.7
+detector column only   +184.4

@@ -1,0 +1,19 @@
+neuron  7: push on the lead / lead (median)  7.20; loss with values 2% too large 0.135, 5% 0.367, 3% noise 0.120
+neuron  1: push on the lead / lead (median)  5.28; loss with values 2% too large 0.037, 5% 0.201, 3% noise 0.047
+neuron  8: push on the lead / lead (median)  4.65; loss with values 2% too large 0.046, 5% 0.212, 3% noise 0.044
+neuron  6: push on the lead / lead (median)  4.65; loss with values 2% too large 0.056, 5% 0.219, 3% noise 0.062
+neuron  2: push on the lead / lead (median)  1.92; loss with values 2% too large 0.074, 5% 0.218, 3% noise 0.053
+neuron 14: push on the lead / lead (median)  1.58; loss with values 2% too large 0.003, 5% 0.015, 3% noise 0.006
+neuron  0: push on the lead / lead (median)  1.51; loss with values 2% too large 0.002, 5% 0.015, 3% noise 0.003
+neuron 12: push on the lead / lead (median)  1.45; loss with values 2% too large 0.005, 5% 0.026, 3% noise 0.003
+neuron 10: push on the lead / lead (median)  1.12; loss with values 2% too large 0.004, 5% 0.020, 3% noise 0.009
+neuron 13: push on the lead / lead (median)  0.75; loss with values 2% too large -0.000, 5% 0.001, 3% noise 0.002
+neuron 11: push on the lead / lead (median)  0.56; loss with values 2% too large 0.002, 5% 0.016, 3% noise 0.005
+neuron 15: push on the lead / lead (median)  0.41; loss with values 2% too large 0.005, 5% 0.022, 3% noise -0.000
+neuron  3: push on the lead / lead (median)  0.39; loss with values 2% too large 0.001, 5% 0.003, 3% noise 0.000
+neuron  4: push on the lead / lead (median)  0.00; loss with values 2% too large 0.008, 5% 0.032, 3% noise 0.011
+neuron  5: push on the lead / lead (median)  0.00; loss with values 2% too large 0.001, 5% 0.008, 3% noise 0.003
+neuron  9: push on the lead / lead (median)  0.00; loss with values 2% too large 0.001, 5% 0.001, 3% noise 0.000
+rank correlation, per-neuron condition vs loss with 2% scale: 0.72 (p 0.0018)
+rank correlation, per-neuron condition vs loss with 5% scale: 0.71 (p 0.0023)
+rank correlation, per-neuron condition vs loss with 3% noise: 0.73 (p 0.0012)

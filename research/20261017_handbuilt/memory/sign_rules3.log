@@ -1,0 +1,31 @@
+on/off agreement with the true sign (test lists): 0:0.993 3:0.949 10:0.988 11:0.988 12:0.979 13:0.994 14:0.989 15:0.944
+== all eight by the rule, closed: acc 93.5 (-1.9) agree 96.9 KL 0.088
+    all                                    acc  93.5 ( -1.9)  agree  96.9  KL  0.088  share 1.000
+    at most one positive                   acc  21.9 ( +0.3)  agree  89.4  KL  0.081  share 0.011
+    new largest at step 9                  acc  90.5 ( -3.9)  agree  94.1  KL  0.183  share 0.100
+    new largest at step 8                  acc  93.4 ( -3.7)  agree  95.1  KL  0.117  share 0.099
+    two in a row, earlier                  acc  93.8 ( -2.5)  agree  96.3  KL  0.104  share 0.259
+    ordinary                               acc  95.3 ( -1.0)  agree  98.1  KL  0.057  share 0.531
+    second after largest                   acc  94.3 ( -0.9)  agree  98.2  KL  0.051  share 0.498
+    second an overtaken record             acc  93.4 ( -2.9)  agree  95.6  KL  0.124  share 0.497
+    second before largest, not a record    acc  24.5 ( -0.9)  agree  86.5  KL  0.120  share 0.005
+== all eight by the rule, hybrid: acc 93.5 (-1.9) agree 96.9 KL 0.086
+    all                                    acc  93.5 ( -1.9)  agree  96.9  KL  0.086  share 1.000
+    at most one positive                   acc  22.0 ( +0.4)  agree  89.4  KL  0.080  share 0.011
+    new largest at step 9                  acc  90.6 ( -3.7)  agree  94.2  KL  0.181  share 0.100
+    new largest at step 8                  acc  93.4 ( -3.7)  agree  95.0  KL  0.116  share 0.099
+    two in a row, earlier                  acc  94.1 ( -2.1)  agree  96.6  KL  0.097  share 0.259
+    ordinary                               acc  95.3 ( -1.1)  agree  98.0  KL  0.058  share 0.531
+    second after largest                   acc  94.2 ( -1.0)  agree  98.1  KL  0.054  share 0.498
+    second an overtaken record             acc  93.5 ( -2.7)  agree  95.8  KL  0.119  share 0.497
+    second before largest, not a record    acc  25.0 ( -0.4)  agree  86.0  KL  0.118  share 0.005
+== all eight by the rule, open: acc 93.6 (-1.8) agree 96.9 KL 0.082
+    all                                    acc  93.6 ( -1.8)  agree  96.9  KL  0.082  share 1.000
+    at most one positive                   acc  22.2 ( +0.6)  agree  88.9  KL  0.079  share 0.011
+    new largest at step 9                  acc  90.6 ( -3.7)  agree  94.2  KL  0.177  share 0.100
+    new largest at step 8                  acc  93.4 ( -3.8)  agree  95.0  KL  0.114  share 0.099
+    two in a row, earlier                  acc  94.3 ( -2.0)  agree  96.6  KL  0.090  share 0.259
+    ordinary                               acc  95.3 ( -1.0)  agree  98.0  KL  0.054  share 0.531
+    second after largest                   acc  94.2 ( -1.0)  agree  97.9  KL  0.051  share 0.498
+    second an overtaken record             acc  93.7 ( -2.6)  agree  95.9  KL  0.112  share 0.497
+    second before largest, not a record    acc  25.2 ( -0.2)  agree  86.2  KL  0.116  share 0.005

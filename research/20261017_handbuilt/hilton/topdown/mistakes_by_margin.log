@@ -1,0 +1,8 @@
+wrong answer's lead over the right answer, band edges: 0.89, 2.41 (median lead of the winner over the runner-up on all lists is about 8)
+                                                  lowest third  middle third  highest third
+first twin                                               14.6%         13.7%         11.7%
+store as 17.6 x the largest                              55.2%         59.2%         55.9%
+store as age table                                       59.0%         67.1%         65.7%
+store as age table + fitted correction                   69.7%         86.2%         89.8%
+detector own weights + correction                        86.6%         95.4%         97.3%
+store without the keep gate's weight (-0.01)             72.1%         93.2%         98.2%

@@ -1,0 +1,15 @@
+memory from the weights, drive others exact                                        : memory replaced 0.955; memory and cancellers replaced 0.922
+memory from the weights, drive cancellers from their block, rest exact             : memory replaced 0.942; memory and cancellers replaced 0.922
+memory from the weights, drive cancellers exact, store/detector/gates from formulas: memory replaced 0.648; memory and cancellers replaced 0.649
+memory from the weights, drive all others simulated                                : memory replaced 0.643; memory and cancellers replaced 0.648
+memory from the weights, drive store/detector from formulas, gates exact           : memory replaced 0.930
+memory from the weights, drive gates from formulas, store/detector exact           : memory replaced 0.650
+memory from the weights, drive keep gate 5 from its formula, rest exact            : memory replaced 0.887
+memory from the weights, drive late gate 9 from its formula, rest exact            : memory replaced 0.685
+gates          : plain formulas 0.624; own recurrence with fitted drive 0.617
+gate 9 from account quantities  : its median error when on 0.022 (typical value 1.21); memory driven by it, rest exact: 0.936; gate alone replaced: 0.929
+gate 9 from menu                : its median error when on 0.010 (typical value 1.21); memory driven by it, rest exact: 0.685; gate alone replaced: 0.687
+gate 9 from account + menu      : its median error when on 0.010 (typical value 1.21); memory driven by it, rest exact: 0.685; gate alone replaced: 0.687
+gate 5 from account quantities  : its median error when on 0.375 (typical value 6.41); memory driven by it, rest exact: 0.876; gate alone replaced: 0.847
+gate 5 from menu                : its median error when on 0.267 (typical value 6.41); memory driven by it, rest exact: 0.887; gate alone replaced: 0.858
+gate 5 from account + menu      : its median error when on 0.268 (typical value 6.41); memory driven by it, rest exact: 0.895; gate alone replaced: 0.868

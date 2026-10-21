@@ -1,0 +1,7 @@
+score_memory_rule.py sha256 d6caf822e120; rule combo_hiding_readout.py
+192 weights covered, 27 constants, 3 kinds; relative weight error 0.2376; structure 163 bits; lookup table 2369 bits
+  share 0.001: constants 199 bits (7.4 each) + structure 163 + rest 1812; net +195
+  share 0.002: constants 186 bits (6.9 each) + structure 163 + rest 1827; net +193
+  share 0.005: constants 168 bits (6.2 each) + structure 163 + rest 1878; net +160
+KL from ARC 3.3874 (budget 0.02); accuracy 0.6624 (ARC 0.9531)
+NET +194.8

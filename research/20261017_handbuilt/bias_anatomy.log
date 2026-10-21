@@ -1,0 +1,15 @@
+ARC: margin at tie: median |m| 1.84; vote slopes: third median +84.2, second median -84.2
+   share of margin variance: unequal votes +0.71, largest +0.26, background +0.03
+   typical size (median |.|): votes 3.13, largest 2.88, background 0.35; third's slope negative in 0.03 of placements
+   second before largest: n=360, median |m| 2.09, shares votes +0.40 largest +0.55 background +0.04
+   second after largest: n=360, median |m| 1.63, shares votes +1.16 largest -0.16 background -0.00
+zoo0: margin at tie: median |m| 0.83; vote slopes: third median +28.0, second median -28.0
+   share of margin variance: unequal votes -0.19, largest +1.03, background +0.16
+   typical size (median |.|): votes 1.84, largest 1.92, background 0.35; third's slope negative in 0.02 of placements
+   second before largest: n=360, median |m| 0.77, shares votes +0.34 largest +0.44 background +0.22
+   second after largest: n=360, median |m| 0.89, shares votes -0.47 largest +1.35 background +0.13
+zoo2: margin at tie: median |m| 1.43; vote slopes: third median +49.0, second median -49.0
+   share of margin variance: unequal votes +0.77, largest +0.20, background +0.03
+   typical size (median |.|): votes 2.44, largest 1.59, background 0.21; third's slope negative in 0.02 of placements
+   second before largest: n=360, median |m| 1.61, shares votes +0.76 largest +0.19 background +0.06
+   second after largest: n=360, median |m| 1.22, shares votes +0.73 largest +0.27 background +0.00

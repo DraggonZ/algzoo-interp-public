@@ -1,0 +1,31 @@
+neuron 1: rule  x -10.96  m1 +7.95  m2 +2.13  cos +0.93  sin -4.50  angle 60 deg/step; R2 on its on-steps 0.884; rule's error 3.36 (rms, on-steps)
+  fitted row vs ARC: cosine 0.832, relative distance 0.55; share along v (blindness) ARC 0.000, fitted 0.058
+  source:       0      1      2      3      4      5      6      7      8      9     10     11     12     13     14     15
+  ARC:      -0.11  +0.41  +0.50  +0.01  +0.87  +0.12  +1.00  -1.05  -0.12  -0.69  +0.02  +0.01  +0.04  +0.03  +0.08  +0.02
+  fitted:   +0.01  +0.32  +0.60  -0.01  +0.84  +0.09  +0.25  -0.44  -0.09  -1.10  -0.06  -0.03  +0.00  +0.08  -0.02  -0.02
+  slack:     0.13   0.11   0.10   0.09   0.04   0.07   0.11   0.09   0.07   0.54   0.09   0.12   0.08   0.11   0.17   0.08
+neuron 6: rule  x -10.59  m1 +5.99  m2 +2.38  cos -0.53  sin +6.51  angle 27 deg/step; R2 on its on-steps 0.891; rule's error 3.38 (rms, on-steps)
+  fitted row vs ARC: cosine 0.815, relative distance 1.11; share along v (blindness) ARC 0.014, fitted 0.033
+  source:       0      1      2      3      4      5      6      7      8      9     10     11     12     13     14     15
+  ARC:      -0.09  -0.14  +0.53  +0.03  -0.05  +0.04  +0.36  -0.13  -0.08  -0.64  +0.03  +0.02  +0.04  +0.02  +0.09  -0.01
+  fitted:   -0.18  -0.00  +0.47  +0.04  +0.47  +0.10  +0.13  -0.16  +0.04  -1.47  +0.08  +0.02  -0.05  +0.01  +0.25  -0.02
+  slack:     0.15   0.13   0.11   0.10   0.05   0.08   0.13   0.11   0.09   0.62   0.11   0.15   0.09   0.13   0.20   0.09
+neuron 7: rule  x -13.07  m1 +10.46  m2 +1.01  cos +3.92  sin -37.95  angle 1 deg/step; R2 on its on-steps 0.965; rule's error 2.31 (rms, on-steps)
+  fitted row vs ARC: cosine 0.969, relative distance 0.25; share along v (blindness) ARC 0.002, fitted 0.086
+  source:       0      1      2      3      4      5      6      7      8      9     10     11     12     13     14     15
+  ARC:      -0.02  -0.10  +0.67  -0.01  +1.32  +0.00  -0.18  +0.08  +0.17  +0.00  -0.00  +0.03  +0.07  +0.02  -0.00  -0.01
+  fitted:   -0.04  +0.04  +0.60  -0.03  +1.29  +0.00  +0.01  -0.14  +0.08  +0.06  +0.05  +0.07  +0.06  +0.02  +0.10  -0.04
+  slack:     0.11   0.10   0.09   0.08   0.03   0.06   0.10   0.08   0.07   0.48   0.08   0.11   0.07   0.10   0.16   0.07
+neuron 8: rule  x -11.78  m1 +3.41  m2 +5.41  cos +0.57  sin +75.87  angle 1 deg/step; R2 on its on-steps 0.870; rule's error 3.95 (rms, on-steps)
+  fitted row vs ARC: cosine 0.526, relative distance 1.01; share along v (blindness) ARC 0.004, fitted 0.013
+  source:       0      1      2      3      4      5      6      7      8      9     10     11     12     13     14     15
+  ARC:      -0.00  +0.63  +0.63  +0.00  -0.04  -0.02  -0.00  -1.09  +0.62  -0.07  +0.04  +0.05  +0.04  +0.00  +0.03  -0.01
+  fitted:   -0.15  +0.11  +0.62  +0.08  +0.25  +0.15  +0.14  -0.54  +0.34  -1.32  -0.01  -0.08  +0.04  +0.05  +0.07  +0.08
+  slack:     0.15   0.13   0.12   0.11   0.05   0.09   0.14   0.12   0.09   0.65   0.11   0.15   0.10   0.14   0.21   0.09
+
+ARC 0.95314
+fitted rows [1]: cost 51.05 points
+fitted rows [6]: cost 50.32 points
+fitted rows [7]: cost 41.11 points
+fitted rows [8]: cost 55.10 points
+fitted rows [1, 6, 7, 8]: cost 69.25 points

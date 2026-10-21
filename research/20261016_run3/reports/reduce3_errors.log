@@ -1,0 +1,8 @@
+example: reduced accuracy 0.9523; mistakes: second-third gap < 0.1: 0.70, largest-second gap < 0.1: 0.27, second < 0.3: 0.25, none of these: 0.05; error rate when none of these: 0.0037
+seed0: reduced accuracy 0.9109; mistakes: second-third gap < 0.1: 0.59, largest-second gap < 0.1: 0.38, second < 0.3: 0.11, none of these: 0.13; error rate when none of these: 0.0185
+seed1: reduced accuracy 0.8953; mistakes: second-third gap < 0.1: 0.52, largest-second gap < 0.1: 0.32, second < 0.3: 0.12, none of these: 0.23; error rate when none of these: 0.0377
+seed2: reduced accuracy 0.9479; mistakes: second-third gap < 0.1: 0.74, largest-second gap < 0.1: 0.23, second < 0.3: 0.21, none of these: 0.08; error rate when none of these: 0.0066
+seed3: reduced accuracy 0.9296; mistakes: second-third gap < 0.1: 0.66, largest-second gap < 0.1: 0.34, second < 0.3: 0.18, none of these: 0.07; error rate when none of these: 0.0075
+seed4: reduced accuracy 0.8891; mistakes: second-third gap < 0.1: 0.57, largest-second gap < 0.1: 0.34, second < 0.3: 0.11, none of these: 0.16; error rate when none of these: 0.0286
+mult0.01_3: reduced accuracy 0.7745; mistakes: second-third gap < 0.1: 0.40, largest-second gap < 0.1: 0.22, second < 0.3: 0.11, none of these: 0.39; error rate when none of these: 0.1416
+mult0.02_8: reduced accuracy 0.6224; mistakes: second-third gap < 0.1: 0.31, largest-second gap < 0.1: 0.19, second < 0.3: 0.07, none of these: 0.52; error rate when none of these: 0.3114

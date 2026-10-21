@@ -1,0 +1,50 @@
+calibration, KL against accuracy loss (median per bin of 5 copies):
+  KL 0.0018: 0.00 pt, KL 0.0054: 0.20 pt, KL 0.0091: 0.20 pt, KL 0.0124: 0.25 pt, KL 0.0235: 0.71 pt, KL 0.0470: 1.28 pt, KL 0.0986: 2.33 pt, KL 0.1496: 3.15 pt, KL 0.3097: 6.54 pt, KL 0.5032: 9.88 pt, KL 0.8959: 14.13 pt, KL 2.1362: 25.15 pt
+  KL budget for each accuracy budget: 0.1 pt -> 0.0036, 0.25 pt -> 0.0124, 0.5 pt -> 0.0184, 1.0 pt -> 0.0354, 2.0 pt -> 0.0823
+
+sum of eigenvalues 1.4891e+04 = sum of diagonal 1.4891e+04
+
+numbers to copy from ARC, combinations (eigen-directions); rows: accuracy budget, columns: rule error per weight
+  budget     0.5%    1.0%    2.0%    5.0%   10.0%   25.0%   50.0%  100.0%
+  0.10 pt      29      53      81     130     178     244     286     320
+  0.25 pt      16      32      56      95     134     200     248     290
+  0.50 pt      13      26      49      85     122     185     235     279
+  1.00 pt       7      19      38      71     103     162     212     259
+  2.00 pt       3      12      24      55      83     133     181     231
+
+numbers to copy from ARC, single weights (by diagonal stiffness); rows: accuracy budget, columns: rule error per weight
+  budget     0.5%    1.0%    2.0%    5.0%   10.0%   25.0%   50.0%  100.0%
+  0.10 pt     119     188     244     301     341     377     396     408
+  0.25 pt      59     127     195     262     306     354     379     397
+  0.50 pt      45     105     177     251     292     345     373     393
+  1.00 pt      22      73     145     227     271     329     361     385
+  2.00 pt       7      41     100     192     247     304     343     371
+
+stiffest single weights (share of the total):
+  2->2         14.92%
+  2->7         12.52%
+  7->8          9.60%
+  input->7      6.70%
+  7->1          6.49%
+  6->1          4.07%
+  2->8          3.71%
+  2->6          2.77%
+  input->4      2.45%
+  input->8      2.22%
+  8->8          2.20%
+  1->8          2.16%
+  input->6      2.09%
+  4->2          1.68%
+  2->1          1.65%
+single weights to copy at 5% error, 0.5 point (251): input 6, recurrent 153, readout 92
+
+check in the real network (budget 0.5 point): accuracy loss over 8 random rule errors, median (range)
+  r =  1.0%, no copying                  :  12.10 points (7.17 to 23.50)
+  r =  1.0%, copy 26 combinations        :   0.37 points (0.20 to 0.82)
+  r =  1.0%, copy 105 single weights     :   0.41 points (0.26 to 0.63)
+  r =  5.0%, no copying                  :  58.01 points (38.87 to 75.63)
+  r =  5.0%, copy 85 combinations        :   0.54 points (0.47 to 0.74)
+  r =  5.0%, copy 251 single weights     :   0.54 points (0.24 to 0.74)
+  r = 25.0%, no copying                  :  81.71 points (76.98 to 85.59)
+  r = 25.0%, copy 185 combinations       :   1.78 points (1.31 to 7.35)
+  r = 25.0%, copy 345 single weights     :   0.48 points (0.37 to 0.67)

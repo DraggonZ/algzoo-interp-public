@@ -1,0 +1,25 @@
+ 0 store      slot 2   wi +0.000  in-from store:+1.00, detect:+0.02
+ 1 detect     slot 4   wi +1000.000  in-from store:-50.00, detect:-1.00
+ 2 keep       slot 5   wi +0.000  in-from store:+0.01, detect:+0.00, Q:-0.00, c7:-0.00
+ 3 linear     slot 15  wi +0.000  in-from store:+0.26, detect:+0.01, clock1:-0.29, clock2:+0.29, c7:-0.00, turn1:+0.29, turn2:-0.29
+ 4 turn0      slot 12  wi -10000.000  in-from store:+500.00, detect:+10.00, turn0:-0.47, c7:-1.00, c1:+0.00, h7:+1.00, turn1:-0.17, turn2:+0.64
+ 5 clock0     slot 3   wi -10000.000  in-from store:+500.00, detect:+10.00, clock0:+0.47, clock1:-0.64, clock2:+0.17, c7:-1.00, c1:-0.00, h7:+1.00
+ 6 clock1     slot 3   wi -10000.000  in-from store:+500.00, detect:+10.00, clock0:+0.17, clock1:+0.47, clock2:-0.64, c7:+0.50, c1:-0.00, h7:-0.50
+ 7 clock2     slot 3   wi -10000.000  in-from store:+500.00, detect:+10.00, clock0:-0.64, clock1:+0.17, clock2:+0.47, c7:+0.50, c1:+0.00, h7:-0.50
+ 8 mem0       slot 0   wi +0.000  in-from store:+0.28, detect:+0.00, keep:-1.00, linear:-1.00, late:-0.10
+ 9 mem1       slot 13  wi +0.000  in-from detect:+0.00, mem0:+0.99
+10 mem2       slot 14  wi +0.000  in-from detect:+0.00, mem1:+0.99
+11 mem3       slot 11  wi +0.000  in-from detect:+0.00, mem2:+0.99
+12 mem4       slot 10  wi +0.000  in-from detect:+0.00, mem3:+0.99
+13 mem5       slot -   wi +0.000  in-from detect:+0.00, mem4:+0.99
+14 mem6       slot -   wi +0.000  in-from detect:+0.00, mem5:+0.99
+15 Q          slot 8   wi -10000.000  in-from store:+500.00, Q:+1.00, c7:-1.00
+16 late       slot 9   wi +0.000  in-from detect:+0.00
+17 c7         slot -   wi -10000.000  in-from store:+500.00, detect:+10.00
+18 c6         slot 6   wi -10000.000  in-from store:+500.00, detect:-2300.00, late:-2300.00, cancel:+2300.00
+19 c1         slot 1   wi -10000.000  in-from store:+500.00, detect:-9490.00, late:-9500.00, cancel:+9500.00
+20 cancel     slot -   wi +1000.000  in-from store:-50.00, detect:-1.00
+21 h7         slot 7   wi -10000.000  in-from store:+500.00, detect:+10.00
+22 turn1      slot 12  wi -10000.000  in-from store:+500.00, detect:+10.00, turn0:+0.64, c7:+0.50, c1:-0.00, h7:-0.50, turn1:-0.47, turn2:-0.17
+23 turn2      slot 12  wi -10000.000  in-from store:+500.00, detect:+10.00, turn0:-0.17, c7:+0.50, c1:+0.00, h7:-0.50, turn1:+0.64, turn2:-0.47
+{2: 'store', 4: 'detect', 5: 'keep', 0: 'mem0', 11: 'mem3', 10: 'mem4', 3: 'clock0+clock1+clock2', 9: 'late', 7: 'h7', 8: 'Q', 6: 'c6', 1: 'c1', 13: 'mem1', 14: 'mem2', 12: 'turn0+turn1+turn2', 15: 'linear'}

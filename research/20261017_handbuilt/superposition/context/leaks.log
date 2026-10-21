@@ -1,0 +1,11 @@
+largest's value x1.1: flips 5.4%
+redraw all smaller: flips real 17.0%, first-order from the leaks 25.4%
+smaller-number lead coefficients: median |c| 0.31; leak sum_j c_j x_j median |.| 1.59 vs lead median |.| 2.59
+   share of c_j's variance explained by cell means over j only                    : 0.00 (10 cells)
+   share of c_j's variance explained by cell means over second, third, j          : 0.00 (720 cells)
+   share of c_j's variance explained by cell means over second, third, largest, j : 0.01 (5040 cells)
+   smaller number negative: median |c| 0.20
+   positive: median |c| 0.70
+quantiles of |c| 50/90/99/99.9%: [ 0.31  3.18 20.61 90.07] max 938.6
+   clipped at ±2.0: variance explained by j: 0.00 | second,third,j: 0.09 | +largest: 0.18 | +sign of x_j: 0.25
+   clipped at ±5.0: variance explained by j: 0.00 | second,third,j: 0.03 | +largest: 0.08 | +sign of x_j: 0.16

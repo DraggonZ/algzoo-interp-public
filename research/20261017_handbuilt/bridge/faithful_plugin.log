@@ -1,0 +1,10 @@
+== v18ts_matched2.npz: hand-built's own answer 0.920; trained readout on the hand-built final state 0.218
+   largest pair (2, 4)    (b) trained update on hand-built state, per neuron:   0.99   0.99 | (c) trained vs hand-built value:   0.96   0.99
+   gates (5, 9)           (b) trained update on hand-built state, per neuron:   0.15  -1.05 | (c) trained vs hand-built value:   0.12  -0.73
+   hiding (1, 6, 7, 8)    (b) trained update on hand-built state, per neuron:   0.96   0.90   1.00   0.88 | (c) trained vs hand-built value:   0.86   0.92   0.99   0.82
+   memory (0, 3, 10-15)   (b) trained update on hand-built state, per neuron:   0.23  -3.41   0.64   0.82   0.45   0.41   0.56  -3.36 | (c) trained vs hand-built value:   0.34  -0.04   0.45   0.55   0.57   0.52   0.55   0.44
+== v18g50_matched.npz: hand-built's own answer 0.950; trained readout on the hand-built final state 0.201
+   largest pair (2, 4)    (b) trained update on hand-built state, per neuron:   0.99   0.99 | (c) trained vs hand-built value:   0.96   0.99
+   gates (5, 9)           (b) trained update on hand-built state, per neuron:   0.15  -1.09 | (c) trained vs hand-built value:   0.12  -0.73
+   hiding (1, 6, 7, 8)    (b) trained update on hand-built state, per neuron:   0.98   0.88   1.00   0.89 | (c) trained vs hand-built value:   0.86   0.90   0.99   0.79
+   memory (0, 3, 10-15)   (b) trained update on hand-built state, per neuron:   0.16  -3.83   0.64   0.84   0.43   0.40   0.52  -3.31 | (c) trained vs hand-built value:   0.34  -0.04   0.45   0.55   0.57   0.51   0.54   0.44

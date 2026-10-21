@@ -1,0 +1,7 @@
+subset: second-third gap < 0.1, largest > 0.1 above, third positive: 19.2% of inputs
+example: robust spread (IQR/1.35) 0.0163 in value; |change| quantiles 50/90/99% 0.0110 0.0444 0.1078; median |change| among flips 0.0299; corr(change, gap) -0.01
+example: margin change mean -0.16 (median -0.09), spread 2.30 score units; slope 79 per unit gap -> mean shift -0.0020, spread 0.0290 in value; in subset: wrong full 12.6%, reduced 12.1%, caused 4.6%, fixed 4.1%
+1: robust spread (IQR/1.35) 0.0302 in value; |change| quantiles 50/90/99% 0.0203 0.0726 0.1915; median |change| among flips 0.0393; corr(change, gap) -0.02
+1: margin change mean -0.06 (median -0.03), spread 1.72 score units; slope 34 per unit gap -> mean shift -0.0019, spread 0.0501 in value; in subset: wrong full 23.0%, reduced 20.8%, caused 9.5%, fixed 7.3%
+4: robust spread (IQR/1.35) 0.0210 in value; |change| quantiles 50/90/99% 0.0142 0.0644 0.1742; median |change| among flips 0.0367; corr(change, gap) -0.01
+4: margin change mean -0.02 (median -0.00), spread 1.55 score units; slope 35 per unit gap -> mean shift -0.0006, spread 0.0444 in value; in subset: wrong full 23.3%, reduced 24.5%, caused 6.8%, fixed 8.0%

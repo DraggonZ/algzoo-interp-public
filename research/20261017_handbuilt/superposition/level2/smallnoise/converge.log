@@ -1,0 +1,10 @@
+fourth grid 8^3 Q4=2: 95.829%  mistakes naming largest/third/smaller [1.25 2.67 0.26]  mass 1.0323  run-equivalents 36.1M  6s
+fourth grid 12^3 Q4=2: 95.403%  mistakes naming largest/third/smaller [1.18 3.12 0.3 ]  mass 0.9847  run-equivalents 121.9M  19s
+fourth grid 16^3 Q4=2: 95.446%  mistakes naming largest/third/smaller [1.15 3.12 0.28]  mass 1.0003  run-equivalents 289.0M  50s
+fourth grid 12^3 Q4=4: 95.336%  mistakes naming largest/third/smaller [1.18 3.12 0.36]  mass 0.9847  run-equivalents 243.9M  44s
+fourth grid 16^3 Q4=4: 95.388%  mistakes naming largest/third/smaller [1.15 3.11 0.35]  mass 1.0003  run-equivalents 578.0M  103s
+fourth grid 24^3 Q4=2: 95.513%  mistakes naming largest/third/smaller [1.12 3.1  0.27]  mass 1.0000  run-equivalents 975.4M  175s
+fourth grid 16^3 Q4=8: 95.378%  mistakes naming largest/third/smaller [1.15 3.11 0.36]  mass 1.0003  run-equivalents 1156.1M  185s
+16 4 95.388 [1.15 3.11 0.35] 18s
+24 4 95.449 [1.12 3.09 0.34] 54s
+32 2 95.513 [1.12 3.09 0.27] 81s

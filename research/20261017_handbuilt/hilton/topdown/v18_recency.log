@@ -1,0 +1,6 @@
+network                      accuracy ARC mistakes reproduced (2nd > 0) | near ties, share naming the third: T after S, T before S, both before L, T at step 9, T at step 8
+v18                            96.13%                    5.0%      3.3% |  14.7%    1.1%   22.4%    0.0%    0.0%
+v18 + ARC vote sizes           58.19%                   35.6%     41.3% |  71.0%    3.8%   24.3%  100.0%   88.9%
+v18 + sizes at 8, 9 only       79.12%                   26.7%     29.9% |  50.8%    0.5%   23.1%  100.0%   88.9%
+v18 + sizes 1-7 only           66.67%                   19.3%     21.4% |  42.9%   12.2%   29.6%   12.0%   15.5%
+trained 95-96% (mean of 5)     95.82%                   26.4%     25.3% |  26.4%   16.0%   17.3%   37.3%   30.7%

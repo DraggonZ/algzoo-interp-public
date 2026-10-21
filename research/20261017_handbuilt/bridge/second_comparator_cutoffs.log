@@ -1,0 +1,5 @@
+networks (other than ARC) with a hiding neuron whose weight on the new largest is below the cutoff times its weight on the previous largest, one step after a record
+   cutoff 0.1: 4 of 17: ['new104', 'new106', 'new111', 'new115']
+   cutoff 0.2: 6 of 17: ['zoo3', 'new104', 'new106', 'new111', 'new113', 'new115']
+   cutoff 0.3: 7 of 17: ['zoo3', 'new101', 'new104', 'new106', 'new111', 'new113', 'new115']
+   cutoff 0.5: 10 of 17: ['zoo3', 'new101', 'new102', 'new104', 'new106', 'new107', 'new109', 'new111', 'new113', 'new115']

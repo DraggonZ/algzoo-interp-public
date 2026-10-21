@@ -1,0 +1,14 @@
+noise 0.000 copy 0: error  4.65; bisection estimate  4.59 (miss -0.07); exact  4.54 (miss -0.11)
+noise 0.005 copy 0: error  7.79; bisection estimate  6.99 (miss -0.80); exact  6.98 (miss -0.80)
+noise 0.005 copy 1: error 13.78; bisection estimate 12.59 (miss -1.19); exact 12.23 (miss -1.54)
+noise 0.005 copy 2: error  8.83; bisection estimate  7.84 (miss -0.98); exact  7.82 (miss -1.01)
+noise 0.010 copy 0: error 14.78; bisection estimate 12.32 (miss -2.47); exact 12.27 (miss -2.51)
+noise 0.010 copy 1: error 20.70; bisection estimate 17.44 (miss -3.26); exact 17.63 (miss -3.07)
+noise 0.010 copy 2: error 23.46; bisection estimate 20.59 (miss -2.87); exact 20.82 (miss -2.63)
+noise 0.020 copy 0: error 42.56; bisection estimate 39.02 (miss -3.54); exact 39.28 (miss -3.27)
+noise 0.020 copy 1: error 27.11; bisection estimate 27.01 (miss -0.10); exact 27.12 (miss +0.01)
+noise 0.020 copy 2: error 27.73; bisection estimate 22.89 (miss -4.84); exact 23.09 (miss -4.64)
+noise 0.000: root-mean-square miss bisection 0.07, exact 0.11
+noise 0.005: root-mean-square miss bisection 1.00, exact 1.16
+noise 0.010: root-mean-square miss bisection 2.88, exact 2.75
+noise 0.020: root-mean-square miss bisection 3.46, exact 3.28

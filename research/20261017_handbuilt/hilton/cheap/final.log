@@ -1,0 +1,37 @@
+ ARC: estimate 95.23%  true 95.32%  error -0.09  (converged reduction 95.32); cost 1718 runs, 843 step-equivalents
+ 100: estimate 95.21%  true 94.81%  error +0.40  (converged reduction 94.91); cost 1540 runs, 769 step-equivalents
+ 101: estimate 90.65%  true 91.34%  error -0.70  (converged reduction 91.62); cost 1764 runs, 865 step-equivalents
+ 102: estimate 91.10%  true 91.25%  error -0.16  (converged reduction 90.69); cost 1695 runs, 854 step-equivalents
+ 103: estimate 95.39%  true 95.32%  error +0.07  (converged reduction 95.40); cost 1986 runs, 952 step-equivalents
+ 104: estimate 92.44%  true 91.23%  error +1.21  (converged reduction 91.73); cost 1750 runs, 846 step-equivalents
+ 105: estimate 89.90%  true 89.86%  error +0.04  (converged reduction 89.92); cost 1694 runs, 830 step-equivalents
+ 106: estimate 94.28%  true 94.84%  error -0.56  (converged reduction 94.23); cost 1767 runs, 896 step-equivalents
+ 107: estimate 93.40%  true 92.13%  error +1.27  (converged reduction 93.00); cost 1738 runs, 825 step-equivalents
+ 108: estimate 93.99%  true 93.86%  error +0.12  (converged reduction 94.17); cost 1763 runs, 859 step-equivalents
+ 109: estimate 94.41%  true 94.05%  error +0.35  (converged reduction 94.27); cost 1567 runs, 783 step-equivalents
+ 110: estimate 92.05%  true 91.18%  error +0.87  (converged reduction 91.24); cost 1752 runs, 850 step-equivalents
+ 111: estimate 95.95%  true 96.00%  error -0.06  (converged reduction 96.06); cost 1717 runs, 810 step-equivalents
+ 112: estimate 92.72%  true 91.46%  error +1.26  (converged reduction 92.42); cost 1661 runs, 794 step-equivalents
+ 113: estimate 92.01%  true 90.44%  error +1.57  (converged reduction 91.62); cost 1650 runs, 830 step-equivalents
+ 114: estimate 88.45%  true 89.79%  error -1.34  (converged reduction 89.91); cost 1799 runs, 870 step-equivalents
+ 115: estimate 95.32%  true 95.20%  error +0.12  (converged reduction 95.45); cost 1666 runs, 861 step-equivalents
+ 200: estimate 93.51%  true 93.24%  error +0.27  (converged reduction 93.56); cost 1631 runs, 808 step-equivalents
+ 201: estimate 94.30%  true 94.38%  error -0.08  (converged reduction 94.13); cost 2013 runs, 924 step-equivalents
+ 202: estimate 91.16%  true 89.72%  error +1.44  (converged reduction 90.59); cost 1685 runs, 861 step-equivalents
+ 203: estimate 89.95%  true 89.88%  error +0.07  (converged reduction 89.86); cost 1702 runs, 848 step-equivalents
+ 204: estimate 88.82%  true 88.93%  error -0.11  (converged reduction 88.72); cost 1677 runs, 799 step-equivalents
+ 205: estimate 94.16%  true 93.62%  error +0.54  (converged reduction 94.02); cost 1957 runs, 910 step-equivalents
+ 206: estimate 91.29%  true 91.29%  error -0.01  (converged reduction 90.93); cost 1757 runs, 883 step-equivalents
+ 207: estimate 89.94%  true 91.14%  error -1.19  (converged reduction 90.29); cost 1731 runs, 842 step-equivalents
+ 208: estimate 84.63%  true 84.03%  error +0.60  (converged reduction 85.21); cost 2046 runs, 932 step-equivalents
+ 209: estimate 95.66%  true 95.89%  error -0.23  (converged reduction 96.22); cost 1833 runs, 884 step-equivalents
+ 210: estimate 95.78%  true 96.15%  error -0.37  (converged reduction 96.27); cost 1740 runs, 858 step-equivalents
+ 211: estimate 93.03%  true 93.47%  error -0.45  (converged reduction 93.55); cost 1638 runs, 810 step-equivalents
+ 212: estimate 84.81%  true 84.53%  error +0.28  (converged reduction 84.44); cost 1809 runs, 890 step-equivalents
+ 213: estimate 94.29%  true 93.89%  error +0.40  (converged reduction 94.37); cost 1803 runs, 826 step-equivalents
+ 214: estimate 94.10%  true 94.84%  error -0.74  (converged reduction 94.02); cost 1635 runs, 828 step-equivalents
+ 215: estimate 92.74%  true 92.60%  error +0.15  (converged reduction 93.16); cost 1891 runs, 904 step-equivalents
+(GPU time for all 33 networks 2s)
+development (ARC, 200-215): RMSE 0.57 points, mean error +0.03, largest 1.44; against the converged reduction 0.35; converged reduction against truth 0.53. Mean cost 1780 runs (1631-2046), 862 step-equivalents. Sampling RMSE at 1780 lists 0.64, at 862 lists 0.92; lists sampling needs for our RMSE: 2270
+held out (100-115): RMSE 0.82 points, mean error +0.28, largest 1.57; against the converged reduction 0.56; converged reduction against truth 0.52. Mean cost 1719 runs (1540-1986), 843 step-equivalents. Sampling RMSE at 1719 lists 0.63, at 843 lists 0.89; lists sampling needs for our RMSE: 995
+all 33: RMSE 0.70 points, mean error +0.15, largest 1.57; against the converged reduction 0.46; converged reduction against truth 0.52. Mean cost 1751 runs (1540-2046), 853 step-equivalents. Sampling RMSE at 1751 lists 0.63, at 853 lists 0.91; lists sampling needs for our RMSE: 1422

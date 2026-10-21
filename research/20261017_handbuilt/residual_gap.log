@@ -1,0 +1,21 @@
+two-stage error 3.62%, nonlinear 2.35%; fixed by the nonlinear reader 1.96 pts, newly broken 0.69 pts
+feature | share among fixed lists | share among all lists | lift
+second-third gap < 3%            |  40.7% |   5.8% |   7.0
+second-third gap 3-10%           |  24.0% |  12.9% |   1.9
+largest-second gap < 10%         |  28.5% |  17.2% |   1.7
+both before largest              |  25.5% |  33.3% |   0.8
+both after largest               |  38.5% |  33.3% |   1.2
+mixed                            |  35.9% |  33.4% |   1.1
+fourth >= 0.75 of second         |  26.6% |  10.5% |   2.5
+last input in top three          |  40.4% |  30.1% |   1.3
+at most one positive             |  10.5% |   1.1% |   9.7
+two-stage answers the third      |  71.3% |   2.3% |  30.6
+two-stage answers the largest    |  15.2% |   0.5% |  28.3
+
+kept numbers besides the largest | share of lists | ARC's readout | two-stage | nonlinear reader
+0 |   1.0% | 76.87% | 69.70% | 57.67%
+1 |  11.9% |  1.25% |  0.76% |  0.57%
+2 |  29.8% |  3.01% |  2.27% |  1.29%
+3 |  31.9% |  4.19% |  3.14% |  1.90%
+4 |  18.0% |  5.44% |  4.04% |  2.44%
+5+ |   7.3% |  6.61% |  4.86% |  2.93%

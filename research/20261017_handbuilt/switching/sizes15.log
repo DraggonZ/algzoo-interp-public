@@ -1,0 +1,12 @@
+== neuron 15
+   V     fitted numbers   32  agreement 0.810  alone -2.75
+   V1+U  fitted numbers   45  agreement 0.824  alone -2.91
+   V+U   fitted numbers   65  agreement 0.825  alone -2.58
+== neuron 3
+   V     fitted numbers   32  agreement 0.876  alone -0.30
+   V1+U  fitted numbers   45  agreement 0.880  alone -0.27
+   V+U   fitted numbers   65  agreement 0.888  alone -0.20
+== neuron 14
+   V     fitted numbers   32  agreement 0.986  alone -0.04
+   V1+U  fitted numbers   45  agreement 0.970  alone -0.31
+   V+U   fitted numbers   65  agreement 0.987  alone -0.01

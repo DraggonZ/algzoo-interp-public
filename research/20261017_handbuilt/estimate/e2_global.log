@@ -1,0 +1,4 @@
+global top-3 ages: all 16 -1.93, memory only -3.85
+global top-3 ages + running largest age: all 16 -2.71, memory only -3.76
+global top-3 ages + sign: all 16 -3.69, memory only -4.49
+global top-3 ages + running largest age + sign: all 16 -2.96, memory only -4.11

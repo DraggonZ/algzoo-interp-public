@@ -1,0 +1,30 @@
+== ARC (16): 16 neurons, accuracy 95.28% | patterns 1000, top 30 cover 71.3% | switching: depth-2 trees remove 62% of the guessing error, 7/16 neurons at 97% | readability R2 0.50 | noise on state 0.5%: last 72.8%, every 47.2%; 2%: last 53.6%, every 30.1%
+   SAE 32 wide, k 4: unexplained 2.43%, spliced last step 33.7%, every step 22.3%
+   SAE 32 wide, k 8: unexplained 0.51%, spliced last step 46.4%, every step 28.8%
+   SAE 64 wide, k 4: unexplained 2.01%, spliced last step 40.5%, every step 24.2%
+   SAE 64 wide, k 8: unexplained 0.36%, spliced last step 53.2%, every step 29.7%
+== 16 bo5: 16 neurons, accuracy 94.81% | patterns 686, top 30 cover 75.3% | switching: depth-2 trees remove 51% of the guessing error, 5/16 neurons at 97% | readability R2 0.45 | noise on state 0.5%: last 54.7%, every 25.3%; 2%: last 36.8%, every 19.0%
+   SAE 32 wide, k 4: unexplained 2.03%, spliced last step 22.9%, every step 16.4%
+   SAE 32 wide, k 8: unexplained 0.47%, spliced last step 40.5%, every step 31.4%
+   SAE 64 wide, k 4: unexplained 1.68%, spliced last step 36.1%, every step 26.2%
+   SAE 64 wide, k 8: unexplained 0.44%, spliced last step 44.1%, every step 27.9%
+== 16 run3-209: 16 neurons, accuracy 95.84% | patterns 472, top 30 cover 92.6% | switching: depth-2 trees remove 74% of the guessing error, 9/16 neurons at 97% | readability R2 0.43 | noise on state 0.5%: last 70.9%, every 48.7%; 2%: last 53.3%, every 31.2%
+   SAE 32 wide, k 4: unexplained 4.37%, spliced last step 27.9%, every step 20.2%
+   SAE 32 wide, k 8: unexplained 0.74%, spliced last step 44.4%, every step 33.0%
+   SAE 64 wide, k 4: unexplained 4.27%, spliced last step 27.9%, every step 22.9%
+   SAE 64 wide, k 8: unexplained 0.60%, spliced last step 47.9%, every step 35.8%
+== 20: 20 neurons, accuracy 97.93% | patterns 943, top 30 cover 89.5% | switching: depth-2 trees remove 66% of the guessing error, 15/20 neurons at 97% | readability R2 0.45 | noise on state 0.5%: last 67.4%, every 43.4%; 2%: last 47.4%, every 27.0%
+   SAE 40 wide, k 4: unexplained 2.82%, spliced last step 29.3%, every step 24.9%
+   SAE 40 wide, k 8: unexplained 0.80%, spliced last step 39.4%, every step 31.7%
+   SAE 80 wide, k 4: unexplained 2.18%, spliced last step 33.8%, every step 28.2%
+   SAE 80 wide, k 8: unexplained 0.71%, spliced last step 41.5%, every step 34.1%
+== 32 bo5: 32 neurons, accuracy 99.41% | patterns 32198, top 30 cover 22.2% | switching: depth-2 trees remove 60% of the guessing error, 8/32 neurons at 97% | readability R2 0.50 | noise on state 0.5%: last 94.0%, every 28.9%; 2%: last 85.8%, every 21.9%
+   SAE 64 wide, k 4: unexplained 4.10%, spliced last step 74.1%, every step 21.1%
+   SAE 64 wide, k 8: unexplained 1.21%, spliced last step 89.1%, every step 30.3%
+   SAE 128 wide, k 4: unexplained 3.37%, spliced last step 84.3%, every step 25.1%
+   SAE 128 wide, k 8: unexplained 1.11%, spliced last step 90.9%, every step 37.1%
+== 32 long: 32 neurons, accuracy 99.27% | patterns 8082, top 30 cover 47.3% | switching: depth-2 trees remove 68% of the guessing error, 13/32 neurons at 97% | readability R2 0.51 | noise on state 0.5%: last 91.9%, every 55.7%; 2%: last 78.6%, every 38.9%
+   SAE 64 wide, k 4: unexplained 3.56%, spliced last step 55.2%, every step 22.7%
+   SAE 64 wide, k 8: unexplained 0.69%, spliced last step 76.0%, every step 37.7%
+   SAE 128 wide, k 4: unexplained 3.21%, spliced last step 62.7%, every step 26.7%
+   SAE 128 wide, k 8: unexplained 0.48%, spliced last step 87.4%, every step 39.6%

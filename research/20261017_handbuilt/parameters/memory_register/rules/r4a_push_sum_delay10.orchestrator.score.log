@@ -1,0 +1,7 @@
+score_memory_rule.py sha256 d6caf822e120; rule push_sum_delay10.py
+136 weights covered, 2 constants, 2 kinds; relative weight error 0.2169; structure 111 bits; lookup table 2369 bits
+  share 0.001: constants 14 bits (7.2 each) + structure 111 + rest 2155; net +88
+  share 0.002: constants 13 bits (6.7 each) + structure 111 + rest 2171; net +73
+  share 0.005: constants 12 bits (6.0 each) + structure 111 + rest 2223; net +22
+KL from ARC 5.2507 (budget 0.02); accuracy 0.5919 (ARC 0.9531)
+NET +88.0

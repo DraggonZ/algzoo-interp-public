@@ -1,0 +1,6 @@
+keep gate silent after records, S before L: 85.8% of lists broken; they name the largest 13%, the third 36%, the position after S 28%, the position after L 5%, other 34%
+keep gate silent after records, S after L: 7.7% of lists broken; they name the largest 0%, the third 48%, the position after S 14%, the position after L 11%, other 42%
+keep gate silent after other numbers, S before L: 0.5% of lists broken; they name the largest 16%, the third 68%, the position after S 4%, the position after L 1%, other 15%
+keep gate silent after other numbers, S after L: 60.5% of lists broken; they name the largest 80%, the third 14%, the position after S 2%, the position after L 1%, other 4%
+late gate's push onto hiding neurons removed, S before L: 47.4% of lists broken; they name the largest 94%, the third 4%, the position after S 30%, the position after L 0%, other 2%
+late gate's push onto hiding neurons removed, S after L: 13.1% of lists broken; they name the largest 85%, the third 13%, the position after S 0%, the position after L 7%, other 1%

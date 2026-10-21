@@ -1,0 +1,112 @@
+== Q1 and Q4: no-rule neurons per network (block, on rate, depth-2 accuracy)
+network    width    acc no rule | blocks of all neurons (store/gate/hiding/memory) | no-rule neurons
+ARC           16  95.3%       3 |  1  3  4  8 | 3 memory on 80% cost 1.02, 12 memory on 95% cost 0.05, 15 memory on 75% cost 7.33
+seed 100      16  94.8%       1 |  0  2  4 10 | 3 memory on 86% cost 0.86
+seed 101      16  91.3%       0 |  0  1  3 12 | 
+seed 102      16  91.2%       0 |  0  1  3 12 | 
+seed 103      16  95.3%       1 |  1  3  3  9 | 3 memory on 90% cost 1.14
+seed 104      16  91.0%       1 |  0  1  3 12 | 7 memory on 92% cost 1.06
+seed 105      16  89.8%       0 |  1  2  1 12 | 
+seed 106      16  94.8%       3 |  0  2  4 10 | 6 memory on 96% cost -0.03, 9 memory on 93% cost 0.07, 15 memory on 97% cost 0.00
+seed 107      16  92.1%       0 |  1  1  3 11 | 
+seed 108      16  93.9%       0 |  0  1  3 12 | 
+seed 109      16  94.0%       0 |  1  2  2 11 | 
+seed 110      16  91.1%       2 |  2  2  1 11 | 1 memory on 96% cost 0.57, 8 memory on 94% cost 1.49
+seed 111      16  96.0%       1 |  1  3  4  8 | 6 memory on 73% cost 1.76
+seed 112      16  91.4%       2 |  1  2  1 12 | 4 memory on 97% cost 0.05, 9 memory on 97% cost 0.28
+seed 113      16  90.4%       2 |  0  1  4 11 | 0 memory on 97% cost 0.11, 4 memory on 93% cost 0.33
+seed 114      16  89.7%       1 |  0  2  1 13 | 11 memory on 81% cost 1.27
+seed 115      16  95.1%       2 |  0  2  3 11 | 8 memory on 80% cost 1.24, 9 memory on 97% cost 0.25
+seed 200      16  93.2%       0 |  1  2  3 10 | 
+seed 201      16  94.4%       1 |  1  1  4 10 | 13 memory on 96% cost 0.35
+seed 202      16  89.7%       1 |  0  1  3 12 | 11 memory on 89% cost 1.59
+seed 203      16  89.8%       1 |  0  1  3 12 | 5 memory on 95% cost 0.15
+seed 204      16  89.0%       1 |  0  1  2 13 | 12 memory on 97% cost 0.45
+seed 205      16  93.5%       2 |  0  3  2 11 | 0 memory on 91% cost 0.53, 11 memory on 97% cost 0.12
+seed 206      16  91.3%       4 |  0  1  3 12 | 9 memory on 93% cost 0.12, 11 memory on 97% cost 0.16, 13 memory on 97% cost 0.02, 15 memory on 95% cost 0.08
+seed 207      16  91.0%       2 |  1  1  2 12 | 1 memory on 67% cost 2.67, 10 memory on 92% cost 5.64
+seed 208      16  83.9%       2 |  0  4  0 12 | 3 memory on 72% cost 3.18, 8 memory on 88% cost 0.47
+seed 209      16  95.8%       1 |  1  1  6  8 | 2 memory on 72% cost 5.78
+seed 210      16  96.1%       1 |  0  1  4 11 | 12 memory on 94% cost 0.12
+seed 211      16  93.4%       2 |  0  1  3 12 | 6 memory on 96% cost -0.03, 13 memory on 95% cost 0.09
+seed 212      16  84.4%       3 |  0  0  1 15 | 8 memory on 95% cost 0.61, 13 memory on 97% cost -0.42, 15 memory on 91% cost 10.23
+seed 213      16  93.8%       1 |  0  3  0 13 | 11 memory on 92% cost 0.86
+seed 214      16  94.9%       1 |  0  2  3 11 | 1 memory on 91% cost 0.05
+seed 215      16  92.5%       0 |  0  2  3 11 | 
+16 bo5        16  94.8%       1 |  0  2  3 11 | 2 memory on 68% cost 4.05
+zoo16 0       16  91.0%       0 |  0  1  2 13 | 
+zoo16 1       16  88.0%       0 |  0  2  2 12 | 
+zoo16 2       16  94.8%       2 |  0  2  3 11 | 2 memory on 68% cost 4.14, 14 memory on 97% cost 0.00
+zoo16 3       16  93.2%       0 |  0  1  3 12 | 
+zoo16 4       16  88.9%       4 |  0  2  1 13 | 0 memory on 97% cost 1.85, 1 memory on 96% cost 0.10, 7 memory on 97% cost 0.78, 14 memory on 95% cost 0.91
+20            20  97.9%       1 |  0  3  4 13 | 16 memory on 89% cost 0.52
+32 bo5        32  99.4%       1 |  1 10  6 15 | 19 memory on 66% cost 0.13
+32 long       32  99.3%       0 |  1  8  9 14 | 
+zoo32 0       32  99.5%       1 |  1 10  6 15 | 19 memory on 65% cost 0.14
+zoo32 1       32  99.3%       2 |  2 12  6 12 | 13 memory on 71% cost 0.92, 25 memory on 72% cost 10.22
+zoo32 2       32  99.2%       1 |  1  8  9 14 | 0 memory on 97% cost -0.00
+zoo32 3       32  99.3%       2 |  1 12  6 13 | 15 memory on 79% cost 0.21, 21 memory on 84% cost 0.07
+zoo32 4       32  99.1%       3 |  1 11  6 14 | 6 memory on 83% cost 0.02, 10 memory on 95% cost 0.01, 28 memory on 85% cost 0.05
+
+== width 16: 39 networks; no-rule neurons per network: mean 1.26, range 0-4, networks with none 11; per neuron 7.9%; all tags {'one-line rule': 223, 'partial': 201, 'no rule': 49, 'nearly constant': 151}
+   no-rule neurons by block: {'memory': 49}; on rate: 67 68 68 72 72 73 75 80 80 81 86 88 89 90 91 91 91 92 92 92 93 93 93 94 94 95 95 95 95 95 95 96 96 96 96 96 97 97 97 97 97 97 97 97 97 97 97 97 97
+   medians among neurons that switch (on 3-97%): near zero (|pre| < 10% of terms) | |pre| / terms, median | rotating share | largest-so-far share | offset / swing | input share | n
+   no rule, on < 90%     0.637   0.067   0.486   0.287   0.527   0.000  13
+   no rule, on >= 90%    0.215   0.280   0.208   0.715   1.346   0.000  35
+   other memory          0.218   0.249   0.230   0.655   1.179   0.000  251
+   other hiding          0.158   0.288   0.036   0.485   2.256   0.390  103
+   other gate            0.131   0.343   0.007   0.508  -2.174   0.382  66
+   other store           0.045   0.637   0.023   0.987   7.793   0.001  4
+   separation of no-rule from all other switching neurons (AUC; >0.5 means no-rule higher):
+     near zero (|pre| < 10% of terms)     vs all 0.62   vs other memory 0.57
+     |pre| / terms, median                vs all 0.38   vs other memory 0.43
+     rotating share                       vs all 0.72   vs other memory 0.59
+     largest-so-far share                 vs all 0.63   vs other memory 0.53
+     offset / swing                       vs all 0.51   vs other memory 0.51
+     input share                          vs all 0.35   vs other memory 0.51
+   Q5 linear cost (points), neurons on 70-97% outside hiding, gates and store:
+     no rule  n  45: median 0.45, mean 1.18, 90th pct 2.65; per unit of clipped size: median 71.6
+     other    n 226: median 1.01, mean 14.48, 90th pct 58.87; per unit of clipped size: median 135.4
+     on 70-90%: no rule median 1.43 (n 10), other 9.07 (n 131); AUC 0.34
+     on 90-97%: no rule median 0.16 (n 35), other 0.08 (n 95); AUC 0.60
+
+== width 20: 1 networks; no-rule neurons per network: mean 1.00, range 1-1, networks with none 0; per neuron 5.0%; all tags {'nearly constant': 4, 'one-line rule': 12, 'partial': 3, 'no rule': 1}
+   no-rule neurons by block: {'memory': 1}; on rate: 89
+   medians among neurons that switch (on 3-97%): near zero (|pre| < 10% of terms) | |pre| / terms, median | rotating share | largest-so-far share | offset / swing | input share | n
+   no rule, on < 90%     0.375   0.124   0.488   0.534   0.890   0.000  1
+   other memory          0.084   0.348   0.208   0.532   0.920   0.000  8
+   other hiding          0.169   0.280   0.080   0.497   2.322   0.418  4
+   other gate            0.070   0.524   0.051   0.473  -1.262   0.368  3
+   separation of no-rule from all other switching neurons (AUC; >0.5 means no-rule higher):
+     near zero (|pre| < 10% of terms)     vs all 1.00   vs other memory 1.00
+     |pre| / terms, median                vs all 0.00   vs other memory 0.00
+     rotating share                       vs all 0.93   vs other memory 0.88
+     largest-so-far share                 vs all 0.60   vs other memory 0.50
+     offset / swing                       vs all 0.47   vs other memory 0.50
+     input share                          vs all 0.00   vs other memory 0.00
+   Q5 linear cost (points), neurons on 70-97% outside hiding, gates and store:
+     no rule  n   1: median 0.52, mean 0.52, 90th pct 0.52; per unit of clipped size: median 10.8
+     other    n   7: median 14.60, mean 27.85, 90th pct 80.19; per unit of clipped size: median 181.0
+     on 70-90%: no rule median 0.52 (n 1), other 47.82 (n 4); AUC 0.00
+
+== width 32: 7 networks; no-rule neurons per network: mean 1.43, range 0-3, networks with none 1; per neuron 4.5%; all tags {'partial': 109, 'one-line rule': 91, 'nearly constant': 14, 'no rule': 10}
+   no-rule neurons by block: {'memory': 10}; on rate: 65 66 71 72 79 83 84 85 95 97
+   medians among neurons that switch (on 3-97%): near zero (|pre| < 10% of terms) | |pre| / terms, median | rotating share | largest-so-far share | offset / swing | input share | n
+   no rule, on < 90%     0.406   0.145   0.424   0.195   0.405   0.000  8
+   no rule, on >= 90%    0.211   0.289   0.304   0.557   0.938   0.000  2
+   other memory          0.367   0.165   0.099   0.161   0.187   0.000  76
+   other hiding          0.168   0.284   0.044   0.322   1.556   0.399  48
+   other gate            0.149   0.363   0.005   0.277  -0.549   0.000  71
+   other store           0.087   0.839   0.009   0.972   5.609   0.000  5
+   separation of no-rule from all other switching neurons (AUC; >0.5 means no-rule higher):
+     near zero (|pre| < 10% of terms)     vs all 0.74   vs other memory 0.51
+     |pre| / terms, median                vs all 0.27   vs other memory 0.47
+     rotating share                       vs all 0.72   vs other memory 0.63
+     largest-so-far share                 vs all 0.43   vs other memory 0.52
+     offset / swing                       vs all 0.63   vs other memory 0.61
+     input share                          vs all 0.31   vs other memory 0.41
+   Q5 linear cost (points), neurons on 70-97% outside hiding, gates and store:
+     no rule  n   8: median 0.06, mean 1.44, 90th pct 3.71; per unit of clipped size: median 1.1
+     other    n  37: median 1.20, mean 16.40, 90th pct 71.68; per unit of clipped size: median 37.4
+     on 70-90%: no rule median 0.14 (n 6), other 4.41 (n 29); AUC 0.24
+     on 90-97%: no rule median 0.00 (n 2), other 0.02 (n 8); AUC 0.19

@@ -1,0 +1,5 @@
+{"kind": "resid", "fit": "bits", "seed": -1, "search": "r15", "base": 200.35, "best": "top 3 of x1..x9", "best_net": 211.73, "gain": 11.38, "n": 11, "iters": 0, "singular": 0}
+{"kind": "resid", "fit": "bits", "seed": 0, "search": "r15", "base": 199.72, "best": "top 5", "best_net": 201.22, "gain": 1.5, "n": 11, "iters": 9, "singular": 0}
+{"kind": "resid", "fit": "bits", "seed": 1, "search": "r15", "base": 245.73, "best": "top 8", "best_net": 245.37, "gain": -0.36, "n": 11, "iters": 9, "singular": 0}
+{"kind": "resid", "fit": "bits", "seed": 2, "search": "r15", "base": 190.29, "best": "top 4", "best_net": 192.95, "gain": 2.66, "n": 11, "iters": 9, "singular": 0}
+{"kind": "resid", "fit": "bits", "seed": 3, "search": "r15", "base": 247.87, "best": "top 8", "best_net": 247.63, "gain": -0.24, "n": 11, "iters": 9, "singular": 0}

@@ -1,0 +1,2 @@
+v21: accuracy on 1,000,000 lists 0.9587; under 1% noise (three seeds, 100,000 lists) 0.894, 0.893, 0.895
+trained: accuracy on 1,000,000 lists 0.9527; under 1% noise (three seeds, 100,000 lists) 0.905, 0.905, 0.906

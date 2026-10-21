@@ -1,0 +1,8 @@
+g(k), k = -9..8: -9:-5.72e-06 -8:2e-20 -7:9.16e-05 -6:0.000688 -5:0.00371 -4:0.0169 -3:0.0675 -2:0.237 -1:0.705 0:1.5 1:1.07e-15 2:-24 3:-180 4:-972 5:-4.42e+03 6:-1.77e+04 7:-6.22e+04 8:-1.85e+05
+twin rules, flip wave, position-0 cell (eps 0.1):        92.27
+twin rules, 2-D wave, position-0 cell (eps 0.1 via L):   98.05
+r3b (flip wave + runner-up + keep cut), exact level:      92.14
+2-D wave + runner-up + keep cut, push via L, no late gate: 97.82
+r4a full: 2-D wave + runner-up + keep cut + late gate:     97.80
+r4a full, rho_w 3.0:                                    96.84
+r4a full, rho_w 5.0:                                    82.46

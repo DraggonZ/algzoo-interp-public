@@ -1,0 +1,14 @@
+                                                     all  S befo  S afte  S at 8  L at 8  L at 9  S righ  S afte
+intact                                              95.4    95.5    95.2    94.2    96.6    93.6    96.3    95.2
+remove at steps after records, onto all receivers   50.1    10.1    89.9    92.2    15.4    16.3    88.4    91.8
+remove at steps after records, onto memory          48.9    12.3    85.3    90.7    16.2    17.3    53.9    94.0
+remove at steps after records, onto neuron 0        61.8    34.3    89.0    92.1    44.2    45.6    70.0    93.3
+remove at steps after records, onto memory except   61.1    42.8    79.2    75.7    78.8    75.5    38.9    81.4
+remove at steps after records, onto hiding neurons  83.6    77.9    89.4    91.2    87.7    84.3    77.8    91.5
+remove at steps after records, onto itself          85.2    82.4    87.9    87.2    82.0    80.4    97.9    86.1
+remove at steps after non-records, onto all receiv  65.8    96.7    35.1    92.1    97.0    95.1    20.7    92.5
+remove at steps after non-records, onto memory      65.8    95.9    35.9    88.3    96.2    94.1    20.7    93.3
+remove at steps after non-records, onto neuron 0    65.0    93.1    37.0    89.7    92.7    91.0    21.0    92.6
+remove at steps after non-records, onto memory exc  85.9    90.7    81.3    87.0    90.6    87.9    92.9    89.6
+remove at steps after non-records, onto hiding neu  88.8    96.0    81.6    94.6    96.6    94.1    79.8    94.8
+remove at steps after non-records, onto itself      92.5    93.6    91.4    93.6    93.3    92.2    91.6    92.5

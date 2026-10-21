@@ -1,0 +1,5 @@
+v7 late clock (reference)          all 0.813  ordinary 0.979  rec9 0.880  rec8 0.769  b2b 0.498
+jump clock, value share 1.0, no dip all 0.680  ordinary 0.816  rec9 0.452  rec8 0.456  b2b 0.534
+jump clock, value share 0.5, no dip all 0.690  ordinary 0.814  rec9 0.384  rec8 0.429  b2b 0.579
+jump clock, value share 0.3, no dip all 0.684  ordinary 0.813  rec9 0.361  rec8 0.420  b2b 0.567
+jump clock, value share 0.0, no dip all 0.676  ordinary 0.813  rec9 0.333  rec8 0.411  b2b 0.552

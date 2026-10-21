@@ -1,0 +1,1066 @@
+
+== ARC's 16 neurons (reference): 16 live | best single-feature |corr| mean 0.68 (above 0.8: 5) | depth-2 tree R2 mean 0.64 (above 0.8: 2, above 0.9: 0) | when it fires, depth-2 rule balanced accuracy mean 0.89 (above 0.95: 3)
+/data/output/research/algzoo/20261017_handbuilt/superposition/transcoder/interpret_tc.py:44: RuntimeWarning: divide by zero encountered in scalar divide
+  r2 = 1 - ((p - Zc[half:, i]) ** 2).sum() / ((Zc[half:, i] - Zc[half:, i].mean()) ** 2).sum()
+/data/output/research/algzoo/20261017_handbuilt/superposition/transcoder/interpret_tc.py:48: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at /pytorch/aten/src/ATen/native/ReduceOps.cpp:1839.)
+  A = Fs[z > 0]; za = z[z > 0]; zz = (za - za.mean()) / (za.std() + 1e-12); A = (A - A.mean(0)) / (A.std(0) + 1e-12)
+  unit   0: active  75.2% | best feature steps since largest (|corr| 0.55) | tree R2 0.60 | firing rule bal. acc. 0.86 | size when firing: largest so far (|corr| 0.59)
+  unit   1: active  72.9% | best feature current minus previous largest (|corr| 0.86) | tree R2 0.76 | firing rule bal. acc. 0.93 | size when firing: current minus previous largest (|corr| 0.85)
+  unit   2: active  89.7% | best feature largest so far (|corr| 0.82) | tree R2 0.72 | firing rule bal. acc. 0.93 | size when firing: largest so far (|corr| 0.82)
+  unit   3: active  76.6% | best feature largest so far (|corr| 0.46) | tree R2 0.31 | firing rule bal. acc. 0.68 | size when firing: largest so far (|corr| 0.58)
+  unit   4: active  23.3% | best feature new largest arrives (|corr| 0.62) | tree R2 0.65 | firing rule bal. acc. 0.99 | size when firing: largest minus second (|corr| 0.85)
+  unit   5: active  41.0% | best feature number 1 step back (|corr| 0.76) | tree R2 0.81 | firing rule bal. acc. 0.87 | size when firing: number 1 step back (|corr| 0.92)
+  unit   6: active  72.2% | best feature current minus previous largest (|corr| 0.86) | tree R2 0.76 | firing rule bal. acc. 0.92 | size when firing: current minus previous largest (|corr| 0.86)
+  unit   7: active  76.9% | best feature current minus previous largest (|corr| 0.92) | tree R2 0.87 | firing rule bal. acc. 0.98 | size when firing: current minus previous largest (|corr| 0.94)
+  unit   8: active  68.4% | best feature current minus previous second (|corr| 0.83) | tree R2 0.76 | firing rule bal. acc. 0.97 | size when firing: current minus previous second (|corr| 0.83)
+  unit   9: active  26.3% | best feature number 1 step back (|corr| 0.66) | tree R2 0.77 | firing rule bal. acc. 0.94 | size when firing: number 1 step back (|corr| 0.95)
+  unit  10: active  88.5% | best feature largest so far (|corr| 0.56) | tree R2 0.42 | firing rule bal. acc. 0.92 | size when firing: largest so far (|corr| 0.60)
+  unit  11: active  87.5% | best feature largest so far (|corr| 0.53) | tree R2 0.44 | firing rule bal. acc. 0.87 | size when firing: largest so far (|corr| 0.57)
+  unit  12: active  90.2% | best feature largest so far (|corr| 0.53) | tree R2 0.48 | firing rule bal. acc. 0.85 | size when firing: largest so far (|corr| 0.53)
+  unit  13: active  90.4% | best feature largest so far (|corr| 0.73) | tree R2 0.56 | firing rule bal. acc. 0.94 | size when firing: largest so far (|corr| 0.76)
+  unit  14: active  86.1% | best feature largest so far (|corr| 0.59) | tree R2 0.62 | firing rule bal. acc. 0.87 | size when firing: largest so far (|corr| 0.66)
+  unit  15: active  72.7% | best feature steps since largest (|corr| 0.61) | tree R2 0.67 | firing rule bal. acc. 0.64 | size when firing: steps since largest (|corr| 0.66)
+  -- clearest 5 (tree R2, active >= 2%):
+  unit 7 (active 77%, tree R2 0.87, best feature current minus previous largest 0.92; firing rule bal. acc. 0.98; size when firing: current minus previous largest 0.94):
+    activation tree:
+    |--- current minus previous largest <= -1.41
+    |   |--- current minus previous largest <= -2.54
+    |   |   |--- value: [40.37]
+    |   |--- current minus previous largest >  -2.54
+    |   |   |--- value: [24.30]
+    |--- current minus previous largest >  -1.41
+    |   |--- current minus previous largest <= -0.59
+    |   |   |--- value: [12.79]
+    |   |--- current minus previous largest >  -0.59
+    |   |   |--- value: [2.86]
+    
+    firing rule:
+    |--- current minus previous largest <= -0.05
+    |   |--- current minus previous largest <= -0.21
+    |   |   |--- class: True
+    |   |--- current minus previous largest >  -0.21
+    |   |   |--- class: True
+    |--- current minus previous largest >  -0.05
+    |   |--- current number <= -0.00
+    |   |   |--- class: True
+    |   |--- current number >  -0.00
+    |   |   |--- class: False
+    
+  unit 5 (active 41%, tree R2 0.81, best feature number 1 step back 0.76; firing rule bal. acc. 0.87; size when firing: number 1 step back 0.92):
+    activation tree:
+    |--- number 1 step back <= 0.89
+    |   |--- number 1 step back <= 0.35
+    |   |   |--- value: [0.25]
+    |   |--- number 1 step back >  0.35
+    |   |   |--- value: [4.79]
+    |--- number 1 step back >  0.89
+    |   |--- number 1 step back <= 1.63
+    |   |   |--- value: [11.40]
+    |   |--- number 1 step back >  1.63
+    |   |   |--- value: [21.52]
+    
+    firing rule:
+    |--- number 1 step back <= -0.00
+    |   |--- number 1 step back <= -0.04
+    |   |   |--- class: False
+    |   |--- number 1 step back >  -0.04
+    |   |   |--- class: False
+    |--- number 1 step back >  -0.00
+    |   |--- number 1 step back <= 0.45
+    |   |   |--- class: True
+    |   |--- number 1 step back >  0.45
+    |   |   |--- class: True
+    
+  unit 9 (active 26%, tree R2 0.77, best feature number 1 step back 0.66; firing rule bal. acc. 0.94; size when firing: number 1 step back 0.95):
+    activation tree:
+    |--- number 1 step back <= 1.14
+    |   |--- number 1 step back <= 0.62
+    |   |   |--- value: [0.05]
+    |   |--- number 1 step back >  0.62
+    |   |   |--- value: [0.67]
+    |--- number 1 step back >  1.14
+    |   |--- steps since largest <= 1.50
+    |   |   |--- value: [2.51]
+    |   |--- steps since largest >  1.50
+    |   |   |--- value: [0.08]
+    
+    firing rule:
+    |--- steps since largest <= 1.50
+    |   |--- number 1 step back <= -0.00
+    |   |   |--- class: False
+    |   |--- number 1 step back >  -0.00
+    |   |   |--- class: True
+    |--- steps since largest >  1.50
+    |   |--- largest minus second <= 0.03
+    |   |   |--- class: False
+    |   |--- largest minus second >  0.03
+    |   |   |--- class: False
+    
+  unit 1 (active 73%, tree R2 0.76, best feature current minus previous largest 0.86; firing rule bal. acc. 0.93; size when firing: current minus previous largest 0.85):
+    activation tree:
+    |--- current minus previous largest <= -1.45
+    |   |--- current minus previous largest <= -2.59
+    |   |   |--- value: [30.08]
+    |   |--- current minus previous largest >  -2.59
+    |   |   |--- value: [17.85]
+    |--- current minus previous largest >  -1.45
+    |   |--- current minus previous largest <= -0.69
+    |   |   |--- value: [9.34]
+    |   |--- current minus previous largest >  -0.69
+    |   |   |--- value: [2.28]
+    
+    firing rule:
+    |--- current minus previous largest <= -0.22
+    |   |--- current minus previous second <= 0.00
+    |   |   |--- class: True
+    |   |--- current minus previous second >  0.00
+    |   |   |--- class: True
+    |--- current minus previous largest >  -0.22
+    |   |--- current number <= -0.00
+    |   |   |--- class: True
+    |   |--- current number >  -0.00
+    |   |   |--- class: False
+    
+  unit 6 (active 72%, tree R2 0.76, best feature current minus previous largest 0.86; firing rule bal. acc. 0.92; size when firing: current minus previous largest 0.86):
+    activation tree:
+    |--- current minus previous largest <= -1.53
+    |   |--- current minus previous largest <= -2.65
+    |   |   |--- value: [31.68]
+    |   |--- current minus previous largest >  -2.65
+    |   |   |--- value: [19.10]
+    |--- current minus previous largest >  -1.53
+    |   |--- current minus previous largest <= -0.73
+    |   |   |--- value: [10.13]
+    |   |--- current minus previous largest >  -0.73
+    |   |   |--- value: [2.42]
+    
+    firing rule:
+    |--- current minus previous largest <= -0.22
+    |   |--- current minus previous second <= -0.04
+    |   |   |--- class: True
+    |   |--- current minus previous second >  -0.04
+    |   |   |--- class: True
+    |--- current minus previous largest >  -0.22
+    |   |--- current number <= -0.00
+    |   |   |--- class: True
+    |   |--- current number >  -0.00
+    |   |   |--- class: False
+    
+
+== transcoder 32x k4: 30 live | best single-feature |corr| mean 0.29 (above 0.8: 1) | depth-2 tree R2 mean 0.32 (above 0.8: 1, above 0.9: 0) | when it fires, depth-2 rule balanced accuracy mean 0.88 (above 0.95: 5)
+  unit   0: active   0.0% | best feature current number (|corr| 0.01) | tree R2 0.00 | firing rule bal. acc. 0.84 | size when firing: current number (|corr| nan)
+  unit   1: active   5.2% | best feature number 3 steps back (|corr| 0.27) | tree R2 0.31 | firing rule bal. acc. 0.87 | size when firing: number 3 steps back (|corr| 0.63)
+  unit   2: active   1.7% | best feature steps since largest (|corr| 0.19) | tree R2 0.07 | firing rule bal. acc. 0.82 | size when firing: largest so far (|corr| 0.72)
+  unit   4: active   0.0% | best feature current number (|corr| 0.03) | tree R2 0.04 | firing rule bal. acc. 0.93 | size when firing: third-largest so far (|corr| 0.82)
+  unit   5: active  34.1% | best feature number 2 steps back (|corr| 0.56) | tree R2 0.58 | firing rule bal. acc. 0.86 | size when firing: largest so far (|corr| 0.57)
+  unit   6: active  32.1% | best feature largest so far (|corr| 0.75) | tree R2 0.80 | firing rule bal. acc. 0.90 | size when firing: largest so far (|corr| 0.74)
+  unit   7: active   0.3% | best feature largest minus second (|corr| 0.12) | tree R2 0.27 | firing rule bal. acc. 0.95 | size when firing: number 1 step back (|corr| 0.67)
+  unit   8: active   0.0% | best feature current minus previous second (|corr| 0.02) | tree R2 0.00 | firing rule bal. acc. 0.80 | size when firing: second-largest so far (|corr| 0.67)
+  unit   9: active   0.2% | best feature number 1 step back (|corr| 0.06) | tree R2 0.01 | firing rule bal. acc. 0.90 | size when firing: third-largest so far (|corr| 0.61)
+  unit  10: active   8.9% | best feature number 1 step back (|corr| 0.22) | tree R2 0.27 | firing rule bal. acc. 0.83 | size when firing: second-largest so far (|corr| 0.85)
+  unit  11: active  23.2% | best feature new largest arrives (|corr| 0.64) | tree R2 0.72 | firing rule bal. acc. 0.98 | size when firing: largest minus second (|corr| 0.82)
+  unit  12: active  22.6% | best feature number 1 step back (|corr| 0.65) | tree R2 0.72 | firing rule bal. acc. 0.95 | size when firing: number 1 step back (|corr| 0.84)
+  unit  13: active   0.0% | best feature largest minus second (|corr| 0.05) | tree R2 0.06 | firing rule bal. acc. 0.98 | size when firing: largest minus second (|corr| 0.63)
+  unit  14: active   0.0% | best feature current minus previous largest (|corr| 0.01) | tree R2 -0.00 | firing rule bal. acc. 0.94 | size when firing: current number (|corr| nan)
+  unit  15: active   0.0% | best feature steps since second-largest (|corr| 0.00) | tree R2 nan | firing rule bal. acc. nan | size when firing: current number (|corr| nan)
+  unit  16: active  12.6% | best feature second-largest so far (|corr| 0.35) | tree R2 0.20 | firing rule bal. acc. 0.78 | size when firing: second-largest so far (|corr| 0.74)
+  unit  17: active  30.3% | best feature steps since largest (|corr| 0.39) | tree R2 0.63 | firing rule bal. acc. 0.88 | size when firing: steps since largest (|corr| 0.71)
+  unit  18: active  25.3% | best feature largest so far (|corr| 0.35) | tree R2 0.47 | firing rule bal. acc. 0.90 | size when firing: largest so far (|corr| 0.75)
+  unit  19: active   0.0% | best feature largest minus second (|corr| 0.03) | tree R2 0.02 | firing rule bal. acc. 1.00 | size when firing: current number (|corr| nan)
+  unit  20: active  13.4% | best feature number 1 step back (|corr| 0.46) | tree R2 0.51 | firing rule bal. acc. 0.91 | size when firing: number 1 step back (|corr| 0.83)
+  unit  21: active  65.5% | best feature current minus previous largest (|corr| 0.84) | tree R2 0.80 | firing rule bal. acc. 0.93 | size when firing: current minus previous second (|corr| 0.84)
+  unit  22: active   0.0% | best feature number 3 steps back (|corr| 0.02) | tree R2 0.00 | firing rule bal. acc. 0.85 | size when firing: current number (|corr| nan)
+  unit  23: active  16.3% | best feature new largest arrives (|corr| 0.54) | tree R2 0.58 | firing rule bal. acc. 0.96 | size when firing: largest minus second (|corr| 0.83)
+  unit  24: active   0.1% | best feature current minus previous second (|corr| 0.02) | tree R2 0.00 | firing rule bal. acc. 0.87 | size when firing: number 1 step back (|corr| 0.93)
+  unit  26: active   0.0% | best feature third-largest so far (|corr| 0.06) | tree R2 0.04 | firing rule bal. acc. 0.95 | size when firing: number 1 step back (|corr| 0.71)
+  unit  27: active  31.6% | best feature step (|corr| 0.39) | tree R2 0.32 | firing rule bal. acc. 0.72 | size when firing: second-largest so far (|corr| 0.65)
+  unit  28: active  27.9% | best feature steps since largest (|corr| 0.59) | tree R2 0.65 | firing rule bal. acc. 0.77 | size when firing: largest so far (|corr| 0.52)
+  unit  29: active  14.4% | best feature number 2 steps back (|corr| 0.35) | tree R2 0.23 | firing rule bal. acc. 0.81 | size when firing: second-largest so far (|corr| 0.55)
+  unit  30: active   8.5% | best feature number 1 step back (|corr| 0.26) | tree R2 0.28 | firing rule bal. acc. 0.86 | size when firing: number 1 step back (|corr| 0.80)
+  unit  31: active  21.8% | best feature steps since largest (|corr| 0.47) | tree R2 0.58 | firing rule bal. acc. 0.88 | size when firing: largest so far (|corr| 0.61)
+  -- clearest 10 (tree R2, active >= 2%):
+  unit 6 (active 32%, tree R2 0.80, best feature largest so far 0.75; firing rule bal. acc. 0.90; size when firing: largest so far 0.74):
+    activation tree:
+    |--- largest so far <= 0.37
+    |   |--- largest so far <= 0.13
+    |   |   |--- value: [0.72]
+    |   |--- largest so far >  0.13
+    |   |   |--- value: [0.47]
+    |--- largest so far >  0.37
+    |   |--- second-largest so far <= 0.08
+    |   |   |--- value: [0.30]
+    |   |--- second-largest so far >  0.08
+    |   |   |--- value: [0.01]
+    
+    firing rule:
+    |--- second-largest so far <= 0.25
+    |   |--- steps since largest <= 1.50
+    |   |   |--- class: True
+    |   |--- steps since largest >  1.50
+    |   |   |--- class: True
+    |--- second-largest so far >  0.25
+    |   |--- largest so far <= 0.70
+    |   |   |--- class: False
+    |   |--- largest so far >  0.70
+    |   |   |--- class: False
+    
+  unit 21 (active 66%, tree R2 0.80, best feature current minus previous largest 0.84; firing rule bal. acc. 0.93; size when firing: current minus previous second 0.84):
+    activation tree:
+    |--- current minus previous largest <= -1.62
+    |   |--- current minus previous second <= -1.91
+    |   |   |--- value: [5.23]
+    |   |--- current minus previous second >  -1.91
+    |   |   |--- value: [3.06]
+    |--- current minus previous largest >  -1.62
+    |   |--- current number <= -0.16
+    |   |   |--- value: [1.84]
+    |   |--- current number >  -0.16
+    |   |   |--- value: [0.35]
+    
+    firing rule:
+    |--- current number <= 0.13
+    |   |--- current number <= 0.01
+    |   |   |--- class: True
+    |   |--- current number >  0.01
+    |   |   |--- class: True
+    |--- current number >  0.13
+    |   |--- current minus previous second <= -0.06
+    |   |   |--- class: True
+    |   |--- current minus previous second >  -0.06
+    |   |   |--- class: False
+    
+  unit 12 (active 23%, tree R2 0.72, best feature number 1 step back 0.65; firing rule bal. acc. 0.95; size when firing: number 1 step back 0.84):
+    activation tree:
+    |--- number 1 step back <= 1.14
+    |   |--- number 1 step back <= 0.56
+    |   |   |--- value: [0.08]
+    |   |--- number 1 step back >  0.56
+    |   |   |--- value: [1.51]
+    |--- number 1 step back >  1.14
+    |   |--- steps since largest <= 1.50
+    |   |   |--- value: [5.84]
+    |   |--- steps since largest >  1.50
+    |   |   |--- value: [0.45]
+    
+    firing rule:
+    |--- number 1 step back <= 0.06
+    |   |--- largest minus second <= -2.33
+    |   |   |--- class: True
+    |   |--- largest minus second >  -2.33
+    |   |   |--- class: False
+    |--- number 1 step back >  0.06
+    |   |--- steps since largest <= 1.50
+    |   |   |--- class: True
+    |   |--- steps since largest >  1.50
+    |   |   |--- class: False
+    
+  unit 11 (active 23%, tree R2 0.72, best feature new largest arrives 0.64; firing rule bal. acc. 0.98; size when firing: largest minus second 0.82):
+    activation tree:
+    |--- current number <= 1.15
+    |   |--- new largest arrives <= 0.50
+    |   |   |--- value: [0.00]
+    |   |--- new largest arrives >  0.50
+    |   |   |--- value: [0.57]
+    |--- current number >  1.15
+    |   |--- largest minus second <= 1.02
+    |   |   |--- value: [0.93]
+    |   |--- largest minus second >  1.02
+    |   |   |--- value: [2.91]
+    
+    firing rule:
+    |--- current minus previous largest <= -0.13
+    |   |--- current minus previous largest <= -0.25
+    |   |   |--- class: False
+    |   |--- current minus previous largest >  -0.25
+    |   |   |--- class: False
+    |--- current minus previous largest >  -0.13
+    |   |--- current number <= 0.02
+    |   |   |--- class: False
+    |   |--- current number >  0.02
+    |   |   |--- class: True
+    
+  unit 28 (active 28%, tree R2 0.65, best feature steps since largest 0.59; firing rule bal. acc. 0.77; size when firing: largest so far 0.52):
+    activation tree:
+    |--- steps since largest <= 5.50
+    |   |--- steps since second-largest <= 6.50
+    |   |   |--- value: [0.15]
+    |   |--- steps since second-largest >  6.50
+    |   |   |--- value: [2.07]
+    |--- steps since largest >  5.50
+    |   |--- largest so far <= 1.56
+    |   |   |--- value: [1.97]
+    |   |--- largest so far >  1.56
+    |   |   |--- value: [4.26]
+    
+    firing rule:
+    |--- step <= 6.50
+    |   |--- steps since largest <= 1.50
+    |   |   |--- class: False
+    |   |--- steps since largest >  1.50
+    |   |   |--- class: False
+    |--- step >  6.50
+    |   |--- steps since largest <= 5.50
+    |   |   |--- class: True
+    |   |--- steps since largest >  5.50
+    |   |   |--- class: True
+    
+  unit 17 (active 30%, tree R2 0.63, best feature steps since largest 0.39; firing rule bal. acc. 0.88; size when firing: steps since largest 0.71):
+    activation tree:
+    |--- steps since largest <= 6.50
+    |   |--- steps since second-largest <= 6.50
+    |   |   |--- value: [0.06]
+    |   |--- steps since second-largest >  6.50
+    |   |   |--- value: [0.33]
+    |--- steps since largest >  6.50
+    |   |--- largest minus second <= 0.74
+    |   |   |--- value: [1.09]
+    |   |--- largest minus second >  0.74
+    |   |   |--- value: [3.09]
+    
+    firing rule:
+    |--- second-largest so far <= 0.04
+    |   |--- number 1 step back <= 0.24
+    |   |   |--- class: True
+    |   |--- number 1 step back >  0.24
+    |   |   |--- class: False
+    |--- second-largest so far >  0.04
+    |   |--- steps since largest <= 6.50
+    |   |   |--- class: False
+    |   |--- steps since largest >  6.50
+    |   |   |--- class: True
+    
+  unit 5 (active 34%, tree R2 0.58, best feature number 2 steps back 0.56; firing rule bal. acc. 0.86; size when firing: largest so far 0.57):
+    activation tree:
+    |--- number 2 steps back <= 1.15
+    |   |--- number 3 steps back <= 1.33
+    |   |   |--- value: [0.27]
+    |   |--- number 3 steps back >  1.33
+    |   |   |--- value: [1.70]
+    |--- number 2 steps back >  1.15
+    |   |--- largest minus second <= 0.92
+    |   |   |--- value: [2.11]
+    |   |--- largest minus second >  0.92
+    |   |   |--- value: [4.61]
+    
+    firing rule:
+    |--- number 2 steps back <= 0.08
+    |   |--- number 3 steps back <= 0.23
+    |   |   |--- class: False
+    |   |--- number 3 steps back >  0.23
+    |   |   |--- class: True
+    |--- number 2 steps back >  0.08
+    |   |--- steps since largest <= 3.50
+    |   |   |--- class: True
+    |   |--- steps since largest >  3.50
+    |   |   |--- class: False
+    
+  unit 23 (active 16%, tree R2 0.58, best feature new largest arrives 0.54; firing rule bal. acc. 0.96; size when firing: largest minus second 0.83):
+    activation tree:
+    |--- current minus previous largest <= 0.85
+    |   |--- steps since second-largest <= -0.50
+    |   |   |--- value: [0.46]
+    |   |--- steps since second-largest >  -0.50
+    |   |   |--- value: [0.02]
+    |--- current minus previous largest >  0.85
+    |   |--- current number <= 0.75
+    |   |   |--- value: [0.39]
+    |   |--- current number >  0.75
+    |   |   |--- value: [1.35]
+    
+    firing rule:
+    |--- new largest arrives <= 0.50
+    |   |--- current minus previous largest <= -0.01
+    |   |   |--- class: False
+    |   |--- current minus previous largest >  -0.01
+    |   |   |--- class: False
+    |--- new largest arrives >  0.50
+    |   |--- largest so far <= -0.01
+    |   |   |--- class: False
+    |   |--- largest so far >  -0.01
+    |   |   |--- class: True
+    
+  unit 31 (active 22%, tree R2 0.58, best feature steps since largest 0.47; firing rule bal. acc. 0.88; size when firing: largest so far 0.61):
+    activation tree:
+    |--- steps since largest <= 4.50
+    |   |--- steps since second-largest <= 4.50
+    |   |   |--- value: [0.04]
+    |   |--- steps since second-largest >  4.50
+    |   |   |--- value: [0.37]
+    |--- steps since largest >  4.50
+    |   |--- largest minus second <= 0.74
+    |   |   |--- value: [1.16]
+    |   |--- largest minus second >  0.74
+    |   |   |--- value: [3.26]
+    
+    firing rule:
+    |--- steps since largest <= 3.50
+    |   |--- steps since second-largest <= 3.50
+    |   |   |--- class: False
+    |   |--- steps since second-largest >  3.50
+    |   |   |--- class: False
+    |--- steps since largest >  3.50
+    |   |--- steps since largest <= 7.50
+    |   |   |--- class: True
+    |   |--- steps since largest >  7.50
+    |   |   |--- class: False
+    
+  unit 20 (active 13%, tree R2 0.51, best feature number 1 step back 0.46; firing rule bal. acc. 0.91; size when firing: number 1 step back 0.83):
+    activation tree:
+    |--- number 1 step back <= 0.95
+    |   |--- number 1 step back <= 0.40
+    |   |   |--- value: [0.01]
+    |   |--- number 1 step back >  0.40
+    |   |   |--- value: [0.24]
+    |--- number 1 step back >  0.95
+    |   |--- third-largest so far <= 0.04
+    |   |   |--- value: [1.65]
+    |   |--- third-largest so far >  0.04
+    |   |   |--- value: [0.27]
+    
+    firing rule:
+    |--- steps since largest <= 1.50
+    |   |--- number 1 step back <= 0.15
+    |   |   |--- class: False
+    |   |--- number 1 step back >  0.15
+    |   |   |--- class: True
+    |--- steps since largest >  1.50
+    |   |--- steps since second-largest <= 7.50
+    |   |   |--- class: False
+    |   |--- steps since second-largest >  7.50
+    |   |   |--- class: False
+    
+
+== transcoder 32x k8: 32 live | best single-feature |corr| mean 0.40 (above 0.8: 1) | depth-2 tree R2 mean 0.41 (above 0.8: 2, above 0.9: 0) | when it fires, depth-2 rule balanced accuracy mean 0.87 (above 0.95: 6)
+  unit   0: active  67.5% | best feature largest so far (|corr| 0.71) | tree R2 0.61 | firing rule bal. acc. 0.88 | size when firing: largest so far (|corr| 0.77)
+  unit   1: active  26.5% | best feature number 1 step back (|corr| 0.61) | tree R2 0.63 | firing rule bal. acc. 0.92 | size when firing: number 1 step back (|corr| 0.85)
+  unit   2: active   0.5% | best feature new second-largest arrives (|corr| 0.12) | tree R2 0.15 | firing rule bal. acc. 0.97 | size when firing: largest so far (|corr| 0.91)
+  unit   3: active  66.8% | best feature largest so far (|corr| 0.42) | tree R2 0.46 | firing rule bal. acc. 0.78 | size when firing: largest so far (|corr| 0.68)
+  unit   4: active  35.3% | best feature number 1 step back (|corr| 0.75) | tree R2 0.81 | firing rule bal. acc. 0.91 | size when firing: number 1 step back (|corr| 0.90)
+  unit   5: active  13.9% | best feature number 1 step back (|corr| 0.48) | tree R2 0.62 | firing rule bal. acc. 0.92 | size when firing: number 1 step back (|corr| 0.73)
+  unit   6: active  67.2% | best feature third-largest so far (|corr| 0.42) | tree R2 0.28 | firing rule bal. acc. 0.75 | size when firing: largest so far (|corr| 0.59)
+  unit   7: active  21.5% | best feature new largest arrives (|corr| 0.60) | tree R2 0.63 | firing rule bal. acc. 0.97 | size when firing: largest minus second (|corr| 0.82)
+  unit   8: active   5.3% | best feature number 1 step back (|corr| 0.28) | tree R2 0.35 | firing rule bal. acc. 0.86 | size when firing: number 1 step back (|corr| 0.75)
+  unit   9: active   7.2% | best feature largest so far (|corr| 0.51) | tree R2 0.74 | firing rule bal. acc. 0.96 | size when firing: current number (|corr| 0.84)
+  unit  10: active  18.7% | best feature number 1 step back (|corr| 0.54) | tree R2 0.57 | firing rule bal. acc. 0.88 | size when firing: number 1 step back (|corr| 0.73)
+  unit  11: active   0.4% | best feature number 3 steps back (|corr| 0.08) | tree R2 0.08 | firing rule bal. acc. 0.88 | size when firing: number 3 steps back (|corr| 0.53)
+  unit  12: active   0.0% | best feature number 3 steps back (|corr| 0.01) | tree R2 -0.00 | firing rule bal. acc. 0.97 | size when firing: current number (|corr| nan)
+  unit  13: active   2.9% | best feature number 2 steps back (|corr| 0.24) | tree R2 0.43 | firing rule bal. acc. 0.91 | size when firing: number 2 steps back (|corr| 0.59)
+  unit  14: active  64.1% | best feature largest so far (|corr| 0.47) | tree R2 0.38 | firing rule bal. acc. 0.68 | size when firing: largest so far (|corr| 0.59)
+  unit  15: active  11.6% | best feature number 1 step back (|corr| 0.31) | tree R2 0.38 | firing rule bal. acc. 0.84 | size when firing: number 1 step back (|corr| 0.66)
+  unit  16: active  20.3% | best feature number 2 steps back (|corr| 0.60) | tree R2 0.66 | firing rule bal. acc. 0.89 | size when firing: number 2 steps back (|corr| 0.76)
+  unit  17: active  46.5% | best feature steps since largest (|corr| 0.56) | tree R2 0.65 | firing rule bal. acc. 0.79 | size when firing: largest so far (|corr| 0.54)
+  unit  18: active  48.2% | best feature steps since largest (|corr| 0.59) | tree R2 0.59 | firing rule bal. acc. 0.67 | size when firing: steps since largest (|corr| 0.63)
+  unit  19: active   0.0% | best feature steps since second-largest (|corr| 0.01) | tree R2 -0.01 | firing rule bal. acc. 0.74 | size when firing: current number (|corr| nan)
+  unit  20: active   0.0% | best feature step (|corr| 0.02) | tree R2 0.01 | firing rule bal. acc. 0.88 | size when firing: second-largest so far (|corr| 0.44)
+  unit  21: active  60.0% | best feature current number (|corr| 0.71) | tree R2 0.53 | firing rule bal. acc. 0.84 | size when firing: current number (|corr| 0.76)
+  unit  22: active  70.7% | best feature current minus previous largest (|corr| 0.87) | tree R2 0.78 | firing rule bal. acc. 0.93 | size when firing: current minus previous largest (|corr| 0.87)
+  unit  23: active   0.0% | best feature third-largest so far (|corr| 0.01) | tree R2 -0.00 | firing rule bal. acc. 0.77 | size when firing: current number (|corr| nan)
+  unit  24: active  30.1% | best feature new largest arrives (|corr| 0.69) | tree R2 0.81 | firing rule bal. acc. 0.90 | size when firing: new largest arrives (|corr| 0.55)
+  unit  25: active  31.4% | best feature steps since largest (|corr| 0.59) | tree R2 0.68 | firing rule bal. acc. 0.84 | size when firing: steps since largest (|corr| 0.51)
+  unit  26: active   0.1% | best feature current number (|corr| 0.02) | tree R2 0.00 | firing rule bal. acc. 0.93 | size when firing: second-largest so far (|corr| 0.77)
+  unit  27: active   0.9% | best feature number 1 step back (|corr| 0.15) | tree R2 0.11 | firing rule bal. acc. 0.91 | size when firing: largest so far (|corr| 0.75)
+  unit  28: active  23.7% | best feature new largest arrives (|corr| 0.64) | tree R2 0.65 | firing rule bal. acc. 0.98 | size when firing: largest minus second (|corr| 0.85)
+  unit  29: active   0.4% | best feature current number (|corr| 0.07) | tree R2 0.02 | firing rule bal. acc. 0.86 | size when firing: second-largest so far (|corr| 0.37)
+  unit  30: active  32.7% | best feature number 3 steps back (|corr| 0.52) | tree R2 0.55 | firing rule bal. acc. 0.80 | size when firing: number 3 steps back (|corr| 0.49)
+  unit  31: active   0.1% | best feature number 1 step back (|corr| 0.07) | tree R2 0.06 | firing rule bal. acc. 0.98 | size when firing: largest so far (|corr| 0.79)
+  -- clearest 10 (tree R2, active >= 2%):
+  unit 24 (active 30%, tree R2 0.81, best feature new largest arrives 0.69; firing rule bal. acc. 0.90; size when firing: new largest arrives 0.55):
+    activation tree:
+    |--- second-largest so far <= 0.01
+    |   |--- current minus previous largest <= -0.48
+    |   |   |--- value: [0.17]
+    |   |--- current minus previous largest >  -0.48
+    |   |   |--- value: [0.90]
+    |--- second-largest so far >  0.01
+    |   |--- second-largest so far <= 0.32
+    |   |   |--- value: [0.21]
+    |   |--- second-largest so far >  0.32
+    |   |   |--- value: [0.01]
+    
+    firing rule:
+    |--- second-largest so far <= 0.34
+    |   |--- current minus previous largest <= -0.78
+    |   |   |--- class: False
+    |   |--- current minus previous largest >  -0.78
+    |   |   |--- class: True
+    |--- second-largest so far >  0.34
+    |   |--- current minus previous largest <= -0.01
+    |   |   |--- class: False
+    |   |--- current minus previous largest >  -0.01
+    |   |   |--- class: False
+    
+  unit 4 (active 35%, tree R2 0.81, best feature number 1 step back 0.75; firing rule bal. acc. 0.91; size when firing: number 1 step back 0.90):
+    activation tree:
+    |--- number 1 step back <= 0.86
+    |   |--- number 1 step back <= 0.41
+    |   |   |--- value: [0.05]
+    |   |--- number 1 step back >  0.41
+    |   |   |--- value: [0.86]
+    |--- number 1 step back >  0.86
+    |   |--- number 1 step back <= 1.58
+    |   |   |--- value: [1.98]
+    |   |--- number 1 step back >  1.58
+    |   |   |--- value: [3.57]
+    
+    firing rule:
+    |--- number 1 step back <= 0.08
+    |   |--- largest minus second <= -0.81
+    |   |   |--- class: True
+    |   |--- largest minus second >  -0.81
+    |   |   |--- class: False
+    |--- number 1 step back >  0.08
+    |   |--- steps since largest <= 2.50
+    |   |   |--- class: True
+    |   |--- steps since largest >  2.50
+    |   |   |--- class: True
+    
+  unit 22 (active 71%, tree R2 0.78, best feature current minus previous largest 0.87; firing rule bal. acc. 0.93; size when firing: current minus previous largest 0.87):
+    activation tree:
+    |--- current minus previous largest <= -1.46
+    |   |--- current minus previous second <= -1.88
+    |   |   |--- value: [5.04]
+    |   |--- current minus previous second >  -1.88
+    |   |   |--- value: [2.97]
+    |--- current minus previous largest >  -1.46
+    |   |--- current minus previous largest <= -0.73
+    |   |   |--- value: [1.53]
+    |   |--- current minus previous largest >  -0.73
+    |   |   |--- value: [0.34]
+    
+    firing rule:
+    |--- current minus previous largest <= -0.34
+    |   |--- new second-largest arrives <= 0.50
+    |   |   |--- class: True
+    |   |--- new second-largest arrives >  0.50
+    |   |   |--- class: True
+    |--- current minus previous largest >  -0.34
+    |   |--- current number <= -0.10
+    |   |   |--- class: True
+    |   |--- current number >  -0.10
+    |   |   |--- class: False
+    /data/output/research/algzoo/20261017_handbuilt/superposition/transcoder/interpret_tc.py:48: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at /pytorch/aten/src/ATen/native/ReduceOps.cpp:1839.)
+  A = Fs[z > 0]; za = z[z > 0]; zz = (za - za.mean()) / (za.std() + 1e-12); A = (A - A.mean(0)) / (A.std(0) + 1e-12)
+/data/output/research/algzoo/20261017_handbuilt/superposition/transcoder/interpret_tc.py:48: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at /pytorch/aten/src/ATen/native/ReduceOps.cpp:1839.)
+  A = Fs[z > 0]; za = z[z > 0]; zz = (za - za.mean()) / (za.std() + 1e-12); A = (A - A.mean(0)) / (A.std(0) + 1e-12)
+/data/output/research/algzoo/20261017_handbuilt/superposition/transcoder/interpret_tc.py:48: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at /pytorch/aten/src/ATen/native/ReduceOps.cpp:1839.)
+  A = Fs[z > 0]; za = z[z > 0]; zz = (za - za.mean()) / (za.std() + 1e-12); A = (A - A.mean(0)) / (A.std(0) + 1e-12)
+
+  unit 9 (active 7%, tree R2 0.74, best feature largest so far 0.51; firing rule bal. acc. 0.96; size when firing: current number 0.84):
+    activation tree:
+    |--- largest minus second <= -0.56
+    |   |--- largest minus second <= -1.38
+    |   |   |--- value: [0.15]
+    |   |--- largest minus second >  -1.38
+    |   |   |--- value: [0.08]
+    |--- largest minus second >  -0.56
+    |   |--- largest so far <= 0.11
+    |   |   |--- value: [0.01]
+    |   |--- largest so far >  0.11
+    |   |   |--- value: [0.00]
+    
+    firing rule:
+    |--- largest so far <= 0.23
+    |   |--- number 1 step back <= -0.63
+    |   |   |--- class: False
+    |   |--- number 1 step back >  -0.63
+    |   |   |--- class: True
+    |--- largest so far >  0.23
+    |   |--- second-largest so far <= -0.90
+    |   |   |--- class: False
+    |   |--- second-largest so far >  -0.90
+    |   |   |--- class: False
+    
+  unit 25 (active 31%, tree R2 0.68, best feature steps since largest 0.59; firing rule bal. acc. 0.84; size when firing: steps since largest 0.51):
+    activation tree:
+    |--- steps since largest <= 5.50
+    |   |--- steps since second-largest <= 5.50
+    |   |   |--- value: [0.09]
+    |   |--- steps since second-largest >  5.50
+    |   |   |--- value: [0.75]
+    |--- steps since largest >  5.50
+    |   |--- largest minus second <= 0.74
+    |   |   |--- value: [1.69]
+    |   |--- largest minus second >  0.74
+    |   |   |--- value: [4.26]
+    
+    firing rule:
+    |--- steps since largest <= 4.50
+    |   |--- steps since second-largest <= 4.50
+    |   |   |--- class: False
+    |   |--- steps since second-largest >  4.50
+    |   |   |--- class: True
+    |--- steps since largest >  4.50
+    |   |--- steps since largest <= 5.50
+    |   |   |--- class: True
+    |   |--- steps since largest >  5.50
+    |   |   |--- class: True
+    
+  unit 16 (active 20%, tree R2 0.66, best feature number 2 steps back 0.60; firing rule bal. acc. 0.89; size when firing: number 2 steps back 0.76):
+    activation tree:
+    |--- number 2 steps back <= 1.21
+    |   |--- number 2 steps back <= 0.65
+    |   |   |--- value: [0.03]
+    |   |--- number 2 steps back >  0.65
+    |   |   |--- value: [0.55]
+    |--- number 2 steps back >  1.21
+    |   |--- largest minus second <= 0.92
+    |   |   |--- value: [1.14]
+    |   |--- largest minus second >  0.92
+    |   |   |--- value: [2.95]
+    
+    firing rule:
+    |--- number 2 steps back <= 0.13
+    |   |--- current number <= -1.23
+    |   |   |--- class: True
+    |   |--- current number >  -1.23
+    |   |   |--- class: False
+    |--- number 2 steps back >  0.13
+    |   |--- steps since largest <= 3.50
+    |   |   |--- class: True
+    |   |--- steps since largest >  3.50
+    |   |   |--- class: False
+    
+  unit 17 (active 47%, tree R2 0.65, best feature steps since largest 0.56; firing rule bal. acc. 0.79; size when firing: largest so far 0.54):
+    activation tree:
+    |--- steps since largest <= 3.50
+    |   |--- steps since second-largest <= 3.50
+    |   |   |--- value: [0.03]
+    |   |--- steps since second-largest >  3.50
+    |   |   |--- value: [0.41]
+    |--- steps since largest >  3.50
+    |   |--- largest minus second <= 0.81
+    |   |   |--- value: [1.40]
+    |   |--- largest minus second >  0.81
+    |   |   |--- value: [3.16]
+    
+    firing rule:
+    |--- steps since largest <= 3.50
+    |   |--- current number <= 0.54
+    |   |   |--- class: False
+    |   |--- current number >  0.54
+    |   |   |--- class: True
+    |--- steps since largest >  3.50
+    |   |--- steps since largest <= 8.50
+    |   |   |--- class: True
+    |   |--- steps since largest >  8.50
+    |   |   |--- class: False
+    
+  unit 28 (active 24%, tree R2 0.65, best feature new largest arrives 0.64; firing rule bal. acc. 0.98; size when firing: largest minus second 0.85):
+    activation tree:
+    |--- current minus previous largest <= 0.59
+    |   |--- new largest arrives <= 0.50
+    |   |   |--- value: [0.00]
+    |   |--- new largest arrives >  0.50
+    |   |   |--- value: [0.67]
+    |--- current minus previous largest >  0.59
+    |   |--- current number <= 0.72
+    |   |   |--- value: [0.69]
+    |   |--- current number >  0.72
+    |   |   |--- value: [2.22]
+    
+    firing rule:
+    |--- current minus previous largest <= -0.13
+    |   |--- current minus previous largest <= -0.20
+    |   |   |--- class: False
+    |   |--- current minus previous largest >  -0.20
+    |   |   |--- class: False
+    |--- current minus previous largest >  -0.13
+    |   |--- current number <= -0.12
+    |   |   |--- class: False
+    |   |--- current number >  -0.12
+    |   |   |--- class: True
+    
+  unit 7 (active 22%, tree R2 0.63, best feature new largest arrives 0.60; firing rule bal. acc. 0.97; size when firing: largest minus second 0.82):
+    activation tree:
+    |--- current minus previous largest <= 0.59
+    |   |--- current minus previous largest <= -0.00
+    |   |   |--- value: [0.00]
+    |   |--- current minus previous largest >  -0.00
+    |   |   |--- value: [0.51]
+    |--- current minus previous largest >  0.59
+    |   |--- current number <= 0.89
+    |   |   |--- value: [0.56]
+    |   |--- current number >  0.89
+    |   |   |--- value: [1.98]
+    
+    firing rule:
+    |--- current minus previous largest <= -0.12
+    |   |--- current number <= 1.19
+    |   |   |--- class: False
+    |   |--- current number >  1.19
+    |   |   |--- class: False
+    |--- current minus previous largest >  -0.12
+    |   |--- current number <= 0.08
+    |   |   |--- class: False
+    |   |--- current number >  0.08
+    |   |   |--- class: True
+    
+  unit 1 (active 27%, tree R2 0.63, best feature number 1 step back 0.61; firing rule bal. acc. 0.92; size when firing: number 1 step back 0.85):
+    activation tree:
+    |--- number 1 step back <= 1.14
+    |   |--- number 1 step back <= 0.56
+    |   |   |--- value: [0.05]
+    |   |--- number 1 step back >  0.56
+    |   |   |--- value: [0.66]
+    |--- number 1 step back >  1.14
+    |   |--- largest minus second <= 0.94
+    |   |   |--- value: [1.22]
+    |   |--- largest minus second >  0.94
+    |   |   |--- value: [3.20]
+    
+    firing rule:
+    |--- steps since largest <= 1.50
+    |   |--- number 1 step back <= -0.01
+    |   |   |--- class: False
+    |   |--- number 1 step back >  -0.01
+    |   |   |--- class: True
+    |--- steps since largest >  1.50
+    |   |--- number 1 step back <= 0.61
+    |   |   |--- class: False
+    |   |--- number 1 step back >  0.61
+    |   |   |--- class: False
+    
+
+== transcoder 128x k8: 91 live | best single-feature |corr| mean 0.22 (above 0.8: 1) | depth-2 tree R2 mean 0.25 (above 0.8: 0, above 0.9: 0) | when it fires, depth-2 rule balanced accuracy mean 0.85 (above 0.95: 23)
+  unit   0: active  14.5% | best feature current number (|corr| 0.43) | tree R2 0.40 | firing rule bal. acc. 0.90 | size when firing: current number (|corr| 0.78)
+  unit   1: active   0.0% | best feature number 1 step back (|corr| 0.02) | tree R2 0.01 | firing rule bal. acc. 0.90 | size when firing: current number (|corr| nan)
+  unit   3: active  23.5% | best feature new largest arrives (|corr| 0.63) | tree R2 0.66 | firing rule bal. acc. 0.98 | size when firing: largest minus second (|corr| 0.84)
+  unit   4: active   0.0% | best feature current minus previous largest (|corr| 0.00) | tree R2 -0.00 | firing rule bal. acc. 0.50 | size when firing: current number (|corr| nan)
+  unit   5: active   0.0% | best feature number 1 step back (|corr| 0.02) | tree R2 0.01 | firing rule bal. acc. 0.92 | size when firing: largest so far (|corr| 0.34)
+  unit   6: active   0.1% | best feature number 1 step back (|corr| 0.04) | tree R2 0.02 | firing rule bal. acc. 0.93 | size when firing: number 1 step back (|corr| 0.59)
+  unit   7: active  22.9% | best feature step (|corr| 0.42) | tree R2 0.37 | firing rule bal. acc. 0.78 | size when firing: second-largest so far (|corr| 0.52)
+  unit   8: active   0.0% | best feature steps since largest (|corr| 0.01) | tree R2 -0.01 | firing rule bal. acc. 0.95 | size when firing: current number (|corr| nan)
+  unit  13: active   7.2% | best feature second-largest so far (|corr| 0.45) | tree R2 0.55 | firing rule bal. acc. 0.93 | size when firing: number 1 step back (|corr| 0.93)
+  unit  15: active   0.0% | best feature number 1 step back (|corr| 0.04) | tree R2 -0.01 | firing rule bal. acc. 0.86 | size when firing: number 1 step back (|corr| 0.77)
+  unit  16: active   1.9% | best feature number 3 steps back (|corr| 0.18) | tree R2 0.20 | firing rule bal. acc. 0.91 | size when firing: largest so far (|corr| 0.53)
+  unit  17: active   0.0% | best feature largest so far (|corr| 0.05) | tree R2 0.07 | firing rule bal. acc. 0.96 | size when firing: new second-largest arrives (|corr| 0.58)
+  unit  18: active  19.0% | best feature number 1 step back (|corr| 0.62) | tree R2 0.65 | firing rule bal. acc. 0.94 | size when firing: number 1 step back (|corr| 0.88)
+  unit  19: active   6.6% | best feature number 3 steps back (|corr| 0.18) | tree R2 0.11 | firing rule bal. acc. 0.69 | size when firing: largest so far (|corr| 0.63)
+  unit  20: active  38.6% | best feature number 3 steps back (|corr| 0.38) | tree R2 0.48 | firing rule bal. acc. 0.89 | size when firing: largest so far (|corr| 0.71)
+  unit  21: active   1.8% | best feature steps since largest (|corr| 0.22) | tree R2 0.31 | firing rule bal. acc. 0.91 | size when firing: largest so far (|corr| 0.77)
+  unit  23: active   0.0% | best feature step (|corr| 0.02) | tree R2 0.21 | firing rule bal. acc. 0.99 | size when firing: number 1 step back (|corr| 0.93)
+  unit  24: active   0.0% | best feature steps since second-largest (|corr| 0.01) | tree R2 -0.00 | firing rule bal. acc. 0.97 | size when firing: current number (|corr| nan)
+  unit  25: active  28.4% | best feature step (|corr| 0.46) | tree R2 0.35 | firing rule bal. acc. 0.73 | size when firing: second-largest so far (|corr| 0.56)
+  unit  26: active   0.0% | best feature number 1 step back (|corr| 0.00) | tree R2 -0.00 | firing rule bal. acc. 0.50 | size when firing: current number (|corr| nan)
+  unit  28: active   0.0% | best feature number 1 step back (|corr| 0.02) | tree R2 -0.01 | firing rule bal. acc. 0.96 | size when firing: largest so far (|corr| 0.53)
+  unit  30: active   0.0% | best feature current minus previous second (|corr| 0.01) | tree R2 -0.00 | firing rule bal. acc. 0.50 | size when firing: current number (|corr| nan)
+  unit  31: active   1.2% | best feature number 1 step back (|corr| 0.11) | tree R2 0.06 | firing rule bal. acc. 0.88 | size when firing: second-largest so far (|corr| 0.64)
+  unit  32: active   0.0% | best feature current number (|corr| 0.01) | tree R2 0.01 | firing rule bal. acc. 1.00 | size when firing: current number (|corr| nan)
+  unit  34: active   9.2% | best feature number 2 steps back (|corr| 0.34) | tree R2 0.40 | firing rule bal. acc. 0.87 | size when firing: second-largest so far (|corr| 0.75)
+  unit  35: active  54.5% | best feature largest so far (|corr| 0.79) | tree R2 0.77 | firing rule bal. acc. 0.88 | size when firing: largest so far (|corr| 0.74)
+  unit  36: active   0.1% | best feature third-largest so far (|corr| 0.11) | tree R2 0.25 | firing rule bal. acc. 0.98 | size when firing: number 1 step back (|corr| 0.89)
+  unit  37: active   0.2% | best feature number 1 step back (|corr| 0.11) | tree R2 0.11 | firing rule bal. acc. 0.96 | size when firing: largest so far (|corr| 0.86)
+  unit  39: active   0.0% | best feature second-largest so far (|corr| 0.01) | tree R2 -0.00 | firing rule bal. acc. 0.75 | size when firing: current number (|corr| nan)
+  unit  42: active   0.0% | best feature largest minus second (|corr| 0.01) | tree R2 0.00 | firing rule bal. acc. 1.00 | size when firing: current number (|corr| nan)
+  unit  44: active   2.5% | best feature current minus previous largest (|corr| 0.32) | tree R2 0.58 | firing rule bal. acc. 0.98 | size when firing: largest so far (|corr| 0.95)
+  unit  45: active  17.3% | best feature number 2 steps back (|corr| 0.57) | tree R2 0.59 | firing rule bal. acc. 0.90 | size when firing: number 2 steps back (|corr| 0.72)
+  unit  46: active   5.8% | best feature number 2 steps back (|corr| 0.27) | tree R2 0.16 | firing rule bal. acc. 0.87 | size when firing: second-largest so far (|corr| 0.56)
+  unit  47: active   0.2% | best feature third-largest so far (|corr| 0.11) | tree R2 0.25 | firing rule bal. acc. 0.99 | size when firing: number 1 step back (|corr| 0.87)
+  unit  48: active   0.0% | best feature third-largest so far (|corr| 0.01) | tree R2 -0.00 | firing rule bal. acc. 0.50 | size when firing: current number (|corr| nan)
+  unit  49: active   0.1% | best feature current minus previous second (|corr| 0.04) | tree R2 0.04 | firing rule bal. acc. 0.94 | size when firing: largest so far (|corr| 0.75)
+  unit  50: active   0.0% | best feature steps since largest (|corr| 0.01) | tree R2 0.00 | firing rule bal. acc. 0.62 | size when firing: current number (|corr| nan)
+  unit  51: active   0.0% | best feature number 1 step back (|corr| 0.02) | tree R2 -0.00 | firing rule bal. acc. 0.90 | size when firing: number 1 step back (|corr| 0.86)
+  unit  52: active   0.0% | best feature current number (|corr| 0.01) | tree R2 -0.00 | firing rule bal. acc. 0.67 | size when firing: current number (|corr| nan)
+  unit  55: active   0.0% | best feature third-largest so far (|corr| 0.01) | tree R2 -0.00 | firing rule bal. acc. 0.50 | size when firing: current number (|corr| nan)
+  unit  56: active   0.0% | best feature third-largest so far (|corr| 0.02) | tree R2 0.00 | firing rule bal. acc. 0.95 | size when firing: steps since largest (|corr| 0.55)
+  unit  58: active  38.8% | best feature steps since largest (|corr| 0.17) | tree R2 0.47 | firing rule bal. acc. 0.80 | size when firing: steps since largest (|corr| 0.55)
+  unit  59: active  17.3% | best feature number 1 step back (|corr| 0.41) | tree R2 0.40 | firing rule bal. acc. 0.86 | size when firing: number 1 step back (|corr| 0.69)
+  unit  60: active   3.6% | best feature number 3 steps back (|corr| 0.27) | tree R2 0.30 | firing rule bal. acc. 0.92 | size when firing: number 2 steps back (|corr| 0.72)
+  unit  61: active   0.0% | best feature current number (|corr| 0.01) | tree R2 -0.01 | firing rule bal. acc. 0.50 | size when firing: current number (|corr| nan)
+  unit  62: active   3.8% | best feature number 2 steps back (|corr| 0.26) | tree R2 0.34 | firing rule bal. acc. 0.92 | size when firing: number 1 step back (|corr| 0.91)
+  unit  64: active   8.5% | best feature current minus previous largest (|corr| 0.15) | tree R2 0.19 | firing rule bal. acc. 0.67 | size when firing: largest so far (|corr| 0.62)
+  unit  65: active   2.4% | best feature number 1 step back (|corr| 0.23) | tree R2 0.23 | firing rule bal. acc. 0.92 | size when firing: largest so far (|corr| 0.78)
+  unit  66: active   1.5% | best feature number 1 step back (|corr| 0.13) | tree R2 0.13 | firing rule bal. acc. 0.85 | size when firing: number 1 step back (|corr| 0.85)
+  unit  67: active   0.0% | best feature largest so far (|corr| 0.04) | tree R2 0.08 | firing rule bal. acc. 0.97 | size when firing: current number (|corr| nan)
+  unit  68: active   6.4% | best feature number 2 steps back (|corr| 0.29) | tree R2 0.17 | firing rule bal. acc. 0.84 | size when firing: second-largest so far (|corr| 0.47)
+  unit  72: active   4.9% | best feature number 1 step back (|corr| 0.29) | tree R2 0.35 | firing rule bal. acc. 0.89 | size when firing: number 2 steps back (|corr| 0.79)
+  unit  74: active   4.2% | best feature number 1 step back (|corr| 0.31) | tree R2 0.52 | firing rule bal. acc. 0.96 | size when firing: number 1 step back (|corr| 0.87)
+  unit  75: active   2.0% | best feature steps since largest (|corr| 0.18) | tree R2 0.22 | firing rule bal. acc. 0.85 | size when firing: second-largest so far (|corr| 0.55)
+  unit  76: active  68.7% | best feature current minus previous largest (|corr| 0.84) | tree R2 0.77 | firing rule bal. acc. 0.95 | size when firing: current minus previous second (|corr| 0.85)
+  unit  79: active   5.7% | best feature steps since largest (|corr| 0.35) | tree R2 0.44 | firing rule bal. acc. 0.93 | size when firing: largest so far (|corr| 0.74)
+  unit  81: active  33.6% | best feature second-largest so far (|corr| 0.60) | tree R2 0.49 | firing rule bal. acc. 0.83 | size when firing: second-largest so far (|corr| 0.61)
+  unit  82: active   0.0% | best feature third-largest so far (|corr| 0.01) | tree R2 -0.00 | firing rule bal. acc. 0.99 | size when firing: current number (|corr| nan)
+  unit  83: active  35.8% | best feature number 3 steps back (|corr| 0.39) | tree R2 0.39 | firing rule bal. acc. 0.66 | size when firing: second-largest so far (|corr| 0.59)
+  unit  84: active   0.1% | best feature largest so far (|corr| 0.10) | tree R2 0.34 | firing rule bal. acc. 0.96 | size when firing: current number (|corr| 0.92)
+  unit  86: active  14.1% | best feature number 2 steps back (|corr| 0.56) | tree R2 0.63 | firing rule bal. acc. 0.91 | size when firing: number 2 steps back (|corr| 0.77)
+  unit  87: active  34.8% | best feature largest so far (|corr| 0.38) | tree R2 0.50 | firing rule bal. acc. 0.89 | size when firing: largest minus second (|corr| 0.55)
+  unit  88: active  40.3% | best feature largest so far (|corr| 0.50) | tree R2 0.49 | firing rule bal. acc. 0.83 | size when firing: largest so far (|corr| 0.53)
+  unit  89: active   0.0% | best feature number 1 step back (|corr| 0.00) | tree R2 -0.01 | firing rule bal. acc. 0.50 | size when firing: current number (|corr| nan)
+  unit  90: active   0.0% | best feature current number (|corr| 0.03) | tree R2 0.05 | firing rule bal. acc. 0.90 | size when firing: current number (|corr| nan)
+  unit  91: active   8.4% | best feature new largest arrives (|corr| 0.37) | tree R2 0.51 | firing rule bal. acc. 0.93 | size when firing: largest so far (|corr| 0.76)
+  unit  92: active  20.7% | best feature new largest arrives (|corr| 0.60) | tree R2 0.62 | firing rule bal. acc. 0.98 | size when firing: largest minus second (|corr| 0.83)
+  unit  93: active  19.4% | best feature step (|corr| 0.59) | tree R2 0.74 | firing rule bal. acc. 0.94 | size when firing: number 1 step back (|corr| 0.75)
+  unit  94: active   6.4% | best feature number 1 step back (|corr| 0.35) | tree R2 0.52 | firing rule bal. acc. 0.96 | size when firing: number 1 step back (|corr| 0.90)
+  unit  95: active   4.4% | best feature steps since largest (|corr| 0.17) | tree R2 0.29 | firing rule bal. acc. 0.87 | size when firing: largest so far (|corr| 0.60)
+  unit  96: active   0.0% | best feature current number (|corr| 0.03) | tree R2 0.00 | firing rule bal. acc. 0.92 | size when firing: current number (|corr| nan)
+  unit  97: active  23.2% | best feature steps since largest (|corr| 0.60) | tree R2 0.67 | firing rule bal. acc. 0.87 | size when firing: largest so far (|corr| 0.64)
+  unit  98: active   0.0% | best feature number 1 step back (|corr| 0.02) | tree R2 0.01 | firing rule bal. acc. 0.89 | size when firing: current number (|corr| nan)
+  unit  99: active   0.0% | best feature steps since largest (|corr| 0.01) | tree R2 -0.00 | firing rule bal. acc. 0.80 | size when firing: current number (|corr| nan)
+  unit 101: active   0.0% | best feature number 1 step back (|corr| 0.01) | tree R2 -0.02 | firing rule bal. acc. 0.50 | size when firing: current number (|corr| nan)
+  unit 103: active   0.0% | best feature largest minus second (|corr| 0.01) | tree R2 -0.09 | firing rule bal. acc. 1.00 | size when firing: current number (|corr| nan)
+  unit 104: active   6.1% | best feature number 3 steps back (|corr| 0.23) | tree R2 0.18 | firing rule bal. acc. 0.80 | size when firing: number 3 steps back (|corr| 0.87)
+  unit 105: active   0.8% | best feature steps since largest (|corr| 0.21) | tree R2 0.72 | firing rule bal. acc. 0.98 | size when firing: largest minus second (|corr| 0.64)
+  unit 106: active   0.0% | best feature largest minus second (|corr| 0.02) | tree R2 -0.00 | firing rule bal. acc. 1.00 | size when firing: current number (|corr| nan)
+  unit 107: active  54.2% | best feature new largest arrives (|corr| 0.71) | tree R2 0.73 | firing rule bal. acc. 0.83 | size when firing: new largest arrives (|corr| 0.66)
+  unit 109: active   3.3% | best feature steps since largest (|corr| 0.15) | tree R2 0.05 | firing rule bal. acc. 0.78 | size when firing: largest so far (|corr| 0.64)
+  unit 110: active   5.3% | best feature step (|corr| 0.18) | tree R2 0.10 | firing rule bal. acc. 0.81 | size when firing: second-largest so far (|corr| 0.52)
+  unit 111: active  24.8% | best feature number 1 step back (|corr| 0.63) | tree R2 0.68 | firing rule bal. acc. 0.92 | size when firing: number 1 step back (|corr| 0.85)
+  unit 114: active   4.5% | best feature number 1 step back (|corr| 0.25) | tree R2 0.40 | firing rule bal. acc. 0.86 | size when firing: second-largest so far (|corr| 0.59)
+  unit 116: active   0.0% | best feature number 2 steps back (|corr| 0.02) | tree R2 -0.00 | firing rule bal. acc. 0.79 | size when firing: current number (|corr| nan)
+  unit 117: active  10.1% | best feature number 2 steps back (|corr| 0.43) | tree R2 0.36 | firing rule bal. acc. 0.90 | size when firing: number 2 steps back (|corr| 0.72)
+  unit 118: active   9.4% | best feature number 1 step back (|corr| 0.26) | tree R2 0.40 | firing rule bal. acc. 0.87 | size when firing: number 1 step back (|corr| 0.62)
+  unit 121: active   0.0% | best feature number 1 step back (|corr| 0.02) | tree R2 0.00 | firing rule bal. acc. 0.81 | size when firing: current number (|corr| nan)
+  unit 124: active   0.0% | best feature largest minus second (|corr| 0.03) | tree R2 0.02 | firing rule bal. acc. 0.83 | size when firing: current number (|corr| nan)
+  unit 125: active   5.4% | best feature steps since second-largest (|corr| 0.20) | tree R2 0.30 | firing rule bal. acc. 0.69 | size when firing: step (|corr| 0.67)
+  unit 127: active  10.5% | best feature number 3 steps back (|corr| 0.52) | tree R2 0.62 | firing rule bal. acc. 0.93 | size when firing: largest minus second (|corr| 0.79)
+  -- clearest 10 (tree R2, active >= 2%):
+  unit 35 (active 54%, tree R2 0.77, best feature largest so far 0.79; firing rule bal. acc. 0.88; size when firing: largest so far 0.74):
+    activation tree:
+    |--- second-largest so far <= 0.27
+    |   |--- largest so far <= 0.57
+    |   |   |--- value: [0.91]
+    |   |--- largest so far >  0.57
+    |   |   |--- value: [0.52]
+    |--- second-largest so far >  0.27
+    |   |--- largest so far <= 0.88
+    |   |   |--- value: [0.33]
+    |   |--- largest so far >  0.88
+    |   |   |--- value: [0.06]
+    
+    firing rule:
+    |--- second-largest so far <= 0.52
+    |   |--- largest so far <= 1.24
+    |   |   |--- class: True
+    |   |--- largest so far >  1.24
+    |   |   |--- class: True
+    |--- second-largest so far >  0.52
+    |   |--- largest so far <= 1.03
+    |   |   |--- class: False
+    |   |--- largest so far >  1.03
+    |   |   |--- class: False
+    
+  unit 76 (active 69%, tree R2 0.77, best feature current minus previous largest 0.84; firing rule bal. acc. 0.95; size when firing: current minus previous second 0.85):
+    activation tree:
+    |--- current minus previous second <= -0.91
+    |   |--- current minus previous largest <= -2.50
+    |   |   |--- value: [5.30]
+    |   |--- current minus previous largest >  -2.50
+    |   |   |--- value: [3.16]
+    |--- current minus previous second >  -0.91
+    |   |--- current number <= -0.47
+    |   |   |--- value: [2.19]
+    |   |--- current number >  -0.47
+    |   |   |--- value: [0.55]
+    
+    firing rule:
+    |--- current number <= -0.01
+    |   |--- current number <= -0.04
+    |   |   |--- class: True
+    |   |--- current number >  -0.04
+    |   |   |--- class: True
+    |--- current number >  -0.01
+    |   |--- current minus previous second <= -0.00
+    |   |   |--- class: True
+    |   |--- current minus previous second >  -0.00
+    |   |   |--- class: False
+    
+  unit 93 (active 19%, tree R2 0.74, best feature step 0.59; firing rule bal. acc. 0.94; size when firing: number 1 step back 0.75):
+    activation tree:
+    |--- steps since second-largest <= -0.50
+    |   |--- largest so far <= 1.97
+    |   |   |--- value: [0.10]
+    |   |--- largest so far >  1.97
+    |   |   |--- value: [0.00]
+    |--- steps since second-largest >  -0.50
+    |   |--- largest so far <= 0.12
+    |   |   |--- value: [0.06]
+    |   |--- largest so far >  0.12
+    |   |   |--- value: [0.00]
+    
+    firing rule:
+    |--- second-largest so far <= 0.05
+    |   |--- current minus previous largest <= -0.88
+    |   |   |--- class: False
+    |   |--- current minus previous largest >  -0.88
+    |   |   |--- class: True
+    |--- second-largest so far >  0.05
+    |   |--- largest so far <= 0.18
+    |   |   |--- class: True
+    |   |--- largest so far >  0.18
+    |   |   |--- class: False
+    
+  unit 107 (active 54%, tree R2 0.73, best feature new largest arrives 0.71; firing rule bal. acc. 0.83; size when firing: new largest arrives 0.66):
+    activation tree:
+    |--- current minus previous largest <= -0.00
+    |   |--- largest so far <= 0.51
+    |   |   |--- value: [0.91]
+    |   |--- largest so far >  0.51
+    |   |   |--- value: [0.16]
+    |--- current minus previous largest >  -0.00
+    |   |--- second-largest so far <= 0.46
+    |   |   |--- value: [1.52]
+    |   |--- second-largest so far >  0.46
+    |   |   |--- value: [0.62]
+    
+    firing rule:
+    |--- largest so far <= 0.82
+    |   |--- largest so far <= 0.56
+    |   |   |--- class: True
+    |   |--- largest so far >  0.56
+    |   |   |--- class: True
+    |--- largest so far >  0.82
+    |   |--- current minus previous largest <= -0.00
+    |   |   |--- class: False
+    |   |--- current minus previous largest >  -0.00
+    |   |   |--- class: True
+    
+  unit 111 (active 25%, tree R2 0.68, best feature number 1 step back 0.63; firing rule bal. acc. 0.92; size when firing: number 1 step back 0.85):
+    activation tree:
+    |--- number 1 step back <= 1.15
+    |   |--- number 1 step back <= 0.56
+    |   |   |--- value: [0.06]
+    |   |--- number 1 step back >  0.56
+    |   |   |--- value: [0.90]
+    |--- number 1 step back >  1.15
+    |   |--- steps since largest <= 1.50
+    |   |   |--- value: [3.47]
+    |   |--- steps since largest >  1.50
+    |   |   |--- value: [0.10]
+    
+    firing rule:
+    |--- steps since largest <= 1.50
+    |   |--- number 1 step back <= -0.00
+    |   |   |--- class: False
+    |   |--- number 1 step back >  -0.00
+    |   |   |--- class: True
+    |--- steps since largest >  1.50
+    |   |--- largest minus second <= 0.10
+    |   |   |--- class: False
+    |   |--- largest minus second >  0.10
+    |   |   |--- class: False
+    
+  unit 97 (active 23%, tree R2 0.67, best feature steps since largest 0.60; firing rule bal. acc. 0.87; size when firing: largest so far 0.64):
+    activation tree:
+    |--- steps since largest <= 4.50
+    |   |--- steps since second-largest <= 5.50
+    |   |   |--- value: [0.01]
+    |   |--- steps since second-largest >  5.50
+    |   |   |--- value: [0.33]
+    |--- steps since largest >  4.50
+    |   |--- largest minus second <= 0.73
+    |   |   |--- value: [1.25]
+    |   |--- largest minus second >  0.73
+    |   |   |--- value: [3.12]
+    
+    firing rule:
+    |--- steps since largest <= 4.50
+    |   |--- steps since second-largest <= 4.50
+    |   |   |--- class: False
+    |   |--- steps since second-largest >  4.50
+    |   |   |--- class: True
+    |--- steps since largest >  4.50
+    |   |--- number 3 steps back <= 0.69
+    |   |   |--- class: True
+    |   |--- number 3 steps back >  0.69
+    |   |   |--- class: True
+    
+  unit 3 (active 24%, tree R2 0.66, best feature new largest arrives 0.63; firing rule bal. acc. 0.98; size when firing: largest minus second 0.84):
+    activation tree:
+    |--- current minus previous largest <= 0.55
+    |   |--- new largest arrives <= 0.50
+    |   |   |--- value: [0.00]
+    |   |--- new largest arrives >  0.50
+    |   |   |--- value: [0.69]
+    |--- current minus previous largest >  0.55
+    |   |--- current number <= 0.86
+    |   |   |--- value: [0.75]
+    |   |--- current number >  0.86
+    |   |   |--- value: [2.42]
+    
+    firing rule:
+    |--- current minus previous largest <= -0.11
+    |   |--- current minus previous largest <= -0.27
+    |   |   |--- class: False
+    |   |--- current minus previous largest >  -0.27
+    |   |   |--- class: False
+    |--- current minus previous largest >  -0.11
+    |   |--- current number <= 0.00
+    |   |   |--- class: False
+    |   |--- current number >  0.00
+    |   |   |--- class: True
+    
+  unit 18 (active 19%, tree R2 0.65, best feature number 1 step back 0.62; firing rule bal. acc. 0.94; size when firing: number 1 step back 0.88):
+    activation tree:
+    |--- number 1 step back <= 1.11
+    |   |--- number 1 step back <= 0.62
+    |   |   |--- value: [0.01]
+    |   |--- number 1 step back >  0.62
+    |   |   |--- value: [0.29]
+    |--- number 1 step back >  1.11
+    |   |--- steps since largest <= 1.50
+    |   |   |--- value: [1.07]
+    |   |--- steps since largest >  1.50
+    |   |   |--- value: [0.20]
+    
+    firing rule:
+    |--- number 1 step back <= 0.19
+    |   |--- number 1 step back <= 0.14
+    |   |   |--- class: False
+    |   |--- number 1 step back >  0.14
+    |   |   |--- class: False
+    |--- number 1 step back >  0.19
+    |   |--- steps since largest <= 1.50
+    |   |   |--- class: True
+    |   |--- steps since largest >  1.50
+    |   |   |--- class: False
+    
+  unit 86 (active 14%, tree R2 0.63, best feature number 2 steps back 0.56; firing rule bal. acc. 0.91; size when firing: number 2 steps back 0.77):
+    activation tree:
+    |--- number 2 steps back <= 1.29
+    |   |--- number 2 steps back <= 0.69
+    |   |   |--- value: [0.01]
+    |   |--- number 2 steps back >  0.69
+    |   |   |--- value: [0.20]
+    |--- number 2 steps back >  1.29
+    |   |--- largest minus second <= 1.01
+    |   |   |--- value: [0.42]
+    |   |--- largest minus second >  1.01
+    |   |   |--- value: [1.17]
+    
+    firing rule:
+    |--- number 2 steps back <= 0.24
+    |   |--- second-largest so far <= -1.45
+    |   |   |--- class: True
+    |   |--- second-largest so far >  -1.45
+    |   |   |--- class: False
+    |--- number 2 steps back >  0.24
+    |   |--- steps since largest <= 2.50
+    |   |   |--- class: True
+    |   |--- steps since largest >  2.50
+    |   |   |--- class: False
+    
+  unit 92 (active 21%, tree R2 0.62, best feature new largest arrives 0.60; firing rule bal. acc. 0.98; size when firing: largest minus second 0.83):
+    activation tree:
+    |--- current minus previous largest <= 0.67
+    |   |--- steps since largest <= 0.50
+    |   |   |--- value: [0.44]
+    |   |--- steps since largest >  0.50
+    |   |   |--- value: [0.00]
+    |--- current minus previous largest >  0.67
+    |   |--- current number <= 0.77
+    |   |   |--- value: [0.47]
+    |   |--- current number >  0.77
+    |   |   |--- value: [1.68]
+    
+    firing rule:
+    |--- current minus previous largest <= -0.00
+    |   |--- current minus previous largest <= -0.15
+    |   |   |--- class: False
+    |   |--- current minus previous largest >  -0.15
+    |   |   |--- class: False
+    |--- current minus previous largest >  -0.00
+    |   |--- largest so far <= -0.00
+    |   |   |--- class: False
+    |   |--- largest so far >  -0.00
+    |   |   |--- class: True
+    

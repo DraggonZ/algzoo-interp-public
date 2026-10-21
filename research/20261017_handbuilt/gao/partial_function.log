@@ -1,0 +1,11 @@
+normal accuracy 0.953
+no clipping of the cancelling neurons on partly switched steps: 0.714
+no clipping of the cancelling neurons on fully silenced steps:  0.254
+control, no clipping of four random other neurons on the same partly switched steps: 0.390-0.950
+control, no clipping of four random other neurons on the same partly switched steps: 0.390-0.950
+second-largest came before the largest (an overtaken record or kept number)   : 0.50 of lists; accuracy 0.956 -> 0.701
+second-largest came after the largest                                         : 0.50 of lists; accuracy 0.951 -> 0.728
+third-largest within 10% of the second                                        : 0.20 of lists; accuracy 0.822 -> 0.511
+third-largest more than 10% below                                             : 0.80 of lists; accuracy 0.986 -> 0.765
+at most one positive number                                                   : 0.01 of lists; accuracy 0.205 -> 0.205
+after the intervention, wrong answers name: the largest 0.08 | the third-largest 0.44

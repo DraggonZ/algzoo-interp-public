@@ -1,0 +1,5 @@
+errors against true accuracy, points; sampled SE about 0.05 points
+example  true 0.9532 | sampled break-only -1.7 two-way -0.8 | det (20, 6, 16): break-only -1.5 two-way -0.6 | det (40, 12, 64): break-only -1.5 two-way -0.9
+seed0    true 0.9100 | sampled break-only -16.2 two-way -3.0 | det (20, 6, 16): break-only -14.0 two-way -0.9 | det (40, 12, 64): break-only -15.5 two-way -3.2
+seed1    true 0.8802 | sampled break-only -18.2 two-way -1.9 | det (20, 6, 16): break-only -16.8 two-way -0.6 | det (40, 12, 64): break-only -17.9 two-way -2.1
+seed4    true 0.8896 | sampled break-only -11.1 two-way -5.3 | det (20, 6, 16): break-only -9.8 two-way -4.1 | det (40, 12, 64): break-only -10.5 two-way -5.4

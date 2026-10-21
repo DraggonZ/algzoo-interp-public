@@ -1,0 +1,7 @@
+share of the keep gate's pre-activation variance by source neuron (active steps):
+  0:0.06 4:0.82 5:0.11 7:0.21 8:0.09 10:0.04 11:0.20 12:0.09 14:0.06 input:0.00
+keep gate from account+menu + true previous none                    : median error when on 0.268; block account, all 16 replaced: 0.867
+keep gate from account+menu + true previous store 2                 : median error when on 0.245; block account, all 16 replaced: 0.875
+keep gate from account+menu + true previous second-largest store 8  : median error when on 0.247; block account, all 16 replaced: 0.872
+keep gate from account+menu + true previous cancelling 1, 6, 7, 8   : median error when on 0.232; block account, all 16 replaced: 0.878
+keep gate from account+menu + true previous memory                  : median error when on 0.138; block account, all 16 replaced: 0.891

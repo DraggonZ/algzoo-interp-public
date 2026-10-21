@@ -1,0 +1,3 @@
+coefficients per age: 84 | remaining spread (units of L): 2:0.09 3:0.13 4:0.12 5:0.22 6:0.39 7:0.59 8:0.63
+rule 4: age table + straight-line residual formula    93.31%  (-1.92)
+rule 5: rule 4 + remaining residual as random noise   92.77%  (-2.46)

@@ -1,0 +1,6 @@
+exact timer rules                     : measured 0.960; first-order predicted 0.959
+misreading: height from the largest   : measured 0.787; first-order predicted 0.788
+misreading: flip left out             : measured 0.730; first-order predicted 0.645
+slightly off: 45.5 degrees            : measured 0.949; first-order predicted 0.926
+slightly off: wave 2% too large       : measured 0.956; first-order predicted 0.941
+slightly off: store 2% too large      : measured 0.901; first-order predicted 0.805

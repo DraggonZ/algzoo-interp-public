@@ -1,0 +1,52 @@
+   ARC tie 23: median tau 0.83, median |D| 1.46
+   ARC tie 12: median tau 0.75, median |D| 1.13
+ ARC: true 95.32; band model (exact node widths) 95.24; with background spread 94.99
+   200 tie 23: median tau 0.56, median |D| 0.83
+   200 tie 12: median tau 0.73, median |D| 1.11
+ 200: true 93.24; band model (exact node widths) 93.51; with background spread 93.14
+   201 tie 23: median tau 0.60, median |D| 1.05
+   201 tie 12: median tau 1.03, median |D| 2.64
+ 201: true 94.38; band model (exact node widths) 94.28; with background spread 93.75
+   202 tie 23: median tau 1.08, median |D| 0.93
+   202 tie 12: median tau 1.38, median |D| 0.89
+ 202: true 89.72; band model (exact node widths) 91.19; with background spread 88.27
+   203 tie 23: median tau 0.45, median |D| 1.18
+   203 tie 12: median tau 0.65, median |D| 0.95
+ 203: true 89.88; band model (exact node widths) 89.96; with background spread 89.50
+   204 tie 23: median tau 0.68, median |D| 0.68
+   204 tie 12: median tau 0.96, median |D| 1.36
+ 204: true 88.93; band model (exact node widths) 88.83; with background spread 85.80
+   205 tie 23: median tau 0.60, median |D| 0.90
+   205 tie 12: median tau 1.36, median |D| 2.72
+ 205: true 93.62; band model (exact node widths) 94.13; with background spread 93.32
+   206 tie 23: median tau 0.70, median |D| 1.00
+   206 tie 12: median tau 0.77, median |D| 1.38
+ 206: true 91.29; band model (exact node widths) 91.28; with background spread 89.68
+   207 tie 23: median tau 0.71, median |D| 0.78
+   207 tie 12: median tau 0.77, median |D| 0.86
+ 207: true 91.14; band model (exact node widths) 89.96; with background spread 87.27
+   208 tie 23: median tau 0.71, median |D| 0.75
+   208 tie 12: median tau 0.70, median |D| 0.67
+ 208: true 84.03; band model (exact node widths) 84.62; with background spread 83.39
+   209 tie 23: median tau 0.60, median |D| 0.78
+   209 tie 12: median tau 0.92, median |D| 0.86
+ 209: true 95.89; band model (exact node widths) 95.68; with background spread 94.75
+   210 tie 23: median tau 0.67, median |D| 0.75
+   210 tie 12: median tau 0.84, median |D| 0.95
+ 210: true 96.15; band model (exact node widths) 95.79; with background spread 95.20
+   211 tie 23: median tau 0.48, median |D| 0.65
+   211 tie 12: median tau 0.50, median |D| 0.86
+ 211: true 93.47; band model (exact node widths) 93.04; with background spread 92.45
+   212 tie 23: median tau 0.73, median |D| 0.87
+   212 tie 12: median tau 0.99, median |D| 0.99
+ 212: true 84.53; band model (exact node widths) 84.86; with background spread 80.92
+   213 tie 23: median tau 0.80, median |D| 1.03
+   213 tie 12: median tau 0.82, median |D| 1.90
+ 213: true 93.89; band model (exact node widths) 94.30; with background spread 94.02
+   214 tie 23: median tau 0.35, median |D| 0.63
+   214 tie 12: median tau 0.37, median |D| 1.03
+ 214: true 94.84; band model (exact node widths) 94.10; with background spread 93.86
+   215 tie 23: median tau 0.68, median |D| 0.78
+   215 tie 12: median tau 0.65, median |D| 0.80
+ 215: true 92.60; band model (exact node widths) 92.75; with background spread 90.75
+RMSE against truth over 17 networks: without spread 0.57, with 1.74; mean error +0.04 / -1.28

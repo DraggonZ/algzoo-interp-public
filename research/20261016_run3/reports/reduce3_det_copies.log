@@ -1,0 +1,4 @@
+sigma 0.005: 32 copies, RMSE 1.35 points (bias -0.42); copies at 0.6 or above (32): RMSE 1.35; accuracy range 0.82-0.94
+sigma 0.01: 32 copies, RMSE 2.66 points (bias -1.74); copies at 0.6 or above (32): RMSE 2.66; accuracy range 0.62-0.89
+sigma 0.02: 32 copies, RMSE 2.16 points (bias -1.16); copies at 0.6 or above (21): RMSE 2.28; accuracy range 0.35-0.77
+all: RMSE 2.13; correlation 0.992

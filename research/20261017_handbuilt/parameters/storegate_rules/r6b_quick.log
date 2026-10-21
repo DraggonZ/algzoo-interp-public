@@ -1,0 +1,24 @@
+row4 = -0.52 row2, all16: saved 1.0 (rows 1)
+row4 = -0.552 row2, all16: saved 4.4 (rows 1)
+row4 = -0.57 row2, all16: saved 3.3 (rows 1)
+row4 = -0.52 row2, no memory: saved -1.5 (rows 1)
+row4 = -0.552 row2, no memory: saved 0.7 (rows 1)
+row4 = -0.57 row2, no memory: saved -0.0 (rows 1)
+row4 = -0.52 row2, sd only: saved -8.1 (rows 1)
+row4 = -0.552 row2, sd only: saved -7.2 (rows 1)
+row4 = -0.57 row2, sd only: saved -7.4 (rows 1)
+row4 = -0.52 row2, sd+gates: saved -6.0 (rows 1)
+row4 = -0.552 row2, sd+gates: saved -4.7 (rows 1)
+row4 = -0.57 row2, sd+gates: saved -5.1 (rows 1)
+row4 = -0.52 row2, memory only: saved -9.9 (rows 1)
+row4 = -0.552 row2, memory only: saved -10.0 (rows 1)
+row4 = -0.57 row2, memory only: saved -10.1 (rows 1)
+row4 = -0.52 row2, hiding only: saved -9.0 (rows 1)
+row4 = -0.552 row2, hiding only: saved -8.9 (rows 1)
+row4 = -0.57 row2, hiding only: saved -8.8 (rows 1)
+exact, all16: 27.1
+exact, no memory: 13.8
+exact, sd only: -3.5
+exact, sd+gates: 2.6
+exact, memory only: -1.7
+exact, hiding only: -3.8

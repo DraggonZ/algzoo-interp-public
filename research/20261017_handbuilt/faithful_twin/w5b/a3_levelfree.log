@@ -1,0 +1,6 @@
+answers changed 0.395%; accuracy old 92.33, new 92.36; max score change 5.19e-01
+layout: {0: 'mem0', 1: 'c1', 2: 'store', 3: 'mem6', 4: 'detect', 5: 'keep', 6: 'c6', 7: 'clock0+clock1+clock2+flip', 8: 'Q', 9: 'late', 10: 'mem4', 11: 'mem3', 12: 'mem2', 13: 'mem5', 14: 'linear', 15: 'mem1'}
+w5b map (hiding rows: c1, c6, clock0+clock1+clock2+flip, Q): names the largest 58.6%
+wave only            names the largest 53.3%
+wave + Q             names the largest 53.2%
+wave + c1 + c6       names the largest 58.7%

@@ -1,0 +1,14 @@
+  hiding: hand  5 -> ARC  7  corr 0.99
+  hiding: hand  6 -> ARC  6  corr 0.93
+  hiding: hand  7 -> ARC  8  corr 0.89
+  hiding: hand  4 -> ARC  1  corr 0.93
+  memory: hand  8 -> ARC  0  corr 0.84
+  memory: hand  9 -> ARC 15  corr 0.65
+  memory: hand 10 -> ARC  3  corr 0.58
+  memory: hand 11 -> ARC 12  corr 0.79
+  memory: hand 12 -> ARC 11  corr 0.88
+  memory: hand 13 -> ARC 10  corr 0.89
+  memory: hand 14 -> ARC 13  corr 0.69
+  memory: hand 15 -> ARC 14  corr 0.63
+same function: max logit difference 4.4964254541923765e-11
+accuracy on 4M lists 0.92580775

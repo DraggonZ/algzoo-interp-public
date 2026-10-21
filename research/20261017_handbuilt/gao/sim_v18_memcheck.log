@@ -1,0 +1,4 @@
+largest memory error with real drivers: 2.4083533615345173e-12
+memory from real drivers: {'kl': 0.0, 'acc': 0.9604, 'agree': 0.9968}
+clock formula error > 1e-6 at 0.0000 of steps; of those, input within 0.001 below the largest: 0.00
+all 16 exact: moved 0.0075; top-two gap of moved lists (scaled units, median gap of all lists 8.2): 90th percentile 0.000; right before 0.12, after 0.10

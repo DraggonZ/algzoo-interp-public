@@ -1,0 +1,8 @@
+2nd_argmax_2_4_1073741824_bo5.pth: exact 0.32802744 MC 0.32802305 ± 7.2e-06 z +0.61 | regions 68 ops 1.39e+07 = 4.34e+05 samples (1s)
+2nd_argmax_3_4_1073741824_bo5.pth: exact 0.43328768 MC 0.43328767 ± 7.6e-06 z +0.00 | regions 298 ops 1.65e+07 = 2.75e+05 samples (1s)
+2nd_argmax_4_4_1073741824_bo5.pth: exact 0.60201843 MC 0.60201549 ± 7.5e-06 z +0.39 | regions 646 ops 1.73e+07 = 1.8e+05 samples (1s)
+2nd_argmax_5_4_1073741824_bo5.pth: exact 0.74565251 MC 0.74567132 ± 6.6e-06 z -2.83 | regions 1340 ops 1.97e+07 = 1.4e+05 samples (1s)
+2nd_argmax_6_4_1073741824_bo5.pth: exact 0.86475108 MC 0.86475940 ± 5.2e-06 z -1.59 | regions 2290 ops 3.05e+07 = 1.59e+05 samples (2s)
+2nd_argmax_8_4_1073741824_bo5.pth: exact 0.98746001 MC 0.98745941 ± 1.7e-06 z +0.36 | regions 4078 ops 3.56e+07 = 1.11e+05 samples (2s)
+2nd_argmax_16_4_1073741824_bo5.pth: exact 0.99830684 MC 0.99830649 ± 6.3e-07 z +0.55 | regions 33322 ops 1.25e+08 = 1.08e+05 samples (10s)
+2nd_argmax_32_4_1073741824_bo5.pth: exact 0.99880023 MC 0.99879956 ± 5.3e-07 z +1.27 | regions 224749 ops 7.44e+08 = 1.71e+05 samples (58s)

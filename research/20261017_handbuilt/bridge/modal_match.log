@@ -1,0 +1,17 @@
+clock:
+  hand  4 -> trained  7  corr 0.99
+  hand  5 -> trained  6  corr 0.93
+  hand  6 -> trained  1  corr 0.93
+memory:
+  hand  8 -> trained 15  corr 0.51
+  hand  9 -> trained 10  corr 0.85
+  hand 10 -> trained 14  corr 0.74
+  hand 11 -> trained 11  corr 0.63
+  hand 12 -> trained  0  corr 0.61
+  hand 13 -> trained 12  corr 0.62
+  hand 14 -> trained  3  corr 0.58
+  hand 15 -> trained 13  corr 0.87
+same function: max logit difference 2.5029294192790985e-09  accuracy 0.95875
+scales c: [8.745e+00 9.532e-04 8.690e-01 3.676e+00 1.032e-02 6.261e+01 9.861e-04
+ 1.275e-03 3.655e-03 5.776e-05 1.301e+01 1.088e+01 1.041e+01 6.373e+00
+ 1.062e+01 5.861e+00]

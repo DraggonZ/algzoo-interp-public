@@ -1,0 +1,28 @@
+ARC
+  L@7=1.43 S@5 T@6 u=0.64: lean MC +3.44 sd 1.25 | one Gaussian -4.87 sd 22.38 | P(lean<0) MC 0.03 Gaussian 0.59 | E[max(0,-lean)] MC 0.05 Gaussian 11.57
+  L@2=2.02 S@6 T@8 u=1.04: lean MC +0.04 sd 0.58 | one Gaussian -0.74 sd 9.86 | P(lean<0) MC 0.46 Gaussian 0.53 | E[max(0,-lean)] MC 0.21 Gaussian 4.32
+  L@4=1.45 S@8 T@0 u=0.76: lean MC -3.14 sd 2.10 | one Gaussian +18.61 sd 32.67 | P(lean<0) MC 0.90 Gaussian 0.28 | E[max(0,-lean)] MC 3.24 Gaussian 5.79
+  L@2=2.20 S@5 T@4 u=1.03: lean MC -2.57 sd 1.34 | one Gaussian -2.57 sd 15.45 | P(lean<0) MC 0.98 Gaussian 0.57 | E[max(0,-lean)] MC 2.57 Gaussian 7.54
+  L@8=1.36 S@5 T@3 u=0.89: lean MC +0.79 sd 2.38 | one Gaussian +28.19 sd 51.17 | P(lean<0) MC 0.38 Gaussian 0.29 | E[max(0,-lean)] MC 0.58 Gaussian 9.34
+  L@0=1.71 S@1 T@8 u=0.77: lean MC +2.44 sd 1.21 | one Gaussian -1.11 sd 20.04 | P(lean<0) MC 0.05 Gaussian 0.52 | E[max(0,-lean)] MC 0.04 Gaussian 8.56
+  L@9=1.70 S@6 T@8 u=0.60: lean MC +1.40 sd 0.58 | one Gaussian -9.21 sd 32.69 | P(lean<0) MC 0.01 Gaussian 0.61 | E[max(0,-lean)] MC 0.01 Gaussian 18.16
+  L@8=1.89 S@0 T@4 u=0.56: lean MC -0.81 sd 1.96 | one Gaussian -11.76 sd 76.03 | P(lean<0) MC 0.69 Gaussian 0.56 | E[max(0,-lean)] MC 1.23 Gaussian 36.58
+  L@4=1.35 S@3 T@5 u=0.61: lean MC +0.88 sd 1.57 | one Gaussian -9.45 sd 26.85 | P(lean<0) MC 0.30 Gaussian 0.64 | E[max(0,-lean)] MC 0.26 Gaussian 16.09
+  L@9=2.05 S@8 T@6 u=0.91: lean MC -1.29 sd 0.85 | one Gaussian +11.06 sd 35.56 | P(lean<0) MC 0.96 Gaussian 0.38 | E[max(0,-lean)] MC 1.31 Gaussian 9.34
+  L@6=1.71 S@4 T@0 u=1.10: lean MC -1.71 sd 2.98 | one Gaussian +19.55 sd 59.63 | P(lean<0) MC 0.74 Gaussian 0.37 | E[max(0,-lean)] MC 2.28 Gaussian 15.28
+  L@4=1.26 S@3 T@6 u=0.71: lean MC +0.80 sd 1.32 | one Gaussian -9.86 sd 32.48 | P(lean<0) MC 0.27 Gaussian 0.62 | E[max(0,-lean)] MC 0.20 Gaussian 18.48
+  E[max(0,-lean)] summed over configs: MC 11.99, one Gaussian 161.04; mean abs relative error 293.24
+114
+  L@2=1.58 S@9 T@4 u=1.18: lean MC +1.07 sd 1.57 | one Gaussian +4.21 sd 5.21 | P(lean<0) MC 0.20 Gaussian 0.21 | E[max(0,-lean)] MC 0.18 Gaussian 0.62
+  L@6=1.84 S@5 T@3 u=0.94: lean MC -0.63 sd 1.47 | one Gaussian -2.01 sd 6.98 | P(lean<0) MC 0.66 Gaussian 0.61 | E[max(0,-lean)] MC 0.87 Gaussian 3.90
+  L@5=1.60 S@7 T@1 u=0.48: lean MC +0.97 sd 0.62 | one Gaussian -0.03 sd 5.88 | P(lean<0) MC 0.03 Gaussian 0.50 | E[max(0,-lean)] MC 0.01 Gaussian 2.36
+  L@3=1.87 S@1 T@9 u=0.64: lean MC -0.31 sd 0.53 | one Gaussian +0.37 sd 2.99 | P(lean<0) MC 0.72 Gaussian 0.45 | E[max(0,-lean)] MC 0.39 Gaussian 1.02
+  L@3=2.05 S@0 T@7 u=1.16: lean MC +1.69 sd 1.08 | one Gaussian +1.78 sd 3.71 | P(lean<0) MC 0.04 Gaussian 0.32 | E[max(0,-lean)] MC 0.01 Gaussian 0.76
+  L@1=1.35 S@5 T@9 u=0.55: lean MC -1.26 sd 0.60 | one Gaussian -0.13 sd 4.80 | P(lean<0) MC 0.99 Gaussian 0.51 | E[max(0,-lean)] MC 1.26 Gaussian 1.98
+  L@2=2.08 S@6 T@8 u=0.91: lean MC -1.79 sd 0.70 | one Gaussian -1.04 sd 3.35 | P(lean<0) MC 0.99 Gaussian 0.62 | E[max(0,-lean)] MC 1.79 Gaussian 1.92
+  L@5=1.61 S@9 T@1 u=0.59: lean MC +0.50 sd 0.75 | one Gaussian -0.22 sd 5.47 | P(lean<0) MC 0.26 Gaussian 0.52 | E[max(0,-lean)] MC 0.11 Gaussian 2.29
+  L@5=1.75 S@0 T@9 u=0.66: lean MC -0.87 sd 1.02 | one Gaussian +0.99 sd 5.08 | P(lean<0) MC 0.79 Gaussian 0.42 | E[max(0,-lean)] MC 0.99 Gaussian 1.57
+  L@4=1.57 S@7 T@3 u=0.42: lean MC -0.84 sd 0.75 | one Gaussian -1.24 sd 3.70 | P(lean<0) MC 0.87 Gaussian 0.63 | E[max(0,-lean)] MC 0.90 Gaussian 2.18
+  L@1=1.63 S@7 T@4 u=0.82: lean MC +1.19 sd 1.45 | one Gaussian +1.62 sd 6.50 | P(lean<0) MC 0.20 Gaussian 0.40 | E[max(0,-lean)] MC 0.16 Gaussian 1.86
+  L@3=1.79 S@5 T@8 u=0.95: lean MC -2.31 sd 3.45 | one Gaussian -3.17 sd 4.82 | P(lean<0) MC 0.64 Gaussian 0.74 | E[max(0,-lean)] MC 2.67 Gaussian 3.91
+  E[max(0,-lean)] summed over configs: MC 9.34, one Gaussian 24.36; mean abs relative error 32.19

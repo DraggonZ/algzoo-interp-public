@@ -1,0 +1,6 @@
+tie 23: 360 wrong orderings; median margin slope at gap 0+, 0.05, 0.1, 0.37: 80, 67, 61, 16; share with slope at 0.05 above slope at 0+: 0.17
+   straight line from the tie to gap 0.044: right there for 0.88 of them; its zero over the exact width, median 1.00; sum of line zeros 4.87 against exact widths 4.34
+   straight line from the tie to gap 0.1: right there for 0.97 of them; its zero over the exact width, median 1.00; sum of line zeros 8.04 against exact widths 6.51
+tie 12: 368 wrong orderings; median margin slope at gap 0+, 0.05, 0.1, 0.37: 176, 57, 31, 6; share with slope at 0.05 above slope at 0+: 0.15
+   straight line from the tie to gap 0.044: right there for 0.96 of them; its zero over the exact width, median 1.21; sum of line zeros 3.68 against exact widths 2.95
+   straight line from the tie to gap 0.1: right there for 0.99 of them; its zero over the exact width, median 1.70; sum of line zeros 5.73 against exact widths 3.57

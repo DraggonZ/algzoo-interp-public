@@ -1,0 +1,5 @@
+trained: accuracy 0.951; noise 0.001: 0.951; noise 0.01: 0.904; noise 0.03: 0.734; timer only, last step, 1e-2: 0.944
+   most sensitive: 7 0.19; 6 0.14; 1 0.11; 8 0.10; 2 0.07; 10 0.04; 14 0.04; 11 0.03
+v19 kappa 0.5 delta 0.02: accuracy 0.881; noise 0.001: 0.860; noise 0.01: 0.617; noise 0.03: 0.344; timer only, last step, 1e-2: 0.753
+v20: accuracy 0.914; noise 0.001: 0.904; noise 0.01: 0.820; noise 0.03: 0.665; timer only, last step, 1e-2: 0.889
+   most sensitive: S 0.16; Y0 0.14; Y1 0.12; Y2 0.11; F 0.09; Y3 0.08; C1 0.08; C0 0.07

@@ -1,0 +1,13 @@
+(a) pre-activation size / summed size of its terms (median over lists, steps 3-9)
+   neuron  0: 0.13
+   neuron  3: 0.04
+   neuron 10: 0.43
+   neuron 11: 0.22
+   neuron 12: 0.26
+   neuron 13: 0.22
+   neuron 14: 0.28
+   neuron 15: 0.05
+(b) neuron 3's pre-activation from the trained weights applied to v18-matched inputs
+   step 5: variance matched 0.67
+   step 7: variance matched 0.68
+   step 9: variance matched 0.74

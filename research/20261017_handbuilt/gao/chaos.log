@@ -1,0 +1,10 @@
+
+ARC: accuracy 0.953
+  error after step 2 (7 steps to go): top growth per step x1.26; 0.1% state error -> final state 0.08%, near-tie margin 1% (median)
+  error after step 5 (4 steps to go): top growth per step x1.45; 0.1% state error -> final state 0.14%, near-tie margin 3% (median)
+  error after step 8 (1 steps to go): top growth per step x4.38; 0.1% state error -> final state 0.16%, near-tie margin 4% (median)
+
+hand-built (Fig. 2): accuracy 0.960
+  error after step 2 (7 steps to go): top growth per step x3.35; 0.1% state error -> final state 46.27%, near-tie margin 3% (median)
+  error after step 5 (4 steps to go): top growth per step x8.45; 0.1% state error -> final state 59.62%, near-tie margin 34030% (median)
+  error after step 8 (1 steps to go): top growth per step x3948.17; 0.1% state error -> final state 65.63%, near-tie margin 254943% (median)

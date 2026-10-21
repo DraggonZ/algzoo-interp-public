@@ -1,0 +1,23 @@
+base +161.9
+row out1 error x0.5: -13.5  (gain 0.813)
+row out1 error x0.0: +1.7  (gain 0.813)
+row out2 error x0.5: +1.0  (gain 0.866)
+row out2 error x0.0: +14.4  (gain 0.869)
+row out3 error x0.5: +6.0  (gain 0.897)
+row out3 error x0.0: +20.9  (gain 0.905)
+row out4 error x0.5: +8.7  (gain 0.953)
+row out4 error x0.0: +25.8  (gain 0.966)
+row out5 error x0.5: +7.0  (gain 0.948)
+row out5 error x0.0: +20.6  (gain 0.968)
+row out6 error x0.5: -2.1  (gain 1.007)
+row out6 error x0.0: +11.8  (gain 1.022)
+row out7 error x0.5: -15.5  (gain 1.069)
+row out7 error x0.0: -0.4  (gain 1.086)
+row out8 error x0.5: +10.3  (gain 0.953)
+row out8 error x0.0: +36.6  (gain 0.971)
+row out9 error x0.5: -7.5  (gain 0.826)
+row out9 error x0.0: -27.9  (gain 0.727)
+row out0 at 0.0 relative noise: +57.6
+row out0 at 0.1 relative noise: +20.3
+row out0 at 0.2 relative noise: +5.0
+row out0 at 0.3 relative noise: -32.3

@@ -1,0 +1,14 @@
+network on fresh lists 95.31; cells seen in fit 3635
+memory     on cells: -0.74 points, on/off agreement 0.9791
+hiding     on cells: -4.53 points, on/off agreement 0.9924
+store      on cells: -0.00 points, on/off agreement 0.9989
+detector   on cells: +0.34 points, on/off agreement 0.9992
+keep gate  on cells: +0.32 points, on/off agreement 0.9975
+late gate  on cells: +0.27 points, on/off agreement 0.9992
+all 16     on cells: -1.47 points, on/off agreement 0.9710
+all but memory     on cells: -1.30
+all but hiding     on cells: +0.29
+all but store      on cells: -1.47
+all but detector   on cells: -1.67
+all but keep gate  on cells: -1.84
+all but late gate  on cells: -2.87

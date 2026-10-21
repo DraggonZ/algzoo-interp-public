@@ -1,0 +1,36 @@
+18 trained siblings with complete groups; accuracy 88.0-96.0%
+
+question              ARC     siblings: median (10-90%)    noisy ARC 0.001/0.003/0.01             v18             v23  v23 ARC settin  v24 exact runn
+memory nudge       -0.031      +0.055 (-0.035 to +0.079)     -0.030  -0.028  -0.022            +2.918          -0.275          -0.091          -0.102
+store nudge        +0.026      +0.000 (+0.000 to +0.019)     +0.026  +0.026  +0.025            -0.573          +0.057          +0.012          +0.022
+keep nudge         -0.012      -0.004 (-0.014 to -0.000)     -0.012  -0.012  -0.011            -0.048          -0.025          -0.012          -0.003
+hiding nudge       +0.104      +0.057 (+0.000 to +0.080)     +0.105  +0.106  +0.110            +0.108          +0.178          +0.185          +0.179
+near-tie order    +48.925     +37.861 (+25.726 to +51.595)    +46.897 +39.239 +18.764           +99.998         +99.995         +76.243         +54.863
+late bias         +57.533     +51.982 (+46.254 to +61.911)    +57.057 +54.758 +45.129           +48.528         +49.311         +57.802         +44.302
+hiding alone      +10.316     +20.473 (+11.279 to +68.020)    +10.347 +10.402 +10.594            +0.008         +47.095         +32.129         +81.794
+shift register    +94.841     +91.514 (+86.020 to +94.095)    +94.560 +93.254 +83.792           +96.567         +93.455         +92.297         +89.829
+sensitivity        +1.000      +0.555 (+0.421 to +0.918)     +0.999  +0.998  +0.987            +0.787          +0.899          +0.869          +0.866
+
+distance to ARC / typical sibling distance               v18             v23  v23 ARC settin  v24 exact runn     noisy 0.003  median sibling
+memory nudge                                           34.22            2.83            0.69            0.82            0.03            1.00
+store nudge                                            22.95            1.19            0.54            0.16            0.01            1.00
+keep nudge                                              4.33            1.53            0.05            1.10            0.03            1.00
+hiding nudge                                            0.07            1.37            1.49            1.39            0.04            1.00
+near-tie order                                          4.62            4.62            2.47            0.54            0.88            1.00
+late bias                                               1.26            1.15            0.04            1.86            0.98            1.00
+hiding alone                                            0.96            3.43            2.03            6.67            0.01            1.00
+shift register                                          0.52            0.42            0.76            1.51            0.48            1.00
+sensitivity                                             0.48            0.23            0.29            0.30            0.00            1.00
+
+median over questions of distance / typical sibling distance:
+   v18                            1.26   (accuracy 95.9%)
+   v23                            1.37   (accuracy 95.8%)
+   v23 ARC settings               0.69   (accuracy 93.0%)
+   v24 exact runner-up (17)       1.10   (accuracy 91.5%)
+   ARC noise 0.001 #0             0.01   (accuracy 95.2%)
+   ARC noise 0.001 #1             0.01   (accuracy 95.0%)
+   ARC noise 0.003 #0             0.03   (accuracy 94.5%)
+   ARC noise 0.003 #1             0.02   (accuracy 93.3%)
+   ARC noise 0.01 #0              0.15   (accuracy 85.3%)
+   ARC noise 0.01 #1              0.08   (accuracy 80.3%)
+   siblings: median 1.00, closest 0.34, 10-90% 0.54-1.26

@@ -1,0 +1,7 @@
+weight on the largest by age: 17.6 17.3 18.4 17.4 14.9 12.3 10.7 11.2
+weight on the previous largest, below half: 0.69 1.10 0.74 0.71 0.67 1.03 0.65 0.38 | above half: 0.71 1.18 0.77 1.84 3.57 5.94 7.18 5.81
+                                                           all  coin flips   middle    clear
+age table on the largest only (9 numbers)                63.9%      59.0%      67.1%      65.7%
+largest + previous largest, no switch (18)               74.7%      63.8%      77.4%      82.7%
+largest + previous largest with the half switch (27)     75.1%      64.3%      78.3%      82.8%
+fitted correction (93)                                   81.9%      69.7%      86.3%      89.8%

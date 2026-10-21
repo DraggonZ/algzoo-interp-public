@@ -1,0 +1,2 @@
+role-free menu: base 0.961; all 16 replaced 0.746; one at a time: store 0.961, detect 0.960, keep 0.960, flip 0.699, clock0 0.710, clock1 0.736, clock2 0.725, flag 0.961, mem0 0.741, mem1 0.774, mem2 0.791, mem3 0.767, mem4 0.768, mem5 0.792, mem6 0.837, mem7 0.894
+plus v18's own variables: base 0.961; all 16 replaced 0.713; one at a time: store 0.961, detect 0.961, keep 0.960, flip 0.687, clock0 0.641, clock1 0.712, clock2 0.663, flag 0.960, mem0 0.787, mem1 0.793, mem2 0.825, mem3 0.799, mem4 0.795, mem5 0.806, mem6 0.839, mem7 0.894

@@ -1,0 +1,6 @@
+step 5, trained  3: residual 0.45 of variance; best single quantities for the residual: previous record 0.00; count of positive numbers 0.00; steps since second 0.00; relu x at 1 0.00
+step 5, trained 15: residual 0.43 of variance; best single quantities for the residual: relu x at 3 0.03; relu x at 1 0.03; number right after largest 0.02; relu x at 0 0.01
+step 5, trained 10: residual 0.02 of variance; best single quantities for the residual: number right after largest 0.14; second-largest 0.01; relu x at 3 0.01; second x steps since 0.01
+step 9, trained  3: residual 0.27 of variance; best single quantities for the residual: relu x at 1 0.01; second x steps since 0.01; steps since second 0.01; relu x at 4 0.01
+step 9, trained 15: residual 0.15 of variance; best single quantities for the residual: largest x steps since 0.05; steps since largest 0.04; relu x one step ago 0.04; relu x at 8 0.04
+step 9, trained 10: residual 0.09 of variance; best single quantities for the residual: relu x at 0 0.10; steps since largest 0.09; largest x steps since 0.07; previous record 0.02

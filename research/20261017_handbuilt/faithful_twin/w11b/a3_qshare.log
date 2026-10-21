@@ -1,0 +1,22 @@
+(i) pre-activation minus C7's, / g, at ages 1-4 after a record (w7b)
+  P 1, d 1: h7 +0.000 +0.000 +0.000 +0.000  c1 +0.000 -0.950 +0.000 +0.000  c6 -1.000 -0.230 +0.000 +0.000  q -1.000 -1.000 -1.000 -1.000
+  P 1, d 0.5: h7 +0.000 +0.000 +0.000 +0.000  c1 +0.000 -0.475 +0.000 +0.000  c6 -0.500 -0.115 +0.000 +0.000  q -0.500 -0.500 -0.500 -0.500
+  P 0.5, d 1: h7 +0.000 +0.000 +0.000 +0.000  c1 +0.000 -0.950 +0.000 +0.000  c6 -1.000 -0.230 +0.000 +0.000  q -1.000 -1.000 -1.000 -1.000
+  P 1, d 1, new second 1.5 at age 1: h7 +0.000 +0.000 +0.000 +0.000  c1 +0.000 -0.950 +0.000 +0.000  c6 -1.000 -0.230 +0.000 +0.000  q -1.000 -0.500 -0.500 -0.500
+
+(ii) variants (accuracy on 400,000 lists; silence one slot one step after the largest -> names the largest)
+  w8b (built here): accuracy 95.90; slot 1: 27.1%  slot 6: 0.5%  slot 7: 65.9%  slot 8: 6.1%  all four: 69.9%
+     clock0 reads h7 +1.13e-04 c1 -1.30e-05 c6 -1.00e-04 q +0.00e+00 c7 +0.00e+00
+  w8b (handbuilt_w8b): accuracy 95.90; slot 1: 27.1%  slot 6: 0.5%  slot 7: 65.9%  slot 8: 6.1%  all four: 69.9%
+     clock0 reads h7 +1.13e-04 c1 -1.30e-05 c6 -1.00e-04 q +0.00e+00 c7 +0.00e+00
+  V1 (H7, C1, Q): accuracy 64.11; slot 1: 70.9%  slot 6: 8.0%  slot 7: 17.5%  slot 8: 5.2%  all four: 61.0%
+     clock0 reads h7 +3.20e-05 c1 +6.80e-05 c6 +0.00e+00 q -1.00e-04 c7 +0.00e+00
+  V2 (H7, C1, C6, Q), Q = C6 / 2: accuracy 74.80; slot 1: 51.6%  slot 6: 4.2%  slot 7: 49.3%  slot 8: 7.1%  all four: 70.3%
+     clock0 reads h7 +8.60e-05 c1 +1.40e-05 c6 -6.67e-05 q -3.33e-05 c7 +0.00e+00
+
+(a3) Q's weight = s x C6's weight in every clock row
+  s 0.00: accuracy 95.90; silence 1,6,7,8 -> 69.9%; silence 1,6,7 (8 left in) -> 70.0%; slot 8 adds -0.1
+  s 0.05: accuracy 82.23; silence 1,6,7,8 -> 72.9%; silence 1,6,7 (8 left in) -> 76.4%; slot 8 adds -3.5
+  s 0.10: accuracy 79.56; silence 1,6,7,8 -> 73.0%; silence 1,6,7 (8 left in) -> 78.4%; slot 8 adds -5.4
+  s 0.20: accuracy 77.57; silence 1,6,7,8 -> 72.4%; silence 1,6,7 (8 left in) -> 80.4%; slot 8 adds -8.0
+  s 0.50: accuracy 74.80; silence 1,6,7,8 -> 70.3%; silence 1,6,7 (8 left in) -> 82.4%; slot 8 adds -12.2

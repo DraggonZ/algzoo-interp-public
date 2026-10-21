@@ -1,0 +1,32 @@
+{'hide': -1.5000000000002585, 'J_row': array([ 1.57882771e-04, -1.57898559e-04,  1.57882771e-08]), 'cond': np.float64(2.0000000000000004), 'readout': array([[ 2.50000000e-01, -2.50000000e-01, -5.00000000e-01,
+         2.22044605e-16,  2.50000000e-01,  2.50000000e-01],
+       [ 3.53553391e-01, -3.53553391e-01,  1.51288057e-16,
+         4.33537904e-32, -3.53553391e-01, -3.53553391e-01],
+       [-1.57009246e-16, -5.00000000e-01,  0.00000000e+00,
+         2.22044605e-16,  1.57009246e-16,  5.00000000e-01],
+       [-2.59084245e-17, -3.53553391e-01,  7.27834342e-17,
+        -5.00000000e-01, -4.68750097e-17, -3.53553391e-01],
+       [-2.50000000e-01, -2.50000000e-01, -5.00000000e-01,
+         1.34015774e-16, -2.50000000e-01,  2.50000000e-01]])}
+w12b                   acc  96.48  names largest  0.70  by largest's position:  95.5  95.7  95.0  95.6  96.2  96.5  96.7  97.9  97.9  97.8
+w13b                   acc  96.48  names largest  0.35  by largest's position:  99.0  98.6  97.2  97.4  97.7  97.4  97.8  97.8  84.2  97.7
+w13b keep pos4 read    acc  93.84  names largest  0.35  by largest's position:  99.0  98.6  97.2  97.4  97.7  97.4  97.7  97.9  57.8  97.7
+w13b drop all pos4     acc  97.81  names largest  0.35  by largest's position:  99.0  98.6  97.2  97.4  97.7  97.4  97.8  97.8  97.6  97.6
+one list, record at 3 (d = 1.5):
+  J-c7    [0.   0.   0.   0.   0.   0.   2.25 0.   0.   0.  ]
+  late    [0.  0.5 0.  0.  1.5 0.  0.  0.  0.  0. ]
+  c7      [    0.  3000.  8000.     0. 30000. 25000. 19000. 32000. 17000. 24000.]
+  clock0 -c7 [ 0.     0.     0.     0.     0.     0.     0.     2.25   1.591 -0.   ]
+  clock1 -c7 [0.    0.    0.    0.    0.    0.    0.    0.    1.591 2.25 ]
+  clock2 -c7 [ 0.    0.    0.    0.    0.    0.   -0.    2.25  0.   -2.25]
+  turn0  -c7 [ 0.    0.    0.    0.    0.    0.    0.   -0.    2.25  0.  ]
+  turn1  -c7 [ 0.     0.     0.     0.     0.    -0.     0.     2.25  -1.591  0.   ]
+  turn2  -c7 [ 0.     0.     0.     0.     0.     0.     0.     0.     1.591 -2.25 ]
+  scores [ 0.495  0.2    0.    -0.25  -0.     0.     0.    -0.     0.    -0.4  ]
+/data/output/src/algzoo/research/20261017_handbuilt/faithful_twin/w13b/a1_build.py:40: RuntimeWarning: Mean of empty slice.
+  print(f"largest at {j}: accuracy by second's position", " ".join(f"{ok[m & (sec == k)].mean()*100:5.1f}" for k in range(10)),
+/opt/venv/lib/python3.12/site-packages/numpy/_core/_methods.py:144: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+largest at 4: accuracy by second's position  94.2  99.2  98.8  99.2   nan  97.6  97.8  97.4  97.8  97.6 | named: [  0  49  94 352 151  27 103   3 117  11]
+largest at 5: accuracy by second's position  94.1  99.9  96.7  97.3  98.4   nan  97.7  97.6  97.7  97.4 | named: [  0 567  78  13 197 132  15   2  12  13]
+largest at 8: accuracy by second's position  77.9  84.8  84.8  82.6  99.8  83.1  83.6  84.7   nan  76.6 | named: [   0   17   85   12 5922   19    9   37  220    7]

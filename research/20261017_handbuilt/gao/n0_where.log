@@ -1,0 +1,4 @@
+no ReLU in neuron 15             : KL 0.343 acc 0.881 agree 0.907
+no ReLU in none                : second after largest (50%) 0.951; second an overtaken record (50%) 0.963; second before largest, never a record (1%) 0.274
+no ReLU in neuron 0            : second after largest (50%) 0.739; second an overtaken record (50%) 0.798; second before largest, never a record (1%) 0.184
+no ReLU in neuron 15           : second after largest (50%) 0.893; second an overtaken record (50%) 0.875; second before largest, never a record (1%) 0.261

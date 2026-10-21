@@ -1,0 +1,12 @@
+largest moved readout only      : acc 0.922 agree 0.949 KL 0.215
+largest moved other neurons only: acc 0.824 agree 0.835 KL 1.356
+largest moved both              : acc 0.804 agree 0.815 KL 1.556
+place kept    readout only      : acc 0.948 agree 0.988 KL 0.017
+place kept    other neurons only: acc 0.943 agree 0.975 KL 0.055
+place kept    both              : acc 0.941 agree 0.971 KL 0.061
+--- neuron 2's timing sent only to some receivers (largest moved)
+to cancellers 1, 6, 7, 8 : acc 0.870 agree 0.888
+to detector 4            : acc 0.941 agree 0.978
+to store 2 itself        : acc 0.847 agree 0.861
+to memory                : acc 0.876 agree 0.893
+to gates 5, 9            : acc 0.953 agree 0.996

@@ -1,0 +1,4 @@
+clock gain 10000: all 0.960 | onepos 0.112 last 0.914 step8 0.932 row 0.991 ord 0.976 | wrong: third 0.60 largest 0.02 onepos 0.24
+clock gain 100: all 0.955 | onepos 0.113 last 0.911 step8 0.923 row 0.987 ord 0.971 | wrong: third 0.56 largest 0.09 onepos 0.22
+clock gain 30: all 0.945 | onepos 0.113 last 0.904 step8 0.902 row 0.978 ord 0.962 | wrong: third 0.48 largest 0.24 onepos 0.18
+clock gain 10: all 0.917 | onepos 0.112 last 0.885 step8 0.846 row 0.953 ord 0.936 | wrong: third 0.36 largest 0.45 onepos 0.12

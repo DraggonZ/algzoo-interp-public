@@ -1,0 +1,31 @@
+L1 with the late gate as lag(newmax x) (+4 hiding feedback terms; 13 constants per neuron)
+  neuron 1: rms teacher-forced 0.248, recursive 0.354 (5.21x the account); replaced alone: accuracy 0.8900, KL 0.301
+  neuron 6: rms teacher-forced 0.298, recursive 0.314 (6.27x the account); replaced alone: accuracy 0.9099, KL 0.199
+  neuron 7: rms teacher-forced 0.083, recursive 0.130 (4.82x the account); replaced alone: accuracy 0.9179, KL 0.260
+  neuron 8: rms teacher-forced 0.319, recursive 0.474 (4.50x the account); replaced alone: accuracy 0.8490, KL 0.709
+  all four replaced by the group rule: accuracy 0.8495, KL 0.536
+  weights for 1: cosine 0.977, relative distance 0.22; from late gate ARC -0.69 fitted -0.28
+  weights for 6: cosine 0.865, relative distance 0.50; from late gate ARC -0.64 fitted -0.18
+  weights for 7: cosine 0.999, relative distance 0.04; from late gate ARC +0.00 fitted +0.00
+  weights for 8: cosine 0.991, relative distance 0.14; from late gate ARC -0.07 fitted +0.00
+  rows [1] from the rule: accuracy -1.84 points, KL 0.082
+  rows [6] from the rule: accuracy -2.71 points, KL 0.098
+  rows [7] from the rule: accuracy -0.44 points, KL 0.021
+  rows [8] from the rule: accuracy -9.20 points, KL 0.544
+  rows [1, 6, 7, 8] from the rule: accuracy -19.23 points, KL 1.417
+
+L1 with both late-gate signals (+4 hiding feedback terms; 14 constants per neuron)
+  neuron 1: rms teacher-forced 0.241, recursive 0.331 (5.58x the account); replaced alone: accuracy 0.9041, KL 0.204
+  neuron 6: rms teacher-forced 0.259, recursive 0.272 (7.23x the account); replaced alone: accuracy 0.9340, KL 0.100
+  neuron 7: rms teacher-forced 0.078, recursive 0.125 (5.04x the account); replaced alone: accuracy 0.9206, KL 0.227
+  neuron 8: rms teacher-forced 0.255, recursive 0.431 (4.95x the account); replaced alone: accuracy 0.8569, KL 0.671
+  all four replaced by the group rule: accuracy 0.8597, KL 0.500
+  weights for 1: cosine 0.976, relative distance 0.22; from late gate ARC -0.69 fitted -0.27
+  weights for 6: cosine 0.877, relative distance 0.49; from late gate ARC -0.64 fitted -0.19
+  weights for 7: cosine 0.999, relative distance 0.04; from late gate ARC +0.00 fitted +0.00
+  weights for 8: cosine 0.994, relative distance 0.13; from late gate ARC -0.07 fitted -0.04
+  rows [1] from the rule: accuracy -1.90 points, KL 0.085
+  rows [6] from the rule: accuracy -2.73 points, KL 0.105
+  rows [7] from the rule: accuracy -0.45 points, KL 0.022
+  rows [8] from the rule: accuracy -8.32 points, KL 0.469
+  rows [1, 6, 7, 8] from the rule: accuracy -20.22 points, KL 1.457

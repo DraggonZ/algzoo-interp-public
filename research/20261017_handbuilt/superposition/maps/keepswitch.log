@@ -1,0 +1,4 @@
+one-change sweeps: 336 (24 of them at position 9, no keep-gate step after)
+keep gate switches at the flip for 1 of 312 (0%)
+  other flips: flip value / second-largest so far: median -0.31, quartiles -2.40-1.09, share in 0.6-0.9: 16% (n 190)
+  other flips, keep gate state on both sides (on, off): 198 113

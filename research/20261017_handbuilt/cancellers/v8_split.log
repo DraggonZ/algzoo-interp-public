@@ -1,0 +1,12 @@
+v7 + z, 17 neurons (17): all 0.960
+   new largest at step 9          share 0.10  accuracy 0.882
+   new largest at step 8          share 0.11  accuracy 0.883
+   back-to-back new largests      share 0.33  accuracy 0.945
+   none of these, 2+ positives    share 0.54  accuracy 0.979
+   at most one positive           share 0.01  accuracy 0.094
+v8 = v7 + z - second store, 16 neurons (16): all 0.889
+   new largest at step 9          share 0.10  accuracy 0.882
+   new largest at step 8          share 0.11  accuracy 0.845
+   back-to-back new largests      share 0.33  accuracy 0.864
+   none of these, 2+ positives    share 0.54  accuracy 0.901
+   at most one positive           share 0.01  accuracy 0.094

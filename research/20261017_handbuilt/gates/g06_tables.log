@@ -1,0 +1,18 @@
+
+=== feature set: basic
+  r4:   3 coefficients, variance matched 0.9843, rms error 0.085 (x hinge slope: neuron 5 1.02, neuron 9 0.13 units)
+  r7:   2 coefficients, variance matched 0.9716, rms error 0.117 (x hinge slope: neuron 5 0.91, neuron 9 7.72 units)
+  r8:   2 coefficients, variance matched 0.7988, rms error 0.283 (x hinge slope: neuron 5 2.96, neuron 9 3.81 units)
+  r1:   2 coefficients, variance matched 0.7267, rms error 0.369 (x hinge slope: neuron 5 0.00, neuron 9 1.39 units)
+  r6:   2 coefficients, variance matched 0.7199, rms error 0.384 (x hinge slope: neuron 5 0.06, neuron 9 0.38 units)
+  D5:   5 coefficients, variance matched 0.8359, rms error 2.621
+  D9:   6 coefficients, variance matched 0.9502, rms error 0.270
+
+=== feature set: roles
+  r4: 136 coefficients, variance matched 0.9997, rms error 0.012 (x hinge slope: neuron 5 0.15, neuron 9 0.02 units)
+  r7: 135 coefficients, variance matched 0.9996, rms error 0.014 (x hinge slope: neuron 5 0.11, neuron 9 0.94 units)
+  r8: 135 coefficients, variance matched 0.9976, rms error 0.031 (x hinge slope: neuron 5 0.33, neuron 9 0.42 units)
+  r1: 135 coefficients, variance matched 0.9984, rms error 0.029 (x hinge slope: neuron 5 0.00, neuron 9 0.11 units)
+  r6: 135 coefficients, variance matched 0.9992, rms error 0.020 (x hinge slope: neuron 5 0.00, neuron 9 0.02 units)
+  D5: 138 coefficients, variance matched 0.9925, rms error 0.560
+  D9: 139 coefficients, variance matched 0.9902, rms error 0.120

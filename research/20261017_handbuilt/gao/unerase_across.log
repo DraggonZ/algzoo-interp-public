@@ -1,0 +1,4 @@
+new111, third at record + 1, cancelling neurons [4, 8, 9, 12]: 19810 lists; accuracy 0.958 -> 0.585; third named 0.032 -> 0.402 (random same-size share: 0.139)
+new102, third at record + 2, cancelling neurons [3, 5, 6]: 15333 lists; accuracy 0.833 -> 0.601; third named 0.135 -> 0.043 (random same-size share: 0.194)
+new106, third at record + 2, cancelling neurons [1, 2, 7, 8]: 15333 lists; accuracy 0.969 -> 0.531; third named 0.024 -> 0.008 (random same-size share: 0.162)
+new111, third at record + 2, cancelling neurons [4, 8, 9, 12]: 15333 lists; accuracy 0.974 -> 0.826; third named 0.020 -> 0.154 (random same-size share: 0.083)

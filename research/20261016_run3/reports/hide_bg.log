@@ -1,0 +1,23 @@
+example: lone/two spread 0.09 at background 0, 0.18 at -0.32
+seed0: lone/two spread 1.16 at background 0, 0.16 at -0.32
+seed1: lone/two spread 0.25 at background 0, 0.17 at -0.32
+seed2: lone/two spread 0.07 at background 0, 0.06 at -0.32
+seed3: lone/two spread 0.13 at background 0, 0.27 at -0.32
+seed4: lone/two spread 0.62 at background 0, 0.19 at -0.32
+100: lone/two spread 0.06 at background 0, 0.21 at -0.32
+101: lone/two spread 0.17 at background 0, 0.20 at -0.32
+102: lone/two spread 0.15 at background 0, 0.28 at -0.32
+103: lone/two spread 0.06 at background 0, 0.04 at -0.32
+104: lone/two spread 0.21 at background 0, 0.17 at -0.32
+105: lone/two spread 0.41 at background 0, 0.16 at -0.32
+106: lone/two spread 0.11 at background 0, 0.11 at -0.32
+107: lone/two spread 0.20 at background 0, 0.16 at -0.32
+108: lone/two spread 0.11 at background 0, 0.20 at -0.32
+109: lone/two spread 0.30 at background 0, 0.28 at -0.32
+110: lone/two spread 0.21 at background 0, 0.23 at -0.32
+111: lone/two spread 0.07 at background 0, 0.21 at -0.32
+112: lone/two spread 0.53 at background 0, 0.18 at -0.32
+113: lone/two spread 0.31 at background 0, 0.35 at -0.32
+114: lone/two spread 0.53 at background 0, 0.16 at -0.32
+115: lone/two spread 0.05 at background 0, 0.04 at -0.32
+hidden (ratio <= 0.3): 16 of 22 at background 0, 21 of 22 at -0.32; seeds 0 and 4 at -0.32: 0.16, 0.19

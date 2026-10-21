@@ -1,0 +1,6 @@
+v18 accuracy 0.960
+store+detector   (base)   claim: KL 0.000 acc 0.960 agree 0.999   control: acc 0.079
+keep gate        (base)   claim: KL 0.000 acc 0.960 agree 1.000   control: acc 0.394
+memory           thr=0    claim: KL -0.000 acc 0.960 agree 0.995   control: acc 0.306
+cancellers       (base)   claim: KL 4.826 acc 0.873 agree 0.895   control: acc 0.124
+cancellers       m2pos    claim: KL 1.241 acc 0.906 agree 0.934   control: acc 0.120

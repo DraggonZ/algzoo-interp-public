@@ -1,0 +1,4 @@
+theta 0.0 eps 0.0: zero change 0.05; other was a record 0.03 (share 0.50); other after the largest 0.08
+theta 0.0 eps 0.1: zero change 0.42; other was a record 0.76 (share 0.50); other after the largest 0.08
+theta 0.44 eps 0.0: zero change 0.12; other was a record 0.03 (share 0.50); other after the largest 0.22
+theta 0.44 eps 0.1: zero change 0.51; other was a record 0.79 (share 0.50); other after the largest 0.22

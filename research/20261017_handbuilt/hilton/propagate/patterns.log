@@ -1,0 +1,3 @@
+distinct patterns per triple: median 304, 10-90% 176-508 (of 13824 grid points)
+mass of the most common pattern: median 0.172, 10% 0.095; top three: median 0.388
+patterns needed for 99% of the mass: median 83, 90% 141

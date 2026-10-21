@@ -1,0 +1,9 @@
+spill later 0.0, push earlier down 0.0, best A 0.25: acc 0.9904, agree ARC 0.956, near-tie adj 0.01 apart 0.00
+spill later 0.0, push earlier down 1.0, best A 0.25: acc 0.9904, agree ARC 0.956, near-tie adj 0.01 apart 0.00
+spill later 0.3, push earlier down 0.0, best A 0.4: acc 0.9231, agree ARC 0.899, near-tie adj 0.05 apart 0.24
+spill later 0.3, push earlier down 1.0, best A 0.4: acc 0.9231, agree ARC 0.899, near-tie adj 0.05 apart 0.24
+spill later 0.6, push earlier down 0.0, best A 0.5: acc 0.8639, agree ARC 0.845, near-tie adj 0.30 apart 0.32
+spill later 0.6, push earlier down 1.0, best A 0.5: acc 0.8639, agree ARC 0.845, near-tie adj 0.30 apart 0.32
+spill later 0.9, push earlier down 0.0, best A 0.2: acc 0.7061, agree ARC 0.692, near-tie adj 0.34 apart 0.43
+spill later 0.9, push earlier down 1.0, best A 0.2: acc 0.7088, agree ARC 0.694, near-tie adj 0.34 apart 0.42
+for comparison, symmetric spill 0.6 everywhere: acc 0.8608

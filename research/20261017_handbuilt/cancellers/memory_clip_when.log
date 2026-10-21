@@ -1,0 +1,15 @@
+memory neurons [0, 3, 10, 11, 12, 13, 14, 15] : share off, by what input t was (t = 2..9), for the state after t, t+1, t+2
+  new largest                                after t+0  [0.2  0.24 0.04 0.04 0.   0.06 0.3  0.25]  mean 0.141
+                                             after t+1  [0.01 0.27 0.   0.   0.   0.   0.01 0.23]  mean 0.064
+                                             after t+2  [0.85 0.41 0.   0.   0.   0.   0.1  0.45]  mean 0.226
+  kept-size (0.75..1 of largest, not new)    after t+0  [0.22 0.24 0.08 0.08 0.01 0.   0.08 0.28]  mean 0.123
+                                             after t+1  [0.23 0.43 0.08 0.12 0.03 0.   0.   0.4 ]  mean 0.161
+                                             after t+2  [0.05 0.49 0.12 0.15 0.1  0.01 0.   0.56]  mean 0.186
+  positive, below 0.75 of largest            after t+0  [0.21 0.23 0.09 0.09 0.02 0.   0.06 0.27]  mean 0.121
+                                             after t+1  [0.22 0.27 0.12 0.13 0.06 0.   0.01 0.3 ]  mean 0.14
+                                             after t+2  [0.   0.27 0.14 0.16 0.08 0.   0.   0.34]  mean 0.124
+  negative                                   after t+0  [0.21 0.2  0.08 0.1  0.07 0.01 0.02 0.24]  mean 0.116
+                                             after t+1  [0.22 0.18 0.1  0.11 0.05 0.01 0.08 0.29]  mean 0.13
+                                             after t+2  [0.   0.16 0.11 0.12 0.04 0.01 0.02 0.2 ]  mean 0.082
+mean activity, state after t+1: new largest at t / otherwise
+   [0.85 0.89 1.45 1.8  1.39 0.86 0.96 0.52]

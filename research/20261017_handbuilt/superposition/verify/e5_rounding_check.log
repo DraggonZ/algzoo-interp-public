@@ -1,0 +1,14 @@
+step 0.01: torch.round 89.54, numpy round 89.54, floor(x+0.5) 89.54, float32 eval 89.54
+   only w_hi rounded: 95.32
+   only W_hh rounded: 89.55
+   only W_oh rounded: 95.30
+   all but w_hi rounded: 89.54
+   all but W_hh rounded: 95.30
+   all but W_oh rounded: 89.55
+step 0.1: torch.round 23.47, numpy round 23.47, floor(x+0.5) 23.47, float32 eval 23.47
+   only w_hi rounded: 95.17
+   only W_hh rounded: 23.40
+   only W_oh rounded: 93.81
+   all but w_hi rounded: 23.51
+   all but W_hh rounded: 93.65
+   all but W_oh rounded: 23.36

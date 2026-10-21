@@ -1,0 +1,5 @@
+neurons other than the clocks that read the clocks: {'linear'}
+base     accuracy 95.92  names the largest 0.78  median score(largest) - score(second) -0.322  (per unit of the second -0.363)
+   accuracy by the largest's position: [95.4 95.6 94.9 95.6 96.2 96.5 96.7 97.9 97.9 92.5]
+no wave  accuracy 28.09  names the largest 68.00  median score(largest) - score(second) 0.171  (per unit of the second 0.165)
+   accuracy by the largest's position: [98.9  0.   0.   1.2  1.1  0.   0.  16.4 65.4 97.7]

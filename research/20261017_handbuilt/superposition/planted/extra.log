@@ -1,0 +1,9 @@
+v21: active neurons per state mean 14.5, median / 90% / 99% / max [17.0, 20.0, 27.0, 28.0]; at steps 3-9 mean 16.9
+  1x k 12: unexplained 0.15%, per neuron (shared removed) mean 0.79, >0.9 9/26; raw >0.9 11/28
+  1x k 16: unexplained 0.09%, per neuron (shared removed) mean 0.79, >0.9 8/26; raw >0.9 10/28
+  1x k 20: unexplained 0.04%, per neuron (shared removed) mean 0.81, >0.9 9/26; raw >0.9 10/28
+v19: active neurons per state mean 11.3, median / 90% / 99% / max [13.0, 14.0, 14.0, 14.0]; at steps 3-9 mean 13.1
+  1x k 10: unexplained 0.02%, per neuron (shared removed) mean 0.58, >0.9 1/14; raw >0.9 3/16
+  1x k 12: unexplained 0.01%, per neuron (shared removed) mean 0.51, >0.9 1/14; raw >0.9 6/16
+toy (28 sparse features in 16 dims, 8% active each), SAE 2x k 2: unexplained 10.15%, decoder |cos| mean 0.98, >0.9 26/28; activation corr mean 0.89, >0.9 21/28
+toy (28 sparse features in 16 dims, 8% active each), SAE 2x k 4: unexplained 4.46%, decoder |cos| mean 0.96, >0.9 23/28; activation corr mean 0.92, >0.9 23/28

@@ -1,0 +1,8 @@
+ARC       true 95.38% | error, points: linear  -1.50 | additive  -4.36  (additive costs 187,920 runs)
+seed 100  true 94.85% | error, points: linear  -1.96 | additive  -5.19  (additive costs 187,920 runs)
+seed 104  true 91.30% | error, points: linear -10.93 | additive  -3.33  (additive costs 187,920 runs)
+seed 107  true 92.19% | error, points: linear  -8.67 | additive  -1.20  (additive costs 187,920 runs)
+seed 111  true 96.04% | error, points: linear  -0.60 | additive  -5.45  (additive costs 187,920 runs)
+seed 114  true 89.76% | error, points: linear -14.40 | additive  -5.98  (additive costs 187,920 runs)
+seed 209  true 95.90% | error, points: linear  -2.84 | additive  -2.78  (additive costs 187,920 runs)
+seed 211  true 93.52% | error, points: linear  -8.83 | additive  -3.29  (additive costs 187,920 runs)

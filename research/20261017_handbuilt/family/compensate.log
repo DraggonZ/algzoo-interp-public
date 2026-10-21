@@ -1,0 +1,7 @@
+ARC near ties: D/x_S median 2.39, spread (10-90%) [-1.6, 7.8], wrong 21.4%
+  cancelling (1,6,7,8)   median    +0.00  spread [   -52.5,    +53.7]  SD    89.7
+  memory (0,3,10-15)     median    +2.33  spread [   -65.1,    +69.7]  SD    91.2
+  store+detector (2,4)   median    +0.30  spread [   -46.4,    +46.6]  SD    46.3
+  gates (5,9)            median    +0.00  spread [    -8.1,     +9.6]  SD    11.8
+  correlations: cancelling-memory -0.85; cancelling-store+detector -0.27; cancelling-gates -0.02; memory-store+detector -0.26; memory-gates -0.19; store+detector-gates +0.17
+  cancelling + memory: SD 49.8 (each 89.7, 91.2); total D SD 5.0

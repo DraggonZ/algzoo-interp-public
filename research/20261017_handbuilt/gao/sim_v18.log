@@ -1,0 +1,27 @@
+scores multiplied by 447.7 so the median top-two gap is 8.2, as in the trained network
+v18 accuracy 0.960
+neuron 0 exact formula: largest error 1.42e-14 (values up to 103)
+neuron 1 exact formula: largest error 9.09e-13 (values up to 4463)
+neuron 2 exact formula: largest error 4.20e-04 (values up to 1)
+neuron 7 exact formula: largest error 1.09e-11 (values up to 44633)
+neuron 3 exact formula: largest error 3.36e-01 (values up to 79134)
+neuron 4 exact formula: largest error 6.00e-01 (values up to 79131)
+neuron 5 exact formula: largest error 6.00e-01 (values up to 79135)
+neuron 6 exact formula: largest error 8.79e-01 (values up to 79132)
+group            simulator       KL accuracy  agree      R2
+store+detector   exact       0.000    0.960  0.997  1.0000
+store+detector   account    -0.000    0.960  0.993  1.0000
+keep             exact       0.000    0.960  0.997  1.0000
+keep             account     0.000    0.959  0.992  1.0000
+flip             exact       0.000    0.960  0.994  1.0000
+flip             account     7.329    0.513  0.514  1.0000
+clock            exact       0.000    0.960  0.993  1.0000
+clock            account     6.803    0.710  0.719  1.0000
+flag             exact       0.000    0.960  0.997  1.0000
+flag             account     0.000    0.960  0.997  1.0000
+memory           exact       0.000    0.931  0.966  1.0000
+memory           account    15.686    0.565  0.561  0.9999
+all but memory   exact       0.000    0.960  0.992  1.0000
+all but memory   account    12.963    0.559  0.557  1.0000
+all 16           exact       0.000    0.960  0.992  1.0000
+all 16           account    27.961    0.479  0.475  1.0000

@@ -1,0 +1,6 @@
+example: wrong 4.70 pts; separable model off by 8.006 pts (of which predicts wrong but right 6.498); whole-slice 0.60, 1-2 band only 0.41, 2-3 band only 1.98, both 1.51, other 0.20
+0: wrong 8.92 pts; separable model off by 11.406 pts (of which predicts wrong but right 8.318); whole-slice 0.09, 1-2 band only 1.70, 2-3 band only 3.60, both 3.09, other 0.45
+1: wrong 10.53 pts; separable model off by 11.931 pts (of which predicts wrong but right 8.118); whole-slice 0.38, 1-2 band only 1.58, 2-3 band only 4.16, both 3.81, other 0.59
+2: wrong 5.12 pts; separable model off by 5.514 pts (of which predicts wrong but right 3.811); whole-slice 0.48, 1-2 band only 0.28, 2-3 band only 2.35, both 1.70, other 0.31
+3: wrong 6.83 pts; separable model off by 8.554 pts (of which predicts wrong but right 5.867); whole-slice 0.45, 1-2 band only 0.73, 2-3 band only 2.58, both 2.69, other 0.38
+4: wrong 11.07 pts; separable model off by 12.701 pts (of which predicts wrong but right 9.188); whole-slice 0.29, 1-2 band only 1.91, 2-3 band only 4.73, both 3.51, other 0.62

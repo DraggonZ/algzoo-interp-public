@@ -1,0 +1,6 @@
+n=1 per triple (cost 720 runs): errors -0.60, +0.80, +0.71, -0.13, -0.01, -1.48; RMSE 0.79 points; sampling at the same cost 1.01
+n=2 per triple (cost 1440 runs): errors -0.46, +0.17, +0.57, +0.01, -0.98, -1.13; RMSE 0.68 points; sampling at the same cost 0.72
+n=4 per triple (cost 2880 runs): errors -0.39, -0.11, +1.13, -0.13, -1.05, -0.47; RMSE 0.68 points; sampling at the same cost 0.51
+n=8 per triple (cost 5760 runs): errors -0.27, -0.14, +1.14, -0.27, -0.91, -0.28; RMSE 0.63 points; sampling at the same cost 0.36
+n=16 per triple (cost 11520 runs): errors -0.04, +0.18, +1.13, +0.09, -0.18, -0.08; RMSE 0.47 points; sampling at the same cost 0.25
+n=64 per triple (cost 46080 runs): errors +0.11, +0.06, +1.45, -0.02, -0.23, -0.15; RMSE 0.61 points; sampling at the same cost 0.13

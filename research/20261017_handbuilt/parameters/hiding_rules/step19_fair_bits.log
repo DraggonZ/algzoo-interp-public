@@ -1,0 +1,37 @@
+
+richest + record quantities (+4 hiding feedback terms; 33 constants per neuron)
+  neuron 1: rms teacher-forced 0.162, recursive 0.266 (6.95x the account); replaced alone: accuracy 0.9279, KL 0.140
+  neuron 6: rms teacher-forced 0.219, recursive 0.234 (8.41x the account); replaced alone: accuracy 0.9326, KL 0.089
+  neuron 7: rms teacher-forced 0.067, recursive 0.106 (5.93x the account); replaced alone: accuracy 0.9423, KL 0.093
+  neuron 8: rms teacher-forced 0.204, recursive 0.320 (6.67x the account); replaced alone: accuracy 0.9271, KL 0.267
+  all four replaced by the group rule: accuracy 0.9349, KL 0.194
+  weights for 1: cosine 0.994, relative distance 0.11
+  weights for 6: cosine 0.966, relative distance 0.29
+  weights for 7: cosine 0.999, relative distance 0.04
+  weights for 8: cosine 0.997, relative distance 0.09
+  rows [1] from the rule: accuracy -0.65 points, KL 0.030
+  rows [6] from the rule: accuracy -0.57 points, KL 0.026
+  rows [7] from the rule: accuracy -0.14 points, KL 0.008
+  rows [8] from the rule: accuracy -1.68 points, KL 0.098
+  rows [1, 6, 7, 8] from the rule: accuracy -5.76 points, KL 0.304
+closed form vs iterative weights, neuron 1: cosine 1.0000; with ARC 0.9931
+closed form vs iterative weights, neuron 6: cosine 1.0000; with ARC 0.9986
+closed form vs iterative weights, neuron 7: cosine 1.0000; with ARC 0.9990
+closed form vs iterative weights, neuron 8: cosine 1.0000; with ARC 0.9937
+
+lookup table 2369 bits
+
+constants' reference: relative (sd = each constant's own size); mismatch term -1 bits
+share 0.001: constants 238 bits (4.6 per constant) + structure 60 + rest of network 2032 = 2330; net against the lookup table +38 bits
+share 0.002: constants 216 bits (4.2 per constant) + structure 60 + rest of network 2047 = 2323; net against the lookup table +45 bits
+share 0.005: constants 189 bits (3.6 per constant) + structure 60 + rest of network 2099 = 2347; net against the lookup table +21 bits
+
+constants' reference: absolute (one sd, the rms of all 52 constants); mismatch term -0 bits
+share 0.001: constants 361 bits (6.9 per constant) + structure 60 + rest of network 2032 = 2453; net against the lookup table -84 bits
+share 0.002: constants 336 bits (6.5 per constant) + structure 60 + rest of network 2047 = 2443; net against the lookup table -74 bits
+share 0.005: constants 304 bits (5.8 per constant) + structure 60 + rest of network 2099 = 2463; net against the lookup table -94 bits
+
+constants' reference: absolute per kind (rms of features' and of feedback constants separately); mismatch term +0 bits
+share 0.001: constants 345 bits (6.6 per constant) + structure 60 + rest of network 2032 = 2437; net against the lookup table -68 bits
+share 0.002: constants 319 bits (6.1 per constant) + structure 60 + rest of network 2047 = 2426; net against the lookup table -58 bits
+share 0.005: constants 287 bits (5.5 per constant) + structure 60 + rest of network 2099 = 2446; net against the lookup table -77 bits

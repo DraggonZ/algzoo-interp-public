@@ -1,0 +1,8 @@
+accuracy intact 95.41%, forced off below the second-largest 95.92%
+mistakes fixed 1498, mistakes made 479 (of 200000 lists)
+intact mistakes, by what was named:
+  third-largest :   5821 mistakes,  21.0% fixed; of these mistakes the named number was below the second-largest at arrival in 38.4% (gate on after it in 24.0%)
+  largest       :   1834 mistakes,   7.2% fixed; of these mistakes the named number was below the second-largest at arrival in 0.0% (gate on after it in 0.0%)
+  other         :   1532 mistakes,   9.4% fixed; of these mistakes the named number was below the second-largest at arrival in 13.8% (gate on after it in 7.4%)
+new mistakes: forced network names the largest in 41.5%, the third in 36.3%
+new mistakes by the second-largest's position: [87, 53, 20, 17, 25, 31, 49, 72, 79, 46]

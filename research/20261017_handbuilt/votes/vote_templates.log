@@ -1,0 +1,12 @@
+network 0.953291
+kept/forgotten/final-largest, later-bigger cap 0        accuracy 0.7176
+kept/forgotten/final-largest, later-bigger cap 1        accuracy 0.7089
+kept/forgotten/final-largest, later-bigger cap 2        accuracy 0.6404
+kept/forgotten/final-largest, later-bigger cap 3        accuracy 0.6083
+
+replace one kind at a time by its average profile (others exact), c = 0.75, cap 2
+  final largest                       share of inputs 0.100  accuracy 0.5852
+  beaten records (old largests)       share of inputs 0.124  accuracy 0.6519
+  kept, not records                   share of inputs 0.153  accuracy 0.6327
+  forgotten                           share of inputs 0.623  accuracy 0.9429
+  last input                          share of inputs 0.100  accuracy 0.8619

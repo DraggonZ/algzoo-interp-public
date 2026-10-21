@@ -1,0 +1,3 @@
+gate keeps forgotten numbers at share 0.0: accuracy 0.954; median margin 8.19; margin/pushes 0.0217; accuracy with 1% noise 0.905
+gate keeps forgotten numbers at share 0.25: accuracy 0.949; median margin 7.83; margin/pushes 0.0211; accuracy with 1% noise 0.898
+gate keeps forgotten numbers at share 0.5: accuracy 0.890; median margin 6.98; margin/pushes 0.0193; accuracy with 1% noise 0.844

@@ -1,0 +1,17 @@
+no change: |c| 90/99/99.9% [ 3.2 20.6 90. ]
+neuron  0 linear: |c| 90/99/99.9% [  3.6  24.2 108.2] | accuracy 76.4%
+neuron  1 linear: |c| 90/99/99.9% [ 15.7  77.1 192.5] | accuracy 40.2%
+neuron  2 linear: |c| 90/99/99.9% [ 3.2 20.6 90. ] | accuracy 95.3%
+neuron  3 linear: |c| 90/99/99.9% [ 4.1 25.5 91.4] | accuracy 94.3%
+neuron  4 linear: |c| 90/99/99.9% [ 73.8 165.4 255.7] | accuracy 8.0%
+neuron  5 linear: |c| 90/99/99.9% [ 22.6  52.8 120.1] | accuracy 54.6%
+neuron  6 linear: |c| 90/99/99.9% [ 15.   73.  177.7] | accuracy 36.0%
+neuron  7 linear: |c| 90/99/99.9% [ 44. 208. 482.] | accuracy 35.6%
+neuron  8 linear: |c| 90/99/99.9% [ 40.8 167.1 457.7] | accuracy 33.4%
+neuron  9 linear: |c| 90/99/99.9% [ 696.1 2326.7 3551.3] | accuracy 8.1%
+neuron 10 linear: |c| 90/99/99.9% [ 3.2 21.4 91. ] | accuracy 94.5%
+neuron 11 linear: |c| 90/99/99.9% [ 3.2 20.8 89.2] | accuracy 95.0%
+neuron 12 linear: |c| 90/99/99.9% [ 3.1 20.6 90.6] | accuracy 95.3%
+neuron 13 linear: |c| 90/99/99.9% [ 3.2 20.4 90. ] | accuracy 95.3%
+neuron 14 linear: |c| 90/99/99.9% [ 3.2 20.3 92. ] | accuracy 95.0%
+neuron 15 linear: |c| 90/99/99.9% [ 5.8 28.9 97.1] | accuracy 88.1%

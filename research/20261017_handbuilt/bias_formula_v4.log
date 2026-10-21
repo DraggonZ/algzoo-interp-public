@@ -1,0 +1,2 @@
+22 development: miss 0.65 pts (bisection, v3, 0.73); largest change in a prediction 0.249 pts; run-equivalents per network mean 52787 (bisection 138,240)
+16 later: miss 1.02 pts (bisection, v3, 1.19); largest change in a prediction 0.660 pts; run-equivalents per network mean 52704 (bisection 138,240)

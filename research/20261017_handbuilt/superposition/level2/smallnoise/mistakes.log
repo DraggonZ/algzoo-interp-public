@@ -1,0 +1,19 @@
+old reduction 0/1: third > 0: accuracy 96.00% (wrong naming another 0.04 points); third < 0 (5.4% of lists): accuracy 83.69% (wrong naming another 9.28 points)
+two leads, Gaussian: third > 0: accuracy 95.74% (wrong naming another 0.00 points); third < 0 (4.7% of lists): accuracy 85.45% (wrong naming another 0.00 points)
+final (frozen, n=16): third > 0: accuracy 95.98% (wrong naming another 0.16 points); third < 0 (5.5% of lists): accuracy 83.49% (wrong naming another 10.42 points)
+final, finer grid n=24: third > 0: accuracy 96.00% (wrong naming another 0.16 points); third < 0 (5.5% of lists): accuracy 82.38% (wrong naming another 10.92 points)
+v2 (revised, n=16): third > 0: accuracy 95.91% (wrong naming another 0.17 points); third < 0 (5.5% of lists): accuracy 87.41% (wrong naming another 3.13 points)
+truth (other_wins.log): third > 0 accuracy 96.04%, 'another' 0.22 points; third < 0 (5.5% of lists) accuracy 82.93%, 'another' 10.06 points
+arrival order: L = largest, 2 = second, 3 = third, in the order they arrive
+truth (sampled)                accuracy 95.31%  mistakes naming largest 20.4%, third 63.4%, another 16.2%
+                               by arrival order, accuracy: L,2,3 94.87  L,3,2 94.49  2,L,3 95.19  3,L,2 95.87  2,3,L 95.99  3,2,L 95.46
+old reduction 0/1              accuracy 95.34%  mistakes naming largest 22.1%, third 66.4%, another 11.6%
+                               by arrival order, accuracy: L,2,3 94.90  L,3,2 93.06  2,L,3 94.17  3,L,2 96.70  2,3,L 96.69  3,2,L 96.50
+two leads, Gaussian            accuracy 95.26%  mistakes naming largest 26.9%, third 73.1%, another 0.0%
+                               by arrival order, accuracy: L,2,3 94.74  L,3,2 92.89  2,L,3 94.27  3,L,2 96.51  2,3,L 96.66  3,2,L 96.48
+final (frozen, n=16)           accuracy 95.30%  mistakes naming largest 20.7%, third 63.9%, another 15.3%
+                               by arrival order, accuracy: L,2,3 94.89  L,3,2 94.13  2,L,3 95.08  3,L,2 95.95  2,3,L 96.17  3,2,L 95.56
+final, finer grid n=24         accuracy 95.25%  mistakes naming largest 20.9%, third 63.3%, another 15.8%
+                               by arrival order, accuracy: L,2,3 94.82  L,3,2 94.04  2,L,3 95.04  3,L,2 95.87  2,3,L 96.23  3,2,L 95.53
+v2 (revised, n=16)             accuracy 95.44%  mistakes naming largest 22.8%, third 69.8%, another 7.3%
+                               by arrival order, accuracy: L,2,3 95.04  L,3,2 94.53  2,L,3 95.73  3,L,2 95.81  2,3,L 96.17  3,2,L 95.37

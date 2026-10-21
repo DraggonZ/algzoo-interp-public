@@ -1,0 +1,26 @@
+cancellers      ours       account              substituted: measured 0.559; first-order predicted 0.734
+cancellers      ours       account              shuffled   : measured 0.543; first-order predicted 0.614
+cancellers      misreading wave from m2         substituted: measured 0.426; first-order predicted 0.649
+cancellers      misreading wave from m2         shuffled   : measured 0.510; first-order predicted 0.594
+cancellers      misreading no wave              substituted: measured 0.181; first-order predicted 0.406
+cancellers      misreading no wave              shuffled   : measured 0.463; first-order predicted 0.563
+cancellers      misreading angle +20            substituted: measured 0.386; first-order predicted 0.613
+cancellers      misreading angle +20            shuffled   : measured 0.460; first-order predicted 0.591
+store+detector  ours       account              substituted: measured 0.851; first-order predicted 0.846
+store+detector  ours       account              shuffled   : measured 0.852; first-order predicted 0.831
+store+detector  misreading store tracks second  substituted: measured 0.434; first-order predicted 0.678
+store+detector  misreading store tracks second  shuffled   : measured 0.504; first-order predicted 0.666
+keep gate       ours       account              substituted: measured 0.872; first-order predicted 0.878
+keep gate       ours       account              shuffled   : measured 0.903; first-order predicted 0.916
+keep gate       misreading gate vs largest      substituted: measured 0.667; first-order predicted 0.775
+keep gate       misreading gate vs largest      shuffled   : measured 0.770; first-order predicted 0.872
+memory          ours       account              substituted: measured 0.509; first-order predicted 0.632
+memory          ours       account              shuffled   : measured 0.478; first-order predicted 0.605
+memory          misreading keep above half      substituted: measured 0.502; first-order predicted 0.628
+memory          misreading keep above half      shuffled   : measured 0.474; first-order predicted 0.605
+memory          misreading keep all             substituted: measured 0.502; first-order predicted 0.628
+memory          misreading keep all             shuffled   : measured 0.480; first-order predicted 0.610
+all 22 cases: rank correlation 0.75; median |measured - predicted| 0.126
+ours       substituted: measured minus predicted, median -0.064, range -0.175 to +0.005
+misreading substituted: measured minus predicted, median -0.224, range -0.243 to -0.108
+shuffled controls: measured minus predicted, median -0.102, range -0.162 to +0.021

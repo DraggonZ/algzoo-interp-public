@@ -1,0 +1,20 @@
+ ARC: true 95.32; converged reduction 95.32; band model with exact node widths 95.24; with one Newton step 92.81
+ 200: true 93.24; converged reduction 93.56; band model with exact node widths 93.51; with one Newton step 92.54
+ 201: true 94.38; converged reduction 94.13; band model with exact node widths 94.28; with one Newton step 81.91
+ 202: true 89.72; converged reduction 90.59; band model with exact node widths 91.19; with one Newton step 88.13
+ 203: true 89.88; converged reduction 89.86; band model with exact node widths 89.96; with one Newton step 88.24
+ 204: true 88.93; converged reduction 88.72; band model with exact node widths 88.83; with one Newton step 83.84
+ 205: true 93.62; converged reduction 94.02; band model with exact node widths 94.13; with one Newton step 89.50
+ 206: true 91.29; converged reduction 90.93; band model with exact node widths 91.28; with one Newton step 87.22
+ 207: true 91.14; converged reduction 90.29; band model with exact node widths 89.96; with one Newton step 88.43
+ 208: true 84.03; converged reduction 85.21; band model with exact node widths 84.62; with one Newton step 84.31
+ 209: true 95.89; converged reduction 96.22; band model with exact node widths 95.68; with one Newton step 93.61
+ 210: true 96.15; converged reduction 96.27; band model with exact node widths 95.79; with one Newton step 94.86
+ 211: true 93.47; converged reduction 93.55; band model with exact node widths 93.04; with one Newton step 90.91
+ 212: true 84.53; converged reduction 84.44; band model with exact node widths 84.86; with one Newton step 84.18
+ 213: true 93.89; converged reduction 94.37; band model with exact node widths 94.30; with one Newton step 90.46
+ 214: true 94.84; converged reduction 94.02; band model with exact node widths 94.10; with one Newton step 91.82
+ 215: true 92.60; converged reduction 93.16; band model with exact node widths 92.75; with one Newton step 86.02
+exact node widths: RMSE against converged reduction 0.36, against truth 0.57 points (17 networks)
+one Newton step: RMSE against converged reduction 4.30, against truth 4.28 points (17 networks)
+converged reduction against truth: RMSE 0.53

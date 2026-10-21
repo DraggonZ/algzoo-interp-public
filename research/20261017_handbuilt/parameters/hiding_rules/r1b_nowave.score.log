@@ -1,0 +1,11 @@
+score_rule.py sha256 913ce430a8f8; rule r1b_nowave.py; fit seed 101, score seed 202
+
+44 free constants, 2 kinds (feature, feedback); structure 64 bits (28 declared + 6 x 6 spreads); lookup table 2369 bits
+  share 0.001: constants 304 bits (6.9 each) + structure 64 + rest 2050; net -50
+  share 0.002: constants 283 bits (6.4 each) + structure 64 + rest 2065; net -43
+  share 0.005: constants 254 bits (5.8 each) + structure 64 + rest 2117; net -67
+
+| net bits | share | rms 1, 6, 7, 8 | cosine 1, 6, 7, 8 | joint KL of 4 rows | KL, 4 neurons replaced | constants |
+|---|---|---|---|---|---|---|
+| -43 | 0.002 | 0.281, 0.263, 0.119, 0.396 | 0.9907, 0.9941, 0.9987, 0.9938 | 0.547 | 0.452 | 44 |
+NET -43.1

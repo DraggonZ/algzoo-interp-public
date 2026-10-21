@@ -1,0 +1,178 @@
+[
+ {
+  "group": "cancellers",
+  "kind": "ours",
+  "label": "account",
+  "variant": "substituted",
+  "measured": 0.55908,
+  "predicted": 0.73442
+ },
+ {
+  "group": "cancellers",
+  "kind": "ours",
+  "label": "account",
+  "variant": "shuffled",
+  "measured": 0.54334,
+  "predicted": 0.61412
+ },
+ {
+  "group": "cancellers",
+  "kind": "misreading",
+  "label": "wave from m2",
+  "variant": "substituted",
+  "measured": 0.42554,
+  "predicted": 0.6494
+ },
+ {
+  "group": "cancellers",
+  "kind": "misreading",
+  "label": "wave from m2",
+  "variant": "shuffled",
+  "measured": 0.51016,
+  "predicted": 0.5938
+ },
+ {
+  "group": "cancellers",
+  "kind": "misreading",
+  "label": "no wave",
+  "variant": "substituted",
+  "measured": 0.18064,
+  "predicted": 0.4064
+ },
+ {
+  "group": "cancellers",
+  "kind": "misreading",
+  "label": "no wave",
+  "variant": "shuffled",
+  "measured": 0.46328,
+  "predicted": 0.56274
+ },
+ {
+  "group": "cancellers",
+  "kind": "misreading",
+  "label": "angle +20",
+  "variant": "substituted",
+  "measured": 0.38636,
+  "predicted": 0.61262
+ },
+ {
+  "group": "cancellers",
+  "kind": "misreading",
+  "label": "angle +20",
+  "variant": "shuffled",
+  "measured": 0.45984,
+  "predicted": 0.5911
+ },
+ {
+  "group": "store+detector",
+  "kind": "ours",
+  "label": "account",
+  "variant": "substituted",
+  "measured": 0.85094,
+  "predicted": 0.84628
+ },
+ {
+  "group": "store+detector",
+  "kind": "ours",
+  "label": "account",
+  "variant": "shuffled",
+  "measured": 0.85162,
+  "predicted": 0.8309
+ },
+ {
+  "group": "store+detector",
+  "kind": "misreading",
+  "label": "store tracks second",
+  "variant": "substituted",
+  "measured": 0.43448,
+  "predicted": 0.67758
+ },
+ {
+  "group": "store+detector",
+  "kind": "misreading",
+  "label": "store tracks second",
+  "variant": "shuffled",
+  "measured": 0.50418,
+  "predicted": 0.66634
+ },
+ {
+  "group": "keep gate",
+  "kind": "ours",
+  "label": "account",
+  "variant": "substituted",
+  "measured": 0.87158,
+  "predicted": 0.87798
+ },
+ {
+  "group": "keep gate",
+  "kind": "ours",
+  "label": "account",
+  "variant": "shuffled",
+  "measured": 0.90322,
+  "predicted": 0.9157
+ },
+ {
+  "group": "keep gate",
+  "kind": "misreading",
+  "label": "gate vs largest",
+  "variant": "substituted",
+  "measured": 0.6668,
+  "predicted": 0.7748
+ },
+ {
+  "group": "keep gate",
+  "kind": "misreading",
+  "label": "gate vs largest",
+  "variant": "shuffled",
+  "measured": 0.76954,
+  "predicted": 0.87198
+ },
+ {
+  "group": "memory",
+  "kind": "ours",
+  "label": "account",
+  "variant": "substituted",
+  "measured": 0.50902,
+  "predicted": 0.6316
+ },
+ {
+  "group": "memory",
+  "kind": "ours",
+  "label": "account",
+  "variant": "shuffled",
+  "measured": 0.47768,
+  "predicted": 0.60544
+ },
+ {
+  "group": "memory",
+  "kind": "misreading",
+  "label": "keep above half",
+  "variant": "substituted",
+  "measured": 0.50234,
+  "predicted": 0.62834
+ },
+ {
+  "group": "memory",
+  "kind": "misreading",
+  "label": "keep above half",
+  "variant": "shuffled",
+  "measured": 0.47436,
+  "predicted": 0.60468
+ },
+ {
+  "group": "memory",
+  "kind": "misreading",
+  "label": "keep all",
+  "variant": "substituted",
+  "measured": 0.50166,
+  "predicted": 0.62828
+ },
+ {
+  "group": "memory",
+  "kind": "misreading",
+  "label": "keep all",
+  "variant": "shuffled",
+  "measured": 0.48014,
+  "predicted": 0.60964
+ }
+]

@@ -1,0 +1,2 @@
+store x1.01 at step 5                  answers changed: real 1.18% | 1 cells: 0.72% | 4 cells: 0.86% | 8 cells: 0.90%
+balanced memory x1.02, store x1.019    answers changed: real 2.32% | 1 cells: 1.48% | 4 cells: 1.71% | 8 cells: 1.81%

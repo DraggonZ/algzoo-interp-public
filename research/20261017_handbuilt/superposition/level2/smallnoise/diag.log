@@ -1,0 +1,24 @@
+random conditions: truth mean P(right) 0.9512
+  mean0/1                    mean 0.9467  bias -0.0046  mean abs error 0.0338  corr 0.855
+  jacobian                   mean 0.9260  bias -0.0252  mean abs error 0.0391  corr 0.891
+  additive                   mean 0.9089  bias -0.0423  mean abs error 0.0506  corr 0.890
+  additive, mean only 0/1    mean 0.9600  bias +0.0088  mean abs error 0.0333  corr 0.802
+  oracle Gaussian            mean 0.9315  bias -0.0197  mean abs error 0.0231  corr 0.986
+  closest competitor: oracle mean vs additive mean: median |diff| 0.195 (oracle sd median 1.370); sd ratio additive/oracle median 1.132, 10-90% 0.99-1.62
+    worst additive: positions [7 9 4] values [1.27 1.09 1.08] truth 0.887 additive 0.322 oracle 0.857 lead(closest) oracle 1.66+-1.52 additive -1.55+-3.35
+    worst additive: positions [9 0 8] values [1.3  0.91 0.81] truth 0.985 additive 0.565 oracle 0.934 lead(closest) oracle 7.03+-1.88 additive 5.63+-3.31
+    worst additive: positions [2 5 6] values [1.44 1.43 1.43] truth 0.117 additive 0.500 oracle 0.136 lead(closest) oracle -1.92+-1.91 additive 0.26+-3.34
+    worst additive: positions [1 7 8] values [2.47 1.2  1.02] truth 1.000 additive 0.628 oracle 0.952 lead(closest) oracle 13.13+-0.88 additive 12.98+-1.26
+    worst additive: positions [8 9 6] values [1.58 1.53 1.32] truth 0.999 additive 0.656 oracle 0.983 lead(closest) oracle 5.08+-1.33 additive 5.08+-1.43
+near-tie conditions: truth mean P(right) 0.8759
+  mean0/1                    mean 0.8700  bias -0.0059  mean abs error 0.0821  corr 0.834
+  jacobian                   mean 0.8420  bias -0.0339  mean abs error 0.0790  corr 0.851
+  additive                   mean 0.8059  bias -0.0699  mean abs error 0.0821  corr 0.913
+  additive, mean only 0/1    mean 0.8800  bias +0.0041  mean abs error 0.0749  corr 0.861
+  oracle Gaussian            mean 0.8464  bias -0.0295  mean abs error 0.0362  corr 0.989
+  closest competitor: oracle mean vs additive mean: median |diff| 0.160 (oracle sd median 1.145); sd ratio additive/oracle median 1.104, 10-90% 0.99-1.60
+    worst additive: positions [9 7 3] values [1.14 1.02 1.  ] truth 0.922 additive 0.399 oracle 0.894 lead(closest) oracle 2.31+-1.68 additive -0.62+-3.65
+    worst additive: positions [6 9 0] values [1.88 1.52 1.49] truth 0.684 additive 0.197 oracle 0.578 lead(closest) oracle 1.16+-4.92 additive -3.64+-7.34
+    worst additive: positions [8 6 0] values [1.39 1.29 1.25] truth 0.664 additive 0.239 oracle 0.592 lead(closest) oracle 1.11+-3.70 additive -5.38+-8.04
+    worst additive: positions [0 8 7] values [2.58 1.15 1.13] truth 0.928 additive 0.520 oracle 0.896 lead(closest) oracle 5.07+-0.39 additive 4.61+-0.76
+    worst additive: positions [9 2 8] values [2.66 1.45 1.38] truth 0.820 additive 0.413 oracle 0.828 lead(closest) oracle 5.56+-4.71 additive 14.07+-11.13

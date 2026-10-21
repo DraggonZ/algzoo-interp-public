@@ -1,0 +1,6 @@
+example: full 95.32%, reduced (cond. mean) 95.34%, (const -0.46) 95.26% [quadrature 95.30, sampled SE 0.01]; same answer full vs cond.-mean 96.75%; small inputs cause 1.48 points of mistakes and fix 1.47
+0: full 91.02%, reduced (cond. mean) 91.11%, (const -0.46) 91.13% [quadrature 91.08, sampled SE 0.01]; same answer full vs cond.-mean 93.12%; small inputs cause 3.33 points of mistakes and fix 3.24
+1: full 88.05%, reduced (cond. mean) 89.44%, (const -0.46) 89.55% [quadrature 89.47, sampled SE 0.01]; same answer full vs cond.-mean 91.50%; small inputs cause 4.61 points of mistakes and fix 3.22
+2: full 94.86%, reduced (cond. mean) 94.85%, (const -0.46) 94.80% [quadrature 94.88, sampled SE 0.01]; same answer full vs cond.-mean 95.48%; small inputs cause 2.06 points of mistakes and fix 2.07
+3: full 93.22%, reduced (cond. mean) 92.98%, (const -0.46) 92.99% [quadrature 93.17, sampled SE 0.01]; same answer full vs cond.-mean 94.66%; small inputs cause 2.29 points of mistakes and fix 2.54
+4: full 89.00%, reduced (cond. mean) 88.93%, (const -0.46) 88.96% [quadrature 88.93, sampled SE 0.02]; same answer full vs cond.-mean 92.65%; small inputs cause 3.39 points of mistakes and fix 3.45

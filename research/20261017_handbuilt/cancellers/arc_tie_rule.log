@@ -1,0 +1,21 @@
+163129 near-tie lists; trained network picks correctly between the two: 0.921
+one rule for all steps and positions: margin/P = -4.53 C/P + 7.02 D/P + 0.01  R2 0.69  sign agrees with the network 0.909
+baseline, the true difference only: margin/P = 141.1 (x_t/P - 1) + 0.26  R2 0.72  sign agrees 0.919
+per step t (rule fitted to all, then per step): lists, R2 of the shared rule, R2 own rule, own coefficients C, D, const
+  t=2:   7573  shared  0.75  own  0.89    -6.44  12.59  -0.27
+  t=3:  10933  shared  0.72  own  0.90    -7.30  13.63   0.19
+  t=4:  14766  shared  0.71  own  0.85    -7.83  11.54   0.60
+  t=5:  18413  shared  0.75  own  0.80    -6.03   9.74  -0.24
+  t=6:  22257  shared  0.67  own  0.71    -5.18   6.93   0.34
+  t=7:  25923  shared  0.62  own  0.67    -3.75   5.57  -0.13
+  t=8:  29535  shared  0.77  own  0.81    -3.67   5.90  -0.20
+  t=9:  33729  shared  0.56  own  0.69    -3.03   5.47  -0.70
+per gap t - r (steps between old largest and new number), shared rule R2 and own coefficients
+  gap 1:  29560  shared  0.80  own  0.81    -4.99   8.59  -0.04
+  gap 2:  29624  shared  0.68  own  0.78    -6.79  11.28  -0.50
+  gap 3:  25899  shared  0.74  own  0.80    -4.76  12.35  -1.21
+  gap 4:  22195  shared  0.78  own  0.82    -5.90   8.36  -0.03
+  gap 5:  18548  shared  0.90  own  0.90    -4.63   6.40   1.19
+  gap 6:  15002  shared -0.08  own  0.73    -3.70   3.66   1.95
+  gap 7:  11261  shared  0.26  own  0.78    -2.93   5.30   0.33
+  gap 8:   7360  shared  0.67  own  0.83    -4.37   7.66   0.26

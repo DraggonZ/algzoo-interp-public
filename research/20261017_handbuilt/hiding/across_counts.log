@@ -1,0 +1,11 @@
+18 networks with hiding neurons
+(A) cutoff  1 points: 7 networks (ARC, new104, new106, new109, new111, new113, new115)
+(A) cutoff  3 points: 7 networks (ARC, new104, new106, new109, new111, new113, new115)
+(A) cutoff  5 points: 7 networks (ARC, new104, new106, new109, new111, new113, new115)
+(A) cutoff 10 points: 5 networks (ARC, new106, new111, new113, new115)
+(A) cutoff 30 points: 2 networks (ARC, new111)
+(B) cutoff 0.3: 3 networks (ARC, new106, new115)
+(B) cutoff 0.4: 5 networks (ARC, new102, new106, new111, new115)
+(B) cutoff 0.5: 7 networks (ARC, new102, new104, new106, new111, new113, new115)
+(B) cutoff 0.6: 11 networks (ARC, zoo2, zoo3, new100, new102, new104, new106, new108, new111, new113, new115)
+(B) cutoff 0.7: 12 networks (ARC, zoo2, zoo3, new100, new101, new102, new104, new106, new108, new111, new113, new115)

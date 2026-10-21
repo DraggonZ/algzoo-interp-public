@@ -1,0 +1,20 @@
+group            claim adds                       KL    acc  agree
+store+detector   (base)                        1.899  0.770  0.776
+store+detector   m1pos                         0.678  0.866  0.879
+store+detector   m2                            6.574  0.622  0.629
+store+detector   m1pos+m2                      0.055  0.943  0.972
+store+detector   m1pos+m2+prev                 0.055  0.943  0.973
+cancellers       (base)                        2.189  0.739  0.748
+cancellers       m2pos                         0.366  0.917  0.924
+cancellers       prev                          2.415  0.739  0.749
+cancellers       m2pos+prev                    0.351  0.919  0.928
+cancellers       m2pos+prev+prev2              0.335  0.918  0.930
+keep gate        (base)                        1.270  0.832  0.848
+keep gate        m1pos                         0.284  0.914  0.938
+keep gate        prev2                         2.626  0.767  0.782
+keep gate        m1pos+prev2                   0.277  0.916  0.941
+memory           (base)                        0.272  0.908  0.925
+memory           prev                          0.272  0.907  0.925
+memory           prev+thr=0.6                  0.239  0.913  0.932
+memory           prev+thr=0.5                  0.225  0.915  0.935
+memory           prev+thr=0.85                 0.290  0.905  0.923

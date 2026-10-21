@@ -1,0 +1,4 @@
+shared fit   memory  wrong switches 0.142  KL 1.501  acc 0.788
+shared fit   all 16  wrong switches 0.081  KL 2.230  acc 0.754
+per-step fit memory  wrong switches 0.135  KL 2.525  acc 0.713
+per-step fit all 16  wrong switches 0.078  KL 3.027  acc 0.699

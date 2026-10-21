@@ -1,0 +1,7 @@
+score_memory_rule_v2.py sha256 45d18216a799; rule overwrite_store.py
+153 weights covered, 1 constants, 1 kinds; relative weight error 0.2157; structure 120 bits; lookup table 1916 bits
+  share 0.001: constants 6 bits (6.0 each) + structure 120 + rest 1672; net +118
+  share 0.002: constants 6 bits (5.5 each) + structure 120 + rest 1687; net +103
+  share 0.005: constants 5 bits (4.8 each) + structure 120 + rest 1739; net +52
+KL from ARC 6.6235 (budget 0.02); accuracy 0.5528 (ARC 0.9531)
+NET +117.9

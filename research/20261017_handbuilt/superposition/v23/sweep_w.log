@@ -1,0 +1,5 @@
+w 0.00: accuracy 0.9580 | second an overtaken record 0.9349, otherwise 0.9806
+w 0.25: accuracy 0.8470 | second an overtaken record 0.7645, otherwise 0.9272
+w 0.50: accuracy 0.7893 | second an overtaken record 0.6864, otherwise 0.8895
+w 0.75: accuracy 0.7482 | second an overtaken record 0.6330, otherwise 0.8603
+w 1.00: accuracy 0.7145 | second an overtaken record 0.5893, otherwise 0.8364

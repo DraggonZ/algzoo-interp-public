@@ -1,0 +1,8 @@
+gate only: lists with a difference > 1e-3: 85.50%; by position [0.0, 17.41, 24.87, 27.42, 27.86, 27.39, 26.51, 25.28, 24.59]
+   memory pre-activation below zero on 0.00% of lists; per step [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+   accuracy v19 94.24% here 94.25%; fixed 0.05% broken 0.04%
+   on fixed lists: second at position [20, 3, 6, 6, 3, 5, 4, 1, 1, 0]; v19 named [7, 6, 2, 3, 7, 6, 12, 6, 0, 0]
+half direct: lists with a difference > 1e-3: 94.49%; by position [49.9, 42.25, 37.33, 33.64, 30.9, 28.91, 27.27, 25.65, 24.59]
+   memory pre-activation below zero on 0.00% of lists; per step [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+   accuracy v19 94.24% here 94.70%; fixed 0.54% broken 0.08%
+   on fixed lists: second at position [45, 54, 68, 64, 53, 50, 41, 50, 66, 51]; v19 named [187, 66, 12, 39, 42, 69, 117, 10, 0, 0]

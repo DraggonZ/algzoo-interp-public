@@ -1,0 +1,8 @@
+lists the first-order prediction flips from right to wrong: 0.474
+  cancelling     : share of the harmful change 0.58
+  memory         : share of the harmful change 0.28
+  store+detector : share of the harmful change 0.01
+  gates          : share of the harmful change 0.12
+  by step: 0:0.09 1:0.07 2:0.07 3:0.08 4:0.09 5:0.11 6:0.13 7:0.14 8:0.12 9:0.11
+  by neuron: 0:0.06 1:0.06 2:0.01 3:0.02 4:0.00 5:0.01 6:0.04 7:0.39 8:0.09 9:0.11 10:0.04 11:0.04 12:0.05 13:0.02 14:0.04 15:0.03
+  share of harm on steps where the neuron is truly on: 0.36; off (formula fires wrongly): 0.64

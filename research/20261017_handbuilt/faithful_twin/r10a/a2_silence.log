@@ -1,0 +1,6 @@
+silence none: names the largest 1.7%
+silence E1, E6, clock2, runner-up (the layout job 7's references need): names the largest 11.2%
+silence E1, E6 only: names the largest 1.7%
+silence clock2 only: names the largest 11.2%
+silence three clocks + runner-up (r6a's slots): names the largest 41.7%
+silence three clocks only: names the largest 13.5%

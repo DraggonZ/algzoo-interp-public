@@ -1,0 +1,20 @@
+neuron  7: readout condition  7.20; recurrent  45.78; first-order predicted 2% loss 0.114; measured 0.135
+neuron  6: readout condition  4.65; recurrent  31.94; first-order predicted 2% loss 0.059; measured 0.056
+neuron  1: readout condition  5.28; recurrent  25.74; first-order predicted 2% loss 0.041; measured 0.037
+neuron  8: readout condition  4.65; recurrent  24.55; first-order predicted 2% loss 0.046; measured 0.046
+neuron  2: readout condition  1.92; recurrent  15.68; first-order predicted 2% loss 0.067; measured 0.074
+neuron 14: readout condition  1.58; recurrent   8.88; first-order predicted 2% loss 0.008; measured 0.003
+neuron 10: readout condition  1.12; recurrent   7.76; first-order predicted 2% loss 0.008; measured 0.004
+neuron 12: readout condition  1.45; recurrent   7.31; first-order predicted 2% loss 0.011; measured 0.005
+neuron 11: readout condition  0.56; recurrent   6.74; first-order predicted 2% loss 0.007; measured 0.002
+neuron  0: readout condition  1.51; recurrent   6.08; first-order predicted 2% loss 0.006; measured 0.002
+neuron 13: readout condition  0.75; recurrent   6.02; first-order predicted 2% loss 0.002; measured -0.000
+neuron  5: readout condition  0.00; recurrent   4.20; first-order predicted 2% loss 0.005; measured 0.001
+neuron  3: readout condition  0.39; recurrent   2.40; first-order predicted 2% loss 0.003; measured 0.001
+neuron 15: readout condition  0.41; recurrent   1.99; first-order predicted 2% loss 0.009; measured 0.005
+neuron  4: readout condition  0.00; recurrent   1.50; first-order predicted 2% loss 0.013; measured 0.008
+neuron  9: readout condition  0.00; recurrent   0.69; first-order predicted 2% loss 0.001; measured 0.001
+rank correlation with the measured 2% loss, readout condition: 0.71 (p 0.0021)
+rank correlation with the measured 2% loss, recurrent condition: 0.70 (p 0.0023)
+rank correlation with the measured 2% loss, first-order prediction: 0.99 (p 0.0000)
+whole-network recurrent condition number, median over lists: 220 (readout only: 46)

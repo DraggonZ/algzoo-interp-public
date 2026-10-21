@@ -1,0 +1,5 @@
+c (minus input weights) for neurons 1, 6, 7, 8: 10.56 11.00 13.17 12.31
+eigenvalues of the block: size 0.937 angle +42.6 deg, size 0.937 angle -42.6 deg, size 0.043 angle +17.1 deg, size 0.043 angle -17.1 deg
+input weights                 : [-10.565 -10.996 -13.169 -12.312], size 23.61; after one step of the block [ 0.009  0.133 -0.015  0.137], size 0.19
+weights from the store (2)    : [0.504 0.535 0.674 0.625], size 1.18; after one step of the block [-0.042 -0.011  0.009 -0.033], size 0.06
+weights from the detector (4) : [ 0.871 -0.047  1.317 -0.041], size 1.58; after one step of the block [-1.065 -0.297  0.017 -0.914], size 1.43

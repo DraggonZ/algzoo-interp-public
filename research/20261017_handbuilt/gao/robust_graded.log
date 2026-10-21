@@ -1,0 +1,8 @@
+twin with clock gain 10, flag gain 10, detector gain 10
+twin accuracy 0.921
+exact rules                                 : measured 0.958; agreement with the twin 0.950; first-order predicted 0.818
+misreading: clock height from the largest   : measured 0.691; agreement with the twin 0.688; first-order predicted 0.719
+misreading: flip term left out              : measured 0.590; agreement with the twin 0.620; first-order predicted 0.553
+store gain 2% off                           : measured 0.712; agreement with the twin 0.727; first-order predicted 0.583
+clock angle 45.5 deg                        : measured 0.894; agreement with the twin 0.886; first-order predicted 0.792
+vote gain 6% low (as the 0.765 cutoff)      : measured 0.931; agreement with the twin 0.925; first-order predicted 0.775

@@ -1,0 +1,260 @@
+analysis of main_b1e-3: {'name': 'main_b1e-3', 'beta': 0.001, 'p': 1.0, 'p_anneal': None, 'steps': 20000, 'batch': 2048, 'lr': 0.003, 'C': '8,48,20', 'gauge': None, 'seed': 0, 'faith': 100.0, 'n_eval': 1048576}
+most common on/off pattern (on neurons): [0, 1, 2, 3, 6, 7, 8, 10, 11, 12, 13, 14, 15]; fresh-number direction D w_in: 7:-0.56 8:-0.52 6:-0.46 1:-0.45 14:-0.06 12:+0.01
+12-neuron block modes: |eig| [0.9, 0.82, 0.82, 0.94, 0.94, 0.99, 0.94, 0.94, 0.74, 0.74, 0.22, 0.02] angle [180.0, 126.0, 126.0, 83.0, 83.0, 0.0, 43.0, 43.0, 43.0, 43.0, 0.0, 0.0]
+
+== hi: 8 pieces ever active of 8 ==
+[hi2] KL if removed 3.5554; lists 1.000; uses/list 10.00; |piece| 4.76
+    writes hiding 0.88, memory 0.11 (7:+1.52 6:+1.48 8:+0.87 1:+0.83); v -1.83; x in [-9,-1): 1.00; x in [-1,0): 1.00; x in [0,1): 1.00; x in [1,9): 1.00; at records 1.00, others 1.00
+[hi0] KL if removed 1.3653; lists 1.000; uses/list 10.00; |piece| 3.89
+    writes hiding 0.71, detector 0.16, memory 0.12 (8:+1.56 1:+1.38 4:-1.14 7:+1.01); v -1.38; x in [-9,-1): 1.00; x in [-1,0): 1.00; x in [0,1): 1.00; x in [1,9): 1.00; at records 1.00, others 1.00
+[hi7] KL if removed 0.5781; lists 0.999; uses/list 4.89; |piece| 3.56
+    writes hiding 0.63, detector 0.36 (4:+1.74 7:-1.27 8:-1.23 6:-1.07); v +1.24; x in [-9,-1): 0.00; x in [-1,0): 0.00; x in [0,1): 0.97; x in [1,9): 1.00; at records 0.76, others 0.38
+[hi1] KL if removed 0.3502; lists 0.999; uses/list 4.91; |piece| 3.94
+    writes hiding 0.72, detector 0.28 (4:-1.46 7:+1.29 8:+1.24 6:+1.09); v -1.43; x in [-9,-1): 0.01; x in [-1,0): 0.00; x in [0,1): 0.97; x in [1,9): 1.00; at records 0.76, others 0.38
+[hi6] KL if removed 0.1816; lists 0.996; uses/list 4.33; |piece| 1.52
+    writes hiding 0.62, detector 0.38 (4:+1.36 8:-0.99 7:-0.94 6:-0.82); v +0.69; x in [-9,-1): 0.00; x in [-1,0): 0.00; x in [0,1): 0.80; x in [1,9): 1.00; at records 0.71, others 0.32
+[hi4] KL if removed 0.0559; lists 0.999; uses/list 4.83; |piece| 3.80
+    writes hiding 0.88, detector 0.12 (7:-1.51 8:-1.47 6:-1.28 1:-1.18); v +1.30; x in [-9,-1): 0.00; x in [-1,0): 0.00; x in [0,1): 0.95; x in [1,9): 1.00; at records 0.75, others 0.37
+[hi3] KL if removed 0.0153; lists 0.999; uses/list 4.81; |piece| 3.33
+    writes hiding 0.82, detector 0.17 (7:-1.43 8:-1.31 1:-1.17 6:-1.17); v +1.19; x in [-9,-1): 0.00; x in [-1,0): 0.00; x in [0,1): 0.94; x in [1,9): 1.00; at records 0.75, others 0.37
+[hi5] KL if removed 0.0133; lists 0.998; uses/list 4.67; |piece| 2.45
+    writes hiding 0.85, detector 0.14 (7:+1.52 8:+1.34 1:+1.25 6:+1.24); v -0.84; x in [-9,-1): 0.00; x in [-1,0): 0.00; x in [0,1): 0.90; x in [1,9): 1.00; at records 0.74, others 0.35
+
+== hh: 45 pieces ever active of 48 ==
+[hh26] KL if removed 39.5434; lists 1.000; uses/list 7.96; |piece| 0.69
+    writes late gate 0.74 (9:+0.67 4:+0.19 2:-0.15 8:-0.15); reads memory 0.70, store 0.14, hiding 0.10 (15:+0.41 11:-0.33 2:-0.33 10:-0.31); |cos(read, fresh)| 0.17
+    modes written: 0deg 0.46 40deg 0.46; modes read: 0deg 0.27 40deg 0.51
+    active by steps since the largest (0..5): [0.63, 1.0, 1.0, 1.0, 1.0, 1.0]; by step 1..9: [0.4699999988079071, 0.7400000095367432, 0.8799999952316284, 0.9300000071525574, 0.9700000286102295, 0.9900000095367432, 0.9900000095367432, 1.0, 1.0]
+[hh21] KL if removed 33.6840; lists 1.000; uses/list 8.93; |piece| 1.63
+    writes late gate 0.68, memory 0.22 (9:-0.81 14:+0.23 2:+0.23 12:+0.22); reads detector 0.47, memory 0.34, hiding 0.19 (4:+1.13 14:+0.58 1:+0.56 3:-0.49); |cos(read, fresh)| 0.40
+    modes written: 0deg 0.83; modes read: 0deg 0.56 40deg 0.32
+    active by steps since the largest (0..5): [0.97, 1.0, 1.0, 1.0, 1.0, 1.0]; by step 1..9: [0.9599999785423279, 0.9800000190734863, 0.9900000095367432, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+[hh6] KL if removed 26.0801; lists 1.000; uses/list 8.82; |piece| 0.94
+    writes late gate 0.59, memory 0.30 (9:-0.73 14:+0.36 3:-0.25 13:+0.24); reads hiding 0.51, memory 0.29 (7:+0.41 1:-0.41 6:+0.39 0:+0.38); |cos(read, fresh)| 0.18
+    modes written: 40deg 0.41 130deg 0.31; modes read: 40deg 0.55 130deg 0.23
+    active by steps since the largest (0..5): [0.94, 1.0, 1.0, 1.0, 1.0, 1.0]; by step 1..9: [0.9200000166893005, 0.949999988079071, 0.9800000190734863, 0.9900000095367432, 1.0, 1.0, 1.0, 0.9900000095367432, 0.9900000095367432]
+[hh25] KL if removed 21.9890; lists 1.000; uses/list 9.00; |piece| 1.60
+    writes late gate 0.71, memory 0.11 (9:+1.13 5:+0.39 12:+0.33 2:+0.28); reads detector 0.42, memory 0.31, hiding 0.14, late gate 0.12 (4:+0.77 11:+0.56 9:+0.41 8:-0.31); |cos(read, fresh)| 0.34
+    modes written: 40deg 0.21 130deg 0.52; modes read: 0deg 0.66 180deg 0.16
+    active by steps since the largest (0..5): [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]; by step 1..9: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+[hh33] KL if removed 20.5906; lists 1.000; uses/list 9.00; |piece| 0.98
+    writes late gate 0.52, memory 0.34 (9:-0.73 15:+0.33 3:+0.32 12:+0.30); reads memory 0.26, detector 0.22, keep gate 0.20, hiding 0.19, store 0.11 (4:+0.45 5:-0.44 1:+0.33 10:-0.32); |cos(read, fresh)| 0.18
+    modes written: 0deg 0.77 40deg 0.18; modes read: 0deg 0.43 40deg 0.24 180deg 0.23
+    active by steps since the largest (0..5): [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]; by step 1..9: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+[hh28] KL if removed 18.6241; lists 1.000; uses/list 7.80; |piece| 1.37
+    writes memory 0.42, late gate 0.32, keep gate 0.12 (9:+0.57 3:+0.36 0:+0.35 5:+0.34); reads memory 0.49, hiding 0.35, keep gate 0.11 (3:-0.67 7:-0.60 11:+0.51 5:-0.45); |cos(read, fresh)| 0.20
+    modes written: 0deg 0.19 40deg 0.30 130deg 0.25 180deg 0.16; modes read: 40deg 0.15 130deg 0.58
+    active by steps since the largest (0..5): [0.61, 1.0, 0.98, 0.98, 0.97, 0.99]; by step 1..9: [0.47999998927116394, 0.7300000190734863, 0.8500000238418579, 0.8999999761581421, 0.9399999976158142, 0.949999988079071, 0.9700000286102295, 0.9800000190734863, 0.9900000095367432]
+[hh38] KL if removed 15.5702; lists 1.000; uses/list 7.86; |piece| 1.26
+    writes memory 0.69, late gate 0.11 (11:+0.46 3:+0.43 9:-0.29 4:-0.24); reads memory 0.44, detector 0.39, hiding 0.11 (4:+0.89 0:-0.60 13:-0.47 12:+0.36); |cos(read, fresh)| 0.00
+    modes written: 0deg 0.70; modes read: 40deg 0.31 80deg 0.17 130deg 0.20 180deg 0.26
+    active by steps since the largest (0..5): [0.75, 0.89, 0.96, 0.99, 0.88, 0.94]; by step 1..9: [0.49000000953674316, 0.7400000095367432, 0.8700000047683716, 0.9599999785423279, 0.9399999976158142, 0.9599999785423279, 0.9599999785423279, 0.9700000286102295, 0.9800000190734863]
+[hh34] KL if removed 14.5316; lists 1.000; uses/list 9.00; |piece| 0.65
+    writes memory 0.68, hiding 0.24 (11:+0.31 7:+0.26 0:+0.26 14:+0.22); reads memory 0.59, hiding 0.36 (6:-0.52 14:+0.42 0:+0.35 11:+0.34); |cos(read, fresh)| 0.31
+    modes written: 0deg 0.35 40deg 0.53; modes read: 0deg 0.36 80deg 0.16 130deg 0.25 180deg 0.19
+    active by steps since the largest (0..5): [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]; by step 1..9: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+[hh40] KL if removed 14.3792; lists 0.998; uses/list 6.99; |piece| 1.05
+    writes hiding 0.43, memory 0.33, store 0.11, late gate 0.11 (6:+0.31 8:+0.28 2:+0.27 9:+0.26); reads hiding 0.35, memory 0.35, late gate 0.22 (9:-0.61 11:+0.59 7:-0.57 6:+0.49); |cos(read, fresh)| 0.00
+    modes written: 0deg 0.41 40deg 0.39; modes read: 40deg 0.51 180deg 0.23
+    active by steps since the largest (0..5): [0.4, 0.89, 0.95, 0.97, 0.99, 0.99]; by step 1..9: [0.0, 0.49000000953674316, 0.7599999904632568, 0.8799999952316284, 0.9300000071525574, 0.9700000286102295, 0.9800000190734863, 0.9900000095367432, 1.0]
+[hh20] KL if removed 14.3241; lists 1.000; uses/list 9.00; |piece| 0.80
+    writes late gate 0.55, memory 0.24, hiding 0.20 (9:+0.61 3:+0.32 8:+0.32 1:+0.18); reads hiding 0.40, memory 0.32, detector 0.15 (7:-0.55 0:-0.47 4:-0.37 5:+0.25); |cos(read, fresh)| 0.18
+    modes written: 0deg 0.15 40deg 0.68; modes read: 0deg 0.29 80deg 0.40 130deg 0.21
+    active by steps since the largest (0..5): [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]; by step 1..9: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+[hh8] KL if removed 13.9428; lists 1.000; uses/list 7.79; |piece| 1.06
+    writes memory 0.53, late gate 0.41 (9:-0.56 11:+0.35 12:+0.29 13:-0.27); reads memory 0.57, detector 0.20, late gate 0.17 (4:+0.55 11:+0.53 9:+0.50 12:+0.43); |cos(read, fresh)| 0.00
+    modes written: 0deg 0.17 40deg 0.18 80deg 0.43 130deg 0.21; modes read: 0deg 0.23 40deg 0.40 80deg 0.16 130deg 0.19
+    active by steps since the largest (0..5): [0.76, 0.9, 0.95, 0.95, 0.73, 0.95]; by step 1..9: [0.5299999713897705, 0.75, 0.8600000143051147, 0.9200000166893005, 0.8799999952316284, 0.9300000071525574, 0.9599999785423279, 0.9700000286102295, 0.9800000190734863]
+[hh1] KL if removed 10.5960; lists 0.999; uses/list 6.67; |piece| 1.26
+    writes memory 0.48, store 0.20, hiding 0.11, late gate 0.11 (10:+0.49 2:+0.42 9:+0.31 0:+0.31); reads detector 0.65, hiding 0.23 (4:+1.07 1:+0.41 7:-0.33 5:-0.26); |cos(read, fresh)| 0.00
+    modes written: 0deg 0.51 40deg 0.43; modes read: 40deg 0.29 130deg 0.37 180deg 0.31
+    active by steps since the largest (0..5): [0.76, 0.53, 0.69, 0.85, 0.83, 0.9]; by step 1..9: [0.5, 0.46000000834465027, 0.5400000214576721, 0.7599999904632568, 0.8399999737739563, 0.8799999952316284, 0.8999999761581421, 0.8899999856948853, 0.9100000262260437]
+[hh16] KL if removed 9.6925; lists 1.000; uses/list 7.60; |piece| 1.37
+    writes late gate 0.92 (9:-1.89 5:-0.34 14:-0.26 15:-0.17); reads hiding 0.77, late gate 0.10 (7:+0.53 8:+0.26 9:-0.22 14:-0.14); |cos(read, fresh)| 0.55
+    modes written: 0deg 0.19 40deg 0.50 180deg 0.23; modes read: 0deg 0.68 40deg 0.16
+    active by steps since the largest (0..5): [0.52, 1.0, 0.99, 0.99, 0.99, 0.99]; by step 1..9: [0.49000000953674316, 0.6800000071525574, 0.8100000023841858, 0.8700000047683716, 0.8999999761581421, 0.9399999976158142, 0.9599999785423279, 0.9700000286102295, 0.9800000190734863]
+[hh29] KL if removed 9.5035; lists 1.000; uses/list 6.62; |piece| 0.69
+    writes memory 0.51, hiding 0.31, store 0.11 (7:+0.43 0:-0.40 3:-0.35 15:-0.33); reads hiding 0.47, late gate 0.16, detector 0.15, memory 0.10 (6:-0.33 9:+0.29 4:+0.29 8:+0.25); |cos(read, fresh)| 0.00
+    modes written: 0deg 0.20 40deg 0.73; modes read: 40deg 0.27 80deg 0.49
+    active by steps since the largest (0..5): [0.73, 0.57, 0.65, 0.81, 0.89, 0.94]; by step 1..9: [0.47999998927116394, 0.46000000834465027, 0.5400000214576721, 0.6600000262260437, 0.7799999713897705, 0.8700000047683716, 0.9300000071525574, 0.949999988079071, 0.949999988079071]
+[hh39] KL if removed 7.9865; lists 1.000; uses/list 6.69; |piece| 0.99
+    writes memory 0.76 (13:+0.42 10:+0.28 11:+0.27 15:+0.25); reads memory 0.42, late gate 0.28, hiding 0.20 (9:+0.67 13:-0.55 11:+0.53 2:-0.40); |cos(read, fresh)| 0.01
+    modes written: 40deg 0.28 80deg 0.43; modes read: 0deg 0.16 80deg 0.65
+    active by steps since the largest (0..5): [0.34, 0.85, 0.94, 0.97, 0.99, 0.99]; by step 1..9: [0.0, 0.38999998569488525, 0.699999988079071, 0.8299999833106995, 0.8999999761581421, 0.9599999785423279, 0.9599999785423279, 0.9700000286102295, 0.9700000286102295]
+[hh12] KL if removed 6.2537; lists 1.000; uses/list 8.06; |piece| 1.15
+    writes late gate 0.85 (9:-1.11 5:-0.30 4:+0.23 3:+0.20); reads hiding 0.62, store 0.17, memory 0.16 (6:+0.53 1:+0.40 2:-0.39 0:-0.33); |cos(read, fresh)| 0.72
+    modes written: 0deg 0.16 40deg 0.27 80deg 0.17 130deg 0.38; modes read: 0deg 0.92
+    active by steps since the largest (0..5): [0.7, 0.98, 0.99, 0.99, 0.99, 0.99]; by step 1..9: [0.49000000953674316, 0.7300000190734863, 0.9100000262260437, 0.9700000286102295, 0.9900000095367432, 0.9900000095367432, 0.9900000095367432, 0.9900000095367432, 0.9900000095367432]
+[hh4] KL if removed 5.8949; lists 0.995; uses/list 5.60; |piece| 0.46
+    writes memory 0.80, hiding 0.13 (15:-0.24 12:+0.21 10:+0.21 11:+0.17); reads hiding 0.49, memory 0.41 (8:+0.58 14:-0.43 13:+0.31 2:-0.24); |cos(read, fresh)| 0.01
+    modes written: 0deg 0.18 40deg 0.53; modes read: 40deg 0.60 80deg 0.30
+    active by steps since the largest (0..5): [0.21, 0.83, 0.46, 0.87, 0.98, 0.99]; by step 1..9: [0.0, 0.4000000059604645, 0.36000001430511475, 0.5, 0.6800000071525574, 0.8399999737739563, 0.9200000166893005, 0.949999988079071, 0.9700000286102295]
+[hh14] KL if removed 5.8494; lists 1.000; uses/list 6.73; |piece| 0.85
+    writes memory 0.79 (0:+0.31 13:+0.31 12:+0.27 15:+0.26); reads memory 0.53, hiding 0.23, keep gate 0.15 (15:+0.51 5:-0.45 12:+0.41 8:-0.40); |cos(read, fresh)| 0.07
+    modes written: 40deg 0.76; modes read: 40deg 0.66
+    active by steps since the largest (0..5): [0.47, 0.76, 0.88, 0.85, 0.98, 1.0]; by step 1..9: [0.3799999952316284, 0.38999998569488525, 0.6700000166893005, 0.7200000286102295, 0.8199999928474426, 0.8899999856948853, 0.9300000071525574, 0.9599999785423279, 0.9700000286102295]
+[hh45] KL if removed 5.6754; lists 1.000; uses/list 9.00; |piece| 0.93
+    writes late gate 0.54, memory 0.30 (9:-0.57 10:-0.27 5:-0.24 0:+0.18); reads memory 0.31, detector 0.30, keep gate 0.17, hiding 0.17 (4:-0.65 5:-0.50 1:+0.44 10:+0.41); |cos(read, fresh)| 0.14
+    modes written: 40deg 0.49 80deg 0.18 130deg 0.17; modes read: 0deg 0.17 40deg 0.24 180deg 0.51
+    active by steps since the largest (0..5): [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]; by step 1..9: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+[hh23] KL if removed 5.5962; lists 0.999; uses/list 5.82; |piece| 0.74
+    writes memory 0.61, hiding 0.25 (12:-0.38 8:-0.36 11:-0.25 15:-0.24); reads hiding 0.65, memory 0.34 (7:+0.54 1:-0.52 12:-0.31 0:-0.30); |cos(read, fresh)| 0.00
+    modes written: 0deg 0.34 40deg 0.62; modes read: 40deg 0.69 80deg 0.17
+    active by steps since the largest (0..5): [0.36, 0.43, 0.93, 0.97, 0.7, 1.0]; by step 1..9: [0.029999999329447746, 0.18000000715255737, 0.47999998927116394, 0.7300000190734863, 0.800000011920929, 0.8600000143051147, 0.8999999761581421, 0.9200000166893005, 0.9300000071525574]
+[hh41] KL if removed 5.3979; lists 1.000; uses/list 6.45; |piece| 0.93
+    writes memory 0.75, late gate 0.12 (14:+0.42 15:+0.37 9:+0.28 12:-0.26); reads memory 0.46, hiding 0.33, keep gate 0.15 (13:-0.58 5:-0.45 7:-0.41 6:+0.38); |cos(read, fresh)| 0.00
+    modes written: 40deg 0.45 80deg 0.39; modes read: 40deg 0.24 80deg 0.50
+    active by steps since the largest (0..5): [0.36, 0.9, 0.93, 0.86, 0.71, 0.86]; by step 1..9: [0.029999999329447746, 0.47999998927116394, 0.7200000286102295, 0.8700000047683716, 0.8199999928474426, 0.8399999737739563, 0.8600000143051147, 0.8999999761581421, 0.9300000071525574]
+[hh7] KL if removed 5.2374; lists 1.000; uses/list 7.88; |piece| 1.09
+    writes late gate 0.48, memory 0.28, hiding 0.15 (9:+0.66 11:+0.32 7:+0.29 15:-0.26); reads detector 0.32, memory 0.28, hiding 0.23, store 0.14 (4:+0.64 2:+0.43 8:+0.42 11:-0.34); |cos(read, fresh)| 0.02
+    modes written: 0deg 0.54 40deg 0.38; modes read: 80deg 0.21 130deg 0.25 180deg 0.41
+    active by steps since the largest (0..5): [0.85, 0.78, 0.93, 0.93, 0.93, 0.94]; by step 1..9: [0.6899999976158142, 0.7300000190734863, 0.8600000143051147, 0.8999999761581421, 0.9300000071525574, 0.9399999976158142, 0.949999988079071, 0.949999988079071, 0.9300000071525574]
+[hh5] KL if removed 5.0885; lists 1.000; uses/list 6.95; |piece| 0.79
+    writes late gate 0.51, keep gate 0.24, memory 0.17 (9:-0.54 5:-0.36 8:-0.18 12:-0.17); reads late gate 0.45, memory 0.29, hiding 0.18 (9:-0.71 10:-0.36 7:+0.34 0:-0.32); |cos(read, fresh)| 0.03
+    modes written: 0deg 0.73; modes read: 0deg 0.49 180deg 0.27
+    active by steps since the largest (0..5): [0.47, 0.85, 0.89, 0.94, 0.94, 0.97]; by step 1..9: [0.0, 0.46000000834465027, 0.7900000214576721, 0.8899999856948853, 0.9399999976158142, 0.9599999785423279, 0.9599999785423279, 0.9700000286102295, 0.9700000286102295]
+[hh35] KL if removed 4.9519; lists 1.000; uses/list 9.00; |piece| 0.79
+    writes hiding 0.36, store 0.23, late gate 0.22, memory 0.15 (2:-0.37 9:-0.36 1:-0.30 6:-0.26); reads hiding 0.43, memory 0.30 (7:+0.45 6:-0.32 11:+0.31 4:-0.29); |cos(read, fresh)| 0.11
+    modes written: 0deg 0.21 40deg 0.71; modes read: 40deg 0.18 130deg 0.56
+    active by steps since the largest (0..5): [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]; by step 1..9: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+[hh46] KL if removed 4.4507; lists 1.000; uses/list 6.57; |piece| 0.83
+    writes late gate 0.54, memory 0.24, hiding 0.12 (9:-0.44 1:-0.20 13:+0.17 0:-0.16); reads memory 0.45, hiding 0.31, store 0.13 (3:-0.52 6:-0.51 12:-0.51 2:+0.50); |cos(read, fresh)| 0.00
+    modes written: 0deg 0.25 40deg 0.35 80deg 0.25; modes read: 80deg 0.25 130deg 0.50
+    active by steps since the largest (0..5): [0.31, 0.86, 0.94, 0.96, 0.98, 0.88]; by step 1..9: [0.0, 0.36000001430511475, 0.6600000262260437, 0.8100000023841858, 0.9300000071525574, 0.9300000071525574, 0.949999988079071, 0.9700000286102295, 0.9599999785423279]
+[hh31] KL if removed 3.8402; lists 1.000; uses/list 7.39; |piece| 0.96
+    writes memory 0.54, late gate 0.30, hiding 0.13 (9:+0.45 15:-0.38 10:-0.26 14:+0.25); reads memory 0.63, hiding 0.24 (11:-0.71 10:+0.44 1:-0.35 8:+0.33); |cos(read, fresh)| 0.13
+    modes written: 0deg 0.58; modes read: 40deg 0.21 130deg 0.33 180deg 0.38
+    active by steps since the largest (0..5): [0.52, 0.97, 0.96, 0.95, 0.95, 0.95]; by step 1..9: [0.4699999988079071, 0.6200000047683716, 0.75, 0.8500000238418579, 0.8999999761581421, 0.9399999976158142, 0.9399999976158142, 0.949999988079071, 0.9599999785423279]
+[hh22] KL if removed 3.4806; lists 1.000; uses/list 9.00; |piece| 0.50
+    writes late gate 0.59, memory 0.34 (9:-0.44 12:+0.21 15:+0.19 10:-0.12); reads memory 0.38, late gate 0.31, hiding 0.20 (9:+0.48 10:-0.34 3:+0.32 7:+0.27); |cos(read, fresh)| 0.32
+    modes written: 0deg 0.28 40deg 0.61; modes read: 0deg 0.22 40deg 0.29 130deg 0.20 180deg 0.16
+    active by steps since the largest (0..5): [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]; by step 1..9: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+[hh13] KL if removed 3.0763; lists 0.993; uses/list 6.40; |piece| 0.59
+    writes memory 0.48, late gate 0.31, hiding 0.17 (9:+0.36 14:+0.28 0:+0.26 6:+0.21); reads memory 0.61, hiding 0.13, store 0.13 (14:+0.57 2:+0.32 7:-0.24 9:-0.24); |cos(read, fresh)| 0.02
+    modes written: 0deg 0.30 40deg 0.43 130deg 0.23; modes read: 40deg 0.73
+    active by steps since the largest (0..5): [0.37, 0.8, 0.72, 0.96, 0.98, 0.99]; by step 1..9: [0.0, 0.4000000059604645, 0.5199999809265137, 0.75, 0.8799999952316284, 0.9399999976158142, 0.9599999785423279, 0.9800000190734863, 0.9800000190734863]
+[hh19] KL if removed 1.9348; lists 0.994; uses/list 5.93; |piece| 0.67
+    writes memory 0.75, hiding 0.20 (3:-0.50 13:+0.30 1:+0.26 15:+0.24); reads hiding 0.58, memory 0.33 (8:+0.53 7:-0.38 3:+0.28 12:-0.24); |cos(read, fresh)| 0.01
+    modes written: 0deg 0.25 40deg 0.32 130deg 0.34; modes read: 0deg 0.18 130deg 0.42 180deg 0.18
+    active by steps since the largest (0..5): [0.37, 0.61, 0.83, 0.82, 0.81, 0.96]; by step 1..9: [0.0, 0.23999999463558197, 0.5899999737739563, 0.699999988079071, 0.7799999713897705, 0.8700000047683716, 0.8999999761581421, 0.9100000262260437, 0.9300000071525574]
+[hh9] KL if removed 1.7877; lists 1.000; uses/list 7.45; |piece| 0.92
+    writes memory 0.48, keep gate 0.30, hiding 0.17 (5:+0.38 11:+0.29 3:-0.24 12:+0.19); reads memory 0.39, detector 0.25, hiding 0.19, late gate 0.16 (4:+0.66 0:+0.63 9:+0.52 8:-0.44); |cos(read, fresh)| 0.00
+    modes written: 0deg 0.79; modes read: 0deg 0.25 40deg 0.31 80deg 0.26
+    active by steps since the largest (0..5): [0.74, 0.86, 0.72, 0.92, 0.94, 0.95]; by step 1..9: [0.49000000953674316, 0.7200000286102295, 0.7099999785423279, 0.8500000238418579, 0.9100000262260437, 0.9300000071525574, 0.9399999976158142, 0.949999988079071, 0.949999988079071]
+[hh27] KL if removed 1.6848; lists 0.995; uses/list 4.57; |piece| 0.69
+    writes memory 0.80, hiding 0.10 (3:-0.59 15:+0.35 14:+0.34 1:+0.29); reads hiding 0.52, memory 0.38 (6:+0.37 1:-0.30 11:+0.29 10:-0.26); |cos(read, fresh)| 0.00
+    modes written: 0deg 0.21 40deg 0.40 130deg 0.35; modes read: 80deg 0.16 130deg 0.40 180deg 0.34
+    active by steps since the largest (0..5): [0.23, 0.88, 0.52, 0.58, 0.56, 0.39]; by step 1..9: [0.0, 0.41999998688697815, 0.5199999809265137, 0.5699999928474426, 0.6100000143051147, 0.5199999809265137, 0.6000000238418579, 0.6399999856948853, 0.6800000071525574]
+[hh2] KL if removed 1.4660; lists 1.000; uses/list 6.86; |piece| 0.89
+    writes memory 0.87 (3:+0.44 0:+0.42 15:-0.27 12:+0.24); reads memory 0.38, hiding 0.20, keep gate 0.14, detector 0.11, late gate 0.11 (10:+0.53 5:-0.39 4:+0.35 9:-0.35); |cos(read, fresh)| 0.00
+    modes written: 0deg 0.62 130deg 0.31; modes read: 40deg 0.34 80deg 0.33
+    active by steps since the largest (0..5): [0.71, 0.44, 0.94, 0.95, 0.94, 0.89]; by step 1..9: [0.46000000834465027, 0.4099999964237213, 0.6899999976158142, 0.8299999833106995, 0.8700000047683716, 0.8799999952316284, 0.8999999761581421, 0.9100000262260437, 0.9100000262260437]
+[hh10] KL if removed 1.4093; lists 0.998; uses/list 2.43; |piece| 0.56
+    writes late gate 1.00 (9:+0.60 5:+0.04 14:+0.01 0:+0.01); reads detector 0.51, memory 0.26, hiding 0.17 (4:+0.66 10:-0.28 8:-0.28 13:+0.24); |cos(read, fresh)| 0.21
+    modes written: 0deg 0.80; modes read: 0deg 0.42 40deg 0.38
+    active by steps since the largest (0..5): [0.74, 0.04, 0.02, 0.05, 0.11, 0.07]; by step 1..9: [0.49000000953674316, 0.3799999952316284, 0.30000001192092896, 0.23999999463558197, 0.20999999344348907, 0.18000000715255737, 0.1899999976158142, 0.20000000298023224, 0.23000000417232513]
+[hh17] KL if removed 1.3892; lists 0.997; uses/list 5.35; |piece| 0.60
+    writes memory 0.54, hiding 0.31 (1:+0.27 3:+0.26 15:+0.19 9:+0.16); reads memory 0.44, detector 0.30, hiding 0.17 (4:+0.59 10:-0.36 15:+0.31 11:+0.30); |cos(read, fresh)| 0.00
+    modes written: 0deg 0.56 40deg 0.19 130deg 0.20; modes read: 40deg 0.35 80deg 0.43
+    active by steps since the largest (0..5): [0.71, 0.29, 0.38, 0.67, 0.74, 0.79]; by step 1..9: [0.4699999988079071, 0.3799999952316284, 0.33000001311302185, 0.4099999964237213, 0.5699999928474426, 0.6600000262260437, 0.7699999809265137, 0.8500000238418579, 0.9100000262260437]
+[hh44] KL if removed 1.2438; lists 0.998; uses/list 6.03; |piece| 0.65
+    writes memory 0.60, keep gate 0.19, late gate 0.14 (11:-0.32 5:-0.29 13:+0.26 0:-0.25); reads memory 0.28, late gate 0.28, keep gate 0.27, hiding 0.16 (9:+0.52 5:+0.51 15:+0.40 1:+0.30); |cos(read, fresh)| 0.00
+    modes written: 0deg 0.27 80deg 0.16 130deg 0.45; modes read: 80deg 0.34 130deg 0.41
+    active by steps since the largest (0..5): [0.3, 0.89, 0.82, 0.79, 0.81, 0.75]; by step 1..9: [0.07000000029802322, 0.4699999988079071, 0.6200000047683716, 0.7200000286102295, 0.7699999809265137, 0.7900000214576721, 0.8199999928474426, 0.8700000047683716, 0.8999999761581421]
+[hh47] KL if removed 1.0222; lists 0.998; uses/list 6.17; |piece| 0.46
+    writes hiding 0.48, memory 0.38 (1:-0.24 8:-0.22 15:+0.19 13:-0.15); reads memory 0.48, hiding 0.43 (7:+0.48 14:+0.41 6:-0.34 5:-0.29); |cos(read, fresh)| 0.00
+    modes written: 0deg 0.17 40deg 0.81; modes read: 40deg 0.52 80deg 0.39
+    active by steps since the largest (0..5): [0.4, 0.64, 0.91, 0.9, 0.92, 0.78]; by step 1..9: [0.009999999776482582, 0.2800000011920929, 0.6200000047683716, 0.8299999833106995, 0.8799999952316284, 0.8600000143051147, 0.8600000143051147, 0.8899999856948853, 0.9300000071525574]
+[hh30] KL if removed 0.7925; lists 0.998; uses/list 5.98; |piece| 0.83
+    writes late gate 0.57, memory 0.34 (9:+0.42 15:-0.23 13:-0.12 14:+0.11); reads memory 0.51, late gate 0.14, keep gate 0.14, store 0.13 (14:+0.79 9:-0.57 5:+0.56 2:-0.53); |cos(read, fresh)| 0.01
+    modes written: 40deg 0.27 80deg 0.40 130deg 0.19; modes read: 0deg 0.16 40deg 0.56 130deg 0.18
+    active by steps since the largest (0..5): [0.34, 0.57, 0.91, 0.92, 0.88, 0.94]; by step 1..9: [0.009999999776482582, 0.20000000298023224, 0.5400000214576721, 0.7300000190734863, 0.8500000238418579, 0.8899999856948853, 0.9100000262260437, 0.9200000166893005, 0.9300000071525574]
+[hh3] KL if removed 0.5023; lists 0.993; uses/list 5.27; |piece| 0.35
+    writes memory 0.65, hiding 0.22 (12:+0.20 13:-0.15 6:-0.12 7:-0.12); reads memory 0.40, hiding 0.24, late gate 0.14, store 0.13 (13:+0.39 9:+0.34 14:+0.33 2:-0.32); |cos(read, fresh)| 0.01
+    modes written: 0deg 0.23 40deg 0.35 130deg 0.22; modes read: 40deg 0.69 180deg 0.19
+    active by steps since the largest (0..5): [0.25, 0.33, 0.93, 0.97, 0.85, 0.87]; by step 1..9: [0.0, 0.019999999552965164, 0.4399999976158142, 0.6200000047683716, 0.7300000190734863, 0.8100000023841858, 0.8600000143051147, 0.8799999952316284, 0.8999999761581421]
+[hh24] KL if removed 0.1491; lists 0.995; uses/list 4.94; |piece| 0.60
+    writes memory 0.77, hiding 0.15 (15:+0.33 10:+0.26 0:+0.17 14:+0.15); reads memory 0.29, late gate 0.26, hiding 0.21, detector 0.19 (9:-0.54 4:+0.47 8:-0.38 10:-0.37); |cos(read, fresh)| 0.00
+    modes written: 0deg 0.66 80deg 0.31; modes read: 0deg 0.26 40deg 0.17 80deg 0.19 130deg 0.37
+    active by steps since the largest (0..5): [0.65, 0.49, 0.41, 0.53, 0.49, 0.4]; by step 1..9: [0.46000000834465027, 0.44999998807907104, 0.4300000071525574, 0.5199999809265137, 0.550000011920929, 0.5099999904632568, 0.6000000238418579, 0.6899999976158142, 0.7200000286102295]
+[hh15] KL if removed 0.0044; lists 0.192; uses/list 0.21; |piece| 0.19
+    writes memory 0.94 (15:+0.20 12:+0.11 3:+0.10 0:+0.09); reads memory 0.42, hiding 0.30, late gate 0.21 (9:+0.29 11:+0.27 1:+0.24 7:-0.23); |cos(read, fresh)| 0.01
+    modes written: 0deg 0.38 80deg 0.44; modes read: 40deg 0.22 80deg 0.43 130deg 0.25
+    active by steps since the largest (0..5): [0.01, 0.02, 0.02, 0.02, 0.01, 0.05]; by step 1..9: [0.0, 0.0, 0.0, 0.009999999776482582, 0.0, 0.0, 0.019999999552965164, 0.029999999329447746, 0.14000000059604645]
+[hh42] KL if removed 0.0037; lists 0.000; uses/list 0.00; |piece| 0.03
+    writes memory 0.82, hiding 0.15 (15:+0.01 10:+0.01 12:-0.01 3:-0.01); reads memory 0.81, hiding 0.14 (11:+0.61 10:-0.40 12:-0.28 8:-0.23); |cos(read, fresh)| 0.01
+    modes written: 40deg 0.43 80deg 0.23 130deg 0.31; modes read: 80deg 0.27 130deg 0.17 180deg 0.49
+    active by steps since the largest (0..5): [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]; by step 1..9: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+[hh32] KL if removed 0.0036; lists 0.000; uses/list 0.00; |piece| 0.06
+    writes memory 0.46, late gate 0.41, hiding 0.13 (9:+0.04 0:+0.02 15:+0.02 12:+0.02); reads late gate 0.62, memory 0.30 (9:-0.75 14:-0.33 11:-0.23 12:+0.22); |cos(read, fresh)| 0.00
+    modes written: 0deg 0.58 40deg 0.19 130deg 0.20; modes read: 40deg 0.28 80deg 0.52
+    active by steps since the largest (0..5): [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]; by step 1..9: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+[hh37] KL if removed 0.0034; lists 0.007; uses/list 0.01; |piece| 0.10
+    writes memory 0.89 (0:-0.05 3:+0.04 10:+0.04 14:-0.03); reads late gate 0.49, hiding 0.36 (9:+0.75 7:+0.50 6:-0.35 5:-0.28); |cos(read, fresh)| 0.01
+    modes written: 0deg 0.37 40deg 0.56; modes read: 180deg 0.67
+    active by steps since the largest (0..5): [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]; by step 1..9: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+[hh43] KL if removed 0.0034; lists 0.001; uses/list 0.00; |piece| 0.12
+    writes memory 0.91 (0:-0.09 14:-0.04 3:-0.03 1:-0.02); reads late gate 0.86, memory 0.11 (9:+1.06 0:+0.20 14:-0.19 13:+0.17); |cos(read, fresh)| 0.00
+    modes written: 0deg 0.20 40deg 0.31 130deg 0.37; modes read: 40deg 0.18 80deg 0.31 130deg 0.32
+    active by steps since the largest (0..5): [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]; by step 1..9: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+[hh0] KL if removed 0.0032; lists 0.000; uses/list 0.00; |piece| 0.07
+    writes memory 0.65, late gate 0.28 (0:-0.04 9:-0.04 3:+0.03 12:+0.02); reads late gate 0.86, memory 0.10 (9:+0.95 14:+0.20 11:+0.14 5:-0.12); |cos(read, fresh)| 0.00
+    modes written: 0deg 0.19 40deg 0.41 130deg 0.32; modes read: 40deg 0.28 80deg 0.56
+    active by steps since the largest (0..5): [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]; by step 1..9: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+== oh: 20 pieces ever active of 20 ==
+[oh13] KL if removed 11.5664; lists 0.995; uses/list 1.00; |piece| 3.48
+    positions [0.35, -0.61, -0.73, -0.49, -0.24, -0.08, 0.58, 0.26, 0.33, 0.76] (|cos with all-ones| 0.03); reads hiding 0.47, memory 0.45 (7:-1.32 14:-0.83 15:-0.81 0:+0.67)
+[oh9] KL if removed 9.6466; lists 1.000; uses/list 1.00; |piece| 2.91
+    positions [-0.11, -0.01, -0.91, -0.44, 0.35, 0.47, 0.48, 0.22, 0.08, -0.23] (|cos with all-ones| 0.03); reads memory 0.56, hiding 0.38 (3:+1.16 13:+0.95 8:+0.92 1:+0.73)
+[oh8] KL if removed 2.8412; lists 1.000; uses/list 1.00; |piece| 4.84
+    positions [0.62, -0.41, -0.58, 0.29, 0.31, 1.02, 0.19, -0.59, 0.36, -0.76] (|cos with all-ones| 0.08); reads memory 0.72, hiding 0.18 (14:-1.69 0:+1.04 8:+0.84 13:+0.83)
+[oh6] KL if removed 2.7750; lists 1.000; uses/list 1.00; |piece| 3.48
+    positions [1.13, -0.35, 0.2, -0.45, 0.2, -0.2, 0.42, 0.05, 0.1, -0.54] (|cos with all-ones| 0.12); reads memory 0.53, detector 0.25, hiding 0.15 (4:+1.18 14:-1.10 1:+0.86 0:+0.77)
+[oh4] KL if removed 2.7746; lists 1.000; uses/list 1.00; |piece| 4.01
+    positions [-0.31, -0.51, 1.09, 0.57, 0.28, -0.29, -0.46, -0.74, -0.11, 0.38] (|cos with all-ones| 0.02); reads hiding 0.52, memory 0.37 (7:+1.16 1:-1.08 10:-0.84 0:+0.64)
+[oh19] KL if removed 2.7120; lists 1.000; uses/list 1.00; |piece| 3.67
+    positions [0.49, -0.54, -0.67, -0.26, -0.75, -0.14, 0.64, 0.04, -0.03, 0.44] (|cos with all-ones| 0.16); reads memory 0.30, hiding 0.26, late gate 0.23, detector 0.17 (9:-1.19 4:-1.03 0:+0.99 7:-0.80)
+[oh7] KL if removed 2.1407; lists 1.000; uses/list 1.00; |piece| 4.09
+    positions [-0.2, -0.94, -0.8, 0.38, 0.4, 0.48, 0.72, 0.14, -0.48, -0.92] (|cos with all-ones| 0.20); reads hiding 0.54, memory 0.24 (6:-1.03 8:+0.91 11:-0.75 7:+0.73)
+[oh12] KL if removed 1.9428; lists 1.000; uses/list 1.00; |piece| 4.42
+    positions [0.6, 0.55, -0.06, -0.53, -0.66, -0.57, -0.56, 0.76, 0.78, 0.05] (|cos with all-ones| 0.06); reads hiding 0.65, memory 0.21, keep gate 0.14 (6:+1.50 7:-1.12 5:+0.90 12:+0.78)
+[oh15] KL if removed 1.8342; lists 1.000; uses/list 1.00; |piece| 4.88
+    positions [0.1, 0.62, 0.66, -0.11, -0.99, -0.1, -0.17, 0.62, -0.64, -1.27] (|cos with all-ones| 0.20); reads hiding 0.48, memory 0.32, detector 0.16 (1:+1.16 8:-0.94 4:+0.94 10:-0.78)
+[oh5] KL if removed 1.5353; lists 1.000; uses/list 1.00; |piece| 4.01
+    positions [-0.15, 0.28, -0.08, -0.49, -0.58, -0.53, 0.83, 0.17, 1.21, -0.42] (|cos with all-ones| 0.04); reads hiding 0.49, memory 0.44 (6:+1.04 7:-0.87 13:-0.83 3:+0.81)
+[oh2] KL if removed 1.4941; lists 0.994; uses/list 0.99; |piece| 3.73
+    positions [0.24, -0.57, -0.29, -0.67, 0.2, 0.69, 0.28, 0.17, -0.3, 0.43] (|cos with all-ones| 0.04); reads hiding 0.33, memory 0.28, detector 0.19, late gate 0.16 (4:-1.19 9:+1.10 8:+0.85 6:-0.83)
+[oh11] KL if removed 1.1986; lists 1.000; uses/list 1.00; |piece| 3.52
+    positions [-0.17, 0.54, 0.58, 0.62, 0.78, -0.87, -0.73, -0.48, -0.37, -0.41] (|cos with all-ones| 0.08); reads hiding 0.54, memory 0.40 (7:+1.02 8:-0.73 12:+0.68 10:-0.59)
+[oh18] KL if removed 1.0969; lists 0.978; uses/list 0.98; |piece| 4.19
+    positions [-1.02, -0.52, -0.51, 0.61, 0.84, 0.39, -0.26, -0.84, 0.58, -0.11] (|cos with all-ones| 0.13); reads hiding 0.71, memory 0.24 (1:-1.35 8:+1.07 0:+0.60 3:-0.46)
+[oh16] KL if removed 0.8415; lists 1.000; uses/list 1.00; |piece| 3.47
+    positions [0.43, 0.23, -0.22, -0.51, -0.78, -0.02, -0.36, 0.03, 0.38, 0.68] (|cos with all-ones| 0.03); reads hiding 0.44, memory 0.34 (7:-1.06 6:+0.83 15:+0.82 4:-0.78)
+[oh10] KL if removed 0.5528; lists 1.000; uses/list 1.00; |piece| 4.16
+    positions [0.66, 0.93, 0.53, -0.03, 0.99, -0.37, -0.37, -0.56, -0.85, -0.33] (|cos with all-ones| 0.09); reads hiding 0.47, memory 0.39 (8:-0.92 7:+0.88 11:-0.82 2:-0.61)
+[oh14] KL if removed 0.3977; lists 1.000; uses/list 1.00; |piece| 4.36
+    positions [-1.0, -0.86, -0.38, -0.34, 0.24, 0.62, 0.25, 0.84, 0.93, 0.12] (|cos with all-ones| 0.07); reads memory 0.46, hiding 0.42 (8:+1.13 14:+0.98 0:-0.82 4:+0.65)
+[oh3] KL if removed 0.3505; lists 0.944; uses/list 0.94; |piece| 3.34
+    positions [0.44, 0.5, 0.44, -0.97, -0.4, -0.77, 0.18, -0.38, 0.36, -0.38] (|cos with all-ones| 0.19); reads memory 0.52, hiding 0.35 (15:+1.01 6:+0.70 7:-0.63 14:-0.56)
+[oh17] KL if removed 0.3205; lists 1.000; uses/list 1.00; |piece| 3.82
+    positions [-0.75, -0.06, 0.7, 0.7, 0.62, 0.89, 0.59, -0.74, -0.88, 0.14] (|cos with all-ones| 0.18); reads hiding 0.63, memory 0.30 (6:-0.93 7:+0.87 1:-0.63 12:-0.56)
+[oh1] KL if removed 0.2964; lists 0.884; uses/list 0.88; |piece| 3.03
+    positions [0.63, 0.6, -0.22, -0.4, -0.91, -0.25, 0.6, 0.61, -0.52, 0.62] (|cos with all-ones| 0.13); reads hiding 0.63, keep gate 0.17, memory 0.16 (1:+1.11 5:-0.68 8:-0.52 7:-0.51)
+[oh0] KL if removed 0.1906; lists 0.934; uses/list 0.93; |piece| 4.88
+    positions [0.6, 0.77, 0.47, 1.34, -0.97, -0.64, -0.47, -0.88, 0.06, -0.4] (|cos with all-ones| 0.02); reads hiding 0.50, memory 0.48 (10:-1.10 8:-0.98 6:+0.86 11:+0.78)
+
+compare with seed1_b1e-3 ({'name': 'seed1_b1e-3', 'beta': 0.001, 'p': 1.0, 'p_anneal': None, 'steps': 20000, 'batch': 2048, 'lr': 0.003, 'C': '8,48,20', 'gauge': None, 'seed': 1, 'faith': 100.0, 'n_eval': 1048576}):
+  hi: live pieces 8 vs 8; matched |cos| sorted: [1.0, 0.99, 0.99, 0.99, 0.98, 0.93, 0.92, 0.92]
+  hh: live pieces 45 vs 46; matched |cos| sorted: [0.67, 0.63, 0.62, 0.62, 0.56, 0.54, 0.52, 0.51, 0.5, 0.49, 0.49, 0.48, 0.45, 0.44, 0.43, 0.43, 0.43, 0.43, 0.42, 0.4, 0.39, 0.39, 0.39, 0.38, 0.37, 0.37, 0.36, 0.33, 0.32, 0.31, 0.31, 0.31, 0.31, 0.3, 0.3, 0.29, 0.27, 0.27, 0.26, 0.22, 0.2, 0.19, 0.19, 0.18, 0.11]
+  oh: live pieces 20 vs 20; matched |cos| sorted: [0.75, 0.69, 0.67, 0.65, 0.63, 0.62, 0.59, 0.59, 0.55, 0.55, 0.51, 0.51, 0.47, 0.46, 0.46, 0.41, 0.36, 0.26, 0.18, 0.11]
+
+compare with gauge1_b1e-3 ({'name': 'gauge1_b1e-3', 'beta': 0.001, 'p': 1.0, 'p_anneal': None, 'steps': 20000, 'batch': 2048, 'lr': 0.003, 'C': '8,48,20', 'gauge': 1, 'seed': 0, 'faith': 100.0, 'n_eval': 1048576}):
+  hi: live pieces 8 vs 8; matched |cos| sorted: [1.0, 1.0, 1.0, 0.97, 0.96, 0.92, 0.9, 0.83]
+  hh: live pieces 45 vs 45; matched |cos| sorted: [0.98, 0.97, 0.94, 0.94, 0.93, 0.92, 0.92, 0.92, 0.92, 0.9, 0.9, 0.9, 0.88, 0.87, 0.87, 0.86, 0.85, 0.84, 0.84, 0.84, 0.84, 0.83, 0.82, 0.81, 0.75, 0.74, 0.72, 0.72, 0.71, 0.7, 0.6, 0.59, 0.55, 0.5, 0.5, 0.48, 0.48, 0.47, 0.45, 0.41, 0.36, 0.32, 0.32, 0.21, 0.11]
+  oh: live pieces 20 vs 20; matched |cos| sorted: [0.85, 0.78, 0.77, 0.77, 0.76, 0.76, 0.69, 0.69, 0.68, 0.67, 0.65, 0.63, 0.55, 0.5, 0.49, 0.48, 0.42, 0.37, 0.29, 0.05]
+
+compare with main_b3e-3 ({'name': 'main_b3e-3', 'beta': 0.003, 'p': 1.0, 'p_anneal': None, 'steps': 20000, 'batch': 2048, 'lr': 0.003, 'C': '8,48,20', 'gauge': None, 'seed': 0, 'faith': 100.0, 'n_eval': 1048576}):
+  hi: live pieces 8 vs 6; matched |cos| sorted: [1.0, 1.0, 0.99, 0.99, 0.99, 0.96]
+  hh: live pieces 45 vs 42; matched |cos| sorted: [0.92, 0.92, 0.92, 0.9, 0.9, 0.86, 0.86, 0.84, 0.83, 0.82, 0.82, 0.81, 0.81, 0.78, 0.77, 0.73, 0.73, 0.72, 0.72, 0.7, 0.69, 0.68, 0.66, 0.65, 0.58, 0.55, 0.54, 0.54, 0.51, 0.49, 0.48, 0.48, 0.47, 0.46, 0.4, 0.4, 0.37, 0.37, 0.22, 0.22, 0.17, 0.11]
+  oh: live pieces 20 vs 20; matched |cos| sorted: [0.98, 0.98, 0.97, 0.97, 0.96, 0.96, 0.96, 0.95, 0.94, 0.94, 0.93, 0.92, 0.9, 0.89, 0.89, 0.88, 0.87, 0.87, 0.85, 0.73]

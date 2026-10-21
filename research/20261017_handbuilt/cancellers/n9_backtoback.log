@@ -1,0 +1,5 @@
+t=3: neuron 9 at t+1 after a new largest: next not a new largest 2.10 (on 1.00); next also a new largest 0.96 (on 0.98)
+all steps: next not a new largest: mean 2.13, on 1.00;  next also a new largest: mean 1.00, on 0.97
+weights from neuron 9 to cancellers 1, 6, 7, 8: [-0.69 -0.64  0.   -0.07]
+weights from neuron 9 to memory 0, 3, 10-15:    [-1.42  0.21  0.14  0.68  0.81  0.04 -0.65 -0.2 ]
+weights from neuron 9 to gate 5 and to itself:  [ 0.3  -0.55]

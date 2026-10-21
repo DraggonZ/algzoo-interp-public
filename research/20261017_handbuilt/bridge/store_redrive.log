@@ -1,0 +1,4 @@
+store / largest so far: k = 15.88
+as trained                         accuracy 0.954 | r2: leak with partial   -7.4, without   -3.9 | r3: leak with partial   -9.3, without   -5.6 | r4: leak with partial   -8.9, without   -4.9
+hiding neurons get k x largest     accuracy 0.697 | r2: leak with partial   -9.5, without   -8.2 | r3: leak with partial  -13.3, without  -10.6 | r4: leak with partial  -13.2, without  -10.0
+memory gets k x largest (control)  accuracy 0.642 | r2: leak with partial   -7.1, without   -0.5 | r3: leak with partial   -9.1, without   -3.0 | r4: leak with partial   -8.2, without   -2.3

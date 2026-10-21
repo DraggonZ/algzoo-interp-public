@@ -1,0 +1,4 @@
+neuron 2: rms of recursion 1.475 against activity rms 19.652; error vs previous jump slope +0.38
+   other sources' rms contribution: 8:2.36, 6:1.55, 1:1.49, 0:0.89, 12:0.70, 7:0.44
+neuron 4: rms of recursion 0.320 against activity rms 4.251; error vs previous jump slope +0.16
+   other sources' rms contribution: 6:1.41, 8:1.24, 12:0.75, 7:0.57, 1:0.52, 14:0.45

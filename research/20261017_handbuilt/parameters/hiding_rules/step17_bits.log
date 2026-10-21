@@ -1,0 +1,43 @@
+
+richest + record quantities (+4 hiding feedback terms; 33 constants per neuron)
+  neuron 1: rms teacher-forced 0.162, recursive 0.266 (6.95x the account); replaced alone: accuracy 0.9279, KL 0.140
+  neuron 6: rms teacher-forced 0.219, recursive 0.234 (8.41x the account); replaced alone: accuracy 0.9326, KL 0.089
+  neuron 7: rms teacher-forced 0.067, recursive 0.106 (5.93x the account); replaced alone: accuracy 0.9423, KL 0.093
+  neuron 8: rms teacher-forced 0.204, recursive 0.320 (6.67x the account); replaced alone: accuracy 0.9271, KL 0.267
+  all four replaced by the group rule: accuracy 0.9349, KL 0.194
+  weights for 1: cosine 0.994, relative distance 0.11
+  weights for 6: cosine 0.966, relative distance 0.29
+  weights for 7: cosine 0.999, relative distance 0.04
+  weights for 8: cosine 0.997, relative distance 0.09
+  rows [1] from the rule: accuracy -0.65 points, KL 0.030
+  rows [6] from the rule: accuracy -0.57 points, KL 0.026
+  rows [7] from the rule: accuracy -0.14 points, KL 0.008
+  rows [8] from the rule: accuracy -1.68 points, KL 0.098
+  rows [1, 6, 7, 8] from the rule: accuracy -5.76 points, KL 0.304
+lookup table: 2369 bits; with the 64 hiding weights known exactly: 1900 (upper bound on saving 469)
+
+rich rule: 140 constants (+15 shared, +4 spreads); four rows from it: KL 0.102
+  bits left given the rule's weights 1997; saved 372 of at most 469
+  row spreads (rms gap from ARC): 1: 0.026, 6: 0.027, 7: 0.011, 8: 0.029
+  constants rounded to  2 mantissa bits: joint KL 118.846 (1170.64x)
+  constants rounded to  3 mantissa bits: joint KL 20.450 (201.43x)
+  constants rounded to  4 mantissa bits: joint KL 13.192 (129.95x)
+  constants rounded to  5 mantissa bits: joint KL 13.610 (134.06x)
+  constants rounded to  6 mantissa bits: joint KL 2.748 (27.07x)
+  constants rounded to  8 mantissa bits: joint KL 0.104 (1.03x)
+  constants rounded to 10 mantissa bits: joint KL 0.116 (1.14x)
+  mantissa needed: 8 bits; stating the rule: (140 + 15 + 4) x (8 + 4) = 1908 bits
+  NET: saved 372 - cost 1908 = -1536 bits
+
+lean rule: 60 constants (+5 shared, +4 spreads); four rows from it: KL 0.404
+  bits left given the rule's weights 2015; saved 354 of at most 469
+  row spreads (rms gap from ARC): 1: 0.057, 6: 0.012, 7: 0.017, 8: 0.049
+  constants rounded to  2 mantissa bits: joint KL 84.678 (209.81x)
+  constants rounded to  3 mantissa bits: joint KL 38.027 (94.22x)
+  constants rounded to  4 mantissa bits: joint KL 16.005 (39.65x)
+  constants rounded to  5 mantissa bits: joint KL 4.353 (10.79x)
+  constants rounded to  6 mantissa bits: joint KL 1.329 (3.29x)
+  constants rounded to  8 mantissa bits: joint KL 0.497 (1.23x)
+  constants rounded to 10 mantissa bits: joint KL 0.380 (0.94x)
+  mantissa needed: 10 bits; stating the rule: (60 + 5 + 4) x (10 + 4) = 966 bits
+  NET: saved 354 - cost 966 = -612 bits

@@ -1,0 +1,2 @@
+rule size: 1500 numbers (45 situations)
+cancelling neurons by median exact weights: mistakes reproduced all 52.5%, coin flips 48.6%, middle 51.8%, clear 56.9%; agreement 70.98%, accuracy 70.07%

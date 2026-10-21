@@ -1,0 +1,12 @@
+example: accuracy 0.9531; positive newcomers, right call at arrival by newcomer minus second: [-0.3,-0.1) 0.995, [-0.1,+0.0) 0.790, [+0.0,+0.1) 0.920, [+0.1,+0.3) 0.987, [+0.3,+3.0) 0.993
+   mistakes: decided before step 5 0.19; wrong right after the deciding arrival 0.47; lost later at a near-tie arrival 0.15; lost later without one 0.19
+2: accuracy 0.9486; positive newcomers, right call at arrival by newcomer minus second: [-0.3,-0.1) 0.999, [-0.1,+0.0) 0.873, [+0.0,+0.1) 0.877, [+0.1,+0.3) 0.989, [+0.3,+3.0) 0.996
+   mistakes: decided before step 5 0.20; wrong right after the deciding arrival 0.52; lost later at a near-tie arrival 0.11; lost later without one 0.17
+3: accuracy 0.9326; positive newcomers, right call at arrival by newcomer minus second: [-0.3,-0.1) 0.993, [-0.1,+0.0) 0.786, [+0.0,+0.1) 0.849, [+0.1,+0.3) 0.962, [+0.3,+3.0) 0.970
+   mistakes: decided before step 5 0.18; wrong right after the deciding arrival 0.57; lost later at a near-tie arrival 0.10; lost later without one 0.15
+0: accuracy 0.9105; positive newcomers, right call at arrival by newcomer minus second: [-0.3,-0.1) 0.984, [-0.1,+0.0) 0.795, [+0.0,+0.1) 0.746, [+0.1,+0.3) 0.887, [+0.3,+3.0) 0.883
+   mistakes: decided before step 5 0.18; wrong right after the deciding arrival 0.58; lost later at a near-tie arrival 0.09; lost later without one 0.15
+1: accuracy 0.8810; positive newcomers, right call at arrival by newcomer minus second: [-0.3,-0.1) 0.991, [-0.1,+0.0) 0.781, [+0.0,+0.1) 0.828, [+0.1,+0.3) 0.953, [+0.3,+3.0) 0.956
+   mistakes: decided before step 5 0.18; wrong right after the deciding arrival 0.64; lost later at a near-tie arrival 0.07; lost later without one 0.11
+4: accuracy 0.8903; positive newcomers, right call at arrival by newcomer minus second: [-0.3,-0.1) 0.990, [-0.1,+0.0) 0.768, [+0.0,+0.1) 0.834, [+0.1,+0.3) 0.948, [+0.3,+3.0) 0.916
+   mistakes: decided before step 5 0.18; wrong right after the deciding arrival 0.59; lost later at a near-tie arrival 0.08; lost later without one 0.14

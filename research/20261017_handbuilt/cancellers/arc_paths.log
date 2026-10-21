@@ -1,0 +1,16 @@
+--- position 3
+new largest: via neuron 4 at p    [ 1. -1.  0. -3. -2. -0.  1.  1. -1.  4.]
+new largest: via neuron 5 at p+1  [-3. -5.  2. -4.  9.  1. -1.  1.  1. -1.]
+new largest: via 4 and 5 together [-2. -6.  2. -7.  7.  1. -0.  2.  1.  3.]
+new largest: cancellers at p+1    [ 59.   2. -12. -44. -13.   1.  -9.  -6. -10.  31.]
+kept number: via neuron 4 at p    [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+kept number: via neuron 5 at p+1  [-25. -19.  -2.  29.   4.   2.   7.   4.   8.  -8.]
+kept number: cancellers at p+1    [-35. -28.  -4.  19.   3.  -0.  -2.   0.   6.  40.]
+--- position 5
+new largest: via neuron 4 at p    [ 2.  4.  3. -0. -1. -5. -5. -1.  0.  2.]
+new largest: via neuron 5 at p+1  [-33. -10.  -6.  -2.   9.  10.  13.   7.   5.   6.]
+new largest: via 4 and 5 together [-31.  -6.  -4.  -2.   8.   5.   9.   7.   5.   9.]
+new largest: cancellers at p+1    [ 67.  81.  42. -18. -35. -66. -28. -21. -32.   9.]
+kept number: via neuron 4 at p    [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+kept number: via neuron 5 at p+1  [ -4. -49. -28. -26.   8.  55.  23.   9.  18.  -9.]
+kept number: cancellers at p+1    [-124.  -92.  -18.   56.   75.   33.   13.   25.   34.   -3.]

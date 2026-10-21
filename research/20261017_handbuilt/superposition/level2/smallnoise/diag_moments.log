@@ -1,0 +1,18 @@
+net 114: truth 0.9082
+  Jacobian at the mean (frozen)  bias -0.0281  mean abs error 0.0358
+  axis, 3 nodes                  bias -0.0009  mean abs error 0.0100
+  axis, 6 nodes                  bias -0.0019  mean abs error 0.0101
+  cubature 16 points             bias +0.0001  mean abs error 0.0069
+  cubature 64 points             bias -0.0000  mean abs error 0.0052
+net 207: truth 0.9297
+  Jacobian at the mean (frozen)  bias -0.0202  mean abs error 0.0295
+  axis, 3 nodes                  bias -0.0032  mean abs error 0.0106
+  axis, 6 nodes                  bias -0.0052  mean abs error 0.0108
+  cubature 16 points             bias -0.0009  mean abs error 0.0059
+  cubature 64 points             bias -0.0011  mean abs error 0.0051
+net ARC: truth 0.9683
+  Jacobian at the mean (frozen)  bias -0.0020  mean abs error 0.0060
+  axis, 3 nodes                  bias -0.0009  mean abs error 0.0045
+  axis, 6 nodes                  bias -0.0007  mean abs error 0.0041
+  cubature 16 points             bias +0.0004  mean abs error 0.0018
+  cubature 64 points             bias +0.0003  mean abs error 0.0014

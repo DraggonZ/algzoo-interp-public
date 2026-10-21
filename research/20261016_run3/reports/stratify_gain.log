@@ -1,0 +1,9 @@
+ARC example : accuracy 0.9531; efficiency gain from stratifying by near-tie gap and sign of the second: 1.9x
+seed 0      : accuracy 0.9100; efficiency gain from stratifying by near-tie gap and sign of the second: 1.4x
+seed 1      : accuracy 0.8801; efficiency gain from stratifying by near-tie gap and sign of the second: 1.2x
+seed 2      : accuracy 0.9485; efficiency gain from stratifying by near-tie gap and sign of the second: 1.7x
+seed 3      : accuracy 0.9320; efficiency gain from stratifying by near-tie gap and sign of the second: 1.7x
+seed 4      : accuracy 0.8894; efficiency gain from stratifying by near-tie gap and sign of the second: 1.3x
+mult0.005_1 : accuracy 0.8508; efficiency gain from stratifying by near-tie gap and sign of the second: 1.1x
+mult0.01_3  : accuracy 0.7564; efficiency gain from stratifying by near-tie gap and sign of the second: 1.0x
+mult0.02_8  : accuracy 0.6143; efficiency gain from stratifying by near-tie gap and sign of the second: 1.0x

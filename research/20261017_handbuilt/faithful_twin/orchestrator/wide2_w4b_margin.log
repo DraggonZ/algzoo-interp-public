@@ -1,0 +1,27 @@
+== candidate /data/output/src/algzoo/research/20261017_handbuilt/faithful_twin/candidates/w4b_margin.py: 21 neurons; version 2
+  hiding test: silencing the hiding slots one step after the largest -> names the largest 11.1% (ARC 81.3%, bar 40.7%): fail
+  PASS   1 store (2) follows the largest so far: correlation >= 0.9
+          0.995
+  PASS   2 new-largest (4) on at records >= 0.9, elsewhere <= 0.05
+          1.000 / 0.000
+  PASS   3 new-largest (4) size follows the amount beaten: correlation >= 0.75
+          0.835
+  PASS   4 keep gate cuts against the second-largest: cut = a x largest + b x second, b >= 0.5, |a| <= 0.2
+          a 0.00, b 0.75
+  PASS   5 late gate (9) on one step after a record >= 0.9, elsewhere <= 0.05
+          1.000 / 0.000
+  PASS   6 late gate's push two steps after a record: on 1 and 6 >= 0.04 sd and >= 3x that on 7 and 8
+          1:0.51 6:0.14 7:0.00 8:0.00
+  FAIL   7 hiding references are ARC's mixes (previous largest weight per neuron within 0.35 of ARC's) and switched off by records + hiding test
+          off 1.00 1.00 1.00 1.00; on 0.96 0.94 1.00 0.83; R2 0.70 0.74 0.97 0.80 | 1 step: 1:-0.00 6:1.00 7:-0.00 8:1.00 | 2 step: 1:0.95 6:0.23 7:-0.00 8:1.00
+  FAIL   8 hiding rebuilt each step: share of a 10% nudge at step 5 left at step 6, activity <= 0.3 and readout view <= 0.8 + hiding test
+          activity 0.185, readout view 0.000
+  FAIL   9 memory rotates (basis-free): >= 2 turning pairs, modulus >= 0.7, memory participation >= 0.5
+          0 pairs (45 deg |1.00| part -0.00)
+  FAIL  10 memory 0, 11, 10 switch off at ages 2, 5, 6 (off >= 0.85 there, <= 0.30 elsewhere) on a rotating memory (job 9)
+          0@2: 1.00/0.18  11@5: 1.00/0.13  10@6: 1.00/0.13; rotation fail
+  FAIL  11 neuron 3 reads the gap from hiding and it is used: input replaced by the gap fit within 5 points, by another list's gap >= 10 points worse; gap in its activity
+          intact 92.4%, gap fit 92.4%, other list's gap 92.4%, gap in activity fail
+  PASS  12 blindness: rows outside the gates read hiding at right angles (median ratio <= 0.1)
+          median 0.000
+WIDE2 mech=7/12 (old 9) passes=1,2,3,4,5,6,12 transplant_mean=nan accuracy=nan working=nan neurons=21

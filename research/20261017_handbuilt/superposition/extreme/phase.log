@@ -1,0 +1,4 @@
+11,757,844 clear-gap lists
+second with no positive number before it     wrong % by age: 1:0.03 2:0.01 3:0.01 4:0.00 5:0.01 6:0.00 7:0.00 8:0.08
+second with a positive number before it      wrong % by age: 1:0.02 2:0.02 3:0.03 4:0.03 5:0.02 6:0.04 7:0.14 8:0.08
+second at position 0                         wrong % by age: 1:0.01 2:0.03 3:0.00 4:0.00 5:0.00 6:0.06 7:1.18 8:0.02 9:4.08

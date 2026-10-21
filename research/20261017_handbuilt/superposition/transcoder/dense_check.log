@@ -1,0 +1,4 @@
+width 16 k 12, 6000 steps: unexplained variance 0.999%; random-list accuracy spliced every step 36.9%, last step 52.7%
+width 16 k 16, 6000 steps: unexplained variance 1.137%; random-list accuracy spliced every step 33.8%, last step 43.7%
+width 32 k 16, 6000 steps: unexplained variance 0.296%; random-list accuracy spliced every step 50.0%, last step 78.3%
+width 16 k 16, 20000 steps: unexplained variance 0.235%; random-list accuracy spliced every step 40.0%, last step 70.1%

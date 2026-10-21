@@ -1,0 +1,27 @@
+threshold of x (neuron 5 > 1) from the hinge rule; switch points r1, r4, r6, r7, r8 at step 5; D5 at x = threshold
+  S = 0.3: threshold 0.200; switch points 2.481 1.580 2.100 1.496 1.074; D5 19.95
+  S = 0.6: threshold 0.416; switch points 2.463 1.607 2.074 1.532 1.206; D5 17.72
+  S = 0.9: threshold 0.697; switch points 2.352 1.689 2.107 1.635 1.281; D5 14.21
+  S = 1.2: threshold 0.980; switch points 2.234 1.775 2.144 1.744 1.352; D5 10.68
+
+patch neuron 8 at step 4 from S' into the list with S = 0.6:
+  S' = 0.3: threshold 0.321 (unpatched 0.416, donor list 0.200; moved 44% of the way)
+     r8 1.206 -> 1.093 (donor's own r8 1.074); r7 1.532 -> 1.503; D5 at x=0.5: 17.71 -> 18.01 (donor's 19.91)
+     threshold with only r8 patched 0.350, all switch points patched 0.337, only D5 patched 0.399
+  S' = 0.9: threshold 0.536 (unpatched 0.416, donor list 0.697; moved 43% of the way)
+     r8 1.206 -> 1.356 (donor's own r8 1.281); r7 1.532 -> 1.570; D5 at x=0.5: 17.71 -> 17.41 (donor's 14.24)
+     threshold with only r8 patched 0.503, all switch points patched 0.520, only D5 patched 0.433
+  S' = 1.2: threshold 0.655 (unpatched 0.416, donor list 0.980; moved 42% of the way)
+     r8 1.206 -> 1.508 (donor's own r8 1.352); r7 1.532 -> 1.608; D5 at x=0.5: 17.71 -> 17.17 (donor's 10.75)
+     threshold with only r8 patched 0.592, all switch points patched 0.625, only D5 patched 0.446
+
+share of the way moved (patched threshold - unpatched) / (donor list - unpatched):
+  S' = 0.3: whole patch 44%, only r8 31%, all switch points 36%, only D5 8%
+  S' = 0.9: whole patch 43%, only r8 31%, all switch points 37%, only D5 6%
+  S' = 1.2: whole patch 42%, only r8 31%, all switch points 37%, only D5 5%
+
+where the threshold's dependence on S comes from (unpatched lists S = 0.3 and 1.2, pre-activation at x = 0.5):
+  D5 (memory, store, gates)   :  -9.16 (65% of the total -14.01)
+  hinge of neuron 4           :  +0.00 (-0% of the total -14.01)
+  hinge of neuron 7           :  -1.94 (14% of the total -14.01)
+  hinge of neuron 8           :  -2.91 (21% of the total -14.01)

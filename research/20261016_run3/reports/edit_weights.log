@@ -1,0 +1,5 @@
+original: accuracy 95.314%; mistakes (points) one positive 0.83, largest-second 0.67, second-third 2.45, both 0.48, other 0.25; largest last 0.65; vs original: fixed 0.00, broke 0.00
+A: readout blind to the clock plane: accuracy 87.429%; mistakes (points) one positive 0.85, largest-second 1.79, second-third 5.25, both 0.77, other 3.90; largest last 1.51; vs original: fixed 1.31, broke 9.20
+B: neuron 4's readout x1.25: accuracy 95.248%; mistakes (points) one positive 0.83, largest-second 0.70, second-third 2.46, both 0.48, other 0.27; largest last 0.63; vs original: fixed 0.09, broke 0.16
+B: neuron 4's readout x1.5: accuracy 95.110%; mistakes (points) one positive 0.83, largest-second 0.77, second-third 2.49, both 0.49, other 0.32; largest last 0.67; vs original: fixed 0.14, broke 0.34
+B: neuron 4's readout x2.0: accuracy 94.778%; mistakes (points) one positive 0.83, largest-second 0.89, second-third 2.55, both 0.49, other 0.46; largest last 0.85; vs original: fixed 0.18, broke 0.72

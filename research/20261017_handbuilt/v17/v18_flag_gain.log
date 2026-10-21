@@ -1,0 +1,4 @@
+w 10000: all 0.958 | onepos 0.113 last 0.899 step8 0.932 row 0.991 ord 0.976 | wrong: third 0.61 largest 0.02 onepos 0.23
+w 2: all 0.953 | onepos 0.110 last 0.901 step8 0.929 row 0.984 ord 0.969 | wrong: third 0.63 largest 0.02 onepos 0.21
+w 1: all 0.844 | onepos 0.110 last 0.882 step8 0.809 row 0.881 ord 0.841 | wrong: third 0.27 largest 0.60 onepos 0.06
+w 0.5: all 0.681 | onepos 0.066 last 0.850 step8 0.658 row 0.695 ord 0.660 | wrong: third 0.19 largest 0.75 onepos 0.03

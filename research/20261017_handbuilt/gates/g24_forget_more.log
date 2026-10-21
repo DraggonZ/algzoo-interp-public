@@ -1,0 +1,8 @@
+                                     all  S befo  S afte  S at 8  S at 9  S righ
+intact                              95.4    95.6    95.2    94.4    95.6    96.0
+forced off below 0.8 x second       95.3    95.6    95.1    94.2    95.6    95.9   (switches off 1.46% of steps)
+forced off below 0.85 x second      95.3    95.6    95.1    94.2    95.6    95.9   (switches off 1.88% of steps)
+forced off below 0.9 x second       95.4    95.6    95.1    94.1    95.6    95.9   (switches off 2.35% of steps)
+forced off below 0.95 x second      95.4    95.7    95.1    94.1    95.6    95.9   (switches off 2.80% of steps)
+forced off below 1.0 x second       95.9    96.2    95.6    94.0    95.6    96.9   (switches off 3.26% of steps)
+forced off after every non-record   57.8    97.0    18.7     9.5    93.6    10.4   (switches off 14.67% of steps)

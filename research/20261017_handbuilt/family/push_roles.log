@@ -1,0 +1,10 @@
+== push from the memory
+  neuron 1: push RMS 1.32; L,P table explains 89% of its variance | t1 age1: L  +0.01 P  +0.00; t2 age1: L  +0.01 P  +0.00; t2 age2: L  +1.40 P  +0.00; t3 age1: L  +0.00 P  +1.33; t3 age2: L  +1.40 P  +0.00; t4 age1: L  -0.09 P  +0.84
+  neuron 6: push RMS 1.49; L,P table explains 92% of its variance | t1 age1: L  +0.01 P  +0.00; t2 age1: L  +0.01 P  +0.00; t2 age2: L  +1.71 P  +0.00; t3 age1: L  +0.01 P  +1.49; t3 age2: L  +1.71 P  +0.00; t4 age1: L  -0.10 P  +1.05
+  neuron 7: push RMS 1.00; L,P table explains 82% of its variance | t1 age1: L  +0.02 P  +0.00; t2 age1: L  +0.02 P  +0.00; t2 age2: L  +1.29 P  +0.00; t3 age1: L  +0.02 P  +1.28; t3 age2: L  +1.29 P  +0.00; t4 age1: L  +0.02 P  +0.53
+  neuron 8: push RMS 1.95; L,P table explains 89% of its variance | t1 age1: L  +0.02 P  +0.00; t2 age1: L  +0.02 P  +0.00; t2 age2: L  +2.43 P  +0.00; t3 age1: L  +0.02 P  +2.34; t3 age2: L  +2.43 P  +0.00; t4 age1: L  -0.02 P  +1.78
+== push from the gates
+  neuron 1: push RMS 0.36; L,P table explains 3% of its variance | t1 age1: L  +0.00 P  +0.00; t2 age1: L  +0.00 P  +0.00; t2 age2: L  +0.41 P  +0.00; t3 age1: L  +0.00 P  +0.00; t3 age2: L  +0.41 P  +0.00; t4 age1: L  +0.00 P  +0.00
+  neuron 6: push RMS 0.35; L,P table explains 82% of its variance | t1 age1: L  +0.00 P  +0.00; t2 age1: L  +0.00 P  +0.00; t2 age2: L  -0.49 P  +0.00; t3 age1: L  +0.00 P  +0.00; t3 age2: L  -0.49 P  +0.00; t4 age1: L  +0.00 P  +0.00
+  neuron 7: push RMS 0.02; L,P table explains 79% of its variance | t1 age1: L  +0.00 P  +0.00; t2 age1: L  +0.00 P  +0.00; t2 age2: L  +0.03 P  +0.00; t3 age1: L  +0.00 P  +0.00; t3 age2: L  +0.03 P  +0.00; t4 age1: L  +0.00 P  +0.00
+  neuron 8: push RMS 0.18; L,P table explains 85% of its variance | t1 age1: L  +0.00 P  +0.00; t2 age1: L  +0.00 P  +0.00; t2 age2: L  -0.31 P  +0.00; t3 age1: L  +0.00 P  +0.00; t3 age2: L  -0.31 P  +0.00; t4 age1: L  +0.00 P  +0.00

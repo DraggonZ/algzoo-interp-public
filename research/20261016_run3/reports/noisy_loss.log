@@ -1,0 +1,7 @@
+cases placed right but lost while sliding: 2292
+  winner = slot the largest alone would pick: 31.4%
+  winner = slot 9: 0.1%
+  the second's own vote still points at its slot at the end: 70.8%
+sigma 0.005: Spearman with Z2 — held +0.78, lost sliding -0.69, slide +0.65, lone spread -0.43, ring miss -0.29
+sigma 0.01: Spearman with Z2 — held +0.96, lost sliding -0.93, slide +0.85, lone spread -0.92, ring miss -0.38
+sigma 0.02: Spearman with Z2 — held +0.89, lost sliding -0.89, slide +0.75, lone spread -0.72, ring miss -0.00

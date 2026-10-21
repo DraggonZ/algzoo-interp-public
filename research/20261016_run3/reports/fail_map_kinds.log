@@ -1,0 +1,2 @@
+{'near-tie (2nd at least 0.8 of largest)': np.float64(0.0075), 'small or negative 2nd (below 0.3 of largest)': np.float64(0.0151), 'in between': 0.0}
+{'max first': np.float64(0.0094), '2nd first': np.float64(0.0132)}

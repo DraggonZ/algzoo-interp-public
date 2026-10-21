@@ -1,0 +1,8 @@
+trained
+  current largest 1 after P: -3: -30.86  -2:   1.43  -1:  26.33  +0:  37.40  +1:    nan  +2:  10.68  +3:  -0.80 | at current largest  38.85
+  current largest 2 after P: -3: -56.69  -2: -13.80  -1:  21.79  +0:  37.13  +1:  17.68  +2:    nan  +3:   4.66 | at current largest  35.86
+  current largest 3+ after P: -3: -69.26  -2: -20.89  -1:  22.66  +0:  45.73  +1:  28.05  +2:  -4.72  +3: -31.13 | at current largest  47.07
+v16
+  current largest 1 after P: -3:  -0.15  -2:   0.01  -1:   0.15  +0:   0.17  +1:    nan  +2:  -0.08  +3:  -0.21 | at current largest   0.33
+  current largest 2 after P: -3:  -0.16  -2:   0.03  -1:   0.19  +0:   0.22  +1:   0.10  +2:    nan  +3:  -0.25 | at current largest   0.16
+  current largest 3+ after P: -3:  -0.18  -2:   0.00  -1:   0.18  +0:   0.25  +1:   0.18  +2:   0.00  +3:  -0.18 | at current largest   0.19

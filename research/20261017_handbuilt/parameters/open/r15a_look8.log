@@ -1,0 +1,4 @@
+(a) top3 of x_0..x_9, fresh                   v2  +168.6   v2c  +210.4   gain 0.965
+(b) 2nd or 3rd, fresh                         v2  +148.7   v2c  +176.1   gain 0.947
+(c) top3 after the step, fresh                v2  +165.1   v2c  +207.0   gain 0.989
+(d) top3 at both times, fresh                 v2  +165.6   v2c  +207.4   gain 0.985

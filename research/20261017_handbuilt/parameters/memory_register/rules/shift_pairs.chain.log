@@ -1,0 +1,7 @@
+leak_check_chain: rule shift_pairs.py, unchained (every row checked against all), 5 rows, order [np.str_('out1'), np.str_('out2'), np.str_('out4'), np.str_('out5'), np.str_('out7')]
+  perturb row out1: largest sensitivity of rows up to it 0.0000
+  perturb row out2: largest sensitivity of rows up to it 0.0000
+  perturb row out4: largest sensitivity of rows up to it 0.0000
+  perturb row out5: largest sensitivity of rows up to it 0.0000
+  perturb row out7: largest sensitivity of rows up to it 0.0000
+CHAIN 0.0000 PASS

@@ -1,0 +1,3 @@
+store age table + detector fires at new largest        agreement  90.86%   accuracy  89.47%
+store with residual + detector fires at new largest    agreement  93.26%   accuracy  91.26%
+store with residual + detector with residual           agreement  96.18%   accuracy  93.11%

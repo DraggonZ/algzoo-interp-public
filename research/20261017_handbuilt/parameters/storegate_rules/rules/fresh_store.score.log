@@ -1,0 +1,7 @@
+score_memory_rule_v2.py sha256 45d18216a799; rule fresh_store.py
+16 weights covered, 1 constants, 1 kinds; relative weight error 0.0880; structure 16 bits; lookup table 1916 bits
+  share 0.001: constants 8 bits (7.6 each) + structure 16 + rest 1911; net -19
+  share 0.002: constants 7 bits (7.1 each) + structure 16 + rest 1927; net -34
+  share 0.005: constants 6 bits (6.4 each) + structure 16 + rest 1979; net -85
+KL from ARC 0.0672 (budget 0.02); accuracy 0.9395 (ARC 0.9531)
+NET -19.2

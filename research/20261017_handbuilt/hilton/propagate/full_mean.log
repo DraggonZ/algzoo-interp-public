@@ -1,0 +1,3 @@
+grid 24 x 24 x 24 (10.0M network runs on fixed inputs): estimate 95.11%  (probability mass 1.0030, should be 1)  1s
+grid 40 x 48 x 48 (66.4M network runs on fixed inputs): estimate 95.23%  (probability mass 1.0007, should be 1)  1s
+grid 56 x 72 x 72 (209.0M network runs on fixed inputs): estimate 95.31%  (probability mass 1.0003, should be 1)  3s

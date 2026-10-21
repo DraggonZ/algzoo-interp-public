@@ -1,0 +1,55 @@
+n_seqs 2^20 seed 0: true 0.2353 estimate 0.2136 error -2.2 points
+n_seqs 2^20 seed 1: true 0.2596 estimate 0.2980 error +3.8 points
+n_seqs 2^20 seed 2: true 0.2711 estimate 0.2549 error -1.6 points
+n_seqs 2^20 seed 3: true 0.2626 estimate 0.2430 error -2.0 points
+n_seqs 2^20 seed 4: true 0.2561 estimate 0.2489 error -0.7 points
+n_seqs 2^21 seed 0: true 0.3164 estimate 0.3225 error +0.6 points
+n_seqs 2^21 seed 1: true 0.4059 estimate 0.4130 error +0.7 points
+n_seqs 2^21 seed 2: true 0.3655 estimate 0.3619 error -0.4 points
+n_seqs 2^21 seed 3: true 0.3714 estimate 0.3606 error -1.1 points
+n_seqs 2^21 seed 4: true 0.3915 estimate 0.4134 error +2.2 points
+n_seqs 2^22 seed 0: true 0.4214 estimate 0.4094 error -1.2 points
+n_seqs 2^22 seed 1: true 0.5321 estimate 0.5153 error -1.7 points
+n_seqs 2^22 seed 2: true 0.4424 estimate 0.3848 error -5.8 points
+n_seqs 2^22 seed 3: true 0.4542 estimate 0.4150 error -3.9 points
+n_seqs 2^22 seed 4: true 0.4949 estimate 0.4911 error -0.4 points
+n_seqs 2^23 seed 0: true 0.6853 estimate 0.6791 error -0.6 points
+n_seqs 2^23 seed 1: true 0.6178 estimate 0.6054 error -1.2 points
+n_seqs 2^23 seed 2: true 0.5813 estimate 0.5768 error -0.4 points
+n_seqs 2^23 seed 3: true 0.6913 estimate 0.6972 error +0.6 points
+n_seqs 2^23 seed 4: true 0.7034 estimate 0.7300 error +2.7 points
+n_seqs 2^24 seed 0: true 0.7505 estimate 0.7585 error +0.8 points
+n_seqs 2^24 seed 1: true 0.7443 estimate 0.7457 error +0.1 points
+n_seqs 2^24 seed 2: true 0.7265 estimate 0.7345 error +0.8 points
+n_seqs 2^24 seed 3: true 0.7650 estimate 0.7606 error -0.4 points
+n_seqs 2^24 seed 4: true 0.7399 estimate 0.7582 error +1.8 points
+n_seqs 2^25 seed 0: true 0.7506 estimate 0.7495 error -0.1 points
+n_seqs 2^25 seed 1: true 0.7884 estimate 0.7803 error -0.8 points
+n_seqs 2^25 seed 2: true 0.7916 estimate 0.7970 error +0.5 points
+n_seqs 2^25 seed 3: true 0.8294 estimate 0.8291 error -0.0 points
+n_seqs 2^25 seed 4: true 0.8112 estimate 0.8228 error +1.2 points
+n_seqs 2^26 seed 0: true 0.7906 estimate 0.8036 error +1.3 points
+n_seqs 2^26 seed 1: true 0.8176 estimate 0.7945 error -2.3 points
+n_seqs 2^26 seed 2: true 0.8349 estimate 0.8360 error +0.1 points
+n_seqs 2^26 seed 3: true 0.8901 estimate 0.8912 error +0.1 points
+n_seqs 2^26 seed 4: true 0.8232 estimate 0.8180 error -0.5 points
+n_seqs 2^27 seed 0: true 0.8257 estimate 0.8296 error +0.4 points
+n_seqs 2^27 seed 1: true 0.8164 estimate 0.8077 error -0.9 points
+n_seqs 2^27 seed 2: true 0.8970 estimate 0.9133 error +1.6 points
+n_seqs 2^27 seed 3: true 0.9076 estimate 0.9111 error +0.3 points
+n_seqs 2^27 seed 4: true 0.8542 estimate 0.8591 error +0.5 points
+n_seqs 2^28 seed 0: true 0.8779 estimate 0.8841 error +0.6 points
+n_seqs 2^28 seed 1: true 0.8657 estimate 0.8611 error -0.5 points
+n_seqs 2^28 seed 2: true 0.9333 estimate 0.9377 error +0.4 points
+n_seqs 2^28 seed 3: true 0.9247 estimate 0.9306 error +0.6 points
+n_seqs 2^28 seed 4: true 0.8766 estimate 0.8724 error -0.4 points
+n_seqs 2^29 seed 0: true 0.9050 estimate 0.9132 error +0.8 points
+n_seqs 2^29 seed 1: true 0.8783 estimate 0.8699 error -0.8 points
+n_seqs 2^29 seed 2: true 0.9468 estimate 0.9432 error -0.4 points
+n_seqs 2^29 seed 3: true 0.9312 estimate 0.9380 error +0.7 points
+n_seqs 2^29 seed 4: true 0.8890 estimate 0.8807 error -0.8 points
+cost 5136 samples' worth per model
+accuracy below 0.6 (16 models): RMSE 2.33 points, bias -0.87
+0.6-0.85 (20 models): RMSE 1.11 points, bias +0.17
+above 0.85 (14 models): RMSE 0.71 points, bias +0.20
+all 50: RMSE 1.54 points; correlation 0.998

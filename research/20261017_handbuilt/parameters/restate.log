@@ -1,0 +1,38 @@
+ARC 0.95314
+
+1. random relative noise, 48 copies, binned by KL (median per bin):
+   KL 0.0011: accuracy -0.06 points, answers changed 0.50%
+   KL 0.0060: accuracy -0.21 points, answers changed 1.21%
+   KL 0.0110: accuracy -0.28 points, answers changed 1.59%
+   KL 0.0256: accuracy -0.62 points, answers changed 2.50%
+   KL 0.0447: accuracy -1.14 points, answers changed 3.24%
+   KL 0.0721: accuracy -1.80 points, answers changed 4.33%
+   KL 0.1095: accuracy -2.47 points, answers changed 5.45%
+   KL 0.2045: accuracy -4.65 points, answers changed 7.83%
+   at KL 0.004: accuracy -0.10 points, answers changed 1.00% (interpolated)
+   at KL 0.02: accuracy -0.49 points, answers changed 2.18% (interpolated)
+
+2. single zeroing KL under 0.004: 56 of 432
+   jointly negligible (greedy in order of single KL, skipping any that push the joint KL over 0.004): 28 weights; KL 0.0038, accuracy -0.07 points, answers changed 0.91%
+   14->7, 1->5, 3->8, 11->out5, 11->out2, 9->7, 13->8, 6->8, 3->4, 10->10, 5->4, 9->out7, 2->3, 9->out2, 15->9, 7->13, 6->9, 9->13, 9->out6, input->2, 9->out3, 5->out2, 9->out9, input->13, 15->4, 2->9, 13->5, 6->5
+
+3. rules, each alone and together:
+   blindness, two classes (13 weights): KL 0.0185, accuracy -0.54 points, answers changed 2.15%
+   detector reads the store (15 weights): KL 0.0662, accuracy -1.37 points, answers changed 2.66%
+   negligible set (28 weights): KL 0.0038, accuracy -0.07 points, answers changed 0.91%
+   blindness + negligible set: KL 0.0214, accuracy -0.58 points, answers changed 2.39%
+   all three: KL 0.0859, accuracy -1.87 points, answers changed 4.22%
+   blindness, only the rows of store/det: KL 0.0001, accuracy -0.01 points, answers changed 0.14%
+   blindness, only the rows of gates    : KL 0.0000, accuracy +0.00 points, answers changed 0.00%
+   blindness, only the rows of hiding   : KL 0.0092, accuracy -0.32 points, answers changed 1.46%
+   blindness, only the rows of memory   : KL 0.0083, accuracy -0.20 points, answers changed 1.40%
+
+4. numbers to copy from ARC at KL 0.02 (combinations; single weights need the diagonal, see curvature2.py):
+   rule error   0.5% per weight: 12 combinations
+   rule error   1.0% per weight: 25 combinations
+   rule error   2.0% per weight: 48 combinations
+   rule error   5.0% per weight: 83 combinations
+   rule error  10.0% per weight: 120 combinations
+   rule error  25.0% per weight: 182 combinations
+   rule error  50.0% per weight: 232 combinations
+   rule error 100.0% per weight: 277 combinations

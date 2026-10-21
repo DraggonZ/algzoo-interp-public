@@ -1,0 +1,7 @@
+share of timer-neuron variance in top directions: 0.448 0.704 0.870 0.919 0.949 0.971 0.985 0.992 0.996 1.000 1.000
+top  2 timer directions + 1, 6, 7, 8, 5: 21.18% error
+top  3 timer directions + 1, 6, 7, 8, 5: 12.40% error
+top  4 timer directions + 1, 6, 7, 8, 5: 9.11% error
+top  6 timer directions + 1, 6, 7, 8, 5: 4.35% error
+top  8 timer directions + 1, 6, 7, 8, 5: 2.81% error
+top 11 timer directions + 1, 6, 7, 8, 5: 2.35% error

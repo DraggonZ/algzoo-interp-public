@@ -1,0 +1,10 @@
+mult0.005_0    exact 0.98328851 truth 0.98328941 ± 2.8e-06 z -0.33 regions 1197626 ops 6.16e+10 (2280s)
+mult0.005_1    exact 0.98827707 truth 0.98827426 ± 2.3e-06 z +1.21 regions 1142935 ops 5.6e+10 (2100s)
+mult0.01_0     exact 0.97183598 truth 0.97183152 ± 3.6e-06 z +1.25 regions 1206123 ops 6.73e+10 (2411s)
+mult0.01_1     exact 0.97359567 truth 0.97359868 ± 3.5e-06 z -0.87 regions 1030857 ops 6.2e+10 (2190s)
+mult0.02_0     exact 0.93990406 truth 0.93991104 ± 5.1e-06 z -1.36 regions 1079191 ops 7.23e+10 (2371s)
+mult0.02_1     exact 0.91941578 truth 0.91941825 ± 5.9e-06 z -0.42 regions 1139685 ops 8.23e+10 (2596s)
+σ=0.005: accuracy 0.9833-0.9883; exact RMSE 2.09e-06 (reference's own error 2.55e-06); cost 5.88e+10 ops = 4.09e+07 samples; sampling RMSE at that cost 1.85e-05; MSE ratio 1.28e-02
+σ=0.01: accuracy 0.9718-0.9736; exact RMSE 3.80e-06 (reference's own error 3.52e-06); cost 6.47e+10 ops = 4.49e+07 samples; sampling RMSE at that cost 2.43e-05; MSE ratio 2.44e-02
+σ=0.02: accuracy 0.9194-0.9399; exact RMSE 5.23e-06 (reference's own error 5.51e-06); cost 7.73e+10 ops = 5.37e+07 samples; sampling RMSE at that cost 3.49e-05; MSE ratio 2.25e-02
+all 6: mean z -0.09, SD of z 0.99, max |z| 1.36

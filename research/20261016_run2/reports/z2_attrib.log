@@ -1,0 +1,24 @@
+σ=0.005: mean Z2 loss 0.0133; share of loss removed by restoring each group:
+   W_hi             +0.04   carry loss 0.0153 -> 0.0151
+   W_oh             +0.14   carry loss 0.0153 -> 0.0136
+   hh_CC            +0.73   carry loss 0.0153 -> 0.0090
+   hh_C<-dense      +0.02   carry loss 0.0153 -> 0.0151
+   hh_dense<-C      +0.00   carry loss 0.0153 -> 0.0155
+   hh_dense_dense   +0.02   carry loss 0.0153 -> 0.0151
+   five             +0.48   carry loss 0.0153 -> 0.0111
+σ=0.01: mean Z2 loss 0.0664; share of loss removed by restoring each group:
+   W_hi             +0.01   carry loss 0.0598 -> 0.0595
+   W_oh             +0.14   carry loss 0.0598 -> 0.0510
+   hh_CC            +0.78   carry loss 0.0598 -> 0.0175
+   hh_C<-dense      +0.03   carry loss 0.0598 -> 0.0584
+   hh_dense<-C      +0.05   carry loss 0.0598 -> 0.0573
+   hh_dense_dense   +0.01   carry loss 0.0598 -> 0.0591
+   five             +0.57   carry loss 0.0598 -> 0.0291
+σ=0.02: mean Z2 loss 0.1767; share of loss removed by restoring each group:
+   W_hi             +0.02   carry loss 0.1543 -> 0.1512
+   W_oh             +0.11   carry loss 0.1543 -> 0.1365
+   hh_CC            +0.64   carry loss 0.1543 -> 0.0612
+   hh_C<-dense      +0.00   carry loss 0.1543 -> 0.1545
+   hh_dense<-C      +0.03   carry loss 0.1543 -> 0.1520
+   hh_dense_dense   +0.06   carry loss 0.1543 -> 0.1456
+   five             +0.34   carry loss 0.1543 -> 0.1056

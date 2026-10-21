@@ -1,0 +1,13 @@
+== ARC: wrong 21.3% of held-out near ties
+  gap                    linear R2 0.09 sign agree 78.7% | trees R2 0.09 sign agree 78.7%
+  + positions            linear R2 0.17 sign agree 78.2% | trees R2 0.41 sign agree 82.3%
+  + largest              linear R2 0.17 sign agree 78.2% | trees R2 0.63 sign agree 85.6%
+  + the seven smaller    linear R2 0.16 sign agree 78.1% | trees R2 0.54 sign agree 83.5%
+== 209: wrong 21.6% of held-out near ties
+  gap                    linear R2 0.11 sign agree 78.4% | trees R2 0.10 sign agree 78.3%
+  + positions            linear R2 0.20 sign agree 79.5% | trees R2 0.28 sign agree 82.0%
+  + largest              linear R2 0.15 sign agree 78.8% | trees R2 0.42 sign agree 83.7%
+  + the seven smaller    linear R2 -0.06 sign agree 75.3% | trees R2 0.38 sign agree 82.2%
+ARC vs 209: correlation of D 0.03; same sign 70.9%; both wrong 6.9% (independent 4.6%)
+ARC vs 111: correlation of D 0.21; same sign 74.9%; both wrong 8.9% (independent 4.6%)
+209 vs 111: correlation of D 0.60; same sign 71.2%; both wrong 7.1% (independent 4.6%)

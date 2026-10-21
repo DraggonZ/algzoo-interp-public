@@ -1,0 +1,2 @@
+background fixed -0.46: RMSE 0.82 points over 33 networks, mean error +0.10, ARC +0.79; cost about 3960 network runs
+background conditional mean: RMSE 0.83 points over 33 networks, mean error +0.21, ARC +0.89; cost about 3957 network runs

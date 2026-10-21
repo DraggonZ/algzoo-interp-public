@@ -1,0 +1,12 @@
+row 1: a(k) -0.100; residual left after a(k) row0 0.111 (was 0.148); cos(e, r0 - push r0) -0.23; gauge-A err 0.991
+row 2: a(k) -0.022; residual left after a(k) row0 0.133 (was 0.135); cos(e, r0 - push r0) +0.00; gauge-A err 0.970
+row 3: a(k) -0.022; residual left after a(k) row0 0.069 (was 0.072); cos(e, r0 - push r0) +0.15; gauge-A err 0.902
+row 4: a(k) -0.036; residual left after a(k) row0 0.214 (was 0.216); cos(e, r0 - push r0) -0.17; gauge-A err 0.917
+row 5: a(k) -0.050; residual left after a(k) row0 0.149 (was 0.158); cos(e, r0 - push r0) +0.59; gauge-A err 0.963
+row 6: a(k) -0.156; residual left after a(k) row0 0.078 (was 0.214); cos(e, r0 - push r0) -0.41; gauge-A err 1.334
+row 7: a(k) -0.179; residual left after a(k) row0 0.105 (was 0.243); cos(e, r0 - push r0) -0.52; gauge-A err 1.322
+row 8: a(k) -0.204; residual left after a(k) row0 0.280 (was 0.374); cos(e, r0 - push r0) -0.33; gauge-A err 1.339
+row 9: a(k) -0.129; residual left after a(k) row0 0.725 (was 0.775); cos(e, r0 - push r0) -0.30; gauge-A err 2.404
+row 0 vs its own push: [ 1.96  0.67  0.16  1.01  1.19  0.24 -5.14  1.01  6.09  2.53 -2.78 -3.57
+ -0.92 -0.23] [-2.73  1.78 -1.5   1.38  1.84  0.47  0.27  2.47  3.03  5.43 -0.66 -6.71
+ -2.21  0.2 ]

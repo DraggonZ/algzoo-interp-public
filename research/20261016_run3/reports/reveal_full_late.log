@@ -1,0 +1,14 @@
+steps >= 5
+example: new largest -> old largest's slot: 0.911; new second -> newest slot: 0.928 | within 0.1 of a tie: new largest 0.857, new second 0.866
+0: new largest -> old largest's slot: 0.826; new second -> newest slot: 0.815 | within 0.1 of a tie: new largest 0.745, new second 0.678
+1: new largest -> old largest's slot: 0.638; new second -> newest slot: 0.884 | within 0.1 of a tie: new largest 0.497, new second 0.768
+2: new largest -> old largest's slot: 0.882; new second -> newest slot: 0.921 | within 0.1 of a tie: new largest 0.813, new second 0.850
+3: new largest -> old largest's slot: 0.850; new second -> newest slot: 0.895 | within 0.1 of a tie: new largest 0.693, new second 0.784
+4: new largest -> old largest's slot: 0.802; new second -> newest slot: 0.867 | within 0.1 of a tie: new largest 0.679, new second 0.721
+steps >= 8
+example: new largest -> old largest's slot: 0.940; new second -> newest slot: 0.952 | within 0.1 of a tie: new largest 0.868, new second 0.885
+0: new largest -> old largest's slot: 0.840; new second -> newest slot: 0.910 | within 0.1 of a tie: new largest 0.694, new second 0.778
+1: new largest -> old largest's slot: 0.707; new second -> newest slot: 0.938 | within 0.1 of a tie: new largest 0.530, new second 0.844
+2: new largest -> old largest's slot: 0.911; new second -> newest slot: 0.951 | within 0.1 of a tie: new largest 0.830, new second 0.879
+3: new largest -> old largest's slot: 0.877; new second -> newest slot: 0.915 | within 0.1 of a tie: new largest 0.716, new second 0.795
+4: new largest -> old largest's slot: 0.795; new second -> newest slot: 0.927 | within 0.1 of a tie: new largest 0.627, new second 0.816

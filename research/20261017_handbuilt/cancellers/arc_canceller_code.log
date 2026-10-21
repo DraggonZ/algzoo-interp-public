@@ -1,0 +1,12 @@
+neuron 1: on 0.73 of steps; best angle 56 deg; R2 0.952
+   coefficients  x -10.30  m1   8.04  m2   2.92  cos   2.90  sin  -2.40
+   R2 lost when dropped  x 0.800  m1 0.328  m2 0.015  cos 0.082  sin 0.065
+neuron 6: on 0.74 of steps; best angle 46 deg; R2 0.955
+   coefficients  x -10.71  m1   7.89  m2   2.65  cos  -3.12  sin  -0.82
+   R2 lost when dropped  x 0.818  m1 0.281  m2 0.012  cos 0.086  sin 0.007
+neuron 7: on 0.78 of steps; best angle 39 deg; R2 0.996
+   coefficients  x -13.17  m1  11.50  m2   1.05  cos   0.45  sin   1.51
+   R2 lost when dropped  x 0.865  m1 0.415  m2 0.001  cos 0.001  sin 0.014
+neuron 8: on 0.69 of steps; best angle 30 deg; R2 0.938
+   coefficients  x -11.99  m1   6.22  m2   7.89  cos  -1.25  sin  -3.51
+   R2 lost when dropped  x 0.837  m1 0.117  m2 0.086  cos 0.010  sin 0.058

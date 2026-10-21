@@ -1,0 +1,6 @@
+our account (5)                          fit on all steps   : angle median 4.06 deg; accuracy 0.559
+our account (5)                          fit on active steps: angle median 3.93 deg; accuracy 0.572
+register waves (23)                      fit on all steps   : angle median 1.40 deg; accuracy 0.717
+register waves (23)                      fit on active steps: angle median 1.45 deg; accuracy 0.708
+register waves + true memory state       fit on all steps   : angle median 2.02 deg; accuracy 0.642
+register waves + true memory state       fit on active steps: angle median 1.67 deg; accuracy 0.682

@@ -1,0 +1,4 @@
+error mass a<0.1 only  : 2.77 points
+error mass b<0.1 only  : 0.76 points
+error mass both        : 0.57 points
+error mass neither     : 0.59 points

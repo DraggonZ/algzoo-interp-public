@@ -1,0 +1,9 @@
+ARC: accuracy 0.95318, cross-entropy fit set 0.14740, test set 0.14690
+
+optimum from ARC: cross-entropy fit 0.13539, test 0.13497; accuracy change +0.340 points; same answer as ARC on 98.51%
+  relative distance from ARC (centred) 0.1167; size relative to ARC along ARC 0.8965
+  largest differences: 4->out9 ARC -4.99 diff +1.021, 14->out0 ARC -5.14 diff +0.871, 8->out1 ARC -6.70 diff +0.786, 6->out5 ARC -5.63 diff +0.695, 1->out0 ARC +6.09 diff -0.650, 6->out6 ARC -3.08 diff +0.608, 8->out5 ARC +5.49 diff -0.608, 9->out8 ARC -1.66 diff +0.602
+
+optimum from zero: cross-entropy fit 0.13540, test 0.13498; accuracy change +0.338 points; same answer as ARC on 98.51%
+  relative distance from ARC (centred) 0.1173; size relative to ARC along ARC 0.8955
+  largest differences: 4->out9 ARC -4.99 diff +1.031, 14->out0 ARC -5.14 diff +0.874, 8->out1 ARC -6.70 diff +0.789, 6->out5 ARC -5.63 diff +0.699, 1->out0 ARC +6.09 diff -0.655, 9->out8 ARC -1.66 diff +0.623, 8->out5 ARC +5.49 diff -0.605, 6->out6 ARC -3.08 diff +0.605

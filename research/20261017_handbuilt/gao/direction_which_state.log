@@ -1,0 +1,5 @@
+register waves + true previous none                                  : angle median 1.45 deg; accuracy 0.708
+register waves + true previous the four cancelling neurons           : angle median 0.30 deg; accuracy 0.910
+register waves + true previous cancelling + store/detector           : angle median 0.27 deg; accuracy 0.922
+register waves + true previous everything but the cancelling neurons : angle median 1.27 deg; accuracy 0.773
+register waves + true previous all 16                                : angle median 0.00 deg; accuracy 0.952

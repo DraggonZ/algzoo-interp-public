@@ -1,0 +1,6 @@
+gap 1 trained   right 0.995 margin = P -1.2 p +1.1 x_L +5.3 1 +0.0
+gap 1 v16 x100  right 0.202 margin = P -15.7 p +19.2 x_L +0.1 1 +0.1
+gap 2 trained   right 0.997 margin = P +1.0 p -2.4 x_L +5.3 1 +0.4
+gap 2 v16 x100  right 0.889 margin = P +6.8 p +6.9 x_L -0.1 1 +0.2
+gap 4 trained   right 0.992 margin = P +3.2 p -7.4 x_L +9.4 1 +0.5
+gap 4 v16 x100  right 0.970 margin = P +37.7 p -17.3 x_L -0.1 1 +0.3

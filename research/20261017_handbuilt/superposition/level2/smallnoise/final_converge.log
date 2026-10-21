@@ -1,0 +1,4 @@
+split3-gl 16 95.271 [20.8 65.7 13.6] 379M runs 25s peak 4.5 GB
+split3-gl 24 95.247 [21.  64.9 14.1] 1282M runs 83s peak 7.4 GB
+split-gl 16 95.205 [21.4 64.7 13.9] 491M runs 29s peak 7.4 GB
+split-gl 24 95.232 [21.1 64.9 14. ] 1666M runs 90s peak 7.4 GB

@@ -1,0 +1,6 @@
+G 20, tie spacing 0.333 of a cell: look-ahead [9, 15, 5]; predicted 95.67% (true 95.32%), mistakes naming the largest 15.7% (true 20.3%)  10s
+G 40, tie spacing 0.333 of a cell: look-ahead [9, 5, 15]; predicted 95.29% (true 95.32%), mistakes naming the largest 16.7% (true 20.3%)  101s
+G 60, tie spacing 0.333 of a cell: look-ahead [9, 5, 15]; predicted 95.10% (true 95.32%), mistakes naming the largest 18.0% (true 20.3%)  203s
+G 80, tie spacing 0.333 of a cell: look-ahead [9, 5, 15]; predicted 94.98% (true 95.32%), mistakes naming the largest 18.6% (true 20.3%)  730s
+G 80, tie spacing 0.250 of a cell: look-ahead [9, 5, 15]; predicted 94.83% (true 95.32%), mistakes naming the largest 20.0% (true 20.3%)  583s
+G 80, tie spacing 0.500 of a cell: look-ahead [9, 5, 15]; predicted 95.19% (true 95.32%), mistakes naming the largest 16.7% (true 20.3%)  497s

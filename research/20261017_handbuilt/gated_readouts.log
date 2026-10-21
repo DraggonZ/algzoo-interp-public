@@ -1,0 +1,6 @@
+ARC's readout: 4.68%   (best single linear 4.41%, three-layer reader 2.35%)
+separate linear readouts by order (oracle): 2.60%
+separate linear readouts by largest position (oracle): 3.11%
+separate linear readouts by largest position and order (oracle): 2.10%
+separate linear readouts by largest and second positions (oracle): 0.10%
+largest's position read linearly from the final state: 95.6% correct

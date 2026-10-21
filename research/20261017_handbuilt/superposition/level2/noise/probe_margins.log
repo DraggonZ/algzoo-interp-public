@@ -1,0 +1,23 @@
+clean canonical margins: over the largest median 10.22 (runner-up wrong on 0.000 of arrangements), over the third median 10.75 (wrong on 0.006)
+  largest's leak, runner-up before: mean     SD across copies   2.02; alone (quadratic, CV): RMSE 2.11 points, correlation 0.763
+  largest's leak, runner-up before: RMS      SD across copies   1.27; alone (quadratic, CV): RMSE 1.61 points, correlation 0.869
+  largest's leak, runner-up after: mean      SD across copies   3.11; alone (quadratic, CV): RMSE 2.03 points, correlation 0.782
+  largest's leak, runner-up after: RMS       SD across copies   1.89; alone (quadratic, CV): RMSE 1.73 points, correlation 0.848
+  third's margin: mean                       SD across copies   0.24; alone (quadratic, CV): RMSE 3.21 points, correlation 0.198
+  third's margin: RMS                        SD across copies   1.12; alone (quadratic, CV): RMSE 1.43 points, correlation 0.898
+
+model on 3 quantities (10 fitted numbers), 200 copies at s = 0.0025, cross-validated: RMSE 1.00 points, correlation 0.952
+   my copies s = 0.001 (no refit): RMSE 0.30 points, correlation 0.907
+   my copies s = 0.005 (no refit): RMSE 4.71 points, correlation 0.888
+   shared held-out copies s = 0.001 (no refit): RMSE 0.36 points, correlation 0.883; constant guess 0.57
+   shared held-out copies s = 0.0025 (no refit): RMSE 0.96 points, correlation 0.939; constant guess 2.76
+   shared held-out copies s = 0.005 (no refit): RMSE 8.45 points, correlation 0.848; constant guess 7.52
+   shared held-out copies s = 0.01 (no refit): RMSE 46.08 points, correlation 0.757; constant guess 10.38
+
+model on 6 quantities (28 fitted numbers), 200 copies at s = 0.0025, cross-validated: RMSE 1.02 points, correlation 0.951
+   my copies s = 0.001 (no refit): RMSE 0.34 points, correlation 0.920
+   my copies s = 0.005 (no refit): RMSE 5.46 points, correlation 0.881
+   shared held-out copies s = 0.001 (no refit): RMSE 0.40 points, correlation 0.904; constant guess 0.57
+   shared held-out copies s = 0.0025 (no refit): RMSE 0.82 points, correlation 0.955; constant guess 2.76
+   shared held-out copies s = 0.005 (no refit): RMSE 9.61 points, correlation 0.821; constant guess 7.52
+   shared held-out copies s = 0.01 (no refit): RMSE 75.54 points, correlation 0.638; constant guess 10.38

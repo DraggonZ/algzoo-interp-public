@@ -1,0 +1,9 @@
+M2,2 ARC    : accuracy 0.9999; median lead 201.13; lead / pushes 1.000; with noise 0.3% 0.9993, 1% 0.9975, 3% 0.9923
+M2,2 seed 0 : accuracy 0.5002; median lead 0.00; lead / pushes 0.000; with noise 0.3% 0.5002, 1% 0.5002, 3% 0.5002
+M2,2 seed 1 : accuracy 0.9999; median lead 230.79; lead / pushes 1.000; with noise 0.3% 0.9993, 1% 0.9977, 3% 0.9929
+M2,2 seed 2 : accuracy 0.9999; median lead 201.16; lead / pushes 1.000; with noise 0.3% 0.9993, 1% 0.9975, 3% 0.9923
+M4,3 ARC    : accuracy 0.9845; median lead 14.64; lead / pushes 0.103; with noise 0.3% 0.9806, 1% 0.9658, 3% 0.9185
+M4,3 seed 0 : accuracy 0.9845; median lead 14.64; lead / pushes 0.103; with noise 0.3% 0.9806, 1% 0.9658, 3% 0.9185
+M4,3 seed 1 : accuracy 0.8920; median lead 3.64; lead / pushes 0.053; with noise 0.3% 0.8881, 1% 0.8687, 3% 0.7970
+M4,3 seed 2 : accuracy 0.7591; median lead 4.95; lead / pushes 0.153; with noise 0.3% 0.7585, 1% 0.7515, 3% 0.7254
+M16,10 ARC  : accuracy 0.9535; median lead 8.16; lead / pushes 0.022; with noise 0.3% 0.9475, 1% 0.9049, 3% 0.7341

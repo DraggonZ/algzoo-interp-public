@@ -1,0 +1,8 @@
+trained: median margin 8.23; median sum of |pushes| on the winning score 340.4, largest single push 95.6; margin / sum of |pushes|: median 0.026, 10th percentile 0.0069; share of lists with margin under 2% of the pushes 0.39, under 1% 0.16
+         on the lead over the runner-up: median sum of |pushes| 389.4; margin / that: median 0.022, under 2% on 0.46 of lists, under 10% on 0.91
+twin   : median margin 0.02; median sum of |pushes| on the winning score 5171.6, largest single push 2146.3; margin / sum of |pushes|: median 0.000, 10th percentile 0.0000; share of lists with margin under 2% of the pushes 0.83, under 1% 0.82
+         on the lead over the runner-up: median sum of |pushes| 6577.0; margin / that: median 0.000, under 2% on 0.98 of lists, under 10% on 0.99
+v7     : median margin 0.13; median sum of |pushes| on the winning score 22344.3, largest single push 9872.2; margin / sum of |pushes|: median 0.000, 10th percentile 0.0000; share of lists with margin under 2% of the pushes 0.79, under 1% 0.79
+         on the lead over the runner-up: median sum of |pushes| 26988.9; margin / that: median 0.000, under 2% on 0.98 of lists, under 10% on 0.99
+v5     : median margin 0.36; median sum of |pushes| on the winning score 93687.9, largest single push 46829.0; margin / sum of |pushes|: median nan, 10th percentile nan; share of lists with margin under 2% of the pushes 0.92, under 1% 0.90
+         on the lead over the runner-up: median sum of |pushes| 101416.4; margin / that: median 0.000, under 2% on 0.92 of lists, under 10% on 0.99

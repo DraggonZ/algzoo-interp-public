@@ -1,0 +1,28 @@
+args {'name': 'seed1_b1e-3', 'beta': 0.001, 'p': 1.0, 'p_anneal': None, 'steps': 20000, 'batch': 2048, 'lr': 0.003, 'C': '8,48,20', 'gauge': None, 'seed': 1, 'faith': 100.0, 'n_eval': 1048576}
+step      0 lr 3.00e-03 p 1.00 faith 3.823 recon 2.224 layer 15.72 imp 158.9
+step   1000 lr 2.98e-03 p 1.00 faith 0.0005141 recon 0.2812 layer 0.1315 imp 414.3
+step   2000 lr 2.93e-03 p 1.00 faith 5.626e-05 recon 0.07417 layer 0.03011 imp 422.8
+step   3000 lr 2.84e-03 p 1.00 faith 2.909e-05 recon 0.05341 layer 0.02165 imp 424
+step   4000 lr 2.71e-03 p 1.00 faith 0.0006407 recon 0.287 layer 0.1808 imp 373
+step   5000 lr 2.56e-03 p 1.00 faith 0.0001622 recon 0.1226 layer 0.04934 imp 372.2
+step   6000 lr 2.38e-03 p 1.00 faith 2.445e-05 recon 0.07117 layer 0.0294 imp 383.1
+step   7000 lr 2.18e-03 p 1.00 faith 1.99e-05 recon 0.05644 layer 0.02247 imp 378.8
+step   8000 lr 1.96e-03 p 1.00 faith 2.385e-05 recon 0.1757 layer 0.06517 imp 377.9
+step   9000 lr 1.73e-03 p 1.00 faith 1.095e-05 recon 0.06914 layer 0.02339 imp 372.6
+step  10000 lr 1.50e-03 p 1.00 faith 1.137e-05 recon 0.08506 layer 0.03889 imp 363.8
+step  11000 lr 1.27e-03 p 1.00 faith 0.0007378 recon 0.3045 layer 0.1849 imp 319.2
+step  12000 lr 1.04e-03 p 1.00 faith 9.775e-06 recon 0.03522 layer 0.01367 imp 355.5
+step  13000 lr 8.19e-04 p 1.00 faith 9.388e-06 recon 0.03086 layer 0.01402 imp 350.1
+step  14000 lr 6.18e-04 p 1.00 faith 8.357e-06 recon 0.04609 layer 0.01736 imp 346.3
+step  15000 lr 4.39e-04 p 1.00 faith 7.938e-06 recon 0.03525 layer 0.01181 imp 345.1
+step  16000 lr 2.86e-04 p 1.00 faith 5.889e-06 recon 0.02349 layer 0.01098 imp 341.4
+step  17000 lr 1.63e-04 p 1.00 faith 4.935e-06 recon 0.02537 layer 0.009844 imp 338.1
+step  18000 lr 7.34e-05 p 1.00 faith 4.434e-06 recon 0.01932 layer 0.008317 imp 338.9
+step  19000 lr 1.85e-05 p 1.00 faith 3.914e-06 recon 0.02304 layer 0.009941 imp 337.8
+step  20000 lr 0.00e+00 p 1.00 faith 3.851e-06 recon 0.02197 layer 0.008751 imp 338.1
+eval tau 0.1: {"acc_arc": 0.95306, "kl_active": 0.02401, "acc_active": 0.94753, "agree_active": 0.97361, "kl_ci": 0.06061, "acc_ci": 0.93629, "agree_ci": 0.95679, "kl_all": 0.00764, "acc_all": 0.95057, "agree_all": 0.98735, "uses_hi": 52.56345, "distinct_hi": 7.98164, "uses_hh": 300.32655, "distinct_hh": 41.70292, "uses_oh": 19.83558, "distinct_oh": 19.83558, "n_lists": 1048576, "ever_active": {"hi": 8, "hh": 46, "oh": 20}}
+  fraction of lists using each hi component (sorted): [1.0, 1.0, 1.0, 0.9990000128746033, 0.9990000128746033, 0.9980000257492065, 0.996999979019165, 0.9879999756813049]
+  fraction of lists using each hh component (sorted): [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.9990000128746033, 0.9990000128746033, 0.9990000128746033, 0.9990000128746033, 0.9980000257492065, 0.9980000257492065, 0.9980000257492065, 0.996999979019165, 0.996999979019165, 0.9909999966621399, 0.9890000224113464, 0.9639999866485596, 0.9409999847412109, 0.8999999761581421, 0.8790000081062317, 0.054999999701976776, 0.0010000000474974513, 0.0, 0.0, 0.0, 0.0]
+  fraction of lists using each oh component (sorted): [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.9980000257492065, 0.9900000095367432, 0.984000027179718, 0.9739999771118164, 0.9520000219345093, 0.9369999766349792]
+eval tau 0.01: {"acc_arc": 0.95306, "kl_active": 0.01866, "acc_active": 0.94911, "agree_active": 0.97696, "kl_ci": 0.06061, "acc_ci": 0.93629, "agree_ci": 0.95679, "kl_all": 0.00764, "acc_all": 0.95057, "agree_all": 0.98735, "uses_hi": 53.06568, "distinct_hi": 7.98427, "uses_hh": 309.43157, "distinct_hh": 42.02526, "uses_oh": 19.90047, "distinct_oh": 19.90047, "n_lists": 1048576, "ever_active": {"hi": 8, "hh": 47, "oh": 20}}
+saved

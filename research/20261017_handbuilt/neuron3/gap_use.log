@@ -1,0 +1,13 @@
+S3 by quartile of final gap largest - second: share of new mistakes, accuracy of network, accuracy under S3, share of new mistakes naming the largest / one earlier
+   quartile 1:   25%   net  93.8   S3  77.7   largest    9%  one earlier   26%
+   quartile 2:   18%   net  97.1   S3  84.6   largest    2%  one earlier   37%
+   quartile 3:   16%   net  96.5   S3  85.4   largest   10%  one earlier   43%
+   quartile 4:   40%   net  93.7   S3  65.1   largest   42%  one earlier   30%
+S3 by quartile of final gap second - third: share of new mistakes, accuracy of network, accuracy under S3, share of new mistakes naming the largest / one earlier
+   quartile 1:   49%   net  86.0   S3  53.8   largest    9%  one earlier   27%
+   quartile 2:   31%   net  97.4   S3  75.4   largest   20%  one earlier   39%
+   quartile 3:   14%   net  98.6   S3  88.6   largest   41%  one earlier   40%
+   quartile 4:    6%   net  99.0   S3  95.0   largest   74%  one earlier   29%
+S1 gap formula (reference)                   acc  92.6   new mistakes one earlier   31%  largest   40%
+G2(i) gap formula, gap from another list     acc  69.9   new mistakes one earlier   28%  largest   19%
+G2(ii) g*(largest + second), refitted        acc  80.5   new mistakes one earlier   32%  largest   22%

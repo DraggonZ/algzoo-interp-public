@@ -1,0 +1,27 @@
+ARC     lead/pushes 0.022; typical |offset| 0.0160; change at 0.5% weight noise 0.0208; pattern correlation 0.61
+zoo0    lead/pushes 0.006; typical |offset| 0.0306; change at 0.5% weight noise 0.0711; pattern correlation 0.34
+zoo1    lead/pushes 0.006; typical |offset| 0.0307; change at 0.5% weight noise 0.0297; pattern correlation 0.61
+zoo2    lead/pushes 0.016; typical |offset| 0.0190; change at 0.5% weight noise 0.0125; pattern correlation 0.87
+zoo3    lead/pushes 0.021; typical |offset| 0.0284; change at 0.5% weight noise 0.0226; pattern correlation 0.74
+zoo4    lead/pushes 0.005; typical |offset| 0.0419; change at 0.5% weight noise 0.0417; pattern correlation 0.51
+new100  lead/pushes 0.015; typical |offset| 0.0180; change at 0.5% weight noise 0.0332; pattern correlation 0.54
+new101  lead/pushes 0.010; typical |offset| 0.0308; change at 0.5% weight noise 0.0285; pattern correlation 0.64
+new102  lead/pushes 0.009; typical |offset| 0.0302; change at 0.5% weight noise 0.0429; pattern correlation 0.60
+new103  lead/pushes 0.016; typical |offset| 0.0163; change at 0.5% weight noise 0.0116; pattern correlation 0.84
+new104  lead/pushes 0.007; typical |offset| 0.0278; change at 0.5% weight noise 0.0792; pattern correlation 0.31
+new105  lead/pushes 0.006; typical |offset| 0.0283; change at 0.5% weight noise 0.0431; pattern correlation 0.62
+new106  lead/pushes 0.012; typical |offset| 0.0236; change at 0.5% weight noise 0.0256; pattern correlation 0.57
+new107  lead/pushes 0.007; typical |offset| 0.0185; change at 0.5% weight noise 0.0252; pattern correlation 0.59
+new108  lead/pushes 0.015; typical |offset| 0.0200; change at 0.5% weight noise 0.0276; pattern correlation 0.70
+new109  lead/pushes 0.009; typical |offset| 0.0255; change at 0.5% weight noise 0.0587; pattern correlation 0.46
+new110  lead/pushes 0.006; typical |offset| 0.0341; change at 0.5% weight noise 0.0623; pattern correlation 0.43
+new111  lead/pushes 0.023; typical |offset| 0.0141; change at 0.5% weight noise 0.0178; pattern correlation 0.72
+new112  lead/pushes 0.005; typical |offset| 0.0237; change at 0.5% weight noise 0.1041; pattern correlation 0.18
+new113  lead/pushes 0.014; typical |offset| 0.0428; change at 0.5% weight noise 0.0370; pattern correlation 0.73
+new114  lead/pushes 0.006; typical |offset| 0.0483; change at 0.5% weight noise 0.0429; pattern correlation 0.62
+new115  lead/pushes 0.013; typical |offset| 0.0129; change at 0.5% weight noise 0.0145; pattern correlation 0.76
+rank correlation, lead/pushes vs typical |offset|: -0.61 (p 0.003)
+rank correlation, lead/pushes vs offset change at 0.5% noise: -0.77 (p 0.000)
+rank correlation, lead/pushes vs pattern correlation: 0.67 (p 0.001)
+rank correlation, lead/pushes vs offset change relative to typical offset: -0.42 (p 0.053)
+rank correlation, accuracy vs typical |offset|: -0.89 (p 0.000)

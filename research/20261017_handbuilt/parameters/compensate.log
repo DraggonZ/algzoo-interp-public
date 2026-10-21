@@ -1,0 +1,27 @@
+ARC 0.95314; recurrent weights costing under 0.1 point: plain zeroing 34, zeroing with compensation 39 of 256
+
+cost bins (points)      plain  compensated
+   -1.0 to   0.1        34     39
+    0.1 to   0.5        23     27
+    0.5 to   2.0        24     27
+    2.0 to  10.0        47     54
+   10.0 to  50.0        94     85
+   50.0 to 101.0        34     24
+
+by source -> target group: count, under 0.1 plain / compensated, median cost plain / compensated (points)
+  store/det -> store/det   4:   0 /   0    54.65 /  55.34
+  store/det -> hiding      8:   0 /   0    74.70 /  74.14
+  store/det -> gate        4:   1 /   1     5.42 /   5.22
+  store/det -> memory     16:   1 /   1    26.98 /  27.07
+  hiding    -> store/det   8:   0 /   0     6.22 /   5.58
+  hiding    -> hiding     16:   1 /   1    56.90 /  46.58
+  hiding    -> gate        8:   3 /   2     0.16 /  24.55
+  hiding    -> memory     32:   1 /   1    31.60 /  24.54
+  gate      -> store/det   4:   2 /   3     0.11 /   0.06
+  gate      -> hiding      8:   3 /   2     1.25 /   1.25
+  gate      -> gate        4:   1 /   0     0.35 /   0.19
+  gate      -> memory     16:   4 /   5     1.86 /   1.69
+  memory    -> store/det  16:   3 /   5     0.91 /   0.22
+  memory    -> hiding     32:   6 /   7     2.81 /   1.10
+  memory    -> gate       16:   3 /   6     1.13 /   0.52
+  memory    -> memory     64:   5 /   5    12.84 /   5.85

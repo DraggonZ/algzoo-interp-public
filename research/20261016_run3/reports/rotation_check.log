@@ -1,0 +1,23 @@
+example: background 0: two-direction share 0.94, turn 39 deg/step; background -0.32: share 0.94, turn 39 deg/step
+seed0: background 0: two-direction share 0.79, turn 96 deg/step; background -0.32: share 0.78, turn 116 deg/step
+seed1: background 0: two-direction share 0.96, turn 153 deg/step; background -0.32: share 0.96, turn 157 deg/step
+seed2: background 0: two-direction share 0.82, turn 106 deg/step; background -0.32: share 0.81, turn 106 deg/step
+seed3: background 0: two-direction share 0.80, turn 136 deg/step; background -0.32: share 0.79, turn 136 deg/step
+seed4: background 0: two-direction share 0.82, turn 125 deg/step; background -0.32: share 0.83, turn 125 deg/step
+100: background 0: two-direction share 0.90, turn 159 deg/step; background -0.32: share 0.90, turn 160 deg/step
+101: background 0: two-direction share 0.91, turn 165 deg/step; background -0.32: share 0.89, turn 161 deg/step
+102: background 0: two-direction share 0.82, turn 82 deg/step; background -0.32: share 0.82, turn 83 deg/step
+103: background 0: two-direction share 0.81, turn 107 deg/step; background -0.32: share 0.80, turn 106 deg/step
+104: background 0: two-direction share 0.92, turn 52 deg/step; background -0.32: share 0.93, turn 45 deg/step
+105: background 0: two-direction share 0.92, turn 121 deg/step; background -0.32: share 0.92, turn 121 deg/step
+106: background 0: two-direction share 0.81, turn 137 deg/step; background -0.32: share 0.81, turn 138 deg/step
+107: background 0: two-direction share 0.95, turn 160 deg/step; background -0.32: share 0.95, turn 158 deg/step
+108: background 0: two-direction share 0.95, turn 161 deg/step; background -0.32: share 0.94, turn 159 deg/step
+109: background 0: two-direction share 0.90, turn 45 deg/step; background -0.32: share 0.89, turn 44 deg/step
+110: background 0: two-direction share 0.92, turn 100 deg/step; background -0.32: share 0.94, turn 100 deg/step
+111: background 0: two-direction share 0.98, turn 27 deg/step; background -0.32: share 0.97, turn 27 deg/step
+112: background 0: two-direction share 0.98, turn 33 deg/step; background -0.32: share 0.98, turn 32 deg/step
+113: background 0: two-direction share 0.78, turn 41 deg/step; background -0.32: share 0.78, turn 41 deg/step
+114: background 0: two-direction share 0.80, turn 59 deg/step; background -0.32: share 0.78, turn 70 deg/step
+115: background 0: two-direction share 0.99, turn 66 deg/step; background -0.32: share 0.99, turn 66 deg/step
+turn at background -0.32: 27-161 deg/step, median 106; models turning at least 20 deg/step: 22 of 22

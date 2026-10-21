@@ -1,0 +1,346 @@
+[
+ {
+  "group": "cancellers",
+  "kind": "ours",
+  "label": "account",
+  "med": 2.579170230931822,
+  "share": 0.88904,
+  "acc": 0.55908
+ },
+ {
+  "group": "cancellers",
+  "kind": "misreading",
+  "label": "wave from m2",
+  "med": 3.009224563621597,
+  "share": 0.92086,
+  "acc": 0.42554
+ },
+ {
+  "group": "cancellers",
+  "kind": "misreading",
+  "label": "no wave",
+  "med": 3.4545460852080763,
+  "share": 0.9516,
+  "acc": 0.18064
+ },
+ {
+  "group": "cancellers",
+  "kind": "misreading",
+  "label": "angle +20",
+  "med": 3.55294087896327,
+  "share": 0.94248,
+  "acc": 0.38636
+ },
+ {
+  "group": "cancellers",
+  "kind": "inexact",
+  "label": "scaled 1.02",
+  "med": 0.36067180133888177,
+  "share": 0.17226,
+  "acc": 0.93008
+ },
+ {
+  "group": "cancellers",
+  "kind": "inexact",
+  "label": "scaled 1.05",
+  "med": 0.9425651907530144,
+  "share": 0.47404,
+  "acc": 0.86514
+ },
+ {
+  "group": "cancellers",
+  "kind": "inexact",
+  "label": "scaled 1.10",
+  "med": 2.033593768315782,
+  "share": 0.78368,
+  "acc": 0.74924
+ },
+ {
+  "group": "cancellers",
+  "kind": "inexact",
+  "label": "scaled 1.20",
+  "med": 4.70172599071563,
+  "share": 0.93784,
+  "acc": 0.55224
+ },
+ {
+  "group": "cancellers",
+  "kind": "inexact",
+  "label": "scaled 1.30",
+  "med": 8.142782082085834,
+  "share": 0.971,
+  "acc": 0.41882
+ },
+ {
+  "group": "cancellers",
+  "kind": "inexact",
+  "label": "noise 0.01",
+  "med": 0.3954228886667498,
+  "share": 0.1973,
+  "acc": 0.9157
+ },
+ {
+  "group": "cancellers",
+  "kind": "inexact",
+  "label": "noise 0.03",
+  "med": 1.163331142585295,
+  "share": 0.56186,
+  "acc": 0.77006
+ },
+ {
+  "group": "cancellers",
+  "kind": "inexact",
+  "label": "noise 0.1",
+  "med": 3.6442879851506165,
+  "share": 0.92356,
+  "acc": 0.46134
+ },
+ {
+  "group": "store+detector",
+  "kind": "ours",
+  "label": "account",
+  "med": 0.84928095383878,
+  "share": 0.42714,
+  "acc": 0.85094
+ },
+ {
+  "group": "store+detector",
+  "kind": "misreading",
+  "label": "store tracks second",
+  "med": 3.0650614802280027,
+  "share": 0.95314,
+  "acc": 0.43448
+ },
+ {
+  "group": "store+detector",
+  "kind": "inexact",
+  "label": "scaled 1.02",
+  "med": 0.8617010360635635,
+  "share": 0.43028,
+  "acc": 0.85822
+ },
+ {
+  "group": "store+detector",
+  "kind": "inexact",
+  "label": "scaled 1.05",
+  "med": 2.2639093183843118,
+  "share": 0.85088,
+  "acc": 0.69642
+ },
+ {
+  "group": "store+detector",
+  "kind": "inexact",
+  "label": "scaled 1.10",
+  "med": 4.980097990731245,
+  "share": 0.97976,
+  "acc": 0.44382
+ },
+ {
+  "group": "store+detector",
+  "kind": "inexact",
+  "label": "scaled 1.20",
+  "med": 13.434534791378095,
+  "share": 0.99628,
+  "acc": 0.23036
+ },
+ {
+  "group": "store+detector",
+  "kind": "inexact",
+  "label": "scaled 1.30",
+  "med": 28.860413433110253,
+  "share": 0.99834,
+  "acc": 0.1419
+ },
+ {
+  "group": "store+detector",
+  "kind": "inexact",
+  "label": "noise 0.01",
+  "med": 0.15756199302842502,
+  "share": 0.0833,
+  "acc": 0.94124
+ },
+ {
+  "group": "store+detector",
+  "kind": "inexact",
+  "label": "noise 0.03",
+  "med": 0.4736698197474897,
+  "share": 0.25468,
+  "acc": 0.89894
+ },
+ {
+  "group": "store+detector",
+  "kind": "inexact",
+  "label": "noise 0.1",
+  "med": 1.5236246017411526,
+  "share": 0.66468,
+  "acc": 0.73144
+ },
+ {
+  "group": "keep gate",
+  "kind": "ours",
+  "label": "account",
+  "med": 0.4843106259206475,
+  "share": 0.26238,
+  "acc": 0.87158
+ },
+ {
+  "group": "keep gate",
+  "kind": "misreading",
+  "label": "gate vs largest",
+  "med": 1.204043191001408,
+  "share": 0.57072,
+  "acc": 0.6668
+ },
+ {
+  "group": "keep gate",
+  "kind": "inexact",
+  "label": "scaled 1.02",
+  "med": 0.06904415092131438,
+  "share": 0.02676,
+  "acc": 0.9515
+ },
+ {
+  "group": "keep gate",
+  "kind": "inexact",
+  "label": "scaled 1.05",
+  "med": 0.17162026492652654,
+  "share": 0.06714,
+  "acc": 0.94516
+ },
+ {
+  "group": "keep gate",
+  "kind": "inexact",
+  "label": "scaled 1.10",
+  "med": 0.33865034236976854,
+  "share": 0.14332,
+  "acc": 0.92718
+ },
+ {
+  "group": "keep gate",
+  "kind": "inexact",
+  "label": "scaled 1.20",
+  "med": 0.6527457971620677,
+  "share": 0.31012,
+  "acc": 0.88172
+ },
+ {
+  "group": "keep gate",
+  "kind": "inexact",
+  "label": "scaled 1.30",
+  "med": 0.94163913611259,
+  "share": 0.47022,
+  "acc": 0.8331
+ },
+ {
+  "group": "keep gate",
+  "kind": "inexact",
+  "label": "noise 0.01",
+  "med": 0.026261308463473413,
+  "share": 0.013,
+  "acc": 0.95214
+ },
+ {
+  "group": "keep gate",
+  "kind": "inexact",
+  "label": "noise 0.03",
+  "med": 0.07758925663897884,
+  "share": 0.03672,
+  "acc": 0.94908
+ },
+ {
+  "group": "keep gate",
+  "kind": "inexact",
+  "label": "noise 0.1",
+  "med": 0.2528979578681204,
+  "share": 0.1268,
+  "acc": 0.9239
+ },
+ {
+  "group": "memory",
+  "kind": "ours",
+  "label": "account",
+  "med": 3.6621316710441807,
+  "share": 0.95718,
+  "acc": 0.50902
+ },
+ {
+  "group": "memory",
+  "kind": "misreading",
+  "label": "keep above half",
+  "med": 3.6560010514118058,
+  "share": 0.9559,
+  "acc": 0.50234
+ },
+ {
+  "group": "memory",
+  "kind": "misreading",
+  "label": "keep all",
+  "med": 3.6156005020456607,
+  "share": 0.954,
+  "acc": 0.50166
+ },
+ {
+  "group": "memory",
+  "kind": "inexact",
+  "label": "scaled 1.02",
+  "med": 0.5927942262292576,
+  "share": 0.27408,
+  "acc": 0.92374
+ },
+ {
+  "group": "memory",
+  "kind": "inexact",
+  "label": "scaled 1.05",
+  "med": 1.5688209086043106,
+  "share": 0.71892,
+  "acc": 0.75868
+ },
+ {
+  "group": "memory",
+  "kind": "inexact",
+  "label": "scaled 1.10",
+  "med": 3.4717746413938633,
+  "share": 0.9688,
+  "acc": 0.49818
+ },
+ {
+  "group": "memory",
+  "kind": "inexact",
+  "label": "scaled 1.20",
+  "med": 8.368137876477974,
+  "share": 0.99948,
+  "acc": 0.3586
+ },
+ {
+  "group": "memory",
+  "kind": "inexact",
+  "label": "scaled 1.30",
+  "med": 15.10992875021421,
+  "share": 1.0,
+  "acc": 0.30594
+ },
+ {
+  "group": "memory",
+  "kind": "inexact",
+  "label": "noise 0.01",
+  "med": 0.1428145531717791,
+  "share": 0.06292,
+  "acc": 0.94928
+ },
+ {
+  "group": "memory",
+  "kind": "inexact",
+  "label": "noise 0.03",
+  "med": 0.42045640863733147,
+  "share": 0.2026,
+  "acc": 0.9257
+ },
+ {
+  "group": "memory",
+  "kind": "inexact",
+  "label": "noise 0.1",
+  "med": 1.3510501362090754,
+  "share": 0.62898,
+  "acc": 0.78442
+ }
+]

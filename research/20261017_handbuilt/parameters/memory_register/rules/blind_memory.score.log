@@ -1,0 +1,7 @@
+score_memory_rule.py sha256 d6caf822e120; rule blind_memory.py
+8 weights covered, 1 constants, 1 kinds; relative weight error 0.0159; structure 67 bits; lookup table 2369 bits
+  share 0.001: constants 8 bits (8.1 each) + structure 67 + rest 2362; net -68
+  share 0.002: constants 8 bits (7.6 each) + structure 67 + rest 2377; net -83
+  share 0.005: constants 7 bits (6.9 each) + structure 67 + rest 2429; net -135
+KL from ARC 0.0091 (budget 0.02); accuracy 0.9508 (ARC 0.9531)
+NET -68.0

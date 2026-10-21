@@ -1,0 +1,7 @@
+22 trained networks; lead/pushes from robust_across.log, simulation losses from sim_across.log (30-quantity formulas)
+loss, one neuron (median): vs lead/pushes -0.70 (p 0.0003); vs variance matched -0.49 (p 0.0216)
+loss, worst neuron: vs lead/pushes -0.84 (p 0.0000); vs variance matched -0.33 (p 0.1285)
+loss, all 16: vs lead/pushes 0.26 (p 0.2493); vs variance matched 0.05 (p 0.8182)
+with accuracy held fixed (partial rank correlations, 22 networks):
+  lead/pushes vs median single-neuron loss: -0.54; variance matched vs median single-neuron loss: -0.46; accuracy vs median single-neuron loss (plain): -0.52
+  lead/pushes vs worst single-neuron loss: -0.64; variance matched vs worst single-neuron loss: -0.28; accuracy vs worst single-neuron loss (plain): -0.71

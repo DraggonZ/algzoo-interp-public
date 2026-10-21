@@ -1,0 +1,4 @@
+number of weights: 432
+ARC: accuracy 95.34%, mistakes naming the largest 20.1%
+50 copies: mean accuracy 90.26% (sd 2.98, range 82.2-94.1)
+  mean share of mistakes naming the largest 30.1% (sd 10.7)

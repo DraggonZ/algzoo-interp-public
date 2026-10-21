@@ -1,0 +1,16 @@
+network accuracy 0.955; account 0.912; agreement 0.923
+disagreement by the network's lead (quantile bins):
+  lead   0.00-  1.97: disagree 0.380
+  lead   1.97-  4.44: disagree 0.137
+  lead   4.44-  8.20: disagree 0.050
+  lead   8.20- 13.66: disagree 0.018
+  lead  13.66-105.65: disagree 0.006
+when they disagree, the account names: {'largest': 0.199, 'second': 0.19, 'third': 0.496, 'other': 0.115}
+when they disagree, the network names: {'largest': 0.061, 'second': 0.751, 'third': 0.156, 'other': 0.032}
+disagreement by the gap between second and third numbers:
+  gap  0.00- 0.04: disagree 0.310
+  gap  0.04- 0.11: disagree 0.133
+  gap  0.11- 0.26: disagree 0.044
+  gap  0.26- 2.92: disagree 0.030
+account names the largest (0.015 of lists): largest after second 0.66 (all lists 0.50); largest at position 9 0.12 (all 0.10)
+account names the third (0.038 of lists): median gap 0.04 (all 0.26)

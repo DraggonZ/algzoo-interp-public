@@ -1,0 +1,35 @@
+round 1 memory_register/rules/shift_pairs.py: 70 covered, 0 not scale-free; max dev 3.94e-14
+round 2 memory_register/rules/shift_joint.py: 98 covered, 96 not scale-free; max dev 3.15e+00
+    11->out8: 3.146
+    12->out8: 2.575
+    13->out8: 2.299
+    2->out2: 2.020
+    2->out7: 1.751
+    8->out7: 1.536
+    14->out8: 1.210
+    1->out8: 1.125
+    13->out7: 0.852
+    5->out3: 0.831
+    0->out3: 0.768
+    13->out4: 0.698
+round 3 memory_register/rules/chain_push_sum.py: 128 covered, 0 not scale-free; max dev 1.94e-14
+round 4 memory_register/rules/delay_line.py: 136 covered, 1 not scale-free; max dev 1.46e+00
+    11->10: 1.464
+round 5 memory_register/rules/delay_kick.py: 137 covered, 2 not scale-free; max dev 9.62e-01
+    11->10: 0.962
+    4->10: 0.962
+round 6 storegate_rules/rules/overwrite_store.py: 153 covered, 2 not scale-free; max dev 4.55e-01
+    11->10: 0.455
+    4->10: 0.455
+round 7 hiding_v2/rules/comparators_chain.py: 204 covered, 2 not scale-free; max dev 6.44e-01
+    11->10: 0.644
+    4->10: 0.644
+round 8 hiding_v2/rules/r8b_chain.py: 207 covered, 2 not scale-free; max dev 5.76e-01
+    4->10: 0.576
+    11->10: 0.576
+round 9 hiding_v2/rules/r9b_chain.py: 207 covered, 2 not scale-free; max dev 5.90e-01
+    4->10: 0.590
+    11->10: 0.590
+round 12 open/rules/r12a_regpush.py: 223 covered, 2 not scale-free; max dev 1.68e+00
+    11->10: 1.684
+    4->10: 1.684

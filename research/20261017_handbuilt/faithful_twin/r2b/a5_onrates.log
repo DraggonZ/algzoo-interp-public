@@ -1,0 +1,10 @@
+linear  off 0.126  min pre -3.588
+mem0    off 0.201  min pre -2.196
+mem1    off 0.000  min pre +0.000
+mem2    off 0.000  min pre +0.000
+mem3    off 0.000  min pre +0.000
+mem4    off 0.000  min pre +0.000
+mem5    off 0.000  min pre +0.000
+mem6    off 0.000  min pre +0.000
+mem7    off 0.146  min pre -1.816
+y7 / L: min -62187.41683526037  max 11128.336538008543  pre of y7 < 0 at steps: [0.499 0.295 0.175 0.096 0.056 0.032 0.036 0.029 0.099]

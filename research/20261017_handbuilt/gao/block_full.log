@@ -1,0 +1,7 @@
+late gate from account: nonzero on 0.019 of off steps, median value there 0.617
+late gate from menu: nonzero on 0.103 of off steps, median value there 11.457
+all 16 replaced by the block account: accuracy 0.867
+  with the cancelling      exact (the rest simulated): 0.840
+  with the store+detector  exact (the rest simulated): 0.868
+  with the keep gate       exact (the rest simulated): 0.913
+  with the late gate       exact (the rest simulated): 0.867

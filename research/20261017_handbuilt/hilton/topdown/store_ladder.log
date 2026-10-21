@@ -1,0 +1,7 @@
+ratio by age: 1:17.69 2:17.59 3:18.48 4:18.16 5:16.93 6:15.56 7:14.76 8:14.88 9:15.87
+residual spread (robust SD, units of L): 1:0.40 2:0.46 3:0.29 4:0.58 5:1.28 6:2.00 7:2.38 8:2.19 9:1.67
+intact network: 95.23%
+rule 0: 17.6 x largest, no leak                       85.98%  (-9.25)
+rule 1: 17.6 x largest x 0.969^(age-1) (own leak)     84.43%  (-10.80)
+rule 2: age table r(age) x largest                    90.90%  (-4.34)
+rule 3: age table + residual as random noise          85.08%  (-10.15)

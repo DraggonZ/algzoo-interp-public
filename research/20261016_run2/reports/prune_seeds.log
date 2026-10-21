@@ -1,0 +1,5 @@
+seed 0: truth 0.997872 ± 9.9e-07 | exact 0.997872 (z -0.5, 88666 samples) | prune 3e-06: error +7.7e-05 at 46366 samples (sampling RMSE 2.1e-04) | prune 1e-05: error +1.4e-04 at 36673 samples (sampling RMSE 2.4e-04)
+seed 1: truth 0.997728 ± 1.0e-06 | exact 0.997727 (z -0.7, 89826 samples) | prune 3e-06: error +7.6e-05 at 47096 samples (sampling RMSE 2.2e-04) | prune 1e-05: error +1.6e-04 at 38627 samples (sampling RMSE 2.4e-04)
+seed 2: truth 0.997803 ± 1.0e-06 | exact 0.997803 (z -0.2, 106887 samples) | prune 3e-06: error +9.4e-05 at 53173 samples (sampling RMSE 2.0e-04) | prune 1e-05: error +1.8e-04 at 41662 samples (sampling RMSE 2.3e-04)
+seed 3: truth 0.998307 ± 8.9e-07 | exact 0.998307 (z -0.7, 91513 samples) | prune 3e-06: error +5.7e-05 at 41446 samples (sampling RMSE 2.0e-04) | prune 1e-05: error +1.1e-04 at 34124 samples (sampling RMSE 2.2e-04)
+seed 4: truth 0.997277 ± 1.1e-06 | exact 0.997277 (z -0.3, 93289 samples) | prune 3e-06: error +9.7e-05 at 46137 samples (sampling RMSE 2.4e-04) | prune 1e-05: error +1.8e-04 at 36586 samples (sampling RMSE 2.7e-04)

@@ -1,0 +1,6 @@
+example: estimate 0.9611; runs 3750 (3750 samples' worth as separate runs); distinct inputs 3030; prefix-tree steps 11453 (separate runs need 37500); cost with sharing 1346 samples' worth (was 3846); scores identical
+0: estimate 0.9119; runs 3949 (3949 samples' worth as separate runs); distinct inputs 3229; prefix-tree steps 12071 (separate runs need 39490); cost with sharing 1415 samples' worth (was 4045); scores identical
+1: estimate 0.8671; runs 3976 (3976 samples' worth as separate runs); distinct inputs 3256; prefix-tree steps 12068 (separate runs need 39760); cost with sharing 1417 samples' worth (was 4072); scores identical
+2: estimate 0.9478; runs 3770 (3770 samples' worth as separate runs); distinct inputs 3050; prefix-tree steps 11479 (separate runs need 37700); cost with sharing 1350 samples' worth (was 3866); scores identical
+3: estimate 0.9352; runs 3871 (3871 samples' worth as separate runs); distinct inputs 3151; prefix-tree steps 11836 (separate runs need 38710); cost with sharing 1389 samples' worth (was 3967); scores identical
+4: estimate 0.8792; runs 4043 (4043 samples' worth as separate runs); distinct inputs 3323; prefix-tree steps 12347 (separate runs need 40430); cost with sharing 1447 samples' worth (was 4139); scores identical

@@ -1,0 +1,23 @@
+ARC     1:   1.8 p  +8.8 m1 -10.6 x (1.00, largest) | 6:  11.1 p  -0.5 m1 -11.0 x (1.00, second) | 7:  -0.1 p +13.4 m1 -13.2 x (1.00, largest) | 8:  13.1 p  -0.4 m1 -12.3 x (1.00, second)
+zoo0    6:   3.2 p  +9.5 m1 -13.1 x (1.00, largest) | 12:   1.0 p +11.0 m1 -12.2 x (1.00, largest)
+zoo1    no hiding neurons
+zoo2    0: 853.7 p -852.8 m1  -7.7 x (1.00, second) | 3: 793.9 p -793.3 m1  -8.3 x (1.00, second) | 6: 875.9 p -874.4 m1  -8.3 x (1.00, second)
+zoo3    1:   9.6 p  +1.0 m1 -10.4 x (1.00, second) | 3:   8.8 p  +1.7 m1 -10.9 x (1.00, second) | 14:   9.3 p  +1.6 m1 -11.2 x (1.00, second)
+zoo4    4:  -5.1 p +15.9 m1 -11.0 x (0.99, largest)
+new100  1:   4.3 p  +5.4 m1 -10.1 x (1.00, largest) | 4:   4.5 p  +5.1 m1 -10.0 x (1.00, largest) | 13:   3.2 p  +3.8 m1  -7.3 x (1.00, largest)
+new101  10:   8.8 p  +2.1 m1 -11.6 x (1.00, second) | 13:   6.5 p  +5.8 m1 -12.5 x (1.00, second)
+new102  3:   1.2 p  +8.5 m1  -8.9 x (0.99, largest) | 5:   8.1 p  +2.9 m1 -10.7 x (1.00, second) | 6:   7.2 p  +5.1 m1 -12.3 x (1.00, second)
+new103  0: 737.4 p -740.0 m1  -7.7 x (1.00, second) | 10: 743.5 p -744.9 m1  -7.9 x (1.00, second)
+new104  10:   6.1 p  +3.4 m1 -10.2 x (1.00, second) | 13:  11.9 p  -1.0 m1 -10.9 x (1.00, second)
+new105  11:   3.6 p  +7.9 m1 -11.3 x (0.98, largest)
+new106  1:  11.6 p  -0.5 m1 -11.0 x (1.00, second) | 2:  -0.8 p +12.4 m1 -11.5 x (1.00, largest) | 7:  12.8 p  -0.3 m1 -12.6 x (1.00, second) | 8:  -1.1 p +13.7 m1 -12.6 x (1.00, largest)
+new107  2:   7.2 p  +2.9 m1 -10.6 x (0.99, second) | 4:   3.1 p +12.8 m1 -16.0 x (1.00, largest)
+new108  1:   6.6 p  +7.3 m1 -14.5 x (1.00, largest) | 12:  -1.7 p +13.9 m1 -11.9 x (1.00, largest) | 15:   8.1 p  +4.6 m1 -12.4 x (1.00, second)
+new109  5:   5.2 p  +6.3 m1 -12.1 x (1.00, largest) | 14:   7.9 p  +2.9 m1 -11.8 x (1.00, second)
+new110  no hiding neurons
+new111  4: 463.1 p -458.5 m1  -6.9 x (1.00, second) | 8: 393.0 p -388.9 m1  -6.3 x (1.00, second) | 9:  -0.3 p +11.1 m1 -10.6 x (1.00, largest) | 12:   8.3 p  +0.4 m1  -8.8 x (1.00, second)
+new112  no hiding neurons
+new113  3:   6.2 p  +3.5 m1  -9.8 x (1.00, second) | 5:   7.2 p  +3.0 m1 -10.0 x (1.00, second) | 7:   8.1 p  +0.9 m1  -9.2 x (1.00, second) | 9:   1.9 p  +6.3 m1  -6.8 x (1.00, largest)
+new114  no hiding neurons
+new115  5:  13.0 p  -0.1 m1 -12.7 x (1.00, second) | 6:  11.9 p  +0.4 m1 -12.1 x (1.00, second) | 7:   0.0 p +12.6 m1 -12.2 x (1.00, largest)
+networks with a hiding neuron that compares with the second-largest one step after a record: 14 of 18

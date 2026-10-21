@@ -1,0 +1,22 @@
+--- block the change in 0, 14, 15 at L+2: score change by offset from the old largest r (mean | slope on P)
+  offset -3: mean  -13.2 | slope on P   -7.6
+  offset -2: mean   -7.2 | slope on P   -2.5
+  offset -1: mean    2.9 | slope on P    5.2
+  offset +0: mean   10.2 | slope on P    9.9
+  offset +1: mean   14.5 | slope on P   12.7
+  offset +2: mean   12.2 | slope on P   10.3
+  offset +3: mean    9.5 | slope on P    7.6
+  offset +4: mean   -3.3 | slope on P   -3.7
+  offset +5: mean   -5.3 | slope on P   -5.7
+  at the current largest L: mean  -34.3 | slope on P  -35.7, on x_L    3.1
+--- block the change in 10-13 at L+2: score change by offset from the old largest r (mean | slope on P)
+  offset -3: mean   -5.6 | slope on P    3.7
+  offset -2: mean   10.8 | slope on P   -3.0
+  offset -1: mean   26.2 | slope on P   -5.9
+  offset +0: mean   37.9 | slope on P   -7.6
+  offset +1: mean   30.6 | slope on P   -0.1
+  offset +2: mean    4.9 | slope on P   -1.9
+  offset +3: mean  -10.6 | slope on P   -5.3
+  offset +4: mean  -17.1 | slope on P   -0.9
+  offset +5: mean  -14.3 | slope on P    4.1
+  at the current largest L: mean  -33.5 | slope on P   52.9, on x_L  -56.3

@@ -1,0 +1,15 @@
+all kept votes equal, no shrink (delta kernel)                     0.9905
+flat 25% shrink per later bigger, all kinds                        0.9905
+  same, plus 40% spill                                             0.9795
+network-like: old largest keeps vote, kept cut by later bigger     0.9905
+  plus forgotten numbers vote 0.4x                                 0.9894
+  plus last input votes 0.7x                                       0.9734
+  plus 13% spill                                                   0.9576
+  plus 40% spill                                                   0.8812
+
+what the earlier simplified model did differently
+flat 25% shrink that also hits the old largest's revealing step    0.9086
+  plus last input at full size 1.0x                                0.9086
+network-like, last input 1.0x instead of 0.7x                      0.9612
+network-like, last input 0.4x                                      0.9123
+network-like, no forgotten votes                                   0.9672

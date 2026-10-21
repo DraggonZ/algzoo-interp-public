@@ -1,0 +1,4 @@
+trained            no noise 0.951 | sigma 0.005: true 0.904 (copies SD 0.029), predicted 0.908 | sigma 0.01: true 0.821 (copies SD 0.057), predicted 0.815 | sigma 0.02: true 0.647 (copies SD 0.088), predicted 0.649
+robust twin v21    no noise 0.957 | sigma 0.005: true 0.904 (copies SD 0.022), predicted 0.906 | sigma 0.01: true 0.846 (copies SD 0.041), predicted 0.854 | sigma 0.02: true 0.753 (copies SD 0.066), predicted 0.767
+v18 gains 10       no noise 0.920 | sigma 0.005: true 0.612 (copies SD 0.055), predicted 0.620 | sigma 0.01: true 0.486 (copies SD 0.070), predicted 0.491 | sigma 0.02: true 0.314 (copies SD 0.068), predicted 0.327
+v18 clock gain 50  no noise 0.952 | sigma 0.005: true 0.298 (copies SD 0.071), predicted 0.308 | sigma 0.01: true 0.188 (copies SD 0.048), predicted 0.198 | sigma 0.02: true 0.136 (copies SD 0.036), predicted 0.144

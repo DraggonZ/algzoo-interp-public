@@ -1,0 +1,6 @@
+ARC: band model full 95.24, thin only 95.32, no bands 98.86; gross A 0 B 1; flag a-tie third-party winner 0 (of which gross A 0), flag b-tie 12 (gross B 1); gross A with slope<=0 0, thin A with slope<=0 10
+200: band model full 93.51, thin only 95.37, no bands 98.86; gross A 5 B 14; flag a-tie third-party winner 4 (of which gross A 0), flag b-tie 46 (gross B 10); gross A with slope<=0 3, thin A with slope<=0 9
+201: band model full 94.28, thin only 94.75, no bands 98.86; gross A 3 B 3; flag a-tie third-party winner 2 (of which gross A 0), flag b-tie 24 (gross B 1); gross A with slope<=0 1, thin A with slope<=0 4
+208: band model full 84.62, thin only 94.23, no bands 98.86; gross A 35 B 74; flag a-tie third-party winner 14 (of which gross A 0), flag b-tie 90 (gross B 44); gross A with slope<=0 30, thin A with slope<=0 2
+212: band model full 84.86, thin only 87.75, no bands 98.86; gross A 15 B 23; flag a-tie third-party winner 4 (of which gross A 0), flag b-tie 58 (gross B 16); gross A with slope<=0 13, thin A with slope<=0 2
+215: band model full 92.75, thin only 93.42, no bands 98.86; gross A 2 B 7; flag a-tie third-party winner 0 (of which gross A 0), flag b-tie 28 (gross B 7); gross A with slope<=0 2, thin A with slope<=0 38

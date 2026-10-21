@@ -1,0 +1,4 @@
+trained  cancellers + m2pos   : KL 0.364 acc 0.918 agree 0.924
+v18      cancellers + m2pos   : KL 1.259 acc 0.906 agree 0.934
+v18      cancellers + prevrec : KL 0.000 acc 0.960 agree 0.993
+trained  cancellers + prevrec : KL 0.300 acc 0.923 agree 0.932

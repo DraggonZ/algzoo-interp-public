@@ -1,0 +1,6 @@
+keep 0.25 vs runner-up, fading 1.0       accuracy  89.9% | third wins 40.1% | maps    132 | tree 92.2% vs guess 59.9%,  80% of gain
+keep 0.25 vs runner-up, fading 0.98      accuracy  94.1% | third wins 38.2% | maps    132 | tree 83.2% vs guess 61.8%,  56% of gain
+keep 0.25 vs runner-up, fading 0.96      accuracy  94.4% | third wins 36.4% | maps    132 | tree 82.4% vs guess 63.6%,  52% of gain
+keep 0.25 vs runner-up, fading 0.95      accuracy  92.8% | third wins 38.9% | maps    125 | tree 84.6% vs guess 61.1%,  60% of gain
+keep 0.25 vs runner-up, fading 0.94      accuracy  90.7% | third wins 40.5% | maps    130 | tree 86.7% vs guess 59.5%,  67% of gain
+keep 0.25 vs runner-up, fading 0.92      accuracy  86.2% | third wins 42.1% | maps    119 | tree 89.3% vs guess 57.9%,  75% of gain

@@ -1,0 +1,13 @@
+second-third mistake rate (answer = third) by class and relative gap; three positive numbers
+gap [0, 0.01): both before largest  34.8% (n=51084) | both after largest  41.7% (n=51500) | mixed: second before, third after  45.0% (n=25853) | mixed: second after, third before  39.5% (n=25718)
+gap [0.01, 0.03): both before largest  13.9% (n=102236) | both after largest  24.9% (n=101959) | mixed: second before, third after  27.6% (n=50918) | mixed: second after, third before  24.3% (n=50920)
+gap [0.03, 0.1): both before largest   4.7% (n=344714) | both after largest   7.6% (n=343778) | mixed: second before, third after   7.5% (n=172101) | mixed: second after, third before   6.0% (n=172275)
+gap [0.1, 0.3): both before largest   1.2% (n=849316) | both after largest   1.4% (n=847864) | mixed: second before, third after   1.0% (n=423882) | mixed: second after, third before   0.5% (n=422640)
+
+within each class: does it matter which of the two arrived first? (second-third mistake rate)
+both before largest, gap [0, 0.01): third arrived first  36.3% | second arrived first  33.4%
+both before largest, gap [0.01, 0.03): third arrived first  16.2% | second arrived first  11.5%
+both before largest, gap [0.03, 0.1): third arrived first   5.7% | second arrived first   3.7%
+both after largest, gap [0, 0.01): third arrived first  35.4% | second arrived first  48.1%
+both after largest, gap [0.01, 0.03): third arrived first  22.0% | second arrived first  27.9%
+both after largest, gap [0.03, 0.1): third arrived first   8.3% | second arrived first   7.0%

@@ -1,0 +1,20 @@
+baseline: two-spike 0.9771, full 0.9530
+silence n0  (peaks at age 6, size  23.2): two-spike 0.1810, full 0.1889
+silence n3  (peaks at age 9, size   5.2): two-spike 0.6407, full 0.5467
+silence n5  (peaks at age 1, size  12.2): two-spike 0.1642, full 0.2072
+silence n9  (peaks at age 1, size   1.5): two-spike 0.7288, full 0.6666
+silence n10 (peaks at age 2, size  23.0): two-spike 0.1380, full 0.1284
+silence n11 (peaks at age 9, size  20.5): two-spike 0.1136, full 0.1113
+silence n12 (peaks at age 8, size  29.7): two-spike 0.1272, full 0.1320
+silence n13 (peaks at age 4, size   8.7): two-spike 0.3763, full 0.2984
+silence n14 (peaks at age 6, size  23.1): two-spike 0.2495, full 0.1962
+silence n15 (peaks at age 8, size  18.3): two-spike 0.6631, full 0.6345
+silence n1  (peaks at age 6, size  13.8): two-spike 0.2129, full 0.1450
+silence n2  (peaks at age 3, size  18.3): two-spike 0.1135, full 0.1790
+silence n4  (peaks at age 1, size   0.0): two-spike 0.3890, full 0.1786
+silence n6  (peaks at age 4, size  12.8): two-spike 0.1562, full 0.1383
+silence n7  (peaks at age 1, size  13.4): two-spike 0.1136, full 0.1075
+silence n8  (peaks at age 8, size  16.3): two-spike 0.2427, full 0.1753
+slide relation with step matrix on all 16: cosines [0.97 0.93 0.89 0.8  0.92 0.93 0.89 0.85 0.83]
+slide relation with step matrix on comparing only: cosines [0.67 0.79 0.85 0.79 0.75 0.82 0.87 0.57 0.84]
+slide relation with step matrix on ten other only: cosines [0.38 0.35 0.34 0.23 0.1  0.31 0.32 0.08 0.01]

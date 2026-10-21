@@ -1,0 +1,6 @@
+M8,10 seed 0: wheel share 1.00, turn 0, lone vs two spread 2.9 vs 2.3, slide 78.0%, placed/held (np.int64(170), 122, 270), ring [np.float64(0.0), np.float64(0.098), np.float64(0.23), np.float64(0.381), np.float64(0.5)]
+M8,10 seed 1: wheel share 1.00, turn -0, lone vs two spread 3.2 vs 2.8, slide 90.9%, placed/held (np.int64(124), 102, 270), ring [np.float64(0.0), np.float64(0.1), np.float64(0.229), np.float64(0.362), np.float64(0.5)]
+M8,10 seed 2: wheel share 1.00, turn -0, lone vs two spread 3.1 vs 2.3, slide 78.8%, placed/held (np.int64(100), 82, 270), ring [np.float64(0.0), np.float64(0.106), np.float64(0.235), np.float64(0.368), np.float64(0.5)]
+M32,10 seed 0: wheel share 0.99, turn 1, lone vs two spread 5.9 vs 56.5, slide 100.0%, placed/held (np.int64(270), 270, 270), ring [np.float64(0.0), np.float64(0.5)]
+M32,10 seed 1: wheel share 0.98, turn 0, lone vs two spread 4.9 vs 23.0, slide 99.6%, placed/held (np.int64(270), 267, 270), ring [np.float64(0.0), np.float64(0.077), np.float64(0.214), np.float64(0.336), np.float64(0.386), np.float64(0.462)]
+M32,10 seed 2: wheel share 0.96, turn -1, lone vs two spread 16.0 vs 27.7, slide 100.0%, placed/held (np.int64(270), 270, 270), ring [np.float64(0.009), np.float64(0.053), np.float64(0.236), np.float64(0.378), np.float64(0.5)]

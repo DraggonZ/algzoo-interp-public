@@ -1,0 +1,41 @@
+== candidate ARC   (list seed offset 1)
+
+1. Jobs checklist (same test on ARC and on the candidate)
+  PASS  store (2) follows the largest so far: correlation >= 0.9
+          ARC: 0.976
+          candidate: 0.976
+  PASS  new-largest (4) on at records >= 0.9, elsewhere <= 0.05
+          ARC: 0.999 / 0.012
+          candidate: 0.999 / 0.012
+  PASS  new-largest (4) size follows the amount beaten: correlation >= 0.75
+          ARC: 0.817
+          candidate: 0.817
+  PASS  keep gate (5): cut c in 0.6-0.85 x second-largest, agreement >= 0.85, on after records >= 0.9
+          ARC: c 0.75, agreement 0.978, after records 0.999
+          candidate: c 0.75, agreement 0.978, after records 0.999
+  PASS  late gate (9) on one step after a record >= 0.9, elsewhere <= 0.05
+          ARC: 0.981 / 0.007
+          candidate: 0.981 / 0.007
+  PASS  late gate's push two steps after a record: on 1 and 6 >= 0.04 sd and >= 3x that on 7 and 8
+          ARC: 1:0.09 6:0.09 7:0.00 8:0.01
+          candidate: 1:0.09 6:0.09 7:0.00 8:0.01
+  PASS  hiding (1, 6, 7, 8) off at records >= 0.85, on elsewhere >= 0.65, reference = largest/second mix R2 >= 0.6
+          ARC: off 0.98 0.99 0.99 0.99; on 0.93 0.92 0.99 0.87; R2 0.66 0.69 0.94 0.68
+          candidate: off 0.98 0.99 0.99 0.99; on 0.93 0.92 0.99 0.87; R2 0.66 0.69 0.94 0.68
+  PASS  hiding rebuilt each step: share of a 10% nudge at step 5 left at step 6, activity <= 0.3 and readout view <= 0.8
+          ARC: activity 0.207, readout view 0.723
+          candidate: activity 0.207, readout view 0.723
+  PASS  memory turns votes as a rotating code: push cosine >= 0.9 and >= 2 turning pairs (modulus >= 0.7)
+          ARC: cosine 0.985, turning pairs 3 (angles 38 84 127)
+          candidate: cosine 0.985, turning pairs 3 (angles 38 84 127)
+  PASS  memory 0, 11, 10 switch off at ages 2, 5, 6 of the largest (off >= 0.85 there, <= 0.30 elsewhere)
+          ARC: 0@2: 0.95/0.08  11@5: 0.91/0.02  10@6: 0.95/0.02
+          candidate: 0@2: 0.95/0.08  11@5: 0.91/0.02  10@6: 0.95/0.02
+  PASS  neuron 3 carries the gap: signs right in >= 75% of cells, median R2 of gap alone >= 0.1
+          ARC: signs 1.00, R2 0.133
+          candidate: signs 1.00, R2 0.133
+  PASS  blindness: recurrent rows outside the gates read hiding at right angles (median ratio <= 0.1)
+          ARC: median 0.004 (readout rows 0.024)
+          candidate: median 0.004 (readout rows 0.024)
+  jobs passed: 12 of 12 (ARC 12)
+SCORE jobs=12/12 transplant_mean=nan accuracy=nan working=nan

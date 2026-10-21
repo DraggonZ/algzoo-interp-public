@@ -1,0 +1,9 @@
+store reads store + detector                         mistakes reproduced  59.0%   agreement  85.50%   accuracy  84.09%
+store reads store + detector + cancelling            mistakes reproduced  61.1%   agreement  83.28%   accuracy  81.65%
+store reads store + detector + cancelling + memory   mistakes reproduced  71.9%   agreement  95.84%   accuracy  93.61%
+detector reads store + detector                      mistakes reproduced  83.6%   agreement  96.04%   accuracy  92.72%
+detector reads store + detector + cancelling         mistakes reproduced  84.7%   agreement  96.24%   accuracy  92.83%
+both read store + detector + cancelling              mistakes reproduced  60.1%   agreement  82.03%   accuracy  80.54%
+both read store + detector + cancelling + memory     mistakes reproduced  71.9%   agreement  95.88%   accuracy  93.66%
+store reads all but the keep gate                    mistakes reproduced  87.8%   agreement  98.82%   accuracy  95.17%
+store reads all but the late gate                    mistakes reproduced  76.2%   agreement  96.94%   accuracy  94.32%

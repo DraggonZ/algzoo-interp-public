@@ -1,0 +1,5 @@
+leak_check: rule shift_pairs.py, 70 covered weights, 1 constants, relative perturbation 0.05, draws [11, 12, 13]
+  draw 11: slope +0.0000; rms change of rule weights 0.00e+00 (of ARC's 1.15e-01)
+  draw 12: slope +0.0000; rms change of rule weights 0.00e+00 (of ARC's 9.86e-02)
+  draw 13: slope +0.0000; rms change of rule weights 0.00e+00 (of ARC's 1.17e-01)
+LEAK +0.0000 0.0000 PASS

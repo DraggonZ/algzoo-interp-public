@@ -1,0 +1,7 @@
+twin with clock gain 10000, flag gain 10000, detector gain 1000
+twin accuracy 0.961
+right         : unexplained share of active pre-activation variance, worst neuron 1.3e-07; all 16 replaced: acc 0.961 agree 0.990 KL 0.000
+wrong height  : unexplained share of active pre-activation variance, worst neuron 1.3e-07; all 16 replaced: acc 0.699 agree 0.711 KL 9.110
+no flip       : unexplained share of active pre-activation variance, worst neuron 1.3e-07; all 16 replaced: acc 0.576 agree 0.590 KL 8.668
+angle 45.5    : unexplained share of active pre-activation variance, worst neuron 1.3e-07; all 16 replaced: acc 0.857 agree 0.886 KL 0.079
+generic       : unexplained share of active pre-activation variance, worst neuron 2.9e-10; all 16 replaced: acc 0.085 agree 0.082 KL 28855903.493

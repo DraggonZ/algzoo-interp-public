@@ -1,0 +1,12 @@
+30852 near-tie (list, rival) pairs; share of gradient variance in the top k directions: k=1: 0.103, k=2: 0.202, k=5: 0.483, k=10: 0.792, k=20: 0.885, k=40: 0.973, k=80: 0.997
+ARC 0.95314; rule alone costs 36.81 points
+  correct top   0 stiff directions: cost  36.81 points (remaining error 1.00 of the rule's); 0 random directions:  36.81
+  correct top   5 stiff directions: cost  34.27 points (remaining error 1.00 of the rule's); 5 random directions:  45.04
+  correct top  10 stiff directions: cost  57.78 points (remaining error 0.98 of the rule's); 10 random directions:  34.17
+  correct top  20 stiff directions: cost  55.95 points (remaining error 0.98 of the rule's); 20 random directions:  54.90
+  correct top  30 stiff directions: cost  55.90 points (remaining error 0.97 of the rule's); 30 random directions:  52.75
+  correct top  40 stiff directions: cost  20.68 points (remaining error 0.95 of the rule's); 40 random directions:  52.10
+  correct top  60 stiff directions: cost  13.78 points (remaining error 0.91 of the rule's); 60 random directions:  45.17
+  correct top  80 stiff directions: cost   6.26 points (remaining error 0.82 of the rule's); 80 random directions:  52.35
+  correct top 100 stiff directions: cost   5.84 points (remaining error 0.76 of the rule's); 100 random directions:  63.00
+  correct top 120 stiff directions: cost   5.11 points (remaining error 0.71 of the rule's); 120 random directions:  58.15

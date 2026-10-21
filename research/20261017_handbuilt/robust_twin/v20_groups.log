@@ -1,0 +1,8 @@
+1% noise on store        : accuracy 0.869
+1% noise on detector     : accuracy 0.905
+1% noise on carrier+flag : accuracy 0.906
+1% noise on keep gate    : accuracy 0.904
+1% noise on timer        : accuracy 0.877
+1% noise on reveal       : accuracy 0.911
+1% noise on memory       : accuracy 0.860
+1% noise on all          : accuracy 0.822

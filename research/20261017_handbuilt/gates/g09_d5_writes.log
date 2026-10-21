@@ -1,0 +1,4 @@
+roles                   138 coefficients  rms error 0.560  by step: 1:0.11 2:0.19 3:0.28 4:0.33 5:0.42 6:0.54 7:0.77 8:1.10
+roles+hinges            183 coefficients  rms error 0.299  by step: 1:0.13 2:0.16 3:0.17 4:0.22 5:0.29 6:0.34 7:0.39 8:0.50
+roles+hinges+gates      201 coefficients  rms error 0.222  by step: 1:0.13 2:0.14 3:0.14 4:0.16 5:0.22 6:0.26 7:0.29 8:0.34
+roles+hinges+gates, separate coefficients per step: rms by step 1:0.10 2:0.10 3:0.12 4:0.13 5:0.18 6:0.23 7:0.26 8:0.32  overall 0.198

@@ -1,0 +1,25 @@
+K=1 (n=291479, second-largest above P on 0.00):
+   n1: rms P,M 0.36 | m2,M 0.36 | P,m2,M 0.36 (weights P +0.08 m2 +0.08 M +0.83)
+   n6: rms P,M 0.80 | m2,M 0.80 | P,m2,M 0.80 (weights P +0.49 m2 +0.49 M -0.04)
+   n7: rms P,M 0.09 | m2,M 0.09 | P,m2,M 0.09 (weights P -0.00 m2 -0.00 M +1.02)
+   n8: rms P,M 0.82 | m2,M 0.82 | P,m2,M 0.82 (weights P +0.52 m2 +0.52 M -0.03)
+K=2 (n=229550, second-largest above P on 0.13):
+   n1: rms P,M 1.78 | m2,M 0.60 | P,m2,M 0.58 (weights P -0.09 m2 +1.03 M -0.02)
+   n6: rms P,M 0.66 | m2,M 0.36 | P,m2,M 0.32 (weights P -0.10 m2 +0.34 M +0.69)
+   n7: rms P,M 0.09 | m2,M 0.08 | P,m2,M 0.08 (weights P +0.00 m2 -0.01 M +1.01)
+   n8: rms P,M 1.49 | m2,M 0.72 | P,m2,M 0.72 (weights P +0.04 m2 +0.68 M +0.31)
+K=3 (n=176209, second-largest above P on 0.25):
+   n1: rms P,M 1.70 | m2,M 0.77 | P,m2,M 0.73 (weights P -0.11 m2 +0.70 M +0.29)
+   n6: rms P,M 0.27 | m2,M 0.25 | P,m2,M 0.25 (weights P -0.01 m2 -0.05 M +1.05)
+   n7: rms P,M 0.14 | m2,M 0.15 | P,m2,M 0.12 (weights P +0.03 m2 -0.03 M +1.01)
+   n8: rms P,M 2.53 | m2,M 0.76 | P,m2,M 0.76 (weights P -0.01 m2 +0.94 M +0.06)
+K=4 (n=130665, second-largest above P on 0.35):
+   n1: rms P,M 0.76 | m2,M 0.60 | P,m2,M 0.52 (weights P -0.11 m2 +0.21 M +0.83)
+   n6: rms P,M 0.41 | m2,M 0.15 | P,m2,M 0.14 (weights P -0.01 m2 -0.14 M +1.17)
+   n7: rms P,M 0.34 | m2,M 0.21 | P,m2,M 0.16 (weights P +0.04 m2 +0.09 M +0.87)
+   n8: rms P,M 2.92 | m2,M 0.74 | P,m2,M 0.70 (weights P -0.08 m2 +0.96 M +0.07)
+K=5 (n=92103, second-largest above P on 0.44):
+   n1: rms P,M 0.58 | m2,M 0.48 | P,m2,M 0.35 (weights P -0.11 m2 -0.17 M +1.27)
+   n6: rms P,M 0.31 | m2,M 0.22 | P,m2,M 0.22 (weights P +0.01 m2 -0.08 M +1.08)
+   n7: rms P,M 0.81 | m2,M 0.30 | P,m2,M 0.23 (weights P +0.05 m2 +0.22 M +0.71)
+   n8: rms P,M 2.17 | m2,M 0.84 | P,m2,M 0.71 (weights P -0.13 m2 +0.63 M +0.44)

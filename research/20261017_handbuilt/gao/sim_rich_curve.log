@@ -1,0 +1,18 @@
+step 0: fit-set KL 2.905
+step 1000: fit-set KL 0.948
+step 2000: fit-set KL 0.761
+step 3000: fit-set KL 0.621
+step 4000: fit-set KL 0.648
+step 5000: fit-set KL 0.608
+step 5999: fit-set KL 0.552
+rich_plus seed 0 steps 6000 features (50 per neuron), least squares: mean R2 0.9929 KL 2.996 acc 0.794 agree 0.789
+rich_plus seed 0 steps 6000 features (50 per neuron), KL-fitted    : mean R2 0.9316 KL 0.596 acc 0.914 agree 0.910
+step 0: fit-set KL 2.899
+step 1000: fit-set KL 0.943
+step 2000: fit-set KL 0.755
+step 3000: fit-set KL 0.616
+step 4000: fit-set KL 0.643
+step 5000: fit-set KL 0.603
+step 5999: fit-set KL 0.548
+rich_plus_raw seed 0 steps 6000 features (59 per neuron), least squares: mean R2 0.9929 KL 2.995 acc 0.792 agree 0.787
+rich_plus_raw seed 0 steps 6000 features (59 per neuron), KL-fitted    : mean R2 0.9306 KL 0.591 acc 0.914 agree 0.910

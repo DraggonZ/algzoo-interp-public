@@ -1,0 +1,10 @@
+ARC coefficients: [0.079 0.114 0.176]; ARC's own quantities' SD across copies [0.174 0.153 0.115]
+network 106: clean 94.88%, copies mean 88.16, SD 3.13; quantities' SD [0.13  0.357 0.201]
+   ARC's model unchanged: RMSE 10.32, correlation 0.856; mean predicted 80.27
+   refitted on this network (CV): RMSE  2.06, correlation 0.845; coefficients [0.178 0.017 0.05 ]
+network 111: clean 96.05%, copies mean 89.49, SD 4.06; quantities' SD [0.193 0.178 0.185]
+   ARC's model unchanged: RMSE  3.02, correlation 0.916; mean predicted 87.63
+   refitted on this network (CV): RMSE  1.60, correlation 0.933; coefficients [0.131 0.116 0.045]
+network 115: clean 95.19%, copies mean 89.27, SD 2.64; quantities' SD [0.133 0.199 0.095]
+   ARC's model unchanged: RMSE  2.72, correlation 0.867; mean predicted 87.56
+   refitted on this network (CV): RMSE  1.30, correlation 0.893; coefficients [0.146 0.03  0.148]

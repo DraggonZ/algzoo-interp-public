@@ -1,0 +1,6 @@
+trained       : active 0.74; most common pattern 0.14 of steps; patterns for 90% of steps 76; neurons on at 5-95% of steps 12
+   on-share per neuron: 0.82 0.80 0.98 0.77 0.16 0.37 0.81 0.84 0.75 0.18 0.91 0.90 0.96 0.99 0.95 0.72
+twin          : active 0.80; most common pattern 0.42 of steps; patterns for 90% of steps 3; neurons on at 5-95% of steps 7
+   on-share per neuron: 0.96 0.15 0.46 0.85 0.85 0.85 0.85 0.15 0.97 0.97 0.97 0.97 0.96 0.96 0.96 0.96
+twin gains 30 : active 0.80; most common pattern 0.42 of steps; patterns for 90% of steps 3; neurons on at 5-95% of steps 7
+   on-share per neuron: 0.96 0.15 0.46 0.85 0.85 0.85 0.85 0.15 0.97 0.97 0.97 0.97 0.96 0.96 0.96 0.96

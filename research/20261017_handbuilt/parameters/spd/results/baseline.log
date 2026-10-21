@@ -1,0 +1,5 @@
+neuron basis (exact, KL 0):
+  recurrent piece-uses per list 101.43 (of 16 x 9 = 144); distinct per list 16.00
+  on neurons per step 1..9: [8.0, 10.7, 11.69, 11.92, 11.64, 11.51, 11.71, 12.02, 12.24]
+  readout pieces per list 12.36; input pieces per list 10 uses, 1 distinct
+singular value decomposition (exact, KL 0): recurrent 16 x 9 = 144 uses, readout 10, input 10 uses

@@ -1,0 +1,9 @@
+ARC g=1.3: variance explained by the rules 0.06; coefficients code mismatch -0.0058, recency, both before +0.0030, recency, both after +0.0125, third is last input -0.0009
+ARC g=1.6: variance explained by the rules 0.04; coefficients code mismatch -0.0032, recency, both before +0.0042, recency, both after -0.0108, third is last input +0.0056
+ARC g=3.0: variance explained by the rules 0.24; coefficients code mismatch -0.0099, recency, both before +0.0049, recency, both after -0.0388, third is last input +0.0461
+zoo0 g=1.3: variance explained by the rules 0.01; coefficients code mismatch +0.0037, recency, both before +0.0048, recency, both after -0.0088, third is last input +0.0090
+zoo0 g=1.6: variance explained by the rules 0.02; coefficients code mismatch -0.0113, recency, both before +0.0010, recency, both after -0.0037, third is last input +0.0042
+zoo0 g=3.0: variance explained by the rules 0.01; coefficients code mismatch +0.0034, recency, both before -0.0073, recency, both after -0.0110, third is last input +0.0071
+zoo2 g=1.3: variance explained by the rules 0.08; coefficients code mismatch -0.0082, recency, both before +0.0013, recency, both after +0.0014, third is last input +0.0206
+zoo2 g=1.6: variance explained by the rules 0.08; coefficients code mismatch -0.0053, recency, both before +0.0023, recency, both after +0.0014, third is last input +0.0223
+zoo2 g=3.0: variance explained by the rules 0.11; coefficients code mismatch -0.0075, recency, both before +0.0054, recency, both after -0.0042, third is last input +0.0312

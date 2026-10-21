@@ -1,0 +1,46 @@
+ARC    turn 124.8 shrink 0.84: spokes step  131.5, fit 0.99; turn  83.3 shrink 0.94: spokes step   78.5, fit 0.98; turn  42.7 shrink 0.95: spokes step   33.5, fit 0.91
+zoo0   turn 162.2 shrink 0.60: spokes step  159.0, fit 0.95; turn 167.8 shrink 0.90: spokes step  149.5, fit 0.94; turn  20.9 shrink 0.60: spokes step   30.5, fit 0.94
+zoo1   turn  62.3 shrink 0.71: spokes step   62.0, fit 0.98; turn 133.7 shrink 0.78: spokes step  136.5, fit 0.97; turn  27.9 shrink 0.88: spokes step   33.0, fit 0.95
+zoo2   turn 127.8 shrink 0.75: spokes step  117.5, fit 0.98; turn  43.5 shrink 0.84: spokes step   37.5, fit 0.97; turn  81.6 shrink 0.69: spokes step   85.0, fit 0.97
+zoo3   turn 155.5 shrink 0.93: spokes step  149.5, fit 1.00; turn  99.9 shrink 0.99: spokes step  100.0, fit 0.99; turn 143.0 shrink 0.91: spokes step  144.5, fit 0.99
+zoo4   turn  41.1 shrink 0.76: spokes step   38.5, fit 0.97; turn 122.3 shrink 0.62: spokes step  124.5, fit 0.96; turn  84.6 shrink 0.79: spokes step   83.0, fit 0.96
+s100   turn 158.2 shrink 0.94: spokes step  157.0, fit 1.00; turn 157.3 shrink 0.92: spokes step  157.0, fit 1.00; turn  71.9 shrink 0.74: spokes step   72.0, fit 0.99
+s101   turn 169.9 shrink 0.86: spokes step  156.5, fit 0.92; turn  87.2 shrink 0.76: spokes step   88.0, fit 0.90; turn 131.8 shrink 0.66: spokes step  130.0, fit 0.89
+s102   turn 143.7 shrink 0.86: spokes step  144.5, fit 1.00; turn 103.4 shrink 0.99: spokes step  107.0, fit 0.99; turn  18.6 shrink 0.84: spokes step   27.0, fit 0.98
+s103   turn 135.8 shrink 0.77: spokes step  135.0, fit 1.00; turn  15.4 shrink 0.86: spokes step   28.5, fit 0.99; turn 110.6 shrink 0.97: spokes step   97.0, fit 0.99
+s104   turn  24.1 shrink 0.60: spokes step   30.5, fit 0.94; turn 137.0 shrink 0.64: spokes step  142.0, fit 0.92; turn  46.7 shrink 0.92: spokes step   76.0, fit 0.92
+s105   turn 113.7 shrink 0.62: spokes step  116.5, fit 0.96; turn  75.4 shrink 0.66: spokes step   83.0, fit 0.95; turn 156.1 shrink 0.58: spokes step  143.5, fit 0.93
+s106   turn 103.5 shrink 0.84: spokes step  104.0, fit 1.00; turn 145.6 shrink 0.70: spokes step  146.5, fit 0.99; turn  52.6 shrink 0.76: spokes step   53.0, fit 0.98
+s107   turn 173.0 shrink 0.82: spokes step  168.5, fit 0.98; turn 140.4 shrink 0.67: spokes step  141.0, fit 0.96; turn 106.2 shrink 0.67: spokes step  106.5, fit 0.96
+s108   turn 164.4 shrink 0.83: spokes step  163.5, fit 0.98; turn 152.0 shrink 0.79: spokes step  157.0, fit 0.98; turn  51.1 shrink 0.80: spokes step   43.0, fit 0.95
+s109   turn 137.3 shrink 0.60: spokes step  139.0, fit 0.96; turn  92.4 shrink 0.55: spokes step   99.5, fit 0.92; turn  44.8 shrink 1.04: spokes step   34.0, fit 0.91
+s110   turn  97.4 shrink 0.92: spokes step   98.0, fit 0.99; turn 117.5 shrink 0.70: spokes step  122.5, fit 0.98; turn  92.6 shrink 0.76: spokes step   96.5, fit 0.97
+s111   turn  33.4 shrink 1.03: spokes step   68.5, fit 0.87; turn  39.3 shrink 0.71: spokes step   40.5, fit 0.85; turn 103.2 shrink 0.65: spokes step   89.0, fit 0.85
+s112   turn  30.3 shrink 0.74: spokes step   35.0, fit 0.98; turn 151.6 shrink 0.59: spokes step  156.0, fit 0.98; turn  60.9 shrink 0.79: spokes step   69.0, fit 0.97
+s113   turn 148.5 shrink 0.75: spokes step  151.0, fit 1.00; turn 102.3 shrink 0.82: spokes step  103.0, fit 0.99; turn  13.9 shrink 0.82: spokes step   26.0, fit 0.98
+s114   turn 143.6 shrink 0.65: spokes step  137.5, fit 0.97; turn  73.0 shrink 0.57: spokes step   76.0, fit 0.93; turn 103.6 shrink 0.52: spokes step  105.0, fit 0.93
+s115   turn 157.6 shrink 0.95: spokes step  157.0, fit 1.00; turn  38.8 shrink 0.83: spokes step   39.5, fit 0.99; turn 109.1 shrink 0.92: spokes step  111.0, fit 0.99
+
+best-fitting pair per network: |spoke step| vs |turn| (deg), fit
+  ARC    turn 124.8  spokes 131.5  shrink 0.84  fit 0.99
+  zoo0   turn 162.2  spokes 159.0  shrink 0.60  fit 0.95
+  zoo1   turn  62.3  spokes  62.0  shrink 0.71  fit 0.98
+  zoo2   turn 127.8  spokes 117.5  shrink 0.75  fit 0.98
+  zoo3   turn 155.5  spokes 149.5  shrink 0.93  fit 1.00
+  zoo4   turn  41.1  spokes  38.5  shrink 0.76  fit 0.97
+  s100   turn 158.2  spokes 157.0  shrink 0.94  fit 1.00
+  s101   turn 169.9  spokes 156.5  shrink 0.86  fit 0.92
+  s102   turn 143.7  spokes 144.5  shrink 0.86  fit 1.00
+  s103   turn 135.8  spokes 135.0  shrink 0.77  fit 1.00
+  s104   turn  24.1  spokes  30.5  shrink 0.60  fit 0.94
+  s105   turn 113.7  spokes 116.5  shrink 0.62  fit 0.96
+  s106   turn 103.5  spokes 104.0  shrink 0.84  fit 1.00
+  s107   turn 173.0  spokes 168.5  shrink 0.82  fit 0.98
+  s108   turn 164.4  spokes 163.5  shrink 0.83  fit 0.98
+  s109   turn 137.3  spokes 139.0  shrink 0.60  fit 0.96
+  s110   turn  97.4  spokes  98.0  shrink 0.92  fit 0.99
+  s111   turn  33.4  spokes  68.5  shrink 1.03  fit 0.87
+  s112   turn  30.3  spokes  35.0  shrink 0.74  fit 0.98
+  s113   turn 148.5  spokes 151.0  shrink 0.75  fit 1.00
+  s114   turn 143.6  spokes 137.5  shrink 0.65  fit 0.97
+  s115   turn 157.6  spokes 157.0  shrink 0.95  fit 1.00

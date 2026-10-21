@@ -1,0 +1,6 @@
+trained: 0.9531   (store self 0.969, store from detector 1.731, detector from store -0.492, detector self -0.986)
+store self 1.0 (no fade)    : 0.8524
+detector from store -0.577  : 0.9102
+both                        : 0.8341
+store self 0.985            : 0.9107
+detector from store -0.52   : 0.9427

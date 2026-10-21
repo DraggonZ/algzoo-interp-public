@@ -1,0 +1,21 @@
+error rate 0.0468
+  stratum  0: share of lists 0.0003; error rate 0.581
+  stratum  1: share of lists 0.0006; error rate 0.488
+  stratum  2: share of lists 0.0022; error rate 0.411
+  stratum  3: share of lists 0.0162; error rate 0.422
+  stratum  4: share of lists 0.0006; error rate 0.492
+  stratum  5: share of lists 0.0013; error rate 0.291
+  stratum  6: share of lists 0.0045; error rate 0.189
+  stratum  7: share of lists 0.0319; error rate 0.232
+  stratum  8: share of lists 0.0021; error rate 0.368
+  stratum  9: share of lists 0.0044; error rate 0.151
+  stratum 10: share of lists 0.0155; error rate 0.054
+  stratum 11: share of lists 0.1072; error rate 0.071
+  stratum 12: share of lists 0.0139; error rate 0.273
+  stratum 13: share of lists 0.0280; error rate 0.067
+  stratum 14: share of lists 0.0981; error rate 0.009
+  stratum 15: share of lists 0.6623; error rate 0.007
+  stratum 16: share of lists 0.0110; error rate 0.770
+variance per run, plain sampling 0.04462; stratified (Neyman) 0.02026; ratio 2.2x fewer runs for the same error
+simulated, n = 2000 runs: plain sampling RMS error 0.481 points; stratified 0.324 points (runs used 1998)
+finer strata (129): stratified (Neyman) variance per run 0.01731; ratio 2.6x (in-sample rates; optimistic)

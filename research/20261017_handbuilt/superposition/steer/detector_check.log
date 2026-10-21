@@ -1,0 +1,4 @@
+detector x 0.95, later contender at steps 1-8   n 609,309: later contender wins  47.6% ->  47.8%
+detector x 0.95, later contender at step 9      n 152,764: later contender wins  57.6% ->  66.8%
+detector x 1.05, later contender at steps 1-8   n 609,309: later contender wins  47.6% ->  48.2%
+detector x 1.05, later contender at step 9      n 152,764: later contender wins  57.6% ->  48.0%

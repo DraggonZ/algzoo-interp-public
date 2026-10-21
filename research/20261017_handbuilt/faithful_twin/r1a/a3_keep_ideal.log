@@ -1,0 +1,8 @@
+theta 0.00 relu : ideal accuracy 100.00%  gate test: best cut 0.30 agreement 0.903
+theta 0.00 floor: ideal accuracy 100.00%  gate test: best cut 0.30 agreement 0.903
+theta 0.30 relu : ideal accuracy 94.71%  gate test: best cut 0.43 agreement 0.941
+theta 0.30 floor: ideal accuracy 99.67%  gate test: best cut 0.43 agreement 0.941
+theta 0.50 relu : ideal accuracy 91.72%  gate test: best cut 0.75 agreement 0.915
+theta 0.50 floor: ideal accuracy 98.79%  gate test: best cut 0.75 agreement 0.915
+theta 0.75 relu : ideal accuracy 89.05%  gate test: best cut 1.20 agreement 0.905
+theta 0.75 floor: ideal accuracy 96.49%  gate test: best cut 1.20 agreement 0.905

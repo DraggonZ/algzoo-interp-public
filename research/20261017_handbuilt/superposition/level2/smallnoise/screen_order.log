@@ -1,0 +1,14 @@
+screen 0.001: accuracy 95.271%  runs 379M
+  L,2,3 acc 94.73  wrong naming largest/third/another (points) [1.03 3.69 0.55]
+  L,3,2 acc 93.67  wrong naming largest/third/another (points) [1.8  4.01 0.53]
+  2,L,3 acc 94.71  wrong naming largest/third/another (points) [0.52 3.99 0.78]
+  3,L,2 acc 96.27  wrong naming largest/third/another (points) [0.65 2.55 0.54]
+  2,3,L acc 96.32  wrong naming largest/third/another (points) [0.88 2.05 0.75]
+  3,2,L acc 95.94  wrong naming largest/third/another (points) [1.02 2.34 0.7 ]
+screen -1: accuracy 95.296%  runs 602M
+  L,2,3 acc 94.89  wrong naming largest/third/another (points) [1.12 3.36 0.64]
+  L,3,2 acc 94.13  wrong naming largest/third/another (points) [1.72 3.52 0.63]
+  2,L,3 acc 95.08  wrong naming largest/third/another (points) [0.52 3.58 0.82]
+  3,L,2 acc 95.95  wrong naming largest/third/another (points) [0.64 2.85 0.57]
+  2,3,L acc 96.17  wrong naming largest/third/another (points) [0.92 2.03 0.87]
+  3,2,L acc 95.56  wrong naming largest/third/another (points) [0.93 2.71 0.8 ]

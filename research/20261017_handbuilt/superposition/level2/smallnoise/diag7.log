@@ -1,0 +1,4 @@
+random third after the largest   (205): third wins truth 0.0263, fourth model 0.0288, old 0/1 0.0390; P(right) truth 0.9654 model 0.9622
+random third before the largest  (195): third wins truth 0.0357, fourth model 0.0385, old 0/1 0.0410; P(right) truth 0.9411 model 0.9427
+near   third after the largest   (186): third wins truth 0.1025, fourth model 0.1049, old 0/1 0.1344; P(right) truth 0.8674 model 0.8639
+near   third before the largest  (214): third wins truth 0.0724, fourth model 0.0693, old 0/1 0.0561; P(right) truth 0.8979 model 0.9042

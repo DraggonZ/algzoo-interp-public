@@ -1,0 +1,6 @@
+ARC accuracy 0.9533
+negative numbers use SPD's negative-number vector        : KL 0.0069, accuracy 0.9547
+negative numbers use 0.33 x ARC's                        : KL 0.0116, accuracy 0.9552
+negative numbers use 0.67 x ARC's                        : KL 0.0025, accuracy 0.9546
+negative numbers use zero                                : KL 0.0359, accuracy 0.9522
+negative numbers use hiding entries x 0.33, rest ARC's   : KL 0.0753, accuracy 0.9356

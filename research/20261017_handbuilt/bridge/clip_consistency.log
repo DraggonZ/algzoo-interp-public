@@ -1,0 +1,4 @@
+as trained               accuracy 0.9540; errors naming the largest 0.20, the third 0.64
+memory fed unclipped     accuracy 0.8283; errors naming the largest 0.39, the third 0.48
+readout reads unclipped  accuracy 0.8615; errors naming the largest 0.76, the third 0.20
+hiding neurons linear    accuracy 0.0600; errors naming the largest 0.03, the third 0.10

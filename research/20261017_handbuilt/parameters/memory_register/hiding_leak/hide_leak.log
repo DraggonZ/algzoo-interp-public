@@ -1,0 +1,60 @@
+
+r5b_restore: 26 constants; derived rows vs ARC relative error 0.0641
+  states live  nudge in1: own-row copy slope -0.062; own-row sensitivity 0.960; largest any row 1.790
+  states live  nudge in6: own-row copy slope +0.022; own-row sensitivity 2.191; largest any row 8.291
+  states live  nudge in7: own-row copy slope +0.319; own-row sensitivity 1.922; largest any row 11.810
+  states live  nudge in8: own-row copy slope -0.050; own-row sensitivity 2.769; largest any row 2.769
+  states fixed nudge in1: own-row copy slope +0.000; own-row sensitivity 0.000; largest any row 0.000
+  states fixed nudge in6: own-row copy slope +0.000; own-row sensitivity 0.000; largest any row 0.000
+  states fixed nudge in7: own-row copy slope +0.000; own-row sensitivity 0.000; largest any row 0.000
+  states fixed nudge in8: own-row copy slope +0.000; own-row sensitivity 0.000; largest any row 0.000
+
+constrained_lean: 52 constants; derived rows vs ARC relative error 0.1058
+  states live  nudge in1: own-row copy slope -0.029; own-row sensitivity 0.954; largest any row 1.563
+  states live  nudge in6: own-row copy slope +0.011; own-row sensitivity 2.193; largest any row 7.967
+  states live  nudge in7: own-row copy slope +0.314; own-row sensitivity 1.879; largest any row 11.291
+  states live  nudge in8: own-row copy slope -0.056; own-row sensitivity 2.751; largest any row 2.751
+  states fixed nudge in1: own-row copy slope +0.000; own-row sensitivity 0.000; largest any row 0.000
+  states fixed nudge in6: own-row copy slope +0.000; own-row sensitivity 0.000; largest any row 0.000
+  states fixed nudge in7: own-row copy slope +0.000; own-row sensitivity 0.000; largest any row 0.000
+  states fixed nudge in8: own-row copy slope +0.000; own-row sensitivity 0.000; largest any row 0.000
+
+r1b_masked: 36 constants; derived rows vs ARC relative error 0.1050
+  states live  nudge in1: own-row copy slope -0.030; own-row sensitivity 0.990; largest any row 1.582
+  states live  nudge in6: own-row copy slope +0.025; own-row sensitivity 2.194; largest any row 7.718
+  states live  nudge in7: own-row copy slope +0.309; own-row sensitivity 1.925; largest any row 11.160
+  states live  nudge in8: own-row copy slope -0.055; own-row sensitivity 2.673; largest any row 2.673
+  states fixed nudge in1: own-row copy slope +0.000; own-row sensitivity 0.000; largest any row 0.000
+  states fixed nudge in6: own-row copy slope +0.000; own-row sensitivity 0.000; largest any row 0.000
+  states fixed nudge in7: own-row copy slope +0.000; own-row sensitivity 0.000; largest any row 0.000
+  states fixed nudge in8: own-row copy slope +0.000; own-row sensitivity 0.000; largest any row 0.000
+
+r2b_shared_store: 33 constants; derived rows vs ARC relative error 0.1143
+  states live  nudge in1: own-row copy slope -0.033; own-row sensitivity 0.978; largest any row 1.603
+  states live  nudge in6: own-row copy slope +0.010; own-row sensitivity 2.220; largest any row 7.793
+  states live  nudge in7: own-row copy slope +0.318; own-row sensitivity 1.993; largest any row 11.043
+  states live  nudge in8: own-row copy slope -0.055; own-row sensitivity 2.618; largest any row 2.618
+  states fixed nudge in1: own-row copy slope +0.000; own-row sensitivity 0.000; largest any row 0.000
+  states fixed nudge in6: own-row copy slope +0.000; own-row sensitivity 0.000; largest any row 0.000
+  states fixed nudge in7: own-row copy slope +0.000; own-row sensitivity 0.000; largest any row 0.000
+  states fixed nudge in8: own-row copy slope +0.000; own-row sensitivity 0.000; largest any row 0.000
+
+r3b_gates: 30 constants; derived rows vs ARC relative error 0.0672
+  states live  nudge in1: own-row copy slope -0.060; own-row sensitivity 0.954; largest any row 1.739
+  states live  nudge in6: own-row copy slope +0.029; own-row sensitivity 2.211; largest any row 8.330
+  states live  nudge in7: own-row copy slope +0.302; own-row sensitivity 1.799; largest any row 11.916
+  states live  nudge in8: own-row copy slope -0.047; own-row sensitivity 2.767; largest any row 2.767
+  states fixed nudge in1: own-row copy slope +0.000; own-row sensitivity 0.000; largest any row 0.000
+  states fixed nudge in6: own-row copy slope +0.000; own-row sensitivity 0.000; largest any row 0.000
+  states fixed nudge in7: own-row copy slope +0.000; own-row sensitivity 0.000; largest any row 0.000
+  states fixed nudge in8: own-row copy slope +0.000; own-row sensitivity 0.000; largest any row 0.000
+
+r4b_inherit: 28 constants; derived rows vs ARC relative error 0.0664
+  states live  nudge in1: own-row copy slope -0.061; own-row sensitivity 0.955; largest any row 1.736
+  states live  nudge in6: own-row copy slope +0.024; own-row sensitivity 2.214; largest any row 8.335
+  states live  nudge in7: own-row copy slope +0.302; own-row sensitivity 1.801; largest any row 11.926
+  states live  nudge in8: own-row copy slope -0.048; own-row sensitivity 2.762; largest any row 2.762
+  states fixed nudge in1: own-row copy slope +0.000; own-row sensitivity 0.000; largest any row 0.000
+  states fixed nudge in6: own-row copy slope +0.000; own-row sensitivity 0.000; largest any row 0.000
+  states fixed nudge in7: own-row copy slope +0.000; own-row sensitivity 0.000; largest any row 0.000
+  states fixed nudge in8: own-row copy slope +0.000; own-row sensitivity 0.000; largest any row 0.000

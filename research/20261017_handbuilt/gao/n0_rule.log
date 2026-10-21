@@ -1,0 +1,4 @@
+neuron 0 switched by always on : KL 1.633 acc 0.765 agree 0.776
+neuron 0 switched by age2      : KL 0.142 acc 0.936 agree 0.974
+neuron 0 switched by age2+none : KL 0.142 acc 0.936 agree 0.975
+neuron 0 switched by true ReLU : KL 0.000 acc 0.954 agree 1.000

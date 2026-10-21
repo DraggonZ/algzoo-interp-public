@@ -1,0 +1,4 @@
+ARC: tie margin rms 4.567; accuracy 0.9530
+mu 100: score change on random lists 0.033 of their size; tie margin rms 2.473 (0.54 of ARC's); relative weight change input 0.013, recurrent 0.053, output 0.042; accuracy 0.9532
+mu 10: score change on random lists 0.080 of their size; tie margin rms 2.129 (0.47 of ARC's); relative weight change input 0.021, recurrent 0.094, output 0.071; accuracy 0.9389
+mu 1: score change on random lists 0.186 of their size; tie margin rms 1.111 (0.24 of ARC's); relative weight change input 0.034, recurrent 0.124, output 0.093; accuracy 0.7629

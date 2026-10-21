@@ -1,0 +1,6 @@
+36 weights covered, 1 constants, 1 kinds; relative weight error 0.1570; structure 43 bits; lookup table 2369 bits
+  share 0.001: constants 7 bits (6.8 each) + structure 43 + rest 2326; net -7
+  share 0.002: constants 6 bits (6.3 each) + structure 43 + rest 2342; net -22
+  share 0.005: constants 6 bits (5.6 each) + structure 43 + rest 2394; net -74
+KL from ARC 0.4209 (budget 0.02); accuracy 0.8642 (ARC 0.9531)
+NET -7.1

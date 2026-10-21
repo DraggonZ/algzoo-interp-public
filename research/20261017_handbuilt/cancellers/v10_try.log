@@ -1,0 +1,9 @@
+v7 late clock                                all 0.813 ord 0.979 rec9 0.880 rec8 0.769 b2b 0.498 | wrong: third 0.23 largest 0.01 onepos 0.05
+jump 1.0, late-gate dip 0.0 below level      all 0.256 ord 0.125 rec9 0.801 rec8 0.740 b2b 0.209 | wrong: third 0.16 largest 0.00 onepos 0.01
+jump 1.0, late-gate dip 0.4 below level      all 0.128 ord 0.125 rec9 0.106 rec8 0.207 b2b 0.141 | wrong: third 0.21 largest 0.00 onepos 0.01
+jump 1.0, late-gate dip 0.8 below level      all 0.114 ord 0.125 rec9 0.037 rec8 0.151 b2b 0.101 | wrong: third 0.21 largest 0.00 onepos 0.01
+jump 1.0, late-gate dip 1.2 below level      all 0.115 ord 0.125 rec9 0.038 rec8 0.151 b2b 0.101 | wrong: third 0.21 largest 0.00 onepos 0.01
+jump 0.0, late-gate dip 0.0 below level      all 0.200 ord 0.139 rec9 0.370 rec8 0.506 b2b 0.157 | wrong: third 0.19 largest 0.00 onepos 0.01
+jump 0.0, late-gate dip 0.4 below level      all 0.133 ord 0.139 rec9 0.034 rec8 0.204 b2b 0.136 | wrong: third 0.23 largest 0.00 onepos 0.01
+jump 0.0, late-gate dip 0.8 below level      all 0.132 ord 0.139 rec9 0.034 rec8 0.198 b2b 0.134 | wrong: third 0.23 largest 0.00 onepos 0.01
+jump 0.0, late-gate dip 1.2 below level      all 0.131 ord 0.139 rec9 0.034 rec8 0.193 b2b 0.132 | wrong: third 0.23 largest 0.00 onepos 0.01

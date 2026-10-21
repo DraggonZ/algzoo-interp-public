@@ -1,0 +1,32 @@
+== record at 1, overtaken at 4 (n=2721); median scores: at r 21.5, at q 11.9
+   score[r]: per unit of x_r  -29.5, of x_q  +46.5 | terms: x_r  -27.7, x_q  +48.9, all other numbers   -2.3 (check sum +7.1e-15)
+      input at step 1 enters through: hiding   +0.0, store   -0.0, detector  -29.5, keep gate   +0.0, late gate   +0.0, memory   -0.0
+      input at step 4 enters through: hiding  +45.5, store   +0.0, detector   +0.0, keep gate   +0.0, late gate   +0.0, memory   +1.0
+   score[q]: per unit of x_r +107.4, of x_q  -94.4 | terms: x_r +108.3, x_q  -98.6, all other numbers   +0.6 (check sum -1.1e-14)
+      input at step 1 enters through: hiding   +0.0, store   +0.0, detector +107.0, keep gate   +0.0, late gate   +0.0, memory   +0.2
+      input at step 4 enters through: hiding  -84.5, store   -0.0, detector   -7.6, keep gate   +0.0, late gate   +0.0, memory   -0.8
+   margin: per unit of x_r -138.2, of x_q +141.9; terms x_r -135.6, x_q +147.5, others   -1.3
+== record at 2, overtaken at 5 (n=2712); median scores: at r 23.3, at q 15.1
+   score[r]: per unit of x_r  -14.3, of x_q  +39.0 | terms: x_r  -10.9, x_q  +30.0, all other numbers   -3.4 (check sum +1.1e-14)
+      input at step 2 enters through: hiding   +0.0, store   -0.0, detector  -14.2, keep gate   +0.0, late gate   +0.0, memory   -0.0
+      input at step 5 enters through: hiding  +38.1, store   +0.0, detector   -0.8, keep gate   +0.0, late gate   +0.0, memory   +1.4
+   score[q]: per unit of x_r  +93.5, of x_q  -85.8 | terms: x_r  +71.4, x_q  -62.7, all other numbers   +0.2 (check sum -1.8e-14)
+      input at step 2 enters through: hiding   +0.0, store   +0.1, detector  +93.6, keep gate   +0.0, late gate   +0.0, memory   +0.1
+      input at step 5 enters through: hiding  -73.5, store   -0.0, detector   -3.8, keep gate   +0.0, late gate   +0.0, memory   -0.6
+   margin: per unit of x_r -117.6, of x_q +127.1; terms x_r  -80.4, x_q  +95.3, others   -3.5
+== record at 3, overtaken at 6 (n=2815); median scores: at r 28.4, at q 21.3
+   score[r]: per unit of x_r  +19.5, of x_q   +5.4 | terms: x_r  +16.2, x_q  +10.0, all other numbers   -5.9 (check sum -4.3e-14)
+      input at step 3 enters through: hiding   +0.0, store   -0.0, detector  +19.5, keep gate   +0.0, late gate   +0.0, memory   -0.2
+      input at step 6 enters through: hiding   +0.0, store   +0.0, detector   +2.0, keep gate   +0.0, late gate   +0.0, memory   +1.5
+   score[q]: per unit of x_r  +37.4, of x_q   -7.7 | terms: x_r  +55.1, x_q  -12.8, all other numbers   -1.9 (check sum -1.4e-14)
+      input at step 3 enters through: hiding   +0.0, store   +0.0, detector  +37.8, keep gate   +0.0, late gate   +0.0, memory   -0.0
+      input at step 6 enters through: hiding   +0.0, store   +0.0, detector   -2.6, keep gate   +0.0, late gate   +0.0, memory   -0.3
+   margin: per unit of x_r   -0.2, of x_q   +7.7; terms x_r   -0.3, x_q  +15.9, others   -4.2
+== record at 4, overtaken at 7 (n=2706); median scores: at r 36.4, at q 31.1
+   score[r]: per unit of x_r  +25.9, of x_q   +8.8 | terms: x_r  +26.4, x_q  +13.3, all other numbers  -11.2 (check sum +1.4e-14)
+      input at step 4 enters through: hiding   +0.0, store   -0.0, detector  +25.7, keep gate   +0.0, late gate   +0.0, memory   -0.3
+      input at step 7 enters through: hiding   +0.0, store   +0.0, detector   +5.5, keep gate   +0.0, late gate   +0.0, memory   +1.6
+   score[q]: per unit of x_r  +50.8, of x_q   -6.1 | terms: x_r  +69.5, x_q   -8.6, all other numbers   -7.1 (check sum +0.0e+00)
+      input at step 4 enters through: hiding   +0.0, store   +0.0, detector  +51.4, keep gate   +0.0, late gate   +0.0, memory   -0.2
+      input at step 7 enters through: hiding   +0.0, store   +0.0, detector   -1.1, keep gate   +0.0, late gate   +0.0, memory   +0.0
+   margin: per unit of x_r   -2.1, of x_q   +8.9; terms x_r   -2.7, x_q  +16.5, others   -3.7

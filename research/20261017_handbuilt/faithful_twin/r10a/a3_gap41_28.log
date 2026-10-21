@@ -1,0 +1,9 @@
+own order, hiding = clocks + runner-up: names largest 0.417, names second 0.070
+ARC order (candidate), slots 1, 6, 7, 8: names largest 0.282, names second 0.083
+ARC order, no silencing: names largest 0.017, names second 0.962
+own order, no silencing: names largest 0.017, names second 0.962
+ARC-order input weights slots 1, 6, 7, 8: [ -9.53156687  -9.86137497 -12.74944647 -14.08939524]
+own input weights clocks + runner-up: [-1.e+10 -1.e+10 -1.e+10 -1.e+04]
+lists whose silenced answer differs between the two versions: 0.252
+own order, silenced: median |score| 0.921, median top-two gap 2.45e-06
+score difference between versions, median 3.84e-06, 90th pct 5.83e-05

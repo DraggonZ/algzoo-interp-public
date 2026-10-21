@@ -1,0 +1,6 @@
+ARC (restricted to the top three)        right among the top three  95.72% | ARC's wrong choices reproduced 100.0% | near ties third wins  21.1% | by ratio   18   17   19   21   26   35
+typical rule alone                       right among the top three  98.53% | ARC's wrong choices reproduced  19.5% | near ties third wins   9.4% | by ratio   10    9    8    7   11   18
+typical + leftover borrowed in cell (draw 0) right among the top three  94.12% | ARC's wrong choices reproduced  29.6% | near ties third wins  15.3% | by ratio   21   13   10   13   17   29
+typical + leftover borrowed in cell (draw 1) right among the top three  94.14% | ARC's wrong choices reproduced  29.1% | near ties third wins  15.2% | by ratio   21   13   11   12   16   29
+typical + leftover borrowed from any list right among the top three  90.68% | ARC's wrong choices reproduced  23.1% | near ties third wins  16.9% | by ratio   18   17   16   16   17   20
+leftover size: RMS of ARC's differences 27.61, of the leftover 5.73

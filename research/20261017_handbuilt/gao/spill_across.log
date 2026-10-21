@@ -1,0 +1,27 @@
+network  spill r+1 spill r+2 erasure r+1 erasure r+2
+ARC           0.29     -0.44        0.08        0.95
+zoo0         -2.33      1.25        1.38        0.40
+zoo1         -0.87      0.35        1.25        0.63
+zoo2         -0.39     -1.21        1.14        1.74
+zoo3         -0.97      0.37        1.24        0.83
+zoo4         -1.67      0.56        2.20        0.39
+new100       -1.31      0.34        1.06        0.54
+new101       -0.67      0.31        1.45        0.84
+new102       -1.94      0.55        1.66        0.13
+new103       -0.58     -1.12        1.06        1.38
+new104        0.76      0.02        0.88        0.99
+new105       -0.87     -0.05        1.08        0.91
+new106       -1.80      0.51        1.58        0.24
+new107       -0.71      0.94        1.33       -0.06
+new108       -1.57      0.69        1.81        0.28
+new109        0.41     -0.40        1.25        1.00
+new110       25.43     -4.05        1.13        1.51
+new111        0.66     -0.40        0.15        1.27
+new112        0.75     -0.21        0.48        0.95
+new113        0.38     -0.19        1.28        1.14
+new114        0.02     -1.12        0.62        1.27
+new115        0.32     -1.03        0.32        2.40
+correlation across networks: spill r+1 vs erasure r+1 -0.11; spill r+2 vs erasure r+2 -0.71
+rank correlation (all 22): spill r+1 vs erasure r+1 -0.68; spill r+2 vs erasure r+2 -0.93
+networks with positive spill at r+1: 9, of which erasing r+1 (ratio<0.6): 4; others erasing r+1: 0
+networks with spill > 0.3 at r+2: 10, of which erasing r+2 (ratio<0.5): 6; others erasing r+2: 0

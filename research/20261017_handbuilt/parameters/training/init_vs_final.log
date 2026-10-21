@@ -1,0 +1,8 @@
+ARC: per neuron, size of incoming weights / size of outgoing weights (squared norms)
+n0:0.21 n1:0.85 n2:0.37 n3:0.67 n4:2.35 n5:0.21 n6:0.93 n7:0.78 n8:0.87 n9:1.29 n10:0.11 n11:0.16 n12:0.18 n13:0.13 n14:0.13 n15:0.26
+ARC readout column sums: rms 0.46; column size (norm) mean 6.5
+zoo seed 0: column sums rms init 0.51 -> final 0.99 (corr +0.56); column size 3.6; corr(init, final): recurrent +0.19, readout +0.02, final recurrent weights under 0.1 (n=73) +0.01
+zoo seed 1: column sums rms init 0.42 -> final 1.03 (corr -0.18); column size 3.1; corr(init, final): recurrent +0.01, readout +0.28, final recurrent weights under 0.1 (n=79) +0.22
+zoo seed 2: column sums rms init 0.36 -> final 8.60 (corr -0.23); column size 7.3; corr(init, final): recurrent +0.04, readout +0.01, final recurrent weights under 0.1 (n=96) -0.11
+zoo seed 3: column sums rms init 0.37 -> final 1.25 (corr +0.33); column size 4.7; corr(init, final): recurrent +0.12, readout +0.28, final recurrent weights under 0.1 (n=85) +0.15
+zoo seed 4: column sums rms init 0.53 -> final 1.26 (corr +0.12); column size 3.9; corr(init, final): recurrent +0.14, readout +0.38, final recurrent weights under 0.1 (n=66) +0.07

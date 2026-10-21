@@ -1,0 +1,4 @@
+ ARC: converged 95.32; node widths with scale law: const 95.46, norm 95.24, proj 95.47, spread 95.47; mean width A 0.0109 B 0.0065
+ 200: converged 93.56; node widths with scale law: const 93.68, norm 93.51, proj 93.75, spread 93.75; mean width A 0.0176 B 0.0635
+ 208: converged 85.21; node widths with scale law: const 84.86, norm 84.62, proj 84.99, spread 85.00; mean width A 0.2113 B 0.3739
+ 212: converged 84.44; node widths with scale law: const 85.43, norm 84.86, proj 85.57, spread 85.59; mean width A 0.0616 B 0.1101

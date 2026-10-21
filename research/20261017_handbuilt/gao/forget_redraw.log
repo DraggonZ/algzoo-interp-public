@@ -1,0 +1,4 @@
+trained                   : redraw ratio forgotten/kept: position 3 0.023, position 5 0.022 (median change of the number: forgotten 0.14, kept 0.23)
+twin                      : redraw ratio forgotten/kept: position 3 1.000, position 5 1.000 (median change of the number: forgotten 0.14, kept 0.24)
+forgetting twin           : redraw ratio forgotten/kept: position 3 0.289, position 5 0.049 (median change of the number: forgotten 0.14, kept 0.23)
+v7 (forgets by the rule)  : redraw ratio forgotten/kept: position 3 0.000, position 5 0.000 (median change of the number: forgotten 0.15, kept 0.23)

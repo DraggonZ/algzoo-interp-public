@@ -1,0 +1,20 @@
+== unit added to neuron 1's value
+   lag 1: whole network (median)  0.409 -0.135 -0.100  0.634 | four alone  0.409 -0.135 -0.100  0.634 | spread (IQR, median) 0.000
+   lag 2: whole network (median)  0.008 -0.150  0.024  0.731 | four alone  0.062 -0.143  0.081  0.759 | spread (IQR, median) 0.119
+   lag 3: whole network (median) -0.139 -0.095  0.146  0.410 | four alone -0.294 -0.133  0.153  0.418 | spread (IQR, median) 0.237
+   lag 4: whole network (median) -0.137  0.021  0.075 -0.003 | four alone -0.463 -0.062  0.135 -0.097 | spread (IQR, median) 0.178
+== unit added to neuron 6's value
+   lag 1: whole network (median)  0.995  0.361 -0.182 -0.000 | four alone  0.995  0.361 -0.182 -0.000 | spread (IQR, median) 0.000
+   lag 2: whole network (median)  0.848 -0.077 -0.286  0.748 | four alone  0.958  0.019 -0.180  0.830 | spread (IQR, median) 0.062
+   lag 3: whole network (median)  0.277 -0.237 -0.154  1.122 | four alone  0.499 -0.168  0.025  1.315 | spread (IQR, median) 0.290
+   lag 4: whole network (median) -0.115 -0.253  0.033  0.480 | four alone -0.147 -0.239  0.202  1.098 | spread (IQR, median) 0.326
+== unit added to neuron 7's value
+   lag 1: whole network (median) -1.048 -0.126  0.078 -1.094 | four alone -1.048 -0.126  0.078 -1.094 | spread (IQR, median) 0.000
+   lag 2: whole network (median) -0.465  0.193 -0.006 -1.392 | four alone -0.505  0.176 -0.048 -1.423 | spread (IQR, median) 0.312
+   lag 3: whole network (median)  0.115  0.227 -0.231 -0.288 | four alone  0.190  0.254 -0.222 -1.143 | spread (IQR, median) 0.229
+   lag 4: whole network (median)  0.331  0.019 -0.160 -0.088 | four alone  0.702  0.188 -0.273 -0.339 | spread (IQR, median) 0.484
+== unit added to neuron 8's value
+   lag 1: whole network (median) -0.120 -0.082  0.167  0.615 | four alone -0.120 -0.082  0.167  0.615 | spread (IQR, median) 0.000
+   lag 2: whole network (median) -0.260  0.023  0.238  0.199 | four alone -0.380 -0.085  0.143  0.120 | spread (IQR, median) 0.104
+   lag 3: whole network (median) -0.114  0.192  0.152 -0.131 | four alone -0.404 -0.007  0.085 -0.323 | spread (IQR, median) 0.264
+   lag 4: whole network (median)  0.083  0.196  0.046 -0.033 | four alone -0.222  0.068 -0.005 -0.547 | spread (IQR, median) 0.223

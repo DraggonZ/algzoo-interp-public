@@ -1,0 +1,6 @@
+gains clock 10000, flag 10000, detector 1000: accuracy 0.961; variance matched median 1.0000; one neuron replaced: median 0.783, worst 0.699, neurons within 1 point 4; all 16 0.746
+gains clock 1000, flag 1000, detector 100: accuracy 0.960; variance matched median 1.0000; one neuron replaced: median 0.783, worst 0.700, neurons within 1 point 4; all 16 0.746
+gains clock 100, flag 100, detector 100: accuracy 0.957; variance matched median 1.0000; one neuron replaced: median 0.781, worst 0.699, neurons within 1 point 4; all 16 0.746
+gains clock 100, flag 100, detector 20: accuracy 0.957; variance matched median 1.0000; one neuron replaced: median 0.781, worst 0.699, neurons within 1 point 4; all 16 0.746
+gains clock 30, flag 30, detector 20: accuracy 0.948; variance matched median 1.0000; one neuron replaced: median 0.777, worst 0.699, neurons within 1 point 3; all 16 0.745
+gains clock 10, flag 10, detector 10: accuracy 0.923; variance matched median 1.0000; one neuron replaced: median 0.764, worst 0.682, neurons within 1 point 3; all 16 0.741

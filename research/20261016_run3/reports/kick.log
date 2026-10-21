@@ -1,0 +1,16 @@
+linearized kick points at the second's position in 16 of 45 pairs
+kick's best position (rows = kick age 0..8, columns = largest's age 1..9; '.' = impossible)
+  kick age 0:  8  9  9  9  9  9  9  9  9   (right answer 9)
+  kick age 1:  .  8  6  5  5  4  2  0  0   (right answer 8)
+  kick age 2:  .  .  7  5  4  4  3  1  0   (right answer 7)
+  kick age 3:  .  .  .  6  4  3  2  2  0   (right answer 6)
+  kick age 4:  .  .  .  .  5  3  2  1  1   (right answer 5)
+  kick age 5:  .  .  .  .  .  4  2  1  0   (right answer 4)
+  kick age 6:  .  .  .  .  .  .  3  1  0   (right answer 3)
+  kick age 7:  .  .  .  .  .  .  .  2  0   (right answer 2)
+  kick age 8:  .  .  .  .  .  .  .  .  1   (right answer 1)
+
+cosine between output row j and output row j-1 times one step of the steady dynamics (pattern at largest's age k):
+  pattern at age 3: [0.95 0.87 0.88 0.96 0.96 0.92 0.91 0.83 0.84]
+  pattern at age 5: [0.94 0.97 0.99 0.99 0.69 0.96 0.95 0.91 0.84]
+  pattern at age 7: [0.97 0.99 0.99 0.99 0.99 0.96 0.95 0.89 0.84]

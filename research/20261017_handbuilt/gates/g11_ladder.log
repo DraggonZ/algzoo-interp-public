@@ -1,0 +1,32 @@
+fitted in 24 s; basic coefficients:
+  r1 = +0.608 m1 +0.410 m2
+  r4 = +0.933 m1 +0.012 m2
+  r6 = +0.557 m1 +0.504 m2
+  r7 = +0.951 m1 +0.004 m2
+  r8 = +0.192 m1 +0.898 m2
+  D5 = +10.47 m1 -5.43 m2 -0.07 x_t -0.28 x_(t+1) -0.07 own previous value
+  D9 = +1.77 m1 -0.48 m2 -0.08 x_t -0.23 x_(t+1) +0.08 own previous value
+
+                                                       all  S befo  S afte  S at 8  S at 9  L at 8  L at 9  S righ
+intact                                                95.4    95.6    95.2    94.4    95.6    96.3    93.7    96.0
+n5: full (switch points roles, D gates)               94.7    95.1    94.4    93.3    95.1    95.9    93.3    95.5   agree 97.9%  (2s)
+n5: switch points by ages                             94.7    95.0    94.3    93.3    95.0    95.6    93.3    95.3   agree 97.8%  (2s)
+n5: switch points basic                               89.0    89.2    88.8    81.2    86.5    88.7    87.6    88.6   agree 90.4%  (1s)
+n5: r4 basic                                          93.9    94.9    92.9    90.6    94.8    94.3    92.5    95.5   agree 96.7%  (2s)
+n5: r7 basic                                          93.3    92.7    93.8    93.6    93.9    92.4    91.6    96.5   agree 95.7%  (3s)
+n5: r8 basic                                          86.6    93.9    79.4    86.8    85.0    92.0    90.1    80.4   agree 88.4%  (2s)
+n5: r7 = m1                                           93.6    94.7    92.4    88.7    95.6    94.7    93.4    95.9   agree 96.4%  (2s)
+n5: D5 hinges                                         94.6    95.0    94.3    93.3    94.9    95.4    93.2    95.3   agree 97.7%  (2s)
+n5: D5 roles                                          94.0    94.4    93.5    91.6    94.5    94.1    92.7    93.3   agree 96.6%  (2s)
+n5: D5 ages                                           92.7    93.6    91.8    88.1    94.6    93.3    92.2    90.2   agree 95.0%  (2s)
+n5: D5 basic                                          83.8    87.5    80.2    64.3    88.8    88.0    87.5    85.1   agree 85.1%  (1s)
+n5: all basic                                         87.7    87.5    87.9    81.2    88.3    85.1    85.3    86.3   agree 88.9%  (0s)
+n9: full                                              95.4    95.6    95.1    94.2    95.6    96.2    93.6    96.1   agree 99.5%  (2s)
+n9: D9 roles                                          95.3    95.6    95.1    94.2    95.6    96.2    93.6    96.1   agree 99.5%  (2s)
+n9: D9 ages                                           95.4    95.6    95.1    94.1    95.6    96.5    93.8    96.3   agree 99.3%  (2s)
+n9: D9 basic                                          95.1    95.1    95.1    93.9    95.6    96.3    93.7    96.5   agree 98.8%  (2s)
+n9: switch points by ages, D9 ages                    95.4    95.6    95.1    94.2    95.6    96.4    93.8    96.3   agree 99.3%  (2s)
+n9: switch points basic, D9 ages                      92.6    94.1    91.1    91.3    95.4    94.6    91.9    89.0   agree 96.2%  (2s)
+n9: switch points basic, D9 basic                     92.4    93.8    91.1    91.0    95.4    94.3    92.0    89.1   agree 95.9%  (1s)
+n9: r7 = m1, rest ages                                95.1    95.5    94.7    94.2    95.7    96.3    93.6    94.9   agree 98.8%  (1s)
+nboth: full                                           94.7    95.1    94.3    93.1    95.1    95.8    93.2    95.5   agree 97.7%  (2s)

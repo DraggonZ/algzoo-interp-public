@@ -1,0 +1,9 @@
+no partial switch: share 0.916, accuracy 0.924
+one partial switch, 1 step(s) after the latest record: share 0.0239, accuracy 0.891
+one partial switch, 2 step(s) after the latest record: share 0.0095, accuracy 0.721
+one partial switch, 3 step(s) after the latest record: share 0.0149, accuracy 0.951
+one partial switch, 4 step(s) after the latest record: share 0.0103, accuracy 0.903
+one partial switch, 5 step(s) after the latest record: share 0.0065, accuracy 0.954
+two or more: share 0.0033, accuracy 0.684
+records that leave the hiding group partly on: 0.063 of records after a positive number; lists with one or more: 0.077, accuracy 0.449
+lists with no partial switch and no incomplete wipe: share 0.843, accuracy 0.965

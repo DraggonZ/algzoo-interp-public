@@ -1,0 +1,12 @@
+named number outside the top three: 0.758% of lists; its rank (4th, 5th, ...): [0.341 0.157 0.132 0.114 0.102 0.087 0.068]
+  its position 0-9: [0.403 0.196 0.102 0.059 0.035 0.015 0.028 0.072 0.025 0.065]; arrives after all three largest: 0.13
+  when it is the 4th: (third - fourth)/|third| median 0.092, 90% below 1.193
+  arrival L,2,3: accuracy 94.87%, wrong naming largest 1.13, third 3.34, another 0.65 (points)
+  arrival L,3,2: accuracy 94.49%, wrong naming largest 1.63, third 3.27, another 0.62 (points)
+  arrival 2,L,3: accuracy 95.17%, wrong naming largest 0.50, third 3.39, another 0.94 (points)
+  arrival 3,L,2: accuracy 95.87%, wrong naming largest 0.62, third 2.89, another 0.62 (points)
+  arrival 2,3,L: accuracy 95.99%, wrong naming largest 0.95, third 2.13, another 0.93 (points)
+  arrival 3,2,L: accuracy 95.50%, wrong naming largest 0.89, third 2.83, another 0.79 (points)
+lists with the second-largest < 0: 1.08% of all; among 'another' mistakes 65.0%
+  third < 0: all 5.5%, 'another' 72.3%; accuracy when third < 0: 82.93%, when third > 0: 96.04%
+  'another' rate when third < 0: 10.06%, when third > 0: 0.22%

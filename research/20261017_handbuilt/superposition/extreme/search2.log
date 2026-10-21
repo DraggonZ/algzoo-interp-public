@@ -1,0 +1,17 @@
+3,501,919 clear-gap lists; wrong on 0.14%; wrong margin quantiles 99/99.9/max of the wrong ones: [ 0.623  2.355 17.663], max 578.137
+margin 578.137 | largest at 9, second at 6, third at 3, names 0 | largest/second  3.12 | [-1.12 -0.49 -0.53 -0.12 -2.37 -1.44  0.   -0.89 -0.98  0.  ]
+margin 395.826 | largest at 1, second at 3, third at 4, names 1 | largest/second  3.19 | [-2.33  0.01 -0.03  0.    0.   -0.81 -2.07 -1.37 -2.59 -1.54]
+margin 392.754 | largest at 0, second at 2, third at 9, names 9 | largest/second  1.40 | [ 0.   -0.21  0.   -0.54 -0.52 -1.6  -0.87 -0.38 -0.57 -0.  ]
+margin 203.690 | largest at 9, second at 0, third at 7, names 9 | largest/second  1.78 | [ 0.01 -3.43 -0.4  -1.   -2.41 -2.17 -0.24 -0.23 -0.56  0.01]
+margin 145.363 | largest at 6, second at 7, third at 3, names 0 | largest/second  2.47 | [-1.34 -0.97 -1.46 -0.03 -0.61 -0.83  0.    0.   -0.86 -0.06]
+margin 132.194 | largest at 2, second at 6, third at 7, names 1 | largest/second  1.46 | [-1.1  -1.4   0.01 -0.51 -1.01 -0.75  0.01 -0.41 -2.27 -2.37]
+margin 115.291 | largest at 6, second at 1, third at 5, names 0 | largest/second  2.05 | [-1.66  0.01 -1.22 -1.68 -2.38  0.    0.03 -0.97 -0.2  -0.04]
+margin 91.485 | largest at 8, second at 1, third at 6, names 8 | largest/second  1.62 | [-0.42  0.01 -0.81 -0.22 -2.23 -0.34 -0.11 -0.55  0.02 -1.43]
+margin 90.948 | largest at 9, second at 4, third at 2, names 9 | largest/second  1.31 | [-0.7  -0.47 -0.13 -0.32  0.01 -0.55 -1.97 -0.56 -0.29  0.01]
+margin 86.241 | largest at 8, second at 2, third at 4, names 8 | largest/second  1.39 | [-1.62 -1.09  0.02 -1.72 -0.12 -0.4  -2.55 -0.84  0.03 -0.36]
+margin 74.062 | largest at 9, second at 2, third at 6, names 9 | largest/second  1.47 | [-1.37 -0.53  0.01 -0.74 -0.97 -0.38 -0.32 -0.34 -0.96  0.01]
+margin 60.758 | largest at 5, second at 4, third at 1, names 0 | largest/second  1.30 | [-1.59 -0.05 -1.37 -0.63  0.01  0.01 -1.64 -0.55 -2.07 -0.48]
+margin 56.677 | largest at 9, second at 6, third at 4, names 9 | largest/second  1.27 | [-1.5  -2.07 -0.89 -1.64 -0.18 -1.48  0.02 -0.37 -0.63  0.02]
+margin 51.944 | largest at 2, second at 5, third at 0, names 2 | largest/second  1.29 | [-0.16 -0.85  0.02 -0.34 -0.9   0.01 -0.21 -0.76 -1.67 -1.65]
+margin 51.298 | largest at 6, second at 2, third at 1, names 1 | largest/second  2.84 | [-0.48 -0.02  0.01 -1.5  -1.01 -0.83  0.02 -0.46 -2.44 -0.65]
+wrong answers on clear-gap lists: the largest 4%, the third 83%, a smaller number 13%

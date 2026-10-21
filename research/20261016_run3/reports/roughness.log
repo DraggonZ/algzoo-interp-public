@@ -1,0 +1,9 @@
+sigma 0.005: 12000 copies, accuracy mean 0.908, spread (SD) 0.0251, 94s
+   linear in all 432: held-out RMSE 0.0255 (R^2 -0.03, ridge 1000)
+   linear + quadratic in 36 comparing weights: held-out RMSE 0.0134 (R^2 0.71, ridge 1000)
+sigma 0.01: 12000 copies, accuracy mean 0.813, spread (SD) 0.0604, 95s
+   linear in all 432: held-out RMSE 0.0601 (R^2 -0.01, ridge 1000)
+   linear + quadratic in 36 comparing weights: held-out RMSE 0.0327 (R^2 0.70, ridge 1000)
+sigma 0.02: 12000 copies, accuracy mean 0.643, spread (SD) 0.0864, 95s
+   linear in all 432: held-out RMSE 0.0820 (R^2 0.10, ridge 1000)
+   linear + quadratic in 36 comparing weights: held-out RMSE 0.0508 (R^2 0.65, ridge 1000)

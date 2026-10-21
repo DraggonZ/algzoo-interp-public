@@ -1,0 +1,6 @@
+ placements used  margins paid  RMSE (points)  check bits  residual bits  total bits
+             720          1440           1.21        4370           10.7        4381
+             240           480           1.38        1490           10.9        1501
+              90           180           2.74         590           11.9         602
+              30            60           2.91         230           12.0         242
+              10            20           4.10         110           12.5         122

@@ -1,0 +1,12 @@
+== ARC names another
+  named position: 0: 58%, 1: 19%, 2: 9%, 3: 6%, 7: 4%, 4: 2%, 6: 1%, 8: 1%
+  named minus largest's position: -1: 31%, -4: 15%, -5: 10%, -9: 10%, -8: 10%, -6: 10%, -7: 5%, 4: 4%
+  order of arrival (L=largest, S=second, T=third): SLT: 23%, STL: 17%, TSL: 16%, LST: 15%, TLS: 15%, LTS: 14%
+  largest at step: 6: 13%, 9: 13%, 5: 12%, 1: 12%, 4: 11%, 8: 11%, 3: 10%, 2: 10% | second at step: 3: 13%, 1: 12%, 5: 11%, 2: 10%, 6: 10%
+  median values: largest -0.10, second -1.27, third -2.06
+== ARC names third, gap > 10%
+  named position: 9: 26%, 8: 18%, 0: 14%, 7: 14%, 1: 7%, 2: 5%, 3: 5%, 4: 4%
+  named minus largest's position: 7: 14%, 6: 10%, 1: 8%, 2: 8%, -2: 7%, -1: 7%, 8: 6%, 9: 6%
+  order of arrival (L=largest, S=second, T=third): LTS: 31%, LST: 18%, TSL: 16%, SLT: 15%, TLS: 10%, STL: 10%
+  largest at step: 0: 23%, 1: 14%, 9: 12%, 2: 10%, 7: 10%, 3: 8%, 6: 8%, 8: 6% | second at step: 9: 24%, 7: 15%, 0: 13%, 8: 11%, 6: 8%
+  median values: largest 1.14, second -0.73, third -1.78

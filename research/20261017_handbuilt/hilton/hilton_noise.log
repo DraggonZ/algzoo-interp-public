@@ -1,0 +1,7 @@
+original 0.9530; 200 copies: mean 0.9035, SD 0.0328, range 0.747-0.944
+(a) predicted mean accuracy 0.9055 (true mean 0.9035)
+(b) per-copy first order: RMSE 0.25 points, bias +0.06, correlation 0.997
+    a constant guess (the true mean): RMSE 3.28 points
+(c) linearize only lists within 4 noise sizes of a tie: 0.747 of lists; per-copy RMSE 0.25 points, correlation 0.997
+(c) linearize only lists within 6 noise sizes of a tie: 0.875 of lists; per-copy RMSE 0.25 points, correlation 0.997
+(c) linearize only lists within 8 noise sizes of a tie: 0.930 of lists; per-copy RMSE 0.25 points, correlation 0.997

@@ -1,0 +1,41 @@
+test                                                                ARC  of 37  of top 9  networks failing (of 37)
+readout shift: median cosine >= 0.8                                 yes     31         7  zoo2 s103 s200 s205 s208 s213
+readout shift: median cosine >= 0.95                                yes     20         6  zoo1 zoo2 s101 s103 s104 s107 s110 s111 s112 s200 s201 s202 s205 s206 s207 s208 s213
+memory has rotating pairs, largest modulus 0.8-1.2                  yes     29         8  zoo1 s101 s102 s201 s205 s209 s212 s215
+at least one age-clipped memory neuron                              yes     37         9  
+blindness: median ratio < 0.1 (null about 0.5)                      yes     17         9  
+blindness: median ratio < 0.02                                      yes      4         3  
+hiding references: fit R2 >= 0.8                                     no      4         1  
+(a) detector row = -c x store row: |cosine| >= 0.9                  yes     12         4  
+(a) ... and c within 20% of the overwrite value                     yes      5         4  
+(b) a hiding row mirrors the detector: cosine <= -0.95              yes     10         2  
+(c) hiding store ratio = detector's (median within 0.7-1.3)         yes     21         6  zoo2 zoo3 zoo4 s102 s104 s105 s110 s112 s114 s115 s202 s204 s208 s212 s213 s214
+(c) ... for every hiding neuron                                     yes     17         6  
+(d) delay line: a memory row with one source >= 0.8                 yes     11         5  
+(d) delay line: one source >= 0.95                                  yes      4         3  
+(e) readout column |mean|/sd below 0.2 (random rows about 0.3)      yes     37         9  
+(e) below 0.05                                                      yes      0         0  
+clear store (correlation >= 0.9)                                    yes     18         4  
+store self-weight >= 0.9                                            yes      6         2  
+strict detector                                                     yes     29         9  zoo3 s102 s104 s113 s202 s203 s206 s212
+hiding group of 3-6                                                 yes     25         9  zoo0 zoo1 zoo4 s105 s109 s110 s112 s114 s204 s207 s208 s213
+late-like gate                                                      yes      4         1  
+keep-like gate                                                      yes      9         1  
+third is the commonest wrong answer                                 yes     37         9  
+third wins 15-30% of near ties                                      yes     23         9  zoo0 zoo1 zoo4 s104 s105 s110 s112 s113 s114 s202 s203 s204 s206 s212
+
+Rank correlation with accuracy over the 37 (|rho| >= 0.4 shown):
+  hiding size                                                    +0.51
+  memory size                                                    -0.65
+  mistakes: largest                                              -0.47
+  mistakes: fourth or lower                                      -0.59
+  mistakes: few positives                                        +0.86
+  near ties: accuracy                                            +0.92
+  near ties: third wins                                          -0.87
+  store: largest read from all neurons (R2)                      +0.52
+  blindness: median ratio (0 = blind)                            -0.71
+  blindness: random-sign null                                    -0.61
+  blindness: share of rows below 0.1                             +0.63
+  (b) mirror: most negative cosine with detector                 -0.42
+  (c) share of hiding neurons within 0.7-1.3                     +0.58
+  (d) memory rows with one source above 0.8                      +0.40

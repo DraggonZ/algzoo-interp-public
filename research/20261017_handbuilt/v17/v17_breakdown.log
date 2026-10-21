@@ -1,0 +1,30 @@
+{'gamma': 0.25} accuracy 0.695
+  second = old largest, current right after     share 0.098  right 0.137  lost 0.085  | wrong names: largest 0.65 third 0.21 pos8-9 0.07
+  second = old largest, current 2+ after        share 0.395  right 0.663  lost 0.133  | wrong names: largest 0.25 third 0.44 pos8-9 0.16
+  second kept, after the largest                share 0.501  right 0.836  lost 0.082  | wrong names: largest 0.30 third 0.45 pos8-9 0.11
+  second kept, before the largest               share 0.006  right 0.085  lost 0.005  | wrong names: largest 0.08 third 0.12 pos8-9 0.00
+{'gamma': 0.25, 'ring': False, 'fwd': True} accuracy 0.755
+  second = old largest, current right after     share 0.098  right 0.030  lost 0.095  | wrong names: largest 0.48 third 0.22 pos8-9 0.14
+  second = old largest, current 2+ after        share 0.395  right 0.687  lost 0.124  | wrong names: largest 0.31 third 0.47 pos8-9 0.29
+  second kept, after the largest                share 0.501  right 0.957  lost 0.022  | wrong names: largest 0.04 third 0.67 pos8-9 0.39
+  second kept, before the largest               share 0.006  right 0.154  lost 0.005  | wrong names: largest 0.07 third 0.15 pos8-9 0.00
+{'gamma': 0.25, 'fwd': True, 'dl': True} accuracy 0.799
+  second = old largest, current right after     share 0.098  right 0.008  lost 0.098  | wrong names: largest 0.63 third 0.24 pos8-9 0.09
+  second = old largest, current 2+ after        share 0.395  right 0.829  lost 0.068  | wrong names: largest 0.00 third 0.56 pos8-9 0.00
+  second kept, after the largest                share 0.501  right 0.937  lost 0.031  | wrong names: largest 0.01 third 0.52 pos8-9 0.00
+  second kept, before the largest               share 0.006  right 0.135  lost 0.005  | wrong names: largest 0.06 third 0.13 pos8-9 0.00
+{'fwd': True, 'dl': True, 'gamma': 0.25, 'gmem': True} accuracy 0.821
+  second = old largest, current right after     share 0.098  right 0.008  lost 0.098  | wrong names: largest 0.68 third 0.22 pos8-9 0.09
+  second = old largest, current 2+ after        share 0.395  right 0.839  lost 0.064  | wrong names: largest 0.00 third 0.54 pos8-9 0.00
+  second kept, after the largest                share 0.501  right 0.975  lost 0.013  | wrong names: largest 0.04 third 0.09 pos8-9 0.00
+  second kept, before the largest               share 0.006  right 0.135  lost 0.005  | wrong names: largest 0.06 third 0.13 pos8-9 0.00
+{'fwd': True, 'dl': True, 'gamma': 0.25, 'gmem': True, 'lself': -0.75, 'y1L': 1.0} accuracy 0.669
+  second = old largest, current right after     share 0.098  right 0.712  lost 0.028  | wrong names: largest 0.08 third 0.20 pos8-9 0.08
+  second = old largest, current 2+ after        share 0.395  right 0.334  lost 0.263  | wrong names: largest 0.00 third 0.31 pos8-9 0.00
+  second kept, after the largest                share 0.501  right 0.931  lost 0.034  | wrong names: largest 0.01 third 0.05 pos8-9 0.00
+  second kept, before the largest               share 0.006  right 0.135  lost 0.005  | wrong names: largest 0.06 third 0.13 pos8-9 0.00
+{'fwd': True, 'dl': True, 'ld': 0.25, 'kap': 0.15, 'cen': True} accuracy 0.800
+  second = old largest, current right after     share 0.098  right 0.718  lost 0.028  | wrong names: largest 0.24 third 0.34 pos8-9 0.27
+  second = old largest, current 2+ after        share 0.395  right 0.665  lost 0.133  | wrong names: largest 0.17 third 0.44 pos8-9 0.06
+  second kept, after the largest                share 0.501  right 0.930  lost 0.035  | wrong names: largest 0.00 third 0.38 pos8-9 0.00
+  second kept, before the largest               share 0.006  right 0.165  lost 0.005  | wrong names: largest 0.00 third 0.12 pos8-9 0.01

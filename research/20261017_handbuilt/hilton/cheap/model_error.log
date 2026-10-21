@@ -1,0 +1,18 @@
+ ARC: model minus reduction -0.09 points = m2<0 -0.30, a<b +0.17, a>=b +0.04; per triple: 10 most negative sum -0.21, 10 most positive +0.12
+ 200: model minus reduction -0.05 points = m2<0 -0.47, a<b +0.17, a>=b +0.25; per triple: 10 most negative sum -0.40, 10 most positive +0.20
+ 201: model minus reduction +0.17 points = m2<0 -0.58, a<b +0.36, a>=b +0.38; per triple: 10 most negative sum -0.15, 10 most positive +0.15
+ 202: model minus reduction +0.58 points = m2<0 -0.43, a<b +0.65, a>=b +0.36; per triple: 10 most negative sum -0.26, 10 most positive +0.19
+ 203: model minus reduction +0.09 points = m2<0 -0.17, a<b +0.02, a>=b +0.24; per triple: 10 most negative sum -0.45, 10 most positive +0.16
+ 204: model minus reduction +0.10 points = m2<0 -0.36, a<b +0.33, a>=b +0.13; per triple: 10 most negative sum -0.40, 10 most positive +0.24
+ 205: model minus reduction +0.14 points = m2<0 -0.60, a<b +0.46, a>=b +0.28; per triple: 10 most negative sum -0.15, 10 most positive +0.28
+ 206: model minus reduction +0.36 points = m2<0 -0.25, a<b +0.42, a>=b +0.20; per triple: 10 most negative sum -0.43, 10 most positive +0.36
+ 207: model minus reduction -0.35 points = m2<0 -0.68, a<b +0.21, a>=b +0.12; per triple: 10 most negative sum -0.48, 10 most positive +0.24
+ 208: model minus reduction -0.58 points = m2<0 -0.22, a<b -0.16, a>=b -0.20; per triple: 10 most negative sum -0.41, 10 most positive +0.21
+ 209: model minus reduction -0.55 points = m2<0 -0.64, a<b +0.05, a>=b +0.04; per triple: 10 most negative sum -0.12, 10 most positive +0.08
+ 210: model minus reduction -0.49 points = m2<0 -0.59, a<b +0.17, a>=b -0.07; per triple: 10 most negative sum -0.10, 10 most positive +0.08
+ 211: model minus reduction -0.52 points = m2<0 -0.64, a<b +0.04, a>=b +0.08; per triple: 10 most negative sum -0.29, 10 most positive +0.17
+ 212: model minus reduction +0.37 points = m2<0 -0.39, a<b +0.56, a>=b +0.20; per triple: 10 most negative sum -0.52, 10 most positive +0.27
+ 213: model minus reduction -0.08 points = m2<0 -0.15, a<b +0.11, a>=b -0.04; per triple: 10 most negative sum -0.37, 10 most positive +0.21
+ 214: model minus reduction +0.08 points = m2<0 -0.38, a<b +0.36, a>=b +0.10; per triple: 10 most negative sum -0.40, 10 most positive +0.27
+ 215: model minus reduction -0.42 points = m2<0 -0.53, a<b +0.10, a>=b +0.01; per triple: 10 most negative sum -0.23, 10 most positive +0.17
+RMSE over networks of each region's part: m2<0 0.46, a<b 0.31, a>=b 0.20

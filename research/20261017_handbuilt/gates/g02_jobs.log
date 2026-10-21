@@ -1,0 +1,38 @@
+                                               all  S bef  S aft  S at   S at   L at   L at   S rig  S aft  S bef
+kinds: all (200000 lists); S before L (revealed) (99933 lists); S after L (kept) (100067 lists); S at 8 (19876 lists); S at 9 (20113 lists); L at 8 (19667 lists); L at 9 (19813 lists); S right after L (20078 lists); S after L, S at 8 (17719 lists); S before L, L at 9 (19813 lists)
+intact                                        95.3   95.5   95.0   94.3   95.2   96.4   93.5   95.8   94.8   93.5
+--- neuron 5
+5 zero at every step                          20.8   20.4   21.1    0.1   96.9   30.1   11.1   10.4    0.1   11.1
+5 per-step mean                               20.8   17.9   23.7   36.2   69.7   27.4   14.4    9.6   37.3   14.4
+5 values shuffled across lists                19.7   18.5   20.9   15.9   56.1   26.8   17.4   14.4   15.5   17.4
+5 readout removed                             85.9   93.2   78.5    0.1   95.6   93.1   84.1   85.0    0.2   84.1
+5 all recurrent outputs removed               27.6   17.8   37.5   96.3   95.3   16.1   19.8   21.5   96.2   19.8
+5 to memory removed                           29.4   19.6   39.2   88.5   96.3   18.8   19.9   18.2   88.7   19.9
+5 to cancellers removed                       76.7   78.2   75.2   91.5   91.4   87.9   85.9   59.7   91.6   85.9
+5 to itself removed                           82.9   79.5   86.4   88.0   82.9   78.0   78.4   94.2   87.4   78.4
+5 to the other gate removed                   95.2   95.3   95.1   94.4   95.3   96.2   93.6   96.2   94.9   93.6
+5 to store+detector removed                   95.1   95.2   95.1   93.8   95.1   95.6   92.7   96.1   94.4   92.7
+5 to neuron 0 only removed                    40.2   42.7   37.6   91.8   94.7   48.2   53.7   18.9   91.8   53.7
+5 zero at steps [9]                           85.9   93.2   78.5    0.1   95.6   93.1   84.1   85.0    0.2   84.1
+5 zero at steps [8, 9]                        75.8   87.9   63.7    0.2   93.9   82.7   75.5   74.5    0.2   75.5
+5 zero at steps [1, 2, 3, 4, 5, 6, 7, 8]      25.9   20.4   31.5   59.2   96.8   24.5   17.4   16.6   58.9   17.4
+--- neuron 9
+9 zero at every step                          66.6   48.7   84.4   84.8   90.8   84.0   88.7   60.9   83.7   88.7
+9 per-step mean                               69.6   60.5   78.7   82.9   87.9   88.1   90.2   46.8   81.3   90.2
+9 values shuffled across lists                64.3   52.7   75.8   80.1   85.4   73.7   75.0   52.4   78.6   75.0
+9 readout removed                             94.7   94.4   95.1   95.3   95.1   89.8   93.9   95.7   95.4   93.9
+9 all recurrent outputs removed               67.2   50.1   84.3   83.7   91.0   91.6   88.2   60.9   82.9   88.2
+9 to memory removed                           88.8   86.2   91.4   92.1   92.9   91.2   91.1   94.5   92.0   91.1
+9 to cancellers removed                       66.2   49.0   83.4   82.9   87.8   96.2   93.7   64.5   82.0   93.7
+9 to itself removed                           94.8   95.1   94.6   94.0   95.1   96.2   93.4   93.9   94.7   93.4
+9 to the other gate removed                   95.0   95.8   94.2   93.4   95.2   96.6   93.9   91.2   94.0   93.9
+9 to store+detector removed                   94.2   94.2   94.2   92.4   94.0   94.0   90.8   95.9   93.0   90.8
+9 to neuron 0 only removed                    91.7   88.9   94.5   94.8   95.7   92.9   92.8   96.2   95.3   92.8
+9 zero at steps [9]                           94.7   94.4   95.1   95.3   95.1   89.8   93.9   95.7   95.4   93.9
+9 zero at steps [8, 9]                        90.3   86.7   93.9   89.7   94.5   89.4   93.2   90.4   89.2   93.2
+9 zero at steps [1, 2, 3, 4, 5, 6, 7, 8]      67.2   50.1   84.3   83.7   91.0   91.6   88.2   60.9   82.9   88.2
+
+readout weights of neuron 5 by position: [-0.23 -0.08 -0.08 -0.35 -0.51 -0.64 -0.68 -0.37  3.4  -0.42]
+readout weights of neuron 9 by position: [-2.1  -1.03  0.41  0.75  1.59  1.95  0.44  0.22 -1.66 -0.6 ]
+neuron 5 at the last step: mean 2.74, on 0.287
+neuron 9 at the last step: mean 0.22, on 0.112

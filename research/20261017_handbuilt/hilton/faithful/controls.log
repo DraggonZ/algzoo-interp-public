@@ -1,0 +1,3 @@
+(a) first twin (gains 10) gives the trained network's answer on 89.05% of lists
+(b) trained network + noise the size of the twin's gap: accuracy 9.91% (copies 9.5-10.0)
+(c) best store rule: fixes 0.71% of lists, breaks 2.63%, changes one wrong answer to another 0.15%

@@ -1,0 +1,26 @@
+one neuron by the rule, the rest by their own sign (change in points):
+  neuron | age table | + second's age | + third's age
+       0 |     -1.72 |     +0.03 |     +0.02
+       3 |     -1.94 |     +0.00 |     -0.09
+      10 |     -0.24 |     -0.24 |     -0.23
+      11 |     -0.04 |     -0.01 |     +0.01
+      12 |     -0.01 |     -0.01 |     -0.04
+      13 |     -0.10 |     -0.01 |     -0.00
+      14 |     -1.95 |     -0.61 |     +0.00
+      15 |     -4.10 |     -1.44 |     -0.50
+== [0, 10, 11, 12, 13, 14] on the age table, the rest on cells of two ages: acc 88.50 (-6.81) agree-answer 90.1
+   on/off agreement with the network's own run: 0:0.962 3:0.868 10:0.978 11:0.978 12:0.952 13:0.967 14:0.933 15:0.873  (all 0.9389)
+== [0, 10, 11, 12, 13, 14] on the age table, the rest on cells of three ages: acc 89.73 (-5.59) agree-answer 91.8
+   on/off agreement with the network's own run: 0:0.962 3:0.900 10:0.978 11:0.978 12:0.952 13:0.967 14:0.933 15:0.906  (all 0.9471)
+== [10, 11, 12, 13] on the age table, the rest on cells of two ages: acc 90.70 (-4.62) agree-answer 92.6
+   on/off agreement with the network's own run: 0:0.990 3:0.868 10:0.978 11:0.978 12:0.952 13:0.967 14:0.961 15:0.873  (all 0.9458)
+== [10, 11, 12, 13] on the age table, the rest on cells of three ages: acc 93.45 (-1.87) agree-answer 95.9
+   on/off agreement with the network's own run: 0:0.990 3:0.900 10:0.978 11:0.978 12:0.952 13:0.967 14:0.969 15:0.906  (all 0.9549)
+== [10, 11, 12] on the age table, the rest on cells of two ages: acc 92.16 (-3.16) agree-answer 94.1
+   on/off agreement with the network's own run: 0:0.990 3:0.868 10:0.978 11:0.978 12:0.952 13:0.979 14:0.961 15:0.873  (all 0.9473)
+== [10, 11, 12] on the age table, the rest on cells of three ages: acc 94.57 (-0.75) agree-answer 97.1
+   on/off agreement with the network's own run: 0:0.990 3:0.900 10:0.978 11:0.978 12:0.952 13:0.979 14:0.969 15:0.906  (all 0.9565)
+== [0, 10, 11] on the age table, the rest on cells of two ages: acc 91.45 (-3.86) agree-answer 93.2
+   on/off agreement with the network's own run: 0:0.962 3:0.868 10:0.978 11:0.978 12:0.954 13:0.979 14:0.961 15:0.873  (all 0.9442)
+== [0, 10, 11] on the age table, the rest on cells of three ages: acc 92.86 (-2.45) agree-answer 95.2
+   on/off agreement with the network's own run: 0:0.962 3:0.900 10:0.978 11:0.978 12:0.957 13:0.979 14:0.969 15:0.906  (all 0.9536)

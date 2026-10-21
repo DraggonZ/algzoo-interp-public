@@ -1,0 +1,3 @@
+sigma 0.005: true 0.908; predicted (joint, first order) 0.910
+sigma 0.01: true 0.813; predicted (joint, first order) 0.816
+sigma 0.02: true 0.643; predicted (joint, first order) 0.650

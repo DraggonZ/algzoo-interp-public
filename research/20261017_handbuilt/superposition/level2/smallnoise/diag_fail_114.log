@@ -1,0 +1,10 @@
+net 114: estimate 87.29%, truth 89.76%
+  third > 0: truth share 94.5%, accuracy 89.96%, wrong naming largest/third/another 2.20/6.92/0.92 points | estimate accuracy 87.76%, wrong 3.24/7.89/1.11
+  third < 0: truth share 5.5%, accuracy 86.32%, wrong naming largest/third/another 9.18/3.05/1.45 points | estimate accuracy 79.21%, wrong 8.04/2.60/10.15
+  per condition (third > 0, 400): truth 0.9126; final model bias -0.0255 MAE 0.0330; oracle Gaussian (same groups, exact moments) bias -0.0003 MAE 0.0047
+    wrong naming largest: truth 0.0165 model 0.0286; third: truth 0.0597 model 0.0711
+    worst: positions [3 6 2] values [1.4  1.29 1.25] truth 0.893 (largest 0.000, third 0.101) model 0.593 oracle 0.883
+    worst: positions [8 5 1] values [0.98 0.15 0.07] truth 0.918 (largest 0.000, third 0.074) model 0.626 oracle 0.836
+    worst: positions [0 8 5] values [1.68 1.64 0.74] truth 0.890 (largest 0.110, third 0.000) model 0.635 oracle 0.894
+    worst: positions [1 9 3] values [1.45 1.28 1.25] truth 0.973 (largest 0.002, third 0.023) model 0.738 oracle 0.977
+    worst: positions [9 0 8] values [1.39 1.37 0.41] truth 0.507 (largest 0.479, third 0.012) model 0.288 oracle 0.468

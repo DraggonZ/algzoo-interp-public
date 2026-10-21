@@ -1,0 +1,3 @@
+default                          1-wrong 0.74563512 (diff -3.6e-05); direct correct 0.74566363 (diff -8.0e-06); total mass 1.00001169
+GM degree 7 everywhere           1-wrong 0.74565251 (diff -1.9e-05); direct correct 0.74565245 (diff -1.9e-05); total mass 0.99999994
+GM degree 7, split to 0.25 rad   1-wrong 0.74565250 (diff -1.9e-05); direct correct 0.74565250 (diff -1.9e-05); total mass 1.00000000

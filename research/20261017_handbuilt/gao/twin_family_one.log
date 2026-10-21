@@ -1,0 +1,24 @@
+twin with clock gain 30, flag gain 30, detector gain 20
+twin accuracy 0.947
+right         : unexplained share of active pre-activation variance, worst neuron 3.1e-06; all 16 replaced: acc 0.697 agree 0.731 KL 0.038
+wrong height  : unexplained share of active pre-activation variance, worst neuron 1.2e-04; all 16 replaced: acc 0.699 agree 0.709 KL 9.054
+no flip       : unexplained share of active pre-activation variance, worst neuron 3.3e-04; all 16 replaced: acc 0.576 agree 0.598 KL 8.566
+angle 45.5    : unexplained share of active pre-activation variance, worst neuron 3.3e-06; all 16 replaced: acc 0.845 agree 0.869 KL 0.110
+generic       : unexplained share of active pre-activation variance, worst neuron 3.3e-05; all 16 replaced: acc 0.126 agree 0.113 KL 574185.405
+neuron 0: fitted coefficients [20.]
+neuron 1: fitted coefficients [20.]
+neuron 2: fitted coefficients [ 2.499e-01 -1.000e-04]
+neuron 3: fitted coefficients [ 30.0008 -29.999    0.4988]
+neuron 4: fitted coefficients [ 3.00016e+01 -2.99974e+01  9.96900e-01 -7.00000e-04]
+neuron 5: fitted coefficients [ 30.001  -29.9982  -0.4992   0.8634]
+neuron 6: fitted coefficients [ 30.0002 -29.9989  -0.4987  -0.8631]
+neuron 7: fitted coefficients [30.  1.]
+written rules   : acc 0.961 agree 0.976
+neuron 0 fitted : acc 0.961 agree 0.975
+neuron 1 fitted : acc 0.961 agree 0.976
+neuron 2 fitted : acc 0.961 agree 0.976
+neuron 3 fitted : acc 0.744 agree 0.775
+neuron 4 fitted : acc 0.807 agree 0.830
+neuron 5 fitted : acc 0.808 agree 0.838
+neuron 6 fitted : acc 0.821 agree 0.841
+neuron 7 fitted : acc 0.961 agree 0.976

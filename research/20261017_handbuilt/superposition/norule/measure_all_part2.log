@@ -1,0 +1,306 @@
+seed 104: 16 neurons, acc 91.02%, dominant pattern 40.0% of steps 4-8, modes 180:0.69 137:0.64 102:0.61 47:0.92 0:1.00 69:0.60 41:0.34 24:0.60 0:0.48
+   0 memory on  98.7% d2  98.7% nearly constant near0   2.2%/  3.0% canc 0.224 rot 0.36 inp 0.00 (sumsq/z 3.3) pos 0.81 offset +1.72 | linear 89.44% (cost 1.58) clip 0.000
+   1 memory on  97.7% d2  97.7% nearly constant near0   2.1%/  1.7% canc 0.344 rot 0.42 inp 0.00 (sumsq/z 9.5) pos 0.82 offset +1.83 | linear 90.97% (cost 0.06) clip 0.001
+   2 memory on  80.5% d2  97.1% one-line rule   near0   9.4%/ 43.2% canc 0.098 rot 0.39 inp 0.00 (sumsq/z 0.9) pos 0.45 offset +0.76 | linear 45.87% (cost 45.15) clip 0.044
+   3 memory on  98.0% d2  98.0% nearly constant near0   1.7%/  1.2% canc 0.330 rot 0.49 inp 0.00 (sumsq/z 19.8) pos 0.84 offset +2.00 | linear 91.15% (cost -0.13) clip 0.001
+   4 memory on  98.1% d2  98.1% nearly constant near0   1.8%/  1.1% canc 0.333 rot 0.23 inp 0.00 (sumsq/z 1.9) pos 0.83 offset +1.92 | linear 90.91% (cost 0.11) clip 0.001
+   5 gate   on  24.4% d2  98.8% one-line rule   near0   7.9%/ 48.8% canc 0.083 rot 0.06 inp 0.00 (sumsq/z 1.6) pos 0.42 offset -0.71 | linear 14.66% (cost 76.36) clip 0.689
+   6 memory on  93.4% d2  98.9% one-line rule   near0   3.3%/  1.2% canc 0.302 rot 0.18 inp 0.00 (sumsq/z 2.0) pos 0.84 offset +1.89 | linear 88.21% (cost 2.81) clip 0.004
+   7 memory on  91.9% d2  92.7% no rule         near0   5.7%/ 48.5% canc 0.082 rot 0.50 inp 0.00 (sumsq/z 414.3) pos 0.66 offset +1.17 | linear 89.97% (cost 1.06) clip 0.028
+   8 hiding on  77.7% d2  95.7% one-line rule   near0   7.3%/ 38.3% canc 0.110 rot 0.05 inp 0.41 (sumsq/z 1.1) pos 0.52 offset +3.37 | linear 29.10% (cost 61.92) clip 0.097
+   9 memory on  99.7% d2  99.7% nearly constant near0   1.4%/  1.1% canc 0.235 rot 0.36 inp 0.00 (sumsq/z 3.3) pos 0.82 offset +1.82 | linear 90.87% (cost 0.15) clip 0.000
+  10 hiding on  75.7% d2  94.0% partial         near0   7.5%/ 34.6% canc 0.124 rot 0.27 inp 0.33 (sumsq/z 1.4) pos 0.48 offset +2.44 | linear 42.28% (cost 48.75) clip 0.111
+  11 memory on  78.1% d2  93.9% partial         near0   7.4%/ 37.8% canc 0.112 rot 0.09 inp 0.43 (sumsq/z 1.0) pos 0.50 offset +2.63 | linear 29.89% (cost 61.13) clip 0.095
+  12 memory on 100.0% d2 100.0% nearly constant near0   3.1%/  4.0% canc 0.215 rot 0.43 inp 0.00 (sumsq/z 7.6) pos 0.89 offset +2.34 | linear 91.02% (cost -0.00) clip 0.000
+  13 hiding on  75.7% d2  94.0% partial         near0   7.3%/ 22.0% canc 0.180 rot 0.14 inp 0.24 (sumsq/z 1.7) pos 0.52 offset +2.07 | linear 35.28% (cost 55.74) clip 0.110
+  14 memory on 100.0% d2 100.0% nearly constant near0   3.8%/  0.0% canc 0.492 rot 0.51 inp 0.00 (sumsq/z 26.2) pos 0.77 offset +1.56 | linear 91.02% (cost -0.00) clip 0.000
+  15 memory on  99.9% d2  99.9% nearly constant near0   1.2%/ 12.0% canc 0.189 rot 0.45 inp 0.00 (sumsq/z 5.5) pos 0.77 offset +1.52 | linear 91.07% (cost -0.05) clip 0.000
+seed 102: 16 neurons, acc 91.21%, dominant pattern 34.0% of steps 4-8, modes 103:0.99 144:0.86 162:1.01 180:0.87 64:0.92 180:0.03 0:0.05 19:0.84 0:1.00 0:0.91
+   0 gate   on  43.2% d2  96.1% one-line rule   near0   8.0%/ 20.9% canc 0.201 rot 0.02 inp 0.87 (sumsq/z 1.0) pos 0.05 offset -0.87 | linear 33.02% (cost 58.19) clip 0.485
+   1 memory on  99.3% d2  99.3% nearly constant near0  10.5%/ 14.7% canc 0.257 rot 0.05 inp 0.00 (sumsq/z 1.1) pos 0.84 offset +1.89 | linear 91.20% (cost 0.00) clip 0.000
+   2 memory on  96.3% d2  99.0% partial         near0  14.6%/ 36.0% canc 0.140 rot 0.15 inp 0.00 (sumsq/z 1.0) pos 0.79 offset +1.64 | linear 91.00% (cost 0.20) clip 0.000
+   3 hiding on  75.1% d2  93.6% partial         near0   7.5%/ 52.0% canc 0.077 rot 0.03 inp 0.46 (sumsq/z 1.0) pos 0.47 offset +2.13 | linear 33.58% (cost 57.63) clip 0.115
+   4 memory on  95.5% d2  98.3% partial         near0   4.5%/  3.6% canc 0.411 rot 0.01 inp 0.01 (sumsq/z 1.0) pos 0.91 offset +2.78 | linear 89.45% (cost 1.76) clip 0.002
+   5 hiding on  76.0% d2  94.6% partial         near0   7.5%/ 20.2% canc 0.205 rot 0.03 inp 0.44 (sumsq/z 1.0) pos 0.50 offset +2.46 | linear 25.63% (cost 65.58) clip 0.108
+   6 hiding on  76.0% d2  95.7% one-line rule   near0   7.4%/ 25.5% canc 0.163 rot 0.01 inp 0.45 (sumsq/z 1.0) pos 0.50 offset +2.91 | linear 26.85% (cost 64.35) clip 0.110
+   7 memory on  86.5% d2  92.2% partial         near0  10.4%/ 59.5% canc 0.075 rot 0.19 inp 0.00 (sumsq/z 1.1) pos 0.50 offset +0.83 | linear 75.01% (cost 16.20) clip 0.065
+   8 memory on  99.7% d2  99.7% nearly constant near0  17.5%/ 20.4% canc 0.331 rot 0.10 inp 0.00 (sumsq/z 1.1) pos 0.80 offset +1.66 | linear 91.21% (cost 0.00) clip 0.000
+   9 memory on  90.7% d2  96.8% one-line rule   near0   7.5%/  7.9% canc 0.349 rot 0.04 inp 0.00 (sumsq/z 1.0) pos 0.80 offset +1.64 | linear 88.88% (cost 2.32) clip 0.008
+  10 memory on  93.7% d2  97.6% one-line rule   near0   4.1%/  4.2% canc 0.395 rot 0.04 inp 0.02 (sumsq/z 1.2) pos 0.87 offset +2.34 | linear 86.42% (cost 4.79) clip 0.006
+  11 memory on  96.1% d2  99.0% partial         near0   7.6%/  4.8% canc 0.321 rot 0.10 inp 0.00 (sumsq/z 1.2) pos 0.84 offset +1.90 | linear 91.25% (cost -0.04) clip 0.001
+  12 memory on  75.4% d2  99.0% one-line rule   near0  11.6%/ 19.6% canc 0.190 rot 0.06 inp 0.00 (sumsq/z 0.9) pos 0.30 offset +0.55 | linear 28.95% (cost 62.26) clip 0.170
+  13 memory on  94.9% d2  96.7% partial         near0  11.7%/ 43.7% canc 0.110 rot 0.30 inp 0.00 (sumsq/z 0.9) pos 0.70 offset +1.26 | linear 88.84% (cost 2.36) clip 0.004
+  14 memory on  94.3% d2  96.8% partial         near0   3.4%/  4.1% canc 0.373 rot 0.01 inp 0.02 (sumsq/z 1.0) pos 0.86 offset +2.19 | linear 88.56% (cost 2.64) clip 0.005
+  15 memory on  96.1% d2  97.2% partial         near0   6.9%/  2.8% canc 0.430 rot 0.02 inp 0.00 (sumsq/z 1.0) pos 0.82 offset +1.80 | linear 91.23% (cost -0.02) clip 0.000
+seed 106: 16 neurons, acc 94.81%, dominant pattern 36.5% of steps 4-8, modes 103:0.84 153:0.92 180:0.67 146:0.70 53:0.76 0:0.01 0:0.99 0:0.69 0:0.91 0:0.80
+   0 memory on  97.2% d2  97.2% nearly constant near0  18.4%/ 35.1% canc 0.236 rot 0.15 inp 0.00 (sumsq/z 1.0) pos 0.70 offset +1.26 | linear 94.78% (cost 0.04) clip 0.002
+   1 hiding on  71.4% d2  95.1% one-line rule   near0   7.6%/ 15.0% canc 0.316 rot 0.01 inp 0.52 (sumsq/z 1.0) pos 0.38 offset +1.58 | linear 41.22% (cost 53.59) clip 0.147
+   2 hiding on  78.9% d2  96.9% one-line rule   near0   7.5%/ 13.3% canc 0.358 rot 0.03 inp 0.40 (sumsq/z 1.0) pos 0.57 offset +3.56 | linear 51.24% (cost 43.57) clip 0.089
+   3 gate   on  19.9% d2  99.7% one-line rule   near0   7.1%/  6.8% canc 0.824 rot 0.00 inp 0.39 (sumsq/z 1.0) pos 0.61 offset -43.19 | linear 5.77% (cost 89.05) clip 0.731
+   4 memory on  93.2% d2  97.7% one-line rule   near0  14.1%/ 19.2% canc 0.258 rot 0.05 inp 0.00 (sumsq/z 1.2) pos 0.86 offset +2.07 | linear 94.77% (cost 0.05) clip 0.001
+   5 memory on  98.9% d2  99.0% nearly constant near0  14.3%/ 11.5% canc 0.485 rot 0.06 inp 0.00 (sumsq/z 0.9) pos 0.89 offset +2.40 | linear 94.82% (cost -0.00) clip 0.000
+   6 memory on  95.6% d2  95.7% no rule         near0  12.9%/ 40.2% canc 0.170 rot 0.11 inp 0.00 (sumsq/z 1.2) pos 0.60 offset +1.01 | linear 94.85% (cost -0.03) clip 0.001
+   7 hiding on  73.9% d2  93.3% partial         near0   7.6%/ 12.4% canc 0.372 rot 0.04 inp 0.49 (sumsq/z 1.0) pos 0.44 offset +1.92 | linear 32.19% (cost 62.63) clip 0.125
+   8 hiding on  75.6% d2  94.4% partial         near0   7.7%/ 14.7% canc 0.328 rot 0.03 inp 0.44 (sumsq/z 1.0) pos 0.48 offset +2.18 | linear 42.88% (cost 51.93) clip 0.112
+   9 memory on  92.7% d2  92.7% no rule         near0  24.5%/ 25.3% canc 0.400 rot 0.20 inp 0.00 (sumsq/z 1.1) pos 0.72 offset +1.35 | linear 94.75% (cost 0.07) clip 0.001
+  10 memory on  75.2% d2  99.1% one-line rule   near0  15.1%/ 21.8% canc 0.192 rot 0.07 inp 0.00 (sumsq/z 0.9) pos 0.08 offset +0.24 | linear 33.86% (cost 60.96) clip 0.264
+  11 memory on  86.2% d2  97.7% one-line rule   near0   6.7%/ 14.6% canc 0.266 rot 0.03 inp 0.16 (sumsq/z 1.2) pos 0.77 offset +3.38 | linear 90.15% (cost 4.66) clip 0.039
+  12 gate   on  38.2% d2  98.1% one-line rule   near0   7.9%/ 15.6% canc 0.284 rot 0.00 inp 0.79 (sumsq/z 1.0) pos 0.13 offset -1.17 | linear 59.77% (cost 35.04) clip 0.545
+  13 memory on  96.3% d2  97.9% partial         near0   8.0%/  5.8% canc 0.403 rot 0.02 inp 0.00 (sumsq/z 1.0) pos 0.87 offset +2.22 | linear 94.83% (cost -0.01) clip 0.001
+  14 memory on  89.9% d2  97.3% one-line rule   near0  24.3%/ 30.5% canc 0.238 rot 0.22 inp 0.00 (sumsq/z 0.9) pos 0.69 offset +1.24 | linear 91.00% (cost 3.82) clip 0.003
+  15 memory on  96.8% d2  96.8% no rule         near0  16.3%/ 17.5% canc 0.305 rot 0.18 inp 0.00 (sumsq/z 0.8) pos 0.78 offset +1.56 | linear 94.81% (cost 0.00) clip 0.000
+seed 108: 16 neurons, acc 93.91%, dominant pattern 12.7% of steps 4-8, modes 0:1.12 0:0.98 51:0.80 164:0.83 152:0.79 114:0.44 84:0.19 180:0.26 180:0.05
+   0 memory on  97.7% d2  98.9% nearly constant near0  14.3%/ 28.2% canc 0.224 rot 0.10 inp 0.00 (sumsq/z 1.1) pos 0.80 offset +1.65 | linear 93.90% (cost 0.01) clip 0.000
+   1 hiding on  77.0% d2  96.9% one-line rule   near0   7.4%/ 14.4% canc 0.323 rot 0.01 inp 0.44 (sumsq/z 1.0) pos 0.53 offset +4.16 | linear 22.30% (cost 71.61) clip 0.103
+   2 gate   on  23.6% d2  97.5% one-line rule   near0   7.4%/ 15.0% canc 0.312 rot 0.01 inp 0.48 (sumsq/z 1.0) pos 0.51 offset -4.46 | linear 15.57% (cost 78.34) clip 0.696
+   3 memory on  99.8% d2  99.8% nearly constant near0   9.3%/ 21.6% canc 0.233 rot 0.46 inp 0.00 (sumsq/z 1.2) pos 0.84 offset +1.88 | linear 93.91% (cost -0.00) clip 0.000
+   4 memory on  93.8% d2  99.3% one-line rule   near0  10.9%/ 20.6% canc 0.262 rot 0.26 inp 0.00 (sumsq/z 1.6) pos 0.74 offset +1.39 | linear 93.91% (cost -0.00) clip 0.001
+   5 memory on  75.3% d2  77.0% partial         near0  10.5%/ 55.9% canc 0.087 rot 0.40 inp 0.00 (sumsq/z 3.2) pos 0.29 offset +0.54 | linear 90.70% (cost 3.21) clip 0.095
+   6 memory on  99.1% d2  99.1% nearly constant near0  18.8%/  4.9% canc 0.378 rot 0.08 inp 0.00 (sumsq/z 1.0) pos 0.59 offset +1.01 | linear 93.89% (cost 0.02) clip 0.000
+   7 memory on  93.3% d2  94.9% partial         near0   8.3%/ 22.0% canc 0.224 rot 0.37 inp 0.01 (sumsq/z 1.1) pos 0.73 offset +1.40 | linear 93.59% (cost 0.32) clip 0.007
+   8 memory on  65.3% d2  84.5% partial         near0  17.4%/ 35.7% canc 0.167 rot 0.76 inp 0.00 (sumsq/z 0.7) pos 0.03 offset +0.16 | linear 37.45% (cost 56.47) clip 0.279
+   9 memory on  98.9% d2  98.9% nearly constant near0  15.8%/ 20.5% canc 0.261 rot 0.19 inp 0.00 (sumsq/z 1.8) pos 0.84 offset +1.88 | linear 93.85% (cost 0.06) clip 0.000
+  10 memory on  75.6% d2  99.3% one-line rule   near0   7.0%/  3.4% canc 0.501 rot 0.02 inp 0.00 (sumsq/z 1.0) pos 0.30 offset +0.55 | linear 41.24% (cost 52.67) clip 0.130
+  11 memory on  95.2% d2  97.8% partial         near0  17.3%/ 28.1% canc 0.248 rot 0.04 inp 0.00 (sumsq/z 1.2) pos 0.65 offset +1.15 | linear 93.90% (cost 0.01) clip 0.001
+  12 hiding on  76.7% d2  94.6% partial         near0   7.6%/ 12.5% canc 0.378 rot 0.03 inp 0.39 (sumsq/z 1.1) pos 0.51 offset +2.34 | linear 39.10% (cost 54.81) clip 0.103
+  13 memory on  88.9% d2  92.8% partial         near0  29.7%/ 30.6% canc 0.300 rot 0.27 inp 0.00 (sumsq/z 1.3) pos 0.60 offset +1.01 | linear 93.42% (cost 0.49) clip 0.002
+  14 memory on  63.2% d2  66.3% partial         near0   7.8%/ 41.1% canc 0.117 rot 0.04 inp 0.00 (sumsq/z 1.0) pos 0.01 offset +0.09 | linear 88.37% (cost 5.54) clip 0.355
+  15 hiding on  76.8% d2  94.7% partial         near0   7.6%/ 13.7% canc 0.336 rot 0.02 inp 0.44 (sumsq/z 0.9) pos 0.52 offset +2.48 | linear 43.60% (cost 50.31) clip 0.101
+seed 110: 16 neurons, acc 91.15%, dominant pattern 20.2% of steps 4-8, modes 0:1.03 0:0.99 180:0.84 47:0.80 97:0.92 117:0.70 93:0.76 62:0.04
+   0 memory on  77.9% d2  91.6% partial         near0   7.9%/ 44.5% canc 0.097 rot 0.11 inp 0.33 (sumsq/z 1.1) pos 0.53 offset +1.76 | linear 53.51% (cost 37.63) clip 0.089
+   1 memory on  95.5% d2  96.2% no rule         near0  16.3%/ 18.8% canc 0.190 rot 0.12 inp 0.00 (sumsq/z 1.0) pos 0.75 offset +1.44 | linear 90.57% (cost 0.57) clip 0.002
+   2 memory on  91.3% d2  95.0% one-line rule   near0  11.3%/  6.9% canc 0.315 rot 0.07 inp 0.00 (sumsq/z 0.9) pos 0.84 offset +1.93 | linear 90.62% (cost 0.52) clip 0.004
+   3 memory on  81.5% d2  99.2% one-line rule   near0   6.4%/ 34.0% canc 0.143 rot 0.17 inp 0.00 (sumsq/z 0.8) pos 0.53 offset +0.89 | linear 35.48% (cost 55.66) clip 0.067
+   4 memory on  64.6% d2  87.1% partial         near0  52.6%/ 61.0% canc 0.053 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.13 offset -0.32 | linear 24.08% (cost 67.07) clip 0.376
+   5 store  on  97.0% d2  97.9% nearly constant near0   8.4%/  1.1% canc 0.785 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.99 offset +18.04 | linear 91.02% (cost 0.12) clip 0.001
+   6 memory on  99.2% d2  99.2% nearly constant near0   7.6%/ 16.8% canc 0.171 rot 0.09 inp 0.00 (sumsq/z 0.8) pos 0.89 offset +2.40 | linear 91.13% (cost 0.02) clip 0.000
+   7 memory on  86.5% d2  91.3% partial         near0  13.5%/ 19.8% canc 0.270 rot 0.09 inp 0.00 (sumsq/z 0.9) pos 0.75 offset +1.45 | linear 89.37% (cost 1.78) clip 0.008
+   8 memory on  93.8% d2  93.8% no rule         near0  10.0%/ 26.7% canc 0.180 rot 0.20 inp 0.01 (sumsq/z 0.9) pos 0.76 offset +1.51 | linear 89.65% (cost 1.49) clip 0.005
+   9 gate   on  19.3% d2  99.6% one-line rule   near0   7.1%/  6.5% canc 0.906 rot 0.00 inp 0.38 (sumsq/z 1.0) pos 0.62 offset -43.20 | linear 3.17% (cost 87.98) clip 0.736
+  10 memory on  50.0% d2  92.1% partial         near0  10.5%/ 67.1% canc 0.033 rot 0.04 inp 0.00 (sumsq/z 0.8) pos 0.07 offset +0.23 | linear 81.35% (cost 9.80) clip 0.288
+  11 hiding on  74.2% d2  91.5% partial         near0   7.8%/ 29.8% canc 0.151 rot 0.14 inp 0.31 (sumsq/z 1.3) pos 0.47 offset +1.57 | linear 45.29% (cost 45.85) clip 0.115
+  12 memory on  98.5% d2  98.5% nearly constant near0  11.0%/  3.8% canc 0.443 rot 0.06 inp 0.00 (sumsq/z 0.8) pos 0.95 offset +3.46 | linear 91.15% (cost -0.00) clip 0.000
+  13 memory on  84.6% d2  95.1% one-line rule   near0  10.4%/ 20.9% canc 0.195 rot 0.07 inp 0.00 (sumsq/z 1.2) pos 0.75 offset +1.43 | linear 90.70% (cost 0.44) clip 0.010
+  14 store  on  96.1% d2  98.0% partial         near0   8.2%/  1.4% canc 0.794 rot 0.00 inp 0.00 (sumsq/z 1.1) pos 0.99 offset +26.57 | linear 90.29% (cost 0.86) clip 0.002
+  15 gate   on  28.1% d2  94.1% partial         near0   7.7%/ 75.8% canc 0.046 rot 0.26 inp 0.00 (sumsq/z 0.8) pos 0.33 offset -0.59 | linear 14.40% (cost 76.74) clip 0.641
+seed 112: 16 neurons, acc 91.37%, dominant pattern 34.9% of steps 4-8, modes 152:0.59 105:0.68 180:0.37 0:1.01 61:0.79 44:0.82 30:0.74 1:0.21
+   0 store  on  96.9% d2  98.1% partial         near0   9.4%/  2.0% canc 0.499 rot 0.04 inp 0.00 (sumsq/z 1.1) pos 0.97 offset +4.92 | linear 91.44% (cost -0.06) clip 0.001
+   1 memory on  99.2% d2  99.3% nearly constant near0   6.3%/  5.7% canc 0.201 rot 0.24 inp 0.00 (sumsq/z 0.9) pos 0.88 offset +2.25 | linear 91.39% (cost -0.02) clip 0.000
+   2 memory on  90.5% d2  95.7% one-line rule   near0   8.2%/ 14.0% canc 0.167 rot 0.54 inp 0.00 (sumsq/z 2.2) pos 0.82 offset +1.82 | linear 90.96% (cost 0.42) clip 0.008
+   3 gate   on  44.9% d2  89.9% partial         near0  32.2%/ 44.4% canc 0.096 rot 0.15 inp 0.00 (sumsq/z 0.8) pos 0.17 offset -0.37 | linear 21.43% (cost 69.94) clip 0.442
+   4 memory on  96.7% d2  96.6% no rule         near0   4.4%/  2.7% canc 0.431 rot 0.04 inp 0.00 (sumsq/z 0.9) pos 0.83 offset +1.88 | linear 91.32% (cost 0.05) clip 0.001
+   5 gate   on  19.7% d2  99.6% one-line rule   near0   7.1%/  7.1% canc 0.772 rot 0.00 inp 0.39 (sumsq/z 1.0) pos 0.61 offset -45.14 | linear 6.23% (cost 85.14) clip 0.732
+   6 memory on  98.8% d2  99.0% nearly constant near0   3.7%/  5.0% canc 0.197 rot 0.09 inp 0.00 (sumsq/z 0.9) pos 0.84 offset +1.94 | linear 91.36% (cost 0.01) clip 0.000
+   7 memory on  55.7% d2  92.6% partial         near0  37.6%/ 53.7% canc 0.064 rot 0.03 inp 0.00 (sumsq/z 1.0) pos 0.21 offset +0.44 | linear 50.98% (cost 40.40) clip 0.042
+   8 memory on  74.3% d2  97.5% one-line rule   near0  16.7%/ 45.0% canc 0.102 rot 0.05 inp 0.00 (sumsq/z 0.8) pos 0.02 offset -0.11 | linear 13.61% (cost 77.77) clip 0.357
+   9 memory on  96.8% d2  97.5% no rule         near0   8.7%/  2.6% canc 0.611 rot 0.05 inp 0.00 (sumsq/z 1.3) pos 0.89 offset +2.42 | linear 91.10% (cost 0.28) clip 0.001
+  10 memory on  93.7% d2  95.9% partial         near0   4.3%/  2.8% canc 0.597 rot 0.07 inp 0.01 (sumsq/z 1.3) pos 0.81 offset +1.77 | linear 90.14% (cost 1.24) clip 0.004
+  11 memory on  97.8% d2  98.0% nearly constant near0   4.4%/  1.0% canc 0.640 rot 0.05 inp 0.00 (sumsq/z 1.3) pos 0.93 offset +3.13 | linear 90.48% (cost 0.90) clip 0.001
+  12 memory on  98.0% d2  98.1% nearly constant near0  13.6%/  4.2% canc 0.318 rot 0.38 inp 0.00 (sumsq/z 1.0) pos 0.74 offset +1.39 | linear 91.41% (cost -0.03) clip 0.000
+  13 hiding on  71.1% d2  93.3% partial         near0   7.6%/ 36.0% canc 0.120 rot 0.29 inp 0.26 (sumsq/z 1.9) pos 0.33 offset +1.19 | linear 29.62% (cost 61.76) clip 0.149
+  14 memory on  87.2% d2  93.7% partial         near0   6.1%/ 52.8% canc 0.092 rot 0.44 inp 0.00 (sumsq/z 5.5) pos 0.65 offset +1.16 | linear 90.30% (cost 1.07) clip 0.033
+  15 memory on  78.3% d2  92.8% partial         near0   8.3%/ 33.0% canc 0.130 rot 0.14 inp 0.31 (sumsq/z 1.1) pos 0.50 offset +1.47 | linear 67.52% (cost 23.86) clip 0.084
+seed 114: 16 neurons, acc 89.69%, dominant pattern 35.9% of steps 4-8, modes 180:0.65 144:0.65 84:0.91 104:0.52 73:0.57 0:1.00 0:0.93 0:0.65 39:0.57
+   0 gate   on  44.1% d2  81.5% partial         near0  31.2%/ 68.9% canc 0.045 rot 0.20 inp 0.00 (sumsq/z 1.3) pos 0.00 offset +0.01 | linear 34.75% (cost 54.94) clip 0.285
+   1 hiding on  73.3% d2  89.5% partial         near0   7.9%/ 48.1% canc 0.086 rot 0.24 inp 0.38 (sumsq/z 1.1) pos 0.43 offset +1.35 | linear 47.11% (cost 42.58) clip 0.126
+   2 memory on  98.7% d2  98.7% nearly constant near0   2.6%/  0.9% canc 0.365 rot 0.45 inp 0.00 (sumsq/z 11.0) pos 0.85 offset +1.99 | linear 89.75% (cost -0.06) clip 0.000
+   3 memory on  93.1% d2  97.6% one-line rule   near0   6.3%/  5.4% canc 0.300 rot 0.47 inp 0.00 (sumsq/z 7.3) pos 0.93 offset +3.09 | linear 87.29% (cost 2.40) clip 0.004
+   4 memory on  76.0% d2  99.1% one-line rule   near0   7.3%/  7.3% canc 0.398 rot 0.28 inp 0.00 (sumsq/z 0.8) pos 0.29 offset +0.53 | linear 34.97% (cost 54.72) clip 0.132
+   5 memory on  98.1% d2  98.3% nearly constant near0   5.1%/  5.4% canc 0.318 rot 0.47 inp 0.00 (sumsq/z 10.8) pos 0.88 offset +2.26 | linear 89.76% (cost -0.07) clip 0.000
+   6 memory on  98.7% d2  98.8% nearly constant near0   2.2%/  2.0% canc 0.321 rot 0.21 inp 0.01 (sumsq/z 1.9) pos 0.88 offset +2.41 | linear 89.69% (cost 0.00) clip 0.001
+   7 memory on  77.9% d2  93.0% partial         near0   7.9%/ 24.4% canc 0.182 rot 0.12 inp 0.33 (sumsq/z 1.1) pos 0.53 offset +1.84 | linear 54.29% (cost 35.40) clip 0.091
+   8 memory on  99.1% d2  99.2% nearly constant near0   3.1%/  0.7% canc 0.560 rot 0.17 inp 0.00 (sumsq/z 1.5) pos 0.92 offset +2.77 | linear 89.73% (cost -0.04) clip 0.000
+   9 memory on  88.9% d2  95.8% one-line rule   near0   7.1%/  4.9% canc 0.393 rot 0.34 inp 0.00 (sumsq/z 2.8) pos 0.86 offset +2.04 | linear 88.52% (cost 1.17) clip 0.009
+  10 memory on  98.1% d2  98.4% nearly constant near0   2.4%/  1.2% canc 0.632 rot 0.30 inp 0.00 (sumsq/z 2.8) pos 0.91 offset +2.85 | linear 89.15% (cost 0.54) clip 0.001
+  11 memory on  80.6% d2  80.6% no rule         near0   9.1%/ 16.7% canc 0.275 rot 0.49 inp 0.00 (sumsq/z 7.5) pos 0.51 offset +0.86 | linear 88.42% (cost 1.27) clip 0.068
+  12 memory on  99.2% d2  99.2% nearly constant near0   9.3%/  8.8% canc 0.423 rot 0.13 inp 0.00 (sumsq/z 1.4) pos 0.93 offset +2.99 | linear 89.69% (cost 0.00) clip 0.000
+  13 gate   on  22.7% d2  97.4% one-line rule   near0   7.3%/ 18.0% canc 0.233 rot 0.01 inp 0.43 (sumsq/z 1.0) pos 0.54 offset -5.18 | linear 8.81% (cost 80.88) clip 0.705
+  14 memory on  99.6% d2  99.6% nearly constant near0   9.9%/ 22.8% canc 0.185 rot 0.14 inp 0.00 (sumsq/z 1.4) pos 0.83 offset +1.87 | linear 89.69% (cost -0.00) clip 0.000
+  15 memory on  97.8% d2  97.8% nearly constant near0   9.5%/ 44.8% canc 0.096 rot 0.50 inp 0.00 (sumsq/z 9.4) pos 0.68 offset +1.23 | linear 89.54% (cost 0.16) clip 0.001
+seed 200: 16 neurons, acc 93.24%, dominant pattern 23.7% of steps 4-8, modes 20:0.95 0:1.00 0:0.78 164:0.92 143:0.74 180:0.53 52:0.23 138:0.20
+   0 memory on  51.6% d2  63.3% partial         near0  10.4%/ 54.5% canc 0.090 rot 0.32 inp 0.00 (sumsq/z 1.5) pos 0.10 offset -0.28 | linear 69.90% (cost 23.34) clip 0.509
+   1 hiding on  71.5% d2  95.3% one-line rule   near0   7.6%/ 18.0% canc 0.251 rot 0.00 inp 0.53 (sumsq/z 1.0) pos 0.39 offset +1.62 | linear 35.80% (cost 57.44) clip 0.145
+   2 gate   on  19.5% d2  99.9% one-line rule   near0   7.1%/  6.8% canc 0.806 rot 0.00 inp 0.38 (sumsq/z 1.0) pos 0.62 offset -94.78 | linear 8.39% (cost 84.85) clip 0.734
+   3 memory on  98.0% d2  97.9% nearly constant near0  10.4%/  2.6% canc 0.375 rot 0.06 inp 0.00 (sumsq/z 0.9) pos 0.65 offset +1.16 | linear 93.17% (cost 0.07) clip 0.001
+   4 memory on  99.2% d2  99.2% nearly constant near0   5.5%/  1.4% canc 0.534 rot 0.02 inp 0.00 (sumsq/z 1.0) pos 0.73 offset +1.38 | linear 93.24% (cost -0.00) clip 0.000
+   5 memory on  99.3% d2  99.6% nearly constant near0  10.2%/  1.9% canc 0.567 rot 0.01 inp 0.00 (sumsq/z 1.0) pos 0.61 offset +1.05 | linear 93.22% (cost 0.02) clip 0.000
+   6 memory on 100.0% d2 100.0% nearly constant near0   5.0%/  4.4% canc 0.374 rot 0.10 inp 0.00 (sumsq/z 1.3) pos 0.83 offset +1.82 | linear 93.24% (cost -0.00) clip 0.000
+   7 memory on  88.0% d2  93.9% partial         near0   7.0%/ 18.0% canc 0.207 rot 0.09 inp 0.01 (sumsq/z 1.5) pos 0.68 offset +1.25 | linear 91.89% (cost 1.35) clip 0.012
+   8 memory on  84.3% d2  94.3% partial         near0  17.8%/ 39.2% canc 0.143 rot 0.17 inp 0.00 (sumsq/z 1.2) pos 0.72 offset +1.34 | linear 93.12% (cost 0.12) clip 0.003
+   9 memory on  94.6% d2  98.8% one-line rule   near0  13.1%/ 14.5% canc 0.314 rot 0.07 inp 0.00 (sumsq/z 1.4) pos 0.85 offset +1.99 | linear 93.22% (cost 0.02) clip 0.001
+  10 hiding on  77.2% d2  95.4% one-line rule   near0   7.5%/ 18.2% canc 0.254 rot 0.03 inp 0.41 (sumsq/z 1.0) pos 0.53 offset +2.52 | linear 44.94% (cost 48.31) clip 0.100
+  11 memory on  72.9% d2  96.3% one-line rule   near0  27.9%/  6.2% canc 0.433 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.08 offset -0.25 | linear 15.76% (cost 77.48) clip 0.375
+  12 gate   on  20.9% d2  83.0% partial         near0  39.4%/ 22.5% canc 0.248 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.25 offset -0.48 | linear 13.20% (cost 80.04) clip 0.462
+  13 memory on  72.0% d2  95.4% one-line rule   near0  24.6%/  6.3% canc 0.645 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.07 offset -0.23 | linear 14.27% (cost 78.97) clip 0.373
+  14 hiding on  79.3% d2  99.4% one-line rule   near0   7.2%/  8.7% canc 0.567 rot 0.00 inp 0.42 (sumsq/z 1.0) pos 0.59 offset +20.82 | linear 27.70% (cost 65.54) clip 0.088
+  15 store  on  99.3% d2  99.3% nearly constant near0  13.1%/  8.0% canc 0.780 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 1.00 offset +20.95 | linear 93.23% (cost 0.01) clip 0.000
+seed 202: 16 neurons, acc 89.69%, dominant pattern 40.9% of steps 4-8, modes 180:0.92 134:0.89 80:0.99 98:0.76 66:0.80 0:1.02 0:0.81 25:0.43 0:0.18 0:0.03
+   0 memory on  94.0% d2  96.8% partial         near0   8.7%/ 19.0% canc 0.215 rot 0.16 inp 0.00 (sumsq/z 1.0) pos 0.77 offset +1.53 | linear 89.61% (cost 0.08) clip 0.001
+   1 memory on  91.8% d2  96.3% one-line rule   near0   5.5%/  1.9% canc 0.490 rot 0.11 inp 0.00 (sumsq/z 0.9) pos 0.72 offset +1.34 | linear 89.23% (cost 0.46) clip 0.003
+   2 gate   on  43.2% d2  96.2% one-line rule   near0   8.0%/ 13.9% canc 0.292 rot 0.07 inp 0.73 (sumsq/z 1.3) pos 0.05 offset -0.96 | linear 26.99% (cost 62.70) clip 0.484
+   3 memory on  75.1% d2  97.0% one-line rule   near0  13.2%/  9.7% canc 0.354 rot 0.05 inp 0.00 (sumsq/z 0.9) pos 0.36 offset +0.63 | linear 22.77% (cost 66.92) clip 0.153
+   4 hiding on  74.3% d2  92.6% partial         near0   7.7%/ 24.6% canc 0.182 rot 0.09 inp 0.42 (sumsq/z 1.1) pos 0.45 offset +1.94 | linear 27.35% (cost 62.34) clip 0.121
+   5 memory on  75.4% d2  99.2% one-line rule   near0  13.2%/  7.7% canc 0.375 rot 0.05 inp 0.00 (sumsq/z 0.9) pos 0.31 offset +0.56 | linear 16.34% (cost 73.35) clip 0.172
+   6 memory on  95.3% d2  96.5% partial         near0   3.8%/  4.5% canc 0.308 rot 0.02 inp 0.00 (sumsq/z 1.0) pos 0.67 offset +1.18 | linear 89.52% (cost 0.17) clip 0.001
+   7 hiding on  75.5% d2  94.0% partial         near0   7.5%/ 20.0% canc 0.209 rot 0.04 inp 0.41 (sumsq/z 1.1) pos 0.49 offset +2.24 | linear 29.06% (cost 60.63) clip 0.112
+   8 memory on  95.1% d2  97.4% partial         near0   4.9%/  4.2% canc 0.488 rot 0.03 inp 0.02 (sumsq/z 1.0) pos 0.88 offset +2.49 | linear 87.46% (cost 2.23) clip 0.004
+   9 hiding on  74.4% d2  95.5% one-line rule   near0   7.5%/ 20.3% canc 0.210 rot 0.04 inp 0.42 (sumsq/z 1.2) pos 0.46 offset +2.66 | linear 31.75% (cost 57.94) clip 0.123
+  10 memory on  97.1% d2  97.1% nearly constant near0   5.0%/  4.0% canc 0.390 rot 0.10 inp 0.00 (sumsq/z 1.4) pos 0.79 offset +1.62 | linear 89.47% (cost 0.22) clip 0.001
+  11 memory on  88.8% d2  88.9% no rule         near0   7.5%/ 25.1% canc 0.169 rot 0.20 inp 0.01 (sumsq/z 1.2) pos 0.63 offset +1.11 | linear 88.10% (cost 1.59) clip 0.010
+  12 memory on  99.3% d2  99.3% nearly constant near0  14.2%/  8.9% canc 0.394 rot 0.03 inp 0.00 (sumsq/z 1.1) pos 0.81 offset +1.73 | linear 89.69% (cost -0.00) clip 0.000
+  13 memory on  97.2% d2  97.2% nearly constant near0   4.8%/ 21.4% canc 0.176 rot 0.15 inp 0.00 (sumsq/z 1.3) pos 0.66 offset +1.15 | linear 89.19% (cost 0.50) clip 0.002
+  14 memory on  82.5% d2  92.0% partial         near0  15.5%/ 56.3% canc 0.084 rot 0.26 inp 0.00 (sumsq/z 0.9) pos 0.57 offset +0.95 | linear 80.62% (cost 9.07) clip 0.047
+  15 memory on  89.1% d2  93.0% partial         near0   5.5%/  9.1% canc 0.247 rot 0.09 inp 0.01 (sumsq/z 1.3) pos 0.70 offset +1.31 | linear 88.51% (cost 1.18) clip 0.010
+seed 204: 16 neurons, acc 88.96%, dominant pattern 40.4% of steps 4-8, modes 0:1.00 30:0.70 74:0.73 0:0.26 115:0.70 160:0.87 150:0.68 180:0.70 180:0.31 180:0.13
+   0 memory on  88.3% d2  92.8% partial         near0   8.4%/ 53.2% canc 0.090 rot 0.37 inp 0.01 (sumsq/z 1.7) pos 0.68 offset +1.23 | linear 87.75% (cost 1.21) clip 0.014
+   1 hiding on  78.0% d2  94.5% partial         near0   7.6%/ 26.6% canc 0.164 rot 0.29 inp 0.11 (sumsq/z 3.5) pos 0.55 offset +2.33 | linear 54.67% (cost 34.29) clip 0.092
+   2 memory on  99.2% d2  99.2% nearly constant near0   3.1%/  2.6% canc 0.301 rot 0.42 inp 0.00 (sumsq/z 5.4) pos 0.92 offset +2.81 | linear 88.93% (cost 0.02) clip 0.000
+   3 memory on 100.0% d2 100.0% nearly constant near0   8.3%/  5.7% canc 0.246 rot 0.10 inp 0.00 (sumsq/z 0.9) pos 0.90 offset +2.49 | linear 88.96% (cost 0.00) clip 0.000
+   4 memory on  97.5% d2  97.5% nearly constant near0   3.1%/  1.5% canc 0.562 rot 0.33 inp 0.01 (sumsq/z 2.3) pos 0.94 offset +4.05 | linear 87.95% (cost 1.01) clip 0.002
+   5 hiding on  76.8% d2  95.3% one-line rule   near0   7.5%/ 39.7% canc 0.108 rot 0.31 inp 0.19 (sumsq/z 2.3) pos 0.53 offset +2.99 | linear 35.28% (cost 53.68) clip 0.105
+   6 memory on  99.4% d2  99.5% nearly constant near0   1.8%/  1.4% canc 0.307 rot 0.34 inp 0.00 (sumsq/z 4.6) pos 0.78 offset +1.62 | linear 88.31% (cost 0.65) clip 0.000
+   7 memory on  98.4% d2  98.5% nearly constant near0   2.2%/  1.0% canc 0.534 rot 0.21 inp 0.01 (sumsq/z 1.4) pos 0.91 offset +2.92 | linear 88.56% (cost 0.40) clip 0.001
+   8 memory on  99.6% d2  99.6% nearly constant near0   4.9%/  9.8% canc 0.247 rot 0.41 inp 0.00 (sumsq/z 1.7) pos 0.81 offset +1.75 | linear 88.95% (cost 0.00) clip 0.000
+   9 memory on  80.1% d2  97.7% one-line rule   near0  12.1%/ 27.3% canc 0.172 rot 0.36 inp 0.00 (sumsq/z 1.6) pos 0.42 offset +0.71 | linear 31.14% (cost 57.82) clip 0.088
+  10 gate   on  21.9% d2  97.6% one-line rule   near0   7.2%/ 20.3% canc 0.206 rot 0.02 inp 0.42 (sumsq/z 1.0) pos 0.55 offset -5.25 | linear 9.02% (cost 79.94) clip 0.712
+  11 memory on  71.0% d2  94.8% partial         near0   9.3%/ 32.0% canc 0.129 rot 0.06 inp 0.00 (sumsq/z 1.1) pos 0.02 offset +0.11 | linear 26.16% (cost 62.80) clip 0.303
+  12 memory on  97.0% d2  97.2% no rule         near0   3.5%/  2.1% canc 0.414 rot 0.09 inp 0.02 (sumsq/z 0.9) pos 0.93 offset +3.60 | linear 88.51% (cost 0.45) clip 0.002
+  13 memory on  88.6% d2  93.7% partial         near0   5.4%/ 34.8% canc 0.111 rot 0.26 inp 0.00 (sumsq/z 2.1) pos 0.73 offset +1.38 | linear 81.54% (cost 7.42) clip 0.039
+  14 memory on  99.1% d2  99.1% nearly constant near0   3.6%/  1.4% canc 0.512 rot 0.40 inp 0.00 (sumsq/z 4.1) pos 0.93 offset +3.08 | linear 88.86% (cost 0.10) clip 0.000
+  15 memory on  92.8% d2  97.9% one-line rule   near0   7.1%/  4.4% canc 0.290 rot 0.53 inp 0.00 (sumsq/z 11.7) pos 0.88 offset +2.26 | linear 88.47% (cost 0.49) clip 0.006
+seed 206: 16 neurons, acc 91.29%, dominant pattern 14.5% of steps 4-8, modes 180:0.88 135:0.85 108:0.96 98:0.82 49:0.81 0:1.00 0:0.68 0:0.66 56:0.16 180:0.00
+   0 memory on  79.5% d2  97.2% one-line rule   near0  10.0%/ 45.7% canc 0.107 rot 0.50 inp 0.00 (sumsq/z 1.7) pos 0.34 offset +0.60 | linear 56.87% (cost 34.42) clip 0.115
+   1 memory on  75.6% d2  99.2% one-line rule   near0  11.1%/  7.2% canc 0.374 rot 0.05 inp 0.00 (sumsq/z 0.9) pos 0.29 offset +0.54 | linear 15.31% (cost 75.98) clip 0.177
+   2 memory on  94.2% d2  98.6% one-line rule   near0  13.5%/ 12.8% canc 0.248 rot 0.03 inp 0.00 (sumsq/z 1.0) pos 0.83 offset +1.85 | linear 91.14% (cost 0.15) clip 0.002
+   3 memory on  75.9% d2  83.9% partial         near0  21.3%/ 37.8% canc 0.139 rot 0.38 inp 0.00 (sumsq/z 1.2) pos 0.52 offset +0.86 | linear 90.41% (cost 0.88) clip 0.016
+   4 memory on  76.6% d2  99.2% one-line rule   near0  12.1%/  7.4% canc 0.350 rot 0.02 inp 0.00 (sumsq/z 0.9) pos 0.34 offset +0.59 | linear 10.17% (cost 81.12) clip 0.161
+   5 hiding on  74.8% d2  95.3% one-line rule   near0   7.5%/ 19.6% canc 0.215 rot 0.02 inp 0.46 (sumsq/z 1.0) pos 0.46 offset +2.42 | linear 33.34% (cost 57.95) clip 0.118
+   6 memory on  83.9% d2  86.7% partial         near0  20.8%/ 45.3% canc 0.106 rot 0.42 inp 0.00 (sumsq/z 0.8) pos 0.61 offset +1.04 | linear 88.99% (cost 2.30) clip 0.011
+   7 hiding on  75.4% d2  94.4% partial         near0   7.5%/ 14.3% canc 0.304 rot 0.05 inp 0.50 (sumsq/z 0.9) pos 0.47 offset +2.30 | linear 27.23% (cost 64.05) clip 0.113
+   8 gate   on  40.4% d2  96.9% one-line rule   near0   8.0%/ 18.3% canc 0.234 rot 0.02 inp 0.80 (sumsq/z 1.1) pos 0.09 offset -1.24 | linear 35.86% (cost 55.43) clip 0.519
+   9 memory on  93.1% d2  93.1% no rule         near0  16.6%/ 46.8% canc 0.087 rot 0.49 inp 0.00 (sumsq/z 1.0) pos 0.67 offset +1.20 | linear 91.16% (cost 0.12) clip 0.006
+  10 memory on  95.0% d2  98.9% one-line rule   near0  10.6%/  8.4% canc 0.380 rot 0.02 inp 0.00 (sumsq/z 1.1) pos 0.94 offset +3.43 | linear 91.12% (cost 0.17) clip 0.001
+  11 memory on  96.8% d2  97.4% no rule         near0   5.1%/  4.0% canc 0.288 rot 0.06 inp 0.01 (sumsq/z 1.0) pos 0.91 offset +2.76 | linear 91.13% (cost 0.16) clip 0.002
+  12 hiding on  74.3% d2  93.4% partial         near0   7.7%/ 32.3% canc 0.134 rot 0.09 inp 0.51 (sumsq/z 1.0) pos 0.44 offset +2.10 | linear 31.28% (cost 60.00) clip 0.121
+  13 memory on  96.6% d2  97.1% no rule         near0  13.7%/ 18.4% canc 0.289 rot 0.34 inp 0.00 (sumsq/z 0.8) pos 0.70 offset +1.28 | linear 91.27% (cost 0.02) clip 0.000
+  14 memory on  94.5% d2  99.7% one-line rule   near0  12.5%/  6.4% canc 0.319 rot 0.10 inp 0.00 (sumsq/z 0.9) pos 0.80 offset +1.66 | linear 91.29% (cost -0.00) clip 0.000
+  15 memory on  95.2% d2  95.9% no rule         near0  11.9%/ 14.1% canc 0.275 rot 0.19 inp 0.00 (sumsq/z 0.8) pos 0.79 offset +1.64 | linear 91.21% (cost 0.08) clip 0.001
+seed 208: 16 neurons, acc 83.91%, dominant pattern 10.9% of steps 4-8, modes 155:1.06 113:0.90 62:0.90 28:0.76 0:0.67 2:1.04 0:0.96
+   0 memory on  79.9% d2  92.9% partial         near0  23.4%/ 25.6% canc 0.246 rot 0.53 inp 0.00 (sumsq/z 2.2) pos 0.46 offset +0.77 | linear 59.59% (cost 24.31) clip 0.021
+   1 memory on  86.3% d2  91.3% partial         near0  26.1%/ 25.1% canc 0.245 rot 0.09 inp 0.00 (sumsq/z 1.1) pos 0.67 offset +1.19 | linear 83.35% (cost 0.56) clip 0.003
+   2 memory on  94.4% d2  96.5% partial         near0  13.7%/ 21.0% canc 0.274 rot 0.21 inp 0.00 (sumsq/z 1.2) pos 0.70 offset +1.28 | linear 83.74% (cost 0.17) clip 0.001
+   3 memory on  72.3% d2  72.3% no rule         near0  13.7%/ 54.5% canc 0.075 rot 0.32 inp 0.00 (sumsq/z 2.8) pos 0.31 offset +0.56 | linear 80.73% (cost 3.18) clip 0.042
+   4 memory on  86.2% d2  94.7% partial         near0  10.0%/ 32.1% canc 0.164 rot 0.33 inp 0.00 (sumsq/z 5.3) pos 0.72 offset +1.35 | linear 83.31% (cost 0.60) clip 0.011
+   5 gate   on  34.1% d2  92.6% partial         near0  24.4%/ 30.3% canc 0.171 rot 0.38 inp 0.00 (sumsq/z 3.3) pos 0.04 offset +0.18 | linear 28.45% (cost 55.45) clip 0.197
+   6 memory on  70.8% d2  76.1% partial         near0  21.5%/ 68.2% canc 0.075 rot 0.61 inp 0.00 (sumsq/z 23.0) pos 0.34 offset +0.60 | linear 79.98% (cost 3.93) clip 0.069
+   7 gate   on  38.3% d2  98.1% one-line rule   near0   7.9%/ 14.9% canc 0.306 rot 0.01 inp 0.79 (sumsq/z 1.0) pos 0.13 offset -1.08 | linear 27.47% (cost 56.44) clip 0.545
+   8 memory on  88.1% d2  88.9% no rule         near0  12.0%/ 25.8% canc 0.272 rot 0.39 inp 0.00 (sumsq/z 6.1) pos 0.55 offset +0.93 | linear 83.44% (cost 0.47) clip 0.006
+   9 gate   on  19.7% d2  99.8% one-line rule   near0   7.1%/  6.5% canc 0.865 rot 0.00 inp 0.40 (sumsq/z 1.0) pos 0.61 offset -52.54 | linear 6.49% (cost 77.41) clip 0.732
+  10 memory on  99.6% d2  99.6% nearly constant near0  15.8%/  2.3% canc 0.736 rot 0.04 inp 0.00 (sumsq/z 1.2) pos 0.88 offset +2.29 | linear 83.91% (cost -0.00) clip 0.000
+  11 gate   on  25.7% d2  92.3% partial         near0  16.8%/ 30.1% canc 0.209 rot 0.28 inp 0.00 (sumsq/z 2.9) pos 0.20 offset -0.42 | linear 43.90% (cost 40.01) clip 0.532
+  12 memory on  88.3% d2  93.1% partial         near0  14.3%/ 23.9% canc 0.367 rot 0.21 inp 0.00 (sumsq/z 1.6) pos 0.64 offset +1.10 | linear 83.62% (cost 0.29) clip 0.004
+  13 memory on  90.5% d2  93.4% partial         near0  20.5%/ 58.2% canc 0.078 rot 0.24 inp 0.00 (sumsq/z 2.6) pos 0.60 offset +1.03 | linear 80.72% (cost 3.18) clip 0.007
+  14 memory on  92.9% d2  96.9% one-line rule   near0  15.6%/  6.8% canc 0.527 rot 0.32 inp 0.00 (sumsq/z 1.1) pos 0.72 offset +1.33 | linear 69.89% (cost 14.02) clip 0.005
+  15 memory on  99.0% d2  99.0% nearly constant near0  14.5%/  1.7% canc 0.384 rot 0.22 inp 0.00 (sumsq/z 1.2) pos 0.55 offset +0.91 | linear 83.89% (cost 0.01) clip 0.000
+seed 210: 16 neurons, acc 96.12%, dominant pattern 20.2% of steps 4-8, modes 180:0.72 139:0.70 96:0.63 61:0.61 0:0.18 42:0.70 0:0.99 25:0.89 22:0.67
+   0 memory on  93.7% d2  94.8% partial         near0  24.0%/ 30.4% canc 0.300 rot 0.40 inp 0.00 (sumsq/z 6.6) pos 0.66 offset +1.15 | linear 96.10% (cost 0.02) clip 0.001
+   1 gate   on  20.2% d2  99.4% one-line rule   near0   7.2%/  8.3% canc 0.599 rot 0.02 inp 0.39 (sumsq/z 1.0) pos 0.60 offset -13.50 | linear 9.21% (cost 86.91) clip 0.728
+   2 memory on  99.9% d2  99.9% nearly constant near0  15.0%/ 14.5% canc 0.474 rot 0.34 inp 0.00 (sumsq/z 3.5) pos 0.75 offset +1.44 | linear 96.12% (cost -0.00) clip 0.000
+   3 memory on  63.4% d2  67.5% partial         near0   6.9%/ 20.1% canc 0.212 rot 0.88 inp 0.00 (sumsq/z 1.3) pos 0.00 offset +0.03 | linear 79.88% (cost 16.24) clip 0.388
+   4 memory on  99.7% d2  99.7% nearly constant near0   8.1%/  0.6% canc 0.695 rot 0.15 inp 0.00 (sumsq/z 1.0) pos 0.96 offset +4.23 | linear 96.10% (cost 0.02) clip 0.000
+   5 memory on  83.8% d2  96.9% one-line rule   near0  27.4%/ 28.5% canc 0.407 rot 0.44 inp 0.00 (sumsq/z 1.6) pos 0.51 offset +0.86 | linear 94.11% (cost 2.01) clip 0.004
+   6 memory on  88.4% d2  92.0% partial         near0  11.4%/ 17.5% canc 0.203 rot 0.52 inp 0.00 (sumsq/z 22.3) pos 0.55 offset +0.93 | linear 96.10% (cost 0.02) clip 0.010
+   7 hiding on  73.1% d2  93.6% partial         near0   7.5%/ 13.9% canc 0.327 rot 0.04 inp 0.43 (sumsq/z 1.1) pos 0.44 offset +1.80 | linear 47.22% (cost 48.90) clip 0.131
+   8 memory on  94.4% d2  97.9% one-line rule   near0  22.6%/  3.9% canc 0.719 rot 0.33 inp 0.00 (sumsq/z 1.1) pos 0.57 offset +0.97 | linear 96.11% (cost 0.00) clip 0.001
+   9 hiding on  75.0% d2  95.9% one-line rule   near0   7.6%/ 19.6% canc 0.247 rot 0.08 inp 0.35 (sumsq/z 1.3) pos 0.47 offset +2.42 | linear 48.21% (cost 47.90) clip 0.117
+  10 memory on  58.2% d2  88.8% partial         near0  39.5%/ 37.6% canc 0.162 rot 0.27 inp 0.00 (sumsq/z 2.4) pos 0.05 offset -0.19 | linear 10.88% (cost 85.24) clip 0.369
+  11 hiding on  80.1% d2  99.0% one-line rule   near0   7.2%/  8.0% canc 0.621 rot 0.01 inp 0.39 (sumsq/z 1.0) pos 0.61 offset +8.51 | linear 39.17% (cost 56.95) clip 0.082
+  12 memory on  93.9% d2  93.9% no rule         near0   9.6%/ 12.2% canc 0.269 rot 0.29 inp 0.00 (sumsq/z 3.0) pos 0.53 offset +0.88 | linear 95.99% (cost 0.12) clip 0.006
+  13 memory on  99.4% d2  99.4% nearly constant near0  12.4%/ 18.6% canc 0.263 rot 0.48 inp 0.00 (sumsq/z 16.3) pos 0.83 offset +1.86 | linear 96.10% (cost 0.02) clip 0.000
+  14 hiding on  73.1% d2  92.5% partial         near0   7.6%/ 16.0% canc 0.290 rot 0.11 inp 0.34 (sumsq/z 1.4) pos 0.42 offset +1.77 | linear 54.00% (cost 42.12) clip 0.132
+  15 memory on  99.7% d2  99.7% nearly constant near0   8.0%/ 28.7% canc 0.213 rot 0.39 inp 0.00 (sumsq/z 3.0) pos 0.72 offset +1.35 | linear 96.12% (cost -0.00) clip 0.000
+seed 212: 16 neurons, acc 84.42%, dominant pattern 15.1% of steps 4-8, modes 75:0.72 117:0.71 180:0.70 180:0.67 150:0.49 111:0.46 0:1.01 34:0.74 0:0.79 0:0.44 0:0.19
+   0 memory on  49.1% d2  91.2% partial         near0  13.5%/ 66.7% canc 0.049 rot 0.17 inp 0.00 (sumsq/z 0.7) pos 0.00 offset +0.05 | linear 47.71% (cost 36.70) clip 0.377
+   1 memory on  98.5% d2  98.5% nearly constant near0   1.6%/  3.6% canc 0.301 rot 0.41 inp 0.00 (sumsq/z 6.6) pos 0.74 offset +1.39 | linear 84.12% (cost 0.30) clip 0.000
+   2 memory on  81.9% d2  84.7% partial         near0  12.6%/ 70.8% canc 0.037 rot 0.35 inp 0.00 (sumsq/z 1.5) pos 0.51 offset +0.85 | linear 81.56% (cost 2.86) clip 0.070
+   3 memory on  99.6% d2  99.6% nearly constant near0   1.4%/ 42.2% canc 0.116 rot 0.27 inp 0.00 (sumsq/z 2.8) pos 0.79 offset +1.61 | linear 84.42% (cost -0.00) clip 0.000
+   4 memory on  99.4% d2  99.4% nearly constant near0   1.5%/  5.1% canc 0.202 rot 0.47 inp 0.00 (sumsq/z 4.1) pos 0.83 offset +1.86 | linear 83.15% (cost 1.27) clip 0.000
+   5 memory on  85.5% d2  92.7% partial         near0   6.9%/ 25.6% canc 0.180 rot 0.41 inp 0.00 (sumsq/z 18.7) pos 0.69 offset +1.25 | linear 83.87% (cost 0.55) clip 0.016
+   6 memory on  81.7% d2  94.5% partial         near0   5.4%/ 19.2% canc 0.185 rot 0.16 inp 0.00 (sumsq/z 1.9) pos 0.75 offset +1.43 | linear 82.35% (cost 2.07) clip 0.008
+   7 memory on  68.0% d2  83.9% partial         near0  11.4%/ 34.5% canc 0.149 rot 0.49 inp 0.00 (sumsq/z 20.1) pos 0.41 offset +0.69 | linear 78.20% (cost 6.22) clip 0.072
+   8 memory on  94.7% d2  94.7% no rule         near0  14.4%/ 41.4% canc 0.100 rot 0.55 inp 0.00 (sumsq/z 1.3) pos 0.56 offset +0.94 | linear 83.81% (cost 0.61) clip 0.003
+   9 memory on  78.7% d2  94.5% partial         near0   7.4%/ 42.4% canc 0.101 rot 0.23 inp 0.28 (sumsq/z 1.5) pos 0.51 offset +2.86 | linear 43.45% (cost 40.96) clip 0.090
+  10 memory on  86.0% d2  98.1% one-line rule   near0   4.9%/ 51.5% canc 0.074 rot 0.29 inp 0.00 (sumsq/z 1.9) pos 0.55 offset +0.93 | linear 29.69% (cost 54.72) clip 0.060
+  11 hiding on  72.8% d2  92.4% partial         near0   7.5%/ 24.1% canc 0.177 rot 0.17 inp 0.39 (sumsq/z 1.2) pos 0.42 offset +1.58 | linear 43.09% (cost 41.33) clip 0.131
+  12 memory on  79.6% d2  95.4% one-line rule   near0   7.3%/ 32.7% canc 0.129 rot 0.13 inp 0.44 (sumsq/z 1.0) pos 0.52 offset +3.49 | linear 40.71% (cost 43.71) clip 0.085
+  13 memory on  97.0% d2  97.0% no rule         near0   2.2%/  2.6% canc 0.318 rot 0.37 inp 0.00 (sumsq/z 3.5) pos 0.84 offset +2.00 | linear 84.83% (cost -0.42) clip 0.002
+  14 memory on  99.9% d2  99.9% nearly constant near0   2.5%/  2.5% canc 0.416 rot 0.29 inp 0.00 (sumsq/z 2.4) pos 0.79 offset +1.64 | linear 84.43% (cost -0.02) clip 0.000
+  15 memory on  91.1% d2  91.2% no rule         near0   6.5%/ 50.4% canc 0.080 rot 0.08 inp 0.08 (sumsq/z 1.2) pos 0.72 offset +1.62 | linear 74.19% (cost 10.23) clip 0.018
+seed 214: 16 neurons, acc 94.89%, dominant pattern 44.0% of steps 4-8, modes 0:0.99 26:0.82 0:0.79 75:0.87 121:0.83 161:0.92 162:0.78 0:0.00 180:0.17
+   0 memory on  98.0% d2  98.0% nearly constant near0  11.9%/  3.0% canc 0.315 rot 0.12 inp 0.00 (sumsq/z 1.9) pos 0.91 offset +2.58 | linear 94.90% (cost -0.01) clip 0.000
+   1 memory on  91.0% d2  91.0% no rule         near0  23.3%/ 26.1% canc 0.250 rot 0.20 inp 0.00 (sumsq/z 1.3) pos 0.75 offset +1.43 | linear 94.84% (cost 0.05) clip 0.002
+   2 memory on  79.1% d2  97.2% one-line rule   near0  18.0%/ 36.3% canc 0.147 rot 0.31 inp 0.00 (sumsq/z 1.3) pos 0.34 offset +0.59 | linear 29.26% (cost 65.62) clip 0.105
+   3 memory on  95.1% d2  98.6% one-line rule   near0  13.0%/  6.9% canc 0.345 rot 0.40 inp 0.00 (sumsq/z 0.6) pos 0.84 offset +1.92 | linear 94.87% (cost 0.02) clip 0.000
+   4 gate   on  19.9% d2  99.7% one-line rule   near0   7.1%/  7.0% canc 0.770 rot 0.00 inp 0.37 (sumsq/z 1.1) pos 0.61 offset -40.04 | linear 3.96% (cost 90.93) clip 0.730
+   5 memory on  96.7% d2  98.1% partial         near0  11.0%/  4.7% canc 0.438 rot 0.11 inp 0.00 (sumsq/z 0.9) pos 0.86 offset +2.11 | linear 94.77% (cost 0.12) clip 0.001
+   6 hiding on  73.5% d2  93.5% partial         near0   7.6%/ 13.2% canc 0.346 rot 0.07 inp 0.35 (sumsq/z 1.4) pos 0.43 offset +1.90 | linear 37.57% (cost 57.32) clip 0.129
+   7 memory on  89.0% d2  91.4% partial         near0  21.7%/ 24.6% canc 0.291 rot 0.17 inp 0.00 (sumsq/z 1.0) pos 0.77 offset +1.53 | linear 94.58% (cost 0.31) clip 0.004
+   8 memory on  94.8% d2  96.4% partial         near0  18.3%/ 26.6% canc 0.343 rot 0.27 inp 0.00 (sumsq/z 0.8) pos 0.71 offset +1.30 | linear 94.87% (cost 0.01) clip 0.000
+   9 hiding on  76.8% d2  95.1% one-line rule   near0   7.6%/ 14.2% canc 0.335 rot 0.10 inp 0.30 (sumsq/z 1.4) pos 0.51 offset +2.44 | linear 43.95% (cost 50.94) clip 0.103
+  10 gate   on  37.9% d2  98.0% one-line rule   near0   7.9%/ 16.7% canc 0.274 rot 0.02 inp 0.69 (sumsq/z 1.1) pos 0.14 offset -1.15 | linear 52.70% (cost 42.18) clip 0.549
+  11 memory on  82.8% d2  93.9% partial         near0  15.3%/ 36.7% canc 0.180 rot 0.07 inp 0.00 (sumsq/z 1.0) pos 0.78 offset +1.59 | linear 94.81% (cost 0.08) clip 0.005
+  12 memory on  94.0% d2  97.9% one-line rule   near0  18.2%/ 16.1% canc 0.442 rot 0.25 inp 0.00 (sumsq/z 0.8) pos 0.80 offset +1.65 | linear 94.89% (cost 0.00) clip 0.000
+  13 memory on  92.6% d2  98.1% one-line rule   near0  16.2%/ 16.3% canc 0.337 rot 0.16 inp 0.00 (sumsq/z 0.9) pos 0.82 offset +1.79 | linear 94.89% (cost 0.00) clip 0.000
+  14 memory on  94.3% d2  99.4% one-line rule   near0  17.9%/ 18.8% canc 0.433 rot 0.22 inp 0.00 (sumsq/z 0.9) pos 0.77 offset +1.52 | linear 94.89% (cost -0.00) clip 0.000
+  15 hiding on  73.9% d2  93.2% partial         near0   7.7%/ 14.2% canc 0.326 rot 0.05 inp 0.36 (sumsq/z 1.3) pos 0.44 offset +1.79 | linear 33.98% (cost 60.91) clip 0.124
+16 bo5: 16 neurons, acc 94.83%, dominant pattern 18.4% of steps 4-8, modes 0:0.99 0:1.00 43:0.84 109:0.96 81:0.69 128:0.75 180:0.66 180:0.32 0:0.06 180:0.10
+   0 hiding on  57.6% d2  94.1% partial         near0  74.6%/ 14.6% canc 0.295 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.16 offset -0.37 | linear 9.32% (cost 85.52) clip 0.381
+   1 memory on  90.1% d2  94.1% partial         near0  11.8%/ 14.5% canc 0.298 rot 0.16 inp 0.00 (sumsq/z 1.0) pos 0.72 offset +1.33 | linear 94.78% (cost 0.05) clip 0.004
+   2 memory on  68.3% d2  68.3% no rule         near0  16.3%/ 77.0% canc 0.041 rot 0.50 inp 0.00 (sumsq/z 19.4) pos 0.12 offset +0.31 | linear 90.79% (cost 4.05) clip 0.129
+   3 hiding on  55.4% d2  94.8% partial         near0  73.1%/ 11.5% canc 0.381 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.16 offset -0.37 | linear 8.92% (cost 85.91) clip 0.382
+   4 memory on  83.0% d2  92.0% partial         near0  22.1%/ 26.7% canc 0.421 rot 0.04 inp 0.00 (sumsq/z 0.9) pos 0.66 offset +1.15 | linear 92.40% (cost 2.43) clip 0.008
+   5 memory on  94.3% d2  96.8% partial         near0  13.9%/ 10.9% canc 0.377 rot 0.19 inp 0.00 (sumsq/z 1.9) pos 0.87 offset +2.18 | linear 94.83% (cost 0.01) clip 0.000
+   6 hiding on  58.1% d2  95.2% one-line rule   near0  74.0%/ 13.6% canc 0.334 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.16 offset -0.36 | linear 5.35% (cost 89.49) clip 0.381
+   7 memory on  97.4% d2  97.6% nearly constant near0  14.0%/  9.0% canc 0.600 rot 0.04 inp 0.00 (sumsq/z 0.9) pos 0.92 offset +2.82 | linear 94.84% (cost -0.00) clip 0.000
+   8 memory on  84.7% d2  95.0% partial         near0  15.7%/ 20.6% canc 0.307 rot 0.67 inp 0.00 (sumsq/z 1.6) pos 0.72 offset +1.34 | linear 94.75% (cost 0.08) clip 0.003
+   9 memory on  83.3% d2  86.3% partial         near0  25.4%/ 47.7% canc 0.098 rot 0.68 inp 0.00 (sumsq/z 3.3) pos 0.51 offset +0.85 | linear 93.81% (cost 1.02) clip 0.013
+  10 gate   on  38.2% d2  97.9% one-line rule   near0   7.9%/ 13.1% canc 0.344 rot 0.01 inp 0.77 (sumsq/z 1.0) pos 0.13 offset -1.09 | linear 55.88% (cost 38.96) clip 0.546
+  11 memory on  78.9% d2  96.7% one-line rule   near0  18.7%/ 22.5% canc 0.323 rot 0.44 inp 0.00 (sumsq/z 3.7) pos 0.47 offset +0.78 | linear 42.81% (cost 52.02) clip 0.065
+  12 memory on  98.4% d2  98.4% nearly constant near0  13.9%/  5.9% canc 0.369 rot 0.03 inp 0.00 (sumsq/z 0.9) pos 0.85 offset +1.95 | linear 94.82% (cost 0.02) clip 0.000
+  13 memory on  88.2% d2  92.9% partial         near0  19.1%/ 33.6% canc 0.159 rot 0.58 inp 0.00 (sumsq/z 3.2) pos 0.67 offset +1.18 | linear 94.69% (cost 0.14) clip 0.005
+  14 memory on  97.6% d2  97.6% nearly constant near0  13.8%/ 10.1% canc 0.731 rot 0.09 inp 0.00 (sumsq/z 1.5) pos 0.91 offset +2.60 | linear 94.83% (cost 0.00) clip 0.000
+  15 gate   on  19.4% d2  99.9% one-line rule   near0   7.1%/  6.2% canc 0.978 rot 0.00 inp 0.38 (sumsq/z 1.0) pos 0.62 offset -206.21 | linear 8.03% (cost 86.80) clip 0.735
+zoo16 1: 16 neurons, acc 87.96%, dominant pattern 23.4% of steps 4-8, modes 0:1.00 28:0.88 0:0.64 62:0.71 94:0.73 134:0.78 180:0.95 180:0.73 180:0.34 180:0.52
+   0 memory on  98.4% d2  98.4% nearly constant near0   2.2%/  0.9% canc 0.634 rot 0.02 inp 0.01 (sumsq/z 1.0) pos 0.92 offset +3.25 | linear 86.78% (cost 1.17) clip 0.001
+   1 memory on  80.4% d2  93.8% partial         near0  18.5%/ 28.4% canc 0.238 rot 0.51 inp 0.00 (sumsq/z 1.0) pos 0.45 offset +0.76 | linear 39.76% (cost 48.20) clip 0.038
+   2 hiding on  76.1% d2  92.6% partial         near0   7.8%/ 28.4% canc 0.156 rot 0.12 inp 0.36 (sumsq/z 1.1) pos 0.48 offset +1.76 | linear 50.38% (cost 37.58) clip 0.104
+   3 memory on  88.6% d2  97.3% one-line rule   near0   9.8%/ 10.5% canc 0.228 rot 0.15 inp 0.00 (sumsq/z 0.9) pos 0.75 offset +1.46 | linear 86.19% (cost 1.77) clip 0.016
+   4 memory on  98.8% d2  98.8% nearly constant near0  11.4%/ 10.6% canc 0.339 rot 0.20 inp 0.00 (sumsq/z 1.0) pos 0.76 offset +1.49 | linear 87.95% (cost 0.01) clip 0.000
+   5 memory on  97.8% d2  98.1% nearly constant near0   2.5%/  1.2% canc 0.511 rot 0.04 inp 0.01 (sumsq/z 1.1) pos 0.92 offset +3.15 | linear 87.74% (cost 0.21) clip 0.001
+   6 memory on  72.5% d2  90.1% partial         near0   8.0%/ 32.5% canc 0.135 rot 0.52 inp 0.00 (sumsq/z 1.3) pos 0.24 offset +0.47 | linear 15.83% (cost 72.13) clip 0.154
+   7 memory on  96.4% d2  99.2% partial         near0   7.7%/  3.2% canc 0.413 rot 0.07 inp 0.00 (sumsq/z 1.2) pos 0.96 offset +3.95 | linear 87.59% (cost 0.37) clip 0.001
+   8 memory on  99.1% d2  99.1% nearly constant near0   2.9%/  0.8% canc 0.485 rot 0.08 inp 0.00 (sumsq/z 1.0) pos 0.92 offset +2.94 | linear 87.67% (cost 0.29) clip 0.000
+   9 memory on  93.8% d2  99.4% one-line rule   near0   5.9%/  4.3% canc 0.220 rot 0.16 inp 0.00 (sumsq/z 1.2) pos 0.82 offset +1.79 | linear 87.88% (cost 0.08) clip 0.002
+  10 gate   on  19.9% d2  99.5% one-line rule   near0   7.2%/ 10.2% canc 0.437 rot 0.00 inp 0.39 (sumsq/z 1.0) pos 0.61 offset -22.74 | linear 10.97% (cost 76.99) clip 0.730
+  11 hiding on  74.4% d2  91.8% partial         near0   7.6%/ 34.1% canc 0.126 rot 0.17 inp 0.38 (sumsq/z 1.2) pos 0.43 offset +1.61 | linear 50.92% (cost 37.03) clip 0.121
+  12 memory on  61.8% d2  69.7% partial         near0   8.8%/ 83.5% canc 0.035 rot 0.87 inp 0.00 (sumsq/z 1.3) pos 0.01 offset +0.10 | linear 62.95% (cost 25.01) clip 0.279
+  13 memory on  98.2% d2  98.2% nearly constant near0  11.2%/  7.7% canc 0.390 rot 0.02 inp 0.00 (sumsq/z 1.0) pos 0.84 offset +1.91 | linear 87.93% (cost 0.02) clip 0.000
+  14 gate   on  17.4% d2  95.0% one-line rule   near0  27.3%/ 19.4% canc 0.421 rot 0.17 inp 0.00 (sumsq/z 1.4) pos 0.54 offset -0.90 | linear 8.31% (cost 79.64) clip 0.670
+  15 memory on  90.5% d2  94.5% partial         near0  10.5%/ 10.1% canc 0.465 rot 0.47 inp 0.00 (sumsq/z 1.7) pos 0.56 offset +0.95 | linear 86.76% (cost 1.19) clip 0.005
+zoo16 3: 16 neurons, acc 93.22%, dominant pattern 13.4% of steps 4-8, modes 59:0.95 0:1.01 0:0.79 100:0.99 143:0.91 155:0.93 180:0.89 180:0.68 0:0.00 0:0.05 0:0.11
+   0 memory on  83.4% d2  92.4% partial         near0   7.4%/ 13.9% canc 0.214 rot 0.09 inp 0.12 (sumsq/z 1.2) pos 0.70 offset +1.70 | linear 80.73% (cost 12.49) clip 0.043
+   1 hiding on  76.1% d2  94.5% partial         near0   7.5%/ 17.1% canc 0.243 rot 0.02 inp 0.40 (sumsq/z 1.1) pos 0.50 offset +2.40 | linear 32.68% (cost 60.55) clip 0.108
+   2 memory on  89.7% d2  92.9% partial         near0  17.6%/ 37.5% canc 0.153 rot 0.28 inp 0.00 (sumsq/z 1.1) pos 0.62 offset +1.05 | linear 93.02% (cost 0.20) clip 0.004
+   3 hiding on  75.3% d2  95.3% one-line rule   near0   7.5%/ 15.2% canc 0.287 rot 0.02 inp 0.42 (sumsq/z 1.1) pos 0.48 offset +2.59 | linear 42.75% (cost 50.48) clip 0.115
+   4 memory on  92.9% d2  96.1% one-line rule   near0  20.6%/ 27.8% canc 0.262 rot 0.37 inp 0.00 (sumsq/z 0.9) pos 0.67 offset +1.17 | linear 92.73% (cost 0.50) clip 0.003
+   5 memory on  80.5% d2  98.2% one-line rule   near0   9.6%/ 32.4% canc 0.126 rot 0.29 inp 0.00 (sumsq/z 1.2) pos 0.49 offset +0.82 | linear 46.36% (cost 46.87) clip 0.080
+   6 memory on  93.8% d2  96.7% partial         near0  15.0%/ 11.9% canc 0.375 rot 0.23 inp 0.00 (sumsq/z 0.7) pos 0.77 offset +1.52 | linear 93.22% (cost 0.00) clip 0.001
+   7 memory on  76.6% d2  99.2% one-line rule   near0  14.6%/  7.4% canc 0.385 rot 0.07 inp 0.00 (sumsq/z 0.8) pos 0.35 offset +0.61 | linear 17.02% (cost 76.20) clip 0.156
+   8 memory on  75.4% d2  99.1% one-line rule   near0  14.8%/  8.0% canc 0.397 rot 0.06 inp 0.00 (sumsq/z 0.8) pos 0.31 offset +0.56 | linear 17.78% (cost 75.44) clip 0.171
+   9 gate   on  44.0% d2  96.5% one-line rule   near0   8.0%/ 11.9% canc 0.324 rot 0.05 inp 0.81 (sumsq/z 1.1) pos 0.04 offset -0.85 | linear 32.89% (cost 60.33) clip 0.475
+  10 memory on  95.0% d2  98.0% one-line rule   near0  14.3%/ 24.8% canc 0.181 rot 0.25 inp 0.00 (sumsq/z 0.9) pos 0.72 offset +1.34 | linear 91.84% (cost 1.39) clip 0.004
+  11 memory on  90.5% d2  97.7% one-line rule   near0  14.2%/  8.8% canc 0.370 rot 0.04 inp 0.00 (sumsq/z 1.3) pos 0.91 offset +2.69 | linear 93.16% (cost 0.06) clip 0.002
+  12 memory on  91.8% d2  96.8% one-line rule   near0  14.9%/ 15.7% canc 0.271 rot 0.13 inp 0.00 (sumsq/z 0.9) pos 0.77 offset +1.54 | linear 93.10% (cost 0.12) clip 0.002
+  13 memory on  92.3% d2  97.4% one-line rule   near0  15.3%/  4.8% canc 0.314 rot 0.02 inp 0.00 (sumsq/z 1.1) pos 0.78 offset +1.55 | linear 93.19% (cost 0.04) clip 0.001
+  14 hiding on  75.5% d2  94.7% partial         near0   7.5%/ 14.6% canc 0.302 rot 0.02 inp 0.41 (sumsq/z 1.1) pos 0.48 offset +2.43 | linear 28.05% (cost 65.18) clip 0.113
+  15 memory on  84.3% d2  98.0% one-line rule   near0  16.0%/ 46.8% canc 0.103 rot 0.49 inp 0.00 (sumsq/z 1.0) pos 0.49 offset +0.81 | linear 76.93% (cost 16.29) clip 0.051

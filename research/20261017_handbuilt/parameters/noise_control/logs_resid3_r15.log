@@ -1,0 +1,21 @@
+{"kind": "resid", "fit": "bits", "seed": -1, "search": "r15", "base": 200.35, "best": "top 3 of x1..x9", "best_net": 211.73, "gain": 11.38, "n": 11, "iters": 0, "singular": 0}
+{"kind": "resid", "fit": "bits", "seed": 0, "search": "r15", "base": 265.06, "best": "top 6", "best_net": 266.93, "gain": 1.87, "n": 11, "iters": 9, "singular": 0}
+{"kind": "resid", "fit": "bits", "seed": 1, "search": "r15", "base": 197.48, "best": "top 8", "best_net": 197.68, "gain": 0.2, "n": 11, "iters": 9, "singular": 0}
+{"kind": "resid", "fit": "bits", "seed": 2, "search": "r15", "base": 199.61, "best": "top 8", "best_net": 199.69, "gain": 0.08, "n": 11, "iters": 9, "singular": 0}
+{"kind": "resid", "fit": "bits", "seed": 3, "search": "r15", "base": 190.51, "best": "top 8", "best_net": 189.93, "gain": -0.58, "n": 11, "iters": 9, "singular": 0}
+{"kind": "resid", "fit": "bits", "seed": 4, "search": "r15", "base": 203.99, "best": "top 8", "best_net": 202.36, "gain": -1.63, "n": 11, "iters": 9, "singular": 0}
+{"kind": "resid", "fit": "bits", "seed": 5, "search": "r15", "base": 223.53, "best": "top 8", "best_net": 223.79, "gain": 0.26, "n": 11, "iters": 9, "singular": 0}
+{"kind": "resid", "fit": "bits", "seed": 6, "search": "r15", "base": 225.87, "best": "top 8", "best_net": 225.75, "gain": -0.12, "n": 11, "iters": 9, "singular": 0}
+{"kind": "resid", "fit": "bits", "seed": 7, "search": "r15", "base": 225.57, "best": "top 8", "best_net": 227.03, "gain": 1.46, "n": 11, "iters": 9, "singular": 0}
+{"kind": "resid", "fit": "bits", "seed": 8, "search": "r15", "base": 203.07, "best": "top 8", "best_net": 203.29, "gain": 0.21, "n": 11, "iters": 9, "singular": 0}
+{"kind": "resid", "fit": "bits", "seed": 9, "search": "r15", "base": 191.77, "best": "top 8", "best_net": 191.31, "gain": -0.46, "n": 11, "iters": 9, "singular": 0}
+{"kind": "resid", "fit": "bits", "seed": 10, "search": "r15", "base": 213.98, "best": "top 8", "best_net": 213.12, "gain": -0.86, "n": 11, "iters": 9, "singular": 0}
+{"kind": "resid", "fit": "bits", "seed": 11, "search": "r15", "base": 231.0, "best": "top 4", "best_net": 239.78, "gain": 8.77, "n": 11, "iters": 9, "singular": 0}
+{"kind": "resid", "fit": "bits", "seed": 12, "search": "r15", "base": 94.32, "best": "top 3 both times", "best_net": 101.36, "gain": 7.04, "n": 11, "iters": 9, "singular": 0}
+{"kind": "resid", "fit": "bits", "seed": 13, "search": "r15", "base": 192.2, "best": "top 4", "best_net": 195.98, "gain": 3.77, "n": 11, "iters": 9, "singular": 0}
+{"kind": "resid", "fit": "bits", "seed": 14, "search": "r15", "base": 201.25, "best": "top 8", "best_net": 200.76, "gain": -0.49, "n": 11, "iters": 9, "singular": 0}
+{"kind": "resid", "fit": "bits", "seed": 15, "search": "r15", "base": 207.47, "best": "top 8", "best_net": 206.49, "gain": -0.98, "n": 11, "iters": 9, "singular": 0}
+{"kind": "resid", "fit": "bits", "seed": 16, "search": "r15", "base": 152.41, "best": "top 5", "best_net": 153.15, "gain": 0.75, "n": 11, "iters": 9, "singular": 0}
+{"kind": "resid", "fit": "bits", "seed": 17, "search": "r15", "base": 198.45, "best": "top 8", "best_net": 197.23, "gain": -1.22, "n": 11, "iters": 9, "singular": 0}
+{"kind": "resid", "fit": "bits", "seed": 18, "search": "r15", "base": 231.04, "best": "top 8", "best_net": 231.04, "gain": 0.01, "n": 11, "iters": 9, "singular": 0}
+{"kind": "resid", "fit": "bits", "seed": 19, "search": "r15", "base": 179.43, "best": "top 8", "best_net": 179.68, "gain": 0.25, "n": 11, "iters": 9, "singular": 0}

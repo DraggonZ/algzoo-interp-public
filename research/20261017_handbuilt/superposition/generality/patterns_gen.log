@@ -1,0 +1,102 @@
+
+ARC: all 16 neurons 1097 patterns, top 1/3/10/30 cover 11.5% 25.8% 48.3% 71.3%; hiding group [1, 6, 7, 8]: 16 patterns, top 1/3 cover 67.8% 90.3%
+  neuron   on %  guess  depth1  depth2  depth5 | depth-1 split
+       0  77.9%  78.0%   78.0%   96.1%   98.8% | age <= 2.50                  one-line rule
+       1  75.5%  75.5%   94.7%   94.7%   98.4% | x / largest <= 0.85          partial (hiding)
+       2  94.2%  94.2%   94.8%   97.6%   98.2% | age <= 0.00                  one-line rule
+       3  79.6%  79.6%   79.6%   79.6%   79.6% | x / second <= -9.83          no depth-2 rule
+       4  20.2%  79.8%   99.3%   99.3%   99.7% | x / largest <= 0.97          one-line rule
+       5  39.9%  60.1%   92.5%   92.5%   94.6% | previous x / largest <= 0.31 partial
+       6  74.8%  74.8%   93.8%   93.8%   98.9% | x / largest <= 0.87          partial (hiding)
+       7  80.0%  80.0%   99.0%   99.0%   99.6% | x / largest <= 1.00          one-line rule (hiding)
+       8  70.5%  70.5%   96.0%   96.2%   98.1% | x / second <= 1.05           one-line rule (hiding)
+       9  23.6%  76.4%   99.0%   99.3%   99.6% | previous x / largest <= 0.98 one-line rule
+      10  92.8%  92.7%   92.7%   97.9%   98.2% | age <= 5.50                  one-line rule
+      11  91.6%  91.6%   91.6%   97.7%   98.3% | age <= 4.50                  one-line rule
+      12  94.7%  94.7%   94.7%   94.7%   95.1% | x / largest <= -49.06        no depth-2 rule
+      13  94.9%  94.9%   96.4%   97.6%   97.8% | x / largest <= 40.93         partial
+      14  90.1%  90.1%   94.7%   94.7%   97.9% | x / largest <= 6.62          partial
+      15  75.3%  75.3%   75.3%   75.3%   79.9% | age <= 5.50                  no depth-2 rule
+
+seed 100: all 16 neurons 866 patterns, top 1/3/10/30 cover 19.2% 40.2% 63.9% 83.5%; hiding group [1, 4, 9, 13]: 16 patterns, top 1/3 cover 73.2% 93.4%
+  neuron   on %  guess  depth1  depth2  depth5 | depth-1 split
+       0  38.3%  61.7%   85.2%   90.4%   93.0% | previous x / largest <= -0.03 partial
+       1  77.9%  78.0%   97.0%   97.0%   98.7% | x / largest <= 0.87          one-line rule (hiding)
+       2  90.8%  90.8%   90.8%   96.3%   98.4% | previous x / largest <= 0.98 one-line rule
+       3  86.3%  86.3%   86.3%   86.3%   89.4% | age <= 3.50                  no depth-2 rule
+       4  77.9%  77.9%   96.3%   96.3%   98.2% | x / largest <= 0.90          one-line rule (hiding)
+       5  97.2%  97.2%   97.2%   98.2%   98.3% | x / largest <= -15.85        nearly constant
+       6  93.5%  93.5%   94.7%   97.2%   97.7% | age <= 0.00                  one-line rule
+       7  93.8%  93.8%   96.5%   96.9%   98.0% | x / largest <= 49.96         one-line rule
+       8  98.9%  98.9%   98.9%   98.9%   99.0% | age <= 0.00                  nearly constant
+       9  77.9%  77.9%   94.8%   94.8%   97.9% | x / largest <= 1.02          partial (hiding)
+      10  99.7%  99.7%   99.7%   99.7%   99.7% | age of previous record <= 7.50 nearly constant
+      11  95.4%  95.4%   98.8%   98.9%   99.1% | x / largest <= -22.89        one-line rule
+      12  80.0%  80.0%   80.0%   98.0%   98.2% | age <= 2.50                  one-line rule
+      13  76.5%  76.6%   97.7%   98.0%   98.9% | x / largest <= 0.81          one-line rule (hiding)
+      14  80.0%  80.0%   82.6%   83.2%   85.3% | x / largest <= 4.16          partial
+      15  22.9%  77.1%   98.0%   98.2%   99.0% | x / largest <= 0.84          one-line rule
+
+seed 111: all 16 neurons 1379 patterns, top 1/3/10/30 cover 8.6% 18.8% 38.9% 65.8%; hiding group [4, 8, 9, 12]: 16 patterns, top 1/3 cover 53.1% 85.8%
+  neuron   on %  guess  depth1  depth2  depth5 | depth-1 split
+       0  30.0%  70.0%   77.1%   83.1%   85.3% | age <= 5.50                  partial
+       1  85.5%  85.6%   88.8%   89.5%   89.6% | x / largest <= -39.51        partial
+       2  81.7%  81.7%   83.6%   83.8%   84.6% | x / largest <= 5.66          partial
+       3  86.9%  86.9%   86.9%   95.8%   96.8% | age <= 2.50                  one-line rule
+       4  62.2%  62.2%   85.0%   98.8%   99.3% | previous x / largest <= 0.97 one-line rule (hiding)
+       5  99.5%  99.5%   99.5%   99.6%   99.7% | previous x / largest <= -20.85 nearly constant
+       6  73.3%  73.3%   73.3%   73.3%   88.1% | age <= 4.50                  no depth-2 rule
+       7  19.3%  80.7%   99.9%   99.9%  100.0% | x / largest <= 0.99          one-line rule
+       8  56.2%  56.2%   81.1%   95.3%   98.0% | x / second <= 1.09           one-line rule (hiding)
+       9  80.3%  80.3%   98.7%   98.7%   99.5% | x / largest <= 1.02          one-line rule (hiding)
+      10  39.7%  60.3%   92.5%   92.5%   94.6% | previous x / largest <= 0.34 partial
+      11  97.2%  97.2%   97.4%   97.9%   98.1% | x / largest <= -49.99        nearly constant
+      12  70.8%  70.8%   95.9%   96.0%   98.7% | x / second <= 1.05           one-line rule (hiding)
+      13  93.0%  93.0%   93.0%   98.4%   98.7% | step <= 1.50                 one-line rule
+      14  80.2%  80.2%   80.2%   98.1%   98.4% | age <= 2.50                  one-line rule
+      15  90.1%  90.1%   90.1%   96.1%   97.2% | age <= 3.50                  one-line rule
+
+seed 115: all 16 neurons 970 patterns, top 1/3/10/30 cover 33.4% 45.8% 65.2% 81.4%; hiding group [5, 6, 7]: 8 patterns, top 1/3 cover 67.8% 91.4%
+  neuron   on %  guess  depth1  depth2  depth5 | depth-1 split
+       0  98.6%  98.6%   98.6%   98.6%   98.7% | x / largest <= -32.23        nearly constant
+       1  98.4%  98.4%   98.4%   98.4%   99.1% | x / second <= 17.49          nearly constant
+       2  61.8%  61.7%   84.6%   89.2%   95.2% | previous x / largest <= 0.98 partial
+       3  93.0%  93.0%   96.0%   96.1%   96.4% | x / largest <= 15.06         one-line rule
+       4  78.4%  78.4%   94.4%   95.4%   96.2% | previous x / largest <= 0.96 one-line rule
+       5  73.8%  73.8%   93.0%   93.0%   98.7% | x / second <= 1.07           partial (hiding)
+       6  71.8%  71.8%   95.5%   95.5%   98.3% | x / second <= 1.08           one-line rule (hiding)
+       7  77.5%  77.5%   96.1%   96.1%   98.9% | x / largest <= 0.98          one-line rule (hiding)
+       8  80.1%  80.2%   80.2%   80.2%   86.1% | age <= 1.50                  no depth-2 rule
+       9  96.9%  96.9%   96.9%   97.0%   97.0% | x / largest <= -49.90        no depth-2 rule
+      10  93.8%  93.8%   97.2%   97.6%   98.0% | x / largest <= -42.29        one-line rule
+      11  35.7%  64.3%   99.0%   99.0%   99.0% | x / second <= 0.82           one-line rule
+      12  93.7%  93.7%   93.7%   96.7%   97.5% | x / second <= 50.00          one-line rule
+      13  90.7%  90.7%   90.7%   94.2%   95.2% | x / second <= 50.00          partial
+      14  95.2%  95.2%   96.9%   97.9%   98.2% | x / largest <= 32.51         partial
+      15  19.4%  80.6%   99.9%   99.9%   99.9% | x / largest <= 0.98          one-line rule
+
+seed 209: all 16 neurons 507 patterns, top 1/3/10/30 cover 17.3% 37.7% 72.5% 92.6%; hiding group [3, 4, 6, 7, 12, 13]: 57 patterns, top 1/3 cover 66.3% 88.7%
+  neuron   on %  guess  depth1  depth2  depth5 | depth-1 split
+       0  99.9%  99.9%   99.9%   99.9%   99.9% | x / largest <= 50.00         nearly constant
+       1  80.9%  80.9%   80.9%   98.1%   98.3% | age <= 2.50                  one-line rule
+       2  72.1%  72.1%   72.1%   72.1%   78.9% | step <= 3.50                 no depth-2 rule
+       3  74.0%  74.0%   92.7%   93.0%   98.4% | x / second <= 1.06           partial (hiding)
+       4  71.6%  71.6%   95.2%   95.2%   98.8% | x / second <= 1.05           one-line rule (hiding)
+       5  19.5%  80.5%   99.9%   99.9%   99.9% | x / largest <= 0.99          one-line rule
+       6  78.0%  78.0%   96.6%   96.6%   98.7% | x / largest <= 0.97          one-line rule (hiding)
+       7  81.3%  81.3%   99.8%   99.8%   99.9% | x / largest <= 1.04          one-line rule (hiding)
+       8  99.9%  99.9%   99.9%   99.9%   99.9% | step <= 6.50                 nearly constant
+       9  93.7%  93.7%   93.7%   96.9%   97.5% | age <= 4.50                  one-line rule
+      10  90.4%  90.4%   91.4%   93.0%   95.5% | x / largest <= -44.74        partial
+      11  98.7%  98.7%   98.7%   98.7%   98.9% | x / largest <= 23.27         nearly constant
+      12  79.1%  79.2%   99.2%   99.2%   99.7% | x / largest <= 0.91          one-line rule (hiding)
+      13  72.4%  72.4%   94.1%   94.1%   97.6% | x / second <= 1.03           partial (hiding)
+      14  76.0%  76.0%   99.3%   99.4%   99.7% | previous x / largest <= 0.97 one-line rule
+      15  99.9%  99.9%   99.9%   99.9%   99.9% | age <= 0.00                  nearly constant
+
+network    patterns  top30 hiding pats   top3 | depth-2 mean  gain | one-line rule, nearly constant, partial, none | hiding neurons' depth-2 mean
+ARC            1097  71.3%          16  90.3% |        94.1%  12.4 |  8  0  5  3 | 95.9%
+seed 100        866  83.5%          16  93.4% |        95.5%  10.2 |  9  3  3  1 | 96.5%
+seed 111       1379  65.8%          16  85.8% |        93.6%  14.3 |  9  2  4  1 | 97.2%
+seed 115        970  81.4%           8  91.4% |        95.3%  11.0 |  8  2  4  2 | 94.9%
+seed 209        507  92.6%          57  88.7% |        96.0%  11.7 |  8  4  3  1 | 96.3%

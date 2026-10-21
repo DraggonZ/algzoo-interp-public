@@ -1,0 +1,7 @@
+fixed by w7b 5.09% of lists, broken 0.22%
+fixed: w6b named offset from the largest (named - largest): [(-1, 8606), (0, 8118), (-2, 1617), (-3, 788), (-5, 281), (-4, 253), (-7, 206), (-6, 177)]
+fixed: w6b named offset from the true second (named - second): [(-7, 7842), (6, 4673), (-6, 4360), (7, 1479), (-1, 1471), (-3, 153), (-2, 139), (1, 58)]
+fixed: w6b named named = largest: 39.9%
+broken: w7b named offset from the largest (named - largest): [(-1, 244), (-3, 151), (-4, 135), (-6, 121), (-5, 96), (-7, 60), (-2, 54), (-9, 8)]
+broken: w7b named offset from the true second (named - second): [(-1, 433), (-4, 67), (-2, 66), (3, 65), (-3, 62), (-5, 50), (1, 47), (5, 29)]
+broken: w7b named named = largest: 0.6%

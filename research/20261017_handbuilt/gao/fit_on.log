@@ -1,0 +1,8 @@
+v18     role-free menu             fit everywhere   : base 0.961; one neuron median 0.783 worst 0.699; within 1 point  4/16; all 16 0.746
+v18     role-free menu             fit on-steps only: base 0.961; one neuron median 0.772 worst 0.080; within 1 point  2/16; all 16 0.257
+v18     menu plus v18's variables  fit everywhere   : base 0.961; one neuron median 0.802 worst 0.641; within 1 point  4/16; all 16 0.713
+v18     menu plus v18's variables  fit on-steps only: base 0.961; one neuron median 0.816 worst 0.076; within 1 point  2/16; all 16 0.253
+trained role-free menu             fit everywhere   : base 0.954; one neuron median 0.817 worst 0.705; within 1 point  0/16; all 16 0.604
+trained role-free menu             fit on-steps only: base 0.954; one neuron median 0.754 worst 0.394; within 1 point  1/16; all 16 0.458
+trained menu plus v18's variables  fit everywhere   : base 0.954; one neuron median 0.816 worst 0.698; within 1 point  0/16; all 16 0.593
+trained menu plus v18's variables  fit on-steps only: base 0.954; one neuron median 0.776 worst 0.401; within 1 point  1/16; all 16 0.463

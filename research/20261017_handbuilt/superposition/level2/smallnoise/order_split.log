@@ -1,0 +1,12 @@
+L,2,3 acc 94.73 wrong naming largest/third/another (points) [1.03 3.69 0.55]
+L,3,2 acc 93.67 wrong naming largest/third/another (points) [1.8  4.01 0.53]
+2,L,3 acc 94.71 wrong naming largest/third/another (points) [0.52 3.99 0.78]
+3,L,2 acc 96.27 wrong naming largest/third/another (points) [0.65 2.55 0.54]
+2,3,L acc 96.32 wrong naming largest/third/another (points) [0.88 2.05 0.75]
+3,2,L acc 95.94 wrong naming largest/third/another (points) [1.02 2.34 0.7 ]
+  arrival L,2,3: accuracy 94.87%, wrong naming largest 1.13, third 3.34, another 0.65 (points)
+  arrival L,3,2: accuracy 94.49%, wrong naming largest 1.63, third 3.27, another 0.62 (points)
+  arrival 2,L,3: accuracy 95.17%, wrong naming largest 0.50, third 3.39, another 0.94 (points)
+  arrival 3,L,2: accuracy 95.87%, wrong naming largest 0.62, third 2.89, another 0.62 (points)
+  arrival 2,3,L: accuracy 95.99%, wrong naming largest 0.95, third 2.13, another 0.93 (points)
+  arrival 3,2,L: accuracy 95.50%, wrong naming largest 0.89, third 2.83, another 0.79 (points)

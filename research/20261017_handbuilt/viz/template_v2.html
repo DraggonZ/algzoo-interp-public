@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inside a tiny neural network that finds the second-largest number</title>
+<style>
+.viz-root {
+  color-scheme: light;
+  --surface-0: #f4f3f0; --surface-1: #fcfcfb; --grid: #e4e3df; --axis: #c9c8c2;
+  --text-primary: #0b0b0b; --text-secondary: #52514e; --text-muted: #7d7c77;
+  --series-1: #2a78d6; --series-2: #eb6834; --series-3: #1baf7a; --neutral: #a3a29c;
+  --seq-0: #f0efec; --seq-1: #b7d3f6; --seq-2: #6da7ec; --seq-3: #2a78d6; --seq-4: #184f95; --seq-5: #0d366b;
+  --div-neg: #e34948; --div-mid: #f0efec; --div-pos: #2a78d6;
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) .viz-root {
+    color-scheme: dark;
+    --surface-0: #121211; --surface-1: #1a1a19; --grid: #2c2c2a; --axis: #45453f;
+    --text-primary: #f0efec; --text-secondary: #c3c2b7; --text-muted: #8f8e86;
+    --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --neutral: #6f6e68;
+    --seq-0: #262624; --seq-1: #104281; --seq-2: #1c5cab; --seq-3: #2a78d6; --seq-4: #6da7ec; --seq-5: #b7d3f6;
+    --div-neg: #e66767; --div-mid: #383835; --div-pos: #3987e5;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--surface-0); }
+.viz-root { font: 16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--text-primary); background: var(--surface-0); padding: 24px 20px 60px; max-width: 860px; margin: 0 auto; }
+h1 { font-size: 28px; line-height: 1.2; margin: 0 0 12px; font-weight: 700; }
+h2 { font-size: 20px; margin: 40px 0 8px; font-weight: 650; }
+p { margin: 0 0 12px; }
+.muted { color: var(--text-muted); font-size: 14px; }
+.fig { background: var(--surface-1); border-radius: 12px; padding: 14px 16px 10px; margin: 14px 0 6px; }
+.fig .ctl { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; font-size: 14px; color: var(--text-secondary); margin-bottom: 6px; }
+.cap { font-size: 14px; color: var(--text-secondary); margin: 6px 0 0; }
+.summary { background: var(--surface-1); border-radius: 12px; padding: 16px 20px; margin: 14px 0; }
+.summary ol { margin: 0; padding-left: 22px; }
+.summary li { margin-bottom: 8px; }
+button, select { font: inherit; font-size: 14px; color: var(--text-primary); background: var(--surface-1); border: 1px solid var(--axis); border-radius: 6px; padding: 3px 10px; cursor: pointer; }
+button:hover { border-color: var(--text-muted); }
+input[type=range] { width: 200px; vertical-align: middle; }
+svg { display: block; }
+svg text { fill: var(--text-secondary); font-size: 12px; }
+svg .strong { fill: var(--text-primary); font-weight: 600; }
+.tip { position: fixed; pointer-events: none; background: var(--text-primary); color: var(--surface-1); padding: 6px 9px; border-radius: 6px; font-size: 13px; max-width: 300px; opacity: 0; z-index: 10; }
+.legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 13px; color: var(--text-secondary); margin-top: 4px; }
+.sw { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+.result { font-size: 15px; margin: 4px 0 0; }
+.events { margin: 6px 0 0; padding-left: 0; list-style: none; font-size: 14px; }
+.events li { margin: 0 0 4px; color: var(--text-secondary); }
+.events li.now { color: var(--text-primary); font-weight: 600; }
+details summary { cursor: pointer; color: var(--text-secondary); font-size: 14px; }
+table.data { border-collapse: collapse; font-size: 12px; font-variant-numeric: tabular-nums; }
+table.data td, table.data th { padding: 2px 6px; text-align: right; border-bottom: 1px solid var(--grid); }
+code { font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="viz-root">
+
+<h1>Inside a tiny neural network that finds the second-largest number</h1>
+<p>A small neural network reads ten numbers, one at a time. Its job is to say where the second-largest number is.</p>
+<p>It has just 16 neurons. Nobody designed how it works: it learned by training. It is right about 95 times in 100. Below, the real network runs in your browser.</p>
+<div class="fig" id="f0">
+  <div class="ctl"><button data-act="random">New random numbers</button><select data-act="ex"></select><span>or drag the bars. The figures below follow this input.</span></div>
+  <svg class="inputs" viewBox="0 0 560 210"></svg>
+  <p class="result"></p>
+</div>
+<p class="muted">Orange: the largest. Green: the second-largest, the right answer. Arrow: the network's choice.</p>
+
+<h2>How it works, in short</h2>
+<div class="summary">
+<ol>
+  <li>It remembers the largest number so far.</li>
+  <li>Each positive number starts a clock that records when it arrived. The output can't see the clocks.</li>
+  <li>When a bigger number arrives, the old largest's clock turns into a vote for its position.</li>
+  <li>Numbers close to the second-largest also get a vote. Smaller numbers are forgotten.</li>
+  <li>Each step, the votes move along, so at the end they point at the right positions.</li>
+  <li>The highest vote wins. Near-ties are sometimes decided wrongly.</li>
+</ol>
+</div>
+<p>The sections below show each step on the real network.</p>
+
+<h2>1. Keeping the largest number</h2>
+<p>Neuron 4 fires only when a number beats the largest so far, in proportion to how much it beats it by. Neuron 2 adds up those jumps one step later, so it holds the largest number (about 17 times it), one step behind. It starts to forget after about four steps.</p>
+<div class="fig" id="f1">
+  <div class="ctl"><button data-act="random">New random numbers</button></div>
+  <svg class="chart" viewBox="0 0 560 240"></svg>
+  <div class="legend"><span><span class="sw" style="background:var(--neutral)"></span>largest so far (true value)</span><span><span class="sw" style="background:var(--series-1)"></span>neuron 2, divided by 17</span><span><span class="sw" style="background:var(--axis);border-radius:50%"></span>input value (positions and values below the chart)</span><span><span class="sw" style="background:var(--series-2);transform:rotate(45deg)"></span>neuron 4 fires</span></div>
+</div>
+
+<h2>2. The hidden clock</h2>
+<p>Put a single positive number in, with zeros elsewhere. Ten neurons start to turn like the hand of a clock, about 40° per step. Below, those ten neurons are drawn as a point in the plane where they turn.</p>
+<p>The network's output cannot see this clock. Its two copies push the ten scores in opposite directions and cancel. So the scores stay almost equal, and the lone number gets no vote. That is right: the largest number must never be the answer.</p>
+<div class="fig" id="f2">
+  <div class="ctl"><span>Position of the single number:</span><input type="range" min="0" max="9" value="2" data-act="pos"><span class="posval"></span></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+    <svg class="clock" viewBox="0 0 270 250"></svg>
+    <svg class="scores" viewBox="0 0 270 250"></svg>
+  </div>
+  <p class="cap"></p>
+</div>
+
+<h2>3. A new largest number reveals the old one</h2>
+<p>Now use two numbers: a bigger one (1.5) and a smaller one (1.0). The answer is the smaller one's position.</p>
+<p>If the smaller comes after the bigger, it gets its own vote when it arrives (see the next section). The interesting case is the other order. The bigger number arrives second and pushes four neurons (1, 6, 7 and 8) to zero. Those four held one copy of the smaller number's clock. With that copy wiped, the other copy shows, as a vote for the smaller number's position.</p>
+<div class="fig" id="f3">
+  <div class="ctl"><span>Bigger number at</span><input type="range" min="0" max="9" value="6" data-act="p1"><span class="p1val"></span><span>smaller at</span><input type="range" min="0" max="9" value="2" data-act="p2"><span class="p2val"></span></div>
+  <svg class="strip" viewBox="0 0 560 120"></svg>
+  <svg class="scores" viewBox="0 0 560 190"></svg>
+  <p class="cap"></p>
+</div>
+
+<h2>4. Who gets a vote: neuron 5</h2>
+<p>Most numbers are neither the largest nor the second-largest, and they must not vote. Otherwise the many small votes would drown the right one. Neuron 5 decides. One step after a number arrives, it compares that number with the second-largest so far. It fires only if the number is close: above about 0.8 of it. Then the number keeps a vote. Otherwise it is forgotten.</p>
+<p>Here the largest is 2.0 at position 1 and the second-largest so far is 1.0 at position 3. Move the number at position 6.</p>
+<div class="fig" id="f4">
+  <div class="ctl"><span>Number at position 6:</span><input type="range" min="0" max="140" value="60" data-act="v"><span class="vval"></span></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+    <svg class="gate" viewBox="0 0 270 244"></svg>
+    <svg class="scores" viewBox="0 0 270 230"></svg>
+  </div>
+  <p class="cap"></p>
+</div>
+<p>Notice that the switch sits below the second-largest, not at it. So a number a little smaller than the second still keeps a full vote, and two votes compete. The network seems to hedge: it knows the second-largest only roughly, and missing a real new second costs more than an extra competing vote. Moving the switch up to exactly the second gains only about half a point of accuracy, and moving it slightly too high costs more.</p>
+
+<h2>5. Votes move with time</h2>
+<p>A vote must end up at the right position, but it is placed when its number arrives, before the network knows how many steps remain. The network solves this by moving every vote one position each step. The grid shows, after each step, the scores the network would give if the input ended there. Blue is high, red is low, and the ring marks the highest score in each row.</p>
+<div class="fig" id="f5">
+  <div class="ctl"><button data-act="random">New random numbers</button></div>
+  <svg class="grid" viewBox="0 0 560 330"></svg>
+  <p class="cap">Before the end, a vote sits to the right of its number's position, one place for each step still to come. Each step it moves one place left, so it lands on the number's position exactly at the end. Follow a ringed cell down the grid to see it move. The last row is the real answer.</p>
+</div>
+
+<h2>6. Close calls</h2>
+<p>About 1 input in 20 is answered wrongly. Most mistakes happen when the second- and third-largest are nearly equal. Then both have votes, and the bigger vote should win. But votes are not perfectly sized: depending on positions, one is a few percent too big or too small.</p>
+<p>Which side wins a near-tie differs from one trained network to another. In 22 networks trained the same way, these patterns were essentially unrelated. Changing this network's weights by half a percent reshuffles them. So the mistakes come from fine detail in the weights, not from a rule. The only pattern shared across networks is small: when the largest came first, the later of two nearly tied numbers is favoured by about 1%.</p>
+<div class="fig" id="f6">
+  <div class="ctl"><span>Example:</span><select data-act="ex"></select><span>vary position</span><select data-act="pos"></select></div>
+  <svg class="sweep" viewBox="0 0 560 262"></svg>
+  <div class="legend"><span><span class="sw" style="background:var(--series-1)"></span>network's answer</span><span><span class="sw" style="background:var(--neutral)"></span>right answer</span></div>
+  <p class="cap">The chosen number goes from −1 to 3 while the others stay fixed. Where the two lines part, the network is wrong.</p>
+</div>
+
+<h2>7. The weights</h2>
+<p>The whole network is 432 numbers, shown below. Each row is one neuron, grouped by role. The first column is how strongly the input reaches that neuron. The middle block is how strongly each neuron feeds this one at the next step. The last block is how this neuron adds to each of the ten scores. Blue is positive, red negative. Hover over a cell to see its value.</p>
+<div class="fig" id="f8">
+  <svg class="weights" viewBox="0 0 600 470"></svg>
+  <p class="cap"></p>
+</div>
+<p>A few weights carry the steps above:</p>
+<ul>
+  <li><b>Input column.</b> Neuron 4 gets +10, so a large number makes it fire. Neurons 1, 6, 7 and 8 get −11 to −13, so a large number pushes them below zero and wipes them. All the others get almost nothing.</li>
+  <li><b>Neurons 2 and 4.</b> Neuron 2 keeps 0.97 of itself and adds 1.7 × neuron 4: it adds up the jumps. Neuron 4 subtracts 0.49 × neuron 2, so it fires only above the stored largest. It also subtracts its own last value (−0.99), a trick that makes the stored largest exact despite the one-step delay. ARC's hand-designed version of this task uses the same trick.</li>
+  <li><b>Neuron 5.</b> It takes −0.6 and −0.85 from neurons 7 and 8. So it fires when a number has pushed them down a lot. Its biggest output weight (+3.4) goes to the score of position 8, the vote for a number one step old.</li>
+</ul>
+
+<h2>Playground</h2>
+<p>Everything at once. Drag the inputs and step through time. Click a neuron's name to switch it off at every step. For example, switch off neuron 3 and put the second-largest at position 1 or 6. Neuron 3 is small but needed at those positions.</p>
+<div class="fig" id="f7">
+  <div class="ctl"><button data-act="random">Random</button><select data-act="ex"></select><button data-act="prev">◀</button><input type="range" min="0" max="10" value="10" data-act="step"><button data-act="next">▶</button><span class="steplabel"></span><button data-act="restore">Switch all neurons back on</button></div>
+  <svg class="inputs" viewBox="0 0 560 190"></svg>
+  <ul class="events"></ul>
+  <svg class="scores" viewBox="0 0 560 170"></svg>
+  <p class="result"></p>
+  <svg class="heat" viewBox="0 0 560 420"></svg>
+  <details><summary>Table of all neuron values</summary><div class="table"></div></details>
+</div>
+
+<h2>What we don't know yet</h2>
+<ul>
+  <li>Why neuron 5's switch sits near 0.8 of the second-largest, and why it varies between inputs (from about 0.6 to 0.85).</li>
+  <li>Why the clock needs neuron 3's help at certain positions.</li>
+  <li>How votes interact in detail. A simple model where each number casts an independent vote matches the network's answers 95% of the time. But it matches only about a quarter of the network's mistakes.</li>
+</ul>
+<p class="muted">Model: ARC's AlgZoo network <code>one_layer_16_hidden_94_acc_2nd_argmax</code>. Each step computes h ← ReLU(W<sub>hh</sub> h + W<sub>hi</sub> x), with no biases; the scores are W<sub>oh</sub> h. The numbers are drawn from a standard normal distribution.</p>
+<div class="tip"></div>
+</div>
+
+<script>
+const M = /*MODEL*/null;
+const N = 10, D = 16;
+const root = document.querySelector('.viz-root');
+const css = n => getComputedStyle(root).getPropertyValue(n).trim();
+const NS = "http://www.w3.org/2000/svg";
+function el(tag, a = {}, parent) { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); if (parent) parent.appendChild(e); return e; }
+function txt(parent, x, y, s, a = {}) { const t = el('text', Object.assign({ x, y }, a), parent); t.textContent = s; return t; }
+const clear = s => { while (s.firstChild) s.removeChild(s.firstChild); };
+const tip = document.querySelector('.tip');
+function addTip(e, f) {
+  e.addEventListener('mousemove', ev => { tip.textContent = typeof f === 'function' ? f(ev) : f; tip.style.opacity = 1; tip.style.left = (ev.clientX + 14) + 'px'; tip.style.top = (ev.clientY + 12) + 'px'; });
+  e.addEventListener('mouseleave', () => tip.style.opacity = 0);
+}
+const fmt = v => (Math.abs(v) < 0.005 ? 0 : v).toFixed(2);
+const argmax = a => a.reduce((b, v, i) => v > a[b] ? i : b, 0);
+const ranks = xs => { const o = xs.map((v, i) => i).sort((a, b) => xs[b] - xs[a]); return { first: o[0], second: o[1], third: o[2] }; };
+const randn = () => { let u = 0; while (!u) u = Math.random(); return Math.round(Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * Math.random()) * 100) / 100; };
+const randomInput = () => Array.from({ length: N }, randn);
+
+function run(xs, off = new Set()) {
+  let h = new Array(D).fill(0); const hs = [h];
+  for (let t = 0; t < xs.length; t++) {
+    const nh = new Array(D);
+    for (let i = 0; i < D; i++) { let a = M.w_hi[i] * xs[t]; for (let j = 0; j < D; j++) a += M.w_hh[i][j] * h[j]; nh[i] = (a > 0 && !off.has(i)) ? a : 0; }
+    h = nh; hs.push(h);
+  }
+  return hs;  // hs[t] = state after t inputs
+}
+function scoresOf(h) { const s = M.w_oh.map(r => r.reduce((a, w, j) => a + w * h[j], 0)); const m = s.reduce((a, b) => a + b, 0) / N; return s.map(v => v - m); }
+const answer = (xs, off) => argmax(scoresOf(run(xs, off)[N]));
+
+// ---------- one input shared by every figure that shows the input ----------
+const shared = { xs: M.examples['typical'].slice() }, listeners = [];
+function setInput(xs) { shared.xs = xs; listeners.forEach(f => f()); }
+function exampleSelect(sel) {
+  const o0 = document.createElement('option'); o0.textContent = 'examples…'; o0.value = ''; sel.appendChild(o0);
+  for (const k in M.examples) { const o = document.createElement('option'); o.value = k; o.textContent = k; sel.appendChild(o); }
+  sel.onchange = () => { if (sel.value) setInput(M.examples[sel.value].slice()); sel.value = ''; };
+}
+
+// ---------- shared drawing pieces ----------
+function drawInputBars(svg, xs, opts = {}) {
+  const W = 560, top = 12, mid = opts.mid || 100, k = opts.k || 28, step = opts.step ?? N;
+  clear(svg);
+  const r = ranks(xs);
+  for (const g of [-3, -2, -1, 0, 1, 2, 3]) {
+    const y = mid - g * k; if (y < top - 2 || y > mid + 3 * k + 2) continue;
+    el('line', { x1: 34, x2: W - 6, y1: y, y2: y, stroke: g === 0 ? css('--axis') : css('--grid') }, svg);
+    txt(svg, 28, y + 4, g, { 'text-anchor': 'end' });
+  }
+  const pred = opts.pred;
+  for (let i = 0; i < N; i++) {
+    const cx = 58 + i * 50, v = xs[i], y1 = mid - v * k;
+    const col = i === r.first ? css('--series-2') : i === r.second ? css('--series-3') : css('--neutral');
+    el('rect', { x: cx - 14, y: Math.min(mid, y1), width: 28, height: Math.max(Math.abs(y1 - mid), 1.5), rx: 4, fill: col, opacity: i < step ? 1 : 0.3 }, svg);
+    txt(svg, cx, v >= 0 ? y1 - 5 : y1 + 14, fmt(v), { 'text-anchor': 'middle' });
+    txt(svg, cx, mid + 3 * k + 22, i, { 'text-anchor': 'middle', class: pred === i ? 'strong' : '' });
+    if (pred === i) el('path', { d: `M${cx - 6},${mid + 3 * k + 34} L${cx + 6},${mid + 3 * k + 34} L${cx},${mid + 3 * k + 26} Z`, fill: css('--series-1') }, svg);
+    if (opts.onDrag) {
+      const hit = el('rect', { x: cx - 25, y: top - 8, width: 50, height: 6 * k + 16, fill: 'transparent', style: 'cursor:ns-resize' }, svg);
+      addTip(hit, `Position ${i}: ${fmt(v)}`);
+      hit.addEventListener('pointerdown', ev => { ev.preventDefault(); drag = { svg, i, mid, k, cb: opts.onDrag }; dragMove(ev); });
+    }
+  }
+}
+let drag = null;
+function dragMove(ev) {
+  if (!drag) return;
+  const pt = drag.svg.createSVGPoint(); pt.x = ev.clientX; pt.y = ev.clientY;
+  const p = pt.matrixTransform(drag.svg.getScreenCTM().inverse());
+  drag.cb(drag.i, Math.max(-3, Math.min(3, Math.round((drag.mid - p.y) / drag.k * 100) / 100)));
+}
+window.addEventListener('pointermove', dragMove);
+window.addEventListener('pointerup', () => drag = null);
+
+function drawScoreBars(svg, s, opts = {}) {
+  clear(svg);
+  const vb = svg.viewBox.baseVal, W = vb.width, H = vb.height;
+  const lim = Math.max(opts.min || 20, ...s.map(Math.abs));
+  const left = 30, bw = (W - left - 6) / N, mid = (H - 24) / 2 + 14, k = (H - 40) / 2 / lim;
+  el('line', { x1: left, x2: W - 6, y1: mid, y2: mid, stroke: css('--axis') }, svg);
+  txt(svg, left, 11, opts.title || 'scores (minus their average)');
+  const best = argmax(s);
+  for (let i = 0; i < N; i++) {
+    const cx = left + bw * (i + 0.5), y = mid - s[i] * k;
+    const col = opts.hi === i ? css('--series-3') : i === best && opts.showBest !== false ? css('--series-1') : css('--neutral');
+    el('rect', { x: cx - bw * 0.32, y: Math.min(mid, y), width: bw * 0.64, height: Math.max(Math.abs(y - mid), 1.5), rx: 3, fill: col }, svg);
+    txt(svg, cx, H - 4, i, { 'text-anchor': 'middle' });
+    const hit = el('rect', { x: cx - bw / 2, y: 14, width: bw, height: H - 30, fill: 'transparent' }, svg);
+    addTip(hit, `Position ${i}: score ${s[i].toFixed(1)}`);
+  }
+}
+
+// ---------- figure 0: try it ----------
+(() => {
+  const f = document.getElementById('f0'); let xs = shared.xs;
+  const svg = f.querySelector('.inputs'), res = f.querySelector('.result');
+  function draw() {
+    const a = answer(xs), r = ranks(xs);
+    drawInputBars(svg, xs, { pred: a, mid: 96, k: 26, onDrag: (i, v) => { xs[i] = v; setInput(xs); } });
+    res.innerHTML = a === r.second ? `The network picks position <b>${a}</b>. Correct.` : `The network picks position <b>${a}</b>. Wrong: the second-largest is at ${r.second}.`;
+  }
+  f.querySelector('[data-act=random]').onclick = () => setInput(randomInput());
+  exampleSelect(f.querySelector('[data-act=ex]'));
+  listeners.push(() => { xs = shared.xs; draw(); }); draw();
+})();
+
+// ---------- figure 1: running maximum ----------
+(() => {
+  const f = document.getElementById('f1'); let xs = shared.xs;
+  const svg = f.querySelector('.chart');
+  function draw() {
+    clear(svg);
+    const hs = run(xs), truth = [], n2 = [], n4 = [];
+    for (let t = 0; t < N; t++) { truth.push(Math.max(0, ...xs.slice(0, t + 1))); n2.push(hs[t + 1][2] / 17); n4.push(hs[t + 1][4]); }
+    const lim = Math.max(1, ...truth, ...n2, ...xs) * 1.1, lo = Math.min(0, ...xs) * 1.1;
+    const X = t => 60 + t * 52, Y = v => 196 - (v - lo) / (lim - lo) * 182;
+    for (const g of [Math.ceil(lo), 0, Math.floor(lim)]) { el('line', { x1: 40, x2: 554, y1: Y(g), y2: Y(g), stroke: g === 0 ? css('--axis') : css('--grid') }, svg); txt(svg, 34, Y(g) + 4, g, { 'text-anchor': 'end' }); }
+    for (let t = 0; t < N; t++) {
+      txt(svg, X(t), 218, t, { 'text-anchor': 'middle', class: 'strong' });
+      txt(svg, X(t), 234, fmt(xs[t]), { 'text-anchor': 'middle' });
+      el('circle', { cx: X(t), cy: Y(xs[t]), r: 3, fill: css('--axis') }, svg);
+    }
+    const line = (a, c) => el('path', { d: 'M' + a.map((v, t) => `${X(t)},${Y(v)}`).join(' L'), fill: 'none', stroke: c, 'stroke-width': 2.5 }, svg);
+    line(truth, css('--neutral')); line(n2, css('--series-1'));
+    for (let t = 0; t < N; t++) {
+      if (n4[t] > 0.05) { const d = el('path', { d: `M${X(t)},${Y(truth[t]) - 16} l6,6 l-6,6 l-6,-6 z`, fill: css('--series-2') }, svg); addTip(d, `Neuron 4 fires (${n4[t].toFixed(1)}): ${fmt(xs[t])} beats the largest so far`); }
+      const c = el('circle', { cx: X(t), cy: Y(n2[t]), r: 4, fill: css('--series-1'), stroke: css('--surface-1'), 'stroke-width': 2 }, svg);
+      addTip(c, `After input ${t}: largest so far ${fmt(truth[t])}; neuron 2 ÷ 17 = ${n2[t].toFixed(2)}`);
+    }
+  }
+  f.querySelector('[data-act=random]').onclick = () => setInput(randomInput());
+  listeners.push(() => { xs = shared.xs; draw(); }); draw();
+})();
+
+// ---------- figure 2: hidden clock ----------
+const clockProj = h => { const v = M.clock_neurons.map((k, j) => h[k] - M.clock_mean[j]); return M.clock_axes.map(ax => ax.reduce((a, w, j) => a + w * v[j], 0)); };
+(() => {
+  const f = document.getElementById('f2');
+  const slider = f.querySelector('[data-act=pos]'), cl = f.querySelector('.clock'), sc = f.querySelector('.scores'), cap = f.querySelector('.cap');
+  const ref = run([1, ...new Array(30).fill(0)]).slice(1).map(clockProj);
+  const lim = Math.max(...ref.flat().map(Math.abs)) * 1.1;
+  function draw() {
+    const p = +slider.value; f.querySelector('.posval').textContent = p;
+    const xs = new Array(N).fill(0); xs[p] = 1;
+    const hs = run(xs), pts = hs.slice(p + 1).map(clockProj);
+    clear(cl);
+    const X = v => 135 + v / lim * 110, Y = v => 125 - v / lim * 110;
+    el('path', { d: 'M' + ref.map(q => `${X(q[0])},${Y(q[1])}`).join(' L'), fill: 'none', stroke: css('--grid'), 'stroke-width': 6, 'stroke-linejoin': 'round' }, cl);
+    el('path', { d: 'M' + pts.map(q => `${X(q[0])},${Y(q[1])}`).join(' L'), fill: 'none', stroke: css('--series-1'), 'stroke-width': 2 }, cl);
+    pts.forEach((q, a) => { el('circle', { cx: X(q[0]), cy: Y(q[1]), r: 5, fill: css('--series-1'), stroke: css('--surface-1'), 'stroke-width': 2 }, cl); txt(cl, X(q[0]) + 8, Y(q[1]) - 5, a === 0 ? 'arrival' : `+${a}`); });
+    txt(cl, 4, 12, 'clock (10 neurons, seen in its plane)');
+    const s = scoresOf(hs[N]);
+    drawScoreBars(sc, s, { min: 30, showBest: false, title: 'scores at the end' });
+    const spread = Math.max(...s) - Math.min(...s);
+    cap.textContent = `The clock has turned ${N - 1 - p} step${N - 1 - p === 1 ? '' : 's'} since the number arrived, yet the scores differ by only ${spread.toFixed(1)} between highest and lowest. A real vote lifts one score by about 30 or more.`;
+  }
+  slider.oninput = draw; draw();
+})();
+
+// ---------- figure 3: reveal ----------
+(() => {
+  const f = document.getElementById('f3');
+  const s1 = f.querySelector('[data-act=p1]'), s2 = f.querySelector('[data-act=p2]'), strip = f.querySelector('.strip'), sc = f.querySelector('.scores'), cap = f.querySelector('.cap');
+  function draw() {
+    let p1 = +s1.value, p2 = +s2.value;
+    if (p1 === p2) { p2 = (p2 + 1) % N; s2.value = p2; }
+    f.querySelector('.p1val').textContent = p1; f.querySelector('.p2val').textContent = p2;
+    const xs = new Array(N).fill(0); xs[p1] = 1.5; xs[p2] = 1.0;
+    const hs = run(xs);
+    clear(strip);
+    const rows = [1, 6, 7, 8], cw = 48, x0 = 74;
+    txt(strip, 4, 11, 'the four lowering neurons, after each input (darker = more active)');
+    rows.forEach((k, r) => {
+      txt(strip, x0 - 8, 30 + r * 20, `neuron ${k}`, { 'text-anchor': 'end' });
+      for (let t = 0; t < N; t++) {
+        const v = hs[t + 1][k], fr = v / M.p99[k];
+        const c = el('rect', { x: x0 + t * cw + 1, y: 17 + r * 20, width: cw - 2, height: 18, rx: 3, fill: seq(fr) }, strip);
+        addTip(c, `Neuron ${k} after input ${t}: ${v.toFixed(1)}`);
+      }
+    });
+    for (let t = 0; t < N; t++) txt(strip, x0 + t * cw + cw / 2, 112, t === p1 ? `${t}: 1.5` : t === p2 ? `${t}: 1.0` : t, { 'text-anchor': 'middle', class: t === p1 || t === p2 ? 'strong' : '' });
+    const s = scoresOf(hs[N]);
+    drawScoreBars(sc, s, { hi: p2, title: 'scores at the end (green: the smaller number\'s position)' });
+    const a = argmax(s);
+    cap.textContent = (p1 > p2
+      ? `The bigger number arrives after the smaller one. At its arrival (input ${p1}) the four neurons drop to zero. That reveals the other clock copy as a vote for position ${p2}.`
+      : `The smaller number arrives after the bigger one, so it is not revealed: it votes for itself on arrival, through neuron 5 (next section).`)
+      + ` The network picks ${a}${a === p2 ? ', correct.' : ', wrong.'}`;
+  }
+  s1.oninput = draw; s2.oninput = draw; draw();
+})();
+
+function seq(f) {
+  const st = ['--seq-0', '--seq-1', '--seq-2', '--seq-3', '--seq-4', '--seq-5'].map(css);
+  if (f <= 0.02) return st[0];
+  return st[Math.min(5, 1 + Math.floor(Math.min(f, 0.999) * 5))];
+}
+
+// ---------- figure 4: neuron 5 ----------
+(() => {
+  const f = document.getElementById('f4');
+  const sl = f.querySelector('[data-act=v]'), gate = f.querySelector('.gate'), sc = f.querySelector('.scores'), cap = f.querySelector('.cap');
+  const base = new Array(N).fill(-0.3); base[1] = 2.0; base[3] = 1.0;
+  const vs = [], n5 = [], vote = [];
+  for (let i = 0; i <= 140; i++) {
+    const v = i / 100, xs = base.slice(); xs[6] = v; const hs = run(xs);
+    vs.push(v); n5.push(hs[8][5]);
+    const s = scoresOf(hs[N]); vote.push(s[6]);
+  }
+  const sw = vs[n5.findIndex(v => v > 0.05)];
+  function draw() {
+    const i = +sl.value, v = vs[i]; f.querySelector('.vval').textContent = v.toFixed(2);
+    clear(gate);
+    const top = Math.max(...n5) * 1.1, X = u => 36 + u / 1.4 * 225, Y = u => 200 - u / top * 180;
+    el('line', { x1: 36, x2: 264, y1: Y(0), y2: Y(0), stroke: css('--axis') }, gate);
+    for (const g of [0, 0.5, 1.0, 1.4]) txt(gate, X(g), 214, g, { 'text-anchor': 'middle' });
+    el('line', { x1: X(1), x2: X(1), y1: 20, y2: 200, stroke: css('--grid') }, gate); txt(gate, X(1) - 3, 30, '= second', { 'text-anchor': 'end' });
+    txt(gate, 4, 11, 'neuron 5, one step after the number arrives');
+    el('path', { d: 'M' + vs.map((u, j) => `${X(u)},${Y(n5[j])}`).join(' L'), fill: 'none', stroke: css('--series-1'), 'stroke-width': 2.5 }, gate);
+    el('circle', { cx: X(v), cy: Y(n5[i]), r: 6, fill: css('--series-1'), stroke: css('--surface-1'), 'stroke-width': 2 }, gate);
+    txt(gate, 150, 238, 'number at position 6', { 'text-anchor': 'middle' });
+    const xs = base.slice(); xs[6] = v;
+    const s = scoresOf(run(xs)[N]);
+    drawScoreBars(sc, s, { hi: 6, title: 'scores at the end (green: position 6)' });
+    const a = argmax(s), on = n5[i] > 0.05;
+    cap.textContent = `In this example neuron 5 switches on when the number passes ${sw.toFixed(2)}. ` +
+      (on ? `At ${v.toFixed(2)} it fires, so position 6 keeps a vote.` : `At ${v.toFixed(2)} it stays off, so the number is forgotten and position 6 gets no vote.`) +
+      ` The network picks ${a}.`;
+  }
+  sl.oninput = draw; draw();
+})();
+
+// ---------- figure 5: sliding votes ----------
+function divColor(f) {  // f in [-1, 1]
+  const hex = c => [1, 3, 5].map(i => parseInt(c.slice(i, i + 2), 16));
+  const mid = hex(css('--div-mid')), end = hex(f >= 0 ? css('--div-pos') : css('--div-neg'));
+  const a = Math.min(1, Math.abs(f));
+  return `rgb(${mid.map((m, i) => Math.round(m + (end[i] - m) * a)).join(',')})`;
+}
+(() => {
+  const f = document.getElementById('f5'); let xs = shared.xs;
+  const svg = f.querySelector('.grid');
+  function draw() {
+    clear(svg);
+    const hs = run(xs), cw = 46, rh = 28, x0 = 96, y0 = 24;
+    const S = hs.slice(1).map(scoresOf);
+    const lim = Math.max(...S.flat().map(Math.abs));
+    for (let j = 0; j < N; j++) txt(svg, x0 + j * cw + cw / 2, 14, `pos ${j}`, { 'text-anchor': 'middle' });
+    S.forEach((s, t) => {
+      txt(svg, x0 - 8, y0 + t * rh + 18, `after ${t} (${fmt(xs[t])})`, { 'text-anchor': 'end' });
+      const b = argmax(s);
+      s.forEach((v, j) => {
+        const c = el('rect', { x: x0 + j * cw + 1, y: y0 + t * rh + 1, width: cw - 2, height: rh - 2, rx: 3, fill: divColor(v / lim) }, svg);
+        addTip(c, `After input ${t}, position ${j}: score ${v.toFixed(1)}`);
+        if (j === b) el('circle', { cx: x0 + j * cw + cw / 2, cy: y0 + t * rh + rh / 2, r: 7, fill: 'none', stroke: css('--text-primary'), 'stroke-width': 2 }, svg);
+      });
+    });
+  }
+  f.querySelector('[data-act=random]').onclick = () => setInput(randomInput());
+  listeners.push(() => { xs = shared.xs; draw(); }); draw();
+})();
+
+// ---------- figure 6: close calls ----------
+(() => {
+  const f = document.getElementById('f6');
+  const exSel = f.querySelector('[data-act=ex]'), posSel = f.querySelector('[data-act=pos]'), svg = f.querySelector('.sweep');
+  for (const k in M.examples) { const o = document.createElement('option'); o.value = k; o.textContent = k; exSel.appendChild(o); }
+  for (let i = 0; i < N; i++) { const o = document.createElement('option'); o.value = i; o.textContent = i; posSel.appendChild(o); }
+  exSel.value = 'close call, wrong';
+  const setPos = () => { const r = ranks(M.examples[exSel.value]); posSel.value = r.third; };
+  setPos();
+  function draw() {
+    clear(svg);
+    const xs0 = M.examples[exSel.value], k = +posSel.value, vals = [], net = [], tru = [];
+    for (let v = -1; v <= 3.0001; v += 0.005) { const xs = xs0.slice(); xs[k] = v; vals.push(v); net.push(answer(xs)); tru.push(ranks(xs).second); }
+    const X = v => 40 + (v + 1) / 4 * 510, Y = s => 214 - s * 21;
+    for (let s = 0; s < N; s++) { el('line', { x1: 40, x2: 550, y1: Y(s), y2: Y(s), stroke: css('--grid') }, svg); txt(svg, 32, Y(s) + 4, s, { 'text-anchor': 'end' }); }
+    for (const g of [-1, 0, 1, 2, 3]) txt(svg, X(g), 238, g, { 'text-anchor': 'middle' });
+    txt(svg, 4, 10, 'answer (position)');
+    txt(svg, 295, 258, `value of the number at position ${k}`, { 'text-anchor': 'middle' });
+    const path = (a, c, w) => el('path', { d: 'M' + a.map((s, i) => `${X(vals[i])},${Y(s)}`).join(' L'), fill: 'none', stroke: c, 'stroke-width': w, 'stroke-linejoin': 'round' }, svg);
+    path(tru, css('--neutral'), 6); path(net, css('--series-1'), 2);
+    el('line', { x1: X(xs0[k]), x2: X(xs0[k]), y1: 16, y2: 220, stroke: css('--text-muted') }, svg);
+    txt(svg, X(xs0[k]) + 4, 24, `actual value ${fmt(xs0[k])}`);
+    const hit = el('rect', { x: 40, y: 16, width: 510, height: 204, fill: 'transparent' }, svg);
+    addTip(hit, ev => {
+      const pt = svg.createSVGPoint(); pt.x = ev.clientX; pt.y = ev.clientY;
+      const p = pt.matrixTransform(svg.getScreenCTM().inverse());
+      const i = Math.max(0, Math.min(vals.length - 1, Math.round((p.x - 40) / 510 * (vals.length - 1))));
+      return `Value ${vals[i].toFixed(2)}: network says ${net[i]}, right answer ${tru[i]}`;
+    });
+  }
+  exSel.onchange = () => { setPos(); draw(); }; posSel.onchange = draw; draw();
+})();
+
+// ---------- figure 8: weights ----------
+(() => {
+  const f = document.getElementById('f8'), svg = f.querySelector('.weights'), cap = f.querySelector('.cap');
+  const order = [[" largest so far", [2, 4]], [" lowering", [1, 6, 7, 8]], [" vote gate", [5]], [" clock", [0, 10, 11, 12, 13, 14, 15]], [" after any input", [9]], [" neuron 3", [3]]];
+  const ids = order.flatMap(g => g[1]);
+  const cs = 18, x0 = 128, y0 = 52;
+  const xIn = x0, xRec = x0 + cs + 12, xOut = xRec + 16 * cs + 12;
+  const lim = { in: 13.2, rec: 2.5, out: 7.4 };
+  let hl = null;
+  function draw() {
+    clear(svg);
+    txt(svg, xIn + cs / 2, y0 - 26, 'input', { 'text-anchor': 'middle', class: 'strong' });
+    txt(svg, xRec + 8 * cs, y0 - 26, 'from neuron', { 'text-anchor': 'middle', class: 'strong' });
+    txt(svg, xOut + 5 * cs, y0 - 26, 'to the score of position', { 'text-anchor': 'middle', class: 'strong' });
+    ids.forEach((k, c) => txt(svg, xRec + c * cs + cs / 2, y0 - 8 - (c % 2) * 11, k, { 'text-anchor': 'middle', style: 'font-size:10px', class: hl === k ? 'strong' : '' }));
+    for (let j = 0; j < N; j++) txt(svg, xOut + j * cs + cs / 2, y0 - 8, j, { 'text-anchor': 'middle', style: 'font-size:10px' });
+    let y = y0;
+    const rowY = {};
+    for (const [name, ks] of order) {
+      txt(svg, 4, y + 13, name.trim(), { style: 'font-size:11px' });
+      for (const k of ks) { rowY[k] = y; y += cs; }
+      y += 7;
+    }
+    for (const i of ids) {
+      const yy = rowY[i];
+      const lab = txt(svg, x0 - 5, yy + 13, i, { 'text-anchor': 'end', style: 'font-size:11px;cursor:pointer', class: hl === i ? 'strong' : '' });
+      lab.onclick = () => { hl = hl === i ? null : i; draw(); };
+      const cell = (x, w, l, tipText, dim) => { const c = el('rect', { x: x + 0.5, y: yy + 0.5, width: cs - 1, height: cs - 1, rx: 1.5, fill: divColor(w / l), opacity: dim ? 0.25 : 1 }, svg); addTip(c, tipText); };
+      const dimRow = hl !== null && hl !== i;
+      cell(xIn, M.w_hi[i], lim.in, `Input → neuron ${i}: ${M.w_hi[i].toFixed(2)}`, dimRow);
+      ids.forEach((j, c) => cell(xRec + c * cs, M.w_hh[i][j], lim.rec, `Neuron ${j} → neuron ${i}: ${M.w_hh[i][j].toFixed(2)}`, hl !== null && hl !== i && hl !== j));
+      for (let j = 0; j < N; j++) cell(xOut + j * cs, M.w_oh[j][i], lim.out, `Neuron ${i} → score of position ${j}: ${M.w_oh[j][i].toFixed(2)}`, dimRow);
+    }
+    svg.setAttribute('viewBox', `0 0 ${xOut + 10 * cs + 6} ${y + 4}`);
+    cap.textContent = hl === null ? 'Click a neuron number to highlight what goes into it (its row) and what comes out of it (its column). Colour scales: input up to ±13, between neurons up to ±2.5 (stronger values are drawn at full colour), output up to ±7.4.'
+      : `Highlighted: neuron ${hl}. Its row shows what feeds it; its column in the middle block shows which neurons it feeds. Click it again to clear.`;
+  }
+  draw();
+})();
+
+// ---------- playground ----------
+(() => {
+  const f = document.getElementById('f7'); let xs = shared.xs, step = N; const off = new Set();
+  const GROUPS = [["Largest so far", [2, 4]], ["Lowering", [1, 6, 7, 8]], ["Vote gate", [5]], ["Clock", [0, 10, 11, 12, 13, 14, 15]], ["After any input", [9]], ["Neuron 3", [3]]];
+  const inS = f.querySelector('.inputs'), sc = f.querySelector('.scores'), heat = f.querySelector('.heat'), evs = f.querySelector('.events'), res = f.querySelector('.result'), sl = f.querySelector('[data-act=step]');
+  function describe(hs) {
+    const out = [];
+    for (let t = 0; t < step; t++) {
+      const v = xs[t], prev = [0, 0].concat(xs.slice(0, t)).sort((a, b) => b - a), m1 = prev[0], m2 = prev[1];
+      const n5 = t < N - 1 ? hs[t + 2][5] : null;
+      let s;
+      if (v > m1) s = `Input ${t} (${fmt(v)}) is a new largest. The lowering neurons are wiped.`;
+      else if (v <= 0) s = `Input ${t} (${fmt(v)}) is negative and leaves little trace.`;
+      else if (t === N - 1) s = `Input ${t} (${fmt(v)}) is the last one. It votes for position ${t} directly.`;
+      else if (n5 > 0.05) s = m2 > 0 ? `Input ${t} (${fmt(v)}) is close to the second-largest so far (${fmt(m2)}). Neuron 5 fires next step, so it keeps a vote.` : `Input ${t} (${fmt(v)}) is the first positive number below the largest. Neuron 5 fires next step, so it keeps a vote.`;
+      else s = m2 > 0 ? `Input ${t} (${fmt(v)}) is well below the second-largest so far (${fmt(m2)}). Forgotten after one step.` : `Input ${t} (${fmt(v)}) gets no lasting vote (neuron 5 stays off).`;
+      out.push(s);
+    }
+    return out;
+  }
+  function draw() {
+    const hs = run(xs, off), r = ranks(xs);
+    sl.value = step; f.querySelector('.steplabel').textContent = step === 0 ? 'before any input' : `after input ${step - 1}`;
+    drawInputBars(inS, xs, { mid: 88, k: 24, step, onDrag: (i, v) => { xs[i] = v; setInput(xs); } });
+    evs.innerHTML = ''; describe(hs).forEach((s, t, a) => { const li = document.createElement('li'); li.textContent = s; if (t === a.length - 1) li.className = 'now'; evs.appendChild(li); });
+    drawScoreBars(sc, scoresOf(hs[step]), { title: step === N ? 'final scores' : 'scores if the input ended here' });
+    const a = argmax(scoresOf(hs[N]));
+    res.innerHTML = step === N ? (a === r.second ? `Answer: position <b>${a}</b>. Correct.` : `Answer: position <b>${a}</b>. Wrong: the second-largest is at ${r.second}.`) : '';
+    clear(heat);
+    let row = 0; const cw = 34, rh = 19, x0 = 220, y0 = 18;
+    for (let t = 0; t < N; t++) txt(heat, x0 + t * cw + cw / 2, 12, t, { 'text-anchor': 'middle' });
+    txt(heat, x0 - 8, 12, 'after input', { 'text-anchor': 'end' });
+    for (const [name, ids] of GROUPS) {
+      txt(heat, 4, y0 + row * rh + 14, name, { class: 'strong' });
+      for (const k of ids) {
+        const y = y0 + row * rh, lab = txt(heat, x0 - 8, y + 14, off.has(k) ? `${k} (off)` : `${k}`, { 'text-anchor': 'end', style: 'cursor:pointer', class: off.has(k) ? 'strong' : '' });
+        lab.onclick = () => { off.has(k) ? off.delete(k) : off.add(k); draw(); };
+        addTip(lab, off.has(k) ? 'Click to switch back on' : `Click to switch neuron ${k} off`);
+        for (let t = 0; t < N; t++) { const v = hs[t + 1][k]; const c = el('rect', { x: x0 + t * cw + 1, y: y + 1, width: cw - 2, height: rh - 2, rx: 3, fill: seq(v / M.p99[k]), opacity: t < step ? 1 : 0.3 }, heat); addTip(c, `Neuron ${k} after input ${t}: ${v.toFixed(1)}`); }
+        row++;
+      }
+      row += 0.4;
+    }
+    heat.setAttribute('viewBox', `0 0 560 ${y0 + row * rh + 4}`);
+    let h = '<table class="data"><tr><th>after</th><th>x</th>' + [...Array(D).keys()].map(k => `<th>${k}</th>`).join('') + '</tr>';
+    for (let t = 0; t < N; t++) h += `<tr><td>${t}</td><td>${fmt(xs[t])}</td>` + hs[t + 1].map(v => `<td>${v.toFixed(1)}</td>`).join('') + '</tr>';
+    f.querySelector('.table').innerHTML = h + '</table>';
+  }
+  f.querySelector('[data-act=random]').onclick = () => { step = N; setInput(randomInput()); };
+  exampleSelect(f.querySelector('[data-act=ex]'));
+  listeners.push(() => { xs = shared.xs; draw(); });
+  f.querySelector('[data-act=prev]').onclick = () => { step = Math.max(0, step - 1); draw(); };
+  f.querySelector('[data-act=next]').onclick = () => { step = Math.min(N, step + 1); draw(); };
+  f.querySelector('[data-act=restore]').onclick = () => { off.clear(); draw(); };
+  sl.oninput = () => { step = +sl.value; draw(); };
+  draw();
+})();
+</script>
+</body>
+</html>

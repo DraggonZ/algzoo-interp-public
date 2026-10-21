@@ -1,0 +1,22 @@
+                                                           all  S befo  S afte  S at 8  L at 8  S righ
+intact                                                    95.4    95.6    95.2    94.4    96.3    96.0
+decision network's own, value from weights                95.4    95.6    95.2    94.4    96.3    96.0   agree 100.0%
+decision full rule's, value from weights                  95.4    95.6    95.2    94.4    96.3    96.0   agree 100.0%
+decision basic rule's, value from weights                 95.4    95.6    95.1    94.4    96.2    95.9   agree 99.9%
+decision record or x >= 0.65 x second-largest, value fro  95.3    95.5    95.0    94.1    96.2    95.9   agree 99.7%
+decision record or x >= 0.7 x second-largest, value from  95.3    95.6    95.1    94.2    96.2    95.9   agree 99.8%
+decision record or x >= 0.75 x second-largest, value fro  95.3    95.6    95.1    94.2    96.2    95.9   agree 99.8%
+decision record or x >= 0.8 x second-largest, value from  95.3    95.6    95.1    94.2    96.2    95.9   agree 99.8%
+  mask network's own: differs from the network's on/off on 0.00% of steps
+  mask full rule's: differs from the network's on/off on 0.36% of steps
+  mask basic rule's: differs from the network's on/off on 1.47% of steps
+  mask record or x >= 0.65 x second-largest: differs from the network's on/off on 1.93% of steps
+  mask record or x >= 0.7 x second-largest: differs from the network's on/off on 1.63% of steps
+  mask record or x >= 0.75 x second-largest: differs from the network's on/off on 1.52% of steps
+  mask record or x >= 0.8 x second-largest: differs from the network's on/off on 1.64% of steps
+on/off from network, value from full rule (no feedback)   94.7    95.0    94.3    93.4    95.6    95.2   agree 97.8%
+on/off from network, value from basic rule (no feedback)  87.8    87.6    88.0    81.2    85.1    86.7   agree 89.1%
+own value scaled by 0.9                                   91.6    92.0    91.2    87.1    96.5    95.2   agree 93.8%
+own value scaled by 0.95                                  94.5    95.1    94.0    91.4    96.9    96.1   agree 97.5%
+own value scaled by 1.05                                  94.7    94.6    94.8    95.4    93.9    94.7   agree 97.6%
+own value scaled by 1.1                                   92.9    92.3    93.6    95.3    89.1    92.3   agree 95.0%

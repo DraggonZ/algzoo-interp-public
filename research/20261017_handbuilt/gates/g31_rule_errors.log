@@ -1,0 +1,25 @@
+
+keep gate rule: rms value error 0.188; typical trained on-value 9.14; on/off differs on 0.39% of steps
+  after records             :  213704 steps, rms 0.222, on/off differs 0.00%
+  after kept non-records    :  146445 steps, rms 0.376, on/off differs 1.15%
+  after forgotten positives :   94864 steps, rms 0.060, on/off differs 1.51%
+  after negatives           :  449761 steps, rms 0.022, on/off differs 0.14%
+/data/output/research/algzoo/20261017_handbuilt/gates/g31_rule_errors.py:23: RuntimeWarning: Mean of empty slice.
+  print("  rms by age of the largest so far (0 = no positive number yet): " + " ".join(f"{a}:{np.sqrt((e[a1 == a] ** 2).mean()):.2f}" for a in range(0, 9)))
+/opt/venv/lib/python3.12/site-packages/numpy/_core/_methods.py:144: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+  rms by age of the largest so far (0 = no positive number yet): 0:nan 1:0.12 2:0.16 3:0.14 4:0.20 5:0.29 6:0.39 7:0.37 8:0.34
+
+late gate short rule: rms value error 0.134; typical trained on-value 1.64; on/off differs on 0.50% of steps
+  after records             :  213704 steps, rms 0.233, on/off differs 0.45%
+  after kept non-records    :  146445 steps, rms 0.174, on/off differs 2.43%
+  after forgotten positives :   94864 steps, rms 0.000, on/off differs 0.00%
+  after negatives           :  449761 steps, rms 0.001, on/off differs 0.00%
+  rms by age of the largest so far (0 = no positive number yet): 0:nan 1:0.11 2:0.11 3:0.10 4:0.19 5:0.17 6:0.18 7:0.31 8:0.34
+
+switch points from the 'ages' tables vs the network's own, steps 1..8 (rms, in units of x):
+  r1: rms 0.031
+  r4: rms 0.013
+  r6: rms 0.023
+  r7: rms 0.016
+  r8: rms 0.034

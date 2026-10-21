@@ -1,0 +1,14 @@
+(c) linearize only lists within 8 noise sizes of a tie: 0.930 of lists; per-copy RMSE 0.25 points, correlation 0.997
+(d) mean first-order accuracy loss (points) with noise only in one block; full noise: 4.90
+    recurrent weights into hiding (1, 6, 7, 8)   ( 64 weights):  3.60
+    recurrent weights into memory (0, 3, 10-15)  (128 weights):  0.68
+    recurrent weights into store, detector (2, 4) ( 32 weights):  0.63
+    recurrent weights into gates (5, 9)          ( 32 weights):  0.03
+    readout weights of hiding (1, 6, 7, 8)       ( 40 weights):  0.00
+    input weights of memory (0, 3, 10-15)        (  8 weights): -0.00
+    input weights of hiding (1, 6, 7, 8)         (  4 weights): -0.00
+    input weights of gates (5, 9)                (  2 weights): -0.00
+    readout weights of gates (5, 9)              ( 20 weights): -0.01
+    input weights of store, detector (2, 4)      (  2 weights): -0.01
+    readout weights of memory (0, 3, 10-15)      ( 80 weights): -0.01
+    readout weights of store, detector (2, 4)    ( 20 weights): -0.01

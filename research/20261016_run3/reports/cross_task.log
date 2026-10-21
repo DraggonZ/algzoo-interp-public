@@ -1,0 +1,7 @@
+2nd-argmax 16x10 (ARC's example): accuracy 0.955; slide correlation median 0.77; shift relation 0.97 (random rows +0.07); lone-input spread 5.2 vs random-input spread 82.9
+argmedian 16x11 seed 0: accuracy 0.455; slide correlation median 0.98; shift relation 0.98 (random rows +0.06); lone-input spread 7.2 vs random-input spread 18.4
+argmedian 16x11 seed 1: accuracy 0.431; slide correlation median 0.98; shift relation 0.97 (random rows +0.02); lone-input spread 8.6 vs random-input spread 17.9
+argmedian 16x11 seed 2: accuracy 0.457; slide correlation median 0.99; shift relation 0.94 (random rows -0.01); lone-input spread 7.1 vs random-input spread 18.2
+argmedian 32x11 seed 0: accuracy 0.673; slide correlation median 0.95; shift relation 0.84 (random rows +0.04); lone-input spread 35.0 vs random-input spread 67.6
+argmedian 32x11 seed 1: accuracy 0.682; slide correlation median 0.94; shift relation 0.83 (random rows +0.11); lone-input spread 42.0 vs random-input spread 68.2
+argmedian 32x11 seed 2: accuracy 0.730; slide correlation median 0.92; shift relation 0.42 (random rows +0.03); lone-input spread 18.7 vs random-input spread 45.7

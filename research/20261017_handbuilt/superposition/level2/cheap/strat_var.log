@@ -1,0 +1,11 @@
+/data/output/research/algzoo/20261017_handbuilt/superposition/level2/cheap/strat_var.py:23: UserWarning: torch.searchsorted(): input value tensor is non-contiguous, this will lower the performance due to extra data copy when converting non-contiguous tensor to contiguous, please use contiguous input value tensor if possible. This message will only appear once per program. (Triggered internally at /pytorch/aten/src/ATen/native/BucketizationUtils.h:32.)
+  tb = torch.bucketize(T, torch.quantile(T[:200000], torch.linspace(0, 1, nb + 1, device=DEV, dtype=dt)[1:-1]))
+ARC bins 1x1: per-line variance total 0.01034, within strata 0.00916 (Bernoulli 0.04404); cost 3.77 lists/line; efficiency vs sampling 1.27x
+ARC bins 3x3: per-line variance total 0.01034, within strata 0.00807 (Bernoulli 0.04404); cost 3.77 lists/line; efficiency vs sampling 1.45x
+ARC bins 6x6: per-line variance total 0.01034, within strata 0.00695 (Bernoulli 0.04404); cost 3.77 lists/line; efficiency vs sampling 1.68x
+114 bins 1x1: per-line variance total 0.03128, within strata 0.02360 (Bernoulli 0.08966); cost 3.72 lists/line; efficiency vs sampling 1.02x
+114 bins 3x3: per-line variance total 0.03128, within strata 0.01961 (Bernoulli 0.08966); cost 3.72 lists/line; efficiency vs sampling 1.23x
+114 bins 6x6: per-line variance total 0.03128, within strata 0.01694 (Bernoulli 0.08966); cost 3.72 lists/line; efficiency vs sampling 1.42x
+203 bins 1x1: per-line variance total 0.03232, within strata 0.02823 (Bernoulli 0.09034); cost 3.64 lists/line; efficiency vs sampling 0.88x
+203 bins 3x3: per-line variance total 0.03232, within strata 0.02312 (Bernoulli 0.09034); cost 3.64 lists/line; efficiency vs sampling 1.07x
+203 bins 6x6: per-line variance total 0.03232, within strata 0.01946 (Bernoulli 0.09034); cost 3.64 lists/line; efficiency vs sampling 1.28x

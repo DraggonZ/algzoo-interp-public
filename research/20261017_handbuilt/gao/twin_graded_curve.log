@@ -1,0 +1,17 @@
+twin with clock gain 10000, flag gain 10000, detector gain 1000
+twin accuracy 0.960
+exact rules                             : acc 0.960 agree 0.992 KL 0.000
+exact + noise 1e-10 x typical value     : acc 0.960 agree 0.990 KL 0.000
+exact + noise 1e-09 x typical value     : acc 0.955 agree 0.985 KL 0.000
+exact + noise 1e-08 x typical value     : acc 0.917 agree 0.947 KL 0.003
+exact + noise 1e-07 x typical value     : acc 0.791 agree 0.821 KL 0.267
+exact + noise 1e-06 x typical value     : acc 0.723 agree 0.750 KL 8.237
+exact + noise 1e-05 x typical value     : acc 0.634 agree 0.649 KL 98.015
+wrong clock height (largest, not jump)  : acc 0.695 agree 0.704 KL 19.250
+flip term left out                      : acc 0.590 agree 0.604 KL 8.552
+wrong clock height + noise 1e-10        : acc 0.695 agree 0.702 KL 19.251
+wrong clock height + noise 1e-09        : acc 0.694 agree 0.702 KL 19.253
+wrong clock height + noise 1e-08        : acc 0.693 agree 0.700 KL 19.274
+wrong clock height + noise 1e-07        : acc 0.681 agree 0.688 KL 19.666
+wrong clock height + noise 1e-06        : acc 0.656 agree 0.663 KL 27.524
+wrong clock height + noise 1e-05        : acc 0.602 agree 0.607 KL 116.122

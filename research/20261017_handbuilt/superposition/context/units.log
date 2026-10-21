@@ -1,0 +1,6 @@
+share of the total |effect| in the top  1 units: median 0.10
+share of the total |effect| in the top  3 units: median 0.24
+share of the total |effect| in the top 10 units: median 0.54
+most common top unit (neuron, step): (7, 9) 14%, (7, 8) 12%, (7, 7) 9%, (7, 6) 7%, (8, 9) 6%
+units whose 5% nudge alone could flip the decision (|effect| > 20 x |lead|): median 11, mean 17.2 of 160
+total |effect| / |lead|: median 761

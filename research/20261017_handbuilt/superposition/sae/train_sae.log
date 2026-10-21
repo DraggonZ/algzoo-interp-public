@@ -1,0 +1,12 @@
+width  16 k 2: unexplained variance 9.10% (held out), dead latents 1
+width  16 k 4: unexplained variance 2.99% (held out), dead latents 0
+width  16 k 8: unexplained variance 0.49% (held out), dead latents 0
+width  32 k 2: unexplained variance 7.64% (held out), dead latents 0
+width  32 k 4: unexplained variance 2.37% (held out), dead latents 2
+width  32 k 8: unexplained variance 0.40% (held out), dead latents 0
+width  64 k 2: unexplained variance 6.93% (held out), dead latents 10
+width  64 k 4: unexplained variance 2.37% (held out), dead latents 7
+width  64 k 8: unexplained variance 0.47% (held out), dead latents 0
+width 128 k 2: unexplained variance 5.85% (held out), dead latents 38
+width 128 k 4: unexplained variance 1.85% (held out), dead latents 19
+width 128 k 8: unexplained variance 0.49% (held out), dead latents 6

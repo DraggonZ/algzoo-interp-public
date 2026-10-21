@@ -1,0 +1,7 @@
+1 of 4 on: 0.02 of steps; angle median 0.0 deg
+2 of 4 on: 0.07 of steps; angle median 0.6 deg
+3 of 4 on: 0.04 of steps; angle median 3.7 deg
+4 of 4 on: 0.66 of steps; angle median 1.4 deg
+all off: 0.22 of steps; formulas give a nonzero pattern on 0.00 of them (median size 0.00)
+true where all four on, formulas elsewhere: accuracy 0.935
+formulas where all four on, true elsewhere: accuracy 0.720

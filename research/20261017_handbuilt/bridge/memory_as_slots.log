@@ -1,0 +1,26 @@
+step 5
+   trained  0: from v18 slots + store 0.90; from all 16 v18 neurons 0.91
+   trained  3: from v18 slots + store 0.46; from all 16 v18 neurons 0.55
+   trained 10: from v18 slots + store 0.97; from all 16 v18 neurons 0.98
+   trained 11: from v18 slots + store 0.97; from all 16 v18 neurons 0.98
+   trained 12: from v18 slots + store 0.90; from all 16 v18 neurons 0.91
+   trained 13: from v18 slots + store 0.93; from all 16 v18 neurons 0.93
+   trained 14: from v18 slots + store 0.91; from all 16 v18 neurons 0.94
+   trained 15: from v18 slots + store 0.53; from all 16 v18 neurons 0.57
+   trained  1: from v18 slots + store 0.27; from all 16 v18 neurons 0.97
+   trained  6: from v18 slots + store 0.31; from all 16 v18 neurons 0.99
+   trained  7: from v18 slots + store 0.28; from all 16 v18 neurons 1.00
+   trained  8: from v18 slots + store 0.14; from all 16 v18 neurons 0.94
+step 9
+   trained  0: from v18 slots + store 0.82; from all 16 v18 neurons 0.85
+   trained  3: from v18 slots + store 0.69; from all 16 v18 neurons 0.72
+   trained 10: from v18 slots + store 0.89; from all 16 v18 neurons 0.91
+   trained 11: from v18 slots + store 0.88; from all 16 v18 neurons 0.88
+   trained 12: from v18 slots + store 0.87; from all 16 v18 neurons 0.89
+   trained 13: from v18 slots + store 0.77; from all 16 v18 neurons 0.79
+   trained 14: from v18 slots + store 0.90; from all 16 v18 neurons 0.93
+   trained 15: from v18 slots + store 0.83; from all 16 v18 neurons 0.85
+   trained  1: from v18 slots + store 0.25; from all 16 v18 neurons 0.97
+   trained  6: from v18 slots + store 0.23; from all 16 v18 neurons 0.97
+   trained  7: from v18 slots + store 0.23; from all 16 v18 neurons 0.99
+   trained  8: from v18 slots + store 0.23; from all 16 v18 neurons 0.95

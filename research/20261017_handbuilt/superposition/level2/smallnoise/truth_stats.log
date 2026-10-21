@@ -1,0 +1,8 @@
+accuracy 95.312%; mistakes naming the largest 20.4%, the third 63.4%, another 16.2%
+near ties where the third wins: 20.9% (near-tie share of lists 9.53%)
+  arrival L,2,3: accuracy 94.87%  near ties third wins 25.7%
+  arrival L,3,2: accuracy 94.49%  near ties third wins 21.3%
+  arrival 2,L,3: accuracy 95.19%  near ties third wins 25.4%
+  arrival 3,L,2: accuracy 95.87%  near ties third wins 22.4%
+  arrival 2,3,L: accuracy 95.99%  near ties third wins 13.5%
+  arrival 3,2,L: accuracy 95.46%  near ties third wins 17.1%

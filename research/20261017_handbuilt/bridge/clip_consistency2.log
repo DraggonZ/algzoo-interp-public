@@ -1,0 +1,3 @@
+as trained               accuracy 0.9540; errors naming the largest 0.20, the third 0.64
+memory fed unclipped     accuracy 0.8790; errors naming the largest 0.47, the third 0.44
+readout reads unclipped  accuracy 0.9428; errors naming the largest 0.35, the third 0.52

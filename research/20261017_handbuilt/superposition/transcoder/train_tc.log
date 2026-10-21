@@ -1,0 +1,12 @@
+width  16 k 2: unexplained variance of next state 11.00% (held out), dead latents 2
+width  16 k 4: unexplained variance of next state 4.41% (held out), dead latents 0
+width  16 k 8: unexplained variance of next state 1.38% (held out), dead latents 0
+width  32 k 2: unexplained variance of next state 10.30% (held out), dead latents 7
+width  32 k 4: unexplained variance of next state 3.08% (held out), dead latents 2
+width  32 k 8: unexplained variance of next state 1.19% (held out), dead latents 0
+width  64 k 2: unexplained variance of next state 8.68% (held out), dead latents 16
+width  64 k 4: unexplained variance of next state 2.61% (held out), dead latents 4
+width  64 k 8: unexplained variance of next state 0.79% (held out), dead latents 7
+width 128 k 2: unexplained variance of next state 7.92% (held out), dead latents 63
+width 128 k 4: unexplained variance of next state 3.18% (held out), dead latents 51
+width 128 k 8: unexplained variance of next state 0.70% (held out), dead latents 34

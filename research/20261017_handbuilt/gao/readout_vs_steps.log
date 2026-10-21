@@ -1,0 +1,9 @@
+accuracy 0.951
+shared scale      0.01: readout only 0.951; every step 0.914
+shared scale      0.02: readout only 0.951; every step 0.859
+shared scale      0.05: readout only 0.951; every step 0.715
+shared scale      0.10: readout only 0.951; every step 0.552
+independent noise 0.01: readout only 0.934; every step 0.882
+independent noise 0.02: readout only 0.890; every step 0.760
+independent noise 0.05: readout only 0.741; every step 0.516
+independent noise 0.10: readout only 0.573; every step 0.324

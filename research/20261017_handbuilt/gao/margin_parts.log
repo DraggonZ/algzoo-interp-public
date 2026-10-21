@@ -1,0 +1,27 @@
+ARC     acc 0.954: median lead   8.19, pushes on it   386.9, second's vote per unit   41.9, typical neuron value   6.8
+zoo0    acc 0.910: median lead   3.38, pushes on it   617.6, second's vote per unit   18.0, typical neuron value  28.5
+zoo1    acc 0.881: median lead   2.84, pushes on it   449.8, second's vote per unit   20.5, typical neuron value  16.2
+zoo2    acc 0.949: median lead   5.61, pushes on it   343.7, second's vote per unit   27.9, typical neuron value   9.4
+zoo3    acc 0.933: median lead   5.16, pushes on it   270.6, second's vote per unit   25.6, typical neuron value   8.5
+zoo4    acc 0.891: median lead   3.08, pushes on it   557.2, second's vote per unit   19.5, typical neuron value  22.2
+new100  acc 0.949: median lead   5.05, pushes on it   341.7, second's vote per unit   24.4, typical neuron value   5.3
+new101  acc 0.914: median lead   3.68, pushes on it   375.7, second's vote per unit   23.0, typical neuron value  14.7
+new102  acc 0.913: median lead   3.70, pushes on it   421.1, second's vote per unit   23.3, typical neuron value  12.6
+new103  acc 0.953: median lead   5.28, pushes on it   325.8, second's vote per unit   33.3, typical neuron value   8.3
+new104  acc 0.913: median lead   3.37, pushes on it   475.5, second's vote per unit   15.4, typical neuron value  16.2
+new105  acc 0.898: median lead   3.26, pushes on it   534.8, second's vote per unit   18.0, typical neuron value  20.7
+new106  acc 0.949: median lead   5.56, pushes on it   448.4, second's vote per unit   35.3, typical neuron value  10.8
+new107  acc 0.921: median lead   3.47, pushes on it   469.2, second's vote per unit   21.1, typical neuron value  17.5
+new108  acc 0.937: median lead   4.42, pushes on it   286.0, second's vote per unit   26.4, typical neuron value   6.8
+new109  acc 0.942: median lead   4.38, pushes on it   511.5, second's vote per unit   25.6, typical neuron value  15.6
+new110  acc 0.913: median lead   3.73, pushes on it   604.5, second's vote per unit   18.0, typical neuron value  16.4
+new111  acc 0.961: median lead   5.78, pushes on it   236.6, second's vote per unit   27.8, typical neuron value   3.6
+new112  acc 0.916: median lead   3.77, pushes on it   702.4, second's vote per unit   15.6, typical neuron value  19.2
+new113  acc 0.906: median lead   3.82, pushes on it   286.0, second's vote per unit   18.0, typical neuron value   8.6
+new114  acc 0.899: median lead   3.44, pushes on it   531.6, second's vote per unit   17.7, typical neuron value  23.8
+new115  acc 0.952: median lead   5.41, pushes on it   376.7, second's vote per unit   33.5, typical neuron value   6.9
+accuracy vs lead: rank correlation 0.91 (p 0.000)
+accuracy vs pushes: rank correlation -0.54 (p 0.009)
+accuracy vs vote per unit: rank correlation 0.79 (p 0.000)
+accuracy vs typical value: rank correlation -0.78 (p 0.000)
+accuracy vs vote per unit / pushes: 0.74 (p 0.000)

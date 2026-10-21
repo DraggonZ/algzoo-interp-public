@@ -1,0 +1,2 @@
+ARC                 : accuracy 95.31% | lead maps at 3%: 92,219 distinct, 9,040 cover half | near ties: names the third 20.8%, tree on top three predicts 86.2% (always-guess 79.2%)
+ARC + 10,000 steps  : accuracy 96.31% | lead maps at 3%: 80,191 distinct, 5,532 cover half | near ties: names the third 16.1%, tree on top three predicts 88.3% (always-guess 83.9%)

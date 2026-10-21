@@ -1,0 +1,35 @@
+ ARC: true  95.32%  estimate  95.32%  error +0.00
+ 100: true  94.81%  estimate  94.91%  error +0.11
+ 101: true  91.34%  estimate  91.62%  error +0.27
+ 102: true  91.25%  estimate  90.69%  error -0.56
+ 103: true  95.32%  estimate  95.40%  error +0.08
+ 104: true  91.23%  estimate  91.73%  error +0.51
+ 105: true  89.86%  estimate  89.92%  error +0.06
+ 106: true  94.84%  estimate  94.23%  error -0.61
+ 107: true  92.13%  estimate  93.00%  error +0.87
+ 108: true  93.86%  estimate  94.17%  error +0.31
+ 109: true  94.05%  estimate  94.27%  error +0.22
+ 110: true  91.18%  estimate  91.24%  error +0.06
+ 111: true  96.00%  estimate  96.06%  error +0.05
+ 112: true  91.46%  estimate  92.42%  error +0.96
+ 113: true  90.44%  estimate  91.62%  error +1.17
+ 114: true  89.79%  estimate  89.91%  error +0.12
+ 115: true  95.20%  estimate  95.45%  error +0.25
+ 200: true  93.24%  estimate  93.56%  error +0.32
+ 201: true  94.38%  estimate  94.13%  error -0.24
+ 202: true  89.72%  estimate  90.59%  error +0.87
+ 203: true  89.88%  estimate  89.86%  error -0.02
+ 204: true  88.93%  estimate  88.72%  error -0.21
+ 205: true  93.62%  estimate  94.02%  error +0.40
+ 206: true  91.29%  estimate  90.93%  error -0.37
+ 207: true  91.14%  estimate  90.29%  error -0.84
+ 208: true  84.03%  estimate  85.21%  error +1.18
+ 209: true  95.89%  estimate  96.22%  error +0.33
+ 210: true  96.15%  estimate  96.27%  error +0.12
+ 211: true  93.47%  estimate  93.55%  error +0.08
+ 212: true  84.53%  estimate  84.44%  error -0.09
+ 213: true  93.89%  estimate  94.37%  error +0.48
+ 214: true  94.84%  estimate  94.02%  error -0.82
+ 215: true  92.60%  estimate  93.16%  error +0.57
+all 33: RMSE 0.52 points, mean error +0.17, largest 1.18
+seeds 100-115 only: RMSE 0.52

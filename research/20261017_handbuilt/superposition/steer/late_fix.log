@@ -1,0 +1,15 @@
+unchanged             : accuracy 95.309% | near ties with a contender at step 9: it wins  57.5% (truly second 49.9%)
+all neurons x0.99     : accuracy 95.271% | near ties with a contender at step 9: it wins  50.4% (truly second 49.9%)
+all but hiding x0.99  : accuracy 95.279% | near ties with a contender at step 9: it wins  58.0% (truly second 49.9%)
+all but hiding x0.98  : accuracy 95.229% | near ties with a contender at step 9: it wins  58.3% (truly second 49.9%)
+-- follow-up: only the hiding neurons' input turned down at the last step (prediction: same bias removal and same cost as all neurons, since sparing them removed both)
+hiding (1, 6, 7, 8) x0.99: accuracy 95.309% | step-9 contender wins  50.0%
+hiding (1, 6, 7, 8) x0.98: accuracy 95.235% | step-9 contender wins  42.3%
+hiding (1,)         x0.99: accuracy 95.255% | step-9 contender wins  57.0%
+hiding (1,)         x0.98: accuracy 95.022% | step-9 contender wins  56.6%
+hiding (6,)         x0.99: accuracy 95.236% | step-9 contender wins  57.0%
+hiding (6,)         x0.98: accuracy 94.974% | step-9 contender wins  56.4%
+hiding (7,)         x0.99: accuracy 95.092% | step-9 contender wins  51.5%
+hiding (7,)         x0.98: accuracy 94.493% | step-9 contender wins  45.5%
+hiding (8,)         x0.99: accuracy 95.177% | step-9 contender wins  56.6%
+hiding (8,)         x0.98: accuracy 94.819% | step-9 contender wins  55.6%

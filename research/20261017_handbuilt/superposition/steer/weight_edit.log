@@ -1,0 +1,5 @@
+unchanged                         : accuracy 95.309% | step-9 contender wins  57.5%
+(a) hiding input weights x0.99    : accuracy 94.997% | step-9 contender wins  53.9%
+(b) hiding readout x0.99          : accuracy 95.261% | step-9 contender wins  61.2%
+(a) hiding input weights x0.98    : accuracy 94.227% | step-9 contender wins  50.1%
+(b) hiding readout x0.98          : accuracy 95.117% | step-9 contender wins  64.5%

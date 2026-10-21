@@ -1,0 +1,4 @@
+v18 gains     beta 0.5: accuracy 0.9598
+v18 gains     beta 0.0: accuracy 0.9223
+trained scale beta 0.5: accuracy 0.9208
+trained scale beta 0.0: accuracy 0.8809

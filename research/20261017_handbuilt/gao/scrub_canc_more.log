@@ -1,0 +1,3 @@
+cancellers + prevrec+after : KL 0.187 acc 0.933 agree 0.947
+cancellers + asmemory      : KL 0.374 acc 0.894 agree 0.911
+cancellers + asmemory+prev : KL 0.361 acc 0.894 agree 0.911

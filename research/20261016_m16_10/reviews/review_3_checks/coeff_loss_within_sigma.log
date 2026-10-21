@@ -1,0 +1,4 @@
+all 96 copies: Spearman +0.81
+sigma 0.005: Spearman +0.61 (32 copies)
+sigma 0.01: Spearman +0.25 (32 copies)
+sigma 0.02: Spearman +0.63 (32 copies)

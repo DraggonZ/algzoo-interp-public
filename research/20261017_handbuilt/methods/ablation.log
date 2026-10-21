@@ -1,0 +1,36 @@
+
+Hand-built (gains 100): accuracy 0.980. Per neuron: accuracy after ablation (zero / mean / resample); for zero ablation also the share right when the answer is position 9 vs 0-8
+  store     0.137 / 0.476 / 0.377    zero: answer at 9 0.09, at 0-8 0.14
+  detect    0.177 / 0.078 / 0.114    zero: answer at 9 0.61, at 0-8 0.13
+  store2    0.553 / 0.752 / 0.669    zero: answer at 9 0.99, at 0-8 0.50
+  detect2   0.252 / 0.122 / 0.144    zero: answer at 9 0.84, at 0-8 0.19
+  clip1     0.219 / 0.197 / 0.197    zero: answer at 9 0.02, at 0-8 0.24
+  clip2     0.384 / 0.268 / 0.293    zero: answer at 9 0.31, at 0-8 0.39
+  last      0.884 / 0.915 / 0.789    zero: answer at 9 0.00, at 0-8 0.98
+  clockA0   0.088 / 0.088 / 0.092    zero: answer at 9 0.00, at 0-8 0.10
+  clockA1   0.107 / 0.102 / 0.103    zero: answer at 9 0.00, at 0-8 0.12
+  clockA2   0.106 / 0.097 / 0.100    zero: answer at 9 0.00, at 0-8 0.12
+  clockB0   0.101 / 0.108 / 0.105    zero: answer at 9 0.00, at 0-8 0.11
+  clockB1   0.078 / 0.086 / 0.089    zero: answer at 9 0.00, at 0-8 0.09
+  clockB2   0.104 / 0.116 / 0.112    zero: answer at 9 0.00, at 0-8 0.12
+  vote0     0.170 / 0.139 / 0.152    zero: answer at 9 0.25, at 0-8 0.16
+  vote1     0.171 / 0.075 / 0.106    zero: answer at 9 0.25, at 0-8 0.16
+  vote2     0.184 / 0.109 / 0.131    zero: answer at 9 0.24, at 0-8 0.18
+
+ARC: accuracy 0.953. Per neuron: accuracy after ablation (zero / mean / resample); for zero ablation also the share right when the answer is position 9 vs 0-8
+  n0        0.189 / 0.313 / 0.242    zero: answer at 9 0.04, at 0-8 0.21
+  n1        0.145 / 0.170 / 0.151    zero: answer at 9 0.17, at 0-8 0.14
+  n2        0.180 / 0.355 / 0.258    zero: answer at 9 0.13, at 0-8 0.19
+  n3        0.547 / 0.652 / 0.535    zero: answer at 9 0.98, at 0-8 0.50
+  n4        0.179 / 0.316 / 0.273    zero: answer at 9 0.29, at 0-8 0.17
+  n5        0.207 / 0.207 / 0.197    zero: answer at 9 0.97, at 0-8 0.12
+  n6        0.138 / 0.127 / 0.131    zero: answer at 9 0.09, at 0-8 0.14
+  n7        0.108 / 0.133 / 0.126    zero: answer at 9 0.00, at 0-8 0.12
+  n8        0.175 / 0.140 / 0.138    zero: answer at 9 0.31, at 0-8 0.16
+  n9        0.667 / 0.697 / 0.642    zero: answer at 9 0.91, at 0-8 0.64
+  n10       0.128 / 0.350 / 0.246    zero: answer at 9 0.00, at 0-8 0.14
+  n11       0.111 / 0.317 / 0.217    zero: answer at 9 0.00, at 0-8 0.12
+  n12       0.132 / 0.274 / 0.210    zero: answer at 9 0.04, at 0-8 0.14
+  n13       0.298 / 0.605 / 0.493    zero: answer at 9 0.11, at 0-8 0.32
+  n14       0.196 / 0.539 / 0.366    zero: answer at 9 0.05, at 0-8 0.21
+  n15       0.635 / 0.531 / 0.484    zero: answer at 9 0.95, at 0-8 0.60

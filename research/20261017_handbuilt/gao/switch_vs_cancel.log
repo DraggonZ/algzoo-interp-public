@@ -1,0 +1,26 @@
+ARC     lead/pushes 0.022 acc 0.952: switching rate 0.245; near threshold 0.058
+zoo0    lead/pushes 0.006 acc 0.910: switching rate 0.123; near threshold 0.036
+zoo1    lead/pushes 0.006 acc 0.878: switching rate 0.181; near threshold 0.059
+zoo2    lead/pushes 0.016 acc 0.947: switching rate 0.217; near threshold 0.070
+zoo3    lead/pushes 0.021 acc 0.930: switching rate 0.221; near threshold 0.077
+zoo4    lead/pushes 0.005 acc 0.890: switching rate 0.100; near threshold 0.044
+new100  lead/pushes 0.015 acc 0.949: switching rate 0.194; near threshold 0.079
+new101  lead/pushes 0.010 acc 0.913: switching rate 0.182; near threshold 0.061
+new102  lead/pushes 0.009 acc 0.911: switching rate 0.153; near threshold 0.065
+new103  lead/pushes 0.016 acc 0.953: switching rate 0.170; near threshold 0.078
+new104  lead/pushes 0.007 acc 0.913: switching rate 0.126; near threshold 0.044
+new105  lead/pushes 0.006 acc 0.897: switching rate 0.152; near threshold 0.057
+new106  lead/pushes 0.012 acc 0.948: switching rate 0.183; near threshold 0.074
+new107  lead/pushes 0.007 acc 0.921: switching rate 0.174; near threshold 0.047
+new108  lead/pushes 0.015 acc 0.938: switching rate 0.213; near threshold 0.068
+new109  lead/pushes 0.009 acc 0.940: switching rate 0.117; near threshold 0.053
+new110  lead/pushes 0.006 acc 0.910: switching rate 0.193; near threshold 0.051
+new111  lead/pushes 0.023 acc 0.960: switching rate 0.235; near threshold 0.060
+new112  lead/pushes 0.005 acc 0.915: switching rate 0.134; near threshold 0.047
+new113  lead/pushes 0.014 acc 0.905: switching rate 0.205; near threshold 0.046
+new114  lead/pushes 0.006 acc 0.898: switching rate 0.138; near threshold 0.049
+new115  lead/pushes 0.013 acc 0.952: switching rate 0.186; near threshold 0.071
+rank correlation of switching rate with lead/pushes 0.80 (p 0.000); with accuracy 0.51 (p 0.016)
+rank correlation of near threshold with lead/pushes 0.68 (p 0.001); with accuracy 0.63 (p 0.002)
+partial rank correlation, switching rate vs lead/pushes with accuracy held fixed: 0.74
+partial rank correlation, switching rate vs accuracy with lead/pushes held fixed: -0.31

@@ -1,0 +1,9 @@
+                                                         all  S befo  S afte  S at 8  L at 8  S righ
+intact                                                 95.26   95.55   94.98   94.26   96.31   95.65
+keep: full (switch points by ages)                     94.62   94.94   94.30   93.53   95.45   95.16   change -0.64 (se 0.03)
+keep: r1, r6 basic                                     84.67   83.47   85.87   82.65   78.53   90.17   change -10.59 (se 0.08)
+keep: r4, r7 from m1 by age only                       93.26   94.01   92.51   90.85   93.42   93.37   change -2.00 (se 0.04)
+keep: r4, r7 from m1 by age; r1, r6 basic              83.58   82.36   84.79   80.96   76.55   89.27   change -11.69 (se 0.08)
+keep: r8 from m1 by age only                           76.64   82.71   70.55   65.90   84.26   70.43   change -18.62 (se 0.10)
+keep: all switch points from m1 by age only            86.05   89.48   82.60   81.96   89.11   83.58   change -9.22 (se 0.08)
+both: keep full + late tables                          94.57   94.81   94.33   93.46   95.65   95.37   change -0.69 (se 0.03)

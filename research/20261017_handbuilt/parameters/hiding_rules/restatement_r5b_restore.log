@@ -1,0 +1,32 @@
+r5b_restore.py: 26 constants
+
+| constant | fitted | ARC weight | verdict |
+|---|---|---|---|
+| store (shared) | +0.026 |  | no single weight |
+| m2 -> 1 | +0.096 |  | no single weight |
+| detector (4) -> 1 | -0.101 | +0.871 | differs (-112%) |
+| late gate (9) -> 1 | -0.544 | -0.686 | differs (+21%) |
+| early gate (5) -> 1 | +0.090 | +0.118 | differs (-23%) |
+| hiding 1 -> 1 | +0.454 | +0.409 | differs (+11%) |
+| hiding 7 -> 1 | -0.328 | -1.048 | differs (+69%) |
+| hiding 8 -> 1 | -0.133 | -0.120 | differs (-11%) |
+| m2 -> 6 | -0.020 |  | no single weight |
+| late gate (9) -> 6 | -0.503 | -0.640 | differs (+21%) |
+| early gate (5) -> 6 | +0.046 | +0.038 | differs (+20%) |
+| hiding 1 -> 6 | -0.104 | -0.135 | differs (+23%) |
+| hiding 6 -> 6 | +0.383 | +0.361 | restates |
+| hiding 7 -> 6 | +0.633 | -0.126 | differs (+602%) |
+| hiding 8 -> 6 | -0.079 | -0.082 | restates |
+| m2 -> 7 | -0.343 |  | no single weight |
+| detector (4) -> 7 | +0.040 | +1.317 | differs (-97%) |
+| hiding 1 -> 7 | -0.059 | -0.100 | differs (+41%) |
+| hiding 6 -> 7 | -0.172 | -0.182 | restates |
+| hiding 8 -> 7 | +0.181 | +0.167 | restates |
+| m2 -> 8 | -0.304 |  | no single weight |
+| late gate (9) -> 8 | +0.067 | -0.068 | differs (+198%) |
+| hiding 1 -> 8 | +0.683 | +0.634 | restates |
+| hiding 6 -> 8 | +0.071 | -0.000 | differs (+24744%) |
+| hiding 7 -> 8 | -0.199 | -1.094 | differs (+82%) |
+| hiding 8 -> 8 | +0.571 | +0.615 | restates |
+
+restate an ARC weight within 10%: 6 of 26

@@ -1,0 +1,25 @@
+sum of eigenvalues 1.4891e+04; share in the top 10 / 50 / 100 directions: 0.873 / 0.9944 / 0.99947
+
+budget KL 0.016:
+  rule error   0.2% per weight: directions that must be stated exactly k =   2
+  rule error   0.5% per weight: directions that must be stated exactly k =  14
+  rule error   1.0% per weight: directions that must be stated exactly k =  28
+  rule error   2.0% per weight: directions that must be stated exactly k =  51
+  rule error   5.0% per weight: directions that must be stated exactly k =  89
+  rule error  10.0% per weight: directions that must be stated exactly k = 126
+  rule error  25.0% per weight: directions that must be stated exactly k = 190
+  rule error  50.0% per weight: directions that must be stated exactly k = 240
+  rule error 100.0% per weight: directions that must be stated exactly k = 283
+
+budget KL 0.005:
+  rule error   0.2% per weight: directions that must be stated exactly k =   8
+  rule error   0.5% per weight: directions that must be stated exactly k =  25
+  rule error   1.0% per weight: directions that must be stated exactly k =  48
+  rule error   2.0% per weight: directions that must be stated exactly k =  74
+  rule error   5.0% per weight: directions that must be stated exactly k = 120
+  rule error  10.0% per weight: directions that must be stated exactly k = 166
+  rule error  25.0% per weight: directions that must be stated exactly k = 232
+  rule error  50.0% per weight: directions that must be stated exactly k = 277
+  rule error 100.0% per weight: directions that must be stated exactly k = 313
+
+spectrum spacing: eigenvalues per factor of 10, ranks 1-400: [0, 1, 0, 2, 5, 5, 7, 31, 62, 85, 75, 51, 39, 20, 13, 4] (bins 1e-12 .. 1e4)

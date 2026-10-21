@@ -1,0 +1,7 @@
+ARC                                          acc  95.32%  ARC mistakes reproduced 100.0% | near ties third wins  21.0% | by ratio   17   18   19   21   27   35
+clean v21                                    acc  95.87%  ARC mistakes reproduced   7.5% | near ties third wins   7.4% | by ratio   10    8    7    6    6    7
+clean v21 + gap borrowed within cell         acc  79.70%  ARC mistakes reproduced  17.9% | near ties third wins   8.0% | by ratio   12    7    7    7    8   10
+   gap size: RMS 67.13 votes per unit-ish; ARC scores RMS 1.09
+clean v19 kappa 0.5                          acc  94.20%  ARC mistakes reproduced   7.9% | near ties third wins   7.1% | by ratio    8    7    7    7    7    7
+clean v19 kappa 0.5 + gap borrowed within cell acc  60.85%  ARC mistakes reproduced  16.0% | near ties third wins   5.8% | by ratio    8    5    5    5    6    8
+   gap size: RMS 269246.56 votes per unit-ish; ARC scores RMS 1.09

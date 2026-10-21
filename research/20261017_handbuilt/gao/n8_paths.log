@@ -1,0 +1,14 @@
+second moved readout only        : acc 0.856 agree 0.879
+second moved cancellers 1, 6, 7  : acc 0.906 agree 0.933
+second moved itself              : acc 0.893 agree 0.915
+second moved gates 5, 9          : acc 0.945 agree 0.981
+second moved store and detector  : acc 0.952 agree 0.991
+second moved memory              : acc 0.913 agree 0.935
+second moved everything          : acc 0.781 agree 0.793
+place kept   readout only        : acc 0.946 agree 0.966
+place kept   cancellers 1, 6, 7  : acc 0.946 agree 0.976
+place kept   itself              : acc 0.948 agree 0.973
+place kept   gates 5, 9          : acc 0.951 agree 0.990
+place kept   store and detector  : acc 0.953 agree 0.995
+place kept   memory              : acc 0.946 agree 0.973
+place kept   everything          : acc 0.938 agree 0.948

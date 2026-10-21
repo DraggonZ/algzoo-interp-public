@@ -1,0 +1,9 @@
+angle between formula and true pattern (active steps): median 4.7 degrees, 90th percentile 15.2; size ratio |f|/|v| median 0.997, 10-90% 0.894-1.060
+formulas as they are              : accuracy 0.559
+size only wrong (true direction)  : accuracy 0.904
+direction only wrong (true size)  : accuracy 0.552
+true pattern turned  0.5 degrees: accuracy 0.929
+true pattern turned  1.0 degrees: accuracy 0.867
+true pattern turned  2.0 degrees: accuracy 0.722
+true pattern turned  5.0 degrees: accuracy 0.473
+true pattern turned 10.0 degrees: accuracy 0.308

@@ -1,0 +1,9 @@
+neuron 15 off at 0.29 of steps 3-9; linear probe right on 0.796
+   m1 cos180    -0.92
+   m1 sin160    -0.88
+   d cos40      -0.63
+   m1 cos40     +0.59
+   m1 sin80     -0.45
+   m1 sin40     -0.33
+   kept lag7    -0.27
+   kept lag2    +0.26

@@ -1,0 +1,16 @@
+ t | error of (c) by role of the position: largest / kept / dropped | share of final size: largest / kept / dropped
+ 3 | 0.98 / 0.89 / 0.81 | 0.90 / 0.31 / 0.01
+ 4 | 0.93 / 0.88 / 0.76 | 0.84 / 0.38 / 0.01
+ 5 | 0.87 / 0.80 / 0.73 | 0.75 / 0.46 / 0.01
+ 6 | 0.79 / 0.68 / 0.68 | 0.69 / 0.50 / 0.01
+ 7 | 0.71 / 0.59 / 0.62 | 0.63 / 0.54 / 0.01
+ 8 | 0.58 / 0.50 / 0.53 | 0.57 / 0.57 / 0.01
+ 9 | 0.41 / 0.35 / 0.37 | 0.53 / 0.60 / 0.02
+
+which future masks matter? decoder (c) with the actual masks of one group of neurons substituted (step 6, kept positions)
+  actual masks for none   : error largest 0.77, kept 0.69
+  actual masks for memory : error largest 0.70, kept 0.55
+  actual masks for hiding : error largest 0.56, kept 0.63
+  actual masks for store  : error largest 0.70, kept 0.69
+  actual masks for gates  : error largest 0.79, kept 0.57
+  actual masks for all    : error largest 0.00, kept 0.00

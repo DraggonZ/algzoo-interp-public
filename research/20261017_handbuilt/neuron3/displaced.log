@@ -1,0 +1,13 @@
+lists with a displaced number: 98%; displaced is one position before the second: 19%
+network's own mistakes                   mistakes   9247: name the displaced number   42%;  one earlier   13%, of which displaced   73%
+      second came after the largest      4842 mistakes, displaced named   44%
+      second before the largest          4405 mistakes, displaced named   40%
+S3 hiding difference <- per-cell mean    mistakes  36734: name the displaced number   38%;  one earlier   32%, of which displaced   45%
+      second came after the largest     13095 mistakes, displaced named   29%
+      second before the largest         23639 mistakes, displaced named   44%
+matched noise in neuron 3 (sd 3.04)      mistakes  36873: name the displaced number   31%;  one earlier   21%, of which displaced   39%
+      second came after the largest     16205 mistakes, displaced named   29%
+      second before the largest         20668 mistakes, displaced named   32%
+S1 gap formula                           mistakes   7898: name the displaced number   27%;  one earlier   31%, of which displaced   23%
+      second came after the largest      4621 mistakes, displaced named   18%
+      second before the largest          3277 mistakes, displaced named   40%

@@ -1,0 +1,54 @@
+
+richest + record quantities (+4 hiding feedback terms; 33 constants per neuron)
+  neuron 1: rms teacher-forced 0.162, recursive 0.266 (6.95x the account); replaced alone: accuracy 0.9279, KL 0.140
+  neuron 6: rms teacher-forced 0.219, recursive 0.234 (8.41x the account); replaced alone: accuracy 0.9326, KL 0.089
+  neuron 7: rms teacher-forced 0.067, recursive 0.106 (5.93x the account); replaced alone: accuracy 0.9423, KL 0.093
+  neuron 8: rms teacher-forced 0.204, recursive 0.320 (6.67x the account); replaced alone: accuracy 0.9271, KL 0.267
+  all four replaced by the group rule: accuracy 0.9349, KL 0.194
+  weights for 1: cosine 0.994, relative distance 0.11
+  weights for 6: cosine 0.966, relative distance 0.29
+  weights for 7: cosine 0.999, relative distance 0.04
+  weights for 8: cosine 0.997, relative distance 0.09
+  rows [1] from the rule: accuracy -0.65 points, KL 0.030
+  rows [6] from the rule: accuracy -0.57 points, KL 0.026
+  rows [7] from the rule: accuracy -0.14 points, KL 0.008
+  rows [8] from the rule: accuracy -1.68 points, KL 0.098
+  rows [1, 6, 7, 8] from the rule: accuracy -5.76 points, KL 0.304
+
+constrained lean rule: 52 free constants (9 features + 4 feedback per neuron)
+  neuron 1: rms 0.275 (6.72x the account); constants: m1 +1.291, m2 +0.859, wave cos -0.060, wave sin +0.000, store +0.055, detector -0.173, prev jump +1.788, jump 2 back +0.568, new largest 2 back -0.375, fb 1 +0.419, fb 6 +0.983, fb 7 -0.442, fb 8 -0.150
+  neuron 6: rms 0.260 (7.56x the account); constants: m1 -0.483, m2 +0.462, wave cos -0.046, wave sin +0.091, store +0.032, detector -0.594, prev jump -4.659, jump 2 back +0.922, new largest 2 back -1.089, fb 1 -0.090, fb 6 +0.411, fb 7 +0.635, fb 8 -0.106
+  neuron 7: rms 0.111 (5.66x the account); constants: m1 +1.496, m2 +0.111, wave cos +0.088, wave sin -0.052, store +0.010, detector +0.037, prev jump +0.292, jump 2 back -0.069, new largest 2 back +0.153, fb 1 -0.078, fb 6 -0.160, fb 7 +0.916, fb 8 +0.144
+  neuron 8: rms 0.383 (5.57x the account); constants: m1 +3.057, m2 +0.093, wave cos +0.244, wave sin +0.200, store +0.063, detector -0.435, prev jump -7.597, jump 2 back +0.418, new largest 2 back -0.216, fb 1 +0.639, fb 6 +0.070, fb 7 -0.471, fb 8 +0.570
+  all four replaced: accuracy 0.8779, KL 0.448
+  weights for 1: cosine 0.993
+  weights for 6: cosine 0.999
+  weights for 7: cosine 0.999
+  weights for 8: cosine 0.994
+  four rows from the rule: KL 0.439; bits saved 351
+  constants rounded to  3 mantissa bits: joint KL 17.502 (39.89x)
+  constants rounded to  4 mantissa bits: joint KL 22.464 (51.19x)
+  constants rounded to  5 mantissa bits: joint KL 3.117 (7.10x)
+  constants rounded to  6 mantissa bits: joint KL 1.143 (2.60x)
+  constants rounded to  8 mantissa bits: joint KL 0.502 (1.14x)
+  constants rounded to 10 mantissa bits: joint KL 0.442 (1.01x)
+  mantissa needed 10; stating the rule (52 + 5 + 4) x (10 + 4) = 854 bits; NET -503 bits
+
+constrained lean rule, without the previous jump: 48 free constants (8 features + 4 feedback per neuron)
+  neuron 1: rms 0.293 (6.31x the account); constants: m1 +1.413, m2 +0.622, wave cos -0.049, wave sin -0.053, store -0.000, detector -0.105, jump 2 back +0.355, new largest 2 back -0.112, fb 1 +0.424, fb 6 +0.980, fb 7 -0.382, fb 8 -0.134
+  neuron 6: rms 0.291 (6.77x the account); constants: m1 -0.631, m2 +0.908, wave cos +0.085, wave sin +0.206, store +0.104, detector -0.909, jump 2 back +1.026, new largest 2 back -1.418, fb 1 -0.089, fb 6 +0.420, fb 7 +0.559, fb 8 -0.146
+  neuron 7: rms 0.116 (5.44x the account); constants: m1 +1.498, m2 +0.095, wave cos +0.095, wave sin -0.060, store +0.007, detector +0.058, jump 2 back -0.067, new largest 2 back +0.166, fb 1 -0.080, fb 6 -0.158, fb 7 +0.919, fb 8 +0.145
+  neuron 8: rms 0.421 (5.07x the account); constants: m1 +2.400, m2 +0.871, wave cos +0.573, wave sin -0.096, store +0.248, detector -0.842, jump 2 back +0.564, new largest 2 back -0.828, fb 1 +0.636, fb 6 +0.073, fb 7 -0.625, fb 8 +0.505
+  all four replaced: accuracy 0.8598, KL 0.529
+  weights for 1: cosine 0.991
+  weights for 6: cosine 0.998
+  weights for 7: cosine 0.999
+  weights for 8: cosine 0.989
+  four rows from the rule: KL 0.395; bits saved 340
+  constants rounded to  3 mantissa bits: joint KL 24.085 (61.00x)
+  constants rounded to  4 mantissa bits: joint KL 9.120 (23.10x)
+  constants rounded to  5 mantissa bits: joint KL 4.138 (10.48x)
+  constants rounded to  6 mantissa bits: joint KL 1.269 (3.21x)
+  constants rounded to  8 mantissa bits: joint KL 0.448 (1.13x)
+  constants rounded to 10 mantissa bits: joint KL 0.425 (1.08x)
+  mantissa needed 10; stating the rule (48 + 5 + 4) x (10 + 4) = 798 bits; NET -458 bits

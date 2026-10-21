@@ -1,0 +1,15 @@
+r5a_neg (v4a, tap 6, w -0.062)           95.48  by position of the second: 92.0 97.0 96.0 96.9 96.6 97.0 96.9 97.6 87.2 97.6
+   memory-block modes (deg, modulus): [(0.0, 0.7), (45.0, 0.7), (90.0, 0.7), (135.0, 0.7), (180.0, 0.7)]
+v6a tap 6, w -0.062 (same as r5a_neg?)   95.48  by position of the second: 92.0 97.0 96.0 96.9 96.6 97.0 96.9 97.6 87.2 97.6
+   memory-block modes (deg, modulus): [(0.0, 0.7), (45.0, 0.7), (90.0, 0.7), (135.0, 0.7), (180.0, 0.7)]
+v6a no ring                              97.59  by position of the second: 95.0 99.1 97.2 97.8 97.5 97.8 97.7 97.8 97.9 98.1
+   memory-block modes (deg, modulus): []
+v6a tap 5, w -0.0866                     92.31  by position of the second: 93.3 94.9 95.4 96.4 96.5 96.8 96.8 86.8 69.2 97.0
+   memory-block modes (deg, modulus): [(0.0, 0.7), (51.0, 0.7), (103.0, 0.7), (154.0, 0.7)]
+v6a tap 5, gap 1                         88.47  by position of the second: 90.8 86.2 90.1 92.2 92.7 93.2 93.3 83.4 69.2 93.5
+   memory-block modes (deg, modulus): [(0.0, 0.7), (51.0, 0.7), (103.0, 0.7), (154.0, 0.7)]
+v6a tap 5, gap 2                         86.87  by position of the second: 88.7 86.5 88.6 90.1 90.6 91.2 91.1 81.3 69.2 91.3
+   memory-block modes (deg, modulus): [(0.0, 0.7), (51.0, 0.7), (103.0, 0.7), (154.0, 0.7)]
+gap use, v6a tap 5, w -0.0866: intact 92.36, gap fit 92.36, other list's gap 92.36
+gap use, v6a tap 5, gap 1: intact 88.53, gap fit 88.23, other list's gap 75.51
+gap use, v6a tap 5, gap 2: intact 86.96, gap fit 86.61, other list's gap 67.66

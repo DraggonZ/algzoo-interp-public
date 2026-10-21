@@ -1,0 +1,4 @@
+third < 0: truth P(right) 0.8193; wrong to largest 0.0549, third 0.0227, smaller 0.1030
+  two              P(right) 0.8615 bias +0.0422 mean abs error 0.0456 | wrong to largest 0.0879, third 0.0506, smaller 0.0000
+  fourth, 3 leads  P(right) 0.8460 bias +0.0267 mean abs error 0.0294 | wrong to largest 0.0785, third 0.0409, smaller 0.0346
+  fourth, 9 leads  P(right) 0.8127 bias -0.0066 mean abs error 0.0111 | wrong to largest 0.0539, third 0.0226, smaller 0.1108

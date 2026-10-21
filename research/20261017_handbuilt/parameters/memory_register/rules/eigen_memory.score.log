@@ -1,0 +1,7 @@
+score_memory_rule.py sha256 d6caf822e120; rule eigen_memory.py
+64 weights covered, 72 constants, 4 kinds; relative weight error 0.0002; structure 76 bits; lookup table 2369 bits
+  share 0.001: constants 484 bits (6.7 each) + structure 76 + rest 2141; net -332
+  share 0.002: constants 452 bits (6.3 each) + structure 76 + rest 2154; net -314
+  share 0.005: constants 410 bits (5.7 each) + structure 76 + rest 2199; net -317
+KL from ARC 0.0000 (budget 0.02); accuracy 0.9531 (ARC 0.9531)
+NET -313.8

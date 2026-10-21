@@ -1,0 +1,10 @@
+ARC                                          right among top three  95.72% | ARC's wrong choices reproduced 100.0% | near ties third wins  21.1% | by ratio   18   17   19   21   26   35
+clean v21                                    right among top three  96.88% | ARC's wrong choices reproduced   5.9% | near ties third wins   7.3% | by ratio    9    8    6    7    7    7
+clean v21 + gap borrowed within cell         right among top three  84.75% | ARC's wrong choices reproduced  20.6% | near ties third wins   8.8% | by ratio   13    8    7    8    9   10
+   gap RMS 1.97 votes (ARC's D RMS 1.02); lists with a huge clean D (suppression terms): 9.24%
+clean v19 kappa 0.5                          right among top three  96.28% | ARC's wrong choices reproduced   7.2% | near ties third wins   7.4% | by ratio    7    7    8    7    7    8
+clean v19 kappa 0.5 + gap borrowed within cell right among top three  84.52% | ARC's wrong choices reproduced  21.4% | near ties third wins   8.3% | by ratio   11    7    7    7    9   12
+   gap RMS 0.73 votes (ARC's D RMS 1.02); lists with a huge clean D (suppression terms): 9.98%
+clean v7z                                    right among top three  98.07% | ARC's wrong choices reproduced  14.0% | near ties third wins  10.1% | by ratio   11   10   10   10   10    9
+clean v7z + gap borrowed within cell         right among top three  85.30% | ARC's wrong choices reproduced  41.5% | near ties third wins  33.4% | by ratio   40   35   34   32   30   26
+   gap RMS 0.84 votes (ARC's D RMS 1.02); lists with a huge clean D (suppression terms): 9.98%

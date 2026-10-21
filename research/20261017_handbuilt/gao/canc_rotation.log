@@ -1,0 +1,8 @@
+rotation part of W_cc:
+ [[ 0.436  0.927 -1.001 -0.14 ]
+ [-0.066  0.203  0.004 -0.131]
+ [-0.038 -0.328  0.194  0.122]
+ [ 0.729 -0.215 -0.913  0.548]] 
+largest entry change 0.214
+cancellers with trained 4x4 weights : four replaced 0.919; all 16 replaced (memory+gate block) 0.912
+cancellers with rotation part only  : four replaced 0.865; all 16 replaced (memory+gate block) 0.873

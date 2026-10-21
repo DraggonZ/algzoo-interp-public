@@ -1,0 +1,8 @@
+v17 now                            all 0.821 | onepos 0.101 last 0.732 step8 0.755 row 0.677 ord 0.934 | wrong: third 0.32 largest 0.38 onepos 0.06
++ peak when two in a row           all 0.863 | onepos 0.101 last 0.677 step8 0.775 row 0.853 ord 0.934 | wrong: third 0.55 largest 0.01 onepos 0.07
++ erase earlier votes              all 0.891 | onepos 0.101 last 0.891 step8 0.884 row 0.702 ord 1.000 | wrong: third 0.24 largest 0.64 onepos 0.09
++ both                             all 0.933 | onepos 0.101 last 0.833 step8 0.904 row 0.880 ord 1.000 | wrong: third 0.65 largest 0.01 onepos 0.15
+erase only right after a record    all 0.889 | onepos 0.101 last 0.869 step8 0.882 row 0.702 ord 0.999 | wrong: third 0.24 largest 0.62 onepos 0.09
+  + peak                           all 0.930 | onepos 0.101 last 0.811 step8 0.901 row 0.878 ord 0.999 | wrong: third 0.64 largest 0.01 onepos 0.14
+erase only within the old largest's stretch all 0.886 | onepos 0.101 last 0.874 step8 0.873 row 0.700 ord 0.997 | wrong: third 0.21 largest 0.59 onepos 0.09
+  + peak                           all 0.927 | onepos 0.101 last 0.816 step8 0.890 row 0.874 ord 0.997 | wrong: third 0.56 largest 0.01 onepos 0.14

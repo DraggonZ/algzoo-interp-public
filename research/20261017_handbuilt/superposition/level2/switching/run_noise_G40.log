@@ -1,0 +1,4 @@
+G 40. ARC: predicted 95.29% (truth on the shared lists 95.30%), mistakes naming the largest 16.7% (true 20.3%)
+s 0.0025: (a) gap-as-noise prediction 92.14% (mean of 100 copies 90.67%), predicted drop 3.15 vs true 4.63; mistakes naming the largest 30.7% (copies' mean 29.3%)  87s
+   (b) per copy (15 copies): mean predicted 91.49% vs true 90.63%; RMSE 0.98 points, bias +0.87, correlation 0.986 (spread of true copies: SD 2.58); mistakes naming the largest: predicted mean 32.5% vs true 30.8%, correlation 0.98  1250s
+s 0.005: (a) gap-as-noise prediction 83.63% (mean of 100 copies 80.10%), predicted drop 11.66 vs true 15.20; mistakes naming the largest 42.2% (copies' mean 39.2%)  56s

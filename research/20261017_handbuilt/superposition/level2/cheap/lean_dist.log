@@ -1,0 +1,18 @@
+ARC
+  L@5 S@9 T@6: lean mean +1.604 sd 0.659 | at mean +1.097, linear sd 0.306 | wrong mass mean 0.79e-3 sd 0.92e-3, at mean z 0
+  L@9 S@8 T@0: lean mean -3.783 sd 2.018 | at mean -6.105, linear sd 0.433 | wrong mass mean 27.32e-3 sd 12.23e-3, at mean z 0
+  L@5 S@9 T@8: lean mean -0.609 sd 1.043 | at mean -0.756, linear sd 0.082 | wrong mass mean 11.79e-3 sd 9.02e-3, at mean z 0
+  L@5 S@9 T@8: lean mean -0.653 sd 1.035 | at mean -0.756, linear sd 0.082 | wrong mass mean 12.20e-3 sd 8.97e-3, at mean z 0
+  L@7 S@6 T@2: lean mean -4.371 sd 1.807 | at mean -4.462, linear sd 1.131 | wrong mass mean 7.20e-3 sd 2.97e-3, at mean z 0
+  L@6 S@4 T@0: lean mean -0.510 sd 2.339 | at mean -1.799, linear sd 1.458 | wrong mass mean 1.75e-3 sd 1.64e-3, at mean z 0
+  L@1 S@6 T@0: lean mean +0.088 sd 1.081 | at mean -0.163, linear sd 0.947 | wrong mass mean 4.50e-3 sd 2.89e-3, at mean z 0
+  L@2 S@4 T@0: lean mean +2.819 sd 1.815 | at mean +3.653, linear sd 1.285 | wrong mass mean 0.98e-3 sd 1.89e-3, at mean z 0
+114
+  L@5 S@9 T@6: lean mean +2.731 sd 2.391 | at mean +7.139, linear sd 1.076 | wrong mass mean 0.65e-3 sd 3.17e-3, at mean z 0
+  L@9 S@8 T@0: lean mean -1.224 sd 0.755 | at mean -0.731, linear sd 1.964 | wrong mass mean 75.28e-3 sd 37.02e-3, at mean z 0
+  L@5 S@9 T@8: lean mean +0.231 sd 1.035 | at mean +1.395, linear sd 0.670 | wrong mass mean 3.83e-3 sd 5.84e-3, at mean z 0
+  L@5 S@9 T@8: lean mean +0.263 sd 1.005 | at mean +1.395, linear sd 0.670 | wrong mass mean 3.40e-3 sd 5.25e-3, at mean z 0
+  L@7 S@6 T@2: lean mean -0.449 sd 0.694 | at mean -0.754, linear sd 0.891 | wrong mass mean 25.94e-3 sd 24.80e-3, at mean z 0
+  L@6 S@4 T@0: lean mean +0.299 sd 0.552 | at mean +0.675, linear sd 0.490 | wrong mass mean 54.42e-3 sd 62.35e-3, at mean z 0
+  L@1 S@6 T@0: lean mean -1.968 sd 0.707 | at mean -2.165, linear sd 0.650 | wrong mass mean 25.72e-3 sd 15.23e-3, at mean z 0
+  L@2 S@4 T@0: lean mean +0.616 sd 0.699 | at mean +0.453, linear sd 0.599 | wrong mass mean 4.78e-3 sd 3.75e-3, at mean z 0

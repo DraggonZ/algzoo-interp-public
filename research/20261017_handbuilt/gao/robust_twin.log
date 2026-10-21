@@ -1,0 +1,11 @@
+twin (g 1e4, lam 10, w 1e4, a 1000)   : accuracy 0.960; lead / pushes median 3.18e-06; with noise 0.0001: 0.147, 0.001: 0.092, 0.01: 0.089
+twin gains 30                         : accuracy 0.947; lead / pushes median 4.52e-04; with noise 0.0001: 0.760, 0.001: 0.652, 0.01: 0.219
+small levels (g 3, lam 1, w 30, a 30) : accuracy 0.830; lead / pushes median 5.16e-03; with noise 0.0001: 0.725, 0.001: 0.705, 0.01: 0.593
+trained network's gains (g = a = w = 10): accuracy 0.921; lead / pushes median 7.01e-04; with noise 0.0001: 0.754, 0.001: 0.662, 0.01: 0.244
+trained gains, no tie-breaker (eps 0) : accuracy 0.781; lead / pushes median 7.04e-04; with noise 0.0001: 0.750, 0.001: 0.663, 0.01: 0.245
+trained gains, memory level 1 (lam 1) : accuracy 0.922; lead / pushes median 2.49e-03; with noise 0.0001: 0.767, 0.001: 0.737, 0.01: 0.549
+all at trained scale: vote gain 10 (c -9): accuracy 0.922; lead / pushes median 3.21e-03; with noise 0.0001: 0.756, 0.001: 0.742, 0.01: 0.569
+trained scale, tie-breaker 1% of a vote: accuracy 0.920; lead / pushes median 3.10e-03; with noise 0.0001: 0.890, 0.001: 0.768, 0.01: 0.569
+original twin, tie-breaker 1% of a vote: accuracy 0.955; lead / pushes median 3.07e-06; with noise 0.0001: 0.147, 0.001: 0.091, 0.01: 0.089
+trained scale, tie-breaker 10% of a vote: accuracy 0.877; lead / pushes median 3.52e-03; with noise 0.0001: 0.874, 0.001: 0.838, 0.01: 0.565
+trained scale, tie-breaker 50% of a vote: accuracy 0.615; lead / pushes median 7.28e-03; with noise 0.0001: 0.612, 0.001: 0.601, 0.01: 0.432

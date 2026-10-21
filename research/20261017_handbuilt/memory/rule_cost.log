@@ -1,0 +1,31 @@
+clipped amount (mean of max(-pre, 0)) and table-vs-sign disagreement, by age class
+  neuron  0 clip: none yet  0.05 age 0  0.27 age 1  0.00 age 2  3.96 age 3  0.00 age 4  0.00 age 5  0.00 age 6  0.00 age 7+  0.02
+            disagree: none yet  0.00 age 0  0.16 age 1  0.01 age 2  0.00 age 3  0.00 age 4  0.00 age 5  0.00 age 6  0.00 age 7+  0.02
+  neuron  3 clip: none yet  0.00 age 0  0.31 age 1  0.54 age 2  1.21 age 3  0.01 age 4  1.95 age 5  1.16 age 6  0.46 age 7+  0.05
+            disagree: none yet  0.01 age 0  0.19 age 1  0.18 age 2  0.30 age 3  0.02 age 4  0.38 age 5  0.32 age 6  0.22 age 7+  0.03
+  neuron 10 clip: none yet  0.03 age 0  0.01 age 1  0.00 age 2  0.00 age 3  0.00 age 4  0.00 age 5  0.00 age 6  0.71 age 7+  0.06
+            disagree: none yet  0.05 age 0  0.03 age 1  0.00 age 2  0.00 age 3  0.00 age 4  0.00 age 5  0.00 age 6  0.05 age 7+  0.13
+  neuron 11 clip: none yet  0.07 age 0  0.01 age 1  0.00 age 2  0.00 age 3  0.00 age 4  0.00 age 5  0.71 age 6  0.00 age 7+  0.00
+            disagree: none yet  0.11 age 0  0.02 age 1  0.00 age 2  0.00 age 3  0.00 age 4  0.00 age 5  0.08 age 6  0.00 age 7+  0.00
+  neuron 12 clip: none yet  0.16 age 0  0.00 age 1  0.00 age 2  0.00 age 3  0.00 age 4  0.13 age 5  0.00 age 6  0.00 age 7+  0.00
+            disagree: none yet  0.20 age 0  0.00 age 1  0.00 age 2  0.00 age 3  0.02 age 4  0.30 age 5  0.00 age 6  0.00 age 7+  0.00
+  neuron 13 clip: none yet  0.00 age 0  0.02 age 1  0.00 age 2  0.00 age 3  0.00 age 4  0.00 age 5  0.00 age 6  0.00 age 7+  0.02
+            disagree: none yet  0.12 age 0  0.09 age 1  0.00 age 2  0.00 age 3  0.00 age 4  0.00 age 5  0.00 age 6  0.00 age 7+  0.02
+  neuron 14 clip: none yet  0.00 age 0  0.56 age 1  0.00 age 2  0.17 age 3  0.00 age 4  0.00 age 5  0.00 age 6  0.00 age 7+  0.00
+            disagree: none yet  0.00 age 0  0.20 age 1  0.00 age 2  0.17 age 3  0.00 age 4  0.00 age 5  0.00 age 6  0.00 age 7+  0.00
+  neuron 15 clip: none yet  0.00 age 0  0.35 age 1  0.37 age 2  1.27 age 3  1.54 age 4  1.79 age 5  0.85 age 6  0.00 age 7+  0.00
+            disagree: none yet  0.00 age 0  0.22 age 1  0.14 age 2  0.28 age 3  0.38 age 4  0.28 age 5  0.24 age 6  0.01 age 7+  0.00
+
+accuracy when the listed neurons switch by the age table and all others by their own sign (closed loop)
+  [0]                          acc 93.7 (-1.7)  new largest at -2.0 new largest at -1.9 two in a row,  -2.1 ordinary -1.5
+  [3]                          acc 93.4 (-2.0)  new largest at -1.4 new largest at -1.0 two in a row,  -2.1 ordinary -2.2
+  [10]                         acc 95.2 (-0.2)  new largest at +0.1 new largest at +0.1 two in a row,  -0.2 ordinary -0.4
+  [11]                         acc 95.4 (-0.0)  new largest at +0.2 new largest at +0.1 two in a row,  -0.1 ordinary -0.0
+  [12]                         acc 95.3 (-0.0)  new largest at -0.1 new largest at -0.0 two in a row,  -0.1 ordinary -0.0
+  [13]                         acc 95.3 (-0.1)  new largest at -0.1 new largest at -0.0 two in a row,  -0.4 ordinary -0.0
+  [14]                         acc 93.3 (-2.0)  new largest at -3.1 new largest at -1.7 two in a row,  -5.7 ordinary -0.2
+  [15]                         acc 91.4 (-4.0)  new largest at -3.1 new largest at -3.0 two in a row,  -6.5 ordinary -3.2
+  [0, 10, 11, 12, 13, 14]      acc 91.1 (-4.3)  new largest at -4.8 new largest at -4.9 two in a row,  -8.8 ordinary -2.0
+  [10, 11, 12, 13, 14]         acc 92.9 (-2.5)  new largest at -3.4 new largest at -2.4 two in a row,  -6.4 ordinary -0.5
+  [3, 15]                      acc 89.6 (-5.8)  new largest at -4.7 new largest at -3.8 two in a row,  -7.7 ordinary -5.6
+  [0, 3, 10, 11, 12, 13, 14, 15] acc 87.0 (-8.4)  new largest at -11.4 new largest at -9.9 two in a row,  -10.6 ordinary -6.7

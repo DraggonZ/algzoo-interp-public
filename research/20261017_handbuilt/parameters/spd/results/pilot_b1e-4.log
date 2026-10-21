@@ -1,0 +1,13 @@
+args {'name': 'pilot_b1e-4', 'beta': 0.0001, 'p': 1.0, 'p_anneal': None, 'steps': 5000, 'batch': 2048, 'lr': 0.001, 'C': '8,48,20', 'gauge': None, 'seed': 0, 'faith': 1.0, 'n_eval': 262144}
+step      0 lr 1.00e-03 p 1.00 faith 3.825 recon 2.216 layer 25.18 imp 215.1
+step   1000 lr 9.05e-04 p 1.00 faith 2.027 recon 1.095 layer 0.7436 imp 411.8
+step   2000 lr 6.55e-04 p 1.00 faith 0.8799 recon 0.7175 layer 0.4751 imp 423.4
+step   3000 lr 3.45e-04 p 1.00 faith 0.5352 recon 0.6469 layer 0.4291 imp 429.2
+step   4000 lr 9.55e-05 p 1.00 faith 0.4059 recon 0.5653 layer 0.3817 imp 432.1
+step   5000 lr 0.00e+00 p 1.00 faith 0.3852 recon 0.58 layer 0.3924 imp 433.4
+eval tau 0.1: {"acc_arc": 0.95258, "kl_active": 1.0245, "acc_active": 0.59881, "agree_active": 0.60188, "kl_ci": 0.5715, "acc_ci": 0.80212, "agree_ci": 0.80752, "kl_all": 2.2502, "acc_all": 0.32655, "agree_all": 0.32804, "uses_hi": 67.35726, "distinct_hi": 6.99999, "uses_hh": 393.3582, "distinct_hh": 47.89568, "uses_oh": 19.16635, "distinct_oh": 19.16635, "n_lists": 262144, "ever_active": {"hi": 7, "hh": 48, "oh": 20}}
+  fraction of lists using each hi component (sorted): [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0]
+  fraction of lists using each hh component (sorted): [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.9980000257492065, 0.996999979019165, 0.996999979019165, 0.9850000143051147, 0.9179999828338623]
+  fraction of lists using each oh component (sorted): [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.996999979019165, 0.9900000095367432, 0.9879999756813049, 0.9660000205039978, 0.953000009059906, 0.9430000185966492, 0.9309999942779541, 0.9269999861717224, 0.9039999842643738, 0.8820000290870667, 0.8740000128746033, 0.8119999766349792]
+eval tau 0.01: {"acc_arc": 0.95258, "kl_active": 1.10035, "acc_active": 0.57297, "agree_active": 0.57542, "kl_ci": 0.5715, "acc_ci": 0.80212, "agree_ci": 0.80752, "kl_all": 2.2502, "acc_all": 0.32655, "agree_all": 0.32804, "uses_hi": 67.81843, "distinct_hi": 7.0, "uses_hh": 398.56116, "distinct_hh": 47.9309, "uses_oh": 19.2879, "distinct_oh": 19.2879, "n_lists": 262144, "ever_active": {"hi": 7, "hh": 48, "oh": 20}}
+saved

@@ -1,0 +1,23 @@
+ARC eigenvalues (modulus, angle in degrees): 1.01 +0, 0.97 +0, 0.95 -43, 0.95 +43, 0.94 +83, 0.94 -83, 0.93 +180, 0.84 +125, 0.84 -125, 0.73 -43, 0.73 +43
+ARC    cos(W[k], W[k+1] M) mean +0.03 (min -0.29) | W[k+1] vs W[k] M +0.97 | plain neighbours +0.56
+zoo0   cos(W[k], W[k+1] M) mean +0.61 (min +0.43) | W[k+1] vs W[k] M +0.95 | plain neighbours -0.76
+zoo1   cos(W[k], W[k+1] M) mean +0.57 (min -0.04) | W[k+1] vs W[k] M +0.87 | plain neighbours -0.35
+zoo2   cos(W[k], W[k+1] M) mean -0.31 (min -0.78) | W[k+1] vs W[k] M +0.46 | plain neighbours +0.01
+zoo3   cos(W[k], W[k+1] M) mean +0.37 (min -0.31) | W[k+1] vs W[k] M +0.81 | plain neighbours -0.70
+zoo4   cos(W[k], W[k+1] M) mean +0.64 (min +0.22) | W[k+1] vs W[k] M +0.97 | plain neighbours -0.84
+s100   cos(W[k], W[k+1] M) mean +0.57 (min +0.12) | W[k+1] vs W[k] M +0.94 | plain neighbours -0.42
+s101   cos(W[k], W[k+1] M) mean +0.35 (min -0.11) | W[k+1] vs W[k] M +0.88 | plain neighbours -0.58
+s102   cos(W[k], W[k+1] M) mean +0.60 (min +0.08) | W[k+1] vs W[k] M +0.95 | plain neighbours -0.83
+s103   cos(W[k], W[k+1] M) mean -0.42 (min -0.78) | W[k+1] vs W[k] M +0.53 | plain neighbours -0.02
+s104   cos(W[k], W[k+1] M) mean -0.16 (min -0.34) | W[k+1] vs W[k] M +0.94 | plain neighbours +0.45
+s105   cos(W[k], W[k+1] M) mean +0.19 (min -0.38) | W[k+1] vs W[k] M +0.91 | plain neighbours -0.66
+s106   cos(W[k], W[k+1] M) mean +0.40 (min +0.11) | W[k+1] vs W[k] M +0.92 | plain neighbours -0.48
+s107   cos(W[k], W[k+1] M) mean +0.21 (min -0.07) | W[k+1] vs W[k] M +0.52 | plain neighbours -0.23
+s108   cos(W[k], W[k+1] M) mean +0.60 (min +0.17) | W[k+1] vs W[k] M +0.83 | plain neighbours -0.70
+s109   cos(W[k], W[k+1] M) mean -0.05 (min -0.60) | W[k+1] vs W[k] M +0.96 | plain neighbours +0.52
+s110   cos(W[k], W[k+1] M) mean -0.35 (min -0.67) | W[k+1] vs W[k] M +0.87 | plain neighbours +0.07
+s111   cos(W[k], W[k+1] M) mean +0.41 (min -0.47) | W[k+1] vs W[k] M +0.87 | plain neighbours +0.69
+s112   cos(W[k], W[k+1] M) mean -0.02 (min -0.47) | W[k+1] vs W[k] M +0.64 | plain neighbours +0.39
+s113   cos(W[k], W[k+1] M) mean -0.36 (min -0.59) | W[k+1] vs W[k] M +0.98 | plain neighbours +0.21
+s114   cos(W[k], W[k+1] M) mean -0.73 (min -0.83) | W[k+1] vs W[k] M +0.94 | plain neighbours +0.16
+s115   cos(W[k], W[k+1] M) mean -0.03 (min -0.78) | W[k+1] vs W[k] M +0.87 | plain neighbours +0.56

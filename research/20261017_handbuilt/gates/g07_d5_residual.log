@@ -1,0 +1,23 @@
+D5              sd  6.469  rms error of role fit 0.560
+  coefficient on own previous value (weight is -0.42): 0.185
+  rms error by step t: 1:0.11 2:0.19 3:0.28 4:0.33 5:0.42 6:0.54 7:0.77 8:1.10
+  rms error by age of largest a1: 0:0.23 1:0.43 2:0.60 3:0.51 4:0.46 5:0.55 6:0.76 7:1.08 8:1.56
+  rms error by late gate on at step t: off 0.59, on 0.47
+  memory neuron  0 off at step t on 0.23 of steps: rms error off 0.57, on 0.56
+  memory neuron  3 off at step t on 0.21 of steps: rms error off 0.56, on 0.56
+  memory neuron 10 off at step t on 0.06 of steps: rms error off 0.70, on 0.55
+  memory neuron 11 off at step t on 0.08 of steps: rms error off 0.53, on 0.56
+  memory neuron 12 off at step t on 0.06 of steps: rms error off 0.40, on 0.57
+  memory neuron 13 off at step t on 0.06 of steps: rms error off 0.31, on 0.57
+  memory neuron 14 off at step t on 0.11 of steps: rms error off 0.26, on 0.59
+  memory neuron 15 off at step t on 0.27 of steps: rms error off 0.42, on 0.60
+late gate push  sd  0.257  rms error of role fit 0.040
+store push      sd  0.394  rms error of role fit 0.008
+mem 0           sd  1.912  rms error of role fit 0.152
+mem 3           sd  0.629  rms error of role fit 0.214
+mem 10          sd  1.531  rms error of role fit 0.120
+mem 11          sd  3.257  rms error of role fit 0.263
+mem 12          sd  2.346  rms error of role fit 0.276
+mem 13          sd  0.043  rms error of role fit 0.008
+mem 14          sd  2.008  rms error of role fit 0.182
+mem 15          sd  0.427  rms error of role fit 0.086

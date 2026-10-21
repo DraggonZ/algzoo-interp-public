@@ -1,0 +1,10 @@
+twin accuracy 0.960
+exact rules                             : acc 0.960 agree 0.992 KL 0.000
+exact + noise 1e-07 x typical value     : acc 0.792 agree 0.822 KL 0.263
+exact + noise 1e-06 x typical value     : acc 0.725 agree 0.752 KL 8.031
+exact + noise 1e-05 x typical value     : acc 0.633 agree 0.648 KL 98.744
+exact + noise 0.0001 x typical value    : acc 0.261 agree 0.264 KL 1075.820
+exact + noise 0.001 x typical value     : acc 0.116 agree 0.116 KL 11433.180
+exact + noise 0.01 x typical value      : acc 0.102 agree 0.101 KL 113069.989
+wrong clock height (largest, not jump)  : acc 0.695 agree 0.704 KL 19.250
+flip term left out                      : acc 0.590 agree 0.604 KL 8.552

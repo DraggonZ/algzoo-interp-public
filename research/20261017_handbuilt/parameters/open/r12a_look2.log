@@ -1,0 +1,22 @@
+on-fraction at h10: [0.88 0.87 1.   0.88 0.11 0.29 0.87 0.89 0.86 0.11 0.87 0.89 0.98 0.99
+ 0.99 0.9 ]
+fresh x
+  row 1: regression err (push cols) 0.116, all 16 0.138, best scale 0.990; linear push 0.165
+  row 2: regression err (push cols) 0.169, all 16 0.178, best scale 1.115; linear push 0.103
+  row 3: regression err (push cols) 0.087, all 16 0.115, best scale 1.058; linear push 0.104
+  row 4: regression err (push cols) 0.174, all 16 0.228, best scale 0.959; linear push 0.153
+  row 5: regression err (push cols) 0.203, all 16 0.212, best scale 1.189; linear push 0.210
+  row 6: regression err (push cols) 0.215, all 16 0.239, best scale 1.000; linear push 0.252
+  row 7: regression err (push cols) 0.196, all 16 0.314, best scale 0.934; linear push 0.250
+  row 8: regression err (push cols) 0.407, all 16 0.400, best scale 1.267; linear push 0.434
+  row 9: regression err (push cols) 0.750, all 16 0.880, best scale 0.702; linear push 0.837
+x=0
+  row 1: regression err (push cols) 0.148, all 16 0.178, best scale 0.942; linear push 0.165
+  row 2: regression err (push cols) 0.135, all 16 0.142, best scale 1.051; linear push 0.103
+  row 3: regression err (push cols) 0.072, all 16 0.081, best scale 0.978; linear push 0.104
+  row 4: regression err (push cols) 0.216, all 16 0.258, best scale 0.890; linear push 0.153
+  row 5: regression err (push cols) 0.158, all 16 0.166, best scale 1.104; linear push 0.210
+  row 6: regression err (push cols) 0.214, all 16 0.228, best scale 0.946; linear push 0.252
+  row 7: regression err (push cols) 0.243, all 16 0.333, best scale 0.869; linear push 0.250
+  row 8: regression err (push cols) 0.374, all 16 0.374, best scale 1.150; linear push 0.434
+  row 9: regression err (push cols) 0.775, all 16 0.783, best scale 0.666; linear push 0.837

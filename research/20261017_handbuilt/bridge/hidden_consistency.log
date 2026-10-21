@@ -1,0 +1,4 @@
+as trained               accuracy 0.954 | r2 leak   -4.9 (|leak| > 20 on 0.20) | r3 leak   -6.3 (|leak| > 20 on 0.16) | r4 leak   -5.2 (|leak| > 20 on 0.18) | r5 leak   -4.6 (|leak| > 20 on 0.09)
+consistent unclipping    accuracy 0.713 | r2 leak   -4.0 (|leak| > 20 on 0.23) | r3 leak   -5.6 (|leak| > 20 on 0.15) | r4 leak   -5.3 (|leak| > 20 on 0.12) | r5 leak   -4.9 (|leak| > 20 on 0.12)
+memory fed unclipped     accuracy 0.879 | r2 leak   -4.8 (|leak| > 20 on 0.19) | r3 leak   -6.5 (|leak| > 20 on 0.14) | r4 leak   -5.6 (|leak| > 20 on 0.13) | r5 leak   -4.7 (|leak| > 20 on 0.09)
+memory fed random-sign   accuracy 0.838 | r2 leak   -4.6 (|leak| > 20 on 0.22) | r3 leak   -6.0 (|leak| > 20 on 0.18) | r4 leak   -5.3 (|leak| > 20 on 0.18) | r5 leak   -4.8 (|leak| > 20 on 0.10)

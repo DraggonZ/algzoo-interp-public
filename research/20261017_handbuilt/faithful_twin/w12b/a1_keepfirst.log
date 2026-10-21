@@ -1,0 +1,16 @@
+solved: r = 3.000000000006331  lam = 0.22499999999992087  back on clocks = [ 0.2357 -0.322   0.0863 -0.2357 -0.0863  0.322 ]
+
+w8b: accuracy 95.91  names largest 0.78
+  by second's position:  89.2  95.5  95.5  95.9  96.2  96.8  97.1  96.9  98.1  98.0
+  by largest's position:  95.4  95.8  94.9  95.5  96.1  96.5  96.7  97.9  98.0  92.3
+  wrong answers' position: [18255  3988  3436  2085  1163  1357  2791   697  6653   457]
+
+keep-first: accuracy 96.48  names largest 0.71
+  by second's position:  94.3  95.3  95.4  95.9  96.2  96.8  97.3  96.9  98.6  98.0
+  by largest's position:  95.5  95.9  95.0  95.5  96.1  96.4  96.7  97.9  98.0  97.8
+  wrong answers' position: [14496  3017  2730  1911  1152  1276  4337   688  4934   664]
+
+keep-first, readout pos 8 still reads L: accuracy 86.80  names largest 1.76
+  by second's position:  94.9  95.4  95.5  95.9  96.2  96.8  97.6  97.0   0.1  98.0
+  by largest's position:  84.8  85.0  84.2  84.9  85.3  85.4  85.9  87.1  98.5  86.8
+  wrong answers' position: [110141   3385   3228   2209   1340   1574   7138   1278    485   1228]

@@ -1,0 +1,11 @@
+score_rule.py sha256 913ce430a8f8; rule r1b_store_ref.py; fit seed 101, score seed 202
+
+40 free constants, 2 kinds (feature, feedback); structure 60 bits (24 declared + 6 x 6 spreads); lookup table 2369 bits
+  share 0.001: constants 301 bits (7.5 each) + structure 60 + rest 2043; net -36
+  share 0.002: constants 281 bits (7.0 each) + structure 60 + rest 2059; net -31
+  share 0.005: constants 254 bits (6.4 each) + structure 60 + rest 2111; net -56
+
+| net bits | share | rms 1, 6, 7, 8 | cosine 1, 6, 7, 8 | joint KL of 4 rows | KL, 4 neurons replaced | constants |
+|---|---|---|---|---|---|---|
+| -31 | 0.002 | 0.277, 0.266, 0.133, 0.398 | 0.9932, 0.9952, 0.9988, 0.9941 | 0.570 | 0.476 | 40 |
+NET -30.9

@@ -1,0 +1,6 @@
+G 40. ARC's own weights, no gap: predicted 95.29% (true 95.32%)
+round 0.01  : weights changed 432 of 432 (RMS gap over all weights 0.0029); idealized network: propagated 91.11%, true 89.52% | Hilton's estimate of ARC (ideal + gap as noise) 86.62% vs ARC's true 95.32%
+round 0.05  : weights changed 432 of 432 (RMS gap over all weights 0.0145); idealized network: propagated 57.96%, true 58.07% | Hilton's estimate of ARC (ideal + gap as noise) 46.42% vs ARC's true 95.32%
+block       : weights changed  28 of 432 (RMS gap over all weights 0.0184); idealized network: propagated 85.50%, true 83.46% | Hilton's estimate of ARC (ideal + gap as noise) 50.93% vs ARC's true 95.32%
+tiny f=0.01 : weights changed  61 of 432 (RMS gap over all weights 0.0820); idealized network: propagated 80.89%, true 79.99% | Hilton's estimate of ARC (ideal + gap as noise) 76.04% vs ARC's true 95.32%
+tiny f=0.02 : weights changed  96 of 432 (RMS gap over all weights 0.1480); idealized network: propagated 63.45%, true 63.45% | Hilton's estimate of ARC (ideal + gap as noise) 57.63% vs ARC's true 95.32%

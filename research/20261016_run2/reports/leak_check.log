@@ -1,0 +1,16 @@
+acc 0.30522534; splits losing > 1e-9: 28; total lost 6.153e-05
+lost 3.84e-05 rays 8 zero-side rays 0 plus 10 minus 6 smallest-|s| 5.1e-05
+lost 9.64e-06 rays 10 zero-side rays 0 plus 12 minus 6 smallest-|s| 6.5e-02
+lost 7.77e-06 rays 12 zero-side rays 0 plus 14 minus 6 smallest-|s| 6.4e-02
+lost 1.68e-06 rays 14 zero-side rays 0 plus 12 minus 10 smallest-|s| 4.7e-01
+lost 1.08e-06 rays 12 zero-side rays 2 plus 10 minus 8 smallest-|s| 6.4e-02
+lost 8.95e-07 rays 7 zero-side rays 2 plus 7 minus 6 smallest-|s| 6.9e-05
+lost 7.65e-07 rays 7 zero-side rays 2 plus 5 minus 8 smallest-|s| 8.7e-02
+lost 5.90e-07 rays 14 zero-side rays 0 plus 12 minus 10 smallest-|s| 5.1e-05
+lost 3.05e-07 rays 12 zero-side rays 2 plus 10 minus 8 smallest-|s| 2.5e-05
+lost 1.39e-07 rays 8 zero-side rays 2 plus None minus 6 smallest-|s| 4.8e-03
+lost 1.30e-07 rays 16 zero-side rays 0 plus 15 minus 11 smallest-|s| 9.8e-03
+lost 2.83e-08 rays 10 zero-side rays 0 plus None minus 8 smallest-|s| 6.2e-01
+lost 2.80e-08 rays 9 zero-side rays 0 plus 11 minus 10 smallest-|s| 1.2e-01
+lost 2.29e-08 rays 7 zero-side rays 0 plus 5 minus 10 smallest-|s| 4.0e-01
+lost 1.78e-08 rays 11 zero-side rays 0 plus 5 minus 14 smallest-|s| 5.0e-01

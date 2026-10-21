@@ -1,0 +1,26 @@
+step 0: rollout loss on the fit lists 0.2020
+step 500: rollout loss on the fit lists 0.0580
+step 1000: rollout loss on the fit lists 0.0577
+step 1500: rollout loss on the fit lists 0.0576
+step 2000: rollout loss on the fit lists 0.0575
+step 2500: rollout loss on the fit lists 0.0579
+step 3000: rollout loss on the fit lists 0.0577
+
+neuron 6 from the late gate: ARC -0.64
+
+rule fitted to its own run (33 constants + 4 feedback per neuron):
+  neuron 1: rms 0.222 (8.31x the account); replaced alone: accuracy 0.9317, KL 0.105
+  neuron 6: rms 0.251 (7.85x the account); replaced alone: accuracy 0.9399, KL 0.067
+  neuron 7: rms 0.095 (6.59x the account); replaced alone: accuracy 0.9450, KL 0.071
+  neuron 8: rms 0.274 (7.78x the account); replaced alone: accuracy 0.9289, KL 0.225
+  all four replaced: accuracy 0.9305, KL 0.185
+  weights for 1: cosine 0.997, relative distance 0.08
+  weights for 6: cosine 0.951, relative distance 0.34
+  weights for 7: cosine 0.999, relative distance 0.03
+  weights for 8: cosine 0.998, relative distance 0.07
+  rows [1] from the rule: accuracy -0.39 points, KL 0.018
+  rows [6] from the rule: accuracy -1.78 points, KL 0.058
+  rows [7] from the rule: accuracy -0.14 points, KL 0.005
+  rows [8] from the rule: accuracy -0.97 points, KL 0.058
+  rows [1, 6, 7, 8] from the rule: accuracy -4.74 points, KL 0.206
+  late gate into 1 and 6: ARC -0.69 -0.64; from the rule -0.55 -0.33

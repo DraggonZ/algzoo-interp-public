@@ -1,0 +1,4 @@
+network                               acc ARC mistakes: all     L     T | near ties, third wins: all | by x_L/x_S <1.1 1.1-1.25 1.25-1.5 1.5-2 2-3 >3 | by order LST LTS SLT TLS STL TSL
+memory push by L,P table           85.21%             65.8% 59.1% 69.2% |  33.7% |   32   32   33   34   35   38 |   13   63   43   24   39   20
+gates push by L,P table            86.41%             71.5% 74.1% 71.7% |  26.4% |   20   24   27   28   30   35 |   65    8   23   37   12   14
+both by L,P tables                 79.63%             63.0% 58.0% 65.5% |  31.9% |   28   29   31   33   35   38 |   26   50   34   28   38   16

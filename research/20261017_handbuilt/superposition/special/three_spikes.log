@@ -1,0 +1,9 @@
+third = 0.90 x second | zeros: 98.8% right | random below third: 98.9% right
+third = 0.95 x second | zeros: 95.8% right | random below third: 96.0% right
+third = 0.98 x second | zeros: 83.2% right | random below third: 83.0% right
+third = 0.99 x second | zeros: 70.4% right | random below third: 70.9% right
+
+Agreement with the zero-background answer, per placement (50 random backgrounds each):
+third = 0.95 x second: mean agreement 95.1%; placements where the background changes the answer at least 20% of the time: 8%
+third = 0.98 x second: mean agreement 83.9%; placements where the background changes the answer at least 20% of the time: 28%
+third = 0.99 x second: mean agreement 77.0%; placements where the background changes the answer at least 20% of the time: 41%

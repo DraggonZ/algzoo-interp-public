@@ -1,0 +1,8 @@
+trained accuracy 0.954 on these 100,000 lists
+group            claim: KL    acc  agree control: KL    acc
+store+detector       1.899  0.770  0.776      29.609  0.202
+cancellers           2.169  0.738  0.748      57.270  0.147
+keep gate            1.266  0.832  0.848      17.441  0.349
+late gate            0.040  0.943  0.978       1.370  0.732
+memory               0.275  0.907  0.925      44.392  0.234
+all                  3.061  0.700  0.704      67.806  0.141

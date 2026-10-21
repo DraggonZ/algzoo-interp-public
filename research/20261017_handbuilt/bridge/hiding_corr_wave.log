@@ -1,0 +1,5 @@
+clock0  vs trained 7: correlation 1.00; with group means removed 0.73
+clock1  vs trained 6: correlation 0.96; with group means removed 0.63
+clock2  vs trained 8: correlation 0.91; with group means removed 0.74
+flip    vs trained 1: correlation 0.93; with group means removed 0.18
+group means: correlation 0.98; share of the trained group's variance in its mean 0.91

@@ -1,0 +1,17 @@
+1: mean I 0.8671, mean sampled 0.8953
+worst triples (largest, second, third): I, sampled, w23, w12, bulk margins at low/high level
+  (np.int64(2), np.int64(0), np.int64(5)): I 0.280 sampled 0.801 | w23 0.250 w12 0.321 | Mlo +0.18 Mhi +0.69
+  (np.int64(1), np.int64(3), np.int64(6)): I 0.456 sampled 0.871 | w23 0.288 w12 0.000 | Mlo +0.44 Mhi +0.44
+  (np.int64(2), np.int64(0), np.int64(9)): I 0.399 sampled 0.807 | w23 0.208 w12 0.194 | Mlo +0.28 Mhi +1.26
+  (np.int64(9), np.int64(0), np.int64(6)): I 0.165 sampled 0.549 | w23 0.354 w12 0.372 | Mlo +2.75 Mhi +0.53
+  (np.int64(0), np.int64(2), np.int64(5)): I 0.176 sampled 0.526 | w23 0.378 w12 0.000 | Mlo +0.37 Mhi -0.06
+  (np.int64(0), np.int64(4), np.int64(7)): I 0.234 sampled 0.574 | w23 0.299 w12 0.000 | Mlo +1.00 Mhi -0.10
+  (np.int64(7), np.int64(3), np.int64(1)): I 0.136 sampled 0.472 | w23 0.351 w12 0.445 | Mlo +2.07 Mhi +0.07
+  (np.int64(0), np.int64(4), np.int64(6)): I 0.442 sampled 0.775 | w23 0.294 w12 0.006 | Mlo +1.21 Mhi +0.91
+  (np.int64(2), np.int64(0), np.int64(8)): I 0.545 sampled 0.869 | w23 0.087 w12 0.210 | Mlo +0.26 Mhi +1.20
+  (np.int64(0), np.int64(4), np.int64(8)): I 0.489 sampled 0.808 | w23 0.262 w12 0.007 | Mlo +1.15 Mhi +0.92
+  (np.int64(4), np.int64(2), np.int64(1)): I 0.492 sampled 0.810 | w23 0.258 w12 0.010 | Mlo +0.80 Mhi +2.03
+  (np.int64(0), np.int64(4), np.int64(9)): I 0.485 sampled 0.797 | w23 0.265 w12 0.007 | Mlo +1.23 Mhi +1.02
+  variant 'bulk always right': mean 0.8734
+  variant 'no 1-2 band': mean 0.9061
+  variant 'no 2-3 band': mean 0.9340

@@ -1,0 +1,4 @@
+neuron 1: none 0.291, no fb 1 1.021, no fb 6 1.930, no fb 7 0.374, no fb 8 0.430
+neuron 6: none 0.274, no fb 1 0.392, no fb 6 0.834, no fb 7 0.442, no fb 8 0.393
+neuron 7: none 0.117, no fb 1 0.197, no fb 6 0.625, no fb 7 0.751, no fb 8 0.525
+neuron 8: none 0.353, no fb 1 1.533, no fb 6 0.397, no fb 7 0.413, no fb 8 1.631

@@ -1,0 +1,5 @@
+error, overall and by class (both before / both after / mixed; shares of lists 33% / 33% / 33%)
+ARC's readout                   4.68%  |  4.26% /  5.31% /  4.47%
+single best linear              4.38%  |  4.16% /  4.68% /  4.29%
+order-gated (leaky oracle)      2.60%  |  3.06% /  3.66% /  1.09%
+class-gated (control oracle)    3.49%  |  2.93% /  3.58% /  3.95%

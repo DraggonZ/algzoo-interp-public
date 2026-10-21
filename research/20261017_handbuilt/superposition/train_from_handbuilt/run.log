@@ -1,0 +1,16 @@
+hand-built v19 as built            accuracy 94.23% | near ties lost to the third  7.2% | lead maps covering half     46 | tree's share of possible gain  91%
+hand-built v19 rescaled (same function) accuracy 94.24% | near ties lost to the third  7.2% | lead maps covering half     46 | tree's share of possible gain  90%
+hand-built v19, lr 1e-05, 100 steps accuracy 90.85% | near ties lost to the third 36.3% | lead maps covering half    374 | tree's share of possible gain  61%
+hand-built v19, lr 1e-05, 1000 steps accuracy 92.86% | near ties lost to the third 33.6% | lead maps covering half    529 | tree's share of possible gain  62%
+hand-built v19, lr 1e-05, 3000 steps accuracy 91.05% | near ties lost to the third 35.3% | lead maps covering half  1,055 | tree's share of possible gain  59%
+hand-built v19, lr 0.0001, 100 steps accuracy 46.83% | near ties lost to the third 28.9% | lead maps covering half  4,355 | tree's share of possible gain  58%
+hand-built v19, lr 0.0001, 1000 steps accuracy 58.28% | near ties lost to the third 35.0% | lead maps covering half  4,248 | tree's share of possible gain  61%
+hand-built v19, lr 0.0001, 3000 steps accuracy 66.55% | near ties lost to the third 38.2% | lead maps covering half  5,293 | tree's share of possible gain  61%
+hand-built v21 as built            accuracy 95.91% | near ties lost to the third  7.3% | lead maps covering half     48 | tree's share of possible gain  85%
+hand-built v21 rescaled (same function) accuracy 95.91% | near ties lost to the third  7.3% | lead maps covering half     48 | tree's share of possible gain  84%
+hand-built v21, lr 1e-05, 100 steps accuracy 94.97% | near ties lost to the third 25.5% | lead maps covering half     86 | tree's share of possible gain  69%
+hand-built v21, lr 1e-05, 1000 steps accuracy 96.88% | near ties lost to the third 16.1% | lead maps covering half    217 | tree's share of possible gain  43%
+hand-built v21, lr 1e-05, 3000 steps accuracy 97.85% | near ties lost to the third 11.1% | lead maps covering half    301 | tree's share of possible gain  33%
+hand-built v21, lr 0.0001, 100 steps accuracy 96.67% | near ties lost to the third 17.5% | lead maps covering half    187 | tree's share of possible gain  46%
+hand-built v21, lr 0.0001, 1000 steps accuracy 98.05% | near ties lost to the third 10.0% | lead maps covering half    254 | tree's share of possible gain  34%
+hand-built v21, lr 0.0001, 3000 steps accuracy 98.31% | near ties lost to the third  8.0% | lead maps covering half    218 | tree's share of possible gain  20%

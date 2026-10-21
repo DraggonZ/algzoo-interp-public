@@ -1,0 +1,9 @@
+grid accuracy: trained 95-96% 95.82%, fresh errors 0.022 95.10%, position offsets 0.03 92.75%, v18 (96%) 96.13%
+ARC mistake kind                            share         trained 95-96%     fresh errors 0.022  position offsets 0.03          v18 (96%)    
+all                                        100.0%                  26.4%                  20.8%                  24.1%                   5.0%
+names the largest                           22.4%                  25.5%                  25.1%                  25.7%                   2.9%
+names the third                             65.4%                  28.0%                  23.2%                  28.0%                   4.6%
+names another                               12.1%                  19.1%                   0.0%                   0.0%                  11.0%
+  names third, 2nd-3rd gap -9.00-0.03 of 2nd  33.8%                  39.1%                  36.3%                  39.9%                   5.5%
+  names third, 2nd-3rd gap 0.03-0.10 of 2nd  19.4%                  18.7%                  13.2%                  20.6%                   3.1%
+  names third, 2nd-3rd gap 0.10-9.00 of 2nd  12.1%                  12.1%                   3.1%                   6.8%                   4.4%

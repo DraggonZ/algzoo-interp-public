@@ -1,0 +1,13 @@
+per arrangement (720 cells, 4,320 numbers): 86% of the gap
+third's position               (  10 cells):  16.0% of the gap
+second's position              (  10 cells):  21.8% of the gap
+largest's position             (  10 cells):  37.3% of the gap
+order                          (   8 cells):  52.1% of the gap
+third's position x order       (  80 cells):  59.0% of the gap
+second's position x order      (  79 cells):  57.7% of the gap
+largest's position x order     (  74 cells):  61.3% of the gap
+third x second positions       (  99 cells):  34.5% of the gap
+largest x second positions     (  99 cells):  61.5% of the gap
+additive third's position + second's position + largest's position: 51.4% of the gap
+additive third's position + second's position + largest's position + order: 62.8% of the gap
+additive third's position x order + second's position x order + largest's position x order: 74.9% of the gap

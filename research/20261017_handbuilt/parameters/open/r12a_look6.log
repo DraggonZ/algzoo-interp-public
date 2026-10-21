@@ -1,0 +1,20 @@
+zero cond of E[h11 h11]: 161224973849003524096  cond of E[h10 h10]: 35426
+  row 0 from row 1: err all 16 1.756, push cols 1.780, best scale 0.251
+  row 1 from row 2: err all 16 0.159, push cols 0.152, best scale 0.974
+  row 2 from row 3: err all 16 0.270, push cols 0.261, best scale 1.085
+  row 3 from row 4: err all 16 0.721, push cols 0.722, best scale 0.874
+  row 4 from row 5: err all 16 0.884, push cols 0.871, best scale 0.549
+  row 5 from row 6: err all 16 1.954, push cols 1.995, best scale 0.189
+  row 6 from row 7: err all 16 3.415, push cols 3.426, best scale 0.141
+  row 7 from row 8: err all 16 5.317, push cols 5.324, best scale -0.081
+  row 8 from row 9: err all 16 2.918, push cols 2.916, best scale 0.231
+fresh cond of E[h11 h11]: 42394  cond of E[h10 h10]: 35426
+  row 0 from row 1: err all 16 0.417, push cols 0.303, best scale 1.243
+  row 1 from row 2: err all 16 0.254, push cols 0.249, best scale 1.187
+  row 2 from row 3: err all 16 0.293, push cols 0.289, best scale 1.272
+  row 3 from row 4: err all 16 0.418, push cols 0.420, best scale 1.497
+  row 4 from row 5: err all 16 0.288, push cols 0.289, best scale 1.270
+  row 5 from row 6: err all 16 0.288, push cols 0.293, best scale 1.276
+  row 6 from row 7: err all 16 0.379, push cols 0.379, best scale 1.341
+  row 7 from row 8: err all 16 0.507, push cols 0.363, best scale 1.234
+  row 8 from row 9: err all 16 1.009, push cols 0.825, best scale 0.560

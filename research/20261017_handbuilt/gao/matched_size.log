@@ -1,0 +1,43 @@
+cancellers      ours       account               : error median   2.58 margins, lists over 1 margin 0.89, accuracy 0.559
+cancellers      misreading wave from m2          : error median   3.01 margins, lists over 1 margin 0.92, accuracy 0.426
+cancellers      misreading no wave               : error median   3.45 margins, lists over 1 margin 0.95, accuracy 0.181
+cancellers      misreading angle +20             : error median   3.55 margins, lists over 1 margin 0.94, accuracy 0.386
+cancellers      inexact    scaled 1.02           : error median   0.36 margins, lists over 1 margin 0.17, accuracy 0.930
+cancellers      inexact    scaled 1.05           : error median   0.94 margins, lists over 1 margin 0.47, accuracy 0.865
+cancellers      inexact    scaled 1.10           : error median   2.03 margins, lists over 1 margin 0.78, accuracy 0.749
+cancellers      inexact    scaled 1.20           : error median   4.70 margins, lists over 1 margin 0.94, accuracy 0.552
+cancellers      inexact    scaled 1.30           : error median   8.14 margins, lists over 1 margin 0.97, accuracy 0.419
+cancellers      inexact    noise 0.01            : error median   0.40 margins, lists over 1 margin 0.20, accuracy 0.916
+cancellers      inexact    noise 0.03            : error median   1.16 margins, lists over 1 margin 0.56, accuracy 0.770
+cancellers      inexact    noise 0.1             : error median   3.64 margins, lists over 1 margin 0.92, accuracy 0.461
+store+detector  ours       account               : error median   0.85 margins, lists over 1 margin 0.43, accuracy 0.851
+store+detector  misreading store tracks second   : error median   3.07 margins, lists over 1 margin 0.95, accuracy 0.434
+store+detector  inexact    scaled 1.02           : error median   0.86 margins, lists over 1 margin 0.43, accuracy 0.858
+store+detector  inexact    scaled 1.05           : error median   2.26 margins, lists over 1 margin 0.85, accuracy 0.696
+store+detector  inexact    scaled 1.10           : error median   4.98 margins, lists over 1 margin 0.98, accuracy 0.444
+store+detector  inexact    scaled 1.20           : error median  13.43 margins, lists over 1 margin 1.00, accuracy 0.230
+store+detector  inexact    scaled 1.30           : error median  28.86 margins, lists over 1 margin 1.00, accuracy 0.142
+store+detector  inexact    noise 0.01            : error median   0.16 margins, lists over 1 margin 0.08, accuracy 0.941
+store+detector  inexact    noise 0.03            : error median   0.47 margins, lists over 1 margin 0.25, accuracy 0.899
+store+detector  inexact    noise 0.1             : error median   1.52 margins, lists over 1 margin 0.66, accuracy 0.731
+keep gate       ours       account               : error median   0.48 margins, lists over 1 margin 0.26, accuracy 0.872
+keep gate       misreading gate vs largest       : error median   1.20 margins, lists over 1 margin 0.57, accuracy 0.667
+keep gate       inexact    scaled 1.02           : error median   0.07 margins, lists over 1 margin 0.03, accuracy 0.952
+keep gate       inexact    scaled 1.05           : error median   0.17 margins, lists over 1 margin 0.07, accuracy 0.945
+keep gate       inexact    scaled 1.10           : error median   0.34 margins, lists over 1 margin 0.14, accuracy 0.927
+keep gate       inexact    scaled 1.20           : error median   0.65 margins, lists over 1 margin 0.31, accuracy 0.882
+keep gate       inexact    scaled 1.30           : error median   0.94 margins, lists over 1 margin 0.47, accuracy 0.833
+keep gate       inexact    noise 0.01            : error median   0.03 margins, lists over 1 margin 0.01, accuracy 0.952
+keep gate       inexact    noise 0.03            : error median   0.08 margins, lists over 1 margin 0.04, accuracy 0.949
+keep gate       inexact    noise 0.1             : error median   0.25 margins, lists over 1 margin 0.13, accuracy 0.924
+memory          ours       account               : error median   3.66 margins, lists over 1 margin 0.96, accuracy 0.509
+memory          misreading keep above half       : error median   3.66 margins, lists over 1 margin 0.96, accuracy 0.502
+memory          misreading keep all              : error median   3.62 margins, lists over 1 margin 0.95, accuracy 0.502
+memory          inexact    scaled 1.02           : error median   0.59 margins, lists over 1 margin 0.27, accuracy 0.924
+memory          inexact    scaled 1.05           : error median   1.57 margins, lists over 1 margin 0.72, accuracy 0.759
+memory          inexact    scaled 1.10           : error median   3.47 margins, lists over 1 margin 0.97, accuracy 0.498
+memory          inexact    scaled 1.20           : error median   8.37 margins, lists over 1 margin 1.00, accuracy 0.359
+memory          inexact    scaled 1.30           : error median  15.11 margins, lists over 1 margin 1.00, accuracy 0.306
+memory          inexact    noise 0.01            : error median   0.14 margins, lists over 1 margin 0.06, accuracy 0.949
+memory          inexact    noise 0.03            : error median   0.42 margins, lists over 1 margin 0.20, accuracy 0.926
+memory          inexact    noise 0.1             : error median   1.35 margins, lists over 1 margin 0.63, accuracy 0.784

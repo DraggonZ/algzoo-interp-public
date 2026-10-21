@@ -1,0 +1,5 @@
+store      residual rms for neurons 1, 6, 7, 8 at levels a / b / c: (0.47, 0.50, 0.63, 0.59) / (0.32, 0.33, 0.42, 0.39) / (0.26, 0.28, 0.35, 0.33)
+detector   residual rms for neurons 1, 6, 7, 8 at levels a / b / c: (0.18, 0.01, 0.27, 0.01) / (0.17, 0.01, 0.26, 0.01) / (0.12, 0.01, 0.18, 0.01)
+keep gate  residual rms for neurons 1, 6, 7, 8 at levels a / b / c: (0.30, 0.10, 0.01, 0.04) / (0.21, 0.07, 0.00, 0.03) / (0.14, 0.05, 0.00, 0.02)
+late gate  residual rms for neurons 1, 6, 7, 8 at levels a / b / c: (0.14, 0.13, 0.00, 0.01) / (0.12, 0.11, 0.00, 0.01) / (0.07, 0.07, 0.00, 0.01)
+memory     residual rms for neurons 1, 6, 7, 8 at levels a / b / c: (0.22, 0.21, 0.23, 0.27) / (0.17, 0.16, 0.19, 0.22) / (0.11, 0.11, 0.12, 0.16)

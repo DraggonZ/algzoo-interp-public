@@ -1,0 +1,28 @@
+total wrong two-spike probability 0.0226 (1 - Z_2)
+largest wrong intervals: largest pos, second pos, ratio range (second/largest), probability
+  0 9 max first  ratio +0.960 to +1.000   0.00076
+  7 3 2nd first  ratio +0.961 to +1.000   0.00075
+  7 0 2nd first  ratio +1.000 to +0.277   0.00072
+  6 0 2nd first  ratio +0.963 to +1.000   0.00070
+  2 9 max first  ratio +0.974 to +1.000   0.00050
+  8 0 2nd first  ratio +0.975 to +1.000   0.00048
+  9 8 2nd first  ratio +0.975 to +1.000   0.00047
+  0 7 max first  ratio +0.979 to +1.000   0.00041
+  6 3 2nd first  ratio +1.000 to +0.174   0.00035
+  6 2 2nd first  ratio +0.984 to +1.000   0.00030
+  2 8 max first  ratio +0.985 to +1.000   0.00029
+  7 6 2nd first  ratio +1.000 to +0.142   0.00028
+  3 0 2nd first  ratio +1.000 to +0.138   0.00028
+  9 0 2nd first  ratio +1.000 to +0.127   0.00026
+  6 5 2nd first  ratio +1.000 to +0.127   0.00026
+  8 5 2nd first  ratio +1.000 to +0.120   0.00025
+  4 1 2nd first  ratio +1.000 to +0.116   0.00024
+  5 2 2nd first  ratio +1.000 to +0.116   0.00024
+  9 4 2nd first  ratio +0.988 to +1.000   0.00023
+  9 6 2nd first  ratio +0.988 to +1.000   0.00023
+  8 7 2nd first  ratio +1.000 to +0.106   0.00022
+  5 9 max first  ratio +0.988 to +1.000   0.00022
+  8 3 2nd first  ratio +0.989 to +1.000   0.00022
+  0 3 max first  ratio +1.000 to +0.097   0.00021
+  0 7 max first  ratio +1.000 to +0.091   0.00020
+by kind: {'near-tie (ratio > 0.8)': np.float64(0.0218), 'negative 2nd': np.float64(0.0007)}

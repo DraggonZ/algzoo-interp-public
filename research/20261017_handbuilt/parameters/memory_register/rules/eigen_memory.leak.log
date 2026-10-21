@@ -1,0 +1,5 @@
+leak_check: rule eigen_memory.py, 64 covered weights, 72 constants, relative perturbation 0.05, draws [11, 12, 13]
+  draw 11: slope +0.0000; rms change of rule weights 0.00e+00 (of ARC's 1.90e-02)
+  draw 12: slope +0.0000; rms change of rule weights 0.00e+00 (of ARC's 2.66e-02)
+  draw 13: slope +0.0000; rms change of rule weights 0.00e+00 (of ARC's 1.44e-02)
+LEAK +0.0000 0.0000 PASS

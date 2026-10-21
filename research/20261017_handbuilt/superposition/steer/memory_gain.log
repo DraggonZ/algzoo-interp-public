@@ -1,0 +1,5 @@
+762,073 near-tie lists (third within 5% of the second, second positive)
+step 4, second early, third late  n 63,278: earlier number wins  77.4% | e -0.10: turned up  60.4 / predicted   5.2 | e -0.05: turned up  70.0 / predicted  25.6 | e +0.05: turned up  82.2 / predicted  87.9 | e +0.10: turned up  84.9 / predicted  83.8
+step 4, third early, second late  n 63,638: earlier number wins  26.2% | e -0.10: turned up  13.2 / predicted   2.4 | e -0.05: turned up  19.0 / predicted   5.8 | e +0.05: turned up  33.8 / predicted  73.9 | e +0.10: turned up  41.3 / predicted  84.4
+step 6, second early, third late  n 31,668: earlier number wins  79.5% | e -0.10: turned up  64.1 / predicted   6.2 | e -0.05: turned up  72.8 / predicted  28.0 | e +0.05: turned up  83.4 / predicted  87.0 | e +0.10: turned up  85.6 / predicted  82.2
+step 6, third early, second late  n 31,657: earlier number wins  28.9% | e -0.10: turned up  16.3 / predicted   3.5 | e -0.05: turned up  22.1 / predicted   6.9 | e +0.05: turned up  36.8 / predicted  75.6 | e +0.10: turned up  44.0 / predicted  84.0

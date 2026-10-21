@@ -1,0 +1,5 @@
+v23 from v19, loop gain 0.01           accuracy 94.17% | near ties lost to the third  9.8% | maps covering half     47 | tree  97.5% vs guess  90.2% (share of possible gain  74%)
+v23 from v19, loop gain 0.03           accuracy 93.28% | near ties lost to the third 15.0% | maps covering half     55 | tree  94.1% vs guess  85.0% (share of possible gain  61%)
+v23 from v19, loop gain 0.1            accuracy 90.23% | near ties lost to the third 25.2% | maps covering half     76 | tree  88.0% vs guess  74.8% (share of possible gain  52%)
+v23 from v19, loop gain 0.3            accuracy 83.65% | near ties lost to the third 28.6% | maps covering half     87 | tree  84.6% vs guess  71.4% (share of possible gain  46%)
+v23 from v19, loop gain 1.0            accuracy 71.32% | near ties lost to the third 26.1% | maps covering half     79 | tree  83.1% vs guess  73.9% (share of possible gain  35%)

@@ -1,0 +1,27 @@
+example: accuracy 0.9532; reduction minus full (points) k=2 +3.03, k=3 +0.01, k=4 +0.16, k=5 +0.14, k=6 +0.10
+seed0: accuracy 0.9101; reduction minus full (points) k=2 +4.93, k=3 +0.07, k=4 +0.31, k=5 +0.35, k=6 +0.27
+seed1: accuracy 0.8802; reduction minus full (points) k=2 +6.41, k=3 +1.40, k=4 +0.76, k=5 +0.54, k=6 +0.37
+seed2: accuracy 0.9485; reduction minus full (points) k=2 +3.61, k=3 -0.04, k=4 +0.20, k=5 +0.19, k=6 +0.14
+seed3: accuracy 0.9321; reduction minus full (points) k=2 +4.25, k=3 -0.24, k=4 +0.08, k=5 +0.19, k=6 +0.16
+seed4: accuracy 0.8896; reduction minus full (points) k=2 +6.57, k=3 -0.09, k=4 +0.24, k=5 +0.31, k=6 +0.26
+100: accuracy 0.9481; reduction minus full (points) k=2 +3.31, k=3 +0.11, k=4 +0.14, k=5 +0.11, k=6 +0.08
+101: accuracy 0.9136; reduction minus full (points) k=2 +5.80, k=3 +0.28, k=4 +0.35, k=5 +0.30, k=6 +0.23
+102: accuracy 0.9128; reduction minus full (points) k=2 +4.11, k=3 -0.56, k=4 +0.18, k=5 +0.31, k=6 +0.26
+103: accuracy 0.9533; reduction minus full (points) k=2 +3.66, k=3 +0.06, k=4 +0.12, k=5 +0.17, k=6 +0.14
+104: accuracy 0.9124; reduction minus full (points) k=2 +4.22, k=3 +0.52, k=4 +0.69, k=5 +0.69, k=6 +0.55
+105: accuracy 0.8986; reduction minus full (points) k=2 +5.99, k=3 +0.07, k=4 +0.13, k=5 +0.16, k=6 +0.15
+106: accuracy 0.9484; reduction minus full (points) k=2 +3.51, k=3 -0.59, k=4 -0.07, k=5 +0.04, k=6 +0.04
+107: accuracy 0.9215; reduction minus full (points) k=2 +5.39, k=3 +0.86, k=4 +0.53, k=5 +0.40, k=6 +0.29
+108: accuracy 0.9386; reduction minus full (points) k=2 +3.50, k=3 +0.31, k=4 +0.20, k=5 +0.17, k=6 +0.14
+109: accuracy 0.9405; reduction minus full (points) k=2 +4.34, k=3 +0.24, k=4 +0.20, k=5 +0.19, k=6 +0.14
+110: accuracy 0.9120; reduction minus full (points) k=2 +6.87, k=3 +0.05, k=4 +0.48, k=5 +0.45, k=6 +0.33
+111: accuracy 0.9601; reduction minus full (points) k=2 +3.05, k=3 +0.02, k=4 +0.31, k=5 +0.26, k=6 +0.18
+112: accuracy 0.9145; reduction minus full (points) k=2 +4.78, k=3 +0.99, k=4 +0.88, k=5 +0.64, k=6 +0.43
+113: accuracy 0.9042; reduction minus full (points) k=2 +6.86, k=3 +1.18, k=4 +0.85, k=5 +0.59, k=6 +0.38
+114: accuracy 0.8976; reduction minus full (points) k=2 +6.83, k=3 +0.18, k=4 +0.24, k=5 +0.26, k=6 +0.20
+115: accuracy 0.9521; reduction minus full (points) k=2 +3.83, k=3 +0.27, k=4 +0.27, k=5 +0.20, k=6 +0.13
+k=2: 90 placements; reduction RMSE over 22 models 4.94 points (6 original 4.98, 16 new 4.93); sampling at 90 runs 2.77
+k=3: 720 placements; reduction RMSE over 22 models 0.54 points (6 original 0.58, 16 new 0.52); sampling at 720 runs 0.98
+k=4: 5040 placements; reduction RMSE over 22 models 0.42 points (6 original 0.36, 16 new 0.43); sampling at 5040 runs 0.37
+k=5: 30240 placements; reduction RMSE over 22 models 0.35 points (6 original 0.32, 16 new 0.36); sampling at 30240 runs 0.15
+k=6: 151200 placements; reduction RMSE over 22 models 0.26 points (6 original 0.24, 16 new 0.27); sampling at 151200 runs 0.07

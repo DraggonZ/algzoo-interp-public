@@ -1,0 +1,6 @@
+example: sampling-free 0.9611; sampled reduction 0.9524 (+0.9); true 0.9532 (+0.8); cost 5136 samples' worth; triples with a 2-3 band 0.50, 1-2 band 0.50
+0: sampling-free 0.9119; sampled reduction 0.9113 (+0.1); true 0.9101 (+0.2); cost 5136 samples' worth; triples with a 2-3 band 0.50, 1-2 band 0.51
+1: sampling-free 0.8671; sampled reduction 0.8955 (-2.8); true 0.8804 (-1.3); cost 5136 samples' worth; triples with a 2-3 band 0.50, 1-2 band 0.53
+2: sampling-free 0.9478; sampled reduction 0.9477 (+0.0); true 0.9485 (-0.1); cost 5136 samples' worth; triples with a 2-3 band 0.50, 1-2 band 0.51
+3: sampling-free 0.9352; sampled reduction 0.9296 (+0.6); true 0.9320 (+0.3); cost 5136 samples' worth; triples with a 2-3 band 0.50, 1-2 band 0.51
+4: sampling-free 0.8792; sampled reduction 0.8893 (-1.0); true 0.8898 (-1.1); cost 5136 samples' worth; triples with a 2-3 band 0.51, 1-2 band 0.51

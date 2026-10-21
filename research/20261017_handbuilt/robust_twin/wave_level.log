@@ -1,0 +1,3 @@
+trained               : |wave| / |level| median 0.244 (90th percentile 1.041); partly off on 0.170 of live steps
+twin, trained scale   : |wave| / |level| median 0.039 (90th percentile 0.133); partly off on 0.013 of live steps
+twin, g 10000         : |wave| / |level| median 0.000 (90th percentile 0.000); partly off on 0.000 of live steps

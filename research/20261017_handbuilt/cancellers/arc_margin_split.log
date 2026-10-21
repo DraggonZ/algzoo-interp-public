@@ -1,0 +1,25 @@
+62991 lists; network wrong on 0.040; mean margin / P 18.2
+role               mean coef  share of margin (mean, x P)  when wrong
+old largest P           48.9                         48.9        69.7
+earlier records         -0.3                         -0.3        -0.4
+current largest          8.1                          8.2         5.3
+rival y                -49.4                        -38.5       -75.0
+other positives         -0.7                         -0.5        -0.8
+negative numbers        -0.1                          0.4        -1.5
+old largest coefficient vs rival coefficient by gap between their positions (rival - P):
+  gap 2: lists   4148  coef on P   46.3  coef on y  -46.0  wrong 0.041
+  gap 3: lists   7348  coef on P   49.2  coef on y  -45.0  wrong 0.040
+  gap 4: lists   9419  coef on P   49.1  coef on y  -45.4  wrong 0.046
+  gap 5: lists  10504  coef on P   45.9  coef on y  -43.8  wrong 0.036
+  gap 6: lists  10630  coef on P   47.2  coef on y  -47.4  wrong 0.028
+  gap 7: lists   9488  coef on P   52.0  coef on y  -55.6  wrong 0.034
+  gap 8: lists   7278  coef on P   51.9  coef on y  -57.8  wrong 0.043
+  gap 9: lists   4176  coef on P   50.7  coef on y  -60.2  wrong 0.083
+
+per-list spread of the coefficients (std): P 53.2, rival 39.0, earlier records 10.5, current largest 38.7
+margin coefficient split by the final neurons that carry it (mean over lists)
+input role         cancellers 1,6 memory 0,3,10-        store 2     detector 4         keep 5         late 9
+old largest P               -13.6           62.3           -4.7           -0.0            5.1           -0.0
+earlier records              -3.0            2.2           -0.1           -0.0            0.6           -0.1
+current largest              47.5          -22.7          -16.1           -0.0           -0.6            0.1
+rival y                     -27.0          -13.4           -0.2            0.0           -8.8            0.0

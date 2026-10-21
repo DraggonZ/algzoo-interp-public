@@ -1,0 +1,12 @@
+ ARC: network 95.322%, reduction on the same lists 95.332%, difference +0.010 points
+      lists where the two disagree: 2.96% (1.49% reduction right & network wrong, 1.48% the reverse)
+      reduction right & network wrong / network right & reduction wrong (points): m2<0 0.063/0.047; a<0.1 only 0.891/0.787; b<0.1 only 0.234/0.307; both<0.1 0.176/0.188; neither 0.122/0.148
+ 200: network 93.275%, reduction on the same lists 93.566%, difference +0.291 points
+      lists where the two disagree: 4.24% (2.26% reduction right & network wrong, 1.97% the reverse)
+      reduction right & network wrong / network right & reduction wrong (points): m2<0 0.063/0.040; a<0.1 only 1.198/0.974; b<0.1 only 0.249/0.318; both<0.1 0.231/0.276; neither 0.523/0.364
+ 208: network 84.059%, reduction on the same lists 85.224%, difference +1.165 points
+      lists where the two disagree: 7.87% (4.52% reduction right & network wrong, 3.35% the reverse)
+      reduction right & network wrong / network right & reduction wrong (points): m2<0 0.071/0.047; a<0.1 only 1.763/1.312; b<0.1 only 0.965/0.637; both<0.1 0.372/0.296; neither 1.349/1.063
+ 212: network 84.542%, reduction on the same lists 84.453%, difference -0.089 points
+      lists where the two disagree: 12.26% (6.09% reduction right & network wrong, 6.18% the reverse)
+      reduction right & network wrong / network right & reduction wrong (points): m2<0 0.124/0.050; a<0.1 only 2.668/2.325; b<0.1 only 1.085/1.367; both<0.1 0.418/0.471; neither 1.792/1.964

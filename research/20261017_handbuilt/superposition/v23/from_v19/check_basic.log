@@ -1,0 +1,15 @@
+P1 ring=False: max |v23f - v19| = 2.27e-12 (v19 scores up to 2381811.6)
+P1 ring=True: max |v23f - v19| = 2.27e-12 (v19 scores up to 2381811.6)
+lists with a single record: 22.9%
+P2 wrap 0.1: single-record answers equal to wrap 0.05 on 99.999%
+P2 wrap 0.3: single-record answers equal to wrap 0.05 on 99.996%
+P2 wrap 1.0: single-record answers equal to wrap 0.05 on 99.988%
+v19 (kappa 0.5): 94.20%
+P3 wrap 0.02 (ring fade 0.613 per step): 93.70%
+P3 wrap 0.05 (ring fade 0.688 per step): 92.29%
+P3 wrap 0.10 (ring fade 0.750 per step): 90.18%
+P3 wrap 0.20 (ring fade 0.818 per step): 86.57%
+P3 wrap 0.30 (ring fade 0.860 per step): 83.62%
+P3 wrap 0.50 (ring fade 0.917 per step): 79.00%
+P3 wrap 0.70 (ring fade 0.956 per step): 75.44%
+P3 wrap 1.00 (ring fade 1.000 per step): 71.32%

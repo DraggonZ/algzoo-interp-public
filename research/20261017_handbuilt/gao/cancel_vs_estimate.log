@@ -1,0 +1,5 @@
+16 networks scored after development (new100-115): accuracy estimate's absolute miss (20261016_run3/reports/new_score.log) vs lead/pushes (robust_across.log)
+rank correlation of lead/pushes with |estimate miss|: -0.59 (p 0.016)
+more cancelling half: mean |miss| 1.06 points; less cancelling half: 0.36
+rank correlation of accuracy with |estimate miss|: -0.68 (p 0.003); accuracy with lead/pushes 0.70
+partial rank correlation of lead/pushes with |miss|, accuracy held fixed: -0.21 (16 networks; no p-value computed)

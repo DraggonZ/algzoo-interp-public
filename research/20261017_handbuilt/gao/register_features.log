@@ -1,0 +1,5 @@
+rotation pairs (angle deg, size per step): [(np.float64(42.7), np.float64(0.9509)), (np.float64(43.0), np.float64(0.735)), (np.float64(83.3), np.float64(0.937)), (np.float64(124.8), np.float64(0.8373)), (np.float64(180.0), np.float64(0.9283))]
+our account (5 quantities)            : angle median 4.7 deg; size ratio median 0.997; accuracy 0.559
+register waves (23 quantities)        : angle median 1.4 deg; size ratio median 1.000; accuracy 0.717
+general menu (30 quantities)          : angle median 1.7 deg; size ratio median 0.999; accuracy 0.704
+register waves + menu (53)            : angle median 1.4 deg; size ratio median 1.000; accuracy 0.707

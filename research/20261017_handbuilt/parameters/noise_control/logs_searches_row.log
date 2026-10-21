@@ -1,0 +1,80 @@
+{"kind": "row", "seed": 0, "search": "r8", "base": -355.19, "best": "(1, -1, 3, 3)", "best_net": -350.63, "gain": 4.56, "n": 975, "singular": 0}
+{"kind": "row", "seed": 0, "search": "r9", "base": -355.19, "best": "rows (1, 6) hiding", "best_net": -353.73, "gain": 1.45, "n": 45, "singular": 0}
+{"kind": "row", "seed": 0, "search": "r14", "base": -386.31, "best": "-5", "best_net": -371.84, "gain": 14.47, "n": 17, "singular": 0}
+{"kind": "row", "seed": 0, "search": "r15", "base": -384.01, "best": "top 1", "best_net": -376.64, "gain": 7.37, "n": 11, "singular": 7}
+{"kind": "row", "seed": 1, "search": "r8", "base": -366.15, "best": "(1, 3, 0, 3)", "best_net": -355.46, "gain": 10.69, "n": 975, "singular": 0}
+{"kind": "row", "seed": 1, "search": "r9", "base": -366.15, "best": "rows (1, 8) hiding", "best_net": -356.35, "gain": 9.8, "n": 45, "singular": 0}
+{"kind": "row", "seed": 1, "search": "r14", "base": -386.51, "best": "= min", "best_net": -384.6, "gain": 1.91, "n": 17, "singular": 0}
+{"kind": "row", "seed": 1, "search": "r15", "base": -389.6, "best": "top 2", "best_net": -387.42, "gain": 2.18, "n": 11, "singular": 4}
+{"kind": "row", "seed": 2, "search": "r8", "base": -379.91, "best": "(1, 0, 0, 0)", "best_net": -376.32, "gain": 3.59, "n": 975, "singular": 0}
+{"kind": "row", "seed": 2, "search": "r9", "base": -379.91, "best": "rows (1, 6, 8) memory", "best_net": -378.07, "gain": 1.84, "n": 45, "singular": 0}
+{"kind": "row", "seed": 2, "search": "r14", "base": -400.9, "best": "-|fresh|", "best_net": -398.53, "gain": 2.37, "n": 17, "singular": 0}
+{"kind": "row", "seed": 2, "search": "r15", "base": -407.77, "best": "top 2", "best_net": -403.27, "gain": 4.51, "n": 11, "singular": 12}
+{"kind": "row", "seed": 3, "search": "r8", "base": -369.4, "best": "(1, -2, -3, -3)", "best_net": -357.74, "gain": 11.66, "n": 975, "singular": 0}
+{"kind": "row", "seed": 3, "search": "r9", "base": -369.4, "best": "rows (7,) memory", "best_net": -365.85, "gain": 3.55, "n": 45, "singular": 0}
+{"kind": "row", "seed": 3, "search": "r14", "base": -403.14, "best": "-5", "best_net": -396.49, "gain": 6.66, "n": 17, "singular": 0}
+{"kind": "row", "seed": 3, "search": "r15", "base": -404.13, "best": "top 8", "best_net": -407.63, "gain": -3.5, "n": 11, "singular": 5}
+{"kind": "row", "seed": 4, "search": "r8", "base": -336.03, "best": "(2, 2, 3, 1)", "best_net": -327.16, "gain": 8.87, "n": 975, "singular": 0}
+{"kind": "row", "seed": 4, "search": "r9", "base": -336.03, "best": "rows (6, 7) hiding", "best_net": -327.27, "gain": 8.77, "n": 45, "singular": 0}
+{"kind": "row", "seed": 4, "search": "r14", "base": -335.44, "best": "max(fresh,0)", "best_net": -333.99, "gain": 1.45, "n": 17, "singular": 0}
+{"kind": "row", "seed": 4, "search": "r15", "base": -342.39, "best": "top 8", "best_net": -342.55, "gain": -0.16, "n": 11, "singular": 2}
+{"kind": "row", "seed": 5, "search": "r8", "base": -341.97, "best": "(3, -1, -1, -1)", "best_net": -334.96, "gain": 7.01, "n": 975, "singular": 0}
+{"kind": "row", "seed": 5, "search": "r9", "base": -341.97, "best": "rows (1, 8) all", "best_net": -338.92, "gain": 3.04, "n": 45, "singular": 0}
+{"kind": "row", "seed": 5, "search": "r14", "base": -360.1, "best": "-5", "best_net": -356.53, "gain": 3.57, "n": 17, "singular": 0}
+{"kind": "row", "seed": 5, "search": "r15", "base": -363.76, "best": "top 1", "best_net": -361.08, "gain": 2.69, "n": 11, "singular": 5}
+{"kind": "row", "seed": 6, "search": "r8", "base": -354.16, "best": "(3, 0, -1, -1)", "best_net": -347.0, "gain": 7.15, "n": 975, "singular": 0}
+{"kind": "row", "seed": 6, "search": "r9", "base": -354.16, "best": "rows (1, 6, 7) hiding", "best_net": -351.52, "gain": 2.64, "n": 45, "singular": 0}
+{"kind": "row", "seed": 6, "search": "r14", "base": -362.35, "best": "fresh", "best_net": -362.26, "gain": 0.09, "n": 17, "singular": 0}
+{"kind": "row", "seed": 6, "search": "r15", "base": -375.63, "best": "top 1", "best_net": -368.03, "gain": 7.6, "n": 11, "singular": 7}
+{"kind": "row", "seed": 7, "search": "r8", "base": -367.45, "best": "(1, -3, 1, 1)", "best_net": -365.92, "gain": 1.53, "n": 975, "singular": 0}
+{"kind": "row", "seed": 7, "search": "r9", "base": -367.45, "best": "rows (1,) hiding", "best_net": -366.39, "gain": 1.06, "n": 45, "singular": 0}
+{"kind": "row", "seed": 7, "search": "r14", "base": -387.32, "best": "below min", "best_net": -381.54, "gain": 5.79, "n": 17, "singular": 0}
+{"kind": "row", "seed": 7, "search": "r15", "base": -388.14, "best": "top 3 of x1..x9", "best_net": -384.02, "gain": 4.12, "n": 11, "singular": 16}
+{"kind": "row", "seed": 8, "search": "r8", "base": -400.12, "best": "(1, 2, -2, 3)", "best_net": -394.59, "gain": 5.52, "n": 975, "singular": 0}
+{"kind": "row", "seed": 8, "search": "r9", "base": -400.12, "best": "rows (1, 8) memory", "best_net": -399.08, "gain": 1.04, "n": 45, "singular": 0}
+{"kind": "row", "seed": 8, "search": "r14", "base": -409.62, "best": "below min", "best_net": -408.05, "gain": 1.57, "n": 17, "singular": 0}
+{"kind": "row", "seed": 8, "search": "r15", "base": -413.69, "best": "top 2", "best_net": -413.03, "gain": 0.66, "n": 11, "singular": 7}
+{"kind": "row", "seed": 9, "search": "r8", "base": -391.65, "best": "(1, 3, 0, 3)", "best_net": -386.95, "gain": 4.7, "n": 975, "singular": 0}
+{"kind": "row", "seed": 9, "search": "r9", "base": -391.65, "best": "rows (6, 7, 8) hiding", "best_net": -387.35, "gain": 4.29, "n": 45, "singular": 0}
+{"kind": "row", "seed": 9, "search": "r14", "base": -411.09, "best": "-5", "best_net": -396.09, "gain": 15.0, "n": 17, "singular": 0}
+{"kind": "row", "seed": 9, "search": "r15", "base": -409.25, "best": "top 3 after step", "best_net": -401.15, "gain": 8.1, "n": 11, "singular": 5}
+{"kind": "row", "seed": 10, "search": "r8", "base": -380.16, "best": "(1, 3, 3, 3)", "best_net": -372.66, "gain": 7.5, "n": 975, "singular": 0}
+{"kind": "row", "seed": 10, "search": "r9", "base": -380.16, "best": "rows (7,) memory", "best_net": -376.42, "gain": 3.75, "n": 45, "singular": 0}
+{"kind": "row", "seed": 10, "search": "r14", "base": -393.41, "best": "-5", "best_net": -382.05, "gain": 11.36, "n": 17, "singular": 0}
+{"kind": "row", "seed": 10, "search": "r15", "base": -395.62, "best": "top 5", "best_net": -394.77, "gain": 0.85, "n": 11, "singular": 1}
+{"kind": "row", "seed": 11, "search": "r8", "base": -360.07, "best": "(1, -3, 3, 2)", "best_net": -358.89, "gain": 1.18, "n": 975, "singular": 0}
+{"kind": "row", "seed": 11, "search": "r9", "base": -360.07, "best": "rows (6,) all", "best_net": -358.64, "gain": 1.43, "n": 45, "singular": 0}
+{"kind": "row", "seed": 11, "search": "r14", "base": -373.69, "best": "below 1st", "best_net": -367.89, "gain": 5.8, "n": 17, "singular": 0}
+{"kind": "row", "seed": 11, "search": "r15", "base": -374.08, "best": "top 3 after step", "best_net": -370.94, "gain": 3.15, "n": 11, "singular": 1}
+{"kind": "row", "seed": 12, "search": "r8", "base": -334.19, "best": "(1, 0, -3, -2)", "best_net": -328.66, "gain": 5.53, "n": 975, "singular": 0}
+{"kind": "row", "seed": 12, "search": "r9", "base": -334.19, "best": "rows (7,) all", "best_net": -332.47, "gain": 1.72, "n": 45, "singular": 0}
+{"kind": "row", "seed": 12, "search": "r14", "base": -342.5, "best": "-5", "best_net": -341.66, "gain": 0.84, "n": 17, "singular": 0}
+{"kind": "row", "seed": 12, "search": "r15", "base": -347.25, "best": "top 8", "best_net": -347.27, "gain": -0.02, "n": 11, "singular": 3}
+{"kind": "row", "seed": 13, "search": "r8", "base": -324.05, "best": "(1, 2, 2, -3)", "best_net": -321.45, "gain": 2.6, "n": 975, "singular": 0}
+{"kind": "row", "seed": 13, "search": "r9", "base": -324.05, "best": "rows (6,) all", "best_net": -322.63, "gain": 1.42, "n": 45, "singular": 0}
+{"kind": "row", "seed": 13, "search": "r14", "base": -330.84, "best": "fresh", "best_net": -328.28, "gain": 2.57, "n": 17, "singular": 0}
+{"kind": "row", "seed": 13, "search": "r15", "base": -339.87, "best": "2nd or 3rd", "best_net": -338.33, "gain": 1.54, "n": 11, "singular": 0}
+{"kind": "row", "seed": 14, "search": "r8", "base": -299.69, "best": "(1, -2, 3, 3)", "best_net": -291.94, "gain": 7.75, "n": 975, "singular": 0}
+{"kind": "row", "seed": 14, "search": "r9", "base": -299.69, "best": "rows (8,) all", "best_net": -290.5, "gain": 9.19, "n": 45, "singular": 0}
+{"kind": "row", "seed": 14, "search": "r14", "base": -306.78, "best": "fresh", "best_net": -306.68, "gain": 0.1, "n": 17, "singular": 0}
+{"kind": "row", "seed": 14, "search": "r15", "base": -315.17, "best": "top 1", "best_net": -314.77, "gain": 0.41, "n": 11, "singular": 2}
+{"kind": "row", "seed": 15, "search": "r8", "base": -365.11, "best": "(1, 1, 1, -3)", "best_net": -363.0, "gain": 2.12, "n": 975, "singular": 0}
+{"kind": "row", "seed": 15, "search": "r9", "base": -365.11, "best": "rows (6, 8) all", "best_net": -360.01, "gain": 5.1, "n": 45, "singular": 0}
+{"kind": "row", "seed": 15, "search": "r14", "base": -376.07, "best": "-5", "best_net": -369.01, "gain": 7.06, "n": 17, "singular": 0}
+{"kind": "row", "seed": 15, "search": "r15", "base": -379.01, "best": "top 1", "best_net": -370.95, "gain": 8.07, "n": 11, "singular": 4}
+{"kind": "row", "seed": 16, "search": "r8", "base": -414.8, "best": "(1, -3, -3, -3)", "best_net": -403.65, "gain": 11.15, "n": 975, "singular": 0}
+{"kind": "row", "seed": 16, "search": "r9", "base": -414.8, "best": "rows (7, 8) hiding", "best_net": -413.02, "gain": 1.78, "n": 45, "singular": 0}
+{"kind": "row", "seed": 16, "search": "r14", "base": -417.49, "best": "below 1st", "best_net": -417.52, "gain": -0.03, "n": 17, "singular": 0}
+{"kind": "row", "seed": 16, "search": "r15", "base": -423.28, "best": "top 1", "best_net": -423.32, "gain": -0.04, "n": 11, "singular": 0}
+{"kind": "row", "seed": 17, "search": "r8", "base": -288.35, "best": "(1, 0, 1, -3)", "best_net": -281.87, "gain": 6.48, "n": 975, "singular": 0}
+{"kind": "row", "seed": 17, "search": "r9", "base": -288.35, "best": "rows (1, 8) all", "best_net": -282.25, "gain": 6.09, "n": 45, "singular": 0}
+{"kind": "row", "seed": 17, "search": "r14", "base": -323.33, "best": "-5", "best_net": -314.79, "gain": 8.54, "n": 17, "singular": 0}
+{"kind": "row", "seed": 17, "search": "r15", "base": -325.52, "best": "top 1", "best_net": -321.34, "gain": 4.18, "n": 11, "singular": 0}
+{"kind": "row", "seed": 18, "search": "r8", "base": -330.61, "best": "(1, -2, 3, 3)", "best_net": -328.54, "gain": 2.07, "n": 975, "singular": 0}
+{"kind": "row", "seed": 18, "search": "r9", "base": -330.61, "best": "rows (6, 8) hiding", "best_net": -328.79, "gain": 1.81, "n": 45, "singular": 0}
+{"kind": "row", "seed": 18, "search": "r14", "base": -355.92, "best": "-5", "best_net": -350.4, "gain": 5.52, "n": 17, "singular": 0}
+{"kind": "row", "seed": 18, "search": "r15", "base": -358.81, "best": "top 1", "best_net": -352.69, "gain": 6.12, "n": 11, "singular": 0}
+{"kind": "row", "seed": 19, "search": "r8", "base": -370.16, "best": "(1, -3, 2, 2)", "best_net": -365.61, "gain": 4.55, "n": 975, "singular": 0}
+{"kind": "row", "seed": 19, "search": "r9", "base": -370.16, "best": "rows (1, 6, 7, 8) hiding", "best_net": -363.82, "gain": 6.34, "n": 45, "singular": 0}
+{"kind": "row", "seed": 19, "search": "r14", "base": -381.9, "best": "-1", "best_net": -379.19, "gain": 2.71, "n": 17, "singular": 0}
+{"kind": "row", "seed": 19, "search": "r15", "base": -386.16, "best": "top 8", "best_net": -386.19, "gain": -0.03, "n": 11, "singular": 5}

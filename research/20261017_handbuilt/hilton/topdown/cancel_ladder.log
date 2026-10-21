@@ -1,0 +1,5 @@
+PM                                 ( 432 numbers): mistakes reproduced  35.9%   agreement  74.30%   accuracy  74.32%
+PM + age                           (1128 numbers): mistakes reproduced  36.0%   agreement  75.60%   accuracy  75.63%
+PM + age + left                    (1848 numbers): mistakes reproduced  37.9%   agreement  75.79%   accuracy  75.63%
+PM + age + left + since            (3168 numbers): mistakes reproduced  47.4%   agreement  85.93%   accuracy  85.08%
+PM + age + left + since + clip     (5808 numbers): mistakes reproduced  73.5%   agreement  96.60%   accuracy  93.58%

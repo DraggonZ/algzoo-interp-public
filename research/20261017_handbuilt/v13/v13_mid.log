@@ -1,0 +1,12 @@
+all 0.813  beta 1.0 w 0.8  ord 0.979 rec9 0.877 rec8 0.768 b2b 0.499 | wrong third 0.23 largest 0.01
+all 0.800  beta 1.0 w 0.6  ord 0.950 rec9 0.808 rec8 0.711 b2b 0.535 | wrong third 0.36 largest 0.01
+all 0.774  beta 1.0 w 0.4  ord 0.913 rec9 0.730 rec8 0.648 b2b 0.553 | wrong third 0.40 largest 0.00
+all 0.724  beta 0.7 w 0.4  ord 0.827 rec9 0.730 rec8 0.562 b2b 0.563 | wrong third 0.42 largest 0.11
+all 0.666  beta 0.7 w 0.6  ord 0.747 rec9 0.808 rec8 0.569 b2b 0.498 | wrong third 0.29 largest 0.34
+all 0.625  beta 0.5 w 0.4  ord 0.648 rec9 0.730 rec8 0.494 b2b 0.572 | wrong third 0.26 largest 0.36
+all 0.594  beta 0.3 w 0.4  ord 0.628 rec9 0.730 rec8 0.439 b2b 0.526 | wrong third 0.21 largest 0.45
+all 0.570  beta 0.5 w 0.6  ord 0.618 rec9 0.808 rec8 0.485 b2b 0.437 | wrong third 0.19 largest 0.50
+all 0.541  beta 0.3 w 0.6  ord 0.563 rec9 0.808 rec8 0.428 b2b 0.451 | wrong third 0.17 largest 0.66
+all 0.525  beta 0.7 w 0.8  ord 0.580 rec9 0.877 rec8 0.510 b2b 0.339 | wrong third 0.13 largest 0.56
+all 0.485  beta 0.5 w 0.8  ord 0.525 rec9 0.877 rec8 0.419 b2b 0.330 | wrong third 0.12 largest 0.59
+all 0.437  beta 0.3 w 0.8  ord 0.485 rec9 0.877 rec8 0.363 b2b 0.263 | wrong third 0.10 largest 0.59

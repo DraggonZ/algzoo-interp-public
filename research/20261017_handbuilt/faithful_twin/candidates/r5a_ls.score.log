@@ -1,0 +1,70 @@
+== candidate candidates/r5a_ls.py   (list seed offset 0)
+
+1. Jobs checklist (same test on ARC and on the candidate)
+  PASS  store (2) follows the largest so far: correlation >= 0.9
+          ARC: 0.976
+          candidate: 0.995
+  PASS  new-largest (4) on at records >= 0.9, elsewhere <= 0.05
+          ARC: 0.999 / 0.012
+          candidate: 1.000 / 0.000
+  PASS  new-largest (4) size follows the amount beaten: correlation >= 0.75
+          ARC: 0.818
+          candidate: 0.835
+  PASS  keep gate (5): cut c in 0.6-0.85 x second-largest, agreement >= 0.85, on after records >= 0.9
+          ARC: c 0.75, agreement 0.978, after records 0.999
+          candidate: c 0.75, agreement 1.000, after records 1.000
+  PASS  late gate (9) on one step after a record >= 0.9, elsewhere <= 0.05
+          ARC: 0.982 / 0.006
+          candidate: 1.000 / 0.000
+  FAIL  late gate's push two steps after a record: on 1 and 6 >= 0.04 sd and >= 3x that on 7 and 8
+          ARC: 1:0.09 6:0.09 7:0.00 8:0.01
+          candidate: 1:0.00 6:0.00 7:0.00 8:0.00
+  PASS  hiding (1, 6, 7, 8) off at records >= 0.85, on elsewhere >= 0.65, reference = largest/second mix R2 >= 0.6
+          ARC: off 0.98 0.99 0.99 0.99; on 0.93 0.92 0.99 0.87; R2 0.66 0.69 0.94 0.68
+          candidate: off 1.00 1.00 1.00 1.00; on 1.00 1.00 1.00 0.83; R2 0.97 0.97 0.97 0.80
+  FAIL  hiding rebuilt each step: share of a 10% nudge at step 5 left at step 6, activity <= 0.3 and readout view <= 0.8
+          ARC: activity 0.208, readout view 0.727
+          candidate: activity 0.189, readout view 1.000
+  PASS  memory turns votes as a rotating code: push cosine >= 0.9 and >= 2 turning pairs (modulus >= 0.7)
+          ARC: cosine 0.985, turning pairs 3 (angles 38 84 127)
+          candidate: cosine 1.000, turning pairs 4 (angles 23 68 112 158)
+  PASS  memory 0, 11, 10 switch off at ages 2, 5, 6 of the largest (off >= 0.85 there, <= 0.30 elsewhere)
+          ARC: 0@2: 0.95/0.08  11@5: 0.91/0.02  10@6: 0.95/0.02
+          candidate: 0@2: 0.98/0.16  11@5: 1.00/0.13  10@6: 1.00/0.13
+  PASS  neuron 3 carries the gap: signs right in >= 75% of cells, median R2 of gap alone >= 0.1
+          ARC: signs 1.00, R2 0.138
+          candidate: signs 1.00, R2 0.384
+  PASS  blindness: recurrent rows outside the gates read hiding at right angles (median ratio <= 0.1)
+          ARC: median 0.004 (readout rows 0.024)
+          candidate: median 0.000 (readout rows 0.000)
+  jobs passed: 10 of 12 (ARC 12)
+
+2. Transplants: ARC's accuracy with one group's values replaced by the candidate's at every step (grid)
+  ARC alone                         95.23%
+  candidate alone (own readout)     93.29%
+  store and detector (2, 4)         85.37%
+  keep gate (5)                     77.09%
+  late gate (9)                     83.06%
+  hiding (1, 6, 7, 8)               23.39%
+  memory (0, 3, 10-15)              12.79%
+  mean over the five groups           56.34%
+
+3. Nudge battery: lead shift in units of the second's vote (median over lists)
+  memory x0.95 step 5, earlier minus later (2nd early)                     ARC   +0.036  candidate   +2.242
+  memory x1.05 step 5, earlier minus later (2nd early)                     ARC   -0.040  candidate   -2.242
+  memory x0.95 step 5, earlier minus later (3rd early)                     ARC   +0.021  candidate   +2.269
+  memory x1.05 step 5, earlier minus later (3rd early)                     ARC   -0.022  candidate   -2.270
+  store x1.01 step 5, earlier minus later (2nd early)                      ARC   +0.036  candidate   +0.023
+  store x1.01 step 5, earlier minus later (3rd early)                      ARC   +0.016  candidate   +0.016
+  keep x0.95 all steps, step-9 contender minus other (2nd at 9)            ARC   +0.013  candidate   +0.012
+  keep x1.05 all steps, step-9 contender minus other (2nd at 9)            ARC   -0.011  candidate   -0.012
+  keep x0.95 all steps, step-9 contender minus other (3rd at 9)            ARC   +0.015  candidate   +0.012
+  keep x1.05 all steps, step-9 contender minus other (3rd at 9)            ARC   -0.013  candidate   -0.011
+  hiding x0.9 step 5, largest minus second                                 ARC   +0.104  candidate   +0.156
+  hiding x0.8 step 5, largest minus second                                 ARC   +0.212  candidate   +0.313
+  same sign as ARC: 12 of 12; median size ratio 1.30
+
+4. Own accuracy (20 million lists) and close calls (secondary)
+  accuracy 90.26%   near ties (third within 5%): right 81.4%, third wins 11.5%  (ARC 77.3%, 20.8%)
+  redraw test (400 close calls x 40 backgrounds): answer depends on the background in 18.0% of lists; always right 55.0%, always third 4.0%
+SCORE jobs=10/12 transplant_mean=56.34 accuracy=90.26 working=yes

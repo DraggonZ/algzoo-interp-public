@@ -1,0 +1,6 @@
+v18 wave (45 deg + flip)            : accuracy 0.3299; shape at d = 0..4: +1.00 +0.14 +0.33 -0.80 -0.33
+45-degree pair alone                : accuracy 0.3379; shape at d = 0..4: +1.00 +0.71 +0.00 -0.71 -1.00
+sharp                               : accuracy 0.9904; shape at d = 0..4: +1.00 +0.00 +0.00 +0.00 +0.00
+v18 wave, positive part only        : accuracy 0.7298; shape at d = 0..4: +1.00 +0.14 +0.33 +0.00 +0.00
+45 + 90 + flip (two pairs + flip)   : accuracy 0.5324; shape at d = 0..4: +1.00 +0.08 -0.20 -0.48 +0.20
+45 + 90 + 135 + flip                : accuracy 0.9466; shape at d = 0..4: +1.00 -0.14 -0.14 -0.14 -0.14

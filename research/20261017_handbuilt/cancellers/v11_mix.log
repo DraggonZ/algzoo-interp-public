@@ -1,0 +1,5 @@
+clock value share 1.0          all 0.813 ord 0.979 rec9 0.880 rec8 0.769 b2b 0.498 | wrong: third 0.23 largest 0.01 onepos 0.05
+clock value share 0.7          all 0.524 ord 0.581 rec9 0.880 rec8 0.503 b2b 0.339 | wrong: third 0.13 largest 0.56 onepos 0.02
+clock value share 0.5          all 0.485 ord 0.526 rec9 0.880 rec8 0.413 b2b 0.329 | wrong: third 0.12 largest 0.59 onepos 0.02
+clock value share 0.3          all 0.437 ord 0.486 rec9 0.880 rec8 0.360 b2b 0.261 | wrong: third 0.10 largest 0.59 onepos 0.02
+clock value share 0.0          all 0.393 ord 0.456 rec9 0.880 rec8 0.324 b2b 0.188 | wrong: third 0.06 largest 0.83 onepos 0.02

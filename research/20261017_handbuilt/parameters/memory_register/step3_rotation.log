@@ -1,0 +1,10 @@
+ARC eigenvalues: [(np.float64(0.918), np.float64(180.0)), (np.float64(0.858), np.float64(126.6)), (np.float64(0.858), np.float64(-126.6)), (np.float64(0.996), np.float64(83.5)), (np.float64(0.996), np.float64(-83.5)), (np.float64(1.025), np.float64(0.0)), (np.float64(0.815), np.float64(38.3)), (np.float64(0.815), np.float64(-38.3))]
+ARC accuracy on these lists 0.9531
+  angles snapped to multiples of 42 deg                          KL 0.9657  accuracy 0.8386
+  only the 38 deg pair snapped to 42                             KL 0.9585  accuracy 0.8395
+  all shrink factors set to their mean                           KL 3.3698  accuracy 0.6245
+  rotating shrink factors set to their mean (0 and 180 deg kept) KL 1.8721  accuracy 0.7699
+  each angle +1 deg (sign kept)                                  KL 0.0685  accuracy 0.9377
+  each angle +0.25 deg                                           KL 0.0038  accuracy 0.9521
+  each shrink factor x1.01                                       KL 0.0303  accuracy 0.9454
+  each shrink factor x1.0025                                     KL 0.0018  accuracy 0.9523

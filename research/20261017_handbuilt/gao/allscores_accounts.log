@@ -1,0 +1,12 @@
+cancellers      ours       account             : measured 0.559; first order, all ten scores 0.398; predicted answer = actual answer on 0.595
+cancellers      misreading wave from m2        : measured 0.426; first order, all ten scores 0.288; predicted answer = actual answer on 0.626
+cancellers      misreading no wave             : measured 0.181; first order, all ten scores 0.098; predicted answer = actual answer on 0.798
+cancellers      misreading angle +20           : measured 0.386; first order, all ten scores 0.287; predicted answer = actual answer on 0.590
+store+detector  ours       account             : measured 0.851; first order, all ten scores 0.785; predicted answer = actual answer on 0.854
+store+detector  misreading store tracks second : measured 0.434; first order, all ten scores 0.397; predicted answer = actual answer on 0.368
+keep gate       ours       account             : measured 0.872; first order, all ten scores 0.867; predicted answer = actual answer on 0.961
+keep gate       misreading gate vs largest     : measured 0.667; first order, all ten scores 0.686; predicted answer = actual answer on 0.915
+memory          ours       account             : measured 0.509; first order, all ten scores 0.259; predicted answer = actual answer on 0.455
+memory          misreading keep above half     : measured 0.502; first order, all ten scores 0.257; predicted answer = actual answer on 0.454
+memory          misreading keep all            : measured 0.502; first order, all ten scores 0.259; predicted answer = actual answer on 0.458
+rank correlation 0.73; median |miss| 0.099

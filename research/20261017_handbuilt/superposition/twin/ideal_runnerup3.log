@@ -1,0 +1,8 @@
+theta 0.3, fading 1.0                    accuracy  95.6% | third wins 35.4% | maps    125 | tree 90.8% vs guess 64.6%,  74% of gain
+theta 0.3, fading 0.99                   accuracy  97.9% | third wins 21.0% | maps    125 | tree 87.3% vs guess 79.0%,  40% of gain
+theta 0.3, fading 0.98                   accuracy  96.6% | third wins 28.8% | maps    125 | tree 89.1% vs guess 71.2%,  62% of gain
+theta 0.3, fading 0.97                   accuracy  94.0% | third wins 36.5% | maps    125 | tree 92.0% vs guess 63.5%,  78% of gain
+theta 0.4, fading 1.0                    accuracy  94.2% | third wins 37.6% | maps    131 | tree 91.1% vs guess 62.4%,  76% of gain
+theta 0.4, fading 0.99                   accuracy  96.7% | third wins 30.1% | maps    131 | tree 85.8% vs guess 69.9%,  53% of gain
+theta 0.4, fading 0.98                   accuracy  96.9% | third wins 27.9% | maps    131 | tree 85.3% vs guess 72.1%,  47% of gain
+theta 0.4, fading 0.97                   accuracy  94.9% | third wins 34.8% | maps    131 | tree 88.5% vs guess 65.2%,  67% of gain

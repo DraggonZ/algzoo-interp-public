@@ -1,0 +1,18 @@
+network accuracy 0.9526200000000001
+pushes of the  1 largest only: accuracy 0.1637
+pushes of the  2 largest only: accuracy 0.9030
+pushes of the  3 largest only: accuracy 0.9084
+pushes of the  4 largest only: accuracy 0.9377
+pushes of the  5 largest only: accuracy 0.9478
+pushes of the  6 largest only: accuracy 0.9507
+pushes of the  7 largest only: accuracy 0.9518
+pushes of the  8 largest only: accuracy 0.9524
+pushes of the  9 largest only: accuracy 0.9529
+pushes of the 10 largest only: accuracy 0.9526
+
+second-minus-third margin, mean push by input rank (0 = largest):
+[ 11.5  51.1 -41.9   0.4  -0.    0.    0.    0.1   0.1   0.1]
+median |push| by rank: [ 3.8 47.4 30.3  0.4  0.1  0.1  0.1  0.1  0.2  0.3]
+
+lists answered 'third' (0.0299): mean push by rank
+[  2.1  61.9 -65.8   0.2   0.    0.   -0.   -0.   -0.1  -0.2]

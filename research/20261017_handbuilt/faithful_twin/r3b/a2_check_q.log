@@ -1,0 +1,4 @@
+Q vs g relu(s_prev - x): max abs error 9.098874115309741e-05
+keep gate on == (x >= 0.75 s_prev and x > 0): 1.0
+accuracy drop0: 0.85299  base r1a-3 rules: 0.914655  theta 0: 0.9225
+accuracy on lists whose second is not at position 0: 0.9471410645078899  share with second at 0: 0.09949

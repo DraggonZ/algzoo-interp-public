@@ -1,0 +1,19 @@
+neuron  0: measured loss 0.334; first-order predicted 0.243
+neuron  1: measured loss 0.315; first-order predicted 0.212
+neuron  2: measured loss 0.035; first-order predicted 0.058
+neuron  3: measured loss 0.068; first-order predicted 0.083
+neuron  4: measured loss 0.011; first-order predicted 0.009
+neuron  5: measured loss 0.097; first-order predicted 0.070
+neuron  6: measured loss 0.227; first-order predicted 0.160
+neuron  7: measured loss 0.501; first-order predicted 0.438
+neuron  8: measured loss 0.429; first-order predicted 0.260
+neuron  9: measured loss 0.268; first-order predicted 0.171
+neuron 10: measured loss 0.272; first-order predicted 0.184
+neuron 11: measured loss 0.231; first-order predicted 0.202
+neuron 12: measured loss 0.245; first-order predicted 0.228
+neuron 13: measured loss 0.056; first-order predicted 0.062
+neuron 14: measured loss 0.155; first-order predicted 0.168
+neuron 15: measured loss 0.167; first-order predicted 0.122
+single neurons: rank correlation 0.96 (p 0.0000); median |measured - predicted| 0.037
+the four cancelling neurons: measured loss 0.509; first-order predicted 0.423
+all 16: measured loss 0.387; first-order predicted 0.454

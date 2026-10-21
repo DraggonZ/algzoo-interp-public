@@ -1,0 +1,16 @@
+neuron 7: weight on the second-largest (b) and on the largest (a), by when the second arrived (rows) and the step (columns)
+  second at 1: t2: b  +0.1 a +13.3 | t3: b  -0.1 a +13.3 | t4: b  +1.1 a +11.6 | t5: b  +2.8 a  +9.7 | t6: b  +4.0 a  +8.6 | t7: b  +4.2 a  +8.8 | t8: b  +3.2 a +10.2 | t9: b  +1.6 a +11.8
+  second at 2: t3: b  +0.2 a +13.0 | t4: b  +2.2 a +11.2 | t5: b  +3.5 a  +9.2 | t6: b  +4.1 a  +8.2 | t7: b  +3.5 a  +8.6 | t8: b  +2.0 a +10.1 | t9: b  +0.7 a +11.8
+  second at 3: t4: b  +1.5 a +11.6 | t5: b  +3.2 a  +9.3 | t6: b  +4.1 a  +8.0 | t7: b  +3.8 a  +8.2 | t8: b  +2.5 a  +9.7 | t9: b  +0.9 a +11.7
+  second at 4: t5: b  +2.1 a  +9.4 | t6: b  +3.1 a  +8.2 | t7: b  +3.0 a  +8.4 | t8: b  +2.0 a  +9.9 | t9: b  +0.7 a +11.7
+  second at 5: t6: b  +0.5 a  +8.5 | t7: b  +0.8 a  +8.6 | t8: b  +0.5 a +10.0 | t9: b  +0.2 a +11.7
+  second at 6: t7: b  +0.3 a  +8.7 | t8: b  +0.3 a +10.1 | t9: b  -0.1 a +11.9
+  second at 7: t8: b  +0.1 a +10.2 | t9: b  +0.0 a +11.9
+neuron 8: weight on the second-largest (b) and on the largest (a), by when the second arrived (rows) and the step (columns)
+  second at 1: t2: b  +7.7 a  +4.1 | t3: b +10.6 a  +1.2 | t4: b +11.1 a  +1.7 | t5: b  +7.7 a  +6.1 | t6: b  +2.2 a +11.9 | t7: b  -2.5 a +15.9 | t8: b  -4.0 a +16.3 | t9: b  -2.2 a +13.3
+  second at 2: t3: b +11.6 a  -0.1 | t4: b  +9.3 a  +1.1 | t5: b  +4.1 a  +6.3 | t6: b  -0.7 a +12.6 | t7: b  -3.4 a +16.5 | t8: b  -2.9 a +16.3 | t9: b  +0.3 a +12.8
+  second at 3: t4: b +11.6 a  +0.0 | t5: b  +6.7 a  +4.8 | t6: b  +0.9 a +11.5 | t7: b  -2.8 a +16.4 | t8: b  -3.4 a +17.1 | t9: b  -0.8 a +13.9
+  second at 4: t5: b  +7.7 a  +5.1 | t6: b  +2.4 a +11.6 | t7: b  -1.4 a +16.2 | t8: b  -2.6 a +16.9 | t9: b  -1.0 a +13.7
+  second at 5: t6: b  +1.5 a +11.6 | t7: b  +0.0 a +15.9 | t8: b  +0.1 a +16.5 | t9: b  +1.1 a +13.6
+  second at 6: t7: b  -0.6 a +16.2 | t8: b  -1.1 a +16.6 | t9: b  +0.0 a +13.5
+  second at 7: t8: b  -0.4 a +16.5 | t9: b  -0.4 a +13.3

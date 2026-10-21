@@ -1,0 +1,16 @@
+ARC: error 4.617%  var 0.01035 (Bernoulli 0.04404)
+   line wrong share in (0,0.05]: 50.48% of lines,  17.9% of error,   1.9% of sum of squares
+   line wrong share in (0.05,0.2]: 20.61% of lines,  42.4% of error,  17.3% of sum of squares
+   line wrong share in (0.2,0.5]:  3.50% of lines,  22.2% of error,  25.7% of sum of squares
+   line wrong share in (0.5,0.999]:  0.60% of lines,   9.0% of error,  23.9% of sum of squares
+   line wrong share in (0.999,1.01]:  0.39% of lines,   8.4% of error,  31.2% of sum of squares
+   by largest's position, error share: 0:0.15 1:0.11 2:0.10 3:0.08 4:0.08 5:0.08 6:0.09 7:0.10 8:0.08 9:0.13
+   never-right lines by T: T<0:0.24 T<0.5:0.29 T<1:0.56
+114: error 9.971%  var 0.03131 (Bernoulli 0.08977)
+   line wrong share in (0,0.05]: 34.83% of lines,   7.4% of error,   0.6% of sum of squares
+   line wrong share in (0.05,0.2]: 31.53% of lines,  32.6% of error,   9.3% of sum of squares
+   line wrong share in (0.2,0.5]:  8.73% of lines,  26.4% of error,  20.5% of sum of squares
+   line wrong share in (0.5,0.999]:  2.64% of lines,  18.8% of error,  33.5% of sum of squares
+   line wrong share in (0.999,1.01]:  1.49% of lines,  14.9% of error,  36.1% of sum of squares
+   by largest's position, error share: 0:0.09 1:0.09 2:0.08 3:0.08 4:0.08 5:0.08 6:0.09 7:0.10 8:0.12 9:0.20
+   never-right lines by T: T<0:0.05 T<0.5:0.18 T<1:0.59

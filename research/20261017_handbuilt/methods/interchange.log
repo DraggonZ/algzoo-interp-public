@@ -1,0 +1,14 @@
+(1) Hand-built: copy timer copies from the donor just before the bigger number arrives
+  both copies (A and B)             : answer moves to the donor's position 0.72, stays 0.05
+  copy A only                       : answer moves to the donor's position 0.72, stays 0.05
+  copy B only                       : answer moves to the donor's position 0.00, stays 1.00
+(2) Hand-built: hold the new-second gate at zero one step after a later smaller number
+  vote for the later smaller number disappears in 33/36 lists (prediction: all)
+(3) ARC: at the step the bigger number arrives, copy neurons from the donor
+  zero background: the other twelve                  : answer moves to the donor's position 1.00, stays 0.00
+  zero background: neurons 1, 6, 7, 8                : answer moves to the donor's position 0.00, stays 1.00
+  zero background: random twelve #1                  : answer moves to the donor's position 0.59, stays 0.11
+  zero background: random twelve #2                  : answer moves to the donor's position 0.34, stays 0.28
+  zero background: random twelve #3                  : answer moves to the donor's position 0.50, stays 0.14
+  noisy background: the other twelve                  : answer moves to the donor's position 1.00, stays 0.00
+  noisy background: neurons 1, 6, 7, 8                : answer moves to the donor's position 0.00, stays 1.00

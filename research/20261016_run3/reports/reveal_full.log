@@ -1,0 +1,6 @@
+example: new largest -> old largest's slot: 0.745; new second -> newest slot: 0.760 | within 0.1 of a tie: new largest 0.777, new second 0.746
+0: new largest -> old largest's slot: 0.653; new second -> newest slot: 0.580 | within 0.1 of a tie: new largest 0.672, new second 0.525
+1: new largest -> old largest's slot: 0.499; new second -> newest slot: 0.713 | within 0.1 of a tie: new largest 0.476, new second 0.657
+2: new largest -> old largest's slot: 0.730; new second -> newest slot: 0.762 | within 0.1 of a tie: new largest 0.748, new second 0.746
+3: new largest -> old largest's slot: 0.732; new second -> newest slot: 0.739 | within 0.1 of a tie: new largest 0.626, new second 0.679
+4: new largest -> old largest's slot: 0.672; new second -> newest slot: 0.652 | within 0.1 of a tie: new largest 0.656, new second 0.547

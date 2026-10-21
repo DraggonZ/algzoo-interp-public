@@ -1,0 +1,3 @@
+ARC (trained)                names the third on 20.8% of near ties (always-guess 79.2%) | held-out accuracy by tree size (numbers: %): 2: 79.3 | 80: 79.3 | 400: 80.7 | 1600: 82.3 | 25200: 86.3
+hand-built v19 (16 neurons)  names the third on 7.1% of near ties (always-guess 92.9%) | held-out accuracy by tree size (numbers: %): 2: 92.8 | 80: 93.0 | 400: 96.8 | 1600: 99.3 | 25200: 99.4
+hand-built v21 (28 neurons)  names the third on 7.4% of near ties (always-guess 92.6%) | held-out accuracy by tree size (numbers: %): 2: 92.6 | 80: 92.6 | 400: 94.0 | 1600: 98.4 | 25200: 98.9

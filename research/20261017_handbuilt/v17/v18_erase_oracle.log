@@ -1,0 +1,26 @@
+base                           all 0.914 | onepos 0.101 last 0.761 step8 0.876 row 0.976 ord 0.936 | wrong: third 0.44 largest 0.01 onepos 0.11
+k0 0 e 0.5                     all 0.833 | onepos 0.101 last 0.681 step8 0.682 row 0.890 ord 0.877 | wrong: third 0.27 largest 0.42 onepos 0.06
+k0 0 e 1.0                     all 0.799 | onepos 0.101 last 0.579 step8 0.605 row 0.868 ord 0.857 | wrong: third 0.19 largest 0.34 onepos 0.05
+k0 1 e 0.5                     all 0.874 | onepos 0.101 last 0.694 step8 0.757 row 0.912 ord 0.926 | wrong: third 0.40 largest 0.05 onepos 0.08
+k0 1 e 1.0                     all 0.818 | onepos 0.101 last 0.581 step8 0.644 row 0.868 ord 0.885 | wrong: third 0.29 largest 0.03 onepos 0.05
+k0 2 e 0.5                     all 0.874 | onepos 0.101 last 0.694 step8 0.757 row 0.912 ord 0.926 | wrong: third 0.40 largest 0.05 onepos 0.08
+k0 2 e 1.0                     all 0.818 | onepos 0.101 last 0.581 step8 0.644 row 0.868 ord 0.885 | wrong: third 0.29 largest 0.03 onepos 0.05
+only the number right after a record:
+  k0 0 e 0.5                   all 0.845 | onepos 0.101 last 0.738 step8 0.702 row 0.912 ord 0.874 | wrong: third 0.20 largest 0.62 onepos 0.06
+  k0 0 e 1.0                   all 0.844 | onepos 0.101 last 0.715 step8 0.702 row 0.912 ord 0.876 | wrong: third 0.11 largest 0.68 onepos 0.06
+  k0 1 e 0.5                   all 0.917 | onepos 0.101 last 0.764 step8 0.879 row 0.939 ord 0.959 | wrong: third 0.33 largest 0.01 onepos 0.12
+  k0 1 e 1.0                   all 0.885 | onepos 0.101 last 0.680 step8 0.797 row 0.912 ord 0.942 | wrong: third 0.19 largest 0.01 onepos 0.09
+  ideal (vote only)            all 0.979 | onepos 0.101 last 0.888 step8 1.000 row 0.999 ord 1.000 | wrong: third 0.36 largest 0.04 onepos 0.46
+gated, wave centred at the record (k0 = -1 from y), and forward-only variants:
+  k0 -1 e 0.3 both             all 0.841 | onepos 0.101 last 0.725 step8 0.698 row 0.911 ord 0.871 | wrong: third 0.23 largest 0.54 onepos 0.06
+  k0 -1 e 0.3 fwd              all 0.817 | onepos 0.101 last 0.811 step8 0.921 row 0.767 ord 0.837 | wrong: third 0.16 largest 0.69 onepos 0.05
+  k0 -1 e 0.6 both             all 0.843 | onepos 0.101 last 0.704 step8 0.703 row 0.913 ord 0.876 | wrong: third 0.18 largest 0.66 onepos 0.06
+  k0 -1 e 0.6 fwd              all 0.805 | onepos 0.101 last 0.863 step8 0.975 row 0.710 ord 0.824 | wrong: third 0.08 largest 0.84 onepos 0.05
+  k0 -1 e 1.0 both             all 0.840 | onepos 0.101 last 0.680 step8 0.702 row 0.913 ord 0.876 | wrong: third 0.13 largest 0.68 onepos 0.06
+  k0 -1 e 1.0 fwd              all 0.749 | onepos 0.101 last 0.877 step8 0.987 row 0.670 ord 0.732 | wrong: third 0.03 largest 0.91 onepos 0.04
+  k0 1 e 0.3 both              all 0.916 | onepos 0.101 last 0.765 step8 0.875 row 0.955 ord 0.950 | wrong: third 0.47 largest 0.01 onepos 0.12
+  k0 1 e 0.3 fwd               all 0.872 | onepos 0.101 last 0.809 step8 0.921 row 0.846 ord 0.903 | wrong: third 0.26 largest 0.48 onepos 0.08
+  k0 1 e 0.6 both              all 0.910 | onepos 0.101 last 0.741 step8 0.862 row 0.931 ord 0.956 | wrong: third 0.27 largest 0.01 onepos 0.11
+  k0 1 e 0.6 fwd               all 0.887 | onepos 0.101 last 0.850 step8 0.973 row 0.842 ord 0.916 | wrong: third 0.19 largest 0.54 onepos 0.09
+  k0 1 e 1.0 both              all 0.885 | onepos 0.101 last 0.680 step8 0.797 row 0.912 ord 0.942 | wrong: third 0.19 largest 0.01 onepos 0.09
+  k0 1 e 1.0 fwd               all 0.880 | onepos 0.101 last 0.849 step8 0.982 row 0.827 ord 0.908 | wrong: third 0.13 largest 0.49 onepos 0.08

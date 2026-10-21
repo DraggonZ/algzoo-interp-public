@@ -1,0 +1,16 @@
+neuron 0: off 0.25; by step: [0.5  0.32 0.38 0.29 0.23 0.2  0.16 0.14 0.13 0.12]
+   by age of the largest (-1 = no positive yet, 0 = record now): ['-1:0.75', '0:0.16', '1:0.01', '2:1.00', '3:0.00', '4:0.00', '5:0.00', '6:0.00', '7:0.00', '8:0.01', '9:0.07']
+   off when new largest now: 0.16; otherwise 0.28
+   off when new largest one step ago: 0.00; otherwise 0.31
+   off when input negative: 0.32; otherwise 0.18
+   mean contribution when off (by source neuron): [  0.73   7.47  -2.39   0.04   0.    -7.75   7.63 -11.12  -6.2   -1.75   3.8    1.65   1.88   0.3    3.27   0.01]
+   mean contribution when on:                      [ 0.9   5.81 -2.53  0.04  1.23 -1.11 11.11 -9.1  -6.99 -0.06  3.04  1.    1.28  0.39  3.47  0.02]
+   input term when off -0.02, on 0.01
+neuron 15: off 0.27; by step: [0.5  0.21 0.01 0.21 0.5  0.52 0.33 0.2  0.14 0.1 ]
+   by age of the largest (-1 = no positive yet, 0 = record now): ['-1:0.00', '0:0.47', '1:0.14', '2:0.31', '3:0.44', '4:0.44', '5:0.24', '6:0.01', '7:0.00', '8:0.00', '9:0.00']
+   off when new largest now: 0.47; otherwise 0.22
+   off when new largest one step ago: 0.14; otherwise 0.31
+   off when input negative: 0.19; otherwise 0.35
+   mean contribution when off (by source neuron): [  0.9    4.84   5.98   0.52   0.09  -2.71   3.55  -2.06  -5.88  -0.08 -17.12  12.64  -1.15  -2.99   0.83   0.18]
+   mean contribution when on:                      [ 1.61  6.03  5.35  0.85  0.35 -1.74  3.4  -1.98 -6.32 -0.06 -9.36  8.9  -1.53 -2.4   1.23  0.75]
+   input term when off -0.03, on 0.01

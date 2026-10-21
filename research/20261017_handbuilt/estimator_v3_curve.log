@@ -1,0 +1,10 @@
+K=720 G=7 steps=12: cost  69120 runs; miss 0.84 pts; sampling at that cost 0.10; squared-error ratio 69.9
+K=720 G=3 steps=10: cost  28800 runs; miss 1.06 pts; sampling at that cost 0.16; squared-error ratio 46.9
+K=720 G=2 steps= 8: cost  17280 runs; miss 1.31 pts; sampling at that cost 0.20; squared-error ratio 42.8
+K=240 G=3 steps= 8: cost   7680 runs; miss 1.25 pts; sampling at that cost 0.30; squared-error ratio 17.3
+K=240 G=2 steps= 7: cost   5040 runs; miss 1.47 pts; sampling at that cost 0.37; squared-error ratio 15.8
+K=120 G=2 steps= 7: cost   2520 runs; miss 1.37 pts; sampling at that cost 0.52; squared-error ratio 6.8
+K= 72 G=2 steps= 7: cost   1512 runs; miss 1.49 pts; sampling at that cost 0.68; squared-error ratio 4.8
+K= 72 G=1 steps= 7: cost   1008 runs; miss 1.60 pts; sampling at that cost 0.83; squared-error ratio 3.7
+K= 36 G=1 steps= 6: cost    432 runs; miss 2.26 pts; sampling at that cost 1.27; squared-error ratio 3.2
+K= 12 G=1 steps= 6: cost    144 runs; miss 2.74 pts; sampling at that cost 2.19; squared-error ratio 1.6

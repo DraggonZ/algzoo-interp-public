@@ -1,0 +1,10 @@
+max first (45 pairs):
+  change from adding the second: size in comparing view 53.9, in other view 45.9, median corr -0.36
+  points at second's position: comparing view 9, other view 25, both 44
+  final state: size comparing view 95.4, other view 101.1, sum 47.9
+  final other view alone points at second: 7; final comparing view's minimum at second: 0
+2nd first (45 pairs):
+  change from adding the second: size in comparing view 67.5, in other view 85.9, median corr -0.73
+  points at second's position: comparing view 0, other view 16, both 28
+  final state: size comparing view 75.7, other view 82.8, sum 68.5
+  final other view alone points at second: 7; final comparing view's minimum at second: 0

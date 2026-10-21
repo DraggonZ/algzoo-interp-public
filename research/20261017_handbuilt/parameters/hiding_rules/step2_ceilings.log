@@ -1,0 +1,5 @@
+store/detector rule vs ARC: rms error store 1.470 (ARC rms 19.65), detector 0.320
+neuron 1 (account 1.846): (i) store+det exact: rms 2.084, acc 0.615; (ii) store+det by their rule: rms 2.006, acc 0.628; (iii) + hiding previous exact: rms 0.579, acc 0.815; (iv) + gates exact: rms 0.527, acc 0.857
+neuron 6 (account 1.968): (i) store+det exact: rms 0.956, acc 0.816; (ii) store+det by their rule: rms 1.133, acc 0.784; (iii) + hiding previous exact: rms 0.542, acc 0.877; (iv) + gates exact: rms 0.544, acc 0.887
+neuron 7 (account 0.628): (i) store+det exact: rms 0.914, acc 0.763; (ii) store+det by their rule: rms 0.918, acc 0.645; (iii) + hiding previous exact: rms 0.641, acc 0.723; (iv) + gates exact: rms 0.638, acc 0.723
+neuron 8 (account 2.133): (i) store+det exact: rms 2.254, acc 0.620; (ii) store+det by their rule: rms 2.073, acc 0.646; (iii) + hiding previous exact: rms 0.687, acc 0.836; (iv) + gates exact: rms 0.710, acc 0.831

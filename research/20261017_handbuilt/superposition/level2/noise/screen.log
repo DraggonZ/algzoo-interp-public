@@ -1,0 +1,83 @@
+200 copies at s = 0.0025: true accuracy mean 90.34, SD 3.26 (constant guess RMSE 3.26)
+
+One quantity at a time (clean value; change's SD across copies; cross-validated quadratic fit):
+  hiding: shrink of the rotating pair                        clean     0.937  SD of change   0.0026  RMSE 3.26 points, correlation 0.088
+  hiding: rotation angle                                     clean    42.563  SD of change   0.1707  RMSE 3.16 points, correlation 0.265
+  hiding: size of the dying pair                             clean     0.043  SD of change   0.0194  RMSE 3.27 points, correlation 0.076
+  comparator 1: gain                                         clean    10.565  SD of change   0.0025  RMSE 3.30 points, correlation -0.073
+  comparator 6: gain                                         clean    10.996  SD of change   0.0026  RMSE 3.34 points, correlation -0.316
+  comparator 7: gain                                         clean    13.169  SD of change   0.0024  RMSE 3.29 points, correlation -0.025
+  comparator 8: gain                                         clean    12.312  SD of change   0.0024  RMSE 3.30 points, correlation -0.183
+  store: leak (self-weight)                                  clean     0.969  SD of change   0.0023  RMSE 3.29 points, correlation -0.078
+  store: ratio per unit of the largest                       clean    17.579  SD of change   0.0238  RMSE 3.30 points, correlation -0.138
+  detector: threshold (fraction of the stored largest)       clean     0.852  SD of change   0.0044  RMSE 3.29 points, correlation -0.024
+  store: residue of the old largest after a jump             clean     0.117  SD of change   0.0048  RMSE 3.29 points, correlation 0.030
+  comparator 1: store's share of reference                   clean     0.838  SD of change   0.0042  RMSE 3.27 points, correlation 0.105
+  comparator 6: store's share of reference                   clean     0.855  SD of change   0.0042  RMSE 3.31 points, correlation -0.170
+  comparator 7: store's share of reference                   clean     0.899  SD of change   0.0035  RMSE 3.27 points, correlation 0.112
+  comparator 8: store's share of reference                   clean     0.893  SD of change   0.0038  RMSE 3.29 points, correlation -0.116
+  memory: eigenvalue 1 size                                  clean     1.025  SD of change   0.0030  RMSE 3.31 points, correlation -0.187
+  memory: eigenvalue 1 angle                                 clean     0.000  SD of change   0.0000  RMSE 3.28 points, correlation -0.229
+  memory: eigenvalue 2 size                                  clean     0.996  SD of change   0.0024  RMSE 3.29 points, correlation -0.025
+  memory: eigenvalue 2 angle                                 clean    83.509  SD of change   0.1195  RMSE 3.32 points, correlation -0.246
+  memory: eigenvalue 3 size                                  clean     0.996  SD of change   0.0024  RMSE 3.29 points, correlation -0.025
+  memory: eigenvalue 3 angle                                 clean    83.509  SD of change   0.1195  RMSE 3.32 points, correlation -0.246
+  memory: eigenvalue 4 size                                  clean     0.918  SD of change   0.0040  RMSE 3.29 points, correlation -0.047
+  memory: eigenvalue 4 angle                                 clean   180.000  SD of change   0.0000  RMSE 3.28 points, correlation -0.229
+  memory: eigenvalue 5 size                                  clean     0.858  SD of change   0.0034  RMSE 3.30 points, correlation -0.106
+  memory: eigenvalue 5 angle                                 clean   126.568  SD of change   0.2074  RMSE 3.31 points, correlation -0.282
+  memory: eigenvalue 6 size                                  clean     0.858  SD of change   0.0034  RMSE 3.30 points, correlation -0.106
+  memory: eigenvalue 6 angle                                 clean   126.568  SD of change   0.2074  RMSE 3.31 points, correlation -0.282
+  memory: eigenvalue 7 size                                  clean     0.815  SD of change   0.0020  RMSE 3.30 points, correlation -0.114
+  memory: eigenvalue 7 angle                                 clean    38.262  SD of change   0.1534  RMSE 3.29 points, correlation -0.063
+  memory: eigenvalue 8 size                                  clean     0.815  SD of change   0.0020  RMSE 3.30 points, correlation -0.114
+  memory: eigenvalue 8 angle                                 clean    38.262  SD of change   0.1534  RMSE 3.29 points, correlation -0.063
+  late gate: off-switch from the largest's comparator        clean    -5.032  SD of change   0.0022  RMSE 3.30 points, correlation -0.133
+  late gate: push on comparator 1                            clean    -0.065  SD of change   0.0002  RMSE 3.31 points, correlation -0.239
+  late gate: push on comparator 6                            clean    -0.058  SD of change   0.0003  RMSE 3.32 points, correlation -0.232
+  late gate: push on comparator 7                            clean     0.000  SD of change   0.0002  RMSE 3.29 points, correlation -0.092
+  late gate: push on comparator 8                            clean    -0.006  SD of change   0.0002  RMSE 3.30 points, correlation -0.090
+  late gate: memory read (sum of weights)                    clean     0.098  SD of change   0.0069  RMSE 3.29 points, correlation 0.009
+  comparator 1: threshold near switching                     clean     0.671  SD of change   0.0076  RMSE 3.18 points, correlation 0.256
+  comparator 1: level per unit of largest                    clean     0.787  SD of change   0.0072  RMSE 3.17 points, correlation 0.257
+  comparator 6: threshold near switching                     clean     0.636  SD of change   0.0063  RMSE 3.31 points, correlation -0.075
+  comparator 6: level per unit of largest                    clean     0.764  SD of change   0.0074  RMSE 3.31 points, correlation -0.078
+  comparator 7: threshold near switching                     clean     0.945  SD of change   0.0056  RMSE 3.07 points, correlation 0.346
+  comparator 7: level per unit of largest                    clean     0.957  SD of change   0.0055  RMSE 3.08 points, correlation 0.336
+  comparator 8: threshold near switching                     clean     0.481  SD of change   0.0058  RMSE 3.27 points, correlation 0.068
+  comparator 8: level per unit of largest                    clean     0.599  SD of change   0.0062  RMSE 3.27 points, correlation 0.082
+  memory 0: level per unit of largest                        clean     5.765  SD of change   0.0769  RMSE 3.27 points, correlation 0.052
+  memory 3: level per unit of largest                        clean     2.040  SD of change   0.0758  RMSE 3.32 points, correlation -0.305
+  memory 10: level per unit of largest                       clean    12.402  SD of change   0.0844  RMSE 3.24 points, correlation 0.132
+  memory 11: level per unit of largest                       clean     9.431  SD of change   0.0741  RMSE 3.27 points, correlation 0.048
+  memory 12: level per unit of largest                       clean     8.218  SD of change   0.0762  RMSE 3.31 points, correlation -0.067
+  memory 13: level per unit of largest                       clean     5.949  SD of change   0.0788  RMSE 3.32 points, correlation -0.152
+  memory 14: level per unit of largest                       clean     9.496  SD of change   0.0819  RMSE 3.30 points, correlation -0.112
+  memory 15: level per unit of largest                       clean     2.871  SD of change   0.0728  RMSE 3.32 points, correlation -0.236
+  store: level per unit of largest                           clean    17.416  SD of change   0.0777  RMSE 3.25 points, correlation 0.124
+
+Forward selection (quadratic in the chosen quantities, 10-fold cross-validated):
+  1 quantities, 3 fitted numbers, + comparator 7: threshold near switching: RMSE 3.07 points, correlation 0.346
+      same model on s = 0.001 copies (no refit): RMSE 3.33 points, correlation 0.235; constant guess 0.56
+      same model on s = 0.005 copies (no refit): RMSE 8.56 points, correlation 0.493; constant guess 6.19
+  2 quantities, 6 fitted numbers, + comparator 6: threshold near switching: RMSE 2.68 points, correlation 0.572
+      same model on s = 0.001 copies (no refit): RMSE 3.08 points, correlation 0.377; constant guess 0.56
+      same model on s = 0.005 copies (no refit): RMSE 9.86 points, correlation 0.495; constant guess 6.19
+  3 quantities, 10 fitted numbers, + comparator 1: level per unit of largest: RMSE 2.18 points, correlation 0.746
+      same model on s = 0.001 copies (no refit): RMSE 2.79 points, correlation 0.473; constant guess 0.56
+      same model on s = 0.005 copies (no refit): RMSE 8.87 points, correlation 0.648; constant guess 6.19
+  4 quantities, 15 fitted numbers, + comparator 8: level per unit of largest: RMSE 2.02 points, correlation 0.788
+      same model on s = 0.001 copies (no refit): RMSE 2.22 points, correlation 0.559; constant guess 0.56
+      same model on s = 0.005 copies (no refit): RMSE 7.37 points, correlation 0.739; constant guess 6.19
+  5 quantities, 21 fitted numbers, + store: level per unit of largest: RMSE 1.88 points, correlation 0.818
+      same model on s = 0.001 copies (no refit): RMSE 1.91 points, correlation 0.573; constant guess 0.56
+      same model on s = 0.005 copies (no refit): RMSE 6.91 points, correlation 0.781; constant guess 6.19
+  6 quantities, 28 fitted numbers, + memory 10: level per unit of largest: RMSE 1.69 points, correlation 0.857
+      same model on s = 0.001 copies (no refit): RMSE 1.79 points, correlation 0.676; constant guess 0.56
+      same model on s = 0.005 copies (no refit): RMSE 6.63 points, correlation 0.795; constant guess 6.19
+  7 quantities, 36 fitted numbers, + comparator 8: threshold near switching: RMSE 1.57 points, correlation 0.880
+      same model on s = 0.001 copies (no refit): RMSE 1.63 points, correlation 0.695; constant guess 0.56
+      same model on s = 0.005 copies (no refit): RMSE 6.89 points, correlation 0.809; constant guess 6.19
+  8 quantities, 45 fitted numbers, + comparator 7: store's share of reference: RMSE 1.51 points, correlation 0.889
+      same model on s = 0.001 copies (no refit): RMSE 1.60 points, correlation 0.702; constant guess 0.56
+      same model on s = 0.005 copies (no refit): RMSE 7.15 points, correlation 0.802; constant guess 6.19

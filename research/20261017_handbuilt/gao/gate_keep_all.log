@@ -1,0 +1,5 @@
+neuron 5 one step after a kept number ~ 11.51 x + -6.80 m2 (R2 0.757); base accuracy 0.954
+forgotten numbers per list: 0.98
+forgotten numbers kept with share 0.25: accuracy 0.949
+forgotten numbers kept with share 0.5: accuracy 0.890
+forgotten numbers kept with share 1.0: accuracy 0.745

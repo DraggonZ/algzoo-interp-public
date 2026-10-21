@@ -1,0 +1,12 @@
+example: detector n4, comparing [1, 6, 7, 8, 14]; margin right slot minus slot 9: median 17.6, positive in 1.00
+   comparing (negative input weight) : median -4.2; the margin would stay positive without this part in 1.00
+   new-largest detector              : median +18.3; the margin would stay positive without this part in 0.30
+   the rest                          : median +3.7; the margin would stay positive without this part in 0.79
+2: detector n15, comparing [0, 3, 6]; margin right slot minus slot 9: median 292.4, positive in 1.00
+   comparing (negative input weight) : median +0.0; the margin would stay positive without this part in 1.00
+   new-largest detector              : median +312.1; the margin would stay positive without this part in 0.00
+   the rest                          : median -20.3; the margin would stay positive without this part in 1.00
+3: detector n9, comparing [0, 1, 3, 14]; margin right slot minus slot 9: median 4.7, positive in 1.00
+   comparing (negative input weight) : median +0.0; the margin would stay positive without this part in 1.00
+   new-largest detector              : median +8.5; the margin would stay positive without this part in 0.00
+   the rest                          : median -2.1; the margin would stay positive without this part in 1.00

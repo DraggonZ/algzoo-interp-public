@@ -1,0 +1,8 @@
+r4a-1 (detector writes backward wave): accuracy 97.80, late gate silenced 98.62
+    commonest pattern 12% of steps, off: ['detect']; turning modes: 20deg|4.00|part -0.00
+late gate writes backward wave: accuracy 97.59, late gate silenced 78.69
+    commonest pattern 12% of steps, off: ['detect']; turning modes: 20deg|4.00|part -0.00
+  + ring w 0.07: accuracy 83.34, late gate silenced 74.91
+    commonest pattern 12% of steps, off: ['detect']; turning modes: 157deg|0.71|part 1.00, 113deg|0.71|part 1.00, 68deg|0.71|part 1.00, 23deg|0.71|part 1.00, 20deg|4.00|part -0.00
+  + ring w 0.07, spread lam 1e6: accuracy 82.19, late gate silenced 76.22
+    commonest pattern 45% of steps, off: ['detect', 'keep', 'late']; turning modes: 22deg|0.71|part 1.00, 67deg|0.71|part 1.00, 112deg|0.71|part 1.00, 157deg|0.71|part 1.00, 20deg|4.00|part 0.00

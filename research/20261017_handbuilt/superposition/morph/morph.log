@@ -1,0 +1,6 @@
+216,200 right near ties; flipped to the third within 300 steps: 37.5%; median morph length 0.377 x second
+mean morph by offset from the second: -9:-0.060 -8:-0.049 -7:-0.042 -6:-0.023 -5:+0.005 -4:+0.021 -3:+0.038 -2:+0.056 -1:+0.064 +1:+0.052 +2:-0.101 +3:-0.169 +4:-0.185 +5:-0.030 +6:+0.011 +7:+0.072 +8:-0.103 +9:-0.187
+mean morph by offset from the third: -9:+0.032 -8:+0.036 -7:+0.032 -6:+0.019 -5:-0.016 -4:-0.038 -3:-0.053 -2:-0.074 -1:-0.119 +1:-0.090 +2:+0.031 +3:+0.094 +4:+0.094 +5:-0.024 +6:-0.079 +7:-0.125 +8:+0.080 +9:+0.129
+mean morph by offset from the largest: -9:+0.008 -8:+0.000 -7:+0.008 -6:+0.008 -5:+0.008 -4:+0.001 -3:-0.008 -2:-0.006 -1:-0.016 +1:-0.043 +2:-0.020 +3:-0.047 +4:-0.053 +5:-0.043 +6:-0.029 +7:-0.027 +8:-0.026 +9:-0.044
+share of the morph's length on numbers before vs after the earlier contender: before 0.23, between 0.37, after 0.40
+661 arrangements: split-half cosine of mean morphs median 0.97 (10-90%: 0.85-1.00); mean cosine between single morphs median 0.26

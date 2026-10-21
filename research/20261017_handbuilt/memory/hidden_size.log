@@ -1,0 +1,4 @@
+record at 2, trained: hidden: memory share largest |value| over 0-8   67.79, total largest |value|  16.72 | overtaken at 5: vote at r  46.46 | ratio hidden memory / vote    1.5
+record at 2, v18    : hidden: memory share largest |value| over 0-8   10.25, total largest |value|   0.00 | overtaken at 5: vote at r   0.25 | ratio hidden memory / vote   41.0
+record at 5, trained: hidden: memory share largest |value| over 0-8   69.27, total largest |value|  10.29 | overtaken at 8: vote at r  60.97 | ratio hidden memory / vote    1.1
+record at 5, v18    : hidden: memory share largest |value| over 0-8   10.25, total largest |value|   0.00 | overtaken at 8: vote at r   0.25 | ratio hidden memory / vote   41.0

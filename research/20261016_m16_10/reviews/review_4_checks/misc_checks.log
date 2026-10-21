@@ -1,0 +1,25 @@
+M16,4 bo5 identical to seed 0: False
+M16,4 bo5 identical to seed 1: False
+M16,4 bo5 identical to seed 2: False
+M16,4 bo5 identical to seed 3: True
+M16,4 bo5 identical to seed 4: False
+M16,4 full: counted 1.631e+08 = 141588 samples; simplicial pieces 216599, non-simplicial cones 21285 (= qhull calls); uncounted Gram/det/SVD about 3.32e+07 = 28797 samples (+20%)
+M16,4 prune 3e-6: counted 7.299e+07 = 63358 samples; simplicial pieces 45583, non-simplicial cones 2803 (= qhull calls); uncounted Gram/det/SVD about 6.55e+06 = 5688 samples (+9%)
+M16,4 prune 1e-5: counted 6.013e+07 = 52193 samples; simplicial pieces 35856, non-simplicial cones 2030 (= qhull calls); uncounted Gram/det/SVD about 5.11e+06 = 4435 samples (+8%)
+budgeted mode, trained seeds (prune_seeds.py settings):
+  seed 0 prune 3e-06: truth 0.9978724 error +7.736e-05 cost 69407 sampling RMSE 1.749e-04 ratio 0.196
+  seed 0 prune 1e-05: truth 0.9978724 error +1.424e-04 cost 55126 sampling RMSE 1.962e-04 ratio 0.527
+  seed 1 prune 3e-06: truth 0.9977275 error +7.599e-05 cost 69850 sampling RMSE 1.802e-04 ratio 0.178
+  seed 1 prune 1e-05: truth 0.9977275 error +1.569e-04 cost 57441 sampling RMSE 1.987e-04 ratio 0.624
+  seed 2 prune 3e-06: truth 0.9978031 error +9.363e-05 cost 82262 sampling RMSE 1.632e-04 ratio 0.329
+  seed 2 prune 1e-05: truth 0.9978031 error +1.840e-04 cost 64509 sampling RMSE 1.843e-04 ratio 0.996
+  seed 3 prune 3e-06: truth 0.9983072 error +5.738e-05 cost 63358 sampling RMSE 1.633e-04 ratio 0.123
+  seed 3 prune 1e-05: truth 0.9983072 error +1.139e-04 cost 52193 sampling RMSE 1.799e-04 ratio 0.400
+  seed 4 prune 3e-06: truth 0.9972773 error +9.718e-05 cost 68622 sampling RMSE 1.989e-04 ratio 0.239
+  seed 4 prune 1e-05: truth 0.9972773 error +1.800e-04 cost 54385 sampling RMSE 2.234e-04 ratio 0.649
+near-tie zero rule σ=0.005: RMSE 0.0145, cost 13058, squared-error ratio 35.0
+near-tie zero rule σ=0.01: RMSE 0.0283, cost 13014, squared-error ratio 67.6
+near-tie zero rule σ=0.02: RMSE 0.0535, cost 12686, squared-error ratio 162.8
+near-tie zero rule pooled 96: RMSE 0.0359, cost 12920, ratio 109.8
+near-tie check: linear width infinite (zeroed by the post-hoc rule) on 0.0202 of case mass; of that, scan also fails over the whole 4-unit range 0.00, scan finds a finite band 0.99, scan zero 0.00
+near-tie check: both widths zero on 0.537 of case mass

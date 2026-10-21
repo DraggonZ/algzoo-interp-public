@@ -1,0 +1,22 @@
+ARC
+  L@0 S@1 T@6 (0 before): sd 1.212  R2 linear 0.41  linear+relu 0.61  record-before 0.00  both 0.61
+  L@7 S@5 T@6 (5 before): sd 1.520  R2 linear 0.29  linear+relu 0.61  record-before 0.55  both 0.65
+  L@6 S@2 T@3 (2 before): sd 1.267  R2 linear 0.81  linear+relu 0.84  record-before 0.11  both 0.84
+  L@6 S@7 T@1 (1 before): sd 1.341  R2 linear 0.30  linear+relu 0.47  record-before 0.00  both 0.47
+  L@9 S@3 T@8 (3 before): sd 2.988  R2 linear 0.19  linear+relu 0.49  record-before 0.24  both 0.53
+  L@9 S@5 T@3 (3 before): sd 1.941  R2 linear 0.43  linear+relu 0.67  record-before 0.35  both 0.69
+  L@8 S@7 T@6 (6 before): sd 1.946  R2 linear 0.23  linear+relu 0.49  record-before 0.55  both 0.63
+  L@8 S@5 T@6 (5 before): sd 0.972  R2 linear 0.40  linear+relu 0.50  record-before 0.25  both 0.55
+  L@7 S@0 T@9 (0 before): sd 2.927  R2 linear 0.16  linear+relu 0.35  record-before 0.00  both 0.35
+  L@3 S@1 T@2 (1 before): sd 0.657  R2 linear 0.57  linear+relu 0.65  record-before 0.24  both 0.65
+114
+  L@0 S@1 T@6 (0 before): sd 1.533  R2 linear 0.48  linear+relu 0.85  record-before -0.00  both 0.85
+  L@7 S@5 T@6 (5 before): sd 1.035  R2 linear 0.53  linear+relu 0.59  record-before 0.36  both 0.65
+  L@6 S@2 T@3 (2 before): sd 0.687  R2 linear 0.58  linear+relu 0.58  record-before 0.53  both 0.72
+  L@6 S@7 T@1 (1 before): sd 1.045  R2 linear 0.29  linear+relu 0.56  record-before 0.06  both 0.56
+  L@9 S@3 T@8 (3 before): sd 1.095  R2 linear 0.16  linear+relu 0.46  record-before 0.12  both 0.48
+  L@9 S@5 T@3 (3 before): sd 1.171  R2 linear 0.25  linear+relu 0.30  record-before 0.07  both 0.31
+  L@8 S@7 T@6 (6 before): sd 1.000  R2 linear 0.57  linear+relu 0.61  record-before 0.27  both 0.67
+  L@8 S@5 T@6 (5 before): sd 0.765  R2 linear 0.33  linear+relu 0.39  record-before 0.21  both 0.43
+  L@7 S@0 T@9 (0 before): sd 1.005  R2 linear 0.27  linear+relu 0.47  record-before 0.00  both 0.47
+  L@3 S@1 T@2 (1 before): sd 0.765  R2 linear 0.29  linear+relu 0.32  record-before 0.00  both 0.32

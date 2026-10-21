@@ -1,0 +1,5 @@
+broken 6054  fixed 631
+  broken: names the largest 23%, offset named - second: -7:452 -6:530 -5:611 -4:754 -3:883 -2:1123 -1:1543
+  broken lists where the final largest is followed at once by the new second: 73% (all lists: 18%)
+  broken by position of the largest: 0:1404 1:1128 2:904 3:794 4:671 5:590 6:507 7:53 8:1 9:2
+  broken by second - largest position: 1:5796

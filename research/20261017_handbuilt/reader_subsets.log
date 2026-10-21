@@ -1,0 +1,8 @@
+all 16                                           (16 inputs): 2.45% error
+without 1, 6, 7, 8                               (12 inputs): 7.13% error
+only 1, 6, 7, 8                                  ( 4 inputs): 54.16% error
+without 2 and 4 (largest so far)                 (14 inputs): 2.87% error
+without 5 (gate)                                 (15 inputs): 4.59% error
+without 3                                        (15 inputs): 2.84% error
+without 9                                        (15 inputs): 2.51% error
+dial plane (2 numbers) + 1, 6, 7, 8 + 4, 5, 9    ( 9 inputs): 15.69% error

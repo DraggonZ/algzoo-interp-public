@@ -1,0 +1,52 @@
+bins of number / second-largest before it: 0-0.25, 0.25-0.5, 0.5-0.6, 0.6-0.7, 0.7-0.8, 0.8-0.9, 0.9-1.0
+ARC     acc 0.954:  0.02  0.02  0.02  0.02  0.40  0.98  1.00
+zoo0    acc 0.911:  1.04  1.04  1.04  1.04  1.03  1.03  1.00
+zoo1    acc 0.882:  0.98  0.99  0.99  0.99  0.99  1.00  1.00
+zoo2    acc 0.949:  0.03  0.03  0.03  0.24  0.83  0.92  1.00
+zoo3    acc 0.933:  0.04  0.92  0.96  0.96  0.97  0.98  1.00
+zoo4    acc 0.889:  1.00  1.00  1.00  1.00  1.00  1.00  1.00
+new100  acc 0.949:  0.04  0.97  1.00  1.00  1.00  1.00  1.00
+new101  acc 0.913:  1.00  1.00  1.00  1.00  1.00  1.00  1.00
+new102  acc 0.913:  0.13  0.92  1.00  1.00  1.02  1.00  1.00
+new103  acc 0.954:  0.04  0.04  0.88  0.94  0.95  0.97  1.00
+new104  acc 0.911:  1.00  1.00  1.00  1.00  1.00  1.00  1.00
+new105  acc 0.899:  0.82  1.08  1.09  1.09  1.08  1.06  1.00
+new106  acc 0.949:  0.03  0.03  0.03  0.03  0.86  0.94  1.00
+new107  acc 0.922:  0.98  0.98  0.99  0.99  0.99  0.99  1.00
+new108  acc 0.939:  0.27  0.89  0.98  0.99  0.99  0.99  1.00
+new109  acc 0.940:  1.00  1.00  1.00  1.00  1.00  1.00  1.00
+new110  acc 0.912:  0.09  0.84  0.90  0.92  0.94  0.96  1.00
+new111  acc 0.961:  0.06  0.06  0.06  0.06  0.08  0.93  1.00
+new112  acc 0.915:  0.97  0.97  0.95  0.95  0.94  0.95  1.00
+new113  acc 0.904:  0.18  0.19  0.75  0.95  0.98  0.99  1.00
+new114  acc 0.898:  1.09  1.23  1.23  1.11  1.11  1.04  1.00
+new115  acc 0.952:  0.05  0.05  0.05  0.05  0.06  0.84  1.00
+
+forgetting cutoff (upper edge of the highest bin moving under 0.3 of the 0.9-1.0 bin):
+  new111  cutoff 0.80 acc 0.961
+  new115  cutoff 0.80 acc 0.952
+  ARC     cutoff 0.70 acc 0.954
+  zoo2    cutoff 0.70 acc 0.949
+  new106  cutoff 0.70 acc 0.949
+  new103  cutoff 0.50 acc 0.954
+  new113  cutoff 0.50 acc 0.904
+  zoo3    cutoff 0.25 acc 0.933
+  new100  cutoff 0.25 acc 0.949
+  new102  cutoff 0.25 acc 0.913
+  new108  cutoff 0.25 acc 0.939
+  new110  cutoff 0.25 acc 0.912
+  zoo0    cutoff 0.00 acc 0.911
+  zoo1    cutoff 0.00 acc 0.882
+  zoo4    cutoff 0.00 acc 0.889
+  new101  cutoff 0.00 acc 0.913
+  new104  cutoff 0.00 acc 0.911
+  new105  cutoff 0.00 acc 0.899
+  new107  cutoff 0.00 acc 0.922
+  new109  cutoff 0.00 acc 0.940
+  new112  cutoff 0.00 acc 0.915
+  new114  cutoff 0.00 acc 0.898
+rank correlation of cutoff with accuracy over 22 networks: 0.74 (p 0.0001)
+never forget (cutoff 0): 10 networks, accuracy mean 0.908 range 0.882-0.940
+cutoff >= 0.6: 5 networks, mean 0.953 range 0.949-0.961
+cutoff 0.25-0.5: 7 networks, mean 0.929
+Mann-Whitney forgetters (any cutoff) vs never: p 0.0036

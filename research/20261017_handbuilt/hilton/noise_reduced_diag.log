@@ -1,0 +1,5 @@
+median smallest lead: full 8.15, reduced 8.31
+median noise size of the smallest lead per unit sigma: full 575.3, reduced 541.6
+sigma 0.005: true 0.908 | D full C full 0.910 | D reduced C reduced 0.917 | D reduced C full 0.909 | D full C reduced 0.915
+sigma 0.01: true 0.813 | D full C full 0.817 | D reduced C reduced 0.835 | D reduced C full 0.821 | D full C reduced 0.828
+sigma 0.02: true 0.643 | D full C full 0.650 | D reduced C reduced 0.683 | D reduced C full 0.665 | D full C reduced 0.666

@@ -1,0 +1,9 @@
+all hiding       neurons [np.int64(4), np.int64(5), np.int64(6), np.int64(7), np.int64(15), np.int64(18), np.int64(19)]: activity 0.206, readout view 0.856
+slot 1 only      neurons [np.int64(19)]: activity 0.000, readout view 0.337
+slot 6 only      neurons [np.int64(18)]: activity 0.000, readout view 0.000
+slot 7 only      neurons [np.int64(4), np.int64(5), np.int64(6), np.int64(7)]: activity 0.000, readout view 0.708
+slot 8 only      neurons [np.int64(15)]: activity 0.206, readout view 0.141
+readout view at step 6, slot 1's part: median norm 1.4912 (all hiding 3.7187)
+readout view at step 6, slot 6's part: median norm 0.0000 (all hiding 3.7187)
+readout view at step 6, slot 7's part: median norm 2.8895 (all hiding 3.7187)
+readout view at step 6, slot 8's part: median norm 0.8583 (all hiding 3.7187)

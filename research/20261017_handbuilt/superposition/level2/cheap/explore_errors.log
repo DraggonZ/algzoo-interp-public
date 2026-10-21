@@ -1,0 +1,8 @@
+accuracy 0.9530739
+largest: 0.950% of lists; S<0 share 0.24
+   gap quantiles [1.000e-03 4.000e-03 1.300e-02 6.500e-02 5.070e-01 1.758e+00]  rel gap [1.1000e-02 3.8360e+00 4.2552e+01]
+third: 2.981% of lists; S<0 share 0.04
+   gap quantiles [0.003 0.007 0.02  0.047 0.108 0.381]  rel gap [0.026 0.184 2.771]
+other: 0.762% of lists; S<0 share 0.65
+   gap quantiles [0.01  0.028 0.074 0.159 0.269 0.529]  rel gap [ 0.481  4.607 41.946]
+P(S<0) 0.0107221 acc given S<0 0.2199755644882999

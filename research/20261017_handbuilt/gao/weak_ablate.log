@@ -1,0 +1,25 @@
+trained: accuracy 0.954
+   zero activations below 0.001 x the neuron's typical value: 0.005 of entries zeroed, accuracy 0.953, agree 1.000
+   zero activations below 0.010 x the neuron's typical value: 0.023 of entries zeroed, accuracy 0.953, agree 0.996
+   zero activations below 0.030 x the neuron's typical value: 0.044 of entries zeroed, accuracy 0.940, agree 0.977
+   zero activations below 0.100 x the neuron's typical value: 0.082 of entries zeroed, accuracy 0.862, agree 0.887
+   below 0.1 in store+detector : accuracy 0.953
+   below 0.1 in cancellers     : accuracy 0.953
+   below 0.1 in keep gate      : accuracy 0.954
+   below 0.1 in late gate      : accuracy 0.954
+   below 0.1 in memory         : accuracy 0.953
+   below 0.3 in store+detector : accuracy 0.953
+   below 0.3 in cancellers     : accuracy 0.949
+   below 0.3 in keep gate      : accuracy 0.954
+   below 0.3 in late gate      : accuracy 0.953
+   below 0.3 in memory         : accuracy 0.951
+   below 1.0 in store+detector : accuracy 0.941
+   below 1.0 in cancellers     : accuracy 0.910
+   below 1.0 in keep gate      : accuracy 0.952
+   below 1.0 in late gate      : accuracy 0.935
+   below 1.0 in memory         : accuracy 0.908
+v18: accuracy 0.960
+   zero activations below 0.001 x the neuron's typical value: 0.001 of entries zeroed, accuracy 0.959, agree 0.997
+   zero activations below 0.010 x the neuron's typical value: 0.002 of entries zeroed, accuracy 0.950, agree 0.984
+   zero activations below 0.030 x the neuron's typical value: 0.005 of entries zeroed, accuracy 0.930, agree 0.957
+   zero activations below 0.100 x the neuron's typical value: 0.014 of entries zeroed, accuracy 0.855, agree 0.865

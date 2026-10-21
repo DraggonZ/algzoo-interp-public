@@ -1,0 +1,26 @@
+base +172.5
+(a) c=0.03: net +180.3 gain 1.022
+(a) c=0.05: net +183.5 gain 1.025
+(a) c=0.07: net +185.2 gain 1.027
+(a) c=0.10: net +185.1 gain 1.031
+(a) c=0.12: net +183.4 gain 1.034
+(a) c=0.15: net +178.5 gain 1.038
+(a) c=0.20: net +164.8 gain 1.045
+iterated rows' sum vs row 0: cos 0.15, |sum|/|row0| 2.07
+ARC rows sum |.|/|row0| 0.181
+0 iterated vs ARC rel err 0.00
+1 iterated vs ARC rel err 0.18
+2 iterated vs ARC rel err 0.24
+3 iterated vs ARC rel err 0.23
+4 iterated vs ARC rel err 0.36
+5 iterated vs ARC rel err 0.53
+6 iterated vs ARC rel err 0.58
+7 iterated vs ARC rel err 0.61
+8 iterated vs ARC rel err 0.73
+9 iterated vs ARC rel err 1.08
+(b) d x 0.5: net +144.8 gain 0.837
+(b) d x 1.0: net +75.3 gain 0.657
+mean residual cos row0 -0.86, |mean|/|row0| 0.114
+per-row coeff on row 0: [-0.126 -0.03  -0.016  0.01  -0.034 -0.159 -0.218 -0.209]
+cos(d, mean residual) 0.41
+mean residual (unpriced ceiling): +188.6

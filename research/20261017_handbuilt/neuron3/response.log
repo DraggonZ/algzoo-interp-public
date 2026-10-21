@@ -1,0 +1,61 @@
+first-order change vs actual S3 change (centred per list): correlation 0.83; sizes (std) 7.1 vs 5.5
+
+first-order: mean push towards s-1 minus own, and towards s+1 minus own, by position of the second (rows) for second after / before the largest
+  s=0: after largest    nan    nan   before largest    nan   -0.8
+  s=1: after largest    4.8    3.1   before largest    0.2   -0.7
+  s=2: after largest    0.3   -1.0   before largest    0.2    0.3
+  s=3: after largest    1.3   -0.2   before largest   -0.2   -0.2
+  s=4: after largest   -1.4   -2.2   before largest    1.0    0.2
+  s=5: after largest   -0.2   -0.7   before largest    1.5    0.7
+  s=6: after largest   -1.8   -2.3   before largest    2.3    0.5
+  s=7: after largest   -1.6   -1.9   before largest    1.8    0.2
+  s=8: after largest   -1.8   -0.2   before largest    0.7   -0.1
+  s=9: after largest   -1.6    nan   before largest    nan    nan
+
+actual: mean push towards s-1 minus own, and towards s+1 minus own, by position of the second (rows) for second after / before the largest
+  s=0: after largest    nan    nan   before largest    nan   -1.0
+  s=1: after largest    5.9    7.7   before largest    2.4   -0.7
+  s=2: after largest    2.6    3.2   before largest    2.3    0.4
+  s=3: after largest    2.0    2.2   before largest    1.7    0.1
+  s=4: after largest    1.3    0.8   before largest    3.0    1.2
+  s=5: after largest    0.6    1.1   before largest    2.7    1.6
+  s=6: after largest    0.0   -1.3   before largest    3.2    0.2
+  s=7: after largest    0.5   -1.0   before largest    3.0    0.4
+  s=8: after largest   -0.8   -0.1   before largest    0.9   -0.1
+  s=9: after largest   -0.7    nan   before largest    nan    nan
+
+first-order push towards s-1 minus own, split by the step t whose write is removed (columns t=1..9), rows = s, second after the largest
+  s=1: [ 0.  -0.3  0.3  0.8  0.2  0.2  0.8  1.8  1. ]
+  s=2: [-0.   0.3  0.1  0.   0.   0.   0.1  0.1 -0.4]
+  s=3: [ 0.   1.5  0.1  0.2 -0.5 -0.3  0.   0.2  0. ]
+  s=4: [-0.  -1.6  0.9 -0.1  0.2 -0.6 -0.1  0.1 -0. ]
+  s=5: [ 0.   0.5 -0.5  0.  -0.  -0.  -0.7  0.4  0.1]
+  s=6: [-0.  -0.4 -0.1 -0.2 -0.5 -0.2 -0.2 -0.4  0.2]
+  s=7: [ 0.   0.1 -0.2 -0.1 -0.5 -0.5  0.  -0.2 -0. ]
+  s=8: [ 0.  -0.1  0.1 -0.2 -0.4 -0.2 -0.8 -0.1 -0. ]
+
+same, second before the largest
+  s=1: [-0.   0.  -0.6 -0.4 -0.   0.2  0.2  0.8  0. ]
+  s=2: [-0.  -0.1 -0.  -0.1 -0.1 -0.   0.1  0.1  0.4]
+  s=3: [ 0.  -0.2 -0.1 -0.  -0.   0.1 -0.1  0.2  0. ]
+  s=4: [-0.   0.8  0.  -0.2 -0.   0.   0.4 -0.  -0. ]
+  s=5: [ 0.  -0.2  0.3  0.1 -0.1  0.   0.7  0.7  0. ]
+  s=6: [ 0.   0.1  0.1  0.1  0.2 -0.1  0.   1.5  0.4]
+  s=7: [ 0.   0.1  0.1  0.   0.2  0.3 -0.1 -0.   1.2]
+  s=8: [ 0.   0.1 -0.1  0.1  0.1  0.1  0.3 -0.   0. ]
+
+mean deviation D - cell mean, by step, for second after / before the largest:
+  after : [ 0.  -0.   0.5  0.3  0.4  0.6  0.8  0.7  0.5  0.2]
+  before: [ 0.   0.  -0.4 -0.3 -0.4 -0.7 -0.8 -0.7 -0.5 -0.2]
+
+landing of a unit write into neuron 3 at step t (mean G[t,k,3]); rows t, columns k
+[[ 0.1  0.1 -0.  -0.1  0.   0.  -0.  -0.  -0.  -0. ]
+ [-0.3 -0.   0.5 -0.2  0.  -0.1  0.1  0.1 -0.  -0. ]
+ [-0.2 -0.2 -0.1  0.6 -0.2  0.1 -0.1  0.1  0.1 -0. ]
+ [ 0.9 -0.2 -0.1 -0.   0.3 -0.1 -0.1 -0.3 -0.1 -0.3]
+ [-0.1  0.7 -0.2 -0.3  0.1  0.1 -0.   0.  -0.2 -0.2]
+ [-0.2 -0.1  0.8 -0.1 -0.3  0.   0.   0.  -0.  -0.1]
+ [-0.3 -0.2 -0.1  1.1 -0.2 -0.2  0.1 -0.1  0.  -0.2]
+ [-0.1 -0.3 -0.3 -0.2  1.2 -0.2 -0.2  0.2 -0.  -0.1]
+ [ 1.5 -0.2 -0.4 -0.4 -0.5  1.6 -0.4 -0.5 -0.1 -0.5]
+ [ 0.6  1.5 -0.4 -0.5 -0.4 -0.8  1.5 -0.5 -0.5 -0.5]]

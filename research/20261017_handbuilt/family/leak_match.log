@@ -1,0 +1,13 @@
+ARC: |effect| per unit: positive before L 0.103, after L 0.039, negative 0.007
+s 0.0: positive before L 0.018, after L 0.000, negative 0.000
+s 0.02: positive before L 0.028, after L 0.007, negative 0.003
+s 0.05: positive before L 0.042, after L 0.017, negative 0.007
+s 0.1: positive before L 0.066, after L 0.035, negative 0.014
+s 0.2: positive before L 0.115, after L 0.069, negative 0.028
+network                               acc ARC mistakes: all     L     T | near ties, third wins: all | by x_L/x_S <1.1 1.1-1.25 1.25-1.5 1.5-2 2-3 >3 | by order LST LTS SLT TLS STL TSL
+v19 + leak s 0.0                   95.07%              7.2%  0.5%  5.7% |   7.2% |    7    7    7    7    7    8 |    0    0    0    1   42    1
+v19 + leak s 0.02                  86.35%             13.7%  4.9% 15.6% |  16.7% |   15   15   16   16   18   26 |   13   10    7   21   37   11
+v19 + leak s 0.05                  84.70%             19.2%  5.9% 23.6% |  27.3% |   24   26   26   27   29   36 |   26   23   15   39   40   20
+v19 + leak s 0.1                   82.25%             23.3%  6.5% 29.6% |  34.3% |   31   33   34   35   36   40 |   37   32   21   49   42   26
+v19 + leak s 0.2                   78.00%             26.2%  7.2% 33.8% |  37.2% |   33   36   38   38   39   39 |   42   37   24   53   39   29
+5 trained (family)                 95.82%             26.4% 25.5% 28.0% |  20.9% |   23   19   19   20   22   29 |   26   18   24   20   18   21

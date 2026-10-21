@@ -1,0 +1,33 @@
+1,599,475 lists (second was a record at 1-8, overtaken later); right 95.7%
+overtaken 1 step(s) later (n 356,561): readout at the second's position R and neighbours, mean: [R-1, R, R+1] and margin R over the larger neighbour
+   store         -3.30    +1.47    +5.51
+   detector      -1.67    +3.49    +5.27
+   late gate     +0.16    -0.14    -0.56
+   hiding       +11.92   -13.46   -28.08
+   memory        +0.44   +37.83   +35.60
+   all           +7.56   +29.20   +17.74
+   margin median +7.30
+overtaken 2 step(s) later (n 310,423): readout at the second's position R and neighbours, mean: [R-1, R, R+1] and margin R over the larger neighbour
+   store         -6.32    -0.45    +9.26
+   detector      -1.45    -1.49    -0.39
+   late gate     +0.65    +0.15    +0.07
+   hiding       +32.85   +10.63   -12.04
+   memory       -15.54   +21.66   +12.88
+   all          +10.18   +30.49    +9.77
+   margin median +15.10
+overtaken 3 step(s) later (n 267,087): readout at the second's position R and neighbours, mean: [R-1, R, R+1] and margin R over the larger neighbour
+   store        -12.26    -3.30    +8.84
+   detector      -1.20    -1.49    -1.53
+   late gate     +0.55    +0.68    +0.15
+   hiding       +40.54   +30.92    +8.91
+   memory       -16.71    +2.65    -3.85
+   all          +10.92   +29.46   +12.52
+   margin median +12.73
+overtaken 5 step(s) later (n 177,594): readout at the second's position R and neighbours, mean: [R-1, R, R+1] and margin R over the larger neighbour
+   store        -22.12   -14.29    +3.55
+   detector      -0.37    -1.30    -1.92
+   late gate     +0.20    +0.37    +0.78
+   hiding       +14.02   +30.58   +39.14
+   memory       +20.03   +16.02   -25.55
+   all          +11.76   +31.36   +15.99
+   margin median +12.43

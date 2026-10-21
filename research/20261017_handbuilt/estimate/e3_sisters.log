@@ -1,0 +1,36 @@
+ ARC: truth 95.32, network here 95.31; canon -1.47, gtab -1.93, rtab -1.47
+ 100: truth 94.81, network here 94.78; canon -1.97, gtab -2.15, rtab -0.52
+ 101: truth 91.34, network here 91.33; canon -7.40, gtab -6.40, rtab -2.06
+ 102: truth 91.25, network here 91.25; canon -7.10, gtab -4.85, rtab -4.32
+ 103: truth 95.32, network here 95.29; canon -1.84, gtab -1.96, rtab -0.97
+ 104: truth 91.23, network here 91.22; canon -10.74, gtab -10.90, rtab -1.79
+ 105: truth 89.86, network here 89.85; canon -1.58, gtab +0.00, rtab +0.17
+ 106: truth 94.84, network here 94.82; canon -5.21, gtab -5.19, rtab -4.24
+ 107: truth 92.13, network here 92.15; canon -8.67, gtab -8.22, rtab -0.68
+ 108: truth 93.86, network here 93.86; canon -6.01, gtab -3.54, rtab -3.35
+ 109: truth 94.05, network here 94.03; canon -8.63, gtab -9.74, rtab -3.11
+ 110: truth 91.18, network here 91.24; canon -2.89, gtab -2.49, rtab -1.38
+ 111: truth 96.00, network here 96.01; canon -0.55, gtab -0.63, rtab -0.58
+ 112: truth 91.46, network here 91.41; canon -2.45, gtab -1.91, rtab +0.07
+ 113: truth 90.44, network here 90.41; canon -1.76, gtab -2.75, rtab -2.71
+ 114: truth 89.79, network here 89.78; canon -14.61, gtab -10.08, rtab -0.58
+ 115: truth 95.20, network here 95.23; canon -2.62, gtab -2.38, rtab -1.91
+ 200: truth 93.24, network here 93.19; canon -0.95, gtab -1.16, rtab -0.94
+ 201: truth 94.38, network here 94.39; canon -0.96, gtab -0.88, rtab -0.78
+ 202: truth 89.72, network here 89.70; canon -3.27, gtab -2.42, rtab -3.40
+ 203: truth 89.88, network here 89.88; canon -2.24, gtab -2.24, rtab -1.80
+ 204: truth 88.93, network here 88.95; canon -4.81, gtab -2.98, rtab +0.29
+ 205: truth 93.62, network here 93.61; canon +0.48, gtab +0.75, rtab +0.73
+ 206: truth 91.29, network here 91.30; canon -3.87, gtab -4.44, rtab -4.02
+ 207: truth 91.14, network here 91.13; canon -8.30, gtab -5.42, rtab -0.19
+ 208: truth 84.03, network here 84.02; canon -0.55, gtab -2.49, rtab -1.85
+ 209: truth 95.89, network here 95.87; canon -2.92, gtab -1.93, rtab -0.79
+ 210: truth 96.15, network here 96.13; canon -4.94, gtab -3.00, rtab -1.08
+ 211: truth 93.47, network here 93.48; canon -8.87, gtab -8.55, rtab -0.90
+ 212: truth 84.53, network here 84.56; canon -2.95, gtab -1.29, rtab +0.35
+ 213: truth 93.89, network here 93.87; canon -0.82, gtab -1.19, rtab -0.76
+ 214: truth 94.84, network here 94.78; canon -3.54, gtab -4.24, rtab -2.66
+ 215: truth 92.60, network here 92.54; canon -4.45, gtab -4.18, rtab -1.48
+canon: ARC -1.47; sisters mean -4.28, RMSE 5.48, worst -14.61
+gtab: ARC -1.93; sisters mean -3.71, RMSE 4.75, worst -10.90
+rtab: ARC -1.47; sisters mean -1.48, RMSE 2.01, worst -4.32

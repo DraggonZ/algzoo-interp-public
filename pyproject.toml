@@ -1,0 +1,21 @@
+[project]
+name = "algzoo"
+version = "0.1.0"
+description = "Interpreting ARC's AlgZoo RNNs and estimating their accuracy from the weights"
+requires-python = ">=3.11"
+dependencies = ["numpy", "scipy", "torch"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+markers = ["gpu: needs CUDA"]
+
+[tool.ruff]
+line-length = 120

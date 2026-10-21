@@ -1,0 +1,4 @@
+trained as is          accuracy 0.953 | r1 q4: own   34.5, after q   -27.0 | r2 q5: own   29.2, after q    -3.0 | r2 q7: own   48.5, after q    -1.9 | r4 q7: own   44.1, after q    19.3
+neuron 0 unclipped     accuracy 0.762 | r1 q4: own   48.0, after q   -25.3 | r2 q5: own   41.6, after q    -7.6 | r2 q7: own   55.3, after q    -0.4 | r4 q7: own   56.6, after q    20.2
+neuron 15 unclipped    accuracy 0.880 | r1 q4: own   41.7, after q   -39.7 | r2 q5: own   32.4, after q     0.3 | r2 q7: own   46.2, after q    -2.1 | r4 q7: own   49.3, after q    29.4
+all memory unclipped   accuracy 0.442 | r1 q4: own   46.2, after q   -35.8 | r2 q5: own   41.9, after q     3.4 | r2 q7: own   66.9, after q    -1.4 | r4 q7: own   62.7, after q    36.3

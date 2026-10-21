@@ -1,0 +1,5 @@
+predicted tolerance (deg) quantiles 10/25/50/75%: [0.4  0.89 1.86 4.73]
+share of lists whose tolerance is below 0.5 deg: 0.127
+share of lists whose tolerance is below 1 deg: 0.285
+share of lists whose tolerance is below 5 deg: 0.759
+share of the four's push on the lead in the plane of worst turning, median |d_C||h_C| / lead: 30.8

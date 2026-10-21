@@ -1,0 +1,29 @@
+
+kept second-largest: per unit, margin over the earlier and later neighbour (all paths | hiding-difference path)
+  s=1: own-(s-1)   -3.6 |   -7.4     own-(s+1)   12.1 |   33.5     n=1702
+  s=2: own-(s-1)    3.5 |  -33.7     own-(s+1)   17.1 |    6.8     n=3357
+  s=3: own-(s-1)    9.0 |  -19.6     own-(s+1)   18.2 |   -3.0     n=4963
+  s=4: own-(s-1)   17.1 |  -14.2     own-(s+1)   22.6 |   -6.9     n=6599
+  s=5: own-(s-1)   24.1 |  -13.0     own-(s+1)   24.6 |   -9.3     n=8275
+  s=6: own-(s-1)   32.3 |  -11.3     own-(s+1)   26.5 |  -10.4     n=9870
+  s=7: own-(s-1)   33.1 |   -0.3     own-(s+1)   26.1 |    0.9     n=11864
+  s=8: own-(s-1)   33.9 |    0.0     own-(s+1)   50.5 |    0.0     n=13252
+  s=9: own-(s-1)   25.8 |    0.0     own-(s+1)    nan |    nan     n=15039
+
+revealed second-largest: per unit, margin over the earlier and later neighbour (all paths | hiding-difference path)
+  s=0: own-(s-1)    nan |    nan     own-(s+1)    7.4 |  -13.0     n=14793
+  s=1: own-(s-1)   20.2 |  -22.2     own-(s+1)    7.4 |  -23.4     n=13156
+  s=2: own-(s-1)   18.3 |  -11.3     own-(s+1)    9.3 |  -11.5     n=11752
+  s=3: own-(s-1)   18.7 |  -18.1     own-(s+1)    9.3 |  -10.7     n=9778
+  s=4: own-(s-1)   19.2 |  -19.4     own-(s+1)    8.0 |  -11.7     n=8323
+  s=5: own-(s-1)   15.4 |  -22.9     own-(s+1)    9.0 |  -13.5     n=6560
+  s=6: own-(s-1)   11.3 |  -26.4     own-(s+1)   16.2 |  -12.3     n=5019
+  s=7: own-(s-1)   17.3 |   -8.9     own-(s+1)    4.2 |    0.2     n=3305
+  s=8: own-(s-1)   18.2 |   -0.0     own-(s+1)  -54.2 |   -0.0     n=1610
+
+new mistakes (network right, variant wrong): share naming the position one earlier, one later, the largest
+  S3 per-cell mean         acc  78.0  new mistakes  36852: one earlier   32%  one later   14%  the largest   22%
+  S4 largest only          acc  84.9  new mistakes  23075: one earlier   31%  one later   14%  the largest   24%
+  S7 second-largest only   acc  76.9  new mistakes  39091: one earlier   34%  one later   15%  the largest   23%
+  S1 gap formula           acc  92.6  new mistakes   7800: one earlier   31%  one later    8%  the largest   39%
+  network's own mistakes: one earlier   12%  one later    9%

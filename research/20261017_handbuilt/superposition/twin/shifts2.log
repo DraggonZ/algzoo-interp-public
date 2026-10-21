@@ -1,0 +1,58 @@
+lead shift, in units of the second’s vote (median)                                   ARC              U1      U1 keep.25 U1 keep.25 fade
+memory x0.95 step 5, earlier minus later (2nd early)                              +0.036          +0.044          +0.044          +0.044
+memory x1.05 step 5, earlier minus later (2nd early)                              -0.040          -0.044          -0.044          -0.044
+memory x0.95 step 5, earlier minus later (3rd early)                              +0.021          +0.137          +0.137          +0.137
+memory x1.05 step 5, earlier minus later (3rd early)                              -0.022          -0.137          -0.137          -0.137
+store x1.01 step 5, earlier minus later (2nd early)                               +0.036          +0.012          +0.012          +0.012
+store x1.01 step 5, earlier minus later (3rd early)                               +0.016          +0.012          +0.012          +0.012
+keep x0.95 all steps, step-9 contender minus other (2nd at 9)                     +0.013          +0.024          +0.012          +0.012
+keep x1.05 all steps, step-9 contender minus other (2nd at 9)                     -0.011          -0.024          -0.012          -0.012
+keep x0.95 all steps, step-9 contender minus other (3rd at 9)                     +0.015          +0.025          +0.012          +0.012
+keep x1.05 all steps, step-9 contender minus other (3rd at 9)                     -0.013          -0.025          -0.012          -0.012
+hiding x0.9 step 5, largest minus second                                          +0.104          +0.185          +0.185          +0.185
+hiding x0.8 step 5, largest minus second                                          +0.212          +0.370          +0.369          +0.369
+U1: same sign 100%; median ratio of sizes 1.76; per test 1.2 1.1 6.4 6.1 0.3 0.7 1.9 2.2 1.6 1.9 1.8 1.7
+U1 keep.25: same sign 100%; median ratio of sizes 1.12; per test 1.2 1.1 6.4 6.1 0.3 0.7 0.9 1.1 0.8 1.0 1.8 1.7
+U1 keep.25 fade: same sign 100%; median ratio of sizes 1.12; per test 1.2 1.1 6.4 6.1 0.3 0.7 0.9 1.1 0.8 1.0 1.8 1.7
+test                                                                             ARC          U1  U1 keep.25U1 keep.25 fade
+near tie, step 5, 2nd early: earlier wins                                       72.5       100.0       100.0       100.0
+  memory x0.95 at step 5 (2nd early)                                            80.2        99.0        99.0        99.0
+  memory x1.05 at step 5 (2nd early)                                            55.7        56.3        56.3        56.3
+near tie, step 5, 3rd early: earlier wins                                       24.9        39.5        39.5        39.5
+  memory x0.95 at step 5 (3rd early)                                            43.9        79.1        79.1        79.1
+  memory x1.05 at step 5 (3rd early)                                            10.4        34.3        34.3        34.3
+near tie, step 7, 2nd early: earlier wins                                       71.6       100.0       100.0       100.0
+  memory x0.95 at step 7 (2nd early)                                            85.2        98.4        98.5        98.5
+  memory x1.05 at step 7 (2nd early)                                            47.2        22.1        22.1        22.1
+near tie, step 7, 3rd early: earlier wins                                       20.0         0.0         0.0         0.0
+  memory x0.95 at step 7 (3rd early)                                            43.0        77.0        77.0        77.0
+  memory x1.05 at step 7 (3rd early)                                             8.9         0.0         0.0         0.0
+near tie, largest and 2nd early by step 3, other after 5: earlier wins          75.2       100.0       100.0       100.0
+  store x1.01 at step 5 (2nd early)                                             84.8       100.0       100.0       100.0
+  largest's value x0.9 (2nd early)                                              62.9        83.5        83.5        83.5
+  largest's value x1.1 (2nd early)                                              76.0       100.0       100.0       100.0
+near tie, largest and 3rd early by step 3, other after 5: earlier wins          27.7        31.7        31.7        31.7
+  store x1.01 at step 5 (3rd early)                                             39.2        55.5        55.5        55.5
+  largest's value x0.9 (3rd early)                                              32.3        39.3        39.3        39.3
+  largest's value x1.1 (3rd early)                                              31.1        31.2        31.2        31.2
+near tie, 2nd at step 9: it wins                                                79.9        99.0        99.0        99.0
+  keep gate x0.95, all steps (2nd at 9)                                         84.6        99.0        99.0        99.0
+  keep gate x1.05, all steps (2nd at 9)                                         68.3        70.7        84.7        84.7
+near tie, 3rd at step 9: it wins                                                35.2         4.6         4.6        16.5
+  keep gate x0.95, all steps (3rd at 9)                                         48.7        51.9        28.4        39.1
+  keep gate x1.05, all steps (3rd at 9)                                         27.2         4.4         4.5        16.4
+near ties: answers changed by keep gate x1.05, all steps                        11.5        12.3         6.7         6.1
+late bias: step-9 contender wins (truly second half the time)                   57.5        51.9        51.9        57.8
+  last input x0.99                                                              50.4        42.2        42.2        48.6
+largest by step 3: largest named                                                 1.2         0.0         0.0         0.0
+  hiding x0.9 at step 5                                                          3.7         0.0         0.1         0.1
+  hiding x0.8 at step 5                                                         11.7         0.1         0.1         0.1
+  hiding silenced at all steps (all lists)                                      10.3        62.8        32.1        32.1
+extra input 0: names second-1                                                   94.5        92.3        92.3        91.8
+append 2 x largest: names largest-1                                             95.9        85.5        85.4        85.6
+append between largest and second: names 9                                      94.3        99.8        99.8        99.8
+append -3: names second-1                                                       94.7        92.5        92.5        92.0
+accuracy                                                                        95.3        93.5        93.5        93.0
+U1: mean |rate - ARC's| 15.1 points over 37 tests; within 5 points 27%; sensitivity map (40 cells): correlation of logs 0.88, median ratio 1.24
+U1 keep.25: mean |rate - ARC's| 15.2 points over 37 tests; within 5 points 22%; sensitivity map (40 cells): correlation of logs 0.88, median ratio 1.22
+U1 keep.25 fade: mean |rate - ARC's| 14.0 points over 37 tests; within 5 points 24%; sensitivity map (40 cells): correlation of logs 0.87, median ratio 0.96

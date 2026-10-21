@@ -1,0 +1,6 @@
+record at 2, overtaken at 5: memory input to the late gate median 1.67; variance matched by x_r: 0.92 (x_r +1.31) | x_r, jump: 0.92 (x_r +1.31, jump +0.12) | x_r, jump, others: 0.96 (x_r +1.40, jump -0.02)
+record at 3, overtaken at 6: memory input to the late gate median 1.58; variance matched by x_r: 0.85 (x_r +1.26) | x_r, jump: 0.85 (x_r +1.27, jump -0.47) | x_r, jump, others: 0.96 (x_r +1.46, jump -0.29)
+record at 4, overtaken at 7: memory input to the late gate median 1.52; variance matched by x_r: 0.82 (x_r +1.22) | x_r, jump: 0.83 (x_r +1.22, jump -0.29) | x_r, jump, others: 0.97 (x_r +1.45, jump -0.30)
+first positive number at 3 (no earlier record to reveal): memory input to the late gate median -0.00, late gate at q+1 median 1.29 (x_q median 0.87)
+first positive number at 5 (no earlier record to reveal): memory input to the late gate median 0.02, late gate at q+1 median 1.31 (x_q median 0.88)
+late gate's weights from the hiding neurons 1, 6, 7, 8: -0.36 -0.09 -5.03 -1.09 | from the detector +0.15 | its weights onto 1, 6, 7, 8: -0.69 -0.64 +0.00 -0.07 | onto memory 0, 3, 10-15: -1.42 +0.21 +0.14 +0.68 +0.81 +0.04 -0.65 -0.20

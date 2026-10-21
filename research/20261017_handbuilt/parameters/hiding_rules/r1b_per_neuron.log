@@ -1,0 +1,4 @@
+neuron 1: none 0.291, -m2 0.308, -store 0.297, -det 0.302, -jump1 0.299, -jump2 0.300, -nl2 0.308
+neuron 6: none 0.274, -m2 0.293, -store 0.284, -det 0.344, -jump1 0.312, -jump2 0.282, -nl2 0.334
+neuron 7: none 0.113, -m2 0.126, -store 0.125, -det 0.126, -jump1 0.113, -jump2 0.117, -nl2 0.114
+neuron 8: none 0.351, -m2 0.359, -store 0.368, -det 0.368, -jump1 0.457, -jump2 0.363, -nl2 0.353

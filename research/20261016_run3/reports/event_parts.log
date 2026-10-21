@@ -1,0 +1,20 @@
+Event 1: predicted vote per unit of the second, by the largest's age when it arrives
+  age 1: neurons [1, 3, 5, 7, 9, 13, 14, 15], predicted vote [-15.2 -24.8 -32.9 -26.  -19.8   0.2  10.5  15.5  55.6  36.9], top slot 8, corr with actual 1.000
+  age 2: neurons [1, 3, 5, 6, 7, 8, 13, 15], predicted vote [-9.4 -4.  -3.3 -2.9 -2.9 -4.4 -5.  -3.5 -4.4 39.8], top slot 9, corr with actual 0.352
+  age 3: neurons [1, 3, 6, 7, 8, 13, 14], predicted vote [-4.6 -4.4 -4.2 -4.3 -4.2 -4.  -4.3 -4.7 -3.9 38.5], top slot 9, corr with actual 0.392
+  age 4: neurons [1, 3, 6, 7, 8, 13, 14], predicted vote [-4.6 -4.4 -4.2 -4.3 -4.2 -4.  -4.3 -4.7 -3.9 38.5], top slot 9, corr with actual 0.436
+  age 5: neurons [1, 3, 6, 7, 8, 13, 14, 15], predicted vote [-4.7 -4.6 -4.4 -4.2 -4.1 -4.  -4.2 -4.7 -3.8 38.6], top slot 9, corr with actual 0.799
+  age 6: neurons [1, 3, 6, 7, 8, 13, 14, 15], predicted vote [-4.7 -4.6 -4.4 -4.2 -4.1 -4.  -4.2 -4.7 -3.8 38.6], top slot 9, corr with actual 0.977
+  age 7: neurons [1, 3, 6, 7, 8, 13, 14, 15], predicted vote [-4.7 -4.6 -4.4 -4.2 -4.1 -4.  -4.2 -4.7 -3.8 38.6], top slot 9, corr with actual 0.965
+  age 8: neurons [1, 3, 6, 7, 8, 13, 14, 15], predicted vote [-4.7 -4.6 -4.4 -4.2 -4.1 -4.  -4.2 -4.7 -3.8 38.6], top slot 9, corr with actual 0.845
+  age 9: neurons [1, 3, 6, 7, 8, 13, 14, 15], predicted vote [-4.7 -4.6 -4.4 -4.2 -4.1 -4.  -4.2 -4.7 -3.8 38.6], top slot 9, corr with actual 0.586
+
+Event 2: largest = 1 arrives when the second (0.7) is a steps old; scores at that step split by neuron group
+  age 1: right slot 8; total top 8 | ten other top 9 (at slot +30, at 9 +36), n2 top 6 (at slot +8, at 9 +3), n4 top 4 (at slot +2, at 9 -15), n1,6,7,8 top 0 (at slot +0, at 9 +0) | n4=3.1, comps=[0. 0. 0. 0.]
+  age 2: right slot 7; total top 7 | ten other top 9 (at slot +36, at 9 +36), n2 top 6 (at slot +3, at 9 +3), n4 top 4 (at slot +2, at 9 -16), n1,6,7,8 top 0 (at slot +0, at 9 +0) | n4=3.2, comps=[0. 0. 0. 0.]
+  age 3: right slot 6; total top 6 | ten other top 9 (at slot +25, at 9 +37), n2 top 6 (at slot +15, at 9 +3), n4 top 4 (at slot +2, at 9 -16), n1,6,7,8 top 0 (at slot +0, at 9 +0) | n4=3.3, comps=[0. 0. 0. 0.]
+  age 4: right slot 5; total top 5 | ten other top 9 (at slot +34, at 9 +35), n2 top 6 (at slot +7, at 9 +3), n4 top 4 (at slot +3, at 9 -19), n1,6,7,8 top 0 (at slot +0, at 9 +0) | n4=3.9, comps=[0. 0. 0. 0.]
+  age 5: right slot 4; total top 4 | ten other top 9 (at slot +30, at 9 +31), n2 top 6 (at slot +3, at 9 +2), n4 top 4 (at slot +4, at 9 -23), n1,6,7,8 top 0 (at slot +0, at 9 +0) | n4=4.6, comps=[0. 0. 0. 0.]
+  age 6: right slot 3; total top 3 | ten other top 9 (at slot +27, at 9 +27), n2 top 6 (at slot +3, at 9 +2), n4 top 4 (at slot +4, at 9 -25), n1,6,7,8 top 0 (at slot +0, at 9 +0) | n4=5.1, comps=[0. 0. 0. 0.]
+  age 7: right slot 2; total top 2 | ten other top 1 (at slot +38, at 9 +25), n2 top 6 (at slot -3, at 9 +2), n4 top 4 (at slot +3, at 9 -25), n1,6,7,8 top 0 (at slot +0, at 9 +0) | n4=5.0, comps=[0. 0. 0. 0.]
+  age 8: right slot 1; total top 1 | ten other top 1 (at slot +58, at 9 +26), n2 top 6 (at slot -18, at 9 +2), n4 top 4 (at slot +2, at 9 -22), n1,6,7,8 top 0 (at slot +0, at 9 +0) | n4=4.5, comps=[0. 0. 0. 0.]

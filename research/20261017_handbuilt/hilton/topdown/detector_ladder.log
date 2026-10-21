@@ -1,0 +1,7 @@
+detector pre-activation minus its own three terms: SD 0.96 (pre-activation SD 11.89)
+intact trained network: accuracy 95.23%
+d0: 10.16 (x - largest)+                     agreement  95.77%   accuracy  92.89%
+d1: 10.16 (x - 0.853 largest)+               agreement  95.51%   accuracy  92.53%
+d2: own three weights, real store            agreement  96.03%   accuracy  92.70%
+d3: own weights, store from its age table    agreement  93.79%   accuracy  90.38%
+d4: d2 + straight-line residual              agreement  99.01%   accuracy  94.86%

@@ -1,0 +1,51 @@
+ARC 0.95314
+
+memory+hiding (12): singular values [3.32 2.21 2.02 1.32 1.18 0.92 0.77 0.66 0.47 0.32 0.16 0.  ]
+  eigenvalues (modulus, degrees): 0.99 +0, 0.94 +43, 0.94 -43, 0.94 +83, 0.94 -83, 0.90 +180, 0.82 -126, 0.82 +126, 0.74 +43, 0.74 -43, 0.22 +0, 0.02 +0
+  rank  1 ( 23 numbers for 144): cost  83.12 points
+  rank  2 ( 44 numbers for 144): cost  81.74 points
+  rank  3 ( 63 numbers for 144): cost  81.84 points
+  rank  4 ( 80 numbers for 144): cost  81.67 points
+  rank  5 ( 95 numbers for 144): cost  82.55 points
+  rank  6 (108 numbers for 144): cost  76.95 points
+  rank  7 (119 numbers for 144): cost  72.54 points
+  rank  8 (128 numbers for 144): cost  60.61 points
+  rank  9 (135 numbers for 144): cost  58.79 points
+  rank 10 (140 numbers for 144): cost  47.77 points
+  rank 11 (143 numbers for 144): cost   1.28 points
+  rank 12 (144 numbers for 144): cost   0.00 points
+
+hiding (4): singular values [1.88 0.97 0.2  0.  ]
+  eigenvalues (modulus, degrees): 0.94 +43, 0.94 -43, 0.04 +17, 0.04 -17
+  rank  1 (  7 numbers for 16): cost  56.75 points
+  rank  2 ( 12 numbers for 16): cost   6.73 points
+  rank  3 ( 15 numbers for 16): cost   1.73 points
+  rank  4 ( 16 numbers for 16): cost   0.00 points
+
+all 16: singular values [5.84 4.42 2.94 2.52 2.13 1.67 1.24 1.   0.84 0.73 0.6  0.57 0.32 0.2
+ 0.02 0.  ]
+  eigenvalues (modulus, degrees): 1.27 +180, 1.17 +0, 1.12 +67, 1.12 -67, 0.90 +97, 0.90 -97, 0.76 +32, 0.76 -32, 0.75 +180, 0.66 +52, 0.66 -52, 0.57 +180, 0.52 +118, 0.52 -118, 0.25 +0, 0.02 +180
+  rank  1 ( 31 numbers for 256): cost  85.50 points
+  rank  2 ( 60 numbers for 256): cost  78.78 points
+  rank  3 ( 87 numbers for 256): cost  81.21 points
+  rank  4 (112 numbers for 256): cost  79.41 points
+  rank  5 (135 numbers for 256): cost  82.09 points
+  rank  6 (156 numbers for 256): cost  85.30 points
+  rank  7 (175 numbers for 256): cost  84.64 points
+  rank  8 (192 numbers for 256): cost  84.50 points
+  rank  9 (207 numbers for 256): cost  83.31 points
+  rank 10 (220 numbers for 256): cost  80.95 points
+  rank 11 (231 numbers for 256): cost  78.93 points
+  rank 12 (240 numbers for 256): cost  78.05 points
+  rank 13 (247 numbers for 256): cost  16.82 points
+  rank 14 (252 numbers for 256): cost   3.71 points
+  rank 15 (255 numbers for 256): cost  -0.02 points
+  rank 16 (256 numbers for 256): cost   0.00 points
+
+relative rounding (log-scale step eps; max relative change about eps/2):
+  eps 0.002: cost in points: all   0.13, input   0.02, recurrent   0.09, readout  -0.00
+  eps 0.005: cost in points: all   0.22, input   0.08, recurrent   0.09, readout   0.07
+  eps 0.010: cost in points: all   1.09, input   0.08, recurrent   0.80, readout   0.23
+  eps 0.020: cost in points: all  14.83, input   0.12, recurrent  12.13, readout   0.59
+  eps 0.050: cost in points: all  18.52, input   7.68, recurrent   8.38, readout   4.52
+  eps 0.100: cost in points: all  37.27, input   5.55, recurrent  32.92, readout   6.98

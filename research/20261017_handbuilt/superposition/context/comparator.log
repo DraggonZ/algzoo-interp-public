@@ -1,0 +1,13 @@
+190,154 near ties with the largest first; later contender wins 50.9%
+   neuron 1 pre-activation at the later arrival (per unit of the number): AUC for 'later wins' 0.52; on at arrival 84%
+   neuron 6 pre-activation at the later arrival (per unit of the number): AUC for 'later wins' 0.52; on at arrival 89%
+   neuron 7 pre-activation at the later arrival (per unit of the number): AUC for 'later wins' 0.54; on at arrival 94%
+   neuron 8 pre-activation at the later arrival (per unit of the number): AUC for 'later wins' 0.55; on at arrival 89%
+   neuron 5 pre-activation at the later arrival (per unit of the number): AUC for 'later wins' 0.57; on at arrival 35%
+   neuron 9 pre-activation at the later arrival (per unit of the number): AUC for 'later wins' 0.54; on at arrival 1%
+   nudge [8]          x0.95 / x1.05 at the later arrival  : decision flips 10.7% /  9.9%
+   nudge [1, 6, 7, 8] x0.95 / x1.05 at the later arrival  : decision flips 16.2% / 15.7%
+   nudge [8]          x0.95 / x1.05 one step before       : decision flips 20.7% / 21.6%
+   nudge [1, 6, 7, 8] x0.95 / x1.05 one step before       : decision flips 14.2% / 13.5%
+   nudge [8]          x0.95 / x1.05 one step after        : decision flips 16.9% / 18.6%
+   nudge [1, 6, 7, 8] x0.95 / x1.05 one step after        : decision flips  7.5% /  7.2%

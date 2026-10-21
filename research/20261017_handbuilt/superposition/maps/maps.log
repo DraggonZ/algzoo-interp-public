@@ -1,0 +1,9 @@
+list 0 (largest at 9, second at 4, third at 1, gap 3.4%; swept positions 3, 8) ARC's network: right 100%, third 0%, other 0%; regions 1; switches per row 0.00
+list 0 (largest at 9, second at 4, third at 1, gap 3.4%; swept positions 3, 8) Hand-built, 16 neurons: right 100%, third 0%, other 0%; regions 2; switches per row 1.00
+list 1 (largest at 5, second at 1, third at 3, gap 0.9%; swept positions 8, 9) ARC's network: right 48%, third 49%, other 3%; regions 3; switches per row 1.96
+list 1 (largest at 5, second at 1, third at 3, gap 0.9%; swept positions 8, 9) Hand-built, 16 neurons: right 0%, third 99%, other 1%; regions 2; switches per row 1.00
+list 2 (largest at 2, second at 9, third at 3, gap 4.6%; swept positions 4, 1) ARC's network: right 100%, third 0%, other 0%; regions 1; switches per row 0.00
+list 2 (largest at 2, second at 9, third at 3, gap 4.6%; swept positions 4, 1) Hand-built, 16 neurons: right 100%, third 0%, other 0%; regions 1; switches per row 0.00
+list 3 (largest at 3, second at 4, third at 8, gap 0.8%; swept positions 6, 1) ARC's network: right 88%, third 12%, other 0%; regions 2; switches per row 0.98
+list 3 (largest at 3, second at 4, third at 8, gap 0.8%; swept positions 6, 1) Hand-built, 16 neurons: right 100%, third 0%, other 0%; regions 1; switches per row 0.00
+saved

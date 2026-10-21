@@ -1,0 +1,11 @@
+partial switching on 0.137 of steps 1-9
+new number / largest so far -9.00- 0.00: 0.435 of steps; partial switching on 0.004 of them
+new number / largest so far  0.00- 0.50: 0.194 of steps; partial switching on 0.250 of them
+new number / largest so far  0.50- 0.80: 0.077 of steps; partial switching on 0.576 of them
+new number / largest so far  0.80- 0.90: 0.019 of steps; partial switching on 0.851 of them
+new number / largest so far  0.90- 0.95: 0.009 of steps; partial switching on 0.945 of them
+new number / largest so far  0.95- 1.00: 0.008 of steps; partial switching on 0.985 of them
+new number / largest so far  1.00- 1.05: 0.007 of steps; partial switching on 0.582 of them
+new number / largest so far  1.05- 1.20: 0.019 of steps; partial switching on 0.194 of them
+new number / largest so far  1.20-99.00: 0.110 of steps; partial switching on 0.005 of them
+lists whose second-largest is within 10% of the largest: 0.174; partial switching somewhere in 0.88 of them, against 0.76 otherwise

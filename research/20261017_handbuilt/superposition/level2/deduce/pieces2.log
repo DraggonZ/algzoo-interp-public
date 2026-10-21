@@ -1,0 +1,8 @@
+200,000 random lists; distinct linear maps J after rounding entries to p x RMS(J) (exact = distinct on/off sequences)
+ARC (trained, 16)        acc 0.953 | p 0.0001: 138,707 (38,707 cover half) | p 0.01: 137,737 (37,737 cover half) | p 0.03: 134,946 (34,946 cover half) | p 0.1: 126,078 (26,078 cover half)
+trained seed 100 (16)    acc 0.949 | p 0.0001: 146,463 (46,463 cover half) | p 0.01: 144,368 (44,368 cover half) | p 0.03: 142,432 (42,432 cover half) | p 0.1: 128,594 (28,594 cover half)
+trained seed 111 (16)    acc 0.960 | p 0.0001: 153,843 (53,843 cover half) | p 0.01: 149,519 (49,519 cover half) | p 0.03: 139,179 (39,179 cover half) | p 0.1: 122,493 (22,493 cover half)
+trained seed 209 (16)    acc 0.959 | p 0.0001: 103,995 (13,816 cover half) | p 0.01: 103,100 (13,394 cover half) | p 0.03: 100,850 (12,396 cover half) | p 0.1:  95,659 (10,639 cover half)
+trained 32 neurons       acc 0.994 | p 0.0001: 197,145 (97,145 cover half) | p 0.01: 196,816 (96,816 cover half) | p 0.03: 195,713 (95,713 cover half) | p 0.1: 182,336 (82,336 cover half)
+hand-built v19 kappa 0.5 (16) acc 0.942 | p 0.0001:      55 (1 cover half) | p 0.01:      54 (1 cover half) | p 0.03:      47 (1 cover half) | p 0.1:      12 (1 cover half)
+hand-built v21 (28)      acc 0.959 | p 0.0001:  23,520 (2,447 cover half) | p 0.01:  23,520 (2,447 cover half) | p 0.03:  22,228 (1,943 cover half) | p 0.1:      95 (1 cover half)

@@ -1,0 +1,8 @@
+memory + keep gate as one block; store, detector formulas     : all 16 replaced 0.912
+memory + keep gate + detector as one block; store formula     : all 16 replaced 0.910
+memory + keep gate block, all ReLUs kept                          : all 16 replaced 0.912
+memory + keep gate block, memory linear except 0, 15; gate ReLU   : all 16 replaced 0.862
+memory + keep gate block, memory fully linear; gate ReLU          : all 16 replaced 0.631
+memory + keep gate block, linear except neuron 0 by its rule, 15 and gate ReLU: all 16 replaced 0.859
+neuron 15 on/off predicted from a formula's sign: agrees on 0.857 of steps (always-on would agree on 0.728)
+memory linear, neuron 0 by its rule, neuron 15 by its formula's sign, gate ReLU: all 16 replaced 0.854

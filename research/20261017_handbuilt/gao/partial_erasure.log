@@ -1,0 +1,6 @@
+third right after the overtaken record (20076 lists), no intervention                   : accuracy 0.970, third named 0.023
+third right after the overtaken record (20076 lists), unclipped at the third's arrival  : accuracy 0.642, third named 0.333
+third right after the overtaken record (20076 lists), unclipped at all other steps      : accuracy 0.867, third named 0.053
+third two or more steps after it (45945 lists), no intervention                   : accuracy 0.966, third named 0.020
+third two or more steps after it (45945 lists), unclipped at the third's arrival  : accuracy 0.701, third named 0.166
+third two or more steps after it (45945 lists), unclipped at all other steps      : accuracy 0.720, third named 0.079

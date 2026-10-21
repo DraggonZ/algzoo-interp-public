@@ -1,0 +1,6 @@
+ARC       accuracy 95.33% | drop (points) with noise at step 0..9:   4.5   6.3   8.1  10.2  12.5  15.7  18.7  20.8  21.2  22.3
+run3 209  accuracy 95.80% | drop (points) with noise at step 0..9:   2.0   4.1   6.2   8.9  11.8  14.2  17.3  20.4  23.2  25.1
+16 bo5    accuracy 94.83% | drop (points) with noise at step 0..9:   2.7   7.8  14.2  18.3  23.7  28.5  34.8  39.7  49.1  40.4
+20        accuracy 97.89% | drop (points) with noise at step 0..9:   3.7   6.1   8.9  12.7  16.0  19.5  22.5  23.8  25.6  30.7
+32 bo5    accuracy 99.45% | drop (points) with noise at step 0..9:   3.3   8.4  14.8  22.0  28.9  37.1  41.6  48.6  39.7   5.5
+32 long   accuracy 99.25% | drop (points) with noise at step 0..9:   7.1   8.0   9.2  10.6  13.1  13.4  13.1  12.7  13.6   7.3

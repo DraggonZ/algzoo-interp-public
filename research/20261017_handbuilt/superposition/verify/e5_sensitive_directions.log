@@ -1,0 +1,19 @@
+vote per unit v = 27.5916 (from 80008 positive non-largest numbers)
+selected (list, competitor) pairs: 141868
+ARC accuracy 95.29%
+--- rounding to 0.01: weight change norm 0.060
+k=  0: accuracy 89.55%  (share of change norm restored 0.00)
+k=  5: accuracy 94.01%  (share of change norm restored 0.10)
+k= 20: accuracy 94.73%  (share of change norm restored 0.21)
+k= 50: accuracy 95.17%  (share of change norm restored 0.35)
+k=100: accuracy 95.27%  (share of change norm restored 0.47)
+random 20 orthonormal directions (20 draws): mean 89.58%, range 88.70-90.65
+random 100 orthonormal directions (20 draws): mean 90.72%, range 88.86-92.69
+--- rounding to 0.1: weight change norm 0.560
+k=  0: accuracy 23.47%  (share of change norm restored 0.00)
+k=  5: accuracy 47.72%  (share of change norm restored 0.12)
+k= 20: accuracy 77.73%  (share of change norm restored 0.20)
+k= 50: accuracy 89.89%  (share of change norm restored 0.31)
+k=100: accuracy 93.93%  (share of change norm restored 0.43)
+random 20 orthonormal directions (20 draws): mean 24.03%, range 20.92-26.23
+random 100 orthonormal directions (20 draws): mean 29.40%, range 23.43-38.62

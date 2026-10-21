@@ -1,0 +1,32 @@
+largest eigenvalue 5.053e+03; eigenvalues by rank: 1: 5.05e+03, 2: 2.72e+03, 5: 5.68e+02, 10: 2.06e+02, 20: 6.58e+01, 50: 4.94e+00, 100: 3.05e-01, 200: 1.08e-02, 300: 6.80e-04, 368: 3.38e-05, 390: 6.15e-07, 400: 5.20e-11, 401: -4.58e-19, 410: -1.14e-15, 420: -5.61e-14, 432: -2.27e-12
+  eigenvalues below 1e-06 of the largest: 204
+  eigenvalues below 1e-08 of the largest: 72
+  eigenvalues below 1e-10 of the largest: 42
+  eigenvalues below 1e-12 of the largest: 33
+  biggest drop in the spectrum after rank 300: between rank 400 (1.0e-14) and 401 (-9.1e-23)
+
+calibration (random relative noise, 20 copies): accuracy loss ~ 0.196 x KL; KL for 0.5 point = 0.0256
+  KL 0.0047: loss 0.28 points (predicted 0.09)
+  KL 0.0158: loss 0.51 points (predicted 0.31)
+  KL 0.0367: loss 1.08 points (predicted 0.72)
+  KL 0.2536: loss 6.45 points (predicted 4.96)
+  KL 0.3626: loss 7.73 points (predicted 7.09)
+  quadratic check, one copy at 0.3%: measured KL 0.0858, 1/2 e F e 0.0771
+
+counts of directions that matter at rule precision r (relative error per unit direction):
+  r =  0.5%: N(r) =   2; effective dimension    3.9
+  r =  1.0%: N(r) =   5; effective dimension    8.7
+  r =  2.0%: N(r) =  15; effective dimension   16.9
+  r =  5.0%: N(r) =  27; effective dimension   33.7
+  r = 10.0%: N(r) =  49; effective dimension   52.3
+  r = 25.0%: N(r) =  80; effective dimension   84.6
+
+where the top directions load (share of squared loading by kind of weight), and their top weights:
+  direction   1 (eigenvalue 5.05e+03): input 0.07, recurrent 0.92, readout 0.01 | 2->7 -0.50, 7->8 -0.41, 2->2 +0.32, 7->1 -0.31, 2->8 +0.24
+  direction   2 (eigenvalue 2.72e+03): input 0.06, recurrent 0.93, readout 0.01 | 2->2 +0.64, 2->7 +0.35, 7->1 +0.31, 7->8 -0.25, 6->1 -0.24
+  direction   3 (eigenvalue 1.93e+03): input 0.13, recurrent 0.85, readout 0.02 | 2->2 +0.48, 7->8 +0.44, 7->1 -0.25, 6->1 +0.23, input->4 +0.22
+  direction   4 (eigenvalue 1.26e+03): input 0.64, recurrent 0.36, readout 0.00 | input->7 +0.70, 2->7 -0.40, input->1 -0.28, 2->2 +0.27, input->6 -0.20
+  direction   5 (eigenvalue 5.68e+02): input 0.41, recurrent 0.55, readout 0.04 | 2->6 -0.45, input->8 -0.37, input->6 +0.37, input->4 -0.30, 7->1 -0.26
+  direction  10 (eigenvalue 2.06e+02): input 0.01, recurrent 0.18, readout 0.81 | 7->out3 +0.42, 7->out4 -0.40, 6->out4 +0.29, 8->out2 +0.26, 1->out4 +0.25
+  direction  20 (eigenvalue 6.58e+01): input 0.09, recurrent 0.67, readout 0.24 | 7->8 -0.30, 11->10 +0.27, 2->8 -0.24, 10->15 +0.21, 7->out7 +0.20
+  direction  50 (eigenvalue 4.94e+00): input 0.00, recurrent 0.41, readout 0.59 | 12->out6 -0.25, 10->out6 -0.23, 10->15 -0.23, 12->11 +0.22, 10->out1 +0.21

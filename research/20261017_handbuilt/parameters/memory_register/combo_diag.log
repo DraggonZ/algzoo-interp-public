@@ -1,0 +1,5 @@
+rule vs ARC, hiding rows: relative error 0.06407385580311906
+nudge in1: own-row copy slope -0.248, other movement 0.684; other hiding rows {'in6': 0.608, 'in7': 0.282, 'in8': 1.483}
+nudge in6: own-row copy slope -0.182, other movement 2.183; other hiding rows {'in1': 6.053, 'in7': 2.311, 'in8': 8.291}
+nudge in7: own-row copy slope +0.612, other movement 1.822; other hiding rows {'in1': 5.919, 'in6': 1.489, 'in8': 11.81}
+nudge in8: own-row copy slope -0.115, other movement 1.803; other hiding rows {'in1': 0.811, 'in6': 0.435, 'in7': 0.843}

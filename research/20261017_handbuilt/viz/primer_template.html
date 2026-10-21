@@ -1,0 +1,1170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Second-largest, step by step</title>
+<style>
+:root {
+  --bg: #f6f4ef; --card: #fdfcfa; --grid: #e6e3dc; --axis: #bdbab2;
+  --ink: #141413; --ink2: #4d4c48; --muted: #85837c;
+  --blue: #2a78d6; --orange: #e0662f; --green: #1a9e6e; --red: #d64545; --grey: #a9a7a0; --purple: #7a5bc7;
+  --blue-l: #cfe0f6; --orange-l: #f8d9c8; --green-l: #cdeee0; --hi: #fff1c2;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.62 Georgia, "Iowan Old Style", "Times New Roman", serif; }
+main { max-width: 760px; margin: 0 auto; padding: 28px 16px 80px; }
+h1 { font: 700 32px/1.2 system-ui, -apple-system, "Segoe UI", sans-serif; margin: 10px 0 8px; }
+h2 { font: 650 23px/1.25 system-ui, -apple-system, "Segoe UI", sans-serif; margin: 56px 0 10px; }
+h2 .n { color: var(--muted); font-weight: 500; margin-right: 6px; }
+h3 { font: 650 17px/1.3 system-ui, sans-serif; margin: 26px 0 6px; }
+p { margin: 0 0 13px; }
+.sub { font-size: 19px; color: var(--ink2); margin: 0 0 22px; }
+.where { font: 14px/1.5 system-ui, sans-serif; color: var(--ink2); background: #efece4; border-radius: 6px; padding: 6px 12px; margin: 0 0 14px; }
+.fig { background: var(--card); border: 1px solid var(--grid); border-radius: 12px; padding: 12px 14px 12px; margin: 16px 0 18px; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+.ctl { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; font-size: 14px; color: var(--ink2); margin-bottom: 4px; }
+.ctl .sp { flex: 1; }
+.ctl .lab { font-variant-numeric: tabular-nums; color: var(--muted); }
+button, select { font: 14px system-ui, sans-serif; color: var(--ink); background: #fff; border: 1px solid var(--axis); border-radius: 7px; padding: 4px 11px; cursor: pointer; }
+button:hover { border-color: var(--ink2); }
+button.main { background: var(--ink); color: #fff; border-color: var(--ink); }
+button.on { background: var(--blue); color: #fff; border-color: var(--blue); }
+input[type=range] { width: 150px; vertical-align: middle; }
+svg { display: block; width: 100%; height: auto; overflow: visible; }
+svg text { fill: var(--ink2); font: 12px system-ui, sans-serif; }
+svg text.b { fill: var(--ink); font-weight: 650; }
+svg text.m { fill: var(--muted); font-size: 11px; }
+.cap { font-size: 15px; line-height: 1.5; color: var(--ink); margin: 8px 2px 2px; min-height: 3em; }
+.cap b { font-weight: 650; }
+.legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 13px; color: var(--ink2); margin: 2px 2px 4px; }
+.sw { display: inline-block; width: 11px; height: 11px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+.box { background: var(--card); border: 1px solid var(--grid); border-left: 4px solid var(--blue); border-radius: 8px; padding: 12px 18px; margin: 16px 0; }
+.box ol, .box ul { margin: 4px 0; padding-left: 22px; }
+.box li { margin-bottom: 5px; }
+.draft { font: 13px system-ui, sans-serif; color: var(--muted); border: 1px dashed var(--axis); border-radius: 6px; padding: 6px 10px; }
+table.t { border-collapse: collapse; font: 14px system-ui, sans-serif; width: 100%; margin: 10px 0 16px; }
+table.t th, table.t td { padding: 5px 8px; border-bottom: 1px solid var(--grid); text-align: left; vertical-align: top; }
+table.t th { color: var(--ink2); font-weight: 600; }
+.ev { display: inline-block; font: 12px system-ui, sans-serif; padding: 0 7px; border-radius: 10px; margin-right: 4px; }
+.k { font: 13px ui-monospace, monospace; background: #eeebe4; padding: 0 4px; border-radius: 4px; }
+dl.gl { font: 15px/1.5 system-ui, sans-serif; margin: 6px 0; }
+dl.gl dt { font-weight: 650; margin-top: 8px; }
+dl.gl dd { margin: 0 0 0 0; color: var(--ink2); }
+@media (max-width: 600px) { body { font-size: 16px; } h1 { font-size: 27px; } }
+</style>
+</head>
+<body>
+<main>
+<p class="draft">Private explainer for the author, built from the research notes of 17 October 2026. Not for posting as is. Every figure marked "trained network" runs the real weights in your browser.</p>
+
+<h1>Second-largest, step by step</h1>
+<p class="sub">How a 16-neuron recurrent network finds the second-largest of ten numbers, and how we tested that explanation.</p>
+
+<h3>The answer in one paragraph</h3>
+<p>ARC's AlgZoo network M<sub>16,10</sub>, which we call the trained network, reads ten random numbers and names the position of the second-largest, correctly 95.3% of the time. It uses four mechanisms. <b>(1)</b> Two neurons track the largest number so far. <b>(2)</b> Most of the other neurons form a <b>shift register</b>: a number that is kept writes a <b>vote</b> into it, and the vote moves one position per step, so when the list ends each vote sits at its own number's position. <b>(3)</b> The current largest's vote must not count, so four <b>cancelling neurons</b> hold a near mirror image of it that cancels it at the readout. A bigger number switches those four off, and the old largest, which has just become the second-largest, is left with a visible vote. <b>(4)</b> A gate neuron forgets numbers well below the second-largest so far, so that many small votes cannot add up. The highest vote wins.</p>
+<p>We tested this by interventions on random lists (switching the cancelling neurons off by hand makes the largest win), and by building a 16-neuron network by hand from the explanation alone (98.97% correct). Two things remain open: how the trained network copes, in only 16 neurons, with a new largest arriving at the very last step; and where its mistakes come from in detail. We also built an accuracy estimate from the explanation, but it does not beat random sampling, which is ARC's bar.</p>
+
+<h3>The 16 neurons</h3>
+<table class="t">
+<tr><th>Neurons</th><th>Job</th><th>Section</th></tr>
+<tr><td>2, 4</td><td>Largest so far: 4 fires when a new largest arrives, 2 stores the running value</td><td>4</td></tr>
+<tr><td>0, 3, 10, 11, 12, 13, 14, 15</td><td>Shift register that holds the votes</td><td>5–6</td></tr>
+<tr><td>1, 6, 7, 8</td><td>Cancelling neurons: hold the opposite of the current largest's vote; neuron 8 also stores the second-largest so far</td><td>7–8</td></tr>
+<tr><td>5</td><td>Keep-or-forget gate, one step after each number</td><td>9</td></tr>
+<tr><td>9</td><td>Fires one step after a new largest; helps read late positions</td><td>12</td></tr>
+</table>
+<p>The roles are not perfectly separate. The rotating pattern that carries the votes is spread over all twelve neurons that are not cancelling neurons, so it includes neurons 2, 4, 5 and 9 as well as the eight register neurons. When the text says "the twelve neurons", it means these twelve.</p>
+
+<h3>Words used</h3>
+<dl class="gl">
+<dt>Activation</dt><dd>The number a neuron holds after a step. It is never negative.</dd>
+<dt>ReLU</dt><dd>The rule that sets a negative sum to zero. It is the network's only nonlinearity.</dd>
+<dt>Score, readout</dt><dd>After the last number, ten weighted sums of the activations, one per position. The highest score is the answer. Only differences between scores matter, so charts show each score minus the average of the ten.</dd>
+<dt>Vote</dt><dd>A pattern of activations that raises one position's score above the others.</dd>
+<dt>Intervention</dt><dd>Changing some activations by hand while the network runs, to see if the answer changes as the explanation predicts.</dd>
+<dt>Cancelling neurons</dt><dd>Neurons 1, 6, 7 and 8. They cancel the current largest's vote until a bigger number switches them off (sections 7 and 8).</dd>
+<dt>Tie offset</dt><dd>How far from an exact tie the network switches its answer between the second- and third-largest (section 13).</dd>
+<dt>ARC, AlgZoo</dt><dd>The Alignment Research Center published AlgZoo, a set of small trained networks posed as interpretability puzzles. Its challenge asks for an explanation good enough to estimate a network's accuracy from its weights, better than random sampling at the same cost.</dd>
+</dl>
+<p>Each figure below is a short animation. Press <b>▶</b> to move one step, <b>◀</b> to go back, or <b>play</b>. The caption under each figure changes with every step and says what just happened.</p>
+
+<!-- ============================================================ 1 -->
+<h2><span class="n">1</span>The task</h2>
+<p>The network is shown ten numbers, one at a time. Each is drawn at random from a standard normal distribution, so about half are negative and most lie between −2 and 2. After the tenth, it must name the <b>position</b> (0 to 9) of the second-largest number: not its value, but where it was.</p>
+<div class="fig" id="f1">
+  <div class="ctl"><button data-a="new">New random list</button><button data-a="show" class="main">Show the answer</button></div>
+  <svg viewBox="0 0 640 156"></svg>
+  <p class="cap"></p>
+</div>
+
+<!-- ============================================================ 2 -->
+<h2><span class="n">2</span>The network</h2>
+<p class="where">Why this matters: two properties of the network, no clock and no bias, explain why the solution looks the way it does.</p>
+<p>The network is a recurrent network with 16 hidden neurons. Their activations start at zero. At each step, every neuron takes a weighted sum of the new number and all 16 previous activations, then applies ReLU. After the tenth number, ten weighted sums of the activations give the scores. The weights were set by training: 16 input weights, 256 recurrent weights and 160 output weights, 432 in all.</p>
+<div class="fig" id="f2">
+  <div class="ctl"><button data-a="first">start</button><button data-a="prev">◀</button><button data-a="next" class="main">▶</button><button data-a="play">play</button><span class="lab"></span><span class="sp"></span><button data-a="double">× 2 every number</button></div>
+  <svg viewBox="0 0 640 456"></svg>
+  <div class="legend"><span><span class="sw" style="background:var(--ink2)"></span>activation</span><span><span class="sw" style="background:var(--red);opacity:.35"></span>negative sum, set to zero by ReLU</span></div>
+  <p class="cap"></p>
+</div>
+<p><b>No clock.</b> Nothing tells the network which step it is on. To remember <i>where</i> a number was, it must start something when the number arrives that changes in a regular way at every later step (sections 5 and 6).</p>
+<p><b>No bias.</b> No sum has a constant term. So doubling every number in the list doubles every activation and every score, and the answer stays the same (try "× 2 every number"). Every threshold in this story is therefore a fraction of another number, such as "about three-quarters of the second-largest so far", never a fixed value.</p>
+
+<!-- ============================================================ 3 -->
+<h2><span class="n">3</span>The algorithm, in idealized form</h2>
+<p class="where">Why this matters: this is the plan. Sections 4 to 9 show each part of it inside the trained network.</p>
+<p>Here is the algorithm with no neurons, as a clean procedure. When a positive number arrives, it may write a <b>vote</b> into a shift register. The vote's height is the number's value. Each vote enters at the right end and moves one place left at every step. So when the list ends, every vote sits exactly under the number that made it, and the tallest visible vote names the answer.</p>
+<p>If every positive number wrote a visible vote, the tallest would always belong to the <i>largest</i> number. Three rules fix this:</p>
+<ol>
+<li><b>Hide the current largest.</b> A new largest writes a hidden vote (dashed outline).</li>
+<li><b>Reveal on overtaking.</b> When a bigger number arrives, the old largest's vote becomes visible. The old largest has just become the second-largest, so its vote is the right one to show.</li>
+<li><b>Forget small numbers.</b> A number that is not a new largest writes a visible vote only if it beats the second-largest so far.</li>
+</ol>
+<div class="fig" id="f3">
+  <div class="ctl"><button data-a="first">start</button><button data-a="prev">◀</button><button data-a="next" class="main">▶</button><button data-a="play">play</button><span class="lab"></span><span class="sp"></span>
+    <select data-a="rule"><option value="0">No rules: every positive number votes</option><option value="1">Rules 1–2: hide and reveal</option><option value="2" selected>Rules 1–3: hide, reveal, forget</option></select>
+    <button data-a="new">Random list</button></div>
+  <svg viewBox="0 0 640 330"></svg>
+  <p class="cap"></p>
+</div>
+<p>With rules 1 and 2, this procedure is right on <b><span id="acc-cartoon">…</span></b> of random lists (computed in your browser on 100,000 lists). It fails only on lists with at most one positive number, about 1 in 100, because negative numbers write no votes. The trained network also loses most of those lists.</p>
+<p>Rule 3 changes nothing here, because these votes are perfectly sharp: a vote at position 3 adds nothing to position 4. In a network, votes are blurred, and many small blurred votes can add up and outvote the right one. That is why the trained network forgets (section 9).</p>
+
+<!-- ============================================================ 4 -->
+<h2><span class="n">4</span>Mechanism 1: the largest so far</h2>
+<p class="where">Why this matters: every later step compares new numbers with the largest so far.</p>
+<p>ReLU makes comparisons cheap: <span class="k">ReLU(10 × (x − largest))</span> is zero unless x beats the largest, and then it is ten times the margin. The trained network does exactly this. <b>Neuron 4</b> has input weight 10.2 and fires only when a new number beats the largest so far, at about 10 times the margin. <b>Neuron 2</b> adds 1.73 times neuron 4's activation one step later, so each new largest raises it by about 17.6 times the margin, and it holds about 17 times the largest so far. Its self-weight is 0.97, not 1, so it fades a little each step, to about 15 times the largest eight steps after the record; that fade tells the rest of the network how long ago the largest arrived, and it means that late in a list neuron 4 also fires for numbers somewhat below the largest. The fade matters: with the self-weight set to exactly 1, accuracy drops to 85%. Neuron 4 also subtracts its own previous activation (weight −0.99), so that a margin is not counted twice. ARC's own hand-designed network uses the same trick.</p>
+<div class="fig" id="f4">
+  <div class="ctl"><button data-a="first">start</button><button data-a="prev">◀</button><button data-a="next" class="main">▶</button><button data-a="play">play</button><span class="lab"></span><span class="sp"></span><button data-a="new">Random list</button></div>
+  <svg viewBox="0 0 640 372"></svg>
+  <div class="legend"><span><span class="sw" style="background:var(--ink)"></span>true largest so far</span><span><span class="sw" style="background:var(--blue)"></span>neuron 2 ÷ 17</span><span><span class="sw" style="background:var(--orange)"></span>neuron 4 ÷ 10.2</span></div>
+  <p class="cap"></p>
+</div>
+<p>Both neurons are divided by their gains, so they are plotted in the list's own units. Neuron 2 lags one step and overshoots by up to about 10%; the rest of the network also reads neuron 4, which covers the lag.</p>
+
+<!-- ============================================================ 5 -->
+<h2><span class="n">5</span>Mechanism 2a: remembering when, with a rotation</h2>
+<p class="where">Why this matters: this is how the network knows where each number was. It is the shift register of section 3, built from rotations.</p>
+<p>With no clock, the simplest way to record when something happened is a rotation. Picture a 2-D vector, drawn as an arrow, that appears when a number arrives and turns 40° at every step. Its angle says how many steps ago the number came. Since the list always has ten numbers, that says where the number was. One step of the network can turn a vector by a fixed angle, because a rotation is a linear map.</p>
+<p>A rotation needs values that go negative, and ReLU activations cannot. So the vector has to ride on top of positive levels. These levels are not bias terms: they come from other activations. Our hand-built network gives each rotating neuron a level proportional to the largest so far and subtracts it again at the readout. For the trained network, we draw the vector as the twelve neurons' activations minus their average over random lists.</p>
+<p>The readout has one <b>readout direction</b> per position, drawn as a grey spoke. A position's score is the vector's projection onto that direction: large when the vector points along it, smaller 40° away (cos 40° ≈ 0.77), negative when it points away.</p>
+<div class="fig" id="f5">
+  <div class="ctl"><button data-a="first">start</button><button data-a="prev">◀</button><button data-a="next" class="main">▶</button><button data-a="play">play</button><span class="lab"></span><span class="sp"></span>
+    <label>number at position <select data-a="pos"></select></label>
+    <select data-a="mode"><option value="toy">Idealized rotation</option><option value="real">Trained network</option></select></div>
+  <div style="display:grid;grid-template-columns:1fr 1.25fr;gap:6px;align-items:center">
+    <svg class="dial" viewBox="0 0 300 300"></svg>
+    <svg class="sh" viewBox="0 0 360 260"></svg>
+  </div>
+  <p class="cap"></p>
+</div>
+<p>Choose "Trained network" to see the real thing, with a single 1.0 in an otherwise empty list. The twelve neurons move mostly in one plane (96% of their variance). Seen in that plane, after the first two steps, the vector turns about 40° per step, clockwise. The trained readout directions for positions 0 to 7 sit in position order, about 43° apart. So at the end of the list the vector points at the readout direction of its own position. This holds for numbers two to eight steps old. Position 0 and the two newest positions are read in other ways.</p>
+<p>Notice the projection chart. With one rotation, a number at position 4 also lifts positions 3 and 5 to about three-quarters of its height. A vote read through one rotation is a broad wave, not a sharp spike.</p>
+
+<!-- ============================================================ 6 -->
+<h2><span class="n">6</span>Mechanism 2b: several rotations make a shift register</h2>
+<p class="where">Why this matters: it explains why votes are sharper than one rotation allows, and why each vote lands exactly on its own position.</p>
+<p>Add a second vector that turns twice as fast (80° per step), a third at 120° and a fourth at 160°. Each projects a wave around the same position, and faster rotations give narrower waves. Added together with a constant level, the four waves cancel everywhere except at the vote's own position. Four rotations plus a level are just a nine-slot shift register in different coordinates: this is the discrete Fourier transform. Tick the rotations one by one below and watch the wave sharpen into a spike.</p>
+<div class="fig" id="f6">
+  <div class="ctl"><span>rotations:</span><button data-a="d1" class="on">40°</button><button data-a="d2">80°</button><button data-a="d3">120°</button><button data-a="d4">160°</button><span class="sp"></span><button data-a="play">play the shift</button></div>
+  <svg viewBox="0 0 640 300"></svg>
+  <p class="cap"></p>
+</div>
+<p>The trained network's twelve neurons contain such a set, but imperfectly. Fix which neurons are on and which are off, using the most common pattern in the middle of the list. Then each step multiplies the twelve activations by one matrix. That matrix has rotating pairs of eigenvalues at about 43°, 83° and 125° per step, close to the 40°, 80° and 120° of a nine-slot register, and a fourth at 180°, further from the ideal 160°. Each shrinks to 0.84–0.95 of its size per step, so the register fades. (This analysis covers that one on/off pattern, which occurs in 12% of steps; how the network switches between patterns is not covered.)</p>
+<p><b>Why a vote lands on its own position.</b> The readout weights for position k+1 are the readout weights for position k pushed one step forward through that matrix. Their cosine similarity is 0.97; neighbouring readout rows on their own are only 0.56 alike. Of 21 other trained networks, 17 show the same relation. In words: the readout row for position p reads the register slot that a vote reaches 9 − p steps after it is written. If you apply the final readout weights before the list ends, a vote that still has m steps to go is read m positions to the right of its own position, and it moves one position left per step. For example, take a 1.0 at position 2. After step 4 it has five steps to go, so the final readout weights see it at position 2 + 5 = 7. After step 5 they see it at 6, after step 6 at 5, and so on, until after the last step it sits at 2. The vote moves left, and the offset to the right shrinks to zero. Ten positions share about nine slots: positions 8 and 9 are read through other neurons, and position 0 is read only partly through the register. The figure below shows this on the trained network, with the cancelling neurons' contribution left out so the hidden vote is visible.</p>
+<div class="fig" id="f6b">
+  <div class="ctl"><button data-a="first">start</button><button data-a="prev">◀</button><button data-a="next" class="main">▶</button><button data-a="play">play</button><span class="lab"></span><span class="sp"></span><label>1.0 at position <select data-a="pos"></select></label></div>
+  <svg viewBox="0 0 640 346"></svg>
+  <div class="legend"><span><span class="sw" style="background:var(--blue)"></span>positions 0–7, read through the register</span><span><span class="sw" style="background:var(--grey)"></span>positions 8 and 9, read by other neurons</span></div>
+  <p class="cap"></p>
+</div>
+<p>One consequence matters later. Because the readout turns with the register, a vote reads the same height at its own position whatever its age, and every vote has the same shape around its position. So in its decisions the network behaves like fair voting: how much a vote counts depends on its number's size, not on its position or age, even though the activations fade.</p>
+
+<!-- ============================================================ 7 -->
+<h2><span class="n">7</span>Mechanism 3a: cancelling the largest's vote</h2>
+<p class="where">Why this matters: this is rule 1, hiding the current largest. It is the central trick of the network.</p>
+<p>The trained network does not avoid writing the largest's vote. The largest's rotating pattern runs in the twelve neurons like any other vote. Four other neurons, <b>1, 6, 7 and 8</b>, hold a near mirror image of it. At the readout, the twelve neurons push the scores one way and the four push them back by almost the same amount. We call these four the <b>cancelling neurons</b>.</p>
+<p>Below, the list holds one 1.0 and nine zeros. The bars show the final scores, split by which neurons contribute. Each part is shown relative to its own average over the ten positions.</p>
+<div class="fig" id="f7">
+  <div class="ctl"><button data-a="first">start</button><button data-a="prev">◀</button><button data-a="next" class="main">▶</button><span class="lab"></span><span class="sp"></span><label>1.0 at position <select data-a="pos"></select></label></div>
+  <svg viewBox="0 0 640 400"></svg>
+  <div class="legend"><span><span class="sw" style="background:var(--blue)"></span>contribution of the twelve neurons</span><span><span class="sw" style="background:var(--orange)"></span>contribution of the four cancelling neurons</span><span><span class="sw" style="background:var(--ink)"></span>total score</span></div>
+  <p class="cap"></p>
+</div>
+<p>The two contributions peak at about 50 and cancel to within a few units. The last step above is the project's key experiment in miniature: switch the four cancelling neurons off by hand, with no bigger number anywhere, and the largest's hidden vote appears at its own position.</p>
+
+<!-- ============================================================ 8 -->
+<h2><span class="n">8</span>Mechanism 3b: why only a bigger number switches them off</h2>
+<p class="where">Why this matters: this is rule 2, revealing the old largest. It works because of what the cancelling neurons hold.</p>
+<p>Each cancelling neuron has a large negative input weight, −10.6 to −13.2. Before ReLU, its sum is roughly <span class="k">gain × (switch-off point − x)</span>, where x is the new number and the switch-off point is tied to the largest so far plus the largest's rotating wave. The wave part is what makes it a mirror of the largest's vote. (This form is a fit: it explains 94–99.6% of each neuron's variation on random lists.) So a small x leaves the sum positive. A number near or above the largest drives it below zero, and ReLU sets it to exactly zero.</p>
+<p>The chart shows the four activations at the step a new number x arrives, after a 1.0 earlier in the list. Each falls in a straight line as x grows and stops at zero at its own switch-off point. The switch-off points differ between neurons and between steps, because of the wave. Neuron 8 is the exception: it switches off near the second-largest so far (zero in this list), which is its second job.</p>
+<div class="fig" id="f8b">
+  <div class="ctl"><label>1.0 at position 2, then x at position <select data-a="b"></select></label></div>
+  <svg viewBox="0 0 640 300"></svg>
+  <p class="cap"></p>
+</div>
+<p>Individual cancelling neurons switch off somewhat below or above the largest, so the comparison is soft. What matters is that all four switch off together. On random lists, a new largest switches all four off in 94% of cases, and a smaller positive number does so in about 2 cases per 100,000.</p>
+<p>Now the whole event. The chart applies the final readout weights at every step, as in section 6, so a visible vote appears to the right of its position and moves left by one each step.</p>
+<div class="fig" id="f8">
+  <div class="ctl"><button data-a="first">start</button><button data-a="prev">◀</button><button data-a="next" class="main">▶</button><button data-a="play">play</button><span class="lab"></span><span class="sp"></span>
+    <label>1.0 at <select data-a="a"></select></label><label>1.5 at <select data-a="b"></select></label></div>
+  <svg viewBox="0 0 640 520"></svg>
+  <p class="cap"></p>
+</div>
+<p>The cancelling neurons rebuild from the new largest within a few steps, so the 1.5's own vote is hidden in turn. The readout cannot read the two newest positions through the register. Position 8 is read mostly through neuron 5 (section 9) and position 9 through the dip the last number causes in the cancelling neurons. That is why the right end of these charts is messy before the list is complete.</p>
+
+<!-- ============================================================ 9 -->
+<h2><span class="n">9</span>Mechanism 4: keep or forget, neuron 5</h2>
+<p class="where">Why this matters: this is rule 3. Without it, blurred small votes pile up; finding it changed our account.</p>
+<p>One step after a number arrives, <b>neuron 5</b> fires if the number is at least a certain fraction of the second-largest so far. The fraction is about three-quarters on average, and ranges from 0.6 to 0.85 depending on the list. Every new largest passes. A number that passes is kept, and its vote enters the register. A number that fails is forgotten: one step later its effect on the scores falls from about 55 per unit of size to about 1.</p>
+<p>Below, a 1.5 at position 1 and a 1.0 at position 3 come first, so the second-largest so far is 1.0. Move the third number and watch neuron 5.</p>
+<div class="fig" id="f9">
+  <div class="ctl"><button data-a="first">start</button><button data-a="prev">◀</button><button data-a="next" class="main">▶</button><button data-a="play">play</button><span class="lab"></span><span class="sp"></span>
+    <label>number at position 5: <input type="range" data-a="x" min="-50" max="145" value="60"> <b class="xv"></b></label>
+    <button data-a="force">force neuron 5 off</button></div>
+  <svg viewBox="0 0 640 500"></svg>
+  <p class="cap"></p>
+</div>
+<p>Why forget at all, if a small number can never be the answer? Because votes in the network are blurred (section 5), and blurred votes add. Our first account said every number votes. An idealized vote model built on that account reached only 24–43% with a single rotation, and about 88% even with votes as sharp as the network's, because many small votes crowded out the right one. That failure sent us back to measure the network on full random lists instead of two-number lists, and that is where neuron 5's forgetting showed up. On two-number lists every positive number is the largest or the second, so there is nothing to forget, and the forgetting is invisible. Neuron 5's keeping is visible there and on random lists.</p>
+<p>On lists whose true second-largest arrives after the largest, forcing neuron 5 off one step after the second-largest arrives drops accuracy on those lists from 96% to 0%. Forcing it off when a new largest arrives makes the answer wrong in 36 of 36 test lists.</p>
+
+<!-- ============================================================ 10 -->
+<h2><span class="n">10</span>All four together, and the interventions</h2>
+<p class="where">Why this matters: here the mechanisms run together on random lists, and the interventions test whether they cause the answer.</p>
+<p>The label above each step names what happens, judged by the idealized rules and by neuron 5's actual activation. The top row is the idealized shift register; the chart is the trained network's readout at each step.</p>
+<div class="fig" id="f10">
+  <div class="ctl"><button data-a="first">start</button><button data-a="prev">◀</button><button data-a="next" class="main">▶</button><button data-a="play">play</button><span class="lab"></span><span class="sp"></span>
+    <select data-a="ex"></select><button data-a="new">Random list</button></div>
+  <div class="ctl"><span>Intervention:</span><select data-a="iv"><option value="none">none</option></select></div>
+  <svg viewBox="0 0 640 530"></svg>
+  <div class="legend"><span><span class="sw" style="background:var(--ink2)"></span>new largest</span><span><span class="sw" style="background:var(--blue)"></span>overtakes the largest</span><span><span class="sw" style="background:var(--green)"></span>kept</span><span><span class="sw" style="background:var(--grey)"></span>forgotten or not positive</span></div>
+  <p class="cap"></p>
+</div>
+<p>The intervention menu repeats our main tests on the list shown. On many random lists of ARC's trained network, the results were these. "The largest's position wins" means the network names the largest's position as its answer; "right" means it names the true second-largest's position.</p>
+<table class="t">
+<tr><th>Test</th><th>Result</th><th>Same test on four randomly chosen other neurons</th></tr>
+<tr><td>Set the four cancelling neurons to zero at some step after the largest arrives, with no bigger number</td><td>the largest's position wins in 70% of 180,000 lists (58% when done one step after it arrives, 92% when five or more)</td><td>5% for ten random sets; every one of the 495 possible other sets of four: at most 24%</td></tr>
+<tr><td>When a bigger number arrives, give the four the values they would have had without it</td><td>the network is right in only 16% of 100,000 lists (95.5% without intervention)</td><td>92%</td></tr>
+<tr><td>Copy the twelve neurons from another list whose second-largest sits elsewhere, 1–4 steps after the overtaking</td><td>the answer follows the other list in 89–94% of random lists</td><td>twelve random neurons: 15–79%</td></tr>
+</table>
+<p>So switching off the four is enough to make the largest's vote count, and it is needed for the old largest to win. Earlier analyses of this network had seen the switch-off (Zihao Chen's 2024 notes for ARC; Nicholas Goldowsky-Dill's and Martin Keane's comments and repositories on the AlgZoo post, 2026), and that a new largest gives the old largest's score a boost. These tests show that the switch-off causes the answer on random lists.</p>
+
+<!-- ============================================================ 11 -->
+<h2><span class="n">11</span>Test by construction: a hand-built network</h2>
+<p class="where">Why this matters: if the four mechanisms are really enough, a network built from them alone, with no training, should solve the task.</p>
+<p>We set every weight of a 16-neuron network from written rules: same form as the trained one (ReLU, no bias), nothing trained or tuned against accuracy. It is right on <b>98.97%</b> of random lists, above the trained network's 95.3%. Earlier hand-built networks for this task needed 21 or 22 neurons.</p>
+<table class="t">
+<tr><th>Mechanism</th><th>Hand-built neurons</th><th>Trained network's neurons</th></tr>
+<tr><td>1. Largest so far: store and detector</td><td>2</td><td>2 and 4</td></tr>
+<tr><td>2. Shift register</td><td>9, shifting one slot per step</td><td>8 register neurons (with 2, 4, 5, 9 carrying part of the pattern), fading</td></tr>
+<tr><td>3. Cancelling</td><td>3 rotating neurons + 1</td><td>1, 6, 7, 8</td></tr>
+<tr><td>4. Gate one step late</td><td>1</td><td>5 (and 9)</td></tr>
+<tr><td>Total</td><td>16</td><td>16</td></tr>
+</table>
+<p>Below, both networks read the same list. The hand-built network's scores are in the list's own units: the winning score is close to the second-largest number's value.</p>
+<div class="fig" id="f11">
+  <div class="ctl"><button data-a="first">start</button><button data-a="prev">◀</button><button data-a="next" class="main">▶</button><button data-a="play">play</button><span class="lab"></span><span class="sp"></span><select data-a="ex"></select><button data-a="new">Random list</button></div>
+  <svg viewBox="0 0 640 545"></svg>
+  <p class="cap"></p>
+</div>
+<p>The hand-built network shows the mechanisms suffice. It does not show that the trained network implements them the same way, and it differs in three places. Its weights reach about 500, so its switches are sharp; the trained network's largest weight is about 13. Its gate only marks new largests: it keeps every positive number instead of forgetting small ones. Instead, one step after an overtaking, its whole register dips by a share of the old largest, which trims the old largest's wave to a single spike and clears older, smaller votes. And its register does not fade.</p>
+<p>Building it also corrected the account. Our first explanation said every number votes. A model built that way could not reach the trained network's accuracy (section 9), which is how we found neuron 5.</p>
+
+<!-- ============================================================ 12 -->
+<h2><span class="n">12</span>The unsolved part: copying the trained network's roles</h2>
+<p class="where">Why this matters: the hand-built network matches the trained one in size but not part for part. Matching it part for part is where our understanding still has a gap.</p>
+<p>The stricter test is a <b>role-copying network</b>: each group of neurons gets the trained network's exact job. It has the store and detector (trained neurons 2 and 4), a keep-or-forget gate relative to the second-largest (5), a gate that fires one step after a new largest (9), three cancelling neurons plus one that stores the second-largest (1, 6, 7, 8), and eight register neurons.</p>
+<div class="fig" id="f12">
+  <div class="ctl"><span>Accuracy by kind of list (300,000 random lists; each list counted once, in the first kind it fits)</span></div>
+  <svg viewBox="0 0 640 330"></svg>
+  <p class="cap">Hover over a bar for its value.</p>
+</div>
+<p>Every network does badly on lists with at most one positive number, which have no well-defined runner-up among positive votes. Apart from those, the role-copying network is right on 97–99% of lists, except one kind: <b>when a new largest arrives at the very last step</b>, it drops to 11%. The reason: its cancelling neurons rebuild their mirror from the stored largest at each step. That rebuild leaves a constant extra amount in them, which the readout removes using the stored largest. When the new largest arrives on the last step, the cancelling neurons have just been switched off, so the extra amount is gone, but the readout still subtracts it. That creates a false vote.</p>
+<p>Our sharp-switching designs needed one or two more neurons to fix this: with 17 neurons, overall accuracy on random lists is 96%, with 18 it is 98% (on last-step lists, 89% and 100%). That is not a proof that 16 is impossible; the trained network manages with 16, at 94% on these lists. We measured three ways it seems to manage, each with a different kind of evidence:</p>
+<ol>
+<li><b>Soft comparisons instead of sharp switches</b> (evidence: counts and a swap test). Its cancelling neurons switch off gradually, starting near 0.9 of the largest (section 8). At the last step the detector and the cancelling neurons decide together. The cost shows in its mistakes: with a rival at 0.97 of the old largest, it errs 17% of the time when the new largest is only 1% bigger than the old one, and 4% when it is 30% bigger.</li>
+<li><b>Cancelling driven by the jump</b> (evidence: fits). After a new largest, the cancelling neurons push about "new value minus 0.7 × old value", not "new value". So a new largest at the last step leaves no stale correction.</li>
+<li><b>A register that splits its work</b> (evidence: interventions on twin lists, where the overtaking number is replaced by −0.5). Two steps after an overtaking, register neurons 10–13 change with the jump, while neurons 0, 14 and 15 are pushed down by the old largest's value. Copying either group from the twin lowers how often the network names the old largest from 98% to 60–87%. So the trained network does dip its register by the old value, like our hand-built network, but only in a few neurons. Our role-copying network dipped the whole register, which also clipped the new largest's wave.</li>
+</ol>
+<p>Our third hand-built network, <b>v18</b>, keeps the role-copying layout and builds the second item: its clock is wiped by a new largest and receives the jump one step later. It is right on 96.0% of random lists overall (trained network: 95.3%), and on 92% of last-step lists (trained: 94%). It does this by giving two neurons different jobs. Its register is a plain delay line, so an overtaken largest's wave reaches only positions written before the new largest arrived. Its second-largest store becomes a flag that fires only when two records arrive in a row. And its late gate becomes a fourth clock neuron whose wave flips sign each step, which sharpens the revealed wave: neighbours fall from 0.7 to about 0.14 of the peak.</p>
+<p>It still errs on different lists from the trained network. When the second-largest is an overtaken record and the third sits right after it, v18 is right 83% of the time, the trained network 96%. The trained network <b>erases the vote of the number right after a record</b> once that record is overtaken (that number can then never be the second-largest). Undoing it in the trained network, by putting back the cancelling neurons' share of that number's vote after the overtaking, makes the network name that number on about half of such lists, against 2% normally. We have not built that erasure in 16 neurons. Other trained networks differ here: of 22, four cut the vote right after an overtaken record, six cut the vote two places after instead, and twelve show neither. Each network that cuts a neighbour's vote is one whose revealed wave spills onto that neighbour, so the erasure looks like each network's own fix for its own spill. The same intervention works in one of three other networks we tried (the third named on 40% of such lists instead of 3%), and does nothing in the two that cut the vote two places after the record. But all three store that number's vote the same way ARC's network does, in the neurons a bigger number silences (section 16 explains how). We have not built this into a twin: v18 keeps its signals linear with very large gains, so its hiding pattern can never clip the way the trained network's does.</p>
+
+<!-- ============================================================ 13 -->
+<h2><span class="n">13</span>Where the mistakes come from</h2>
+<p class="where">Why this matters: an explanation should also predict where a network fails, and ARC's challenge depends on it.</p>
+<p>Almost all of the trained network's mistakes are <b>close calls</b>. About 61% of its mistakes name the third-largest instead of the second, mostly when the two differ by under 3%. About 15% name the largest, almost all within 3%. About 18% are lists with at most one positive number. The remaining 6% name the fourth-largest or lower.</p>
+<p>To see a close call, fix the largest at 1.6 and the second at 1.0, set every other number to −0.46, and slide the third-largest from 0.90 to 1.10. A perfect network would switch from the second's position to the third's at exactly 1.00. Pick the positions below.</p>
+<div class="fig" id="f13">
+  <div class="ctl"><label>largest at <select data-a="a"></select></label><label>second (1.00) at <select data-a="b"></select></label><label>third at <select data-a="c"></select></label><button data-a="rand">Random placement</button></div>
+  <svg viewBox="0 0 640 250"></svg>
+  <p class="cap"></p>
+</div>
+<p>How far the switch point is from 1.00 is that placement's <b>tie offset</b>, typically about 2% (the paper calls it a bias; it has nothing to do with bias terms). The network errs on lists where the second and third are closer than the offset, on the wrong side. Offsets are stable within one network but look random across networks: across 22 networks trained the same way, their patterns are essentially unrelated (median correlation 0.02). Changing one network's weights by just 0.5% moves them by more than their own size. We found no simple rule that predicts them: per-position vote sizes explain about a third of their spread.</p>
+
+<!-- ============================================================ 14 -->
+<h2><span class="n">14</span>An accuracy estimate, and ARC's challenge</h2>
+<p class="where">Why this matters: this is ARC's test of whether an explanation is complete. Ours does not pass it.</p>
+<p>If tie offsets behave like random noise, only their size should matter. Our estimate adds three terms: lists with at most one positive number, close calls between the second and third, and close calls between the largest and second. Each close-call term multiplies how often random lists produce a near-tie of a given width (pure probability) by how wide the network's wrong band is, averaged over the 720 placements of the top three. The wrong bands are computed exactly: with no bias terms, the network is exactly linear between the points where a neuron switches on or off, so we walk each line one linear piece at a time.</p>
+<div class="fig" id="f14">
+  <svg viewBox="0 0 640 360"></svg>
+  <p class="cap">Each dot is one trained network. Filled dots were used while developing the estimate; open dots were scored only afterwards. The dashed line is a perfect estimate.</p>
+</div>
+<p>Errors below are in <b>percentage points</b> of error rate: a network that errs on 4.7% of lists, estimated at 5.7%, is off by one point. The estimate misses by about 0.65 points on the 22 development networks and 1.0 on the 16 later ones, far better than guessing the average error (2.3 and 3.5 points). But it costs about 53,000 network runs per network, and random sampling of 53,000 lists misses by only about 0.1 points. So it does <b>not</b> meet ARC's challenge. An earlier, cheaper estimate from our first run did better on that score: built from the three largest numbers, it was fixed in advance and scored once on 16 newly trained networks, missing by a typical 0.9 points at about 1,750 runs' worth of compute, where sampling at that compute misses by 0.6. That is still short of ARC's bar, but much closer. ARC's own words set the frame: an explanation "amounts to a mechanistic estimate of the model's loss" that "reasons deductively", and matching sampling is "easier than achieving a full understanding". Sampling n lists misses by about √(p(1−p)/n), where p ≈ 4.7% is the error rate; a miss of 0.65–1.0 points matches n ≈ 400–1,000. So at its cost, the estimate is worth about 400–1,000 random lists. Its main gaps are mistakes it does not model at all (mostly those naming the fourth-largest or lower: about half a point on average across networks, less for ARC's network), a largest-versus-second term that runs low, and the assumption that the 720 fixed lines represent all lists.</p>
+<p><b>Where understanding does pay: aiming the samples.</b> Think of polling an election where you already know that most districts are safe and a few are close. You spend your phone calls on the close districts and still get a good national estimate. The same works here. From the input alone we can tell which lists are close calls: the second- and third-largest within a few percent of each other, or at most one positive number. Two-thirds of lists are far from any close call, and the network gets them wrong only 0.7% of the time; on lists with at most one positive number it errs 77% of the time. Spending network runs mostly where errors are common estimates the accuracy with about half as many runs as plain random sampling. Finer groups barely help, which is the next paragraph's point: inside a close call, which way it falls depends on details of the weights.</p>
+<p><b>Why the offsets are so hard to predict.</b> A tie offset is where the network's answer flips between the second- and third-largest: say the network names the third whenever the third is within 1.6% of the second, for one placement of the top three. Section 16 shows that the network's decision is a small difference of large pushes. So the place where that difference crosses zero moves a lot when any push changes a little. At an exact tie between the second and third, the score gap that decides it is about 1/270 of the pushes that make it up, a captain on a ship 270 times his weight. A change of a few tenths of a percent in those pushes is enough to move the offset by its whole typical size. We checked this directly: changing every weight by a random 0.5% moves ARC's offsets by more than their own typical size, and the new pattern of offsets correlates only 0.6 with the old. Across 22 trained networks, those that cancel more have larger offsets, and larger offsets mean more wrong close calls and lower accuracy. Our reading: the offsets are small details of the weights, magnified by cancellation. An estimate that knows the mechanism but not those details cannot place them, which is one reason ours misses by about a point.</p>
+
+<!-- ============================================================ 15 -->
+<h2><span class="n">15</span>Putting the explanation back in</h2>
+<p class="where">Why this matters: Leo Gao argues that an explanation is only shown right if you can put it in place of the network's activations and the output does not change. We ran his test, on the trained network and on v18, whose rules we know.</p>
+<p><b>Formulas are not exact enough.</b> We wrote each trained neuron as a formula of the quantities our explanation names, for example "neuron 7 is about 11.5 × the largest so far minus 13.2 × the new number, never below zero". Then we ran the network with the formula's values in place of the neuron's real values, at every step, and measured how far the output moved (the KL divergence from the real output). Neuron 7's formula matches 99.8% of its variance, yet swapping it in drops accuracy from 95% to 75%. Swapping all 16 leaves 51%. The four cancelling neurons would have to be right to about 0.1–0.2 units, and our formulas miss by 0.6 to 4. So matching most of a neuron's variance says little about whether you have explained it.</p>
+<p>This is not special to ARC's network, or to our account. With one general formula for every neuron, built from 30 quantities, the same happens in all 22 trained networks we tried: neurons whose formula matches over 95% of their variance still cost a median 20 points of accuracy when swapped in. It also happens in both of our hand-built networks, whose workings we know exactly. Others saw the same kind of gap in language models (Bills et al., 2023); here it is extreme because the answer often hangs on scores only a few units apart.</p>
+<p>v18 shows the bar can be met: replaced by its own short written rules, all 16 neurons at once, it gives the same answers (96.0%, no measurable change). It also shows what a failure does and does not mean. With one natural misreading of its rules, such as taking the timer's height from the largest number instead of from the jump over the previous largest, it drops to 69%; leaving out one alternating term drops it to 59%. With its exact rules plus a tiny amount of noise it drops to 63%. Then we kept the right idea but set one constant slightly off. With the store's gain 2% too high, v18 drops to 58%, lower than the misreading. With the timer turning 45.5° per step instead of 45°, it drops to 76%; with the gate's cutoff at 0.765 instead of 0.75, to 93%. A less fragile version of v18, with gains of 30 instead of 10,000, gives nearly the same numbers. But a sturdier version built at the trained network's scale, which shrugs off noise of 0.01%, does not: there the store gain 2% off leaves 71%, level with the timer misreading (69%), and the other slight errors 89–93%. Think of two scales, one that wobbles if you breathe on it and one that doesn't: the same small mistake in loading them matters very differently. So the score ranks explanations by how hard their errors push on the decision, and how hard a small error pushes depends on how close the network's decisions are, not on whether the idea is right. To settle it we built a third twin, v21, designed to be as robust as the trained network (section 16 explains how): 95.9% accurate on a million lists and 89% under 1% noise, against the trained network's 95.3% and 90%. With the same spoils (three to its timer, one to its store), the misreadings leave 79% and 73%, while the timer at 45.5° leaves 95% and the store 2% too large 90%. On a network as robust as the one we study, the score ranks these spoils the right way round. The fragile control had made the score look blind to whether an idea is right. Measured in units of each list's decision margin (the gap between the top two scores), the misreadings move the scores by about 3.5 margins, the store gain 2% off by about 9 and the timer half a degree off by a third of a margin; accuracy falls as this error grows, though with wide scatter. We tried two controls for the kind of error. The first matches accounts by the size of their output error: on the trained network, misreadings then fall at most about 20 points below its own values made inexact, about as far as inexact versions differ among themselves. The second compares each account with its own errors shuffled across lists, which keeps their size and spread at every neuron. On the trained network it looked clean: our fitted accounts cost within about 3 points of their shuffled errors, while five misreadings of the cancelling neurons, store and gate cost 7–28 points more (the two memory misreadings did not). But on v18, with constants fitted the same way, it misled: one misreading cost 9 points less than its shuffled errors, and the right account at gains of 30 cost 11 points more. So neither control reliably tells a wrong idea from an inexact one. Adding noise does not help tell them apart: as the noise shrinks, only the exact rules climb back to 96% (and only below about 10⁻⁸ of each neuron's typical value), while misread and slightly-off rules alike level off. Fitting each account's constants to v18's neurons does not change this in general. The right formulas, fitted, recover the exact rules and pass, while the misreadings still fail although they match every neuron to within a millionth of its variance. But in the version with gains of 30, where the written rules are slightly idealized, fitting sets two timer constants to 30.0008 and −29.999 instead of 30 and −30, and the right account falls to 70%. Section 16 explains why the bar is so high in this network.</p>
+<p><b>Feeding back what was missing closes part of the gap.</b> A second test, resampling, finds which features of the list each neuron really depends on (next paragraph). Adding those features to the four cancelling neurons' formulas lifts the network, with those four replaced, from 66% to 85% with eleven quantities per neuron and 87% with twenty; six random draws of twenty features reach 74-83%. With fifty relevant quantities it reaches 91% and stalls there. That mixes "more exact" with "less wrong", so we cannot tell whether the account is only imprecise or also misses something. One warning: if all 16 formulas are fitted together to keep the output unchanged, they reach 90%, but they stop matching their own neurons (from 93% to 68% of variance). They compensate for each other instead of describing the neurons, so only the one-group-at-a-time numbers are fair.</p>
+<p><b>Resampling tests the claims.</b> Instead of a formula, a group of neurons gets its values from a second list that agrees with the real one on everything a claim says matters, and is redrawn elsewhere. For v18, true claims pass exactly, and a claim we knew to be wrong fails. For the trained network it showed that each neuron depends on more than its role names. The first extra below holds in all 22 trained networks we tried: the neuron that best tracks the largest so far also depends on where the largest arrived, while the twin's store does not. The store of the largest also keeps time since the largest arrived, and passes it on to the cancelling neurons and the register, so it works as one more timer neuron. The second-largest store also knows where the second-largest sits, and the output reads that directly, so it carries part of the second-largest's vote. And the cancelling neurons also hold numbers the gate kept, mostly those that arrived since the current largest, including the one right after it; a new largest switches them off and so wipes that share of those votes. That too holds in 20 of the 21 other trained networks (a tie in the last): each has neurons a new largest switches off, and they fit "they hold kept numbers" better than their role.</p>
+<p><b>A pass that could not tell, and a test that can.</b> We also redrew every number the gate should have forgotten, and the trained network barely noticed (95.3% to 94.9%). We first called that a confirmation of the forgetting. But v18, which never forgets those numbers, passed just as well. Such a number can never become the answer, since the second-largest only grows, so redrawing it cannot change the answer of any network that votes by size; a test scored only on the answer cannot see it. Looking at the scores themselves separates the two networks: nudge one number slightly and see how far the scores (or the memory neurons) move. In the trained network a forgotten number moves them about 40 times less than a kept one; in v18 exactly as much, because v18 still writes a small vote for it at a position that never wins. As a check the other way, we ran both tests on an earlier hand-built network whose gate forgets by exactly the account's rule. It passes the answer test too (99.4% of answers unchanged), and its forgotten numbers move nothing (ratio 0.000; the trained network's is 0.02, v18's 1.0). So the trained network does forget. The nudge test needs no account of a network, so we ran it on 21 other trained networks. Ten never forget; four forget below 0.7–0.8 of the second-largest, as ARC's does, and those five networks are among the most accurate (95–96%, against an average of 91% for the ten that never forget). That is a correlation, not a cause, and not crowding by many small votes: the networks that never forget already err twice as often on lists with only two or three positive numbers. v18 keeps every number and reaches 96%. Lesson: run the test on a network that does the opposite of your claim, and look at scores as well as answers.</p>
+
+<!-- ============================================================ 16 -->
+<h2><span class="n">16</span>Why the explanation must be so exact: cancellation</h2>
+<p class="where">Why this matters: section 15 showed that formulas matching 99.8% of a neuron's variance still break the network. This section explains why, with one idea from numerical analysis, and says what it predicts.</p>
+<p><b>Weighing the captain.</b> Suppose you want the captain's weight, and the only scale you have weighs the whole ship. You weigh the ship with the captain aboard, then without him, and subtract. Each weighing is good to one part in a thousand. But the ship weighs 5,000 tonnes, so each weighing can be off by 5 tonnes, and the captain weighs 80 kilograms. The difference you compute is noise. The trouble is not the scale. It is that the answer is a small difference between two large numbers.</p>
+<p><b>The network weighs captains.</b> Take one real list: −0.13, −0.05, 0.81, −0.86, −0.94, −1.41, 0.76, −1.34, −1.48, 0.06. The second-largest is the 0.76 at position 6, and the network names it, beating the runner-up (position 2, the largest) by 8.0 in the output's raw scores (all pushes below are in the same units). Now split that lead of 8 into each neuron's push: how much that neuron raises position 6's score minus how much it raises position 2's. Neuron 8 pushes +104. Neuron 7 pushes −68, neuron 6 −45, neuron 15 −31, neuron 12 −27, neuron 1 +27, and so on. The pushes add up to 390 in absolute size, and they sum to 8. If each push were off by 2%, the errors could add up to about 8, the whole lead. In numerical analysis the ratio of the terms' total size to their sum (here 390 / 8, about 50) is called the <b>condition number</b> of a sum: it says how much small relative errors in the terms are amplified in the total. This list is typical: across random lists the median is about 46.</p>
+<p><b>What it predicts.</b> First, how exact an explanation must be. Independent errors of 2% on each neuron's final value, read once by the output, cost 6 points; 5% cost 21. That is the captain problem alone. Fed through all ten steps, the same errors cost two to three times as much, because they also compound through the recurrence. (Making every neuron 2% too large at every step costs 9 points, although at the readout alone it would cost nothing, because with no bias terms every score grows by the same 2% and the winner stays: that one is purely compounding.) Second, which neurons need the most exact explanation: split by neuron, the pushes rank the neurons by how much a 2% error in each costs (rank correlation 0.72, where 1 would mean the same order and 0 no relation). The four cancelling neurons and the store come first; the detector and gates, which act only through other neurons, are missed. Third, which networks are hard: across 22 trained networks, those that cancel less lose less when a neuron is replaced by a formula, even with accuracy held fixed. Across the whole AlgZoo family of this task, cancellation grows as the task outgrows the network: no network cancels on two numbers, and for ten numbers 16-neuron networks cancel far more than 32-neuron ones. The two small networks ARC says it fully understands, 2 neurons for two numbers and 4 neurons for three, have condition numbers of 1 and about 10.</p>
+<p><b>Which part of an error matters.</b> The condition number says how much errors <i>can</i> be amplified. A sharper question is how much a <i>given</i> error will cost. For small errors, calculus answers it. Run the network on a list, then ask, for every neuron at every step: if this value were a little larger, how much would the winner's lead change? One backward pass, like training's backpropagation but used only to read sensitivities, gives all 160 numbers at once. An explanation's error then costs about the sum of each error times its sensitivity. To check, we added random errors of 2% of each neuron's typical value, either laid along the sensitivities or at right angles to them. Along them they cost 27 points; at right angles, the same size cost 3. Not quite free, because errors also flip neurons on or off downstream, which the calculus ignores, but nine times cheaper. That is the same idea as attribution patching, a known shortcut for estimating interventions in language models. Here it works very well: it predicts what a 2% error in each neuron costs almost exactly (rank correlation 0.99), including the store and detector that the condition number missed, and what substituting each neuron's formula costs to within about 4 points. It also predicts how accuracy falls when every weight is jiggled by a small random fraction. The nine leads of the right answer over the other positions then move together, like nine dice loaded the same way, and the backward passes say how much and how jointly. Predicted mean accuracy at 0.5%, 1% and 2% weight noise: 90.9%, 81.6% and 65.0%; measured on 12,000 jiggled copies each: 90.8%, 81.3% and 64.3%. It works as well on our hand-built networks, including the fragile ones that fall to 14% under this noise (within 1.4 points). With ARC's own noise (every weight plus a normal draw with SD 0.0025, which costs between 1 and 20 points depending on the draw), it even predicts each jiggled copy's accuracy from that copy's own draw, without running it, to within a quarter of a point. Most of the loss comes from the 64 weights feeding the four cancelling neurons; noise on the input and readout weights does almost nothing. But it uses the network's own gradients, not our account of the neurons, and the input lists are still sampled. So it shows the damage is predictable, not that our account predicts it; it is not yet the estimate ARC asks for. The lesson is that an error's size is not the point. What matters is how much of it points along the sensitivities. On v18, a misreading of the timer's height is less than half the size of the error from moving the gate's cutoff to 0.765, yet it costs about nine times as much accuracy, because it points along the sensitivities. It fails where the network switches sharply, as at a gate's cutoff, because there a small change is not small in its effect.</p>
+<p><b>Hilton's faithfulness test.</b> Jacob Hilton asked how faithful the first twin is to the trained network: does it compute the answer the same way inside? His measure starts from idealized weights (a clean version that does exactly what the explanation says), treats their gap to the real weights as noise, and estimates the trained network's accuracy. With the first twin at the trained network's scale (92% accurate) as the idealized weights, that predicts 10%, chance; but the trained network with noise that large also scores 10%, so this only says the two sets of weights are far apart. The twin gives the trained network's answer on 89% of lists. Copying its store and detector into the running trained network keeps 85% (the lost points are the store's fade, which the twin lacks); copying its memory keeps 26% (same votes, stored differently). Its slots for the cancelling neurons and neuron 9 hold neurons with other jobs by design. Two steps toward the test work without sampling. A second estimate keeps the three largest numbers exact on a fixed grid and the other seven at their average: 95.32% against 95.32% measured (partly luck), a typical half point off on 32 other networks and 40 noisy copies, but far more costly than sampling. And the same grid scores an explanation of one group by how often the network keeps the trained answer with that group replaced: the store as "17.6 × the largest" 87%, with its real ratio by age 93%, with a fitted correction for the pushes it gets from the memory and the cancelling neurons 96.5%. With every group replaced by its rule at once, 92%: each group alone changes 3-4% of answers, together only 8%. A page that walks through Hilton's propagation idea with real numbers: <span class="k">viz/propagation.html</span>.</p>
+<p><b>What explaining it this way revealed.</b> We had pictured the cancellation as the timer pushing one way and the four cancelling neurons pushing back. Writing out the example list showed something else: most of the cancellation happens <i>inside</i> groups of neurons that share a job (the four cancelling neurons; the twelve-neuron memory and timer; the store and detector; the two gates), especially among the four cancelling neurons themselves (+104 against −68 and −45). They carry the timer's rotating pattern, and a rotating pattern read neuron by neuron shows large opposite parts that mostly cancel, the way a turning arrow has large x and y parts even when it points nowhere special.</p>
+<p><b>So part of the condition number is a matter of description.</b> Counted neuron by neuron it is about 46. Rewrite each group's activity in its own main directions (the few directions along which that group's state actually varies, found by principal components) and it falls to about 21. Count one net push per group and it is about 9. The network really cancels between its groups, by a factor of about 9. But explanations written one neuron at a time, as Gao's test asks, face about five times more amplification than explanations written in the network's own directions.</p>
+<p><b>Direction matters, size does not.</b> That predicts that errors which keep the ratios inside a group should cost far less than errors of the same size that change them. On the four cancelling neurons: random errors of 3% in each neuron independently leave 70% accuracy; the same 3% applied to all four as one shared factor leaves 94%. So an explanation of these neurons must get the direction of their joint pattern right much more exactly than its overall size. Our own formulas for the four get the size right to within about 10%, but point about 5° away on a typical step. Given the true direction and our formulas' size, the network keeps 90%; given our direction and the true size, 55%. Turning the true pattern by half a degree leaves 93%, by 1° 87%, by 5° 47%.</p>
+<p><b>The missing piece is the four neurons' own past.</b> Formulas built from the rotation rates read off the weights get to 1.4°, no closer. When some of the four switched off earlier in the list, part of the rotating pattern was cut, and the error afterwards is 2.5°, against 0.6° on lists where that never happened. Giving the formulas the four neurons' true values from the step before closes most of the gap (0.3°, 91%). This partial switching is not rare: a positive number below the largest switches some of the four off on 25% of steps when it is under half the largest, and on over 85% when it is within 20% of it. Our first account described only the full silencing by a bigger number. Each of the four holds about 11 to 13 times a reference minus the current number. Neuron 7's reference is the largest; the other three's references move, mostly between the second-largest and the largest, from step to step, and that movement is the timer's ripple. So a new largest pushes all four to nearly zero however small its lead, and a number below half the second-largest switches none of them off. Right after a new largest, the partial switch has a simple form. Neurons 6 and 8 take none of the new largest's jump, and the store they read lags a step, so for that one step they hold about 11 to 13 times the previous largest (now the second-largest) minus the arriving number. A number above about nine-tenths of the second-largest switches those two off and leaves the other two on; if no positive number came before the new largest, those two stay off. Since those two do not yet carry the new largest's timer, the hiding loses nothing. Between 4 and 10 of the 17 other trained networks that have cancelling neurons do the same, depending on how strictly the pattern is defined. Undoing the partial clipping drops accuracy from 95% to 71%. It roughly halves the vote of the kept number that triggers it, and it is part of the erasure in section 12. What else it computes we do not know: our guess that it puts kept numbers' votes on the same scale as revealed records' votes predicted the wrong lists would break.</p>
+<p><b>A picture of the partial switching.</b> Look at the four cancelling neurons as one arrow with four coordinates. Over all lists and steps, nine-tenths of the arrow's variation is along one direction: a shared level, roughly the largest so far minus the new number, which keeps all four on. On top of that rides the timer's small rotating wave. The wave is large just after a new largest arrives and fades by 5–25% per step. A ReLU neuron cannot go below zero, so the arrow must stay in the corner of space where all four coordinates are positive. A positive number lowers the shared level. If it arrives while the wave is still large, the neurons at the wave's low point dip below zero and are cut off. That is why partial switching is common one step after a new largest (63% of positive numbers below the largest) and rare six or more steps later (11–16%, and then only for numbers close to the largest). Neuron 7 almost never switches off; neuron 8 most often does. The number that arrives right after a record is the one most often clipped, and this turns out to be part of the erasure of its vote (section 12). On lists where the second-largest is an overtaken record and the third arrived right after it, undoing the clipping at the third's arrival makes the network name the third on 33% of lists (normally 2%). When the third arrived two or more steps later, the same intervention gives 17%; undoing the clipping at all other steps gives 5–8%. So the clipping holds back any kept number's vote, and twice as strongly for the number right after a record.</p>
+<p><b>Why half a degree.</b> The four cancelling neurons alone can push the lead, on a typical list, by about 30 times the lead itself (that counts their pushes as one arrow turned in the worst way; all 16 neurons' pushes added up neuron by neuron are about 50 times the lead). Turning their arrow by an angle θ (in radians) moves the push by up to θ times its size. So a turn of 1/30 of a radian, about 2°, can wipe out the lead on a typical list, and on the tenth of lists with the smallest leads a turn of under half a degree can. Random turns do less harm than the worst turn, which is why the measured tolerance sits between those numbers.</p>
+<p><b>Describe the machine, not its snapshots.</b> Why can't formulas of the list point the four cancelling neurons' arrow to within half a degree? Because the arrow remembers. Once some of the four were cut off earlier in the list, the rotating wave they carry is missing a piece, and that missing piece stays for the rest of the list. A formula that looks only at the numbers sees the same list either way. Give the formulas the four neurons' own values from one step earlier and they point within 0.3°, and the network keeps 91%. So we stopped writing the four as formulas and wrote them as what they are: a small wheel that turns about 43° per step and shrinks by 6% per step, pushed by the incoming numbers and clipped at zero. Run that way, with only the push written as a formula, they keep the network at 92%. Written the same way, the memory becomes a shift register with switching rules, and all 16 neurons replaced keep 86%, against about half for formulas. The lesson for explaining networks: when a group of neurons carries a state that the inputs alone do not fix, the explanation has to be a small machine, not a list of input formulas.</p>
+<p><b>What the partial switching is for.</b> Section 12 described the erasure: when a record is overtaken, its revealed vote spills one position past it, and the trained network wipes out the vote of the number sitting there. Now we can say how. Picture two drawers for votes: the memory, which keeps what you put in, and the four cancelling neurons, which a bigger number will empty. A number that arrives one step after a record, while the timer's ripple is still large, partly switches the cancelling neurons off, and that is what puts its vote in the second drawer: about 43 per unit of its value there, and slightly negative everywhere else. On the one list in eight where it does not switch them, the vote goes in the memory drawer (46 per unit). A number arriving three steps after the record also uses the memory drawer. When a bigger number arrives and empties the cancelling neurons, only the vote in that drawer is lost, which is exactly the vote that would have collided with the spill. So partial switching is a routing switch: it files the right number's vote where the overtaking will throw it away.</p>
+<p><b>Building a robust twin.</b> Picture each timer neuron as a needle riding on a platform. The platform (the level) is there only to keep the needle above zero, because a ReLU cannot go below it. Noise shakes the whole thing in proportion to its height, but only the needle carries information. v18 used tall platforms, so a little shaking swamped the needle. Its timer's platform also had to depend on the incoming number: that is how the timer gets wiped the moment a bigger number arrives. So every ordinary number lowered or raised the platform. v21 keeps every platform about as tall as its needle. It wipes the timer one step late, through the record detector, so the platform no longer depends on the incoming number. A record at the very last step would then stay hidden, so a small group of neurons, silent except at records, undoes the hiding at that step. A record's own memory slot now holds its full vote and is hidden by subtraction alone, so its reveal is exact. And a second rotation (90° per step) sharpens the hiding pattern, which shrinks the spill onto neighbours and the platform the memory needs. The cost is 28 neurons instead of 16. The result is as accurate and as robust as the trained network, with a condition number of 40 against its 46. The trained network gets low platforms in 16 neurons a different way: it lets its neurons clip, and its rules work through the clipping.</p>
+<p><b>Robustness.</b> The trained network's condition number of about 50 makes it hard to simulate, but it is still a forgiving network: noise of 0.1% on all neurons changes nothing. v18 is the opposite. Its condition number is in the hundreds of thousands, so noise of 0.1% on any one of its neurons costs 5–17 points. Two causes explain much of that: v18 uses gains of up to 10,000 to keep its signals linear, and on about 17% of lists its answer rests on a near-tie between the largest's position and the second-largest's, broken by a term of 10⁻⁴ × the largest. Across the 22 trained networks there is no trade-off between accuracy and robustness: the accurate networks write larger votes on smaller neuron values, so they cancel less. Why are the hand-built networks so fragile? Picture a neuron that must hold a value that swings above and below zero. A ReLU cannot go below zero, so you either lift the whole signal on a big constant platform, which keeps it linear but means the readout must subtract the platform again, or you keep the platform low and accept that the neuron sometimes clips. Our twins take the first road: large platforms, exact linearity, and readouts that cancel huge terms, so a tiny error in a platform swamps the answer. The trained network takes the second road: low platforms and frequent clipping, which is what its partial switching is. Across the 22 trained networks, the ones that switch more cancel less (rank correlation 0.80, still 0.74 with accuracy held fixed). We checked the trade on a twin by lowering its timer's platform step by step. Cancellation fell 25-fold and noise stopped mattering, but accuracy fell from 95% to 32%: the twin was designed for a high platform and breaks when its neurons clip. The trained network clips all the time and still gets 95%, so its design must use the clipping rather than suffer it.</p>
+
+<!-- ============================================================ 17 -->
+<h2><span class="n">17</span>What is solid and what is open</h2>
+<table class="t">
+<tr><th>Claim</th><th>Evidence</th></tr>
+<tr><td>Neurons 2 and 4 keep the largest so far</td><td>direct reading of activations; matches ARC's own account</td></tr>
+<tr><td>Twelve neurons form a fading nine-slot shift register, and the readout turns with it</td><td>derived from the weights in the most common on/off pattern (12% of steps); 17 of 21 other networks agree. Switching between patterns is not covered. The memory's switching matters mostly in two neurons, 0 and 15: with the other six made purely linear, the network still gets 89.5% right. Neuron 0 switches off exactly two steps after every new largest, which keeps a push carrying the new largest's value out of it; that rule alone gives 93.6%. Neuron 15's switching is predicted from the sign of a formula of the inputs on 86% of steps, with no simple rule.</td></tr>
+<tr><td>Four cancelling neurons cancel the largest's vote; a bigger number switches them off, which reveals the old largest's vote</td><td>interventions on random lists: silencing the four makes the largest win on 70% of lists; all 495 other sets of four: median 6%, best 24%. Holding them at their earlier values when a bigger number arrives: 16% right, against 92% for random neurons</td></tr>
+<tr><td>Neuron 5 keeps numbers above about three-quarters of the second-largest and forgets the rest</td><td>interventions (forcing it off and on)</td></tr>
+<tr><td>The four mechanisms suffice for the task in 16 neurons</td><td>hand-built network, 98.97%</td></tr>
+<tr><td>How the trained network handles a new largest at the last step with only 16 neurons</td><td>three measured hypotheses, only the register split backed by interventions; v18 shows a jump-driven clock with two reassigned roles reaches 96% in 16 neurons</td></tr>
+<tr><td>The trained network erases the vote of the number right after an overtaken record</td><td>measured (that vote's size falls from 30–38 to 1–4 per unit); it runs through the cancelling neurons, including their partial switching (interventions: 51% and 33% against 2% and 14%); not yet built by hand in 16 neurons</td></tr>
+<tr><td>Our formulas can stand in for the trained neurons</td><td>no: swapping all 16 in leaves 51%; v18 passes from its own rules</td></tr>
+<tr><td>A simulation score can tell a wrong explanation from a slightly-off right one</td><td>it depends on the control. On v21, as robust as the trained network, four spoils are ranked correctly (misreadings 73-79%, slightly-off right rules 90-95%). Earlier answer: no, on v18: one gain 2% off scores 58%, below a misreading (69%); only exact rules pass. On a sturdier v18 at the trained network's scale the same error scores 71%, level with the misreading: the ranking depends on how close the network's decisions are</td></tr>
+<tr><td>A test scored on the answer can check forgetting</td><td>no: it passes on v18 (never forgets) and on a forgetting hand-built network alike; nudging numbers and reading the neurons separates all three</td></tr>
+<tr><td>Each trained neuron depends on more features than its role names</td><td>resampling tests, confirmed on fresh lists; v18's role claims pass exactly</td></tr>
+<tr><td>Explanations must be about 1% exact because the network decides by cancellation</td><td>the pushes on the winner's lead are about 50 times the lead (condition number); 2% errors and 1% noise cost what it predicts; per-neuron and cross-network predictions hold as correlations; about half of it is a matter of the neuron basis</td></tr>
+<tr><td>For the four cancelling neurons, direction matters, not size</td><td>their joint pattern must point within about half a degree; size can be 10% off (true direction with our size: 90%; our direction with the true size: 55%). What formulas miss is the four neurons' own history</td></tr>
+<tr><td>The cancelling neurons and the memory are small machines, not formulas of the input</td><td>run as a clipped rotation (43° per step, shrinking 6%) and a shift register with switching rules, all 16 replaced keep 86–91%, against 51% for formulas; trained weights are kept inside both machines. Remaining errors are close calls</td></tr>
+<tr><td>What the cancellers' partial switching computes</td><td>partly answered: it routes the vote of the number right after a record into the cancelling neurons (43 per unit, against 9 when it does not happen), where the overtaking deletes it; that is the erasure. Three other trained networks that erase store the doomed vote in their cancelling neurons too. Undoing it costs 24 points and breaks answers broadly, so it may do more</td></tr>
+<tr><td>Mistakes are close calls decided by small, network-specific tie offsets</td><td>measured on 22 networks; the offsets themselves are not explained</td></tr>
+<tr><td>Other trained networks use the same switch-off trick</td><td>only some: 4 of 21 pass both intervention tests; the count depends on what "switched off" means</td></tr>
+<tr><td>ARC's challenge</td><td>not met: the estimate is about ten times less accurate than sampling at equal cost</td></tr>
+</table>
+<p>Two lessons for interpretability came out of the work. First, rebuilding by hand found what checks on simple inputs missed: the forgetting gate is invisible on two-number lists. Second, we fitted a simple model in which every kept number casts an independent vote of fitted size. It agrees with 95% of the trained network's answers but repeats only 10–29% of its mistakes, which we first read as a missing mechanism. Yet the same kind of model repeats only 3–14% of the hand-built network's mistakes, whose mechanism we know completely. Mistakes depend on fine details that such a summary does not encode, so missing them does not by itself show that the explanation is incomplete.</p>
+
+<h3>Sources</h3>
+<ul style="font-size:15px">
+<li>Bills, S., Cammarata, N., Mossing, D., et al. (2023). Language models can explain neurons in language models. OpenAI.</li>
+<li>Hilton, J. (2026). <a href="https://www.alignment.org/blog/algzoo-uninterpreted-models-with-fewer-than-1-500-parameters/">AlgZoo: uninterpreted models with fewer than 1,500 parameters</a>. ARC blog, 26 January 2026. Includes ARC's 22-neuron hand-designed network.</li>
+<li>Chen, Z. (2024). RNNs for the 2nd argmax. Notes for ARC, linked from Hilton (2026); a 21-neuron hand-built network.</li>
+<li>Goldowsky-Dill, N. (2026). Comment on the AlgZoo post; <a href="https://github.com/NixGD/rnn-explaining">github.com/NixGD/rnn-explaining</a>.</li>
+<li>Keane, M. (2026). Comments on the AlgZoo post; notes in <a href="https://github.com/mrsirrisrm/alg-zoo">github.com/mrsirrisrm/alg-zoo</a>.</li>
+<li>Our paper draft (<span class="k">paper/draft_v2.md</span>) has the full evidence, sample sizes and logs for every number on this page.</li>
+</ul>
+</main>
+<script>
+const M = /*TRAINED*/null, HB = /*HB*/null, DIAL = /*DIAL*/null, EXS = /*EX*/null, EST = /*EST*/null;
+const N = 10, D = 16;
+const HIDE = [1, 6, 7, 8], TIMER = [0, 2, 3, 4, 5, 9, 10, 11, 12, 13, 14, 15];
+const NS = 'http://www.w3.org/2000/svg';
+const cssv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const C = { blue: cssv('--blue'), orange: cssv('--orange'), green: cssv('--green'), red: cssv('--red'), grey: cssv('--grey'), ink: cssv('--ink'), ink2: cssv('--ink2'), muted: cssv('--muted'), grid: cssv('--grid'), axis: cssv('--axis'), hi: cssv('--hi'), purple: cssv('--purple'), bluel: cssv('--blue-l'), orangel: cssv('--orange-l'), greenl: cssv('--green-l') };
+function S(tag, a = {}, p) { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; }
+function T(p, x, y, s, a = {}) { const e = S('text', Object.assign({ x, y }, a), p); e.textContent = s; return e; }
+const clear = e => { while (e.firstChild) e.removeChild(e.firstChild); };
+const f2 = v => (Math.abs(v) < 0.005 ? 0 : v).toFixed(2);
+const f1 = v => (Math.abs(v) < 0.05 ? 0 : v).toFixed(1);
+const f0 = v => Math.round(v).toString();
+const argmax = a => a.reduce((b, v, i) => v > a[b] ? i : b, 0);
+const sum = a => a.reduce((x, y) => x + y, 0);
+const centre = a => { const m = sum(a) / a.length; return a.map(v => v - m); };
+const order = xs => xs.map((v, i) => i).sort((a, b) => xs[b] - xs[a]);
+let seed = 7;
+const rnd = () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; };
+const randn = () => { let u = 0; while (!u) u = rnd(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * rnd()); };
+const randList = () => Array.from({ length: N }, () => Math.round(randn() * 100) / 100);
+const ALL = [...Array(D).keys()];
+
+// ---------- the network ----------
+// iv: { zero: {t, ks}, force: {t, k, v}, restore: {t, ks, from: states} }
+function run(W, xs, iv = {}) {
+  let h = new Array(D).fill(0); const H = [], P = [];
+  for (let t = 0; t < xs.length; t++) {
+    const p = new Array(D);
+    for (let i = 0; i < D; i++) { let s = W.w_hi[i] * xs[t]; const r = W.w_hh[i]; for (let j = 0; j < D; j++) s += r[j] * h[j]; p[i] = s; }
+    h = p.map(v => v > 0 ? v : 0);
+    if (iv.zero && iv.zero.t === t) iv.zero.ks.forEach(k => h[k] = 0);
+    if (iv.force && iv.force.t === t) h[iv.force.k] = iv.force.v;
+    if (iv.restore && iv.restore.t === t) iv.restore.ks.forEach(k => h[k] = iv.restore.from[t][k]);
+    H.push(h); P.push(p);
+  }
+  return { H, P };
+}
+const readout = (W, h, ks = ALL) => W.w_oh.map(r => ks.reduce((a, j) => a + r[j] * h[j], 0));
+const reading = (W, h, ks) => centre(readout(W, h, ks));
+const answerOf = (W, xs, iv) => argmax(readout(W, run(W, xs, iv).H[N - 1]));
+
+// ---------- cartoon ----------
+// returns per step: event {kind, text}, and token state after the step
+function cartoon(xs, rule = 2) {
+  let m = 0, s2 = 0, mpos = -1; const toks = []; const steps = [];
+  xs.forEach((x, t) => {
+    let ev;
+    if (x > m && x > 0) {
+      if (mpos >= 0 && rule >= 1) { const old = toks.find(k => k.p === mpos); old.hidden = false; ev = { kind: 'over', text: `${f2(x)} beats the largest ${f2(m)}: the ${f2(m)}'s vote is revealed, and ${f2(x)} writes a hidden vote` }; }
+      else ev = { kind: 'new', text: rule >= 1 ? `${f2(x)} is the new largest: it writes a hidden vote` : `${f2(x)} writes a vote` };
+      if (mpos >= 0) s2 = m;
+      toks.push({ p: t, v: x, hidden: rule >= 1 }); m = x; mpos = t;
+    } else if (x > 0) {
+      if (rule < 2 || x > s2) { toks.push({ p: t, v: x, hidden: false }); ev = { kind: 'keep', text: rule < 2 ? `${f2(x)} writes a vote` : `${f2(x)} beats the second-largest so far (${f2(s2)}): it writes a visible vote` }; }
+      else ev = { kind: 'forget', text: `${f2(x)} is below the second-largest so far (${f2(s2)}): forgotten` };
+      if (x > s2) s2 = x;
+    } else ev = { kind: 'neg', text: `${f2(x)} is not positive: no vote` };
+    steps.push({ ev, toks: toks.map(k => Object.assign({}, k)) });
+  });
+  return steps;
+}
+const cartoonAnswer = (xs, rule) => { const st = cartoon(xs, rule)[N - 1].toks.filter(k => !k.hidden); if (!st.length) return 0; return st.reduce((b, k) => k.v > b.v ? k : b).p; };
+
+// ---------- layout helpers ----------
+const X = i => 92 + i * 54, BW = 30;
+function tape(g, xs, o = {}) {
+  const y0 = o.y0, k = o.k || 16, upto = o.upto == null ? N - 1 : o.upto;
+  if (o.title) T(g, 6, y0 - (o.titleDy || 46), o.title, { class: 'b' });
+  S('line', { x1: X(0) - 26, x2: X(9) + 26, y1: y0, y2: y0, stroke: C.axis }, g);
+  if (o.cur != null && o.cur >= 0) S('rect', { x: X(o.cur) - 25, y: y0 - 64, width: 50, height: 128, rx: 6, fill: C.hi }, g).parentNode.insertBefore(g.lastChild, g.firstChild);
+  xs.forEach((v, i) => {
+    if (i > upto) { S('rect', { x: X(i) - BW / 2, y: y0 - 14, width: BW, height: 14, fill: 'none', stroke: C.grid, 'stroke-dasharray': '3 3' }, g); T(g, X(i), y0 - 20, '?', { 'text-anchor': 'middle', class: 'm' }); }
+    else {
+      const h = Math.max(-44, Math.min(44, v * k)), col = o.color ? o.color(i) : C.grey;
+      S('rect', { x: X(i) - BW / 2, y: h > 0 ? y0 - h : y0, width: BW, height: Math.max(1, Math.abs(h)), fill: col, rx: 2 }, g);
+      T(g, X(i), h >= 0 ? y0 - h - 5 : y0 - h + 14, f2(v), { 'text-anchor': 'middle', class: i === o.cur ? 'b' : '' });
+    }
+    if (o.labels !== false) T(g, X(i), y0 + (o.labDy || 62), i, { 'text-anchor': 'middle', class: 'm' });
+  });
+  if (o.marks) for (const i in o.marks) T(g, X(+i), y0 - 60, o.marks[i][0], { 'text-anchor': 'middle', fill: o.marks[i][1], style: `fill:${o.marks[i][1]};font-weight:650` });
+}
+// bar chart of scores (centred), clipped at lim
+function barsChart(g, series, o) {
+  // series: [{vals, color, w, dx, opacity}], o: {y0, k, lim, title, win}
+  const y0 = o.y0, k = o.k, lim = o.lim;
+  if (o.title) T(g, 6, y0 - lim * k - 10, o.title, { class: 'b' });
+  for (const gv of (o.grid || [])) { S('line', { x1: X(0) - 26, x2: X(9) + 26, y1: y0 - gv * k, y2: y0 - gv * k, stroke: C.grid }, g); T(g, X(0) - 30, y0 - gv * k + 4, gv > 0 ? '+' + gv : gv, { 'text-anchor': 'end', class: 'm' }); }
+  S('line', { x1: X(0) - 26, x2: X(9) + 26, y1: y0, y2: y0, stroke: C.axis }, g);
+  T(g, X(0) - 30, y0 + 4, '0', { 'text-anchor': 'end', class: 'm' });
+  if (o.win != null) S('rect', { x: X(o.win) - 25, y: y0 - lim * k - 4, width: 50, height: 2 * lim * k + 8, rx: 6, fill: o.winColor || C.greenl, opacity: 0.6 }, g);
+  for (const s of series) s.vals.forEach((v, i) => {
+    if (s.only && !s.only(i)) return;
+    const vv = Math.max(-lim, Math.min(lim, v)), h = vv * k, w = s.w || BW, x = X(i) + (s.dx || 0) - w / 2;
+    S('rect', { x, y: h > 0 ? y0 - h : y0, width: w, height: Math.max(0.5, Math.abs(h)), fill: s.color, opacity: s.opacity == null ? 1 : s.opacity, rx: 1.5 }, g);
+    if (Math.abs(v) > lim) T(g, X(i) + (s.dx || 0), v > 0 ? y0 - lim * k - 2 : y0 + lim * k + 11, '…', { 'text-anchor': 'middle', class: 'm' });
+    if (s.labels) T(g, X(i) + (s.dx || 0), h >= 0 ? y0 - h - 4 : y0 - h + 13, s.fmt ? s.fmt(v) : f0(v), { 'text-anchor': 'middle', class: s.labelClass || 'm' });
+  });
+  if (o.posLabels) for (let i = 0; i < N; i++) T(g, X(i), y0 + lim * k + 28, i, { 'text-anchor': 'middle', class: 'm' });
+}
+
+// ---------- tweening ----------
+const ease = u => u < .5 ? 2 * u * u : 1 - Math.pow(-2 * u + 2, 2) / 2;
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+function tweener(draw, ms = 480) {
+  let cur = null, raf = 0;
+  return function to(target, instant) {
+    cancelAnimationFrame(raf);
+    if (!cur || instant || reduce || cur.length !== target.length) { cur = target.slice(); draw(cur); return; }
+    const from = cur.slice(), t0 = performance.now();
+    const f = now => { const u = ease(Math.min(1, (now - t0) / ms)); cur = from.map((v, i) => v + (target[i] - v) * u); draw(cur); if (u < 1) raf = requestAnimationFrame(f); };
+    raf = requestAnimationFrame(f);
+  };
+}
+
+// ---------- stepper ----------
+function stepper(fig, { min = 0, max, start, label, onStep, ms = 1000 }) {
+  let s = start == null ? min : start, timer = null;
+  const lab = fig.querySelector('.lab');
+  const go = (n, instant) => { s = Math.max(min, Math.min(max, n)); if (lab) lab.textContent = label ? label(s) : `step ${s}`; onStep(s, instant); };
+  const stop = () => { clearInterval(timer); timer = null; const b = fig.querySelector('[data-a=play]'); if (b) b.textContent = 'play'; };
+  fig.querySelectorAll('[data-a]').forEach(b => {
+    const a = b.dataset.a;
+    if (a === 'first') b.onclick = () => { stop(); go(min); };
+    if (a === 'prev') b.onclick = () => { stop(); go(s - 1); };
+    if (a === 'next') b.onclick = () => { stop(); go(s + 1); };
+    if (a === 'play') b.onclick = () => {
+      if (timer) return stop();
+      if (s >= max) go(min, true);
+      b.textContent = 'pause';
+      timer = setInterval(() => { if (s >= max) return stop(); go(s + 1); }, ms);
+    };
+  });
+  return { go, get s() { return s; }, set max(v) { max = v; }, stop };
+}
+function fillSelect(sel, items, val) { sel.innerHTML = ''; items.forEach(([v, t]) => { const o = document.createElement('option'); o.value = v; o.textContent = t; sel.appendChild(o); }); if (val != null) sel.value = val; }
+const posItems = (a = 0, b = 9) => Array.from({ length: b - a + 1 }, (_, i) => [a + i, a + i]);
+
+// ======================================================= figure 1
+(() => {
+  const f = document.getElementById('f1'), svg = f.querySelector('svg'), cap = f.querySelector('.cap');
+  let xs = [0.48, -1.2, 0.3, 1.09, -1.06, -0.52, 1.61, -1.04, -0.67, 0.21], shown = false;
+  function draw() {
+    clear(svg); const o = order(xs), net = answerOf(M, xs);
+    const color = i => !shown ? C.grey : i === o[1] ? C.green : i === o[0] ? C.ink2 : C.grey;
+    const marks = shown ? { [o[0]]: ['largest', C.ink2], [o[1]]: ['second', C.green] } : {};
+    tape(svg, xs, { y0: 80, color, marks });
+    T(svg, 6, 146, 'position', { class: 'm' });
+    cap.innerHTML = shown ? `The second-largest is <b>${f2(xs[o[1]])} at position ${o[1]}</b>. The trained network answers <b>position ${net}</b> ${net === o[1] ? '(right)' : '(wrong)'}.` : 'Which position holds the second-largest number?';
+  }
+  f.querySelector('[data-a=new]').onclick = () => { xs = randList(); shown = false; draw(); };
+  f.querySelector('[data-a=show]').onclick = () => { shown = !shown; draw(); };
+  draw();
+})();
+
+// ======================================================= figure 2
+(() => {
+  const f = document.getElementById('f2'), svg = f.querySelector('svg'), cap = f.querySelector('.cap');
+  const base = [0.48, -1.2, 0.3, 1.09, -1.06, -0.52, 1.61, -1.04, -0.67, 0.21];
+  let mult = 1, xs = base.slice(), R = run(M, xs);
+  const NX = i => 40 + i * 37.5;
+  let st;
+  const tw = tweener(v => paint(v));
+  let shownStep = 0;
+  function paint(v) {
+    clear(svg);
+    const s = shownStep;
+    tape(svg, xs, { y0: 72, upto: s - 1, cur: s - 1, title: 'the list', titleDy: 62 });
+    // neurons
+    const y0 = 250, k = 2.2;
+    T(svg, 6, 166, 'the 16 neurons (activation)', { class: 'b' });
+    S('line', { x1: 24, x2: 620, y1: y0, y2: y0, stroke: C.axis }, svg);
+    for (let i = 0; i < D; i++) {
+      const a = v[i], p = v[D + i];
+      const h = Math.min(80, a * k);
+      if (p < 0) { const hn = Math.min(26, -p * k * 0.4); S('rect', { x: NX(i) - 12, y: y0, width: 24, height: hn, fill: C.red, opacity: 0.3, rx: 2 }, svg); }
+      S('rect', { x: NX(i) - 12, y: y0 - h, width: 24, height: Math.max(0.5, h), fill: C.ink2, rx: 2 }, svg);
+      if (a > 0.05) T(svg, NX(i), y0 - h - 4, f1(a), { 'text-anchor': 'middle', class: 'm' });
+      T(svg, NX(i), y0 + 40, i, { 'text-anchor': 'middle' });
+    }
+    T(svg, 6, y0 + 40, '#', { class: 'm' });
+    // scores
+    const sc = v.slice(2 * D, 2 * D + N);
+    barsChart(svg, [{ vals: sc, color: C.blue, labels: s === N }], { y0: 365, k: 1.1, lim: 45, win: s === N ? argmax(sc) : null, title: s === N ? 'the 10 scores (each minus their average)' : 'the 10 scores: computed only after the last number', posLabels: true });
+  }
+  function target(s) {
+    const h = s > 0 ? R.H[s - 1] : new Array(D).fill(0), p = s > 0 ? R.P[s - 1] : new Array(D).fill(0);
+    const sc = s === N ? reading(M, R.H[N - 1]) : new Array(N).fill(0);
+    return [...h, ...p, ...sc];
+  }
+  function onStep(s, instant) {
+    shownStep = s; tw(target(s), instant);
+    const o = order(xs);
+    if (s === 0) cap.innerHTML = 'All 16 activations start at zero. Press ▶ to read the first number.';
+    else if (s < N) {
+      const p = R.P[s - 1], neg = p.filter(v => v < 0).length, on = R.H[s - 1].filter(v => v > 0).length;
+      cap.innerHTML = `Read <b>${f2(xs[s - 1])}</b> at position ${s - 1}. Each neuron took a weighted sum of this number and the 16 previous activations. ${neg} sums were negative, so ReLU set those neurons to zero (red stubs); ${on} neurons are active.`;
+    } else {
+      const sc = reading(M, R.H[N - 1]), w = argmax(sc);
+      cap.innerHTML = `After the tenth number, ten weighted sums of the final activations give the scores. The highest is at <b>position ${w}</b>. The second-largest number is ${f2(xs[o[1]])} at position ${o[1]}, so the network is ${w === o[1] ? 'right' : 'wrong'}.` + (mult === 2 ? ' Every number was doubled, so every activation and score is exactly twice as large, and the answer is the same.' : '');
+    }
+  }
+  st = stepper(f, { max: N, start: N, label: s => s === 0 ? 'start' : `after ${s} number${s > 1 ? 's' : ''}`, onStep, ms: 900 });
+  f.querySelector('[data-a=double]').onclick = e => { mult = 3 - mult; e.target.classList.toggle('on', mult === 2); xs = base.map(v => v * mult); R = run(M, xs); st.go(st.s); };
+  st.go(N, true);
+})();
+
+// ======================================================= figure 3: cartoon belt
+(() => {
+  const f = document.getElementById('f3'), svg = f.querySelector('svg'), cap = f.querySelector('.cap');
+  let xs = [0.4, 1.0, -0.5, 0.3, 1.4, 0.8, -1.2, 0.2, 1.1, -0.3], rule = 2, steps = cartoon(xs, rule);
+  let shown = N;
+  // token animation: for each token, x position and opacity
+  const tw = tweener(v => paint(v), 520);
+  function paint(v) {
+    clear(svg); const s = shown;
+    tape(svg, xs, { y0: 76, upto: s - 1, cur: s - 1, title: 'the list', titleDy: 64 });
+    const y0 = 290, k = 45;
+    T(svg, 6, 172, 'the shift register: votes enter at the right and move one place left per step', { class: 'b' });
+    S('rect', { x: X(0) - 27, y: y0, width: X(9) - X(0) + 54 + 40, height: 10, fill: C.grid, rx: 3 }, svg);
+    for (let i = 0; i <= 10; i++) S('line', { x1: X(0) - 27 + i * 54, x2: X(0) - 27 + i * 54, y1: y0, y2: y0 + 10, stroke: C.axis }, svg);
+    T(svg, X(9) + 40, y0 + 26, 'enter', { 'text-anchor': 'middle', class: 'm' });
+    for (let i = 0; i < N; i++) T(svg, X(i), y0 + 26, i, { 'text-anchor': 'middle', class: 'm' });
+    // tokens: v holds [x, op, hidden] per position i
+    let best = null;
+    const fin = s === N ? steps[N - 1].toks.filter(t => !t.hidden) : [];
+    if (fin.length) best = fin.reduce((b, t) => t.v > b.v ? t : b).p;
+    for (let i = 0; i < N; i++) {
+      const x = v[3 * i], op = v[3 * i + 1], hid = v[3 * i + 2];
+      if (op < 0.02) continue;
+      const h = Math.min(2.2, xs[i]) * k;
+      const col = best === i ? C.green : C.blue;
+      S('rect', { x: x - 18, y: y0 - h, width: 36, height: h, rx: 3, fill: col, 'fill-opacity': op * (1 - hid), stroke: col, 'stroke-opacity': op, 'stroke-dasharray': hid > 0.5 ? '4 3' : 'none', 'stroke-width': 1.5 }, svg);
+      T(svg, x, y0 - h - 5, f2(xs[i]) + (hid > 0.5 ? ' hidden' : ''), { 'text-anchor': 'middle', class: hid > 0.5 ? 'm' : 'b', opacity: op });
+    }
+  }
+  function target(s) {
+    const out = [];
+    const toks = s > 0 ? steps[s - 1].toks : [];
+    for (let i = 0; i < N; i++) {
+      const tk = toks.find(t => t.p === i);
+      const age = s - 1 - i; // steps since it arrived
+      const x = X(9) + 54 - (age + 1) * 54 + 54 * 0; // drop-in at X(9)+54 at age -1 → at arrival age 0 at X(9)?
+      if (tk) out.push(X(i) + 54 * (N - s), 1, tk.hidden ? 1 : 0);
+      else if (s - 1 === i && xs[i] > 0) out.push(X(9) + 54, 0, 0); // forgotten: fades at the drop-in point
+      else out.push(X(9) + 54, 0, 0);
+    }
+    return out;
+  }
+  function onStep(s, instant) {
+    shown = s; tw(target(s), instant);
+    if (s === 0) { cap.innerHTML = 'The register is empty. Press ▶.'; return; }
+    let t = steps[s - 1].ev.text;
+    if (s === N) {
+      const vis = steps[N - 1].toks.filter(k => !k.hidden), o = order(xs);
+      const a = vis.length ? vis.reduce((b, k) => k.v > b.v ? k : b).p : null;
+      t += `. <b>The list has ended</b>: every vote sits under its own number. The tallest visible vote is at position ${a}` + (a === o[1] ? ', the second-largest. Right.' : a === o[0] ? ', the largest. Wrong: that is why the largest must be hidden.' : '.');
+    } else t += '.';
+    cap.innerHTML = `Step ${s - 1}: ` + t;
+  }
+  const st = stepper(f, { max: N, start: 0, label: s => s === 0 ? 'start' : `after ${s}`, onStep, ms: 1300 });
+  f.querySelector('[data-a=rule]').onchange = e => { rule = +e.target.value; steps = cartoon(xs, rule); st.go(st.s, true); };
+  f.querySelector('[data-a=new]').onclick = () => { xs = randList(); steps = cartoon(xs, rule); st.go(0, true); };
+  st.go(0, true);
+  // accuracy of the cartoon
+  setTimeout(() => { seed = 11; let ok = 0; const n = 100000; for (let j = 0; j < n; j++) { const l = Array.from({ length: N }, randn); if (cartoonAnswer(l, 1) === order(l)[1]) ok++; } document.getElementById('acc-cartoon').textContent = (100 * ok / n).toFixed(1) + '%'; seed = 99; }, 50);
+})();
+
+// ======================================================= figure 4: largest so far
+(() => {
+  const f = document.getElementById('f4'), svg = f.querySelector('svg'), cap = f.querySelector('.cap');
+  let xs = [0.48, -1.2, 0.3, 1.09, -1.06, -0.52, 1.61, -1.04, -0.67, 0.21], R = run(M, xs);
+  let shown = 0;
+  const tw = tweener(v => paint(v));
+  function paint(v) {
+    clear(svg); const s = shown;
+    tape(svg, xs, { y0: 72, upto: s - 1, cur: s - 1, title: 'the list', titleDy: 62 });
+    const y0 = 340, k = 60;
+    T(svg, 6, 166, 'the largest so far, and what neurons 2 and 4 hold', { class: 'b' });
+    for (const gv of [0, 0.5, 1, 1.5, 2]) { S('line', { x1: X(0) - 26, x2: X(9) + 26, y1: y0 - gv * k, y2: y0 - gv * k, stroke: gv ? C.grid : C.axis }, svg); T(svg, X(0) - 30, y0 - gv * k + 4, gv, { 'text-anchor': 'end', class: 'm' }); }
+    // true running max staircase
+    let m = 0, d = '';
+    for (let i = 0; i < s; i++) { m = Math.max(m, xs[i]); const y = y0 - Math.min(2.3, m) * k; d += (i ? ' L' : 'M') + (X(i) - 27) + ',' + y + ' L' + (X(i) + 27) + ',' + y; }
+    if (d) S('path', { d, fill: 'none', stroke: C.ink, 'stroke-width': 2 }, svg);
+    for (let i = 0; i < N; i++) {
+      const n4 = v[i], n2 = v[N + i];
+      if (i >= s) continue;
+      // neuron 4 as orange bar (scaled /10 so it is in units of the list)
+      const h4 = Math.min(2.3, n4 / 10.16) * k;
+      if (n4 > 0.01) { S('rect', { x: X(i) - 9, y: y0 - h4, width: 18, height: h4, fill: C.orange, rx: 2 }, svg); T(svg, X(i), y0 + 14, f1(n4) + ' ÷ 10.2', { 'text-anchor': 'middle', style: `fill:${C.orange};font-size:11px` }); }
+      S('circle', { cx: X(i), cy: y0 - Math.min(2.3, n2 / 17) * k, r: 5, fill: C.blue }, svg);
+    }
+    T(svg, 6, y0 + 4, '', {});
+  }
+  function target(s) { return [...R.H.map(h => h[4]), ...R.H.map(h => h[2])]; }
+  function onStep(s, instant) {
+    shown = s; tw(target(s), instant);
+    if (s === 0) { cap.innerHTML = 'Nothing read yet. Press ▶.'; return; }
+    const t = s - 1, x = xs[t]; let m = 0; for (let i = 0; i < t; i++) m = Math.max(m, xs[i]);
+    const n4 = R.H[t][4], n2 = R.H[t][2];
+    cap.innerHTML = x > m ? `Step ${t}: <b>${f2(x)} beats the largest so far (${f2(m)})</b>. Neuron 4 fires ${f1(n4)}. Its input weight times the margin gives 10.2 × ${f2(x - m)} = ${f1(10.16 * (x - m))}; small inputs from other neurons make up the rest. Neuron 2 adds this in on the next step; it now reads ${f2(n2 / 17)} after dividing by 17.`
+      : `Step ${t}: ${f2(x)} does not beat ${f2(m)}, so the sum for neuron 4 is negative (about ${f1(R.P[t][4])}) and ReLU sets it to zero. Neuron 2 ÷ 17 reads ${f2(n2 / 17)}; the true largest so far is ${f2(m)}.`;
+  }
+  const st = stepper(f, { max: N, start: 0, label: s => s === 0 ? 'start' : `after ${s}`, onStep, ms: 1000 });
+  f.querySelector('[data-a=new]').onclick = () => { xs = randList(); R = run(M, xs); st.go(0, true); };
+  st.go(0, true);
+})();
+
+// ======================================================= figure 5: dial
+function dialProj(h) { const v = DIAL.dial_neurons.map((k, j) => h[k] - DIAL.dial_mean[j]); return DIAL.dial_axes.map(ax => ax.reduce((a, w, j) => a + w * v[j], 0)); }
+(() => {
+  const f = document.getElementById('f5'), dial = f.querySelector('.dial'), sh = f.querySelector('.sh'), cap = f.querySelector('.cap');
+  const selP = f.querySelector('[data-a=pos]'), selM = f.querySelector('[data-a=mode]');
+  fillSelect(selP, posItems(0, 8), 3);
+  let pos = 3, mode = 'toy', shown = 0;
+  const cx = 150, cy = 150, R0 = 108;
+  // cartoon spokes: position p is read at angle (9 - p) * 40 deg from where a new number starts
+  const toySpoke = p => (90 - (9 - p) * 40) * Math.PI / 180;
+  const realSpokes = DIAL.spokes.map(q => Math.atan2(q[1], q[0]));
+  const realLen = DIAL.spokes.map(q => Math.hypot(q[0], q[1])), realMax = Math.max(...realLen);
+  // the trained network's trajectory for a lone 1.0 at each position; arrow from the zero-list state
+  function realPts(p) { const xs = new Array(N).fill(0); xs[p] = 1; return run(M, xs).H.map(dialProj); }
+  let rp = realPts(pos), rscale = 1;
+  const tw = tweener(v => paint(v), 600);
+  function paint(v) {
+    clear(dial); clear(sh);
+    const [ang, len] = v;
+    S('circle', { cx, cy, r: R0, fill: 'none', stroke: C.grid }, dial);
+    T(dial, 4, 14, mode === 'toy' ? 'idealized rotation, readout directions in grey' : 'twelve neurons in their main plane', { class: 'b' });
+    const spokes = mode === 'toy' ? posItems(0, 8).map(([p]) => [toySpoke(p), 1]) : realSpokes.slice(0, 9).map((a, j) => [a, realLen[j] / realMax]);
+    spokes.forEach(([a, l], j) => {
+      const hi = j === pos;
+      S('line', { x1: cx, y1: cy, x2: cx + R0 * l * Math.cos(a), y2: cy - R0 * l * Math.sin(a), stroke: hi ? C.green : C.axis, 'stroke-width': hi ? 3 : 1.5 }, dial);
+      T(dial, cx + (R0 * l + 12) * Math.cos(a), cy - (R0 * l + 12) * Math.sin(a) + 4, j, { 'text-anchor': 'middle', class: hi ? 'b' : 'm' });
+    });
+    if (len > 0.01) {
+      const L = len * R0 * 0.92;
+      const ex = cx + L * Math.cos(ang), ey = cy - L * Math.sin(ang);
+      S('line', { x1: cx, y1: cy, x2: ex, y2: ey, stroke: C.blue, 'stroke-width': 4, 'stroke-linecap': 'round', opacity: 0.75 }, dial);
+      S('circle', { cx: ex, cy: ey, r: 6, fill: C.blue }, dial);
+    }
+    S('circle', { cx, cy, r: 3, fill: C.ink }, dial);
+    // shadows
+    const y0 = 150, k = 95;
+    T(sh, 4, 14, 'projection on each readout direction = score', { class: 'b' });
+    S('line', { x1: 20, x2: 350, y1: y0, y2: y0, stroke: C.axis }, sh);
+    const vals = spokes.map(([a, l]) => len * l * Math.cos(ang - a));
+    const best = len > 0.01 ? argmax(vals) : -1;
+    vals.forEach((val, j) => {
+      const x = 36 + j * 35, h = val * k;
+      S('rect', { x: x - 12, y: h > 0 ? y0 - h : y0, width: 24, height: Math.max(0.5, Math.abs(h)), fill: j === best ? C.green : C.blue, rx: 2 }, sh);
+      if (len > 0.01) T(sh, x, h >= 0 ? y0 - h - 4 : y0 - h + 13, val.toFixed(2), { 'text-anchor': 'middle', class: 'm' });
+      T(sh, x, 252, j, { 'text-anchor': 'middle', class: j === pos ? 'b' : 'm' });
+    });
+    T(sh, 4, 252, 'pos.', { class: 'm' });
+  }
+  function target(s) {
+    // s = step index 0..10 (number of numbers read)
+    if (mode === 'toy') {
+      if (s <= pos) return [toySpoke(9), 0];
+      const age = s - 1 - pos; return [toySpoke(9) - age * 40 * Math.PI / 180, 1];
+    } else {
+      if (s <= pos) return [0, 0];
+      const q = rp[s - 1]; const a = Math.atan2(q[1], q[0]);
+      return [a, Math.hypot(q[0], q[1]) / rscale];
+    }
+  }
+  let lastAng = null;
+  function onStep(s, instant) {
+    shown = s;
+    let tg = target(s);
+    // unwrap angle so the arrow turns the short way it actually turns
+    if (lastAng != null && !instant) { while (tg[0] - lastAng > Math.PI) tg[0] -= 2 * Math.PI; while (tg[0] - lastAng < -Math.PI) tg[0] += 2 * Math.PI; }
+    lastAng = tg[0];
+    tw(tg, instant);
+    const age = s - 1 - pos;
+    if (s <= pos) cap.innerHTML = `No number yet: the vector appears when the number at position ${pos} arrives.`;
+    else if (mode === 'toy') cap.innerHTML = `${age === 0 ? 'The number arrives; the vector starts pointing straight up. (Up is also the direction for position 0: nine turns of 40° make a full circle, so the oldest position shares an angle with the newest.)' : `${age} step${age > 1 ? 's' : ''} later the vector has turned ${age * 40}°.`} ` + (s === N ? `<b>The list has ended</b>, and the vector points along the readout direction of position ${pos}, its own position. Its neighbours get 0.77 of the peak: a broad wave.` : `If the list ended now it would point at the direction of position ${Math.min(9, pos + N - s)}.`);
+    else {
+      const prev = s - 2 >= pos ? rp[s - 2] : null, q = rp[s - 1];
+      let turn = prev ? (Math.atan2(q[1], q[0]) - Math.atan2(prev[1], prev[0])) * 180 / Math.PI : null;
+      if (turn != null) { while (turn > 180) turn -= 360; while (turn < -180) turn += 360; }
+      const shrink = prev ? Math.hypot(q[0], q[1]) / Math.hypot(prev[0], prev[1]) : null;
+      cap.innerHTML = (age === 0 ? 'The 1.0 arrives. The vector is the twelve neurons\' activations minus their average over random lists, seen in their main plane. The first two steps are irregular; after that it turns steadily.' : `Step ${s - 1}: the vector turned ${Math.abs(turn).toFixed(0)}° and its length changed to ${(100 * shrink).toFixed(0)}% of the step before.`) + (s === N ? ` <b>End of list</b>: the largest projection is on the direction of position ${argmax(realSpokes.slice(0, 9).map((a, j) => realLen[j] * Math.cos(target(N)[0] - a)))}; the 1.0 is at position ${pos}.` : '');
+    }
+  }
+  const st = stepper(f, { max: N, start: 0, label: s => s === 0 ? 'start' : `after ${s} numbers`, onStep, ms: 900 });
+  function reset() { rp = realPts(pos); rscale = Math.max(...rp.slice(pos).map(q => Math.hypot(q[0], q[1]))); lastAng = null; st.go(0, true); }
+  selP.onchange = () => { pos = +selP.value; reset(); };
+  selM.onchange = () => { mode = selM.value; reset(); };
+  reset();
+})();
+
+// ======================================================= figure 6: several arrows = belt
+(() => {
+  const f = document.getElementById('f6'), svg = f.querySelector('svg'), cap = f.querySelector('.cap');
+  const on = [true, false, false, false];
+  let slot = 4;
+  // 9-slot belt: a token at slot s0 read at slot j: (1 + 2 sum_k on_k cos(2 pi k (j - s0) / 9)) / 9
+  function profile(s0) { return Array.from({ length: 9 }, (_, j) => { let v = 1; for (let k = 1; k <= 4; k++) if (on[k - 1]) v += 2 * Math.cos(2 * Math.PI * k * (j - s0) / 9); return v / 9; }); }
+  const tw = tweener(v => paint(v), 420);
+  const BX = j => 110 + j * 56;
+  function paint(v) {
+    clear(svg);
+    T(svg, 6, 18, 'one vote in a nine-slot shift register, read through the chosen rotations', { class: 'b' });
+    const y0 = 190, k = 140;
+    for (const gv of [-0.25, 0, 0.5, 1]) { S('line', { x1: BX(0) - 28, x2: BX(8) + 28, y1: y0 - gv * k, y2: y0 - gv * k, stroke: gv ? C.grid : C.axis }, svg); T(svg, BX(0) - 34, y0 - gv * k + 4, gv, { 'text-anchor': 'end', class: 'm' }); }
+    v.forEach((val, j) => {
+      const h = val * k;
+      S('rect', { x: BX(j) - 18, y: h > 0 ? y0 - h : y0, width: 36, height: Math.max(0.5, Math.abs(h)), fill: j === slot ? C.green : C.blue, rx: 2 }, svg);
+      T(svg, BX(j), h >= 0 ? y0 - h - 5 : y0 - h + 14, val.toFixed(2), { 'text-anchor': 'middle', class: 'm' });
+      T(svg, BX(j), 286, 'slot ' + j, { 'text-anchor': 'middle', class: j === slot ? 'b' : 'm' });
+    });
+    T(svg, 6, y0 - 1 * k + 4, 'readout', { class: 'm' });
+  }
+  function upd(instant) {
+    const p = profile(slot); tw(p, instant);
+    const n = on.filter(Boolean).length, nb = p[(slot + 1) % 9] / p[slot];
+    cap.innerHTML = n === 0 ? 'No rotations, only the constant level: every slot reads the same 1/9, so the readout says nothing about where the vote is.' : n === 4 ? `All four rotations plus the constant level: the readout is exactly 1 at the vote's slot and 0 everywhere else. This is a perfect shift register.` : `With ${n} rotation${n > 1 ? 's' : ''} plus the constant level, the neighbouring slots read ${(100 * nb).toFixed(0)}% of the peak` + (n === 1 && on[0] ? ' (77% for the rotation alone, as in section 5).' : '.') + ' Add faster rotations to sharpen the spike.';
+  }
+  ['d1', 'd2', 'd3', 'd4'].forEach((a, i) => { const b = f.querySelector(`[data-a=${a}]`); b.onclick = () => { on[i] = !on[i]; b.classList.toggle('on', on[i]); upd(); }; });
+  let timer = null;
+  f.querySelector('[data-a=play]').onclick = e => { if (timer) { clearInterval(timer); timer = null; e.target.textContent = 'play the shift'; return; } e.target.textContent = 'pause'; timer = setInterval(() => { slot = (slot + 1) % 9; upd(slot === 0); }, 800); };
+  upd(true);
+})();
+
+// ======================================================= figure 7: hiding
+(() => {
+  const f = document.getElementById('f7'), svg = f.querySelector('svg'), cap = f.querySelector('.cap');
+  const sel = f.querySelector('[data-a=pos]'); fillSelect(sel, posItems(0, 7), 2);
+  let pos = 2, parts;
+  function compute() {
+    const xs = new Array(N).fill(0); xs[pos] = 1; const R = run(M, xs), h = R.H[N - 1];
+    const blue = reading(M, h, TIMER), orange = reading(M, h, HIDE), tot = reading(M, h);
+    const t0 = Math.min(N - 1, pos + 2); const Rs = run(M, xs, { zero: { t: t0, ks: HIDE } }); const sil = reading(M, Rs.H[N - 1]);
+    parts = { xs, blue, orange, tot, sil, t0, hide: h.filter((v, i) => HIDE.includes(i)) };
+  }
+  const tw = tweener(v => paint(v), 600);
+  let stage = 0;
+  function paint(v) {
+    clear(svg);
+    tape(svg, parts.xs, { y0: 60, k: 30, title: 'the list: one 1.0, nine zeros', titleDy: 46, labDy: 22, labels: true });
+    const b = v.slice(0, N), o = v.slice(N, 2 * N), t = v.slice(2 * N, 3 * N), op = v.slice(3 * N, 3 * N + 3);
+    const win = stage >= 2 ? argmax(t) : null;
+    barsChart(svg, [
+      { vals: b, color: C.blue, w: 13, dx: -14, opacity: op[0] },
+      { vals: o, color: C.orange, w: 13, dx: 0, opacity: op[1] },
+      { vals: t, color: C.ink, w: 13, dx: 14, opacity: op[2], labels: op[2] > 0.5, fmt: f0, labelClass: 'b' },
+    ], { y0: 250, k: 1.7, lim: 80, grid: [-50, 50], title: stage === 3 ? 'final scores with the four cancelling neurons set to zero at step ' + parts.t0 : 'final scores, split by source', posLabels: true, win, winColor: stage === 3 ? C.greenl : C.hi });
+  }
+  function target(s) {
+    const z = new Array(N).fill(0);
+    if (s === 0) return [...parts.blue, ...z, ...z, 1, 0, 0];
+    if (s === 1) return [...parts.blue, ...parts.orange, ...z, 1, 1, 0];
+    if (s === 2) return [...parts.blue, ...parts.orange, ...parts.tot, 0.35, 0.35, 1];
+    return [...z, ...z, ...parts.sil, 0, 0, 1];
+  }
+  function onStep(s, instant) {
+    stage = s; tw(target(s), instant);
+    const pb = argmax(parts.blue), mx = Math.max(...parts.tot) - Math.min(...parts.tot);
+    cap.innerHTML = [
+      `The twelve neurons' contribution to the scores is a wave that peaks at <b>position ${pb}</b> (+${f0(parts.blue[pb])}). On its own this is a strong vote for the 1.0's position.`,
+      `The four cancelling neurons contribute a near mirror image: ${f0(parts.orange[pb])} at position ${pb}.`,
+      `Added up, the two nearly cancel. The total scores span only ${f0(mx)} from highest to lowest, against about 100 for each part. The 1.0's vote is hidden, and the highest total (position ${argmax(parts.tot)}) is just leftover noise.`,
+      `Now an intervention: set the four cancelling neurons to zero once, at step ${parts.t0}, with no bigger number in the list. The network then runs on as usual. The final scores peak at <b>position ${argmax(parts.sil)}</b>${argmax(parts.sil) === pos ? ', the 1.0\'s own position' : ''}. Switching off the four is enough to reveal the vote.`
+    ][s];
+  }
+  const st = stepper(f, { max: 3, start: 0, label: s => ['twelve', '+ cancelling', 'total', 'switch off'][s], onStep });
+  sel.onchange = () => { pos = +sel.value; compute(); st.go(st.s, true); };
+  compute(); st.go(0, true);
+})();
+
+// ======================================================= per-step reading figure (used by 8, 9, 10)
+// draws: tape, a row of neuron lamps, the reading chart
+function lampRow(g, y, items, o = {}) {
+  // items: [{name, v, max, color}]
+  T(g, 6, y - 26, o.title || '', { class: 'b' });
+  items.forEach((it, j) => {
+    const x = 92 + j * (o.dx || 80), w = 56, fr = Math.max(0, Math.min(1, it.v / it.max));
+    S('rect', { x: x - w / 2, y: y - 14, width: w, height: 28, rx: 6, fill: '#fff', stroke: C.axis }, g);
+    S('rect', { x: x - w / 2, y: y - 14, width: w * fr, height: 28, rx: 6, fill: it.color, opacity: 0.85 }, g);
+    T(g, x, y + 5, f1(it.v), { 'text-anchor': 'middle', class: 'b' });
+    T(g, x, y + 30, it.name, { 'text-anchor': 'middle', class: 'm' });
+  });
+}
+
+// ======================================================= figure 8: a bigger number unhides
+(() => {
+  const f = document.getElementById('f8'), svg = f.querySelector('svg'), cap = f.querySelector('.cap');
+  const sa = f.querySelector('[data-a=a]'), sb = f.querySelector('[data-a=b]');
+  let a = 2, b = 6; fillSelect(sa, posItems(0, 7), a); fillSelect(sb, posItems(1, 9), b);
+  let xs, R, shown = 0;
+  function compute() { xs = new Array(N).fill(0); xs[a] = 1.0; xs[b] = 1.5; R = run(M, xs); }
+  const tw = tweener(v => paint(v), 520);
+  function paint(v) {
+    clear(svg); const s = shown;
+    tape(svg, xs, { y0: 64, upto: s - 1, cur: s - 1, k: 26, title: 'the list', titleDy: 50, labDy: 20, color: i => i === a ? C.blue : i === b ? C.purple : C.grey });
+    lampRow(svg, 150, HIDE.map((k, j) => ({ name: 'neuron ' + k, v: v[j], max: 25, color: C.orange })), { title: 'the four cancelling neurons', dx: 80 });
+    const rd = v.slice(4, 4 + N);
+    const win = s === N ? argmax(rd) : null;
+    barsChart(svg, [{ vals: rd, color: C.ink, labels: true, labelClass: 'm' }], { y0: 350, k: 1.2, lim: 95, grid: [-50, 50], title: s === N ? 'final scores' : 'final readout weights applied now (scores minus their average)', posLabels: true, win });
+    if (s > 0 && s < N && s - 1 >= a) {
+      // mark where the 1.0's vote should sit now: a + (9 - t)
+      const t = s - 1, p = a + (N - 1 - t);
+      if (p <= 9) T(svg, X(p), 512, "▲ the 1.0's vote, if visible", { 'text-anchor': 'middle', style: `fill:${C.blue};font-size:11px;font-weight:600` });
+    }
+  }
+  function target(s) { const h = s > 0 ? R.H[s - 1] : new Array(D).fill(0); return [...HIDE.map(k => h[k]), ...(s > 0 ? reading(M, h) : new Array(N).fill(0))]; }
+  function onStep(s, instant) {
+    shown = s; tw(target(s), instant);
+    if (s === 0) { cap.innerHTML = 'A 1.0 and a later 1.5 in a list of zeros. The 1.0 will be overtaken, so it is the true second-largest. Press ▶.'; return; }
+    const t = s - 1, h = R.H[t], hid = HIDE.map(k => h[k]), rd = reading(M, h), p = a + (N - 1 - t);
+    let txt;
+    if (t < a) txt = `Step ${t}: zeros so far. Nothing happens: with no bias, zeros leave every activation at zero.`;
+    else if (t === a) txt = `Step ${t}: the 1.0 arrives and is the new largest. Its rotating pattern starts in the twelve neurons.`;
+    else if (t < b) { const r8 = rd.slice(0, 8); txt = `Step ${t}: the cancelling neurons now hold ${hid.map(f0).join(', ')} and cancel the 1.0's vote. Over positions 0–7 the scores span only ${f0(Math.max(...r8) - Math.min(...r8))}: no visible vote. (Positions 8 and 9 are read through other neurons, not the register.)`; }
+    else if (t === b) { const pre = R.P[t]; txt = `Step ${t}: <b>the 1.5 arrives</b>. Its input weights (−10.6 to −13.2) push the cancelling neurons' sums to ${HIDE.map(k => f0(pre[k])).join(', ')}. ReLU sets all four to zero. The 1.0's vote is no longer cancelled: a vote of ${f0(rd[Math.min(9, p)])} appears at position ${Math.min(9, p)}, ${N - 1 - t} place${N - 1 - t === 1 ? '' : 's'} right of position ${a}.`; }
+    else txt = `Step ${t}: the vote slides one place left, to position ${p} (${f0(rd[p])}). The cancelling neurons are rebuilding (${hid.map(f0).join(', ')}), now cancelling the 1.5's vote instead.`;
+    if (s === N) txt += ` <b>End of list</b>: the highest score is at position ${argmax(rd)}${argmax(rd) === a ? ', where the 1.0 is. Right.' : '.'}`;
+    cap.innerHTML = txt;
+  }
+  const st = stepper(f, { max: N, start: 0, label: s => s === 0 ? 'start' : `after ${s}`, onStep, ms: 1100 });
+  const re = () => { a = +sa.value; b = +sb.value; if (b <= a) { b = Math.min(9, a + 1); sb.value = b; } compute(); st.go(0, true); };
+  sa.onchange = re; sb.onchange = re;
+  compute(); st.go(0, true);
+})();
+
+// ======================================================= figure 9: neuron 5
+(() => {
+  const f = document.getElementById('f9'), svg = f.querySelector('svg'), cap = f.querySelector('.cap');
+  const slider = f.querySelector('[data-a=x]'), xv = f.querySelector('.xv'), fb = f.querySelector('[data-a=force]');
+  let x = 0.6, force = false, xs, R, shown = 0, thr = null;
+  function threshold() {
+    // smallest x in [0, 1.0] for which neuron 5 one step later exceeds 0.5
+    for (let v = 0; v <= 1.0; v += 0.005) { const l = [0, 1.5, 0, 1.0, 0, v, 0, 0, 0, 0]; if (run(M, l).H[6][5] > 0.5) return v; }
+    return null;
+  }
+  function compute() { xs = [0, 1.5, 0, 1.0, 0, x, 0, 0, 0, 0]; R = run(M, xs, force ? { force: { t: 6, k: 5, v: 0 } } : {}); }
+  const tw = tweener(v => paint(v), 520);
+  function paint(v) {
+    clear(svg); const s = shown;
+    tape(svg, xs, { y0: 64, upto: s - 1, cur: s - 1, k: 24, title: 'the list', titleDy: 50, labDy: 44, color: i => i === 5 ? C.green : C.grey });
+    lampRow(svg, 160, [{ name: 'neuron 5', v: v[0], max: 20, color: C.green }], { title: 'the keep-or-forget gate' });
+    if (thr != null) { T(svg, 140, 156, `In this list neuron 5 keeps the number at position 5 if it is at least ${thr.toFixed(2)},`, { class: 'm' }); T(svg, 140, 172, `that is ${(100 * thr).toFixed(0)}% of the second-largest so far (1.00).`, { class: 'm' }); }
+    const rd = v.slice(1, 1 + N);
+    barsChart(svg, [{ vals: rd, color: C.ink, labels: true }], { y0: 350, k: 1.2, lim: 95, grid: [-50, 50], title: s === N ? 'final scores' : 'final readout weights applied now', posLabels: true, win: s === N ? argmax(rd) : null });
+  }
+  function target(s) { const h = s > 0 ? R.H[s - 1] : new Array(D).fill(0); return [h[5], ...(s > 0 ? reading(M, h) : new Array(N).fill(0))]; }
+  function onStep(s, instant) {
+    shown = s; tw(target(s), instant);
+    const t = s - 1, o = order(xs);
+    let txt = '';
+    if (s === 0) txt = 'Press ▶.';
+    else if (t === 1) txt = 'Step 1: 1.5 is the new largest. One step later neuron 5 fires, as it does for every new largest.';
+    else if (t === 3) txt = 'Step 3: 1.0 arrives. It is not a new largest; it is the second-largest so far, so it will be kept.';
+    else if (t === 4) txt = `Step 4: neuron 5 is ${f1(R.H[4][5])}: the 1.0 is kept, and its vote enters the register.`;
+    else if (t === 5) txt = `Step 5: ${f2(x)} arrives. Will neuron 5 keep it? In this list the threshold is about ${thr == null ? '?' : thr.toFixed(2)}.`;
+    else if (t === 6) { const n5 = R.H[6][5]; txt = force ? `Step 6: neuron 5 is <b>forced to zero</b> by hand. The ${f2(x)} is forgotten whatever its size.` : n5 > 0.5 ? `Step 6: neuron 5 fires ${f1(n5)}: <b>${f2(x)} is kept</b> and starts a visible vote, now at position ${5 + 3}.` : `Step 6: neuron 5 stays at ${f1(n5)}: <b>${f2(x)} is forgotten</b>. No new vote appears.`; }
+    else if (s === N) { const w = argmax(reading(M, R.H[N - 1])); txt = `End of list: the answer is position ${w}. The true second-largest is ${f2(xs[o[1]])} at position ${o[1]}, so the network is <b>${w === o[1] ? 'right' : 'wrong'}</b>.`; }
+    else txt = `Step ${t}: zeros. Visible votes slide one place left per step.`;
+    cap.innerHTML = txt;
+  }
+  const st = stepper(f, { max: N, start: 0, label: s => s === 0 ? 'start' : `after ${s}`, onStep, ms: 1000 });
+  slider.oninput = () => { x = +slider.value / 100; xv.textContent = f2(x); compute(); st.go(st.s, true); };
+  fb.onclick = () => { force = !force; fb.classList.toggle('on', force); compute(); st.go(st.s, true); };
+  xv.textContent = f2(x); thr = threshold(); compute(); st.go(0, true);
+})();
+
+// ======================================================= figure 10: whole lists, interventions
+(() => {
+  const f = document.getElementById('f10'), svg = f.querySelector('svg'), cap = f.querySelector('.cap');
+  const sx = f.querySelector('[data-a=ex]'), siv = f.querySelector('[data-a=iv]');
+  fillSelect(sx, Object.keys(EXS).map(k => [k, 'Example: ' + k]), 'typical');
+  let xs = EXS.typical.slice(), R, base, steps, ev, shown = 0, iv = 'none';
+  const KC = { new: C.ink2, over: C.blue, keep: C.green, last: C.green, forget: C.grey, neg: C.grey };
+  function events() {
+    // label each step with the cartoon's rule and neuron 5's actual activity one step later
+    let m = 0, s2 = 0; const out = [];
+    xs.forEach((x, t) => {
+      const n5 = t < N - 1 ? base.H[t + 1][5] : null;
+      if (x > m && x > 0) { out.push({ k: m > 0 ? 'over' : 'new', s: m > 0 ? `${f2(x)} overtakes ${f2(m)}: the ${f2(m)}'s vote is unhidden` : `${f2(x)}: new largest, vote hidden` }); s2 = m; m = x; }
+      else if (x > 0) {
+        if (n5 == null) out.push({ k: 'last', s: `${f2(x)}: the last number, read directly through its dip in the cancelling neurons` });
+        else out.push({ k: n5 > 0.5 ? 'keep' : 'forget', s: `${f2(x)}: neuron 5 is ${f1(n5)} one step later, so it is ${n5 > 0.5 ? 'kept' : 'forgotten'} (second-largest so far ${f2(s2)})` });
+        if (x > s2) s2 = x;
+      } else out.push({ k: 'neg', s: `${f2(x)}: not positive, no vote` });
+    });
+    return out;
+  }
+  function ivOptions() {
+    const o = order(xs), L = o[0], items = [['none', 'none']];
+    for (let t = L + 1; t < N; t++) items.push(['sil' + t, `set the four cancelling neurons to zero at step ${t}`]);
+    // restore: at the step a bigger number arrives, put the four back to their values without it
+    let m = 0; xs.forEach((x, t) => { if (x > m && x > 0 && m > 0) items.push(['res' + t, `at step ${t}, give the cancelling neurons their values as if ${f2(x)} were 0`]); if (x > m) m = x; });
+    fillSelect(siv, items, 'none'); iv = 'none';
+  }
+  function compute() {
+    base = run(M, xs);
+    if (iv.startsWith('sil')) R = run(M, xs, { zero: { t: +iv.slice(3), ks: HIDE } });
+    else if (iv.startsWith('res')) { const t = +iv.slice(3); const alt = xs.slice(); alt[t] = 0; const A = run(M, alt); R = run(M, xs, { restore: { t, ks: HIDE, from: A.H } }); }
+    else R = base;
+    steps = cartoon(xs, 2); ev = events();
+  }
+  const tw = tweener(v => paint(v), 520);
+  function paint(v) {
+    clear(svg); const s = shown;
+    tape(svg, xs, { y0: 72, upto: s - 1, cur: s - 1, title: 'the list', titleDy: 62, color: i => i < s ? KC[ev[i].k] : C.grey });
+    // cartoon belt row
+    T(svg, 6, 160, 'idealized shift register', { class: 'b' });
+    const yb = 214; S('line', { x1: X(0) - 26, x2: X(9) + 26, y1: yb, y2: yb, stroke: C.axis }, svg);
+    if (s > 0) steps[s - 1].toks.forEach(tk => { const x = X(tk.p) + 54 * (N - s); if (x > X(9) + 27) return; const h = Math.min(50, tk.v * 24); S('rect', { x: x - 14, y: yb - h, width: 28, height: h, rx: 2, fill: tk.hidden ? 'none' : C.blue, stroke: C.blue, 'stroke-dasharray': tk.hidden ? '3 3' : 'none' }, svg); });
+    const rd = v.slice(0, N);
+    barsChart(svg, [{ vals: rd, color: C.ink, labels: true }], { y0: 380, k: 1.1, lim: 100, grid: [-50, 50], title: (s === N ? 'final scores' : 'trained network: final readout weights applied now') + (iv !== 'none' ? '  (with the intervention)' : ''), posLabels: true, win: s === N ? argmax(rd) : null });
+  }
+  function target(s) { return s > 0 ? reading(M, R.H[s - 1]) : new Array(N).fill(0); }
+  function onStep(s, instant) {
+    shown = s; tw(target(s), instant);
+    if (s === 0) { cap.innerHTML = 'Press ▶ to read the list one number at a time.'; return; }
+    const t = s - 1, e = ev[t];
+    let txt = `<span class="ev" style="background:${KC[e.k]};color:#fff">${{ new: 'new largest', over: 'overtaking', keep: 'kept', last: 'last number', forget: 'forgotten', neg: 'ignored' }[e.k]}</span> Step ${t}: ${e.s}.`;
+    if (iv.startsWith('sil') && t === +iv.slice(3)) txt += ' <b>Intervention: the four cancelling neurons are set to zero now.</b>';
+    if (iv.startsWith('res') && t === +iv.slice(3)) txt += ' <b>Intervention: the four cancelling neurons get their values from the list without this bigger number.</b>';
+    if (s === N) { const o = order(xs), w = argmax(reading(M, R.H[N - 1])), w0 = argmax(reading(M, base.H[N - 1])); txt += ` <b>Answer: position ${w}</b>. The second-largest is at ${o[1]}, the largest at ${o[0]}.` + (iv !== 'none' ? ` Without the intervention the answer was ${w0}.` : ''); }
+    cap.innerHTML = txt;
+  }
+  const st = stepper(f, { max: N, start: 0, label: s => s === 0 ? 'start' : `after ${s}`, onStep, ms: 1100 });
+  sx.onchange = () => { xs = EXS[sx.value].slice(); ivOptions(); compute(); st.go(0, true); };
+  f.querySelector('[data-a=new]').onclick = () => { xs = randList(); ivOptions(); compute(); st.go(0, true); };
+  siv.onchange = () => { iv = siv.value; compute(); st.go(st.s, true); };
+  ivOptions(); compute(); st.go(0, true);
+})();
+
+// ======================================================= figure 11: trained vs hand-built
+(() => {
+  const f = document.getElementById('f11'), svg = f.querySelector('svg'), cap = f.querySelector('.cap');
+  const sx = f.querySelector('[data-a=ex]');
+  fillSelect(sx, Object.keys(EXS).map(k => [k, 'Example: ' + k]), 'close call, right');
+  let xs = EXS['close call, right'].slice(), RT, RH, shown = 0;
+  function compute() { RT = run(M, xs); RH = run(HB, xs); }
+  const tw = tweener(v => paint(v), 520);
+  function paint(v) {
+    clear(svg); const s = shown;
+    tape(svg, xs, { y0: 72, upto: s - 1, cur: s - 1, title: 'the list', titleDy: 62 });
+    const t = v.slice(0, N), h = v.slice(N, 2 * N);
+    barsChart(svg, [{ vals: t, color: C.ink, labels: true }], { y0: 236, k: 0.85, lim: 80, title: 'trained network' + (s === N ? ': final scores' : ': final readout weights applied now'), win: s === N ? argmax(t) : null });
+    barsChart(svg, [{ vals: h, color: C.purple, labels: true, fmt: f2 }], { y0: 424, k: 50, lim: 1.6, grid: [1], title: 'hand-built network' + (s === N ? ': final scores' : ': final readout weights applied now'), posLabels: true, win: s === N ? argmax(h) : null });
+  }
+  // hand-built scores are centred on the median, so a vote reads its value above a flat zero
+  const med = a => { const b = a.slice().sort((x, y) => x - y); return (b[4] + b[5]) / 2; };
+  const hbRead = h => { const r = readout(HB, h); const m = med(r); return r.map(v => v - m); };
+  function target(s) { const z = new Array(N).fill(0); return s > 0 ? [...reading(M, RT.H[s - 1]), ...hbRead(RH.H[s - 1])] : [...z, ...z]; }
+  function onStep(s, instant) {
+    shown = s; tw(target(s), instant);
+    if (s === 0) { cap.innerHTML = 'Press ▶.'; return; }
+    if (s < N) { cap.innerHTML = `Step ${s - 1}: read ${f2(xs[s - 1])}. Both networks keep their votes in a shift register; the hand-built one is sharp and does not fade. Its register has nine slots and wraps around, so votes that are still far from the end can show up at the wrong end of this chart.`; return; }
+    const o = order(xs), wt = argmax(reading(M, RT.H[N - 1])), wh = argmax(hbRead(RH.H[N - 1]));
+    cap.innerHTML = `End of list. Second-largest: ${f2(xs[o[1]])} at position ${o[1]}. Trained network answers <b>${wt}</b>, hand-built answers <b>${wh}</b>. The hand-built scores are in the list's own units: the winning score is close to the second-largest number's value.`;
+  }
+  const st = stepper(f, { max: N, start: N, label: s => s === 0 ? 'start' : `after ${s}`, onStep, ms: 1000 });
+  sx.onchange = () => { xs = EXS[sx.value].slice(); compute(); st.go(N, true); };
+  f.querySelector('[data-a=new]').onclick = () => { xs = randList(); compute(); st.go(0, true); };
+  compute(); st.go(N, true);
+})();
+
+// ======================================================= figure 12: table 2b
+(() => {
+  const f = document.getElementById('f12'), svg = f.querySelector('svg');
+  const kinds = ['At most one positive (1%)', 'New largest at the last step (10%)', 'New largest at step 8 (10%)', 'Two new largests in a row (26%)', 'Ordinary (54%)'];
+  const nets = [['Trained, 16', C.ink, [22, 94, 97, 96, 96]], ['Hand-built, 16', C.purple, [7, 100, 100, 100, 100]], ['Role-copying, 16', C.orange, [9, 11, 99, 97, 98]], ['Role-copying + 1, 17', C.blue, [9, 89, 99, 97, 98]], ['Role-copying + 2, 18', C.green, [8, 100, 99, 98, 99]]];
+  const y0 = 260, k = 2.0, gx = j => 70 + j * 116;
+  for (const gv of [0, 50, 100]) { S('line', { x1: 50, x2: 630, y1: y0 - gv * k, y2: y0 - gv * k, stroke: gv ? C.grid : C.axis }, svg); T(svg, 44, y0 - gv * k + 4, gv + '%', { 'text-anchor': 'end', class: 'm' }); }
+  kinds.forEach((kd, j) => {
+    nets.forEach(([nm, col, v], i) => { const x = gx(j) + i * 19, r = S('rect', { x, y: y0 - v[j] * k, width: 16, height: v[j] * k, fill: col, rx: 2 }, svg); const tt = S('title', {}, r); tt.textContent = `${nm} neurons: ${v[j]}%`; });
+    const words = kd.split(' '); let line = '', ly = y0 + 16;
+    words.forEach(w => { if ((line + ' ' + w).length > 16) { T(svg, gx(j) + 46, ly, line.trim(), { 'text-anchor': 'middle', class: 'm' }); ly += 13; line = w; } else line += ' ' + w; });
+    T(svg, gx(j) + 46, ly, line.trim(), { 'text-anchor': 'middle', class: 'm' });
+  });
+  nets.forEach(([nm, col], i) => { const lx = 60 + (i % 3) * 190, ly = 4 + Math.floor(i / 3) * 18; S('rect', { x: lx, y: ly, width: 11, height: 11, fill: col, rx: 2 }, svg); T(svg, lx + 16, ly + 10, nm + ' neurons', { class: 'm' }); });
+  T(svg, gx(1) + 2 * 19 + 8, y0 - 11 * k - 6, '11%', { 'text-anchor': 'middle', style: `fill:${C.orange};font-size:12px;font-weight:700` });
+})();
+
+// ======================================================= figure 13: close calls
+(() => {
+  const f = document.getElementById('f13'), svg = f.querySelector('svg'), cap = f.querySelector('.cap');
+  const sa = f.querySelector('[data-a=a]'), sb = f.querySelector('[data-a=b]'), sc = f.querySelector('[data-a=c]');
+  [sa, sb, sc].forEach(s => fillSelect(s, posItems()));
+  let a = 0, b = 4, c = 7; sa.value = a; sb.value = b; sc.value = c;
+  const NV = 401, lo = 0.9, hi = 1.1;
+  function sweep(W) { return Array.from({ length: NV }, (_, j) => { const v = lo + (hi - lo) * j / (NV - 1); const xs = new Array(N).fill(-0.46); xs[a] = 1.6; xs[b] = 1.0; xs[c] = v; return answerOf(W, xs); }); }
+  function draw() {
+    clear(svg);
+    const XS = v => 70 + (v - lo) / (hi - lo) * 540;
+    const rows = [['trained', sweep(M)], ['hand-built', sweep(HB)]];
+    T(svg, 6, 18, `third-largest's value, from ${lo} to ${hi}; the second is 1.00`, { class: 'b' });
+    rows.forEach(([nm, ans], r) => {
+      const y = 40 + r * 70;
+      T(svg, 6, y + 24, nm, { class: 'm' });
+      ans.forEach((p, j) => { const v = lo + (hi - lo) * j / (NV - 1); const right = v < 1 ? p === b : p === c; S('rect', { x: XS(v) - 0.8, y, width: 1.8, height: 36, fill: right ? C.green : C.red }, svg); });
+    });
+    S('line', { x1: XS(1), x2: XS(1), y1: 32, y2: 190, stroke: C.ink, 'stroke-dasharray': '4 3' }, svg);
+    for (const v of [0.9, 0.95, 1, 1.05, 1.1]) T(svg, XS(v), 200, v.toFixed(2), { 'text-anchor': 'middle', class: 'm' });
+    S('rect', { x: 70, y: 216, width: 11, height: 11, fill: C.green }, svg); T(svg, 86, 226, 'right answer', { class: 'm' });
+    S('rect', { x: 180, y: 216, width: 11, height: 11, fill: C.red }, svg); T(svg, 196, 226, 'wrong answer', { class: 'm' });
+    const tr = rows[0][1]; const wrong = tr.map((p, j) => { const v = lo + (hi - lo) * j / (NV - 1); return !(v < 1 ? p === b : p === c); });
+    const firstC = tr.findIndex(p => p === c); const sw = firstC < 0 ? null : lo + (hi - lo) * firstC / (NV - 1);
+    const nw = wrong.filter(Boolean).length;
+    cap.innerHTML = (a === b || b === c || a === c) ? 'Pick three different positions.' :
+      sw == null ? `Here the trained network never switches to the third's position in this range; it is wrong on ${(100 * nw / NV).toFixed(0)}% of the range.` :
+      `The trained network switches from position ${b} to position ${c} at about <b>${sw.toFixed(3)}</b>, a tie offset of ${((sw - 1) * 100).toFixed(1)}%. It is wrong on ${(100 * nw / NV).toFixed(1)}% of this narrow range, all of it near 1.00. The hand-built network switches almost exactly at 1.00.`;
+  }
+  const re = () => { a = +sa.value; b = +sb.value; c = +sc.value; draw(); };
+  [sa, sb, sc].forEach(s => s.onchange = re);
+  f.querySelector('[data-a=rand]').onclick = () => { const p = [...Array(N).keys()].sort(() => Math.random() - 0.5); sa.value = p[0]; sb.value = p[1]; sc.value = p[2]; re(); };
+  draw();
+})();
+
+// ======================================================= figure 14: estimate
+(() => {
+  const svg = document.querySelector('#f14 svg');
+  const pts = EST.map(([k, m, p]) => ({ k, m: 100 * m, p: 100 * p, fresh: k.startsWith('s2') }));
+  const lo = 0, hi = Math.ceil(Math.max(...pts.flatMap(q => [q.m, q.p])) / 2) * 2;
+  const XS = v => 70 + (v - lo) / (hi - lo) * 520, YS = v => 320 - (v - lo) / (hi - lo) * 290;
+  for (let g = 0; g <= hi; g += 2) { S('line', { x1: XS(lo), x2: XS(hi), y1: YS(g), y2: YS(g), stroke: C.grid }, svg); S('line', { x1: XS(g), x2: XS(g), y1: YS(lo), y2: YS(hi), stroke: C.grid }, svg); T(svg, XS(lo) - 6, YS(g) + 4, g + '%', { 'text-anchor': 'end', class: 'm' }); T(svg, XS(g), YS(lo) + 16, g + '%', { 'text-anchor': 'middle', class: 'm' }); }
+  S('line', { x1: XS(lo), y1: YS(lo), x2: XS(hi), y2: YS(hi), stroke: C.axis, 'stroke-dasharray': '4 3' }, svg);
+  T(svg, XS((lo + hi) / 2), 352, 'measured error rate', { 'text-anchor': 'middle' });
+  T(svg, 14, YS(hi) - 10, 'estimated error rate', {});
+  pts.forEach(q => { const c = S('circle', { cx: XS(q.m), cy: YS(q.p), r: 5.5, fill: q.fresh ? '#fff' : C.blue, stroke: q.k === 'ARC' ? C.orange : C.blue, 'stroke-width': q.k === 'ARC' ? 3 : 1.5 }, svg); const tt = S('title', {}, c); tt.textContent = `${q.k}: measured ${q.m.toFixed(2)}%, estimated ${q.p.toFixed(2)}%`; });
+  const arc = pts.find(q => q.k === 'ARC'); if (arc) T(svg, XS(arc.m) + 10, YS(arc.p) + 16, "ARC's network", { style: `fill:${C.orange};font-weight:600` });
+})();
+
+// ======================================================= figure 6b: the readout turns with the register (trained network)
+(() => {
+  const f = document.getElementById('f6b'), svg = f.querySelector('svg'), cap = f.querySelector('.cap'), sel = f.querySelector('[data-a=pos]');
+  fillSelect(sel, posItems(0, 6), 2);
+  let pos = 2, xs, R, shown = 0;
+  const comp = () => { xs = new Array(N).fill(0); xs[pos] = 1; R = run(M, xs); };
+  const tw = tweener(v => paint(v), 520);
+  function paint(v) {
+    clear(svg); const s = shown;
+    tape(svg, xs, { y0: 50, upto: s - 1, cur: s - 1, k: 26, title: 'the list', titleDy: 38, labDy: 18 });
+    const reg = v.map((x, i) => i < 8 ? x : 0), late = v.map((x, i) => i >= 8 ? x : 0);
+    barsChart(svg, [{ vals: reg, color: C.blue, labels: true, only: i => i < 8 }, { vals: late, color: C.grey, labels: true, only: i => i >= 8 }], { y0: 200, k: 1.2, lim: 70, grid: [-50, 50], title: "contribution of the twelve neurons, final readout weights applied now", posLabels: true });
+    if (s > pos) { const p = pos + (N - s); if (p <= 9) T(svg, X(p), 340, '▲ expected', { 'text-anchor': 'middle', style: `fill:${C.blue};font-size:11px;font-weight:600` }); }
+  }
+  function target(s) { return s > 0 ? reading(M, R.H[s - 1], TIMER) : new Array(N).fill(0); }
+  function onStep(s, instant) {
+    shown = s; tw(target(s), instant);
+    if (s <= pos) { cap.innerHTML = `Before the 1.0 arrives at position ${pos}, nothing is written. Press ▶.`; return; }
+    const t = s - 1, m = N - 1 - t, exp = pos + m, rd = reading(M, R.H[t], TIMER), pk = argmax(rd.slice(0, 8));
+    cap.innerHTML = (t === pos ? `Step ${t}: the 1.0 is written. ` : `Step ${t}: `) + `the 1.0 has ${m} step${m === 1 ? '' : 's'} to go, so the readout should see it at position ${pos} + ${m} = ${exp}. ` +
+      (exp > 7 ? 'That is beyond the positions the register reads, so this step tells us little.' : `The highest value over positions 0–7 is at <b>position ${pk}</b>${pk === exp ? ', as expected.' : '.'}`) + (s === N ? ` <b>End of list</b>: the vote sits at its own position, ${pos}.` : '');
+  }
+  const st = stepper(f, { max: N, start: 0, label: s => s === 0 ? 'start' : `after ${s}`, onStep, ms: 1000 });
+  sel.onchange = () => { pos = +sel.value; comp(); st.go(0, true); };
+  comp(); st.go(0, true);
+})();
+
+// ======================================================= figure 8b: switch-off lines of the cancelling neurons
+(() => {
+  const f = document.getElementById('f8b'), svg = f.querySelector('svg'), cap = f.querySelector('.cap'), sel = f.querySelector('[data-a=b]');
+  fillSelect(sel, posItems(3, 9), 6);
+  const cols = ['#e0662f', '#a8441a', '#f2a27a', '#6e2c0e'], dash = ['none', '6 3', 'none', '2 3'];
+  const lo = 0, hi = 1.6, NV = 161;
+  function draw() {
+    clear(svg); const b = +sel.value;
+    const xsV = Array.from({ length: NV }, (_, j) => lo + (hi - lo) * j / (NV - 1));
+    const acts = xsV.map(x => { const l = new Array(N).fill(0); l[2] = 1.0; l[b] = x; const h = run(M, l).H[b]; return HIDE.map(k => h[k]); });
+    const ymax = Math.max(5, ...acts.flat()) * 1.1;
+    const XS = x => 70 + (x - lo) / (hi - lo) * 540, YS = y => 250 - y / ymax * 220;
+    for (let g = 0; g <= ymax; g += 5) { S('line', { x1: XS(lo), x2: XS(hi), y1: YS(g), y2: YS(g), stroke: g ? C.grid : C.axis }, svg); T(svg, XS(lo) - 6, YS(g) + 4, g, { 'text-anchor': 'end', class: 'm' }); }
+    for (let x = 0; x <= 1.6001; x += 0.2) T(svg, XS(x), 268, x.toFixed(1), { 'text-anchor': 'middle', class: 'm' });
+    T(svg, XS(0.8), 290, `x, the new number at position ${b}`, { 'text-anchor': 'middle' });
+    T(svg, 6, 16, 'activation of each cancelling neuron at the step x arrives', { class: 'b' });
+    S('line', { x1: XS(1), x2: XS(1), y1: YS(0), y2: YS(ymax), stroke: C.ink, 'stroke-dasharray': '4 3' }, svg);
+    T(svg, XS(1) - 4, YS(ymax) + 12, 'largest so far (1.0)', { 'text-anchor': 'end', class: 'm' });
+    const offs = [];
+    HIDE.forEach((k, j) => {
+      const d = acts.map((a, i) => (i ? 'L' : 'M') + XS(xsV[i]) + ',' + YS(a[j])).join(' ');
+      S('path', { d, fill: 'none', stroke: cols[j], 'stroke-width': 2.5, 'stroke-dasharray': dash[j] }, svg);
+      const i0 = acts.findIndex(a => a[j] <= 1e-9); offs.push(i0 < 0 ? null : xsV[i0]);
+      const lx = 500, ly = 120 + j * 16; S('line', { x1: lx, x2: lx + 22, y1: ly - 4, y2: ly - 4, stroke: cols[j], 'stroke-width': 2.5, 'stroke-dasharray': dash[j] }, svg); T(svg, lx + 28, ly, 'neuron ' + k + (i0 === 0 ? ' (already off)' : ''), { class: 'm' });
+    });
+    const allOff = acts.findIndex(a => a.every(v => v <= 1e-9));
+    cap.innerHTML = `Switch-off points at step ${b}: ` + HIDE.map((k, j) => `neuron ${k} ${offs[j] == null ? 'stays on' : offs[j] === 0 ? 'already off' : 'at ' + offs[j].toFixed(2)}`).join(', ') + '. ' +
+      (allOff < 0 ? 'Not all four switch off below 1.6 here.' : `All four are off once x reaches <b>${xsV[allOff].toFixed(2)}</b>, against a largest so far of 1.00.`);
+  }
+  sel.onchange = draw; draw();
+})();
+</script>
+</body>
+</html>

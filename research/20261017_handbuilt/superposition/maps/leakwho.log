@@ -1,0 +1,12 @@
+ARC, |slope| of the second-vs-third lead on each smaller number (400 near ties):
+  kept by the keep gate                        n   532  |slope| median 3.68  mean 7.41  share of all |slope| 83.3%
+  forgotten by the keep gate                   n  1993  |slope| median 0.23  mean 0.36  share of all |slope| 15.0%
+  at position 9 (no later step)                n   275  |slope| median 0.28  mean 0.29  share of all |slope|  1.7%
+  positive number                              n  1065  |slope| median 0.73  mean 3.85  share of all |slope| 86.6%
+  negative number                              n  1735  |slope| median 0.21  mean 0.36  share of all |slope| 13.4%
+  before the largest                           n  1457  |slope| median 0.30  mean 2.24  share of all |slope| 68.9%
+  after the largest                            n  1343  |slope| median 0.33  mean 1.10  share of all |slope| 31.1%
+  kept, before the largest                     n   420  |slope| median 3.65  mean 7.04  share of all |slope| 62.5%
+  kept, after the largest                      n   112  |slope| median 4.16  mean 8.77  share of all |slope| 20.8%
+  forgotten, before the largest                n  1037  |slope| median 0.14  mean 0.29  share of all |slope|  6.3%
+  forgotten, after the largest                 n   956  |slope| median 0.33  mean 0.43  share of all |slope|  8.7%

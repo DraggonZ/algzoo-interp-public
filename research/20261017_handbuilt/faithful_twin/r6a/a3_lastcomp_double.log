@@ -1,0 +1,3 @@
+tap 5, last comp               92.84  by position of the second: 93.7 98.5 97.3 97.7 97.4 97.8 97.6 87.2 63.7 97.4
+tap 5, gap 1, last comp        91.86  by position of the second: 93.7 87.9 98.0 97.7 97.4 97.8 97.6 87.2 63.8 97.5
+gap use, tap 5, gap 1, last comp: intact 91.86, gap fit 91.52, other list's gap 78.18

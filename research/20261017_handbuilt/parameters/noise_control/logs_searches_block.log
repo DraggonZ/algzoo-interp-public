@@ -1,0 +1,80 @@
+{"kind": "block", "seed": 0, "search": "r8", "base": -1186.64, "best": "(1, 3, 3, 3)", "best_net": -1192.09, "gain": -5.45, "n": 975, "singular": 0}
+{"kind": "block", "seed": 0, "search": "r9", "base": -1186.64, "best": "rows (1, 6, 7, 8) all", "best_net": -895.45, "gain": 291.2, "n": 45, "singular": 0}
+{"kind": "block", "seed": 0, "search": "r14", "base": -1291.2, "best": "max(fresh,0)", "best_net": -1253.08, "gain": 38.12, "n": 17, "singular": 0}
+{"kind": "block", "seed": 0, "search": "r15", "base": -1383.47, "best": "top 1", "best_net": -1357.77, "gain": 25.7, "n": 11, "singular": 0}
+{"kind": "block", "seed": 1, "search": "r8", "base": -1435.96, "best": "(1, -3, -3, -3)", "best_net": -1450.84, "gain": -14.88, "n": 975, "singular": 0}
+{"kind": "block", "seed": 1, "search": "r9", "base": -1435.96, "best": "rows (1, 6) memory", "best_net": -1399.42, "gain": 36.54, "n": 45, "singular": 0}
+{"kind": "block", "seed": 1, "search": "r14", "base": -1525.5, "best": "-5", "best_net": -1370.12, "gain": 155.38, "n": 17, "singular": 120}
+{"kind": "block", "seed": 1, "search": "r15", "base": -1467.07, "best": "top 1", "best_net": -1395.15, "gain": 71.92, "n": 11, "singular": 88}
+{"kind": "block", "seed": 2, "search": "r8", "base": -1417.9, "best": "(1, 3, 3, 3)", "best_net": -1432.77, "gain": -14.87, "n": 975, "singular": 0}
+{"kind": "block", "seed": 2, "search": "r9", "base": -1417.9, "best": "rows (1, 6, 8) hiding", "best_net": -1201.11, "gain": 216.79, "n": 45, "singular": 0}
+{"kind": "block", "seed": 2, "search": "r14", "base": -1646.17, "best": "-2", "best_net": -1572.17, "gain": 74.0, "n": 17, "singular": 0}
+{"kind": "block", "seed": 2, "search": "r15", "base": -1621.14, "best": "top 1", "best_net": -1510.98, "gain": 110.16, "n": 11, "singular": 0}
+{"kind": "block", "seed": 3, "search": "r8", "base": -1464.11, "best": "(1, 3, 3, 3)", "best_net": -1478.87, "gain": -14.77, "n": 975, "singular": 0}
+{"kind": "block", "seed": 3, "search": "r9", "base": -1464.11, "best": "rows (1, 7) all", "best_net": -1154.41, "gain": 309.7, "n": 45, "singular": 0}
+{"kind": "block", "seed": 3, "search": "r14", "base": -1576.0, "best": "-5", "best_net": -1445.51, "gain": 130.49, "n": 17, "singular": 0}
+{"kind": "block", "seed": 3, "search": "r15", "base": -1532.19, "best": "top 1", "best_net": -1498.5, "gain": 33.69, "n": 11, "singular": 0}
+{"kind": "block", "seed": 4, "search": "r8", "base": -1894.0, "best": "(1, -3, -3, -3)", "best_net": -1909.44, "gain": -15.44, "n": 975, "singular": 0}
+{"kind": "block", "seed": 4, "search": "r9", "base": -1894.0, "best": "rows (1, 6) all", "best_net": -1806.87, "gain": 87.13, "n": 45, "singular": 0}
+{"kind": "block", "seed": 4, "search": "r14", "base": -2023.37, "best": "-5", "best_net": -1782.93, "gain": 240.44, "n": 17, "singular": 0}
+{"kind": "block", "seed": 4, "search": "r15", "base": -1890.86, "best": "top 3 of x1..x9", "best_net": -1631.5, "gain": 259.36, "n": 11, "singular": 20}
+{"kind": "block", "seed": 5, "search": "r8", "base": -1699.97, "best": "(1, -3, -3, -3)", "best_net": -1718.07, "gain": -18.1, "n": 975, "singular": 0}
+{"kind": "block", "seed": 5, "search": "r9", "base": -1699.97, "best": "rows (1, 6) hiding", "best_net": -1655.9, "gain": 44.06, "n": 45, "singular": 0}
+{"kind": "block", "seed": 5, "search": "r14", "base": -1957.5, "best": "-5", "best_net": -1810.35, "gain": 147.15, "n": 17, "singular": 0}
+{"kind": "block", "seed": 5, "search": "r15", "base": -1882.48, "best": "top 1", "best_net": -1538.1, "gain": 344.38, "n": 11, "singular": 14}
+{"kind": "block", "seed": 6, "search": "r8", "base": -398.0, "best": "(3, 3, -1, 0)", "best_net": -381.74, "gain": 16.26, "n": 975, "singular": 0}
+{"kind": "block", "seed": 6, "search": "r9", "base": -398.0, "best": "rows (7, 8) memory", "best_net": -397.19, "gain": 0.81, "n": 45, "singular": 0}
+{"kind": "block", "seed": 6, "search": "r14", "base": -417.34, "best": "-5", "best_net": -398.8, "gain": 18.54, "n": 17, "singular": 0}
+{"kind": "block", "seed": 6, "search": "r15", "base": -404.15, "best": "top 2", "best_net": -403.41, "gain": 0.74, "n": 11, "singular": 6}
+{"kind": "block", "seed": 7, "search": "r8", "base": -499.07, "best": "(1, -3, -3, -3)", "best_net": -491.7, "gain": 7.37, "n": 975, "singular": 0}
+{"kind": "block", "seed": 7, "search": "r9", "base": -499.07, "best": "rows (1, 8) hiding", "best_net": -497.25, "gain": 1.82, "n": 45, "singular": 0}
+{"kind": "block", "seed": 7, "search": "r14", "base": -482.43, "best": "max(fresh,0)", "best_net": -481.5, "gain": 0.93, "n": 17, "singular": 0}
+{"kind": "block", "seed": 7, "search": "r15", "base": -491.02, "best": "top 8", "best_net": -490.17, "gain": 0.85, "n": 11, "singular": 0}
+{"kind": "block", "seed": 8, "search": "r8", "base": -366.96, "best": "(1, -3, -3, 3)", "best_net": -362.79, "gain": 4.17, "n": 975, "singular": 0}
+{"kind": "block", "seed": 8, "search": "r9", "base": -366.96, "best": "rows (7, 8) all", "best_net": -355.13, "gain": 11.83, "n": 45, "singular": 0}
+{"kind": "block", "seed": 8, "search": "r14", "base": -386.21, "best": "-5", "best_net": -373.34, "gain": 12.87, "n": 17, "singular": 0}
+{"kind": "block", "seed": 8, "search": "r15", "base": -388.11, "best": "top 5", "best_net": -387.89, "gain": 0.23, "n": 11, "singular": 28}
+{"kind": "block", "seed": 9, "search": "r8", "base": -393.85, "best": "(1, 0, 0, 3)", "best_net": -383.91, "gain": 9.94, "n": 975, "singular": 0}
+{"kind": "block", "seed": 9, "search": "r9", "base": -393.85, "best": "rows (6, 7) all", "best_net": -386.13, "gain": 7.72, "n": 45, "singular": 0}
+{"kind": "block", "seed": 9, "search": "r14", "base": -418.47, "best": "-5", "best_net": -403.75, "gain": 14.72, "n": 17, "singular": 120}
+{"kind": "block", "seed": 9, "search": "r15", "base": -417.09, "best": "top 8", "best_net": -417.96, "gain": -0.87, "n": 11, "singular": 88}
+{"kind": "block", "seed": 10, "search": "r8", "base": -403.76, "best": "(1, 3, 3, 3)", "best_net": -391.03, "gain": 12.73, "n": 975, "singular": 0}
+{"kind": "block", "seed": 10, "search": "r9", "base": -403.76, "best": "rows (1, 7) hiding", "best_net": -401.11, "gain": 2.65, "n": 45, "singular": 0}
+{"kind": "block", "seed": 10, "search": "r14", "base": -407.06, "best": "min(fresh,0)", "best_net": -403.99, "gain": 3.07, "n": 17, "singular": 0}
+{"kind": "block", "seed": 10, "search": "r15", "base": -456.07, "best": "top 2", "best_net": -404.69, "gain": 51.38, "n": 11, "singular": 0}
+{"kind": "block", "seed": 11, "search": "r8", "base": -474.68, "best": "(1, 1, -3, 2)", "best_net": -470.33, "gain": 4.34, "n": 975, "singular": 0}
+{"kind": "block", "seed": 11, "search": "r9", "base": -474.68, "best": "rows (1, 6, 8) all", "best_net": -473.63, "gain": 1.04, "n": 45, "singular": 0}
+{"kind": "block", "seed": 11, "search": "r14", "base": -497.23, "best": "-5", "best_net": -471.56, "gain": 25.67, "n": 17, "singular": 120}
+{"kind": "block", "seed": 11, "search": "r15", "base": -479.73, "best": "top 4", "best_net": -475.73, "gain": 4.0, "n": 11, "singular": 88}
+{"kind": "block", "seed": 12, "search": "r8", "base": -1743.82, "best": "(1, -2, -2, -1)", "best_net": -1762.9, "gain": -19.08, "n": 975, "singular": 0}
+{"kind": "block", "seed": 12, "search": "r9", "base": -1743.82, "best": "rows (1, 6, 7) all", "best_net": -1684.23, "gain": 59.59, "n": 45, "singular": 0}
+{"kind": "block", "seed": 12, "search": "r14", "base": -1799.91, "best": "-5", "best_net": -1276.59, "gain": 523.32, "n": 17, "singular": 120}
+{"kind": "block", "seed": 12, "search": "r15", "base": -1737.76, "best": "top 1", "best_net": -1659.03, "gain": 78.72, "n": 11, "singular": 88}
+{"kind": "block", "seed": 13, "search": "r8", "base": -411.96, "best": "(1, -3, 0, -1)", "best_net": -397.25, "gain": 14.71, "n": 975, "singular": 0}
+{"kind": "block", "seed": 13, "search": "r9", "base": -411.96, "best": "rows (1, 6) all", "best_net": -407.3, "gain": 4.66, "n": 45, "singular": 0}
+{"kind": "block", "seed": 13, "search": "r14", "base": -430.05, "best": "-2", "best_net": -424.78, "gain": 5.28, "n": 17, "singular": 120}
+{"kind": "block", "seed": 13, "search": "r15", "base": -432.75, "best": "top 8", "best_net": -433.36, "gain": -0.61, "n": 11, "singular": 88}
+{"kind": "block", "seed": 14, "search": "r8", "base": -414.66, "best": "(3, 1, -2, -1)", "best_net": -408.68, "gain": 5.99, "n": 975, "singular": 0}
+{"kind": "block", "seed": 14, "search": "r9", "base": -414.66, "best": "rows (1, 6) hiding", "best_net": -410.19, "gain": 4.47, "n": 45, "singular": 0}
+{"kind": "block", "seed": 14, "search": "r14", "base": -450.77, "best": "-|fresh|", "best_net": -422.94, "gain": 27.83, "n": 17, "singular": 0}
+{"kind": "block", "seed": 14, "search": "r15", "base": -436.97, "best": "top 1", "best_net": -433.84, "gain": 3.13, "n": 11, "singular": 46}
+{"kind": "block", "seed": 15, "search": "r8", "base": -1719.05, "best": "(1, 3, 3, 3)", "best_net": -1732.58, "gain": -13.53, "n": 975, "singular": 0}
+{"kind": "block", "seed": 15, "search": "r9", "base": -1719.05, "best": "rows (6, 8) all", "best_net": -1701.95, "gain": 17.11, "n": 45, "singular": 0}
+{"kind": "block", "seed": 15, "search": "r14", "base": -1876.06, "best": "-5", "best_net": -1802.81, "gain": 73.24, "n": 17, "singular": 120}
+{"kind": "block", "seed": 15, "search": "r15", "base": -1856.78, "best": "top 8", "best_net": -1862.58, "gain": -5.8, "n": 11, "singular": 88}
+{"kind": "block", "seed": 16, "search": "r8", "base": -1609.09, "best": "(1, -3, -3, -3)", "best_net": -1621.87, "gain": -12.78, "n": 975, "singular": 0}
+{"kind": "block", "seed": 16, "search": "r9", "base": -1609.09, "best": "rows (6, 7) all", "best_net": -1520.35, "gain": 88.74, "n": 45, "singular": 0}
+{"kind": "block", "seed": 16, "search": "r14", "base": -1506.33, "best": "max(fresh,0)", "best_net": -895.79, "gain": 610.54, "n": 17, "singular": 0}
+{"kind": "block", "seed": 16, "search": "r15", "base": -1206.13, "best": "top 4", "best_net": -1187.0, "gain": 19.13, "n": 11, "singular": 12}
+{"kind": "block", "seed": 17, "search": "r8", "base": -1524.2, "best": "(1, 3, 3, 3)", "best_net": -1528.4, "gain": -4.2, "n": 975, "singular": 0}
+{"kind": "block", "seed": 17, "search": "r9", "base": -1524.2, "best": "rows (6,) all", "best_net": -1311.44, "gain": 212.76, "n": 45, "singular": 0}
+{"kind": "block", "seed": 17, "search": "r14", "base": -1591.28, "best": "-5", "best_net": -1160.75, "gain": 430.53, "n": 17, "singular": 0}
+{"kind": "block", "seed": 17, "search": "r15", "base": -1440.59, "best": "top 8", "best_net": -1450.8, "gain": -10.21, "n": 11, "singular": 0}
+{"kind": "block", "seed": 18, "search": "r8", "base": -1499.71, "best": "(1, 3, 3, 3)", "best_net": -1509.96, "gain": -10.25, "n": 975, "singular": 0}
+{"kind": "block", "seed": 18, "search": "r9", "base": -1499.71, "best": "rows (1, 6) hiding", "best_net": -1479.64, "gain": 20.06, "n": 45, "singular": 0}
+{"kind": "block", "seed": 18, "search": "r14", "base": -1666.6, "best": "-|fresh|", "best_net": -1634.29, "gain": 32.3, "n": 17, "singular": 0}
+{"kind": "block", "seed": 18, "search": "r15", "base": -1713.36, "best": "top 8", "best_net": -1682.76, "gain": 30.6, "n": 11, "singular": 22}
+{"kind": "block", "seed": 19, "search": "r8", "base": -425.13, "best": "(1, 3, 1, 0)", "best_net": -417.77, "gain": 7.37, "n": 975, "singular": 0}
+{"kind": "block", "seed": 19, "search": "r9", "base": -425.13, "best": "rows (1, 6, 8) all", "best_net": -418.38, "gain": 6.75, "n": 45, "singular": 0}
+{"kind": "block", "seed": 19, "search": "r14", "base": -457.0, "best": "below 2nd", "best_net": -454.95, "gain": 2.04, "n": 17, "singular": 0}
+{"kind": "block", "seed": 19, "search": "r15", "base": -460.94, "best": "2nd or 3rd", "best_net": -460.63, "gain": 0.31, "n": 11, "singular": 3}

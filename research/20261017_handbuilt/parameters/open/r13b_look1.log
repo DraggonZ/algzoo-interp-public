@@ -1,0 +1,28 @@
+w_in hiding [-10.56 -11.   -13.17 -12.31]
+row 0: ARC hid cols [ 6.09  2.53 -2.78 -3.57] cos w_in -0.06
+row 1: ARC hid cols [ 2.56  4.78  0.48 -6.7 ] cos w_in -0.02 | push [ 3.09  5.52 -0.68 -6.83] cos -0.00 resid [-0.53 -0.73  1.16  0.13]
+row 2: ARC hid cols [-1.66  3.19  4.69 -6.21] cos w_in -0.01 | push [-1.72  3.72  3.81 -5.97] cos +0.00 resid [ 0.06 -0.52  0.88 -0.24]
+row 3: ARC hid cols [-5.86 -1.22  7.33 -1.49] cos w_in -0.01 | push [-6.06 -1.2   7.64 -1.96] cos +0.00 resid [ 0.2  -0.01 -0.32  0.46]
+row 4: ARC hid cols [-4.89 -5.55  5.87  3.1 ] cos w_in -0.01 | push [-5.16 -6.24  7.33  2.17] cos -0.00 resid [ 0.26  0.69 -1.46  0.93]
+row 5: ARC hid cols [-1.21 -5.63  0.92  5.49] cos w_in -0.03 | push [-0.8  -5.49  0.98  4.59] cos -0.00 resid [-0.41 -0.14 -0.06  0.89]
+row 6: ARC hid cols [ 2.17 -3.08 -2.85  4.39] cos w_in -0.04 | push [ 3.01 -2.76 -3.42  3.8 ] cos -0.02 resid [-0.84 -0.32  0.57  0.59]
+row 7: ARC hid cols [ 4.41  0.95 -5.41  1.44] cos w_in -0.02 | push [ 5.43  1.55 -6.57  1.12] cos -0.01 resid [-1.02 -0.6   1.16  0.32]
+row 8: ARC hid cols [-1.43  3.62 -5.    3.64] cos w_in -0.02 | push [ 0.58  2.64 -4.58  2.15] cos -0.01 resid [-2.02  0.98 -0.42  1.49]
+row 9: ARC hid cols [-0.47 -0.67 -3.79  0.33] cos w_in +0.63
+0 cos(row, WI) ARC -0.02
+1 cos(row, WI) ARC +0.00 push -0.00
+2 cos(row, WI) ARC +0.01 push +0.01
+3 cos(row, WI) ARC +0.01 push +0.01
+4 cos(row, WI) ARC +0.01 push -0.00
+5 cos(row, WI) ARC +0.00 push +0.00
+6 cos(row, WI) ARC +0.00 push -0.01
+7 cos(row, WI) ARC -0.00 push -0.00
+8 cos(row, WI) ARC +0.00 push -0.00
+9 cos(row, WI) ARC +0.04
+resid rms per column [0.43 0.89 0.24 0.15 0.48 0.31 0.59 0.88 0.76 0.98 0.22 0.37 0.21 0.2
+ 0.73 0.28]
+ARC rms per column   [1.71 3.64 0.89 0.94 1.66 1.15 3.57 4.42 4.16 1.26 1.99 1.58 1.4  1.08
+ 1.89 1.38]
+WI [ 7.000e-02 -1.056e+01  1.000e-02 -1.200e-01  1.016e+01 -2.800e-01
+ -1.100e+01 -1.317e+01 -1.231e+01 -2.300e-01  6.000e-02  1.500e-01
+  3.000e-01 -5.000e-02 -1.320e+00 -1.200e-01]

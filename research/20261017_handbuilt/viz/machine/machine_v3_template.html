@@ -1,0 +1,523 @@
+<title>Second-Largest Machine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,500..800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: an instrument panel. Input tape, then the vote board with the switch-off bench beside it, then the five neuron groups with their reasons. */
+:root {
+  --bg: #eef1f4; --panel: #ffffff; --ink: #18212b; --muted: #5b6876; --line: #d3d9e0; --track: #e3e8ee;
+  --accent: #1d5fd6; --store: #b7791f; --keep: #0f8a7e; --late: #7a4fd0; --hide: #c2416b; --mem: #2f6fd0;
+  --good: #1a7f4b; --bad: #b93a32; --warnbg: #fbeef0;
+  --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11161c; --panel: #1a212a; --ink: #e6ebf1; --muted: #9aa7b5; --line: #2c3642; --track: #26303b;
+    --accent: #6ea2ff; --store: #e2a64a; --keep: #3cc2b2; --late: #a98af0; --hide: #ec6f97; --mem: #6ea2ff;
+    --good: #4cc488; --bad: #f07a70; --warnbg: #3a2229; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11161c; --panel: #1a212a; --ink: #e6ebf1; --muted: #9aa7b5; --line: #2c3642; --track: #26303b;
+  --accent: #6ea2ff; --store: #e2a64a; --keep: #3cc2b2; --late: #a98af0; --hide: #ec6f97; --mem: #6ea2ff;
+  --good: #4cc488; --bad: #f07a70; --warnbg: #3a2229; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 24px 40px;
+}
+.wrap { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; }
+.wrap > *, .dock > * { min-width: 0; }
+h1 { font-family: var(--font-display); font-stretch: 85%; font-weight: 800; font-size: clamp(28px, 4.4vw, 44px); line-height: 1.05; margin: 0; letter-spacing: -0.01em; text-wrap: balance; }
+h2 { font-family: var(--font-display); font-stretch: 90%; font-weight: 700; font-size: 18px; margin: 0; }
+.lede { max-width: 72ch; color: var(--muted); margin: 6px 0 0; }
+.lede b { color: var(--ink); font-weight: 600; }
+.eyebrow { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.presets { display: flex; flex-wrap: wrap; gap: 6px; }
+button { font: 500 13px/1 var(--font-body); color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 8px 11px; cursor: pointer; }
+button:hover { border-color: var(--accent); }
+button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+button.on { background: var(--accent); color: var(--panel); border-color: var(--accent); }
+.transport { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; min-width: 0; }
+.transport button { min-width: 40px; font-family: var(--font-mono); }
+#stepSlider { width: 170px; max-width: 40vw; accent-color: var(--accent); }
+.stepread { font-family: var(--font-mono); font-size: 13px; color: var(--muted); min-width: 92px; }
+.listedit { display: flex; gap: 6px; align-items: center; flex: 1 1 320px; min-width: 0; }
+.listedit input { flex: 1; min-width: 0; font: 13px var(--font-mono); padding: 8px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); color: var(--ink); }
+.err { color: var(--bad); font-size: 13px; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px; min-width: 0; }
+.tape { overflow-x: auto; }
+.cells { display: grid; grid-template-columns: repeat(10, minmax(54px, 1fr)); gap: 6px; min-width: 560px; }
+.cell { display: grid; grid-template-rows: 84px auto auto auto; justify-items: center; gap: 3px; padding: 4px 0 6px; border-radius: 7px; transition: background .25s; }
+.cell.now { background: var(--track); }
+.cell.future { opacity: .35; }
+.bar { position: relative; width: 26px; height: 84px; }
+.bar .zero { position: absolute; left: -6px; right: -6px; top: 50%; border-top: 1px dashed var(--line); }
+.bar .fill { position: absolute; left: 0; right: 0; border-radius: 3px; transition: all .3s; }
+.val { font: 500 13px var(--font-mono); font-variant-numeric: tabular-nums; }
+.pos { font: 11px var(--font-mono); color: var(--muted); }
+.tags { display: flex; flex-wrap: wrap; gap: 3px; justify-content: center; min-height: 18px; }
+.tag { font: 600 10px/1 var(--font-body); letter-spacing: .03em; text-transform: uppercase; padding: 3px 5px; border-radius: 4px; border: 1px solid currentColor; }
+.tag.largest { color: var(--store); } .tag.hidden { color: var(--hide); } .tag.revealed { color: var(--good); }
+.tag.kept { color: var(--keep); } .tag.dropped { color: var(--muted); } .tag.second { color: var(--accent); }
+.top { display: grid; grid-template-columns: 1.25fr 1fr; gap: 14px; }
+@media (max-width: 960px) { .top { grid-template-columns: 1fr; } }
+.dock { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); padding-block: 8px; display: grid; gap: 8px; border-bottom: 1px solid var(--line); margin-inline: -4px; padding-inline: 4px; }
+.dock .tape { padding: 8px 10px; }
+.dock .cell { grid-template-rows: 46px auto auto auto; padding: 2px 0 4px; }
+.dock .bar { height: 46px; }
+.setup { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.dials { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) minmax(0, 1fr); gap: 8px; align-items: end; }
+.dial { display: grid; justify-items: center; gap: 2px; min-width: 0; }
+.dial svg { width: 100%; max-width: 300px; height: auto; overflow: visible; }
+.dial .dt { font: 600 12px var(--font-mono); color: var(--ink); }
+.dial .ds { font-size: 11.5px; color: var(--muted); text-align: center; }
+.bench-row { display: grid; grid-template-columns: 1.4fr 1fr; gap: 14px; align-items: start; }
+@media (max-width: 820px) { .bench-row { grid-template-columns: 1fr; } }
+.knobs { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; }
+@media (max-width: 560px) { .cells { min-width: 480px; } .dock .val { font-size: 11px; } .tag { font-size: 9px; padding: 2px 3px; } }
+.votes { display: grid; gap: 10px; }
+.verdict { font-size: 15px; }
+.verdict .ok { color: var(--good); font-weight: 600; } .verdict .no { color: var(--bad); font-weight: 600; }
+.scorewrap { overflow-x: auto; }
+.legend { display: flex; gap: 12px; flex-wrap: wrap; font-size: 12px; color: var(--muted); }
+.legend span::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; background: var(--c); }
+svg text { fill: var(--muted); font-family: var(--font-mono); font-size: 11px; }
+.note { font-size: 13px; color: var(--muted); max-width: 80ch; margin: 0; }
+.bench { display: grid; gap: 10px; align-content: start; }
+.knob { display: grid; grid-template-columns: auto 1fr; gap: 4px 10px; align-items: start; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; cursor: pointer; }
+.knob.active { border-color: var(--hide); background: var(--warnbg); }
+.knob input { margin-top: 3px; accent-color: var(--hide); }
+.knob b { font-weight: 600; }
+.knob small { grid-column: 2; color: var(--muted); font-size: 12.5px; }
+.stats { display: grid; grid-template-columns: 1fr auto auto; gap: 2px 12px; font-size: 13px; font-variant-numeric: tabular-nums; }
+.stats .h { color: var(--muted); font-size: 12px; }
+.stats .v { font-family: var(--font-mono); text-align: right; }
+.stats .worse { color: var(--bad); font-weight: 600; }
+.board { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width: 820px) { .board { grid-template-columns: 1fr; } }
+.group { display: grid; gap: 8px; position: relative; }
+.group::before { content: ""; position: absolute; left: 0; top: 14px; bottom: 14px; width: 3px; border-radius: 2px; background: var(--g); }
+.group.wide { grid-column: 1 / -1; }
+.ghead { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.gname { font-family: var(--font-display); font-stretch: 90%; font-weight: 700; font-size: 17px; color: var(--g); }
+.gjob { font-size: 13px; color: var(--muted); }
+.neurons { display: flex; flex-wrap: wrap; gap: 8px; }
+.n { display: grid; justify-items: center; gap: 3px; }
+.n .meter { width: 34px; height: 46px; border-radius: 6px; background: var(--track); position: relative; overflow: hidden; border: 1px solid var(--line); }
+.n .meter i { position: absolute; left: 0; right: 0; bottom: 0; background: var(--g); transition: height .35s ease; }
+.n .meter.off i { opacity: .25; }
+.n .meter.cut { border-color: var(--bad); border-style: dashed; }
+.n .lab { font: 11px var(--font-mono); color: var(--muted); }
+.n .num { font: 500 11px var(--font-mono); font-variant-numeric: tabular-nums; }
+.say { font-size: 14px; min-height: 42px; max-width: 70ch; }
+.say b { font-weight: 600; }
+.why { font-size: 13.5px; border-top: 1px solid var(--line); padding-top: 8px; display: grid; gap: 4px; max-width: 74ch; }
+.why .k { font: 600 11px var(--font-body); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.why .open { color: var(--muted); }
+.g-store { --g: var(--store); } .g-keep { --g: var(--keep); } .g-late { --g: var(--late); } .g-hide { --g: var(--hide); } .g-mem { --g: var(--mem); }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">ARC's AlgZoo network · 16 neurons · 432 weights · running live in your browser</div>
+    <h1>The Second-Largest Machine</h1>
+    <p class="lede">A tiny recurrent network reads ten numbers, one per step, and names the position of the <b>second-largest</b>. It never tracks the second-largest directly. Every number big enough to matter leaves a <b>vote</b> for its own position in a rotating memory. Four <b>hiding</b> neurons cancel the vote of the current largest. When a bigger number arrives it switches them off, so the old largest's vote appears exactly when it becomes the second-largest. Watch the votes build up below, then switch parts off to see why each one is there. Every number on this page is computed from ARC's real weights.</p>
+  </header>
+
+  <section class="setup" aria-label="Choose a list">
+    <div class="presets" id="presets"></div>
+    <form class="listedit" id="listForm">
+      <label class="eyebrow" for="listInput">List</label>
+      <input id="listInput" type="text" inputmode="decimal" autocomplete="off" spellcheck="false">
+      <button type="submit">Run</button>
+    </form>
+    <span class="err" id="err" hidden></span>
+  </section>
+
+  <div class="dock">
+    <section class="controls" aria-label="Step through the list">
+      <div class="transport">
+        <button id="back" type="button" aria-label="Step back">◀</button>
+        <button id="play" type="button" aria-label="Play">▶</button>
+        <button id="fwd" type="button" aria-label="Step forward">▶|</button>
+        <input id="stepSlider" type="range" min="0" max="10" step="1" value="0" aria-label="Step">
+        <span class="stepread" id="stepRead"></span>
+      </div>
+      <span class="note">Arrow keys step, space plays.</span>
+    </section>
+    <section class="panel tape" aria-label="Input numbers"><div class="cells" id="cells"></div></section>
+  </div>
+
+  <section class="top">
+    <div class="panel votes" aria-label="Vote board">
+      <div class="ghead"><h2>Vote board</h2><span class="gjob">what the network would answer if the rest of the list were zeros</span></div>
+      <div class="verdict" id="verdict"></div>
+      <div class="scorewrap"><svg id="scores" role="img" aria-label="Score of each position, split by neuron group"></svg></div>
+      <div class="legend" id="legend"></div>
+      <p class="note">Each bar is one position's score, split by the group it comes from; ▲ marks the total, and the highest total is the answer. The memory's vote for the largest and the hiding neurons' cancellation of it sit at the same position. When the largest is overtaken, the cancellation moves to the new largest and the old vote shows. Padding with zeros makes a real ten-number list, so these are the network's real scores for that list.</p>
+    </div>
+    <div class="panel votes" aria-label="Memory as rotating votes">
+      <div class="ghead"><h2>Inside the memory</h2><span class="gjob">each number's share, in the memory's three turning planes</span></div>
+      <div class="dials" id="dials"></div>
+      <div class="legend" id="dialLegend"></div>
+      <p class="note" id="dialNote"></p>
+    </div>
+  </section>
+
+  <section class="panel bench-row" aria-label="Switch a part off">
+    <div class="bench">
+      <div class="ghead"><h2>Switch a part off</h2><span class="gjob">each switch edits the network; the effect shows on this list and on 3,000 random lists</span></div>
+      <div id="knobs" class="knobs"></div>
+    </div>
+    <div class="stats" id="stats"></div>
+  </section>
+
+  <section class="board" id="board"></section>
+  <p class="note">Positions are numbered 1–10; neuron labels use ARC's numbering, n0–n15. Captions come from simple thresholds on the real activations (for example, the keep gate counts as keeping a number above 8% of its typical peak). The reasons come from switch-off experiments and weight analysis on this network; "open" marks what is not yet explained.</p>
+</div>
+
+<script>
+const W = __WEIGHTS__;
+const GROUPS = [
+  { id: "store", name: "Store of the largest", job: "running maximum", ns: [2, 4], color: "--store",
+    why: "Every comparison needs the largest so far. The store holds it one step behind (about 17× its value) and fades about 3% per step; the new-largest neuron fires on the jump and corrects for that lag. The store, like most neurons, combines its inputs so that the number that has just arrived cancels out: it sees only comparisons, never the raw number.",
+    test: "Stop the store's fade with the switch: accuracy falls from about 95% to 85%. The fade is how the network keeps track of how long ago the largest arrived.",
+    open: "" },
+  { id: "keep", name: "Keep gate", job: "lets numbers vote", ns: [5], color: "--keep",
+    why: "Every vote takes space in a small memory. The keep gate lets a number vote only if it is a new largest or at least about ¾ of the second-largest so far. Smaller numbers can never become the answer, so their votes would only add noise. Votes enter half directly, half through this gate one step later. It is also one of two routes by which a new largest's aftermath reaches the hiding neurons (found by an automated search for mechanisms).",
+    test: "Switch it off and accuracy falls from 95% to about 21%: without it, the numbers barely vote.",
+    open: "" },
+  { id: "late", name: "Late gate", job: "times the reveal", ns: [9], color: "--late",
+    why: "When a new largest arrives it switches the hiding neurons off: that is the reveal of the old largest. But the hiding neurons need a step to rebuild around the new largest. The late gate fires one step after the record, and its push reaches hiding neurons n1 and n6 one step later, two steps after the record. That keeps the new largest hidden while the old one is revealed with a clear margin.",
+    test: "Switch it off and watch the lists whose second-largest is an overtaken largest: they fall from about 95% right to about 49%.",
+    open: "" },
+  { id: "hide", name: "Hiding neurons", job: "hide the largest's vote", ns: [1, 6, 7, 8], color: "--hide",
+    why: "Without hiding, the largest's own vote would win and the network would name the largest. Their input weights are strongly negative (about −11 to −13), so any number above their reference switches them off at once. They are rebuilt every step from the store and new-largest neuron, from the two gates, and from each other's comparisons; neurons n6 and n8 also compare with the previous largest.",
+    test: "Switch them off for one step after the largest arrives: the network names the largest on about 73% of random lists, against about 1% normally. Silencing them at every later step instead breaks more than the hiding: then it names the largest on only about 9%.",
+    open: "Why four? They mostly act as one switch: all on 65% of the time, all off 22%. The rest is partial switching and one slow rotation spread across the four. Why it takes exactly four neurons is not yet known." },
+  { id: "mem", name: "Memory", job: "holds and rotates votes", ns: [0, 3, 10, 11, 12, 13, 14, 15], color: "--mem",
+    why: "The votes must last until the readout, and each must still point to its own position. The memory turns them every step (see the dials above): at about 0°, 38°, 84°, 127° and 180° per step. Each rate except 0° and 180° needs two neurons, which makes eight. A vote's place in the turning tells the readout how old it is, and so where it was written. Eight dimensions cannot hold ten sharp votes; the uneven rates keep nearby positions distinct at the cost of distant ones. The biggest share is always the current largest's, so the memory also works as a clock of its age, and that clock decides which memory neuron is switched off when.",
+    test: "Switch the switching itself off (all memory neurons linear) and accuracy falls from 95% to 44%: the clock's switch-offs are part of the computation, not noise.",
+    open: "Which of the memory's 64 weights could be stated by a rule is open. The two fast rotations can be rounded freely, but the slow one must be right to about a quarter of a degree unless the hiding neurons' weights into the memory change with it. Neuron n3's own job is unexplained." },
+];
+const NAMES = { 2: "store", 4: "new largest", 5: "keep", 9: "late" };
+const KNOBS = [
+  { id: "hide", label: "Hiding neurons, for one step", note: "n1, n6, n7, n8 forced to zero for one step, right after the largest number is read" },
+  { id: "late", label: "Late gate", note: "n9 forced to zero at every step" },
+  { id: "keep", label: "Keep gate", note: "n5 forced to zero at every step" },
+  { id: "fade", label: "The store's fade", note: "the store's weight onto itself set from 0.97 to 1" },
+];
+const PRESETS = [
+  { label: "Largest overtaken", xs: [0.3, 1.0, 0.2, -0.5, 0.5, 1.5, -0.8, -1.2, -0.3, -0.6] },
+  { label: "Largest first", xs: [1.8, 0.4, -0.3, 0.9, -1.1, 0.2, 0.6, -0.7, 0.1, -0.4] },
+  { label: "New largest last", xs: [0.2, 0.7, -0.4, 1.1, -0.9, 0.3, -0.2, 0.5, -1.0, 1.6] },
+  { label: "Close call, won", xs: [0.1, 1.40, -0.6, 0.3, 0.97, -0.2, 0.95, -1.3, 0.4, -0.5] },
+  { label: "Close call, lost", xs: [-0.05, 1.33, 0.35, 0.64, -0.15, -1.29, -0.71, 0.65, 0.1, -0.9] },
+];
+const iv = { hide: false, late: false, keep: false, fade: false };
+
+function argmax(a) { let b = 0; for (let i = 1; i < a.length; i++) if (a[i] > a[b]) b = i; return b; }
+function second(a) { const o = a.map((v, i) => [v, i]).sort((p, q) => q[0] - p[0]); return o[1][1]; }
+
+/* one run of ARC's network, with the switched-off parts applied */
+function simulate(xs, withContrib) {
+  const pmax = argmax(xs), w22 = iv.fade ? 1 : W.wh[2][2];
+  let h = new Array(16).fill(0); const hs = [h];
+  /* J[j][p] = dh_j / dx_p on this list. With no biases, h = sum_p J[:, p] x_p exactly, so each number's share is J[:, p] x_p. */
+  let J = withContrib ? Array.from({ length: 16 }, () => new Array(10).fill(0)) : null; const Js = [J];
+  for (let t = 0; t < 10; t++) {
+    const nh = new Array(16), on = new Array(16);
+    for (let j = 0; j < 16; j++) {
+      let s = W.wi[j] * xs[t];
+      const row = W.wh[j];
+      for (let k = 0; k < 16; k++) s += (j === 2 && k === 2 ? w22 : row[k]) * h[k];
+      nh[j] = s > 0 ? s : 0; on[j] = s > 0;
+    }
+    if (iv.hide && t === pmax + 1) { for (const j of [1, 6, 7, 8]) { nh[j] = 0; on[j] = false; } }
+    if (iv.late) { nh[9] = 0; on[9] = false; }
+    if (iv.keep) { nh[5] = 0; on[5] = false; }
+    if (withContrib) {
+      const nJ = Array.from({ length: 16 }, () => new Array(10).fill(0));
+      for (let j = 0; j < 16; j++) {
+        if (!on[j]) continue;
+        const row = W.wh[j];
+        for (let p = 0; p <= t; p++) {
+          let s = p === t ? W.wi[j] : 0;
+          for (let k = 0; k < 16; k++) s += (j === 2 && k === 2 ? w22 : row[k]) * J[k][p];
+          nJ[j][p] = s;
+        }
+      }
+      J = nJ; Js.push(J);
+    }
+    h = nh; hs.push(h);
+  }
+  const scores = W.wo.map(row => row.reduce((a, w, j) => a + w * h[j], 0));
+  const contrib = withContrib ? W.wo.map(row => GROUPS.map(g => g.ns.reduce((a, j) => a + row[j] * h[j], 0))) : null;
+  return { hs, Js, scores, contrib };
+}
+
+/* 3,000 fixed random lists for the switch-off statistics */
+function rng(seed) { return () => { seed = (seed * 1664525 + 1013904223) >>> 0; return (seed + 0.5) / 4294967296; }; }
+const R0 = rng(20261020);
+function gauss(r) { const u = r(), v = r(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v); }
+const TEST = Array.from({ length: 3000 }, () => Array.from({ length: 10 }, () => gauss(R0)));
+function stats() {
+  let ok = 0, big = 0, ov = 0, ovOk = 0;
+  for (const xs of TEST) {
+    const a = argmax(simulate(xs, false).scores), s = second(xs), m = argmax(xs);
+    if (a === s) ok++; if (a === m) big++;
+    if (s < m) { ov++; if (a === s) ovOk++; }
+  }
+  return { acc: ok / TEST.length, big: big / TEST.length, ovAcc: ovOk / ov };
+}
+const saved = { ...iv }; for (const k in iv) iv[k] = false;
+const BASE = stats(); Object.assign(iv, saved);
+
+let xs = PRESETS[0].xs.slice(), R = simulate(xs, true), step = 0, timer = null, ST = BASE;
+const $ = id => document.getElementById(id);
+const fmt = v => (v >= 0 ? "" : "−") + Math.abs(v).toFixed(2);
+const THR = { 5: 0.08, 9: 0.17 };
+const isOn = (j, h) => h[j] > (THR[j] || 0.02) * W.scale[j];
+
+function facts(t) {
+  let m1 = -Infinity, p1 = -1, m2 = -Infinity, p2 = -1; const before = [];
+  for (let i = 0; i < t; i++) {
+    before.push({ m1, p1, m2, p2 }); const x = xs[i];
+    if (x > m1) { m2 = m1; p2 = p1; m1 = x; p1 = i; } else if (x > m2) { m2 = x; p2 = i; }
+  }
+  return { m1, p1, m2, p2, before };
+}
+
+function buildStatic() {
+  $("presets").innerHTML = PRESETS.map((p, i) => `<button type="button" data-i="${i}">${p.label}</button>`).join("") + `<button type="button" id="rand">Random list</button>`;
+  $("presets").querySelectorAll("[data-i]").forEach(b => b.onclick = () => load(PRESETS[+b.dataset.i].xs));
+  $("rand").onclick = () => load(Array.from({ length: 10 }, () => +gauss(Math.random).toFixed(2)));
+  $("board").innerHTML = GROUPS.map(g => `<div class="panel group g-${g.id} ${g.id === "mem" ? "wide" : ""}">
+      <div class="ghead"><span class="gname">${g.name}</span><span class="gjob">${g.job}</span></div>
+      <div class="neurons">${g.ns.map(j => `<div class="n" title="neuron ${j}"><div class="meter" id="m${j}"><i></i></div><span class="num" id="v${j}"></span><span class="lab">n${j}${NAMES[j] ? " · " + NAMES[j] : ""}</span></div>`).join("")}</div>
+      <div class="say" id="say-${g.id}"></div>
+      <div class="why"><span class="k">Why it is needed</span><span>${g.why}</span>${g.test ? `<span><b>Try it:</b> ${g.test}</span>` : ""}${g.open ? `<span class="open"><b>Open:</b> ${g.open}</span>` : ""}</div>
+    </div>`).join("");
+  $("legend").innerHTML = GROUPS.map(g => `<span style="--c:var(${g.color})">${g.name}</span>`).join("");
+  $("dialLegend").innerHTML = `<span style="--c:var(--store)">largest so far</span><span style="--c:var(--accent)">second-largest so far</span><span style="--c:var(--keep)">kept number</span><span style="--c:var(--muted)">dropped number</span><span style="--c:var(--bad)">memory neuron switched off</span>`;
+  $("knobs").innerHTML = KNOBS.map(k => `<label class="knob" id="knob-${k.id}"><input type="checkbox" id="iv-${k.id}"><b>${k.label}</b><small>${k.note}</small></label>`).join("");
+  KNOBS.forEach(k => $("iv-" + k.id).onchange = e => { iv[k.id] = e.target.checked; $("knob-" + k.id).classList.toggle("active", iv[k.id]); refresh(); });
+}
+
+function refresh() { R = simulate(xs, true); ST = Object.values(iv).some(Boolean) ? stats() : BASE; render(); }
+function load(list) { xs = list.slice(); $("listInput").value = xs.map(v => v.toFixed(2)).join(", "); $("err").hidden = true; stop(); R = simulate(xs, true); setStep(0); }
+function setStep(s) { step = Math.max(0, Math.min(10, s)); $("stepSlider").value = step; render(); }
+
+function render() {
+  const t = step, h = R.hs[t], F = facts(t);
+  $("stepRead").textContent = t === 0 ? "before input" : `read ${t} of 10`;
+  /* tape */
+  const maxAbs = Math.max(2, ...xs.map(Math.abs)); let cells = "";
+  for (let i = 0; i < 10; i++) {
+    const x = xs[i], hgt = Math.abs(x) / maxAbs * 22, top = x >= 0 ? 23 - hgt : 23, read = i < t, tags = [];
+    if (read) {
+      if (i === F.p1) tags.push(`<span class="tag largest">largest</span>`);
+      if (i === F.p1 && t > i + 1 && isOn(7, h)) tags.push(`<span class="tag hidden">hidden</span>`);
+      if (i === F.p2) tags.push(`<span class="tag second">second</span>`);
+      if (i === F.p2 && F.before[F.p1] && F.before[F.p1].p1 === i) tags.push(`<span class="tag revealed">revealed</span>`);
+      if (i !== F.p1 && i + 2 <= t) tags.push(isOn(5, R.hs[i + 2]) ? `<span class="tag kept">kept</span>` : `<span class="tag dropped">dropped</span>`);
+    }
+    const col = read && i === F.p1 ? "var(--store)" : read && i === F.p2 ? "var(--accent)" : "var(--muted)";
+    cells += `<div class="cell ${i === t - 1 ? "now" : ""} ${i >= t ? "future" : ""}"><div class="bar"><div class="zero"></div><div class="fill" style="top:${top}px;height:${Math.max(hgt, 1.5)}px;background:${col}"></div></div><span class="val">${fmt(x)}</span><span class="pos">pos ${i + 1}</span><div class="tags">${tags.join("")}</div></div>`;
+  }
+  $("cells").innerHTML = cells;
+  /* neurons */
+  for (let j = 0; j < 16; j++) {
+    const v = h[j], m = $("m" + j);
+    m.querySelector("i").style.height = (Math.min(1, v / W.scale[j]) * 100) + "%";
+    m.classList.toggle("off", !isOn(j, h));
+    m.classList.toggle("cut", (iv.hide && t - 1 === argmax(xs) + 1 && [1, 6, 7, 8].includes(j)) || (iv.late && j === 9) || (iv.keep && j === 5));
+    $("v" + j).textContent = v.toFixed(1);
+  }
+  captions(t, h, F);
+  votes(t);
+  dials(t);
+  $("dialNote").innerHTML = dialText(t, F);
+  bench();
+}
+
+function captions(t, h, F) {
+  const say = (id, html) => $("say-" + id).innerHTML = html;
+  if (t === 0) { for (const g of GROUPS) say(g.id, "All neurons start at zero."); return; }
+  const x = xs[t - 1], b = F.before[t - 1], isRec = x > b.m1;
+  let s = `Holds <b>${fmt(h[2] / 17.6)}</b> on the scale of the inputs: the largest so far, one step behind.`;
+  s += isOn(4, h) ? ` The new-largest neuron fires: <b>${fmt(x)}</b> beats ${b.m1 === -Infinity ? "nothing seen so far" : "the largest so far, " + fmt(b.m1)}.` : ` The new-largest neuron is silent: ${fmt(x)} is not a new largest${isRec ? " big enough to register" : ""}.`;
+  say("store", s);
+  say("keep", t >= 2 ? (isOn(5, h) ? `Keeps the previous number, <b>${fmt(xs[t - 2])}</b>: its vote goes into the memory.` : `Drops the previous number, <b>${fmt(xs[t - 2])}</b>: too small to matter.`) : "Waits: it judges each number one step after it arrives.");
+  say("late", t >= 2 && isOn(9, h) ? `Fires: a new largest arrived one step ago (<b>${fmt(xs[t - 2])}</b>). Its push reaches hiding neurons n1 and n6 next step.` : "Quiet. It fires only one step after a new largest.");
+  const on = [1, 6, 7, 8].filter(j => isOn(j, h)).length;
+  let hs;
+  if (iv.hide && t - 1 === argmax(xs) + 1) hs = `<b>Switched off by you for this step.</b> For one step nothing cancels the largest's vote, and the memory takes in the uncancelled vote.`;
+  else if (isRec && b.m1 > 0) hs = `<b>Switched off</b> (${on} of 4 on): ${fmt(x)} beats the largest so far, ${fmt(b.m1)}. The old largest's vote at position ${b.p1 + 1} is <b>revealed</b>, just as it becomes the second-largest.`;
+  else if (on >= 3) hs = `<b>On</b> (${on} of 4): they cancel the vote of the largest so far, <b>${fmt(F.m1)}</b> at position ${F.p1 + 1}.`;
+  else if (on === 0) hs = isRec ? "Off: a new largest just arrived. They rebuild around it over the next steps." : "Off: the arriving number is above their references.";
+  else hs = `Partly on (${on} of 4): ${fmt(x)} sits between their references, which mix the largest (${fmt(F.m1)}) and the previous largest.`;
+  say("hide", hs);
+  const kept = []; for (let i = 0; i + 2 <= t; i++) if (isOn(5, R.hs[i + 2])) kept.push(i + 1);
+  say("mem", `Holds the votes of kept numbers${kept.length ? " (positions " + kept.join(", ") + ")" : ""}, including the largest's, and rotates them one step.`);
+}
+
+function votes(t) {
+  const padded = xs.slice(0, t).concat(new Array(10 - t).fill(0));
+  const V = t === 10 ? R : simulate(padded, true);
+  const ans = argmax(V.scores);
+  if (t === 0) $("verdict").innerHTML = "Press play or step forward.";
+  else if (t < 10) {
+    const F = facts(t), p2 = F.p2;
+    $("verdict").innerHTML = `If the rest were zeros, the network would answer <b>position ${ans + 1}</b>. ${p2 >= 0 ? `The second-largest so far is at position ${p2 + 1} (${fmt(xs[p2])}).` : "There is no second number yet."}`;
+  } else {
+    const truth = second(xs);
+    $("verdict").innerHTML = `The network answers <b>position ${ans + 1}</b> (${fmt(xs[ans])}). The second-largest is at position ${truth + 1} (${fmt(xs[truth])}): <span class="${ans === truth ? "ok" : "no"}">${ans === truth ? "right" : "wrong"}</span>.`;
+  }
+  const Wd = 760, Hd = 230, padL = 38, padB = 26, padT = 10, bw = (Wd - padL - 10) / 10;
+  const pos = V.contrib.map(c => c.filter(v => v > 0).reduce((a, b) => a + b, 0)), neg = V.contrib.map(c => c.filter(v => v < 0).reduce((a, b) => a + b, 0));
+  const top = Math.max(...pos, 10), bot = Math.min(...neg, -10);
+  const y = v => padT + (top - v) / (top - bot) * (Hd - padT - padB);
+  let out = `<line x1="${padL}" x2="${Wd - 6}" y1="${y(0)}" y2="${y(0)}" stroke="var(--line)"/>`;
+  const tick = Math.pow(10, Math.floor(Math.log10((top - bot) / 3)));
+  for (let v = Math.ceil(bot / tick) * tick; v <= top; v += tick) out += `<text x="${padL - 6}" y="${y(v) + 4}" text-anchor="end">${Math.round(v)}</text>`;
+  V.contrib.forEach((c, k) => {
+    const x0 = padL + k * bw + bw * 0.18, w = bw * 0.64; let up = 0, dn = 0;
+    c.forEach((v, gi) => {
+      const col = `var(${GROUPS[gi].color})`;
+      if (v >= 0) { out += `<rect x="${x0}" y="${y(up + v)}" width="${w}" height="${Math.max(0, y(up) - y(up + v))}" fill="${col}"/>`; up += v; }
+      else { out += `<rect x="${x0}" y="${y(dn)}" width="${w}" height="${Math.max(0, y(dn + v) - y(dn))}" fill="${col}"/>`; dn += v; }
+    });
+    const s = V.scores[k], cx = x0 + w / 2, isAns = t > 0 && k === ans;
+    out += `<path d="M${cx - 6},${y(s) + 5} L${cx + 6},${y(s) + 5} L${cx},${y(s) - 5} Z" fill="var(--ink)"/>`;
+    out += `<text x="${cx}" y="${Hd - 8}" text-anchor="middle" style="${isAns ? "fill:var(--ink);font-weight:600" : ""}">${k + 1}${isAns ? " ◆" : ""}</text>`;
+  });
+  const svg = $("scores"); svg.setAttribute("viewBox", `0 0 ${Wd} ${Hd}`); svg.setAttribute("width", "100%"); svg.style.minWidth = "520px"; svg.innerHTML = out;
+}
+
+/* Memory dials. For each rotating plane k, z = u_k · (number p's share of the memory neurons), a complex number.
+   With every memory neuron on, z turns by the plane's angle each step and shrinks by its factor. */
+const DIAL_MARKED = [15, 12, 11, 10];
+function shares(t) {
+  const out = [];
+  if (t === 0) return out;
+  const J = R.Js[t];
+  for (let p = 0; p < t; p++) {
+    const zs = W.modes.map(m => {
+      let re = 0, im = 0;
+      W.mem.forEach((j, i) => { const c = J[j][p] * xs[p]; re += m.ur[i] * c; im += m.ui[i] * c; });
+      return [re, im];
+    });
+    out.push({ p, zs });
+  }
+  return out;
+}
+let dialFrom = null, dialAnim = null;
+function drawDials(t, frac, from) {
+  const F = facts(t), cur = shares(t), h = R.hs[t];
+  const rmax = W.modes.map((_, k) => {
+    let m = 1e-9;
+    for (let s = 1; s <= 10; s++) for (const c of shares(s)) m = Math.max(m, Math.hypot(...c.zs[k]));
+    return m;
+  });
+  const S = 200, C = S / 2, Rr = 84;
+  let html = "";
+  W.modes.forEach((m, k) => {
+    let g = `<circle cx="${C}" cy="${C}" r="${Rr}" fill="none" stroke="var(--line)"/><circle cx="${C}" cy="${C}" r="2" fill="var(--muted)"/>`;
+    if (k === 0) for (const j of DIAL_MARKED) {
+      const a = m.marks[j] * Math.PI / 180, on = t === 0 || isOn(j, h);
+      const x1 = C + (Rr - 6) * Math.cos(a), y1 = C - (Rr - 6) * Math.sin(a), x2 = C + (Rr + 6) * Math.cos(a), y2 = C - (Rr + 6) * Math.sin(a);
+      const lx = C + (Rr + 20) * Math.cos(a), ly = C - (Rr + 20) * Math.sin(a) + 4;
+      g += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${on ? "var(--mem)" : "var(--bad)"}" stroke-width="3"/>`;
+      g += `<text x="${lx}" y="${ly}" text-anchor="middle" style="fill:${on ? "var(--mem)" : "var(--bad)"};font-weight:600">n${j}</text>`;
+    }
+    const prev = from ? new Map(from.map(c => [c.p, c.zs[k]])) : new Map();
+    const order = cur.slice().sort((a, b) => (a.p === F.p1) - (b.p === F.p1));
+    for (const c of order) {
+      let [re, im] = c.zs[k];
+      const z0 = prev.get(c.p);
+      if (z0 && frac < 1) {
+        const a0 = Math.atan2(z0[1], z0[0]), a1 = Math.atan2(im, re); let d = a1 - a0;
+        while (d > Math.PI) d -= 2 * Math.PI; while (d < -Math.PI) d += 2 * Math.PI;
+        const r0 = Math.hypot(...z0), r1 = Math.hypot(re, im), a = a0 + d * frac, r = r0 + (r1 - r0) * frac;
+        re = r * Math.cos(a); im = r * Math.sin(a);
+      }
+      const r = Rr * Math.sqrt(Math.hypot(re, im) / rmax[k]), ang = Math.atan2(im, re);
+      if (r < 3) continue;
+      const x = C + r * Math.cos(ang), y = C - r * Math.sin(ang);
+      const isBig = c.p === F.p1, isSec = c.p === F.p2, kept = c.p + 2 <= t && isOn(5, R.hs[c.p + 2]);
+      const col = isBig ? "var(--store)" : isSec ? "var(--accent)" : kept ? "var(--keep)" : "var(--muted)";
+      const wdt = isBig ? 3.2 : isSec || kept ? 2.2 : 1.2;
+      g += `<line x1="${C}" y1="${C}" x2="${x}" y2="${y}" stroke="${col}" stroke-width="${wdt}" stroke-linecap="round" opacity="${isBig || isSec || kept ? 1 : 0.6}"/>`;
+      g += `<circle cx="${x}" cy="${y}" r="${isBig ? 4 : 2.6}" fill="${col}"/>`;
+      if (r > 18) g += `<text x="${C + (r + 9) * Math.cos(ang)}" y="${C - (r + 9) * Math.sin(ang) + 4}" text-anchor="middle" style="fill:${col}">${c.p + 1}</text>`;
+    }
+    html += `<div class="dial"><svg viewBox="-24 -24 ${S + 48} ${S + 48}" role="img" aria-label="Memory plane turning ${m.angle.toFixed(0)} degrees per step">${g}</svg><span class="dt">${m.angle.toFixed(0)}° per step</span><span class="ds">shrinks to ${m.shrink.toFixed(2)} per step${k === 0 ? "; the slow, stiff plane" : ""}</span></div>`;
+  });
+  $("dials").innerHTML = html;
+}
+function dials(t) {
+  if (dialAnim) cancelAnimationFrame(dialAnim);
+  const from = dialFrom && dialFrom.t === t - 1 ? dialFrom.s : null;
+  const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  dialFrom = { t, s: shares(t) };
+  if (!from || reduce) { drawDials(t, 1, null); return; }
+  const t0 = performance.now(), dur = 600;
+  const tick = now => { const f = Math.min(1, (now - t0) / dur); drawDials(t, f, from); if (f < 1) dialAnim = requestAnimationFrame(tick); };
+  dialAnim = requestAnimationFrame(tick);
+}
+function dialText(t, F) {
+  const age = F.p1 >= 0 ? t - 1 - F.p1 : -1;
+  let s = "Each arrow is one number's share of the eight memory neurons, seen in one of the memory's three turning planes; its length is drawn on a square-root scale. Step forward and every arrow turns by about the plane's angle and shrinks a little. Switching in the network bends this, so the turn is not exact. ";
+  s += "Once the <b style=\"color:var(--store)\">largest</b> is two or three steps old, its arrow is the biggest, so the memory works first as a clock of how long ago the largest arrived. ";
+  s += "In the slow plane, a memory neuron switches off when that clock hand points away from its mark: n15 when the largest is about 3 steps old, n12 sometimes at 4, n11 at 5, n10 at 6. (Neuron n0 is switched off at age 2 from outside the memory, by the two gates.) ";
+  s += "<b style=\"color:var(--keep)\">Kept</b> numbers ride on the same rotation; the <b style=\"color:var(--accent)\">second-largest</b> is marked in blue.";
+  if (age >= 0 && t > 0) s += ` <b>Now:</b> the largest (position ${F.p1 + 1}) is ${age} step${age === 1 ? "" : "s"} old.`;
+  return s;
+}
+function bench() {
+  const any = Object.values(iv).some(Boolean), pct = v => (100 * v).toFixed(1) + "%";
+  const row = (lab, a, b, lowerIsWorse) => {
+    const worse = any && (lowerIsWorse ? b < a - 0.01 : b > a + 0.01);
+    return `<span>${lab}</span><span class="v">${pct(a)}</span><span class="v ${worse ? "worse" : ""}">${any ? pct(b) : "—"}</span>`;
+  };
+  $("stats").innerHTML = `<span class="h">on 3,000 random lists</span><span class="h v">ARC</span><span class="h v">edited</span>` +
+    row("Names the second-largest", BASE.acc, ST.acc, true) +
+    row("…when the second is an overtaken largest", BASE.ovAcc, ST.ovAcc, true) +
+    row("Names the largest instead", BASE.big, ST.big, false);
+}
+
+function stop() { clearInterval(timer); timer = null; $("play").textContent = "▶"; $("play").classList.remove("on"); $("play").setAttribute("aria-label", "Play"); }
+function play() {
+  if (timer) return stop();
+  if (step === 10) setStep(0);
+  $("play").textContent = "❚❚"; $("play").classList.add("on"); $("play").setAttribute("aria-label", "Pause");
+  timer = setInterval(() => { if (step >= 10) stop(); else setStep(step + 1); }, 1300);
+}
+
+buildStatic();
+$("back").onclick = () => { stop(); setStep(step - 1); };
+$("fwd").onclick = () => { stop(); setStep(step + 1); };
+$("play").onclick = play;
+$("stepSlider").oninput = e => { stop(); setStep(+e.target.value); };
+$("listForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const v = $("listInput").value.split(/[\s,;]+/).filter(Boolean).map(s => +s.replace("−", "-"));
+  if (v.length !== 10 || v.some(n => !isFinite(n))) { $("err").textContent = "Enter exactly ten numbers, separated by commas."; $("err").hidden = false; return; }
+  load(v);
+});
+document.addEventListener("keydown", e => {
+  const tag = e.target.tagName; if (tag === "INPUT" || tag === "BUTTON" || tag === "LABEL") return;
+  if (e.key === "ArrowRight") { stop(); setStep(step + 1); }
+  if (e.key === "ArrowLeft") { stop(); setStep(step - 1); }
+  if (e.key === " ") { e.preventDefault(); play(); }
+});
+load(PRESETS[0].xs);
+setStep(6);
+</script>

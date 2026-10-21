@@ -1,0 +1,35 @@
+canonical values: 1.539, 1.001, 0.656, others -0.432; cost 720 runs + 720 x 10 tangent passes
+ARC                    true 0.9533 | deduced (one map per arrangement) 0.9385 | answers agree 0.9272 | network's mistakes the deduced model repeats 0.32
+seed 100               true 0.9485 | deduced (one map per arrangement) 0.9288 | answers agree 0.9141 | network's mistakes the deduced model repeats 0.28
+seed 101               true 0.9133 | deduced (one map per arrangement) 0.8389 | answers agree 0.8425 | network's mistakes the deduced model repeats 0.45
+seed 102               true 0.9132 | deduced (one map per arrangement) 0.8420 | answers agree 0.8353 | network's mistakes the deduced model repeats 0.38
+seed 103               true 0.9532 | deduced (one map per arrangement) 0.9349 | answers agree 0.9317 | network's mistakes the deduced model repeats 0.39
+seed 104               true 0.9130 | deduced (one map per arrangement) 0.8036 | answers agree 0.8031 | network's mistakes the deduced model repeats 0.41
+seed 105               true 0.8992 | deduced (one map per arrangement) 0.8830 | answers agree 0.8860 | network's mistakes the deduced model repeats 0.46
+seed 106               true 0.9484 | deduced (one map per arrangement) 0.8968 | answers agree 0.8989 | network's mistakes the deduced model repeats 0.43
+seed 107               true 0.9219 | deduced (one map per arrangement) 0.8351 | answers agree 0.8404 | network's mistakes the deduced model repeats 0.43
+seed 108               true 0.9394 | deduced (one map per arrangement) 0.8787 | answers agree 0.8679 | network's mistakes the deduced model repeats 0.33
+seed 109               true 0.9408 | deduced (one map per arrangement) 0.8541 | answers agree 0.8506 | network's mistakes the deduced model repeats 0.38
+seed 110               true 0.9121 | deduced (one map per arrangement) 0.8841 | answers agree 0.8819 | network's mistakes the deduced model repeats 0.42
+seed 111               true 0.9604 | deduced (one map per arrangement) 0.9544 | answers agree 0.9430 | network's mistakes the deduced model repeats 0.30
+seed 112               true 0.9145 | deduced (one map per arrangement) 0.8895 | answers agree 0.8875 | network's mistakes the deduced model repeats 0.44
+seed 113               true 0.9048 | deduced (one map per arrangement) 0.8869 | answers agree 0.8711 | network's mistakes the deduced model repeats 0.36
+seed 114               true 0.8976 | deduced (one map per arrangement) 0.7537 | answers agree 0.7649 | network's mistakes the deduced model repeats 0.44
+seed 115               true 0.9519 | deduced (one map per arrangement) 0.9257 | answers agree 0.9191 | network's mistakes the deduced model repeats 0.36
+seed 200               true 0.9330 | deduced (one map per arrangement) 0.9235 | answers agree 0.9298 | network's mistakes the deduced model repeats 0.50
+seed 201               true 0.9442 | deduced (one map per arrangement) 0.9343 | answers agree 0.9339 | network's mistakes the deduced model repeats 0.45
+seed 202               true 0.8981 | deduced (one map per arrangement) 0.8648 | answers agree 0.8554 | network's mistakes the deduced model repeats 0.38
+seed 203               true 0.8986 | deduced (one map per arrangement) 0.8760 | answers agree 0.8649 | network's mistakes the deduced model repeats 0.37
+seed 204               true 0.8905 | deduced (one map per arrangement) 0.8409 | answers agree 0.8438 | network's mistakes the deduced model repeats 0.44
+seed 205               true 0.9362 | deduced (one map per arrangement) 0.9406 | answers agree 0.9267 | network's mistakes the deduced model repeats 0.36
+seed 206               true 0.9130 | deduced (one map per arrangement) 0.8748 | answers agree 0.8733 | network's mistakes the deduced model repeats 0.41
+seed 207               true 0.9108 | deduced (one map per arrangement) 0.8285 | answers agree 0.8334 | network's mistakes the deduced model repeats 0.45
+seed 208               true 0.8404 | deduced (one map per arrangement) 0.8355 | answers agree 0.8694 | network's mistakes the deduced model repeats 0.55
+seed 209               true 0.9590 | deduced (one map per arrangement) 0.9306 | answers agree 0.9217 | network's mistakes the deduced model repeats 0.34
+seed 210               true 0.9617 | deduced (one map per arrangement) 0.9121 | answers agree 0.9057 | network's mistakes the deduced model repeats 0.35
+seed 211               true 0.9352 | deduced (one map per arrangement) 0.8469 | answers agree 0.8420 | network's mistakes the deduced model repeats 0.38
+seed 212               true 0.8462 | deduced (one map per arrangement) 0.8171 | answers agree 0.8034 | network's mistakes the deduced model repeats 0.38
+seed 213               true 0.9393 | deduced (one map per arrangement) 0.9314 | answers agree 0.9337 | network's mistakes the deduced model repeats 0.44
+seed 214               true 0.9483 | deduced (one map per arrangement) 0.9123 | answers agree 0.9102 | network's mistakes the deduced model repeats 0.40
+seed 215               true 0.9256 | deduced (one map per arrangement) 0.8807 | answers agree 0.8741 | network's mistakes the deduced model repeats 0.39
+error of the deduced estimate, points: ARC -1.48; other 32 networks mean -4.29, RMSE 5.48, range -14.40 to +0.44

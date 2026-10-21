@@ -1,0 +1,9 @@
+ratio by age: 1:17.69 2:17.59 3:18.48 4:18.16 5:16.93 6:15.56 7:14.76 8:14.88 9:15.87
+residual spread (robust SD, units of L): 1:0.40 2:0.46 3:0.29 4:0.58 5:1.28 6:2.00 7:2.38 8:2.19 9:1.67
+ARC memory from v7z roles, R2 by neuron (0,3,10-15): 0.84 0.48 0.90 0.90 0.86 0.82 0.91 0.75
++ numbers seen                                 : R2 0.86 0.49 0.90 0.90 0.88 0.82 0.91 0.76 | share of leftover explained 0.12 0.03 0.04 0.04 0.08 0.03 0.04 0.04
++ positive parts                               : R2 0.86 0.51 0.92 0.91 0.88 0.83 0.91 0.77 | share of leftover explained 0.14 0.07 0.21 0.15 0.13 0.05 0.08 0.09
++ positive parts before / after the largest    : R2 0.87 0.53 0.94 0.92 0.89 0.83 0.92 0.79 | share of leftover explained 0.18 0.09 0.38 0.24 0.19 0.07 0.15 0.18
++ largest and previous largest by age          : R2 0.88 0.59 0.95 0.94 0.88 0.88 0.95 0.81 | share of leftover explained 0.26 0.21 0.46 0.40 0.10 0.34 0.44 0.26
++ numbers since the largest, by lag            : R2 0.84 0.49 0.90 0.90 0.86 0.82 0.91 0.75 | share of leftover explained 0.01 0.03 0.01 0.01 0.00 0.01 0.00 0.01
++ all of these                                 : R2 0.91 0.63 0.96 0.95 0.91 0.89 0.96 0.85 | share of leftover explained 0.44 0.29 0.60 0.52 0.33 0.40 0.53 0.41

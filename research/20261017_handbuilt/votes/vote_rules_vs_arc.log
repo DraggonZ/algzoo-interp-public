@@ -1,0 +1,22 @@
+
+rules accuracy 0.9576; ARC 0.9532; agreement 0.9282; ARC mistakes reproduced 0.13; rules' mistakes also made by ARC 0.14
+
+error rate by position of the second-largest (ARC | rules)
+  0: 0.050 | 0.026
+  1: 0.035 | 0.038
+  2: 0.037 | 0.038
+  3: 0.040 | 0.038
+  4: 0.041 | 0.035
+  5: 0.049 | 0.031
+  6: 0.053 | 0.026
+  7: 0.059 | 0.022
+  8: 0.057 | 0.027
+  9: 0.047 | 0.143
+
+error rate by order (ARC | rules)
+  second before largest  0.044 | 0.028
+  second after largest   0.049 | 0.057
+variants: accuracy, agreement with ARC, ARC mistakes reproduced, error at position 9
+  last input 1.0x                          0.9612  0.9333  0.14  0.010
+  last 1.0x, no spill                      0.9894  0.9532  0.05  0.010
+  last 1.0x, no spill, no forgotten votes  0.9905  0.9555  0.09  0.010

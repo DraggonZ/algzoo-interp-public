@@ -1,0 +1,18 @@
+seed 100: true 94.81%  predicted 92.40%  error -2.41  look-ahead [0, 14, 3]  102s
+seed 101: true 91.34%  predicted 76.25%  error -15.09  look-ahead [7, 9, 0]  73s
+seed 102: true 91.25%  predicted 86.11%  error -5.14  look-ahead [2, 7, 1]  53s
+seed 103: true 95.32%  predicted 92.43%  error -2.89  look-ahead [3, 4, 1]  64s
+Traceback (most recent call last):
+  File "/data/output/research/algzoo/20261017_handbuilt/superposition/level2/switching/across.py", line 13, in <module>
+    t0 = time.time(); P = Prop(W, G=G, lookahead="auto", chunk=2_000_000); a = P.run(); t = tr[i + 1]
+                                                                               ^^^^^^^
+  File "/data/output/research/algzoo/20261017_handbuilt/superposition/level2/switching/prop4.py", line 105, in run
+    for t in range(1, T): self.step(t, last=(t == T - 1 and self.exact_last))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/output/research/algzoo/20261017_handbuilt/superposition/level2/switching/prop4.py", line 155, in step
+    pw_ = self.win(hs, Cs, nS[sel], nq=512); pl_ = self.win(hs, Cs, nL[sel], nq=512); ws = wt[sel]
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/output/research/algzoo/20261017_handbuilt/superposition/level2/switching/prop4.py", line 194, in win
+    return torch.cat(out)
+           ^^^^^^^^^^^^^^
+RuntimeError: torch.cat(): expected a non-empty list of Tensors

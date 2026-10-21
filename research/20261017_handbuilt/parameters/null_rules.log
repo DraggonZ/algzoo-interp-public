@@ -1,0 +1,64 @@
+ARC 0.95314; hiding input-weight direction v = [-0.447 -0.466 -0.558 -0.521]
+ARC's rows: share of the hiding part along v (|w.v| / |w|) and the push it carries (w.v * |w_in|, per unit x):
+  into  0: |w_hid| 1.738, share along v 0.000, push per unit x +0.014
+  into  1: |w_hid| 1.507, share along v 0.000, push per unit x +0.009
+  into  2: |w_hid| 0.213, share along v 0.001, push per unit x +0.003
+  into  3: |w_hid| 1.725, share along v 0.013, push per unit x +0.520
+  into  4: |w_hid| 0.132, share along v 0.004, push per unit x -0.011
+  into  5: |w_hid| 1.037, share along v 0.740, push per unit x +18.114
+  into  6: |w_hid| 0.413, share along v 0.014, push per unit x +0.133
+  into  7: |w_hid| 0.278, share along v 0.002, push per unit x -0.015
+  into  8: |w_hid| 1.406, share along v 0.004, push per unit x +0.137
+  into  9: |w_hid| 5.162, share along v 0.693, push per unit x +84.456
+  into 10: |w_hid| 0.416, share along v 0.038, push per unit x -0.374
+  into 11: |w_hid| 0.674, share along v 0.024, push per unit x -0.388
+  into 12: |w_hid| 0.558, share along v 0.024, push per unit x +0.312
+  into 13: |w_hid| 0.385, share along v 0.019, push per unit x -0.169
+  into 14: |w_hid| 1.061, share along v 0.002, push per unit x -0.042
+  into 15: |w_hid| 1.058, share along v 0.002, push per unit x -0.038
+  readout 0: |w_hid| 8.003, share along v 0.061
+  readout 1: |w_hid| 8.633, share along v 0.017
+  readout 2: |w_hid| 8.573, share along v 0.015
+  readout 3: |w_hid| 9.580, share along v 0.012
+  readout 4: |w_hid| 9.942, share along v 0.012
+  readout 5: |w_hid| 8.010, share along v 0.026
+  readout 6: |w_hid| 6.451, share along v 0.037
+  readout 7: |w_hid| 7.188, share along v 0.021
+  readout 8: |w_hid| 7.310, share along v 0.022
+  readout 9: |w_hid| 3.891, share along v 0.634
+  readout centred over positions: share along v 0.102
+
+A on the 12 memory and hiding rows      : cost 5.25 points
+A on all 16 rows                        : cost 75.15 points
+A on the readout only                   : cost 71.39 points
+A on all 16 rows and the readout        : cost 79.68 points
+  A on row  0 alone: cost -0.01
+  A on row  1 alone: cost -0.00
+  A on row  2 alone: cost -0.01
+  A on row  3 alone: cost 1.34
+  A on row  4 alone: cost 0.02
+  A on row  5 alone: cost 74.26
+  A on row  6 alone: cost 1.59
+  A on row  7 alone: cost 0.04
+  A on row  8 alone: cost 1.05
+  A on row  9 alone: cost 31.77
+  A on row 10 alone: cost 2.44
+  A on row 11 alone: cost 2.34
+  A on row 12 alone: cost 1.67
+  A on row 13 alone: cost 0.25
+  A on row 14 alone: cost -0.01
+  A on row 15 alone: cost -0.02
+control, a random direction instead of v on the 12 rows: cost 81.1 points (median of 10; range 69.2-85.7)
+
+B: detector row = -0.552 x store row: cost 1.37 points
+   store row [-0.08 -0.1   0.97  0.04  1.73 -0.01 -0.1   0.02  0.15 -0.23  0.02  0.02
+  0.06  0.04  0.03 -0.05]
+   detector row [ 0.04  0.04 -0.49 -0.   -0.99  0.    0.09 -0.03 -0.08  0.08 -0.01 -0.01
+ -0.06 -0.03 -0.03 -0.01]
+   rule [ 0.05  0.06 -0.54 -0.02 -0.96  0.01  0.06 -0.01 -0.09  0.13 -0.01 -0.01
+ -0.03 -0.02 -0.01  0.03]
+
+A on rows 0, 1, 2, 4, 7, 14, 15             : cost 0.07 points
+A on those rows plus 13                     : cost 0.27 points
+A on readout positions 0-8                  : cost 6.90 points
+A on the 7 rows and readout positions 0-8   : cost 6.75 points

@@ -1,0 +1,12 @@
+flank 0.00  positives       accuracy  99.1%  lead maps covering half     47
+flank 0.00  keep or forget  accuracy  99.1%  lead maps covering half     36
+flank 0.01  positives       accuracy  98.0%  lead maps covering half     47
+flank 0.01  keep or forget  accuracy  98.0%  lead maps covering half     37
+flank 0.02  positives       accuracy  97.0%  lead maps covering half     48
+flank 0.02  keep or forget  accuracy  97.0%  lead maps covering half     49
+flank 0.05  positives       accuracy  93.9%  lead maps covering half    530
+flank 0.05  keep or forget  accuracy  93.9%  lead maps covering half    239
+flank 0.10  positives       accuracy  88.6%  lead maps covering half    530
+flank 0.10  keep or forget  accuracy  88.8%  lead maps covering half    243
+flank 0.20  positives       accuracy  77.5%  lead maps covering half    530
+flank 0.20  keep or forget  accuracy  78.8%  lead maps covering half    257

@@ -1,0 +1,47 @@
+(1) base reference: ref = alpha P + beta M  (alpha for P arrived 1 / 3 steps before the record)
+  K=1: n1: alpha +0.18 / +0.16, beta +0.84 | n6: alpha +1.01 / +1.03, beta -0.04 | n7: alpha -0.00 / -0.01, beta +1.02 | n8: alpha +1.09 / +1.08, beta -0.03
+  K=2: n1: alpha +0.96 / +0.96, beta -0.02 | n6: alpha +0.24 / +0.25, beta +0.69 | n7: alpha -0.00 / -0.01, beta +1.01 | n8: alpha +0.75 / +0.73, beta +0.31
+  K=3: n1: alpha +0.57 / +0.59, beta +0.30 | n6: alpha -0.06 / -0.06, beta +1.05 | n7: alpha +0.01 / -0.00, beta +1.01 | n8: alpha +0.96 / +0.92, beta +0.06
+  K=4: n1: alpha +0.06 / +0.09, beta +0.85 | n6: alpha -0.15 / -0.15, beta +1.17 | n7: alpha +0.13 / +0.12, beta +0.88 | n8: alpha +0.87 / +0.84, beta +0.09
+  K=5: n1: alpha -0.29 / -0.25, beta +1.26 | n6: alpha -0.05 / -0.07, beta +1.07 | n7: alpha +0.27 / +0.25, beta +0.72 | n8: alpha +0.46 / +0.45, beta +0.47
+  K=6: n1: alpha -0.32 / -0.30, beta +1.35 | n6: alpha +0.18 / +0.15, beta +0.84 | n7: alpha +0.34 / +0.32, beta +0.64 | n8: alpha -0.03 / -0.02, beta +0.97
+  K=7: n1: alpha -0.07 / -0.04, beta +1.10 | n6: alpha +0.36 / +0.25, beta +0.61 | n7: alpha +0.31 / +0.21, beta +0.65 | n8: alpha -0.33 / -0.22, beta +1.32
+  K=8: n1: alpha +0.30 / +0.15, beta +0.70 | n6: alpha +0.43 / +0.22, beta +0.51 | n7: alpha +0.20 / +0.10, beta +0.76 | n8: alpha -0.34 / -0.17, beta +1.36
+(2) echo T(l)[n <- i]: reference shift of neuron n per unit by which the number exceeded neuron i's reference
+  lag 1 (fitted), rows n = 1, 6, 7, 8; columns i = 1, 6, 7, 8
+     n1: +0.41 +1.06 -0.68 -0.14
+     n6: -0.13 +0.39 -0.21 -0.10
+     n7: -0.08 -0.15 +0.85 +0.16
+     n8: +0.54 +0.01 -1.20 +0.61
+  lag 1 from the weights alone (W_cc[n, i] c_i / c_n)
+     n1: +0.41 +1.04 -1.31 -0.14
+     n6: -0.13 +0.36 -0.15 -0.09
+     n7: -0.08 -0.15 +0.08 +0.16
+     n8: +0.54 -0.00 -1.17 +0.62
+  lag 2 (fitted), rows n = 1, 6, 7, 8; columns i = 1, 6, 7, 8
+     n1: +0.08 +0.98 -0.39 -0.32
+     n6: -0.16 -0.04 +0.79 +0.02
+     n7: +0.02 -0.25 +0.77 +0.23
+     n8: +0.63 +0.68 -1.33 +0.19
+  lag 3 (fitted), rows n = 1, 6, 7, 8; columns i = 1, 6, 7, 8
+     n1: -0.21 +0.40 +0.62 -0.22
+     n6: -0.12 -0.37 +1.15 +0.23
+     n7: +0.13 -0.16 +0.53 +0.24
+     n8: +0.39 +1.07 -1.19 -0.17
+(3) kept numbers since the record, v(l) per unit of value; any number since, u(l)
+  lag 1: v -0.005 -0.003 +0.001 +0.001 | u -0.004 +0.007 +0.000 +0.010
+  lag 2: v +0.051 +0.018 +0.002 -0.008 | u +0.004 +0.001 +0.001 +0.002
+  lag 3: v +0.051 +0.013 -0.003 +0.016 | u +0.001 +0.000 +0.001 +0.002
+  lag 4: v +0.035 +0.009 -0.006 +0.046 | u -0.000 +0.001 +0.001 +0.002
+  lag 5: v +0.022 -0.014 -0.003 +0.049 | u -0.001 +0.000 +0.001 +0.001
+  lag 6: v -0.009 -0.011 +0.002 +0.032 | u -0.003 +0.001 +0.002 -0.002
+(4) how alpha (the weight on P) depends on d, the steps between P's arrival and the record, for K = 1, 2
+  K=1 n1: d=1: +0.180 d=2: +0.166 d=3: +0.158 d=4: +0.145 d=5: +0.116 d=6: +0.105 d=7: +0.109 d=8: +0.113
+  K=1 n6: d=1: +1.012 d=2: +1.041 d=3: +1.034 d=4: +0.982 d=5: +0.906 d=6: +0.849 d=7: +0.842 d=8: +0.877
+  K=1 n7: d=1: -0.003 d=2: -0.007 d=3: -0.005 d=4: -0.008 d=5: -0.013 d=6: -0.019 d=7: -0.027 d=8: -0.027
+  K=1 n8: d=1: +1.089 d=2: +1.084 d=3: +1.085 d=4: +1.022 d=5: +0.941 d=6: +0.882 d=7: +0.873 d=8: +0.912
+  K=2 n1: d=1: +0.955 d=2: +0.969 d=3: +0.960 d=4: +0.911 d=5: +0.845 d=6: +0.817 d=7: +0.853 d=8: +0.789
+  K=2 n6: d=1: +0.244 d=2: +0.250 d=3: +0.255 d=4: +0.243 d=5: +0.217 d=6: +0.187 d=7: +0.201 d=8: +0.200
+  K=2 n7: d=1: -0.001 d=2: -0.007 d=3: -0.008 d=4: -0.005 d=5: -0.002 d=6: -0.002 d=7: -0.004 d=8: -0.003
+  K=2 n8: d=1: +0.752 d=2: +0.762 d=3: +0.732 d=4: +0.669 d=5: +0.597 d=6: +0.559 d=7: +0.570 d=8: +0.580
+(5) size of the rule: 648 fitted numbers in use (9 K-regimes x 11 x 4 = 396, of which 324 for when P arrived; 9 steps before any positive number x 4; shared kernels 216: numbers since 72, echo 144)

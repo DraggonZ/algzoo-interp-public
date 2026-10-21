@@ -1,0 +1,12 @@
+2nd_argmax_16_10_1073741824_0: accuracy 0.912; lead / pushes 0.0056; loss, one neuron replaced: median 0.443, worst 0.614
+2nd_argmax_16_10_1073741824_1: accuracy 0.880; lead / pushes 0.0062; loss, one neuron replaced: median 0.357, worst 0.542
+2nd_argmax_16_10_1073741824_2: accuracy 0.949; lead / pushes 0.0160; loss, one neuron replaced: median 0.244, worst 0.370
+2nd_argmax_16_10_1073741824_3: accuracy 0.932; lead / pushes 0.0209; loss, one neuron replaced: median 0.140, worst 0.319
+2nd_argmax_16_10_1073741824_4: accuracy 0.891; lead / pushes 0.0055; loss, one neuron replaced: median 0.329, worst 0.581
+2nd_argmax_32_10_1073741824_0: accuracy 0.995; lead / pushes 0.0869; loss, one neuron replaced: median 0.010, worst 0.380
+2nd_argmax_32_10_1073741824_1: accuracy 0.994; lead / pushes 0.0761; loss, one neuron replaced: median 0.017, worst 0.410
+2nd_argmax_32_10_1073741824_2: accuracy 0.992; lead / pushes 0.0484; loss, one neuron replaced: median 0.050, worst 0.571
+2nd_argmax_32_10_1073741824_3: accuracy 0.994; lead / pushes 0.0582; loss, one neuron replaced: median 0.010, worst 0.607
+2nd_argmax_32_10_1073741824_4: accuracy 0.992; lead / pushes 0.0538; loss, one neuron replaced: median 0.019, worst 0.092
+all widths (10 networks): lead/pushes vs median single-neuron loss -0.95 (p 0.0000)
+all widths (10 networks): lead/pushes vs worst single-neuron loss -0.35 (p 0.3282)

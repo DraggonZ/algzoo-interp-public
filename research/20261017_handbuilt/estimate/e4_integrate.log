@@ -1,0 +1,5 @@
+surrogate on 1M sampled lists (diagnostic): 93.85; mistakes naming the largest 0.21, the third 4.06, another 1.88
+grid 12 x 10 x 10 (1,200 points x 720): estimate 92.21; single-margin losses to the largest 0.37, the third 4.58, the smaller seven 5.33; 0.8 s
+grid 24 x 20 x 20 (9,600 points x 720): estimate 91.99; single-margin losses to the largest 0.34, the third 4.43, the smaller seven 4.41; 0.4 s
+grid 48 x 40 x 40 (76,800 points x 720): estimate 91.87; single-margin losses to the largest 0.34, the third 4.43, the smaller seven 4.54; 0.6 s
+grid 96 x 64 x 64 (393,216 points x 720): estimate 91.87; single-margin losses to the largest 0.34, the third 4.43, the smaller seven 4.53; 1.4 s

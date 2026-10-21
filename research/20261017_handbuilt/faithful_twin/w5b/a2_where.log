@@ -1,0 +1,14 @@
+intact: names largest 2.7%, second 93.1%, other 4.2%
+   largest's score minus second's: median -0.375; per unit of (largest - second): median -0.531
+   position largest+1: score minus second's, median -1.010; named 10.9%
+   position largest+2: score minus second's, median -1.007; named 9.7%
+   position largest+3: score minus second's, median -1.006; named 8.5%
+   position largest-1: score minus second's, median -0.812; named 12.7%
+   position largest-2: score minus second's, median -0.706; named 8.8%
+wave silenced: names largest 11.1%, second 9.9%, other 79.0%
+   largest's score minus second's: median 0.035; per unit of (largest - second): median 0.133
+   position largest+1: score minus second's, median 0.372; named 88.9%
+   position largest+2: score minus second's, median -1.109; named 0.0%
+   position largest+3: score minus second's, median -1.110; named 0.0%
+   position largest-1: score minus second's, median -0.550; named 0.0%
+   position largest-2: score minus second's, median -0.146; named 0.0%

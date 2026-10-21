@@ -1,0 +1,23 @@
+network 0.955
+weights capped at their 99% quantile
+  neuron  0: plain fit 0.621; sensitivity-weighted fit 0.616
+  neuron  1: plain fit 0.640; sensitivity-weighted fit 0.671
+  neuron  6: plain fit 0.728; sensitivity-weighted fit 0.579
+  neuron  7: plain fit 0.454; sensitivity-weighted fit 0.836
+  neuron  8: plain fit 0.526; sensitivity-weighted fit 0.696
+  neuron  9: plain fit 0.687; sensitivity-weighted fit 0.669
+  neuron 10: plain fit 0.683; sensitivity-weighted fit 0.738
+  neuron 12: plain fit 0.710; sensitivity-weighted fit 0.740
+  four cancelling neurons: plain 0.446; weighted 0.585
+  all 16: plain 0.568; weighted 0.575
+weights capped at their 90% quantile
+  neuron  0: plain fit 0.621; sensitivity-weighted fit 0.610
+  neuron  1: plain fit 0.640; sensitivity-weighted fit 0.601
+  neuron  6: plain fit 0.728; sensitivity-weighted fit 0.645
+  neuron  7: plain fit 0.454; sensitivity-weighted fit 0.838
+  neuron  8: plain fit 0.526; sensitivity-weighted fit 0.554
+  neuron  9: plain fit 0.687; sensitivity-weighted fit 0.659
+  neuron 10: plain fit 0.683; sensitivity-weighted fit 0.735
+  neuron 12: plain fit 0.710; sensitivity-weighted fit 0.730
+  four cancelling neurons: plain 0.446; weighted 0.616
+  all 16: plain 0.568; weighted 0.566

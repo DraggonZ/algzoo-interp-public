@@ -1,0 +1,12 @@
+ARC  : corr(predicted, exact tie margin) all +0.03 | second before largest +0.04 | after -0.02; rms exact 3.04, rms of (pred - exact) 33.41
+zoo0 : corr(predicted, exact tie margin) all +0.16 | second before largest +0.12 | after +0.18; rms exact 1.86, rms of (pred - exact) 11.31
+zoo1 : corr(predicted, exact tie margin) all +0.11 | second before largest -0.02 | after +0.22; rms exact 2.30, rms of (pred - exact) 14.37
+zoo2 : corr(predicted, exact tie margin) all +0.32 | second before largest +0.19 | after +0.42; rms exact 2.37, rms of (pred - exact) 26.18
+zoo3 : corr(predicted, exact tie margin) all -0.14 | second before largest -0.16 | after -0.13; rms exact 1.74, rms of (pred - exact) 10.22
+zoo4 : corr(predicted, exact tie margin) all +0.28 | second before largest +0.20 | after +0.34; rms exact 2.15, rms of (pred - exact) 10.44
+s100 : corr(predicted, exact tie margin) all +0.21 | second before largest +0.09 | after +0.31; rms exact 1.59, rms of (pred - exact) 11.72
+s101 : corr(predicted, exact tie margin) all +0.11 | second before largest +0.04 | after +0.16; rms exact 1.85, rms of (pred - exact) 10.68
+s102 : corr(predicted, exact tie margin) all -0.05 | second before largest +0.04 | after -0.12; rms exact 1.76, rms of (pred - exact) 12.99
+s103 : corr(predicted, exact tie margin) all +0.36 | second before largest +0.28 | after +0.38; rms exact 2.38, rms of (pred - exact) 22.90
+s104 : corr(predicted, exact tie margin) all +0.09 | second before largest +0.10 | after +0.09; rms exact 1.44, rms of (pred - exact) 10.91
+s105 : corr(predicted, exact tie margin) all +0.28 | second before largest +0.30 | after +0.38; rms exact 2.10, rms of (pred - exact) 6.65

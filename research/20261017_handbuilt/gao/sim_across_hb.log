@@ -1,0 +1,2 @@
+v5: acc 0.990, R2 0.984, one neuron median 0.544 worst 0.424, all 16 0.595
+v18: acc 0.961, R2 1.000, one neuron median 0.783 worst 0.699, all 16 0.746

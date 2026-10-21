@@ -1,0 +1,17 @@
+M1 second up 5%               : a right answer turns wrong on 0.80% of right lists
+M2 third down 5%              : a right answer turns wrong on 0.13% of right lists
+M3 a smaller number down 5%   : a right answer turns wrong on 0.04% of right lists
+M4 largest up 5%              : a right answer turns wrong on 0.28% of right lists
+second/largest 0-0.5: violation 0.02%; new answer is the largest 0%
+second/largest 0.5-0.8: violation 0.02%; new answer is the largest 1%
+second/largest 0.8-0.9: violation 0.11%; new answer is the largest 19%
+second/largest 0.9-0.95: violation 6.00%; new answer is the largest 90%
+M2 (third down 5%) violations 0.13% of right lists; new answer is the third 27%
+   third at offset -2 from the second: violations 0.20%
+   third at offset -1 from the second: violations 0.27%
+   third at offset +1 from the second: violations 0.11%
+   third at offset +2 from the second: violations 0.13%
+   second at 9, third at 8: 0.76%
+   gap second-third 0-0.05: violations 0.64%
+   gap second-third 0.05-0.1: violations 0.31%
+   gap second-third 0.1-1: violations 0.06%

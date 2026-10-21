@@ -1,0 +1,4 @@
+sigma 0.005: mean two-spike loss 0.0133, mean true loss 0.0397, share 0.33
+sigma 0.01: mean two-spike loss 0.0664, mean true loss 0.1505, share 0.44
+sigma 0.02: mean two-spike loss 0.1767, mean true loss 0.3154, share 0.56
+all copies: two-spike loss / true loss 0.51

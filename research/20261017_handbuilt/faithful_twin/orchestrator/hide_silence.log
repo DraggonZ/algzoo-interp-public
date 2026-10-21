@@ -1,0 +1,10 @@
+ARC                  intact                   names the largest   0.9%  right  95.5%
+ARC                  hiding slots silenced    names the largest  81.3%  right   5.3%
+twin16.py            intact                   names the largest   0.2%  right  93.9%
+twin16.py            hiding slots silenced    names the largest  45.7%  right   6.5%
+r3b_qx8.py           intact                   names the largest   2.7%  right  93.1%
+r3b_qx8.py           hiding slots silenced    names the largest   0.0%  right   9.3%
+r3b_qx.py            intact                   names the largest   2.7%  right  93.1%
+r3b_qx.py            hiding slots silenced    names the largest  15.2%  right  15.5%
+w4b_margin.py        intact                   names the largest   2.7%  right  93.1%
+w4b_margin.py        hiding slots silenced    names the largest  11.1%  right  14.2%

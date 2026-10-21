@@ -1,0 +1,30 @@
+copy_share 0
+intact: names largest 2.7%, second 93.2%, other 4.1%
+   largest's score minus second's: median -0.375; per unit of (largest - second): median -0.531
+   position largest+1: score minus second's, median -1.010; named 10.9%
+   position largest+2: score minus second's, median -1.007; named 9.7%
+   position largest+3: score minus second's, median -1.006; named 8.5%
+   position largest-1: score minus second's, median -0.812; named 12.7%
+   position largest-2: score minus second's, median -0.706; named 8.8%
+hiding slots silenced: names largest 58.6%, second 30.6%, other 10.8%
+   largest's score minus second's: median 0.184; per unit of (largest - second): median 0.423
+   position largest+1: score minus second's, median -0.768; named 5.8%
+   position largest+2: score minus second's, median -0.836; named 1.4%
+   position largest+3: score minus second's, median -0.856; named 4.8%
+   position largest-1: score minus second's, median -1.118; named 1.0%
+   position largest-2: score minus second's, median -0.343; named 0.3%
+copy_share 0.5
+intact: names largest 2.7%, second 93.2%, other 4.2%
+   largest's score minus second's: median -0.375; per unit of (largest - second): median -0.531
+   position largest+1: score minus second's, median -1.010; named 10.9%
+   position largest+2: score minus second's, median -1.007; named 9.7%
+   position largest+3: score minus second's, median -1.006; named 8.5%
+   position largest-1: score minus second's, median -0.812; named 12.7%
+   position largest-2: score minus second's, median -0.706; named 8.8%
+hiding slots silenced: names largest 44.0%, second 26.6%, other 29.4%
+   largest's score minus second's: median 0.055; per unit of (largest - second): median 0.115
+   position largest+1: score minus second's, median -0.829; named 0.4%
+   position largest+2: score minus second's, median -0.857; named 0.6%
+   position largest+3: score minus second's, median -0.760; named 7.6%
+   position largest-1: score minus second's, median -1.302; named 4.3%
+   position largest-2: score minus second's, median -0.407; named 3.8%

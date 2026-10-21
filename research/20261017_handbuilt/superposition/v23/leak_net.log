@@ -1,0 +1,3 @@
+v23 + leak, regular 45-degree grid accuracy 82.87% | third wins 15.7% of near ties | lead maps covering half     48 | tree 99.1% vs guess 84.3%,  94% of the possible gain
+v23 + leak, ARC's angles           accuracy 69.75% | third wins 31.3% of near ties | lead maps covering half  2,026 | tree 81.0% vs guess 68.7%,  39% of the possible gain
+v23 + leak, ARC's angles and sizes accuracy 73.27% | third wins 30.5% of near ties | lead maps covering half  1,848 | tree 82.2% vs guess 69.5%,  41% of the possible gain

@@ -1,0 +1,12 @@
+ARC, number at record + 1 (15410 lists): per-neuron share before / at the overtaking
+   before: [2.2 1.6 0.4 1.4 0.  0.  0.5 0.2 2.5 0.  1.6 1.2 0.9 1.  2.  1.2]
+   at:     [3.3 0.  0.6 1.3 0.3 0.  0.  0.  0.  0.  1.3 0.9 0.9 1.1 1.7 1.3]
+   neurons whose share drops by over 80%: [1, 6, 8]
+102, number at record + 2 (11503 lists): per-neuron share before / at the overtaking
+   before: [0.  3.8 1.4 0.8 2.6 1.  1.2 2.4 2.7 2.  2.3 2.6 1.9 0.8 2.9 2. ]
+   at:     [0.7 2.6 0.9 0.  2.3 0.  0.  1.8 1.8 2.6 1.8 1.9 1.2 0.8 2.8 3.3]
+   neurons whose share drops by over 80%: [3, 5, 6]
+106, number at record + 2 (11503 lists): per-neuron share before / at the overtaking
+   before: [1.4 1.1 1.  0.  1.1 1.2 1.4 1.1 1.4 0.6 2.5 2.  0.  6.1 0.8 1.1]
+   at:     [1.7 0.  0.  0.1 1.1 1.6 2.2 0.  0.  0.8 2.2 0.5 1.3 5.7 0.6 1.5]
+   neurons whose share drops by over 80%: [1, 2, 7, 8]

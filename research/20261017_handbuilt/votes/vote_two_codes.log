@@ -1,0 +1,7 @@
+ARC                                  acc 0.9528  agree with ARC 1.000  error at gaps < 3%: both before largest 0.24  both after 0.33  mixed 0.33
+sharp everywhere                     acc 0.9904  agree with ARC 0.955  error at gaps < 3%: both before largest 0.01  both after 0.01  mixed 0.01
+old largest broad, lam 0.8           acc 0.6702  agree with ARC 0.658  error at gaps < 3%: both before largest 0.69  both after 0.22  mixed 0.62
+old largest broad, lam 1.0           acc 0.6575  agree with ARC 0.645  error at gaps < 3%: both before largest 0.67  both after 0.24  mixed 0.63
+old largest broad, lam 1.2           acc 0.6532  agree with ARC 0.640  error at gaps < 3%: both before largest 0.66  both after 0.25  mixed 0.59
+old largest broad, lam 1.5           acc 0.6372  agree with ARC 0.625  error at gaps < 3%: both before largest 0.66  both after 0.27  mixed 0.63
+old largest broad, lam 2.0           acc 0.6242  agree with ARC 0.612  error at gaps < 3%: both before largest 0.65  both after 0.30  mixed 0.64

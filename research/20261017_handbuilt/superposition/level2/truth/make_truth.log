@@ -1,0 +1,5 @@
+ARC: accuracy 95.296%, mistakes naming the largest 20.3%, the third 63.4%
+s 0.001: accuracy mean 94.40%, SD 0.57, range 92.2-95.2; mistakes naming the largest 22.5%, the third 61.6%
+s 0.0025: accuracy mean 90.67%, SD 2.76, range 77.9-94.1; mistakes naming the largest 29.3%, the third 54.7%
+s 0.005: accuracy mean 80.10%, SD 7.52, range 57.7-91.6; mistakes naming the largest 39.2%, the third 40.8%
+s 0.01: accuracy mean 62.13%, SD 10.38, range 31.1-81.1; mistakes naming the largest 37.7%, the third 31.1%

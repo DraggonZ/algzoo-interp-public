@@ -1,0 +1,6 @@
+plain register-wave formulas for the four: 0.708
+plain menu formulas for the four:          0.304
+own clipped rotation, drivers exact:        0.952
+own clipped rotation, drivers from register waves : 0.579
+own clipped rotation, drivers from general menu   : 0.614
+own clipped rotation, drivers from both           : 0.622

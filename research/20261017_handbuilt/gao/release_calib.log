@@ -1,0 +1,9 @@
+d=3, record at 0, kept number at 3, overtaken later (3000 lists): record's vote per unit  63.0, kept number's  50.3; ratio of medians 0.80
+d=3, record at 1, kept number at 4, overtaken later (3000 lists): record's vote per unit  57.0, kept number's  44.4; ratio of medians 0.78
+d=3, record at 2, kept number at 5, overtaken later (3000 lists): record's vote per unit  49.3, kept number's  45.1; ratio of medians 0.92
+d=3, record at 3, kept number at 6, overtaken later (2464 lists): record's vote per unit  42.7, kept number's  38.6; ratio of medians 0.90
+d=3, record at 4, kept number at 7, overtaken later (1343 lists): record's vote per unit  45.2, kept number's  42.4; ratio of medians 0.94
+d=4, record at 0, kept number at 4, overtaken later (3000 lists): record's vote per unit  62.1, kept number's  62.3; ratio of medians 1.00
+d=4, record at 1, kept number at 5, overtaken later (3000 lists): record's vote per unit  55.3, kept number's  59.2; ratio of medians 1.07
+d=4, record at 2, kept number at 6, overtaken later (2307 lists): record's vote per unit  48.8, kept number's  56.5; ratio of medians 1.16
+d=4, record at 3, kept number at 7, overtaken later (1394 lists): record's vote per unit  42.0, kept number's  52.5; ratio of medians 1.25

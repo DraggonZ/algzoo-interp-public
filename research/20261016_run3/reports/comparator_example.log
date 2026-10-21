@@ -1,0 +1,5 @@
+placement largest 0, second 1, newcomer 2: crossing at x - m = +0.0172; margin slope below 82, above 82; 2 switches in the window; nearest to the crossing: 
+placement largest 1, second 0, newcomer 6: crossing at x - m = -0.0002; margin slope below 64, above 64; 0 switches in the window; nearest to the crossing: 
+placement largest 2, second 1, newcomer 4: crossing at x - m = -0.0056; margin slope below 70, above 70; 3 switches in the window; nearest to the crossing: 
+placement largest 2, second 5, newcomer 9: crossing at x - m = -0.0213; margin slope below 62, above 62; 0 switches in the window; nearest to the crossing: 
+example: 240 placements with the newcomer last; crossing found in 0.97; |x* - m| median 0.0179, 90th pct 0.0423; more than one crossing 0.00; switches in window median 1; slope below median 73, above 71; distance from crossing to nearest switch median 0.0349

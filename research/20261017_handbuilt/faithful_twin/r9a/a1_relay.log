@@ -1,0 +1,12 @@
+r6a_gap (16): accuracy 95.21
+  hiding = clocks + runner-up: job 8 activity / readout view (1.8225898999589685e-07, 0.9996762687960182); silenced -> names largest / names position 0 (41.622736203240805, 0.0019452603731009396)
+relay 3 (19 neurons): accuracy 95.21
+  relays + runner-up   job 8 activity / readout view 0.000 0.013; silenced one step after the largest -> names largest / position 0 82.0 0.2
+  relays               job 8 activity / readout view 0.000 0.000; silenced one step after the largest -> names largest / position 0 87.6 0.4
+  clocks               job 8 activity / readout view 0.000 0.000; silenced one step after the largest -> names largest / position 0 6.2 77.4
+  clocks + runner-up   job 8 activity / readout view 0.000 0.008; silenced one step after the largest -> names largest / position 0 0.0 0.1
+relay 2 (18 neurons): accuracy 95.10
+  relays + runner-up   job 8 activity / readout view 0.000 0.000; silenced one step after the largest -> names largest / position 0 0.2 0.1
+  relays               job 8 activity / readout view 0.000 0.000; silenced one step after the largest -> names largest / position 0 0.2 0.1
+  clocks               job 8 activity / readout view 5.621 5.345; silenced one step after the largest -> names largest / position 0 11.2 0.0
+  clocks + runner-up   job 8 activity / readout view 5.621 5.345; silenced one step after the largest -> names largest / position 0 11.2 0.0

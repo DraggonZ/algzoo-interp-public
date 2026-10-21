@@ -1,0 +1,6 @@
+ARC                                accuracy 95.35% | third wins 20.8% of near ties | lead maps covering half  7,955 | tree 85.6% vs guess 79.2%,  31% of the possible gain
+v19 (kappa 0.5)                    accuracy 94.23% | third wins  7.2% of near ties | lead maps covering half     46 | tree 99.3% vs guess 92.8%,  90% of the possible gain
+v23, loop-back 0.0                 accuracy 95.80% | third wins  1.4% of near ties | lead maps covering half     47 | tree 99.8% vs guess 98.6%,  83% of the possible gain
+v23, loop-back 0.25                accuracy 84.75% | third wins 22.1% of near ties | lead maps covering half     67 | tree 87.7% vs guess 77.9%,  44% of the possible gain
+v23, loop-back 1.0                 accuracy 71.17% | third wins 19.8% of near ties | lead maps covering half     62 | tree 86.1% vs guess 80.2%,  30% of the possible gain
+v23, loop-back 0, v18's wave       accuracy 91.60% | third wins  9.4% of near ties | lead maps covering half     47 | tree 98.9% vs guess 90.6%,  89% of the possible gain

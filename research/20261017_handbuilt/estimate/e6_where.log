@@ -1,0 +1,35 @@
+ ARC: bias -1.47; own switching before the largest arrives -1.60, from then on -3.71; lists lost 4.07, gained 2.60; close calls among lost 0.23, among gained 0.51
+ 100: bias -1.97; own switching before the largest arrives -3.51, from then on -1.10; lists lost 4.92, gained 2.95; close calls among lost 0.22, among gained 0.47
+ 101: bias -7.40; own switching before the largest arrives -3.33, from then on -4.55; lists lost 10.91, gained 3.51; close calls among lost 0.15, among gained 0.32
+ 102: bias -7.10; own switching before the largest arrives -5.72, from then on -4.40; lists lost 11.07, gained 3.97; close calls among lost 0.18, among gained 0.33
+ 103: bias -1.84; own switching before the largest arrives -3.09, from then on -0.80; lists lost 4.02, gained 2.18; close calls among lost 0.30, among gained 0.50
+ 104: bias -10.74; own switching before the largest arrives -3.85, from then on -14.70; lists lost 14.43, gained 3.70; close calls among lost 0.17, among gained 0.25
+ 105: bias -1.58; own switching before the largest arrives -5.60, from then on -2.16; lists lost 5.94, gained 4.36; close calls among lost 0.19, among gained 0.37
+ 106: bias -5.21; own switching before the largest arrives -6.81, from then on -1.16; lists lost 7.26, gained 2.05; close calls among lost 0.22, among gained 0.45
+ 107: bias -8.67; own switching before the largest arrives -4.04, from then on -7.11; lists lost 11.55, gained 2.88; close calls among lost 0.18, among gained 0.31
+ 108: bias -6.01; own switching before the largest arrives -3.57, from then on -4.91; lists lost 9.16, gained 3.15; close calls among lost 0.19, among gained 0.40
+ 109: bias -8.63; own switching before the largest arrives -3.77, from then on -6.13; lists lost 11.28, gained 2.65; close calls among lost 0.16, among gained 0.41
+ 110: bias -2.89; own switching before the largest arrives -5.24, from then on -2.77; lists lost 6.71, gained 3.82; close calls among lost 0.24, among gained 0.37
+ 111: bias -0.55; own switching before the largest arrives -1.97, from then on -1.24; lists lost 2.89, gained 2.34; close calls among lost 0.33, among gained 0.56
+ 112: bias -2.45; own switching before the largest arrives -4.02, from then on -3.16; lists lost 6.43, gained 3.98; close calls among lost 0.20, among gained 0.34
+ 113: bias -1.76; own switching before the largest arrives -3.01, from then on -1.07; lists lost 6.75, gained 4.99; close calls among lost 0.24, among gained 0.31
+ 114: bias -14.61; own switching before the largest arrives -5.39, from then on -10.86; lists lost 18.05, gained 3.44; close calls among lost 0.14, among gained 0.28
+ 115: bias -2.62; own switching before the largest arrives -5.72, from then on -1.43; lists lost 4.99, gained 2.37; close calls among lost 0.23, among gained 0.56
+ 200: bias -0.95; own switching before the largest arrives -5.66, from then on -3.56; lists lost 3.67, gained 2.72; close calls among lost 0.28, among gained 0.43
+ 201: bias -0.96; own switching before the largest arrives -1.25, from then on -2.42; lists lost 3.52, gained 2.56; close calls among lost 0.31, among gained 0.51
+ 202: bias -3.27; own switching before the largest arrives -8.24, from then on -1.63; lists lost 8.14, gained 4.87; close calls among lost 0.18, among gained 0.35
+ 203: bias -2.24; own switching before the largest arrives -3.19, from then on -1.53; lists lost 7.08, gained 4.84; close calls among lost 0.24, among gained 0.31
+ 204: bias -4.81; own switching before the largest arrives -3.52, from then on -5.37; lists lost 9.41, gained 4.61; close calls among lost 0.17, among gained 0.30
+ 205: bias +0.48; own switching before the largest arrives -2.55, from then on -5.87; lists lost 3.18, gained 3.66; close calls among lost 0.33, among gained 0.40
+ 206: bias -3.87; own switching before the largest arrives -4.50, from then on -0.73; lists lost 7.56, gained 3.69; close calls among lost 0.23, among gained 0.38
+ 207: bias -8.30; own switching before the largest arrives -7.52, from then on -6.98; lists lost 11.79, gained 3.49; close calls among lost 0.15, among gained 0.33
+ 208: bias -0.55; own switching before the largest arrives -6.65, from then on -1.04; lists lost 5.93, gained 5.38; close calls among lost 0.18, among gained 0.33
+ 209: bias -2.92; own switching before the largest arrives -1.80, from then on -2.44; lists lost 5.19, gained 2.27; close calls among lost 0.22, among gained 0.48
+ 210: bias -4.94; own switching before the largest arrives -1.93, from then on -6.81; lists lost 6.91, gained 1.96; close calls among lost 0.24, among gained 0.42
+ 211: bias -8.87; own switching before the largest arrives -2.46, from then on -6.46; lists lost 11.83, gained 2.96; close calls among lost 0.17, among gained 0.33
+ 212: bias -2.95; own switching before the largest arrives -1.47, from then on -8.74; lists lost 10.23, gained 7.29; close calls among lost 0.16, among gained 0.25
+ 213: bias -0.82; own switching before the largest arrives -3.33, from then on -0.81; lists lost 3.31, gained 2.49; close calls among lost 0.18, among gained 0.47
+ 214: bias -3.54; own switching before the largest arrives -6.05, from then on -1.21; lists lost 5.85, gained 2.30; close calls among lost 0.25, among gained 0.43
+ 215: bias -4.45; own switching before the largest arrives -2.42, from then on -2.74; lists lost 8.03, gained 3.57; close calls among lost 0.18, among gained 0.41
+sisters RMSE: fixed 5.48; own before largest 4.47; own from largest on 5.10
+sisters mean: lost 7.75, gained 3.47; close-call share among lost 0.21, gained 0.39; close calls are 0.096 of lists

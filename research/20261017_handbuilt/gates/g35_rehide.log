@@ -1,0 +1,10 @@
+23275 lists. Silencing the keep gate after S: L's score changes by +10.64 (median +8.41), S's by -28.49 (median -25.63)
+  right: intact 94.7%, silenced 0.1%; silenced and wrong lists name L in 49.8%
+  L's change ~ -1.73*lost1 +1.93*lost6 +0.84*lost7 -0.80*lost8 -2.08*S +1.77  (variance matched 0.82)
+  S's change ~ +0.32*lost1 -1.84*lost6 +8.96*lost7 +0.04*lost8 -120.26*S -7.46  (variance matched 0.58)
+  L's change from S's value alone: variance matched 0.17
+  hiding removed by S (sum over 1,6,7,8) in [0,1):     48 lists, L's change  +1.38, S's change  -4.06
+  hiding removed by S (sum over 1,6,7,8) in [1,5):    253 lists, L's change  +2.60, S's change  -7.29
+  hiding removed by S (sum over 1,6,7,8) in [5,10):    519 lists, L's change  +4.41, S's change -10.73
+  hiding removed by S (sum over 1,6,7,8) in [10,20):   2153 lists, L's change  +7.53, S's change -16.15
+  hiding removed by S (sum over 1,6,7,8) in [20,99):  19982 lists, L's change +11.40, S's change -30.77

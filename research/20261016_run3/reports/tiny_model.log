@@ -1,0 +1,30 @@
+model example: newest-slot vote per unit input c = 62.0
+network two-spike accuracy 0.9776
+tiny model: same answer as network 0.9875; on network's mistakes, predicts the mistake 0.54 and the same wrong slot 0.45; false alarms on network's right answers 0.0001
+  largest first: agreement 0.9912, network accuracy 0.9814
+  second first: agreement 0.9838, network accuracy 0.9738
+model 0: newest-slot vote per unit input c = 23.8
+network two-spike accuracy 0.8481
+tiny model: same answer as network 0.5468; on network's mistakes, predicts the mistake 0.86 and the same wrong slot 0.53; false alarms on network's right answers 0.4498
+  largest first: agreement 0.6795, network accuracy 0.7958
+  second first: agreement 0.4138, network accuracy 0.9006
+model 1: newest-slot vote per unit input c = 26.7
+network two-spike accuracy 0.8054
+tiny model: same answer as network 0.7903; on network's mistakes, predicts the mistake 0.15 and the same wrong slot 0.06; false alarms on network's right answers 0.0336
+  largest first: agreement 0.9589, network accuracy 0.9477
+  second first: agreement 0.6213, network accuracy 0.6629
+model 2: newest-slot vote per unit input c = 41.9
+network two-spike accuracy 0.9812
+tiny model: same answer as network 0.9895; on network's mistakes, predicts the mistake 0.58 and the same wrong slot 0.45; false alarms on network's right answers 0.0002
+  largest first: agreement 0.9937, network accuracy 0.9864
+  second first: agreement 0.9852, network accuracy 0.9761
+model 3: newest-slot vote per unit input c = 31.9
+network two-spike accuracy 0.9632
+tiny model: same answer as network 0.9725; on network's mistakes, predicts the mistake 0.34 and the same wrong slot 0.27; false alarms on network's right answers 0.0007
+  largest first: agreement 0.9707, network accuracy 0.9618
+  second first: agreement 0.9742, network accuracy 0.9647
+model 4: newest-slot vote per unit input c = 26.8
+network two-spike accuracy 0.9176
+tiny model: same answer as network 0.8285; on network's mistakes, predicts the mistake 0.37 and the same wrong slot 0.29; false alarms on network's right answers 0.1231
+  largest first: agreement 0.9143, network accuracy 0.8808
+  second first: agreement 0.7426, network accuracy 0.9545

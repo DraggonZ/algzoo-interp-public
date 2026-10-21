@@ -1,0 +1,27 @@
+reference class: Gaussian per block, sd = gates incoming 0.94, gates readout 1.21, hiding incoming 2.89, hiding readout 3.96, memory incoming 0.53, memory readout 1.54, store/det incoming 1.79, store/det readout 1.33
+
+lookup table (no explanation): 2369 bits of precision + 0 bits of mismatch = 2369 bits
+  at budget KL 0.005: 2769 bits
+  at budget KL 0.01: 2569 bits
+  at budget KL 0.04: 2169 bits
+  at budget KL 0.08: 1969 bits
+
+(a) negligible set: bits left 2316, saved 52; naming the 28 costs 146; net -94
+    (for scale: describing just these 28 within KL 0.0038 would cost 161 bits)
+
+(b) blindness (13 constraints, KL budget left 0.0015): bits left 3014, saved -645; stating it costs about 22; net -668
+    lookup table at the same budget 0.0015: 3116 bits; saving at equal budget 102
+
+(c) signs: at most 27 bits saved (one per right sign) and about 1 bit lost for the wrong one; stating the group rules (about 10 rules) costs roughly 10-20 bits; net about +5 to +15
+(d) hiding rows from the rule fit: bits left 2183, saved 186; 24 constants at 5 bits each cost 120; net +66
+(d) hiding rows from the rule fit: bits left 2183, saved 186; 24 constants at 10 bits each cost 240; net -54
+
+bits still needed beyond a hypothetical rule with relative error r per weight (KL 0.02):
+  r =   1.0%: 71 bits
+  r =   5.0%: 317 bits
+  r =  25.0%: 840 bits
+  r = 100.0%: 1501 bits
+
+(b') blindness as a prior (each row's component along its blind direction ~ N(0, 0.0031^2); one number read off): bits left 2288, saved 80; stating it about 30 (rows, classes, sigma); net +50
+    ARC's components along the blind directions: [ 0.0006  0.0004  0.0001 -0.0005 -0.0006 -0.0018 -0.0016 -0.0106  0.0014
+ -0.0012  0.0007  0.0002 -0.0016]

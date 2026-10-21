@@ -1,0 +1,6 @@
+neuron 1: max |coefficient - true weight| 1.60e-14; max |sim - true| 1.14e-13
+neuron 6: max |coefficient - true weight| 7.11e-15; max |sim - true| 1.10e-13
+neuron 7: max |coefficient - true weight| 8.88e-15; max |sim - true| 3.30e-13
+neuron 8: max |coefficient - true weight| 3.55e-15; max |sim - true| 1.78e-13
+accuracy with these four substituted: 0.9524
+check rf.X matches the lists rf.H came from: True

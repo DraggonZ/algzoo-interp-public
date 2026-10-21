@@ -1,0 +1,16 @@
+regular 45-degree grid       leak direction n over positions 0-8: -0.71 +0.00 +0.00 +0.00 +0.00 +0.00 +0.00 -0.00 +0.71
+     votes from all numbers     accuracy  80.8%  lead maps covering half     29
+     votes from positives       accuracy  79.4%  lead maps covering half     48
+     votes from keep or forget  accuracy  80.4%  lead maps covering half     38
+ARC's angles                 leak direction n over positions 0-8: -0.59 +0.32 -0.21 +0.07 +0.00 -0.07 +0.21 -0.32 +0.59
+     votes from all numbers     accuracy  70.5%  lead maps covering half     44
+     votes from positives       accuracy  78.6%  lead maps covering half    915
+     votes from keep or forget  accuracy  79.3%  lead maps covering half    456
+ARC's angles and sizes       leak direction n over positions 0-8: -0.70 +0.51 -0.26 +0.02 +0.15 -0.11 +0.13 -0.09 +0.33
+     votes from all numbers     accuracy  71.8%  lead maps covering half     44
+     votes from positives       accuracy  78.9%  lead maps covering half    941
+     votes from keep or forget  accuracy  79.5%  lead maps covering half    486
+40-degree grid without 160   leak direction n over positions 0-8: -0.46 +0.41 -0.30 +0.16 +0.00 -0.16 +0.30 -0.41 +0.46
+     votes from all numbers     accuracy  67.6%  lead maps covering half     44
+     votes from positives       accuracy  77.8%  lead maps covering half  1,551
+     votes from keep or forget  accuracy  78.9%  lead maps covering half    674

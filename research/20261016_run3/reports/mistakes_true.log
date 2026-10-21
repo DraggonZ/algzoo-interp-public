@@ -1,0 +1,6 @@
+example: mistakes 4.68 points; second <= 0 0.83 (third 14%); largest-second < 0.1 only 0.67 (third 15%); second-third < 0.1 only 2.45 (third 92%); both gaps < 0.1 0.48 (third 66%); neither 0.25 (third 72%)
+2: mistakes 5.14 points; second <= 0 0.85 (third 16%); largest-second < 0.1 only 0.54 (third 27%); second-third < 0.1 only 2.72 (third 90%); both gaps < 0.1 0.64 (third 74%); neither 0.40 (third 72%)
+3: mistakes 6.79 points; second <= 0 0.88 (third 17%); largest-second < 0.1 only 1.29 (third 17%); second-third < 0.1 only 3.19 (third 89%); both gaps < 0.1 0.86 (third 58%); neither 0.57 (third 69%)
+0: mistakes 8.99 points; second <= 0 0.58 (third 16%); largest-second < 0.1 only 2.32 (third 10%); second-third < 0.1 only 3.92 (third 91%); both gaps < 0.1 1.00 (third 55%); neither 1.17 (third 66%)
+4: mistakes 11.05 points; second <= 0 0.72 (third 10%); largest-second < 0.1 only 2.51 (third 16%); second-third < 0.1 only 4.52 (third 86%); both gaps < 0.1 1.09 (third 49%); neither 2.22 (third 64%)
+1: mistakes 11.97 points; second <= 0 0.69 (third 12%); largest-second < 0.1 only 2.32 (third 29%); second-third < 0.1 only 4.44 (third 85%); both gaps < 0.1 1.08 (third 65%); neither 3.43 (third 61%)

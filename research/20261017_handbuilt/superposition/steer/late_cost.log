@@ -1,0 +1,5 @@
+last number is the largest : fixed 0.004, broken 0.122 points
+last number is the second  : fixed 0.051, broken 0.076 points
+last number is the third   : fixed 0.100, broken 0.001 points
+last number is smaller  : fixed 0.008, broken 0.002 points
+broken lists: new answer is the last position 54%; second's position at step 9 among broken 38%

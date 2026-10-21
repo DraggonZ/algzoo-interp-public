@@ -1,0 +1,6 @@
+example: shift version 0.97742733 (1260 samples' worth, 0.3s) | exact_z2 0.97742733 (2892 samples' worth, 0.4s) | diff -4.4e-16
+0: shift version 0.84833347 (793 samples' worth, 0.2s) | exact_z2 0.84833347 (1985 samples' worth, 0.3s) | diff +0.0e+00
+1: shift version 0.80553679 (1088 samples' worth, 0.2s) | exact_z2 0.80553679 (2606 samples' worth, 0.4s) | diff -2.2e-16
+2: shift version 0.98109508 (1456 samples' worth, 0.3s) | exact_z2 0.98109508 (3313 samples' worth, 0.5s) | diff -2.2e-16
+3: shift version 0.96271400 (856 samples' worth, 0.2s) | exact_z2 0.96271400 (2101 samples' worth, 0.3s) | diff +0.0e+00
+4: shift version 0.91822814 (978 samples' worth, 0.2s) | exact_z2 0.91822814 (2295 samples' worth, 0.3s) | diff -2.2e-16

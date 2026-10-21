@@ -1,0 +1,12 @@
+neurons 22 24
+accuracy w6b 92.35  w7b 97.21  differ 5.85%
+wave f(k), k=-9..9: [ 0.  1.  0.  0. -0. -1.  0. -0.  0.  1.  0. -0.  0. -1. -0.  0.  0.  1.
+  0.]
+w6b error by largest's position: [21.5 11.9  2.7  2.4  2.6  2.4  2.3  5.7  9.5 15.4]
+w6b wrong answer = largest: 2.41%
+w7b error by largest's position: [1.1 1.6 2.9 2.5 2.5 2.3 2.1 2.2 1.9 8.9]
+w7b wrong answer = largest: 0.42%
+w6b turning modes (deg, modulus): [(45.0, np.float64(1.0))]
+w7b turning modes (deg, modulus): [(45.0, np.float64(1.0)), (135.0, np.float64(1.0))]
+ARC's mode nearest 135: 124.8 deg, modulus 0.84; share per neuron [0.14 0.01 0.01 0.38 0.   0.   0.01 0.   0.01 0.   0.07 0.02 0.13 0.05
+ 0.11 0.06]; chosen slot 12

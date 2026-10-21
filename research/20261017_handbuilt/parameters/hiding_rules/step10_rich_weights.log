@@ -1,0 +1,32 @@
+
+richest (29 per neuron) (+4 hiding feedback terms; 29 constants per neuron)
+  neuron 1: rms teacher-forced 0.170, recursive 0.274 (6.73x the account); replaced alone: accuracy 0.9219, KL 0.144
+  neuron 6: rms teacher-forced 0.225, recursive 0.240 (8.20x the account); replaced alone: accuracy 0.9364, KL 0.083
+  neuron 7: rms teacher-forced 0.068, recursive 0.109 (5.77x the account); replaced alone: accuracy 0.9382, KL 0.092
+  neuron 8: rms teacher-forced 0.207, recursive 0.334 (6.39x the account); replaced alone: accuracy 0.9090, KL 0.330
+  all four replaced by the group rule: accuracy 0.9200, KL 0.223
+  weights for 1: cosine 0.992, relative distance 0.13
+  weights for 6: cosine 0.961, relative distance 0.31
+  weights for 7: cosine 0.999, relative distance 0.05
+  weights for 8: cosine 0.996, relative distance 0.10
+  rows [1] from the rule: accuracy -0.87 points, KL 0.041
+  rows [6] from the rule: accuracy -0.73 points, KL 0.031
+  rows [7] from the rule: accuracy -0.21 points, KL 0.011
+  rows [8] from the rule: accuracy -1.98 points, KL 0.117
+  rows [1, 6, 7, 8] from the rule: accuracy -8.63 points, KL 0.430
+
+L1 + kept wave (15 per neuron) (+4 hiding feedback terms; 15 constants per neuron)
+  neuron 1: rms teacher-forced 0.219, recursive 0.304 (6.07x the account); replaced alone: accuracy 0.9098, KL 0.173
+  neuron 6: rms teacher-forced 0.253, recursive 0.268 (7.33x the account); replaced alone: accuracy 0.9356, KL 0.093
+  neuron 7: rms teacher-forced 0.089, recursive 0.135 (4.67x the account); replaced alone: accuracy 0.9132, KL 0.195
+  neuron 8: rms teacher-forced 0.243, recursive 0.375 (5.69x the account); replaced alone: accuracy 0.8940, KL 0.420
+  all four replaced by the group rule: accuracy 0.8903, KL 0.342
+  weights for 1: cosine 0.985, relative distance 0.17
+  weights for 6: cosine 0.913, relative distance 0.43
+  weights for 7: cosine 0.998, relative distance 0.06
+  weights for 8: cosine 0.987, relative distance 0.16
+  rows [1] from the rule: accuracy -1.46 points, KL 0.066
+  rows [6] from the rule: accuracy -1.69 points, KL 0.074
+  rows [7] from the rule: accuracy -0.60 points, KL 0.029
+  rows [8] from the rule: accuracy -3.72 points, KL 0.218
+  rows [1, 6, 7, 8] from the rule: accuracy -17.15 points, KL 1.127

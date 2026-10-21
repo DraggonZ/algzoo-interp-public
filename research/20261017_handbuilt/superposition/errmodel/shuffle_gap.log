@@ -1,0 +1,8 @@
+ARC                                          acc  95.32%  ARC mistakes reproduced 100.0% | near ties third wins  21.0% | ratio   17   18   19   21   27   35 | order   26   21   26   22   14   17
+clean (v7z)                                  acc  97.76%  ARC mistakes reproduced  10.5% | near ties third wins  10.1% | ratio   10   10   11   10   10    9 | order   22    0   37    0    1    0
+clean + gap borrowed within cell             acc  69.88%  ARC mistakes reproduced  32.6% | near ties third wins  26.8% | ratio   32   28   28   26   24   20 | order   63    9   59    7   11   11
+clean + gap borrowed within cell x0.5        acc  88.47%  ARC mistakes reproduced  26.8% | near ties third wins  23.5% | ratio   28   25   24   22   21   18 | order   61    7   61    4    5    3
+clean + gap borrowed within cell x1.5        acc  32.41%  ARC mistakes reproduced  34.1% | near ties third wins  22.7% | ratio   21   23   24   23   23   19 | order   54    6   48    5   11   11
+clean + gap borrowed from any list           acc  55.41%  ARC mistakes reproduced  22.5% | near ties third wins  25.3% | ratio   24   25   26   25   26   27 | order   50   16   58   12   10    6
+clean + gap within cell, other draw 1        acc  69.93%  ARC mistakes reproduced  32.4% | near ties third wins  26.7% | ratio   31   28   27   26   24   19 | order   63    9   59    7   11   12
+clean + gap within cell, other draw 2        acc  69.86%  ARC mistakes reproduced  32.8% | near ties third wins  26.9% | ratio   32   28   28   26   24   20 | order   63    9   59    7   11   11

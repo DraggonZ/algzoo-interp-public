@@ -1,0 +1,6 @@
+extra level +0.0 (shared level 4.0 x m1): accuracy 0.9568, memory neuron-steps switched off 0.000, lists with any 0.02
+extra level -1.0 (shared level 3.0 x m1): accuracy 0.9542, memory neuron-steps switched off 0.001, lists with any 0.04
+extra level -2.0 (shared level 2.0 x m1): accuracy 0.9391, memory neuron-steps switched off 0.005, lists with any 0.16
+extra level -3.0 (shared level 1.0 x m1): accuracy 0.7576, memory neuron-steps switched off 0.078, lists with any 1.00
+extra level -3.5 (shared level 0.5 x m1): accuracy 0.4894, memory neuron-steps switched off 0.134, lists with any 1.00
+extra level -4.0 (shared level 0.0 x m1): accuracy 0.2661, memory neuron-steps switched off 0.195, lists with any 1.00

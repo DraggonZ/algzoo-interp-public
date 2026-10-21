@@ -1,0 +1,22 @@
+ARC      acc 95.29 -> 95.29 | last-step wins  57.2 ->  49.6 | earlier contender wins  51.3: store up  62.0, memory up  43.9
+copy 0   acc 92.25 -> 92.29 | last-step wins  64.4 ->  58.2 | earlier contender wins  22.6: store up  31.0, memory up  17.4
+copy 1   acc 90.39 -> 90.48 | last-step wins  59.4 ->  53.6 | earlier contender wins  58.2: store up  65.6, memory up  50.5
+copy 2   acc 89.95 -> 89.77 | last-step wins  23.9 ->  19.5 | earlier contender wins  89.6: store up  92.1, memory up  88.6
+copy 3   acc 93.74 -> 93.76 | last-step wins  59.0 ->  52.0 | earlier contender wins  39.6: store up  49.1, memory up  32.4
+copy 4   acc 85.37 -> 85.34 | last-step wins  48.1 ->  43.5 | earlier contender wins  18.4: store up  25.2, memory up  14.3
+copy 5   acc 91.78 -> 91.67 | last-step wins  37.8 ->  32.1 | earlier contender wins  41.9: store up  48.8, memory up  38.0
+copy 6   acc 93.21 -> 93.26 | last-step wins  67.6 ->  61.4 | earlier contender wins   8.6: store up  12.7, memory up   7.9
+copy 7   acc 89.69 -> 89.67 | last-step wins  58.7 ->  52.8 | earlier contender wins  90.0: store up  92.4, memory up  83.7
+copy 8   acc 93.27 -> 93.18 | last-step wins  38.1 ->  31.9 | earlier contender wins  74.6: store up  81.3, memory up  69.3
+copy 9   acc 93.89 -> 93.81 | last-step wins  52.4 ->  45.5 | earlier contender wins  56.1: store up  66.3, memory up  48.0
+copy 10  acc 92.25 -> 92.21 | last-step wins  50.5 ->  44.4 | earlier contender wins  71.3: store up  78.0, memory up  62.2
+copy 11  acc 90.89 -> 90.71 | last-step wins  30.9 ->  25.2 | earlier contender wins  96.0: store up  97.2, memory up  93.6
+copy 12  acc 88.81 -> 88.97 | last-step wins  71.7 ->  67.9 | earlier contender wins  16.6: store up  21.4, memory up  13.5
+copy 13  acc 86.97 -> 86.96 | last-step wins  42.1 ->  36.9 | earlier contender wins  72.9: store up  75.9, memory up  67.2
+copy 14  acc 86.91 -> 86.85 | last-step wins  57.6 ->  52.3 | earlier contender wins   3.5: store up   5.9, memory up   3.2
+copy 15  acc 93.35 -> 93.22 | last-step wins  35.4 ->  29.2 | earlier contender wins  89.3: store up  93.0, memory up  86.4
+copy 16  acc 89.70 -> 89.63 | last-step wins  45.0 ->  39.4 | earlier contender wins  48.5: store up  54.1, memory up  46.3
+copy 17  acc 93.39 -> 93.24 | last-step wins  35.4 ->  29.1 | earlier contender wins  89.7: store up  93.1, memory up  84.9
+copy 18  acc 90.63 -> 90.57 | last-step wins  55.1 ->  49.2 | earlier contender wins  58.6: store up  65.7, memory up  55.0
+copy 19  acc 85.76 -> 85.66 | last-step wins  39.4 ->  34.7 | earlier contender wins  65.1: store up  67.7, memory up  55.2
+copies: accuracy change -0.048 ± 0.087; last-step bias change -5.7 ± 0.8 (ARC -7.6); store edit +5.3 ± 2.5 (ARC +10.7); memory edit -4.7 ± 2.7 (ARC -7.4)

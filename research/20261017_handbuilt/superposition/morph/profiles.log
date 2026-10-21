@@ -1,0 +1,4 @@
+profiles by offset from second only               : held-out share of arrangement-mean variance explained 0.15
+profiles by offset from second + third            : held-out share of arrangement-mean variance explained 0.25
+profiles by offset from second + third + largest  : held-out share of arrangement-mean variance explained 0.25
+share of single morphs' variance (smaller numbers only) explained by their arrangement's mean morph: 0.39

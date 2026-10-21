@@ -1,0 +1,24 @@
+ARC TLQ m 1 cap 1: bias -29.375, SD 1.372, RMS 29.407, cost 1918 lists, sampling SE 0.482
+ARC TLQ m 1 cap 2: bias -12.150, SD 1.043, RMS 12.195, cost 2226 lists, sampling SE 0.448
+ARC TLQ m 1 cap 3: bias -5.882, SD 1.087, RMS 5.982, cost 2352 lists, sampling SE 0.436
+ARC TLQ m 1 cap 40: bias +0.003, SD 0.243, RMS 0.243, cost 2648 lists, sampling SE 0.411
+ARC quasi-random lists, N 2678 (= TLQ m 1 cost): bias -0.223, SD 0.241, RMS 0.328; plain sampling SE 0.408
+ARC quasi-random lists, N 10743 (= TLQ m 4 cost): bias -0.060, SD 0.138, RMS 0.150; plain sampling SE 0.204
+203 TLQ m 1 cap 1: bias -21.055, SD 1.057, RMS 21.082, cost 1918 lists, sampling SE 0.689
+203 TLQ m 1 cap 2: bias -7.787, SD 0.593, RMS 7.810, cost 2210 lists, sampling SE 0.642
+203 TLQ m 1 cap 3: bias -3.849, SD 0.409, RMS 3.870, cost 2330 lists, sampling SE 0.625
+203 TLQ m 1 cap 40: bias -0.011, SD 0.325, RMS 0.325, cost 2610 lists, sampling SE 0.590
+203 quasi-random lists, N 2613 (= TLQ m 1 cost): bias +0.047, SD 0.279, RMS 0.283; plain sampling SE 0.590
+203 quasi-random lists, N 10291 (= TLQ m 4 cost): bias -0.090, SD 0.213, RMS 0.231; plain sampling SE 0.297
+208 TLQ m 1 cap 1: bias -25.789, SD 1.523, RMS 25.834, cost 1918 lists, sampling SE 0.836
+208 TLQ m 1 cap 2: bias -10.348, SD 0.686, RMS 10.371, cost 2334 lists, sampling SE 0.758
+208 TLQ m 1 cap 3: bias -5.584, SD 0.676, RMS 5.624, cost 2569 lists, sampling SE 0.723
+208 TLQ m 1 cap 40: bias +0.216, SD 0.444, RMS 0.494, cost 3416 lists, sampling SE 0.627
+208 quasi-random lists, N 3334 (= TLQ m 1 cost): bias -0.251, SD 0.353, RMS 0.433; plain sampling SE 0.634
+208 quasi-random lists, N 13887 (= TLQ m 4 cost): bias +0.018, SD 0.218, RMS 0.218; plain sampling SE 0.311
+114 TLQ m 1 cap 1: bias -25.382, SD 0.467, RMS 25.386, cost 1918 lists, sampling SE 0.691
+114 TLQ m 1 cap 2: bias -10.070, SD 0.992, RMS 10.119, cost 2266 lists, sampling SE 0.636
+114 TLQ m 1 cap 3: bias -3.856, SD 0.749, RMS 3.928, cost 2455 lists, sampling SE 0.611
+114 TLQ m 1 cap 40: bias +0.329, SD 0.447, RMS 0.554, cost 2677 lists, sampling SE 0.585
+114 quasi-random lists, N 2664 (= TLQ m 1 cost): bias -0.076, SD 0.620, RMS 0.624; plain sampling SE 0.587
+114 quasi-random lists, N 10435 (= TLQ m 4 cost): bias +0.075, SD 0.300, RMS 0.309; plain sampling SE 0.296

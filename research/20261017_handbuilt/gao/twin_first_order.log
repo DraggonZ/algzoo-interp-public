@@ -1,0 +1,16 @@
+twin with clock gain 30, flag gain 30, detector gain 20
+twin accuracy 0.948
+exact rules                                 : measured 0.961; first-order predicted 0.828; error size (rms / typical) 5.11e-04; median |predicted lead change| / lead 0.00
+misreading: clock height from the largest   : measured 0.694; first-order predicted 0.729; error size (rms / typical) 5.08e-03; median |predicted lead change| / lead 4.95
+misreading: flip term left out              : measured 0.590; first-order predicted 0.557; error size (rms / typical) 4.27e-03; median |predicted lead change| / lead 4.66
+store gain 2% off                           : measured 0.584; first-order predicted 0.584; error size (rms / typical) 1.05e-02; median |predicted lead change| / lead 6.21
+clock angle 45.5 deg                        : measured 0.760; first-order predicted 0.708; error size (rms / typical) 5.48e-04; median |predicted lead change| / lead 0.37
+gate cutoff 0.765                           : measured 0.934; first-order predicted 0.782; error size (rms / typical) 1.27e-02; median |predicted lead change| / lead 1.56
+twin with clock gain 10000, flag gain 10000, detector gain 1000
+twin accuracy 0.960
+exact rules                                 : measured 0.960; first-order predicted 0.832; error size (rms / typical) 5.25e-05; median |predicted lead change| / lead 0.00
+misreading: clock height from the largest   : measured 0.695; first-order predicted 0.733; error size (rms / typical) 2.78e-03; median |predicted lead change| / lead 5.61
+misreading: flip term left out              : measured 0.590; first-order predicted 0.558; error size (rms / typical) 3.08e-03; median |predicted lead change| / lead 5.15
+store gain 2% off                           : measured 0.583; first-order predicted 0.586; error size (rms / typical) 1.05e-02; median |predicted lead change| / lead 6.60
+clock angle 45.5 deg                        : measured 0.759; first-order predicted 0.708; error size (rms / typical) 8.71e-05; median |predicted lead change| / lead 0.34
+gate cutoff 0.765                           : measured 0.933; first-order predicted 0.785; error size (rms / typical) 1.27e-02; median |predicted lead change| / lead 1.60

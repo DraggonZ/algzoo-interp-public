@@ -1,0 +1,4 @@
+ARC, third at record + 1, cancelling neurons [1, 6, 7, 8]: 19810 lists; third named 0.023 -> 0.044 (random same-size share 0.059); accuracy 0.970 -> 0.936
+111, third at record + 1, cancelling neurons [4, 8, 9, 12]: 19810 lists; third named 0.032 -> 0.101 (random same-size share 0.070); accuracy 0.958 -> 0.885
+106, third at record + 2, cancelling neurons [1, 2, 7, 8]: 15333 lists; third named 0.024 -> 0.046 (random same-size share 0.083); accuracy 0.969 -> 0.940
+102, third at record + 2, cancelling neurons [3, 5, 6]: 15333 lists; third named 0.135 -> 0.156 (random same-size share 0.142); accuracy 0.833 -> 0.811

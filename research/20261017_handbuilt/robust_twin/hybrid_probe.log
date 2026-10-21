@@ -1,0 +1,9 @@
+g 10 kappa 0.0: accuracy 0.9109; noise 1e-3 0.7324; 1e-2 0.4715
+g 10 kappa 0.5: accuracy 0.5944; noise 1e-3 0.6076; 1e-2 0.4285
+g 10 kappa 1.0: accuracy 0.3481; noise 1e-3 0.3422; 1e-2 0.2995
+g  5 kappa 0.0: accuracy 0.9019; noise 1e-3 0.7601; 1e-2 0.5808
+g  5 kappa 0.5: accuracy 0.5816; noise 1e-3 0.5928; 1e-2 0.5120
+g  5 kappa 1.0: accuracy 0.3484; noise 1e-3 0.3465; 1e-2 0.3203
+g  3 kappa 0.0: accuracy 0.8894; noise 1e-3 0.7700; 1e-2 0.6268
+g  3 kappa 0.5: accuracy 0.5564; noise 1e-3 0.5674; 1e-2 0.5328
+g  3 kappa 1.0: accuracy 0.3340; noise 1e-3 0.3329; 1e-2 0.3164

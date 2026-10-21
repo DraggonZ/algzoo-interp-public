@@ -1,0 +1,3 @@
+ARC: RB mean 95.320 (SE 0.016)  direct 95.262  var ratio 0.2326  pieces/line 9.54  ops/line 91076 = 15.38 lists  efficiency 0.3x  1s
+114: RB mean 89.764 (SE 0.028)  direct 89.784  var ratio 0.3503  pieces/line 6.34  ops/line 60924 = 10.29 lists  efficiency 0.3x  1s
+203: RB mean 89.878 (SE 0.028)  direct 89.915  var ratio 0.3582  pieces/line 6.44  ops/line 61444 = 10.38 lists  efficiency 0.3x  1s

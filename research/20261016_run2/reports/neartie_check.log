@@ -1,0 +1,11 @@
+/data/output/research/algzoo/20261016_run2/scripts/neartie_pilot.py:142: RuntimeWarning: invalid value encountered in divide
+  ratio = np.where(both_fin, w / np.where(ws > 0, ws, 1), np.nan)
+base model: 888 right two-spike cells, 7104 (cell, q) cases
+mass-weighted share where linearized and scanned widths agree within a factor of two: 0.952
+  both zero                mass share 0.537
+  linear zero, scan > 0    mass share 0.001
+  scan zero, linear > 0    mass share 0.002
+  both finite > 0          mass share 0.440
+  either full range        mass share 0.020
+  both finite: mass-weighted ratio linear/scan quantiles 10/50/90%: [0.761, 0.96, 1.275]
+PASS (kill if share < 0.5)

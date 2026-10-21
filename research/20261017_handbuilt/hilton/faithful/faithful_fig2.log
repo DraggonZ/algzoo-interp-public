@@ -1,0 +1,11 @@
+== hand-built ../../paper/tweet/handbuilt_matched.npz
+   trained network 95.23%   hand-built network on its own 96.13%
+   (1) Hilton's metric, gap as noise (12 copies): predicted 10.48% (copies 6.2-14.8) against the trained 95.23%
+       straight path H + 0.25 (T - H): 11.22%
+       straight path H + 0.5 (T - H): 11.96%
+       straight path H + 0.75 (T - H): 13.22%
+   (2) store and detector (2, 4)    hand-built values patched in:  85.43%   everything else patched in:  16.67%
+   (2) cancelling (1, 6, 7, 8)      hand-built values patched in:   8.74%   everything else patched in:  24.12%
+   (2) keep gate (5)                hand-built values patched in:  48.90%   everything else patched in:  17.61%
+   (2) late gate (9)                hand-built values patched in:  64.55%   everything else patched in:  17.94%
+   (2) memory (0, 3, 10-15)         hand-built values patched in:  21.09%   everything else patched in:  10.06%

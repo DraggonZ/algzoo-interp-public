@@ -1,0 +1,17 @@
+ ARC: reduction accuracy 95.318%; error points band23 2.02, band12 0.58, both 2.04, rest 0.04  6s
+ 200: reduction accuracy 93.563%; error points band23 1.86, band12 1.43, both 3.06, rest 0.08  6s
+ 201: reduction accuracy 94.134%; error points band23 1.82, band12 0.48, both 3.54, rest 0.02  6s
+ 202: reduction accuracy 90.588%; error points band23 3.04, band12 1.09, both 5.15, rest 0.14  6s
+ 203: reduction accuracy 89.863%; error points band23 2.99, band12 0.98, both 6.08, rest 0.08  6s
+ 204: reduction accuracy 88.720%; error points band23 2.82, band12 1.86, both 6.47, rest 0.12  6s
+ 205: reduction accuracy 94.019%; error points band23 1.76, band12 0.77, both 3.37, rest 0.07  6s
+ 206: reduction accuracy 90.927%; error points band23 2.87, band12 1.20, both 4.89, rest 0.11  6s
+ 207: reduction accuracy 90.295%; error points band23 1.87, band12 2.06, both 5.67, rest 0.10  6s
+ 208: reduction accuracy 85.214%; error points band23 2.09, band12 4.65, both 7.89, rest 0.15  6s
+ 209: reduction accuracy 96.215%; error points band23 1.38, band12 0.50, both 1.89, rest 0.02  6s
+ 210: reduction accuracy 96.268%; error points band23 1.16, band12 0.59, both 1.97, rest 0.02  6s
+ 211: reduction accuracy 93.549%; error points band23 2.34, band12 1.17, both 2.85, rest 0.09  6s
+ 212: reduction accuracy 84.442%; error points band23 3.68, band12 2.53, both 9.14, rest 0.22  6s
+ 213: reduction accuracy 94.373%; error points band23 0.93, band12 1.43, both 3.19, rest 0.07  6s
+ 214: reduction accuracy 94.017%; error points band23 1.55, band12 0.88, both 3.48, rest 0.07  6s
+ 215: reduction accuracy 93.162%; error points band23 2.78, band12 1.13, both 2.83, rest 0.11  6s

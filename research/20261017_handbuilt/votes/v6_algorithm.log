@@ -1,0 +1,7 @@
+ARC: acc 0.953; near-tie error adjacent 0.15, apart 0.15
+c=0.5 spike (ideal)            best A=0.5 : acc 0.9907, agree with ARC 0.955, near-tie error adjacent 0.00, apart 0.01
+c=0.5 cosine (3-neuron clock)  best A=0.5 : acc 0.6623, agree with ARC 0.649, near-tie error adjacent 0.50, apart 0.52
+c=0.5 cosine + 2nd harmonic    best A=0.5 : acc 0.8119, agree with ARC 0.795, near-tie error adjacent 0.42, apart 0.37
+c=0.75 spike (ideal)            best A=0.25: acc 0.9907, agree with ARC 0.955, near-tie error adjacent 0.00, apart 0.01
+c=0.75 cosine (3-neuron clock)  best A=0.25: acc 0.6716, agree with ARC 0.658, near-tie error adjacent 0.49, apart 0.50
+c=0.75 cosine + 2nd harmonic    best A=0.25: acc 0.8197, agree with ARC 0.802, near-tie error adjacent 0.41, apart 0.35

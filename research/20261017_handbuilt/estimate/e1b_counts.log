@@ -1,0 +1,9 @@
+fit lists     1,000: all 16 on cells -52.30, cells seen 2397
+fit lists     3,000: all 16 on cells -14.82, cells seen 3313
+fit lists    10,000: all 16 on cells -2.24, cells seen 3625
+fit lists   100,000: all 16 on cells -1.61, cells seen 3635
+fit lists 1,000,000: all 16 on cells -1.47, cells seen 3635
+step, a1, a2, a3, sign  : all 16 on cells -1.47; distinct histories in 1M lists 212,758; needed for 50/90/99% of lists 13,573/112,758/202,758; distinct prefixes 342,704
+step, a1, a2, sign      : all 16 on cells -1.10; distinct histories in 1M lists 109,041; needed for 50/90/99% of lists 7,548/47,947/99,041; distinct prefixes 169,732
+step, a1, a2, a3        : all 16 on cells -1.41; distinct histories in 1M lists 69,733; needed for 50/90/99% of lists 2,575/21,648/59,733; distinct prefixes 117,753
+step, a1, sign          : all 16 on cells -46.85; distinct histories in 1M lists 24,815; needed for 50/90/99% of lists 2,356/10,107/19,191; distinct prefixes 39,018

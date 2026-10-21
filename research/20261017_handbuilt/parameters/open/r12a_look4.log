@@ -1,0 +1,29 @@
+zero rows 1-8 push cols: +6.3 (gain 1.004)
+   out1 rel err 0.150
+   out2 rel err 0.134
+   out3 rel err 0.074
+   out4 rel err 0.219
+   out5 rel err 0.156
+   out6 rel err 0.215
+   out7 rel err 0.246
+   out8 rel err 0.372
+   out9 rel err 0.268
+zero rows 1-8 all 16: +8.6 (gain 1.018)
+   out1 rel err 0.187
+   out2 rel err 0.137
+   out3 rel err 0.088
+   out4 rel err 0.271
+   out5 rel err 0.159
+   out6 rel err 0.233
+   out7 rel err 0.345
+   out8 rel err 0.371
+   out9 rel err 0.268
+row 1: residual size 0.148; cos with row0 -0.66, row k-1 -0.66, row k -0.29, mean row +0.07
+row 2: residual size 0.135; cos with row0 -0.16, row k-1 -0.05, row k +0.47, mean row -0.21
+row 3: residual size 0.072; cos with row0 -0.29, row k-1 -0.52, row k -0.24, mean row +0.34
+row 4: residual size 0.216; cos with row0 -0.15, row k-1 -0.54, row k -0.40, mean row +0.32
+row 5: residual size 0.158; cos with row0 -0.34, row k-1 +0.42, row k +0.69, mean row +0.32
+row 6: residual size 0.214; cos with row0 -0.93, row k-1 +0.44, row k -0.06, mean row +0.38
+row 7: residual size 0.243; cos with row0 -0.90, row k-1 -0.22, row k -0.44, mean row +0.23
+row 8: residual size 0.374; cos with row0 -0.66, row k-1 -0.00, row k +0.64, mean row +0.19
+row 9: residual size 0.775; cos with row0 -0.35, row k-1 -0.53, row k +0.26, mean row +0.33

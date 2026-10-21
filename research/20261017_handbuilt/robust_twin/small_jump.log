@@ -1,0 +1,6 @@
+bins of (m1 - m2)/m1, second before the largest: 0-0.02 0.02-0.05 0.05-0.1 0.1-0.2 0.2-0.4 0.4-1.01
+  trained                     : 0.821 0.954 0.980 0.980 0.980 0.952   (all such lists 0.955; second after the largest 0.951)
+  v18 trained scale           : 0.356 0.511 0.784 0.935 0.930 0.934   (all such lists 0.870; second after the largest 0.971)
+  v19 kappa 0.5               : 0.296 0.423 0.635 0.877 0.889 0.881   (all such lists 0.810; second after the largest 0.940)
+  v19 kappa 0.5, perfect wipe : 0.912 0.908 0.909 0.910 0.908 0.899   (all such lists 0.897; second after the largest 0.942)
+share of such lists per bin: 0.017 0.026 0.043 0.084 0.153 0.174

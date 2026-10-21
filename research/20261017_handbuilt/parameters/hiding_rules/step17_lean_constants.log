@@ -1,0 +1,8 @@
+neuron 1 (input weight -10.565):
+   x -10.584, m1 +1.661, m2 +1.022, m1 wave cos -0.057, m1 wave sin -0.001, store(rule) +0.057, detector(rule) -0.132, prev x +6.924, prev jump +1.636, jump 2 back +0.683, new largest 2 back -0.393, fb 1 +0.407, fb 6 +0.987, fb 7 -0.475, fb 8 -0.154
+neuron 6 (input weight -10.996):
+   x -11.032, m1 -0.588, m2 +0.361, m1 wave cos -0.038, m1 wave sin +0.066, store(rule) +0.042, detector(rule) -0.641, prev x +10.796, prev jump -4.234, jump 2 back +0.807, new largest 2 back -1.062, fb 1 -0.089, fb 6 +0.404, fb 7 +0.641, fb 8 -0.104
+neuron 7 (input weight -13.169):
+   x -13.165, m1 +1.561, m2 +0.164, m1 wave cos +0.087, m1 wave sin -0.057, store(rule) +0.021, detector(rule) +0.041, prev x +10.947, prev jump +0.493, jump 2 back -0.010, new largest 2 back +0.137, fb 1 -0.083, fb 6 -0.159, fb 7 +0.897, fb 8 +0.143
+neuron 8 (input weight -12.312):
+   x -12.319, m1 +2.428, m2 -0.117, m1 wave cos +0.220, m1 wave sin +0.182, store(rule) +0.061, detector(rule) -0.504, prev x +9.374, prev jump -7.264, jump 2 back +0.275, new largest 2 back -0.209, fb 1 +0.653, fb 6 +0.062, fb 7 -0.414, fb 8 +0.577

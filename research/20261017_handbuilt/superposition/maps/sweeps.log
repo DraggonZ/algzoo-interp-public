@@ -1,0 +1,14 @@
+
+ARC: 2100 sweeps; changes 0: 62.1%  1: 25.2%  2: 8.6%  3+: 4.0%; lists with at least one changing sweep 77%
+one-change sweeps, by where the swept number sits (count, share of all sweeps there), and direction when the number is raised:
+  after both contenders, after the largest       149 of  497 (30.0%): toward the third 14, toward the second 18, to or from another position 117
+  after both contenders, before the largest       45 of  202 (22.3%): toward the third 8, toward the second 15, to or from another position 22
+  before both contenders, after the largest       53 of  155 (34.2%): toward the third 11, toward the second 25, to or from another position 17
+  before both contenders, before the largest     133 of  535 (24.9%): toward the third 42, toward the second 24, to or from another position 67
+  between the contenders, after the largest       75 of  357 (21.0%): toward the third 29, toward the second 35, to or from another position 11
+  between the contenders, before the largest      75 of  354 (21.2%): toward the third 32, toward the second 21, to or from another position 22
+  most changes: 6 list 253 position 1 between the contenders, before the largest answers along sweep: 000000000000000000400
+  most changes: 5 list 99 position 6 between the contenders, before the largest answers along sweep: 999911199999999999996
+  most changes: 5 list 217 position 4 between the contenders, before the largest answers along sweep: 000000000000000000064
+
+hand-built: 2100 sweeps; changes 0: 94.1%  1: 5.7%  2: 0.1%  3+: 0.1%; lists with at least one changing sweep 22%

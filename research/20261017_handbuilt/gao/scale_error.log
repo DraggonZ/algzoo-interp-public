@@ -1,0 +1,7 @@
+trained accuracy 0.953
+gain 1.02, one neuron at a time: 0:0.950 1:0.918 2:0.879 3:0.953 4:0.945 5:0.952 6:0.899 7:0.818 8:0.908 9:0.953 10:0.950 11:0.951 12:0.947 13:0.953 14:0.950 15:0.948; worst 0.818
+   groups: store+detector 0.861; cancellers 0.930; keep gate 0.952; late gate 0.953; memory 0.924; all 16 0.862
+gain 0.98, one neuron at a time: 0:0.951 1:0.918 2:0.872 3:0.953 4:0.942 5:0.952 6:0.899 7:0.760 8:0.889 9:0.954 10:0.948 11:0.949 12:0.950 13:0.953 14:0.951 15:0.951; worst 0.760
+   groups: store+detector 0.855; cancellers 0.928; keep gate 0.952; late gate 0.954; memory 0.925; all 16 0.853
+gain 1.10, one neuron at a time: 0:0.902 1:0.582 2:0.487 3:0.943 4:0.879 5:0.928 6:0.573 7:0.406 8:0.532 9:0.951 10:0.887 11:0.876 12:0.856 13:0.946 14:0.893 15:0.881; worst 0.406
+   groups: store+detector 0.444; cancellers 0.748; keep gate 0.928; late gate 0.951; memory 0.498; all 16 0.553

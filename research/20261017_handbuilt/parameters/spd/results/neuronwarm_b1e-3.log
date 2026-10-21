@@ -1,0 +1,32 @@
+args {'name': 'neuronwarm_b1e-3', 'beta': 0.001, 'p': 1.0, 'p_anneal': None, 'steps': 20000, 'batch': 2048, 'lr': 0.003, 'C': '8,48,20', 'gauge': None, 'seed': 0, 'faith': 100.0, 'init': 'neuron', 'gate_warmup': 3000, 'n_eval': 1048576}
+gate warm-up      0 faith 3.872e-08 recon 33.49 layer 39.46 imp 206
+gate warm-up   1000 faith 3.872e-08 recon 0.622 layer 0.2428 imp 104.9
+gate warm-up   2000 faith 3.872e-08 recon 0.02099 layer 0.008587 imp 118.1
+gate warm-up   2999 faith 3.872e-08 recon 0.0046 layer 0.001729 imp 115.7
+step      0 lr 3.00e-03 p 1.00 faith 3.872e-08 recon 0.004762 layer 0.001836 imp 115.5
+step   1000 lr 2.98e-03 p 1.00 faith 5.591e-06 recon 0.01584 layer 0.006923 imp 114.4
+step   2000 lr 2.93e-03 p 1.00 faith 6.702e-05 recon 0.02408 layer 0.01096 imp 110.9
+step   3000 lr 2.84e-03 p 1.00 faith 1.138e-05 recon 0.01849 layer 0.006996 imp 111.5
+step   4000 lr 2.71e-03 p 1.00 faith 1.878e-05 recon 0.06789 layer 0.02449 imp 110.6
+step   5000 lr 2.56e-03 p 1.00 faith 1.423e-05 recon 0.01451 layer 0.006251 imp 108.7
+step   6000 lr 2.38e-03 p 1.00 faith 5.321e-06 recon 0.01642 layer 0.005606 imp 110.1
+step   7000 lr 2.18e-03 p 1.00 faith 7.885e-06 recon 0.03134 layer 0.00874 imp 111.1
+step   8000 lr 1.96e-03 p 1.00 faith 5.818e-06 recon 0.01929 layer 0.008021 imp 108.9
+step   9000 lr 1.73e-03 p 1.00 faith 3.141e-06 recon 0.01548 layer 0.005209 imp 108.4
+step  10000 lr 1.50e-03 p 1.00 faith 2.532e-06 recon 0.008274 layer 0.003278 imp 108.4
+step  11000 lr 1.27e-03 p 1.00 faith 4.983e-06 recon 0.01237 layer 0.005683 imp 106.6
+step  12000 lr 1.04e-03 p 1.00 faith 1.894e-06 recon 0.0074 layer 0.002771 imp 107.9
+step  13000 lr 8.19e-04 p 1.00 faith 2.063e-06 recon 0.008973 layer 0.002946 imp 107.2
+step  14000 lr 6.18e-04 p 1.00 faith 1.687e-06 recon 0.006971 layer 0.00242 imp 106.8
+step  15000 lr 4.39e-04 p 1.00 faith 1.369e-06 recon 0.006557 layer 0.002247 imp 106.1
+step  16000 lr 2.86e-04 p 1.00 faith 1.129e-06 recon 0.005141 layer 0.001773 imp 105.8
+step  17000 lr 1.63e-04 p 1.00 faith 8.362e-07 recon 0.004434 layer 0.001684 imp 105.4
+step  18000 lr 7.34e-05 p 1.00 faith 6.923e-07 recon 0.003985 layer 0.001848 imp 105.4
+step  19000 lr 1.85e-05 p 1.00 faith 5.727e-07 recon 0.004014 layer 0.001628 imp 105.4
+step  20000 lr 0.00e+00 p 1.00 faith 5.272e-07 recon 0.004175 layer 0.001753 imp 105.4
+eval tau 0.1: {"acc_arc": 0.95306, "kl_active": 0.00691, "acc_active": 0.95223, "agree_active": 0.98693, "kl_ci": 0.01169, "acc_ci": 0.9508, "agree_ci": 0.98278, "kl_all": 0.00184, "acc_all": 0.95264, "agree_all": 0.99361, "uses_hi": 10.0, "distinct_hi": 1.0, "uses_hh": 86.41989, "distinct_hh": 15.95483, "uses_oh": 13.07243, "distinct_oh": 13.07243, "n_lists": 1048576, "ever_active": {"hi": 1, "hh": 16, "oh": 18}}
+  fraction of lists using each hi component (sorted): [1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+  fraction of lists using each hh component (sorted): [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.9990000128746033, 0.9980000257492065, 0.996999979019165, 0.9959999918937683, 0.9940000176429749, 0.9879999756813049, 0.9829999804496765, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+  fraction of lists using each oh component (sorted): [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.8640000224113464, 0.8600000143051147, 0.8389999866485596, 0.2849999964237213, 0.11299999803304672, 0.1120000034570694, 0.0, 0.0, 0.0, 0.0]
+eval tau 0.01: {"acc_arc": 0.95306, "kl_active": 0.00623, "acc_active": 0.95265, "agree_active": 0.98773, "kl_ci": 0.01169, "acc_ci": 0.9508, "agree_ci": 0.98278, "kl_all": 0.00184, "acc_all": 0.95264, "agree_all": 0.99361, "uses_hi": 10.0, "distinct_hi": 1.0, "uses_hh": 87.95846, "distinct_hh": 15.96553, "uses_oh": 13.08953, "distinct_oh": 13.08953, "n_lists": 1048576, "ever_active": {"hi": 1, "hh": 16, "oh": 19}}
+saved

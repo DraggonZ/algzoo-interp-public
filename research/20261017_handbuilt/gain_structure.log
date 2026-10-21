@@ -1,0 +1,12 @@
+ARC   g=1.6: margin rms 3.04; explained by per-position gains: all 0.33, second before largest 0.34, after 0.31
+zoo0  g=1.6: margin rms 1.86; explained by per-position gains: all 0.39, second before largest 0.35, after 0.42
+zoo1  g=1.6: margin rms 2.30; explained by per-position gains: all 0.45, second before largest 0.40, after 0.51
+zoo2  g=1.6: margin rms 2.37; explained by per-position gains: all 0.33, second before largest 0.27, after 0.41
+zoo3  g=1.6: margin rms 1.74; explained by per-position gains: all 0.46, second before largest 0.50, after 0.39
+zoo4  g=1.6: margin rms 2.15; explained by per-position gains: all 0.24, second before largest 0.27, after 0.23
+s100  g=1.6: margin rms 1.59; explained by per-position gains: all 0.32, second before largest 0.14, after 0.40
+s101  g=1.6: margin rms 1.85; explained by per-position gains: all 0.39, second before largest 0.33, after 0.44
+s102  g=1.6: margin rms 1.76; explained by per-position gains: all 0.36, second before largest 0.26, after 0.44
+s103  g=1.6: margin rms 2.38; explained by per-position gains: all 0.32, second before largest 0.29, after 0.36
+s104  g=1.6: margin rms 1.44; explained by per-position gains: all 0.39, second before largest 0.38, after 0.40
+s105  g=1.6: margin rms 2.10; explained by per-position gains: all 0.42, second before largest 0.22, after 0.47

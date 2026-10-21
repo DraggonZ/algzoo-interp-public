@@ -1,0 +1,7 @@
+twin gains 30: accuracy 0.948
+conceptual        wrong clock height  : accuracy 0.693, with its errors shuffled 0.629
+conceptual        flip term left out  : accuracy 0.594, with its errors shuffled 0.674
+one constant off  clock angle 45.5    : accuracy 0.764, with its errors shuffled 0.773
+one constant off  clock angle 46      : accuracy 0.734, with its errors shuffled 0.759
+one constant off  gate cutoff 0.765   : accuracy 0.936, with its errors shuffled 0.851
+one constant off  store gain 2% off   : accuracy 0.588, with its errors shuffled 0.655

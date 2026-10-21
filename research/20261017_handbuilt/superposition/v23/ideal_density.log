@@ -1,0 +1,7 @@
+kernel K(0..9) with ARC's angles: 1.00 0.07 -0.06 -0.01 0.03 -0.08 0.23 -0.29 0.67 0.62
+sharp, all numbers                     accuracy  99.9%  lead maps covering half     44
+sharp, keep or forget                  accuracy  99.1%  lead maps covering half     36
+sharp, imprint at write time           accuracy  69.4%  lead maps covering half     53
+broad (ARC angles), all numbers        accuracy  48.5%  lead maps covering half     44
+broad (ARC angles), positives          accuracy  51.9%  lead maps covering half  3,581
+broad (ARC angles), keep or forget     accuracy  56.1%  lead maps covering half  1,153

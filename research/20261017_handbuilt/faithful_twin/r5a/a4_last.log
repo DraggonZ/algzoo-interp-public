@@ -1,0 +1,5 @@
+loop term at the last step: median |.| 0.0235, 90th pct 0.0791; median gap second-third 0.2580
+fit loop = +0.0005 x0 -0.0076 m -0.0502 x0[x0>0] -0.0011, R2 0.850
+  x0 the largest             share 0.10: median loop -0.0871, median |loop| 0.0871
+  x0 > 0, not the largest    share 0.40: median loop -0.0398, median |loop| 0.0398
+  x0 < 0                     share 0.50: median loop -0.0068, median |loop| 0.0068

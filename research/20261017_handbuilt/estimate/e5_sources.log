@@ -1,0 +1,39 @@
+ ARC: truth 95.32 estimate 93.93 (-1.39); surrogate sampled 93.85 (integral off by +0.08); recovered by own sign: memory (8) +0.10, hiding (4) +0.95, store+detector (2) -3.88, gates (2) -33.82, unassigned (0) +0.00
+ 100: truth 94.81 estimate 93.13 (-1.68); surrogate sampled 92.82 (integral off by +0.31); recovered by own sign: memory (10) -1.37, hiding (4) -1.51, store+detector (2) -3.83, gates (0) +0.00, unassigned (0) +0.00
+ 101: truth 91.34 estimate 83.72 (-7.62); surrogate sampled 83.93 (integral off by -0.21); recovered by own sign: memory (11) +3.70, hiding (3) +3.72, store+detector (2) +0.20, gates (0) +0.00, unassigned (0) +0.00
+ 102: truth 91.25 estimate 84.16 (-7.09); surrogate sampled 84.15 (integral off by +0.01); recovered by own sign: memory (11) +1.88, hiding (3) +0.07, store+detector (1) -1.09, gates (0) +0.00, unassigned (1) -13.48
+ 103: truth 95.32 estimate 93.92 (-1.40); surrogate sampled 93.46 (integral off by +0.46); recovered by own sign: memory (9) +0.36, hiding (3) +0.15, store+detector (2) -16.48, gates (1) +0.21, unassigned (1) -5.92
+ 104: truth 91.23 estimate 80.33 (-10.89); surrogate sampled 80.48 (integral off by -0.15); recovered by own sign: memory (10) +4.51, hiding (4) +7.83, store+detector (1) -0.87, gates (1) -4.38, unassigned (0) +0.00
+ 105: truth 89.86 estimate 88.09 (-1.77); surrogate sampled 88.27 (integral off by -0.18); recovered by own sign: memory (12) -0.69, hiding (1) +0.53, store+detector (2) -7.84, gates (1) -0.03, unassigned (0) +0.00
+ 106: truth 94.84 estimate 90.03 (-4.81); surrogate sampled 89.61 (integral off by +0.42); recovered by own sign: memory (9) +1.04, hiding (4) +2.64, store+detector (2) -4.23, gates (0) +0.00, unassigned (1) -4.84
+ 107: truth 92.13 estimate 83.39 (-8.73); surrogate sampled 83.47 (integral off by -0.08); recovered by own sign: memory (11) +7.35, hiding (3) +1.63, store+detector (2) -18.80, gates (0) +0.00, unassigned (0) +0.00
+ 108: truth 93.86 estimate 87.57 (-6.29); surrogate sampled 87.85 (integral off by -0.27); recovered by own sign: memory (10) -0.28, hiding (3) +1.24, store+detector (2) -2.20, gates (1) -0.12, unassigned (0) +0.00
+ 109: truth 94.05 estimate 85.37 (-8.69); surrogate sampled 85.40 (integral off by -0.04); recovered by own sign: memory (11) +5.34, hiding (2) +4.76, store+detector (3) -11.73, gates (0) +0.00, unassigned (0) +0.00
+ 110: truth 91.18 estimate 88.14 (-3.04); surrogate sampled 88.35 (integral off by -0.21); recovered by own sign: memory (10) +0.20, hiding (2) +0.24, store+detector (2) -13.27, gates (2) +1.07, unassigned (0) +0.00
+ 111: truth 96.00 estimate 95.39 (-0.62); surrogate sampled 95.46 (integral off by -0.07); recovered by own sign: memory (9) +0.74, hiding (4) -1.85, store+detector (2) -16.71, gates (1) -13.93, unassigned (0) +0.00
+ 112: truth 91.46 estimate 88.59 (-2.87); surrogate sampled 88.96 (integral off by -0.37); recovered by own sign: memory (12) -1.87, hiding (1) +0.04, store+detector (2) -15.90, gates (1) -1.15, unassigned (0) +0.00
+ 113: truth 90.44 estimate 88.53 (-1.91); surrogate sampled 88.65 (integral off by -0.12); recovered by own sign: memory (10) -0.81, hiding (4) +0.49, store+detector (1) -0.05, gates (0) +0.00, unassigned (1) -6.17
+ 114: truth 89.79 estimate 74.42 (-15.37); surrogate sampled 75.17 (integral off by -0.75); recovered by own sign: memory (11) +5.50, hiding (2) +8.67, store+detector (2) -4.13, gates (1) +0.03, unassigned (0) +0.00
+ 115: truth 95.20 estimate 92.76 (-2.44); surrogate sampled 92.61 (integral off by +0.15); recovered by own sign: memory (10) -0.16, hiding (3) -1.24, store+detector (2) -14.84, gates (0) +0.00, unassigned (1) -10.65
+ 200: truth 93.24 estimate 92.37 (-0.87); surrogate sampled 92.24 (integral off by +0.13); recovered by own sign: memory (11) -3.50, hiding (3) +0.39, store+detector (2) -24.81, gates (0) +0.00, unassigned (0) +0.00
+ 201: truth 94.38 estimate 93.25 (-1.13); surrogate sampled 93.43 (integral off by -0.18); recovered by own sign: memory (10) -0.79, hiding (4) -1.35, store+detector (2) -19.53, gates (0) +0.00, unassigned (0) +0.00
+ 202: truth 89.72 estimate 86.27 (-3.46); surrogate sampled 86.43 (integral off by -0.16); recovered by own sign: memory (11) -1.20, hiding (3) -0.04, store+detector (1) -0.17, gates (0) +0.00, unassigned (1) -10.42
+ 203: truth 89.88 estimate 87.93 (-1.95); surrogate sampled 87.64 (integral off by +0.29); recovered by own sign: memory (10) +0.27, hiding (4) +0.08, store+detector (1) -0.05, gates (0) +0.00, unassigned (1) -6.99
+ 204: truth 88.93 estimate 84.06 (-4.87); surrogate sampled 84.14 (integral off by -0.08); recovered by own sign: memory (12) +2.22, hiding (2) +2.23, store+detector (2) -6.48, gates (0) +0.00, unassigned (0) +0.00
+ 205: truth 93.62 estimate 93.81 (+0.20); surrogate sampled 94.08 (integral off by -0.27); recovered by own sign: memory (9) -0.51, hiding (3) -1.15, store+detector (2) -16.26, gates (2) -22.97, unassigned (0) +0.00
+ 206: truth 91.29 estimate 87.60 (-3.69); surrogate sampled 87.43 (integral off by +0.18); recovered by own sign: memory (11) +0.06, hiding (3) +2.11, store+detector (1) -0.03, gates (0) +0.00, unassigned (1) -5.59
+ 207: truth 91.14 estimate 81.74 (-9.40); surrogate sampled 82.83 (integral off by -1.09); recovered by own sign: memory (12) -1.00, hiding (2) +3.84, store+detector (2) -13.33, gates (0) +0.00, unassigned (0) +0.00
+ 208: truth 84.03 estimate 83.42 (-0.61); surrogate sampled 83.47 (integral off by -0.05); recovered by own sign: memory (11) -1.24, hiding (0) +0.00, store+detector (2) -16.20, gates (2) -0.33, unassigned (1) -15.83
+ 209: truth 95.89 estimate 92.78 (-3.11); surrogate sampled 92.95 (integral off by -0.17); recovered by own sign: memory (8) +1.94, hiding (6) +0.86, store+detector (2) -4.23, gates (0) +0.00, unassigned (0) +0.00
+ 210: truth 96.15 estimate 91.11 (-5.03); surrogate sampled 91.18 (integral off by -0.07); recovered by own sign: memory (10) -0.54, hiding (4) +4.51, store+detector (2) -3.14, gates (0) +0.00, unassigned (0) +0.00
+ 211: truth 93.47 estimate 84.63 (-8.84); surrogate sampled 84.61 (integral off by +0.02); recovered by own sign: memory (11) +6.42, hiding (3) +5.98, store+detector (2) -9.60, gates (0) +0.00, unassigned (0) +0.00
+ 212: truth 84.53 estimate 80.96 (-3.57); surrogate sampled 81.61 (integral off by -0.65); recovered by own sign: memory (11) -6.83, hiding (3) -0.31, store+detector (1) -2.87, gates (1) -3.70, unassigned (0) +0.00
+ 213: truth 93.89 estimate 93.22 (-0.67); surrogate sampled 93.05 (integral off by +0.17); recovered by own sign: memory (12) +0.69, hiding (0) +0.00, store+detector (3) -9.59, gates (0) +0.00, unassigned (1) -27.28
+ 214: truth 94.84 estimate 91.81 (-3.03); surrogate sampled 91.24 (integral off by +0.56); recovered by own sign: memory (10) +0.19, hiding (3) +0.74, store+detector (2) -7.11, gates (0) +0.00, unassigned (1) -9.56
+ 215: truth 92.60 estimate 88.04 (-4.56); surrogate sampled 88.09 (integral off by -0.05); recovered by own sign: memory (10) +3.27, hiding (3) +2.07, store+detector (2) -9.39, gates (1) -7.19, unassigned (0) +0.00
+sisters: estimate RMSE 5.63, mean -4.37; integral against sampled surrogate RMSE 0.34
+   memory: mean recovery +0.78, median +0.19
+   hiding: mean recovery +1.48, median +0.51
+   store+detector: mean recovery -8.58, median -7.47
+   gates: mean recovery -1.64, median +0.00
+   unassigned: mean recovery -3.65, median +0.00

@@ -1,0 +1,11 @@
+second = revealed old largest, third-largest within 20% of it; error rate by P_prev / second
+  P_prev/second in [0.0,0.0): lists  67965  wrong 0.085  third named 0.073  third is P_prev 0.00
+  P_prev/second in [0.0,0.5): lists  26199  wrong 0.059  third named 0.052  third is P_prev 0.00
+  P_prev/second in [0.5,0.8): lists  18660  wrong 0.069  third named 0.062  third is P_prev 0.00
+  P_prev/second in [0.8,0.9): lists  32732  wrong 0.043  third named 0.032  third is P_prev 0.86
+  P_prev/second in [0.9,1.0): lists  32795  wrong 0.136  third named 0.114  third is P_prev 0.95
+same lists, third within 10% of the second: is the third the previous record or another number?
+  gap [0.00,0.03) third = previous record  lists   9618  wrong 0.249
+  gap [0.00,0.03) third = other number     lists  19264  wrong 0.277
+  gap [0.03,0.10) third = previous record  lists  21658  wrong 0.076
+  gap [0.03,0.10) third = other number     lists  43347  wrong 0.067

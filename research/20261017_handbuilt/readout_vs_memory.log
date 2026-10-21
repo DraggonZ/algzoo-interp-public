@@ -1,0 +1,4 @@
+ARC's own readout:                  error 4.68 (A 0.84, B 2.85, C 0.72, other 0.27)
+best linear readout (from ARC's): error 4.41 (A 0.83, B 2.64, C 0.72, other 0.21)
+two-layer reader (256):            error 3.06 (A 0.70, B 1.66, C 0.57, other 0.13)
+three-layer reader (512), longer:   error 2.35 (A 0.64, B 1.23, C 0.41, other 0.08)

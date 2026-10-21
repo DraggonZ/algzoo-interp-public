@@ -1,0 +1,4 @@
+exact offsets: typical |offset| 0.0160; Newton from the tie: correlation 0.063, median |difference| 0.0000
+at the exact tie: |s3 - s2| median 1.84; sum of |pushes| on it median 537; ratio median 266
+slope d(s3 - s2)/dx3 median 84.2 per unit (so an offset of 0.016 is a score gap of about 1.35)
+robust: rank correlation 0.924; within 0.002 of the exact offset on 0.828 of placements; outliers' median slope 95.0 against 83.6

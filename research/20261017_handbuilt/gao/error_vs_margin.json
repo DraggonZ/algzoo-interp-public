@@ -1,0 +1,373 @@
+[
+ {
+  "net": "twin",
+  "label": "exact rules",
+  "kind": "exact rules + noise",
+  "err": 0.009283079247418953,
+  "acc": 0.95985
+ },
+ {
+  "net": "twin",
+  "label": "exact + noise 1e-10 x typical value",
+  "kind": "exact rules + noise",
+  "err": 0.011085535722506926,
+  "acc": 0.95905
+ },
+ {
+  "net": "twin",
+  "label": "exact + noise 1e-09 x typical value",
+  "kind": "exact rules + noise",
+  "err": 0.029844551811472442,
+  "acc": 0.9535
+ },
+ {
+  "net": "twin",
+  "label": "exact + noise 1e-08 x typical value",
+  "kind": "exact rules + noise",
+  "err": 0.14102689761317597,
+  "acc": 0.91635
+ },
+ {
+  "net": "twin",
+  "label": "exact + noise 1e-07 x typical value",
+  "kind": "exact rules + noise",
+  "err": 1.1035560884345124,
+  "acc": 0.79345
+ },
+ {
+  "net": "twin",
+  "label": "exact + noise 1e-06 x typical value",
+  "kind": "exact rules + noise",
+  "err": 10.68889575136162,
+  "acc": 0.72595
+ },
+ {
+  "net": "twin",
+  "label": "exact + noise 1e-05 x typical value",
+  "kind": "exact rules + noise",
+  "err": 106.03423629728621,
+  "acc": 0.63855
+ },
+ {
+  "net": "twin",
+  "label": "wrong clock height (largest, not jump)",
+  "kind": "conceptual misreading",
+  "err": 3.4817491684332462,
+  "acc": 0.69605
+ },
+ {
+  "net": "twin",
+  "label": "flip term left out",
+  "kind": "conceptual misreading",
+  "err": 3.529624410786111,
+  "acc": 0.5942
+ },
+ {
+  "net": "twin",
+  "label": "wrong clock height + noise 1e-10",
+  "kind": "conceptual misreading",
+  "err": 3.4817532437904184,
+  "acc": 0.6963
+ },
+ {
+  "net": "twin",
+  "label": "wrong clock height + noise 1e-09",
+  "kind": "conceptual misreading",
+  "err": 3.484221292728404,
+  "acc": 0.6957
+ },
+ {
+  "net": "twin",
+  "label": "wrong clock height + noise 1e-08",
+  "kind": "conceptual misreading",
+  "err": 3.532868437718835,
+  "acc": 0.6946
+ },
+ {
+  "net": "twin",
+  "label": "wrong clock height + noise 1e-07",
+  "kind": "conceptual misreading",
+  "err": 4.3248380189619375,
+  "acc": 0.6829
+ },
+ {
+  "net": "twin",
+  "label": "wrong clock height + noise 1e-06",
+  "kind": "conceptual misreading",
+  "err": 13.577690348568465,
+  "acc": 0.6575
+ },
+ {
+  "net": "twin",
+  "label": "wrong clock height + noise 1e-05",
+  "kind": "conceptual misreading",
+  "err": 111.92716857279513,
+  "acc": 0.60085
+ },
+ {
+  "net": "twin",
+  "label": "exact rules",
+  "kind": "exact rules + noise",
+  "err": 0.009283079247418953,
+  "acc": 0.95985
+ },
+ {
+  "net": "twin",
+  "label": "clock angle 46 deg, not 45",
+  "kind": "right idea, one constant off",
+  "err": 0.6242804218909439,
+  "acc": 0.7332
+ },
+ {
+  "net": "twin",
+  "label": "clock angle 45.5 deg",
+  "kind": "right idea, one constant off",
+  "err": 0.349534099279472,
+  "acc": 0.7619
+ },
+ {
+  "net": "twin",
+  "label": "gate cutoff 0.765, not 0.75",
+  "kind": "right idea, one constant off",
+  "err": 0.6756424314987008,
+  "acc": 0.9311
+ },
+ {
+  "net": "twin",
+  "label": "store gain 2% off",
+  "kind": "right idea, one constant off",
+  "err": 9.033636547956206,
+  "acc": 0.5906
+ },
+ {
+  "net": "twin",
+  "label": "clock angle 46 deg, not 45 + noise 1e-09",
+  "kind": "right idea, one constant off",
+  "err": 0.6310998162110208,
+  "acc": 0.73335
+ },
+ {
+  "net": "twin",
+  "label": "clock angle 46 deg, not 45 + noise 1e-07",
+  "kind": "right idea, one constant off",
+  "err": 1.5354640431838495,
+  "acc": 0.693
+ },
+ {
+  "net": "twin",
+  "label": "clock angle 46 deg, not 45 + noise 1e-05",
+  "kind": "right idea, one constant off",
+  "err": 106.19293346126278,
+  "acc": 0.6311
+ },
+ {
+  "net": "twin",
+  "label": "clock angle 45.5 deg + noise 1e-09",
+  "kind": "right idea, one constant off",
+  "err": 0.3526095954954743,
+  "acc": 0.7609
+ },
+ {
+  "net": "twin",
+  "label": "clock angle 45.5 deg + noise 1e-07",
+  "kind": "right idea, one constant off",
+  "err": 1.2981778713635341,
+  "acc": 0.7128
+ },
+ {
+  "net": "twin",
+  "label": "clock angle 45.5 deg + noise 1e-05",
+  "kind": "right idea, one constant off",
+  "err": 106.00385041297491,
+  "acc": 0.63535
+ },
+ {
+  "net": "twin",
+  "label": "gate cutoff 0.765, not 0.75 + noise 1e-09",
+  "kind": "right idea, one constant off",
+  "err": 0.6769180369603501,
+  "acc": 0.9314
+ },
+ {
+  "net": "twin",
+  "label": "gate cutoff 0.765, not 0.75 + noise 1e-07",
+  "kind": "right idea, one constant off",
+  "err": 1.5589743176742321,
+  "acc": 0.91855
+ },
+ {
+  "net": "twin",
+  "label": "gate cutoff 0.765, not 0.75 + noise 1e-05",
+  "kind": "right idea, one constant off",
+  "err": 109.11947022653811,
+  "acc": 0.65825
+ },
+ {
+  "net": "twin",
+  "label": "store gain 2% off + noise 1e-09",
+  "kind": "right idea, one constant off",
+  "err": 9.033666576920922,
+  "acc": 0.59065
+ },
+ {
+  "net": "twin",
+  "label": "store gain 2% off + noise 1e-07",
+  "kind": "right idea, one constant off",
+  "err": 9.372737798401538,
+  "acc": 0.57785
+ },
+ {
+  "net": "twin",
+  "label": "store gain 2% off + noise 1e-05",
+  "kind": "right idea, one constant off",
+  "err": 116.58858785673436,
+  "acc": 0.50955
+ },
+ {
+  "net": "trained",
+  "label": "true values + noise 0.001",
+  "kind": "trained: true values + noise",
+  "err": 0.047087425782415634,
+  "acc": 0.95335
+ },
+ {
+  "net": "trained",
+  "label": "true values + noise 0.003",
+  "kind": "trained: true values + noise",
+  "err": 0.1409417783048685,
+  "acc": 0.9476
+ },
+ {
+  "net": "trained",
+  "label": "true values + noise 0.01",
+  "kind": "trained: true values + noise",
+  "err": 0.4647591503285343,
+  "acc": 0.90665
+ },
+ {
+  "net": "trained",
+  "label": "true values + noise 0.03",
+  "kind": "trained: true values + noise",
+  "err": 1.3565856933146503,
+  "acc": 0.73645
+ },
+ {
+  "net": "trained",
+  "label": "true values + noise 0.1",
+  "kind": "trained: true values + noise",
+  "err": 4.229807178529301,
+  "acc": 0.4031
+ },
+ {
+  "net": "trained",
+  "label": "neuron 7 scaled 1.01",
+  "kind": "trained: true values scaled",
+  "err": 0.501355089765875,
+  "acc": 0.9098
+ },
+ {
+  "net": "trained",
+  "label": "all 16 scaled 1.01",
+  "kind": "trained: true values scaled",
+  "err": 0.39872084774931316,
+  "acc": 0.913
+ },
+ {
+  "net": "trained",
+  "label": "neuron 7 scaled 1.02",
+  "kind": "trained: true values scaled",
+  "err": 0.9900199912154896,
+  "acc": 0.81265
+ },
+ {
+  "net": "trained",
+  "label": "all 16 scaled 1.02",
+  "kind": "trained: true values scaled",
+  "err": 0.8206751710199187,
+  "acc": 0.8593
+ },
+ {
+  "net": "trained",
+  "label": "neuron 7 scaled 1.05",
+  "kind": "trained: true values scaled",
+  "err": 2.3518995166705094,
+  "acc": 0.58825
+ },
+ {
+  "net": "trained",
+  "label": "all 16 scaled 1.05",
+  "kind": "trained: true values scaled",
+  "err": 2.155542763100828,
+  "acc": 0.71705
+ },
+ {
+  "net": "trained",
+  "label": "neuron 7 scaled 1.10",
+  "kind": "trained: true values scaled",
+  "err": 4.2994282661906915,
+  "acc": 0.4095
+ },
+ {
+  "net": "trained",
+  "label": "all 16 scaled 1.10",
+  "kind": "trained: true values scaled",
+  "err": 4.601847260530393,
+  "acc": 0.55605
+ },
+ {
+  "net": "trained",
+  "label": "account",
+  "kind": "trained: our account of the cancelling neurons",
+  "err": 2.58,
+  "acc": 0.559
+ },
+ {
+  "net": "trained",
+  "label": "wave from m2",
+  "kind": "trained: misreading of the cancelling neurons",
+  "err": 3.01,
+  "acc": 0.426
+ },
+ {
+  "net": "trained",
+  "label": "no wave",
+  "kind": "trained: misreading of the cancelling neurons",
+  "err": 3.45,
+  "acc": 0.181
+ },
+ {
+  "net": "trained",
+  "label": "wrong angle",
+  "kind": "trained: misreading of the cancelling neurons",
+  "err": 3.55,
+  "acc": 0.386
+ },
+ {
+  "net": "trained",
+  "label": "cancellers scaled 1.02",
+  "kind": "trained: true values scaled",
+  "err": 0.36,
+  "acc": 0.93
+ },
+ {
+  "net": "trained",
+  "label": "cancellers scaled 1.05",
+  "kind": "trained: true values scaled",
+  "err": 0.94,
+  "acc": 0.865
+ },
+ {
+  "net": "trained",
+  "label": "cancellers scaled 1.10",
+  "kind": "trained: true values scaled",
+  "err": 2.03,
+  "acc": 0.749
+ },
+ {
+  "net": "trained",
+  "label": "cancellers scaled 1.20",
+  "kind": "trained: true values scaled",
+  "err": 4.7,
+  "acc": 0.552
+ }
+]

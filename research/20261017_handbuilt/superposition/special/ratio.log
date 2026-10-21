@@ -1,0 +1,7 @@
+largest/second    1-1.1    (15.57% of lists): right  92.7% | wrong answers within 2 of the largest (not it)   12%, the largest itself  62%
+largest/second  1.1-1.5    (39.47% of lists): right  97.8% | wrong answers within 2 of the largest (not it)   30%, the largest itself   1%
+largest/second  1.5-2      (21.66% of lists): right  97.2% | wrong answers within 2 of the largest (not it)   34%, the largest itself   0%
+largest/second    2-3      (13.95% of lists): right  96.0% | wrong answers within 2 of the largest (not it)   36%, the largest itself   0%
+largest/second    3-5      ( 5.53% of lists): right  93.9% | wrong answers within 2 of the largest (not it)   36%, the largest itself   0%
+largest/second    5-10     ( 1.89% of lists): right  90.7% | wrong answers within 2 of the largest (not it)   32%, the largest itself   0%
+largest/second   10-1e+09  ( 0.86% of lists): right  81.8% | wrong answers within 2 of the largest (not it)   25%, the largest itself   3%

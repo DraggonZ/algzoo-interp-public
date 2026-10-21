@@ -1,0 +1,9 @@
+lists with second-largest before largest: 97850; network right on both base and donor: 0.928
+k=0 (n=90823): answer moves to donor's when copying twelve: 0.99; four (1, 6, 7, 8): 0.00; all 16: 1.00; random twelve 0: 0.40; random twelve 1: 0.70; random twelve 2: 0.64; random twelve 3: 0.48; random twelve 4: 0.49
+k=1 (n=73024): answer moves to donor's when copying twelve: 0.93; four (1, 6, 7, 8): 0.00; all 16: 1.00; random twelve 0: 0.64; random twelve 1: 0.67; random twelve 2: 0.63; random twelve 3: 0.44; random twelve 4: 0.47
+k=2 (n=56373): answer moves to donor's when copying twelve: 0.89; four (1, 6, 7, 8): 0.00; all 16: 1.00; random twelve 0: 0.63; random twelve 1: 0.62; random twelve 2: 0.67; random twelve 3: 0.38; random twelve 4: 0.15
+k=4 (n=29483): answer moves to donor's when copying twelve: 0.94; four (1, 6, 7, 8): 0.00; all 16: 1.00; random twelve 0: 0.41; random twelve 1: 0.52; random twelve 2: 0.79; random twelve 3: 0.27; random twelve 4: 0.25
+  second minus third in [0, 0.05): n=7941, twelve moves answer 0.996
+  second minus third in [0.05, 0.2): n=26596, twelve moves answer 0.996
+  second minus third in [0.2, 0.5): n=32866, twelve moves answer 0.995
+  second minus third in [0.5, 9): n=23420, twelve moves answer 0.991

@@ -1,0 +1,11 @@
+score_rule.py sha256 913ce430a8f8; rule r3b_gates.py; fit seed 102, score seed 203
+
+30 free constants, 2 kinds (feature, feedback); structure 57 bits (21 declared + 6 x 6 spreads); lookup table 2369 bits
+  share 0.001: constants 235 bits (7.8 each) + structure 57 + rest 2020; net +56
+  share 0.002: constants 220 bits (7.3 each) + structure 57 + rest 2036; net +56
+  share 0.005: constants 200 bits (6.7 each) + structure 57 + rest 2087; net +24
+
+| net bits | share | rms 1, 6, 7, 8 | cosine 1, 6, 7, 8 | joint KL of 4 rows | KL, 4 neurons replaced | constants |
+|---|---|---|---|---|---|---|
+| +56 | 0.001 | 0.202, 0.170, 0.153, 0.270 | 0.9994, 0.9947, 0.9968, 0.9979 | 0.694 | 0.248 | 30 |
+NET +56.2

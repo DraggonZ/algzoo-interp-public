@@ -1,0 +1,8 @@
+v23 default gains, no noise        accuracy 95.80% | third wins  1.4% of near ties | lead maps covering half     47 | tree 99.8% vs guess 98.6%,  84% of the possible gain
+v23 default gains, noise 0.001     accuracy  8.10% | third wins  9.4% of near ties | lead maps covering half    362 | tree 94.0% vs guess 90.6%,  36% of the possible gain
+v23 default gains, noise 0.003     accuracy  8.02% | third wins  9.2% of near ties | lead maps covering half    367 | tree 94.2% vs guess 90.8%,  37% of the possible gain
+v23 default gains, noise 0.01      accuracy  8.45% | third wins  9.3% of near ties | lead maps covering half    403 | tree 94.3% vs guess 90.7%,  39% of the possible gain
+v23 gains a 10, s 10, g 100, no noise accuracy 95.03% | third wins  3.1% of near ties | lead maps covering half     48 | tree 99.0% vs guess 96.9%,  68% of the possible gain
+v23 gains a 10, s 10, g 100, noise 0.001 accuracy 48.36% | third wins 28.1% of near ties | lead maps covering half    357 | tree 87.2% vs guess 71.9%,  54% of the possible gain
+v23 gains a 10, s 10, g 100, noise 0.003 accuracy 24.00% | third wins 20.0% of near ties | lead maps covering half    366 | tree 88.6% vs guess 80.0%,  43% of the possible gain
+v23 gains a 10, s 10, g 100, noise 0.01 accuracy 12.20% | third wins 12.8% of near ties | lead maps covering half    398 | tree 92.1% vs guess 87.2%,  39% of the possible gain

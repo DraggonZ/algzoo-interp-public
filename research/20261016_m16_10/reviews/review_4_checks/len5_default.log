@@ -1,0 +1,5 @@
+2nd_argmax_3_5: default 0.37544058 z -0.85 | earlier code 0.37544201 z -0.66 | ops 2.9e+09
+2nd_argmax_4_5: default 0.42845603 z +0.59 | earlier code 0.42845946 z +1.04 | ops 4.14e+09
+2nd_argmax_5_5: default 0.54243676 z +1.15 | earlier code 0.54243797 z +1.31 | ops 1.18e+10
+2nd_argmax_6_5: default 0.70285394 z -0.48 | earlier code 0.70285726 z -0.00 | ops 1.16e+10
+argmedian_8_5: default 0.69854034 z -0.38 | earlier code 0.69855112 z +1.16 | ops 1.57e+10

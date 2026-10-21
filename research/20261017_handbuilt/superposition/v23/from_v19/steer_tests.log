@@ -1,0 +1,68 @@
+===== v23 from v19, loop gain 1e-4
+(a) step 5, second early, third late: final lead median 0.005; median part at step 5 from the earlier contender / the largest / the rest
+   store        +0.0000   +1.4766   +0.0000
+   memory       +0.2427   -1.4578   +0.0000
+   hiding       -0.0000   -0.1422   +0.0000
+   keep gate    +0.0000   +0.0000   +0.0000
+   flag         +0.0000   +0.0000   +0.0000
+(a) step 5, third early, second late: final lead median -0.005; median part at step 5 from the earlier contender / the largest / the rest
+   store        +0.0000   +1.4808   +0.0000
+   memory       +0.2376   -1.4668   +0.0000
+   hiding       -0.0000   -0.1418   +0.0000
+   keep gate    +0.0000   +0.0000   +0.0000
+   flag         +0.0000   +0.0000   +0.0000
+   balance b = |memory's part from the largest / store's| = 0.989; value-scale conversion 1.000
+(b) lead of the second over the largest, median 0.271; per group at step 5, median part from: the second / the largest / the rest
+   store        +0.0000   -0.9060   +0.0000
+   memory       +0.0000   +0.6534   +0.0000
+   hiding       +0.0000   +0.4888   -0.0000
+   keep gate    +0.0000   +0.0000   +0.0000
+   flag         +0.0000   +0.0000   +0.0000
+(c, d) step 5, second early, third late (n 12,537); earlier contender wins / largest wins: base 100.0/ 0.0
+   memory alone x0.95  98.0/ 0.0 | x1.05   0.0/ 0.0
+   a -0.04: balanced memory x0.96, store x0.9604:  34.0/ 0.6 | predicted (value x 0.960)  19.1/ 0.0
+   a -0.02: balanced memory x0.98, store x0.9802:  54.0/ 0.1 | predicted (value x 0.980)  59.7/ 0.0
+   a +0.02: balanced memory x1.02, store x1.0198:  86.1/ 0.0 | predicted (value x 1.020)  96.7/ 3.3
+   a +0.04: balanced memory x1.04, store x1.0396:  77.5/ 0.0 | predicted (value x 1.040)  93.8/ 6.1
+(c, d) step 5, third early, second late (n 12,711); earlier contender wins / largest wins: base   0.0/ 0.0
+   memory alone x0.95  96.9/ 0.0 | x1.05   0.0/ 0.0
+   a -0.04: balanced memory x0.96, store x0.9604:  25.4/ 1.6 | predicted (value x 0.960)   0.0/ 0.0
+   a -0.02: balanced memory x0.98, store x0.9802:  15.9/ 0.8 | predicted (value x 0.980)   0.0/ 0.0
+   a +0.02: balanced memory x1.02, store x1.0198:  44.6/ 0.0 | predicted (value x 1.020)  38.9/ 0.5
+   a +0.04: balanced memory x1.04, store x1.0396:  66.0/ 0.0 | predicted (value x 1.040)  74.6/ 2.4
+(e) 1 extra step(s), input 0: names second-1  95.3% | the second   1.0% (own accuracy 94.6%)
+(e) 2 extra step(s), input 0: names second-2  96.4% | the second   1.4% (own accuracy 94.6%)
+===== v23 from v19, loop gain 0.3 (ARC-sized ring)
+(a) step 5, second early, third late: final lead median 0.004; median part at step 5 from the earlier contender / the largest / the rest
+   store        +0.0000   +1.2194   +0.0000
+   memory       +0.2427   -1.2248   +0.0000
+   hiding       -0.0000   -0.1279   +0.0000
+   keep gate    +0.0000   +0.0000   +0.0000
+   flag         +0.0000   +0.0000   +0.0000
+(a) step 5, third early, second late: final lead median -0.006; median part at step 5 from the earlier contender / the largest / the rest
+   store        +0.0000   +1.2355   +0.0000
+   memory       +0.2376   -1.2324   +0.0000
+   hiding       -0.0000   -0.1283   +0.0000
+   keep gate    +0.0000   +0.0000   +0.0000
+   flag         +0.0000   +0.0000   +0.0000
+   balance b = |memory's part from the largest / store's| = 1.001; value-scale conversion 1.000
+(b) lead of the second over the largest, median 0.269; per group at step 5, median part from: the second / the largest / the rest
+   store        +0.0000   -0.7154   +0.0000
+   memory       +0.0000   +0.3990   -0.0000
+   hiding       +0.0000   +0.5006   -0.0000
+   keep gate    +0.0000   +0.0000   +0.0000
+   flag         +0.0000   +0.0000   +0.0000
+(c, d) step 5, second early, third late (n 12,537); earlier contender wins / largest wins: base  88.0/ 0.0
+   memory alone x0.95  92.2/ 0.0 | x1.05   0.0/ 0.0
+   a -0.04: balanced memory x0.96, store x0.9600:  33.5/ 0.3 | predicted (value x 0.960)  16.9/ 0.0
+   a -0.02: balanced memory x0.98, store x0.9800:  48.3/ 0.1 | predicted (value x 0.980)  52.5/ 0.0
+   a +0.02: balanced memory x1.02, store x1.0200:  75.5/ 0.0 | predicted (value x 1.020)  87.8/ 0.8
+   a +0.04: balanced memory x1.04, store x1.0400:  68.3/ 0.0 | predicted (value x 1.040)  87.6/ 1.4
+(c, d) step 5, third early, second late (n 12,711); earlier contender wins / largest wins: base   0.0/ 0.0
+   memory alone x0.95  89.9/ 0.0 | x1.05   0.0/ 0.0
+   a -0.04: balanced memory x0.96, store x0.9600:  25.2/ 1.0 | predicted (value x 0.960)   0.0/ 0.0
+   a -0.02: balanced memory x0.98, store x0.9800:  15.8/ 0.5 | predicted (value x 0.980)   0.0/ 0.0
+   a +0.02: balanced memory x1.02, store x1.0200:  38.7/ 0.0 | predicted (value x 1.020)  34.5/ 0.2
+   a +0.04: balanced memory x1.04, store x1.0400:  55.6/ 0.0 | predicted (value x 1.040)  67.3/ 0.6
+(e) 1 extra step(s), input 0: names second-1  81.4% | the second   3.4% (own accuracy 83.6%)
+(e) 2 extra step(s), input 0: names second-2  80.2% | the second   3.9% (own accuracy 83.6%)

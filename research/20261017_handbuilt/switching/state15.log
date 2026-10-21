@@ -1,0 +1,26 @@
+== neuron 15: largest terms 10:12.75 11:11.02 8:6.90 1:6.35 2:6.13 6:3.83 13:2.84 5:2.22  input 0.10
+   reads [np.int64(10)]                           weights (0 fitted)  agreement 0.397  alone -30.29
+   reads [np.int64(10)]                           fitted  (3 fitted)  agreement 0.730  alone -6.48
+   reads [np.int64(10), np.int64(11)]             weights (0 fitted)  agreement 0.692  alone -14.41
+   reads [np.int64(10), np.int64(11)]             fitted  (4 fitted)  agreement 0.745  alone -6.49
+   reads [np.int64(10), np.int64(11), np.int64(8)] weights (0 fitted)  agreement 0.510  alone -28.21
+   reads [np.int64(10), np.int64(11), np.int64(8)] fitted  (5 fitted)  agreement 0.745  alone -6.46
+   reads [np.int64(10), np.int64(11), np.int64(8), np.int64(1)] weights (0 fitted)  agreement 0.607  alone -19.42
+   reads [np.int64(10), np.int64(11), np.int64(8), np.int64(1)] fitted  (6 fitted)  agreement 0.764  alone -4.50
+   reads [np.int64(10), np.int64(11), np.int64(8), np.int64(1), np.int64(2), np.int64(6)] weights (0 fitted)  agreement 0.785  alone -5.49
+   reads [np.int64(10), np.int64(11), np.int64(8), np.int64(1), np.int64(2), np.int64(6)] fitted  (8 fitted)  agreement 0.823  alone -0.67
+   reads [np.int64(10), np.int64(11), np.int64(8), np.int64(1), np.int64(2), np.int64(6), np.int64(13), np.int64(5), np.int64(7), np.int64(12), np.int64(0), np.int64(14), np.int64(3), np.int64(15), np.int64(4), np.int64(9)] weights (0 fitted)  agreement 1.000  alone +0.00
+   reads [np.int64(10), np.int64(11), np.int64(8), np.int64(1), np.int64(2), np.int64(6), np.int64(13), np.int64(5), np.int64(7), np.int64(12), np.int64(0), np.int64(14), np.int64(3), np.int64(15), np.int64(4), np.int64(9)] fitted  (18 fitted)  agreement 0.999  alone +0.00
+== neuron 3: largest terms 1:11.64 8:10.24 0:7.28 7:5.49 14:5.32 6:4.88 12:3.52 10:2.49  input 0.10
+   reads [np.int64(1)]                            weights (0 fitted)  agreement 0.744  alone -5.79
+   reads [np.int64(1)]                            fitted  (3 fitted)  agreement 0.767  alone -1.04
+   reads [np.int64(1), np.int64(8)]               weights (0 fitted)  agreement 0.541  alone -19.15
+   reads [np.int64(1), np.int64(8)]               fitted  (4 fitted)  agreement 0.767  alone -1.04
+   reads [np.int64(1), np.int64(8), np.int64(0)]  weights (0 fitted)  agreement 0.412  alone -36.67
+   reads [np.int64(1), np.int64(8), np.int64(0)]  fitted  (5 fitted)  agreement 0.757  alone -2.03
+   reads [np.int64(1), np.int64(8), np.int64(0), np.int64(7)] weights (0 fitted)  agreement 0.323  alone -38.14
+   reads [np.int64(1), np.int64(8), np.int64(0), np.int64(7)] fitted  (6 fitted)  agreement 0.762  alone -1.93
+   reads [np.int64(1), np.int64(8), np.int64(0), np.int64(7), np.int64(14), np.int64(6)] weights (0 fitted)  agreement 0.639  alone -16.08
+   reads [np.int64(1), np.int64(8), np.int64(0), np.int64(7), np.int64(14), np.int64(6)] fitted  (8 fitted)  agreement 0.761  alone -1.87
+   reads [np.int64(1), np.int64(8), np.int64(0), np.int64(7), np.int64(14), np.int64(6), np.int64(12), np.int64(10), np.int64(15), np.int64(5), np.int64(11), np.int64(13), np.int64(3), np.int64(4), np.int64(9), np.int64(2)] weights (0 fitted)  agreement 1.000  alone +0.00
+   reads [np.int64(1), np.int64(8), np.int64(0), np.int64(7), np.int64(14), np.int64(6), np.int64(12), np.int64(10), np.int64(15), np.int64(5), np.int64(11), np.int64(13), np.int64(3), np.int64(4), np.int64(9), np.int64(2)] fitted  (18 fitted)  agreement 0.998  alone +0.00

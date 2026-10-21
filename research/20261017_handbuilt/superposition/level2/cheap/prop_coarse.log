@@ -1,0 +1,14 @@
+/data/output/research/algzoo/20261017_handbuilt/superposition/level2/cheap/../switching/prop4.py:48: RuntimeWarning: invalid value encountered in multiply
+  ex2 = 1 + (np.nan_to_num(e[:-1] * norm.pdf(e[:-1])) - np.nan_to_num(e[1:] * norm.pdf(e[1:]))) / pc
+ARC G 6: 90.61% (true 95.32)  transitions 2.55e+05  final Gaussians 2.38e+04  1s  peak 0.6 GB
+ARC G 10: 82.05% (true 95.32)  transitions 1.11e+06  final Gaussians 9.42e+04  4s  peak 0.6 GB
+ARC G 16: 85.10% (true 95.32)  transitions 3.49e+06  final Gaussians 2.45e+05  10s  peak 0.7 GB
+ARC G 24: 95.70% (true 95.32)  transitions 1.31e+07  final Gaussians 1e+06  44s  peak 0.9 GB
+114 G 6: 79.56% (true 89.79)  transitions 2.09e+05  final Gaussians 1.89e+04  1s  peak 0.9 GB
+114 G 10: 78.12% (true 89.79)  transitions 8.96e+05  final Gaussians 7.19e+04  3s  peak 0.9 GB
+114 G 16: 74.59% (true 89.79)  transitions 3.47e+06  final Gaussians 2.56e+05  10s  peak 0.9 GB
+114 G 24: 72.34% (true 89.79)  transitions 1.05e+07  final Gaussians 6.97e+05  24s  peak 0.9 GB
+203 G 6: 90.29% (true 89.88)  transitions 1.67e+05  final Gaussians 1.37e+04  1s  peak 0.9 GB
+203 G 10: 91.53% (true 89.88)  transitions 6.98e+05  final Gaussians 4.96e+04  2s  peak 0.9 GB
+203 G 16: 91.73% (true 89.88)  transitions 2.75e+06  final Gaussians 1.84e+05  8s  peak 0.9 GB
+203 G 24: 91.02% (true 89.88)  transitions 9.12e+06  final Gaussians 5.88e+05  27s  peak 0.9 GB

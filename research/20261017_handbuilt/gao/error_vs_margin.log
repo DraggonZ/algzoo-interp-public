@@ -1,0 +1,45 @@
+trained trained: true values + noise   true values + noise 0.001                  median error/margin     0.0471  accuracy 0.953
+trained trained: true values + noise   true values + noise 0.003                  median error/margin      0.141  accuracy 0.948
+trained trained: true values scaled    all 16 scaled 1.01                         median error/margin      0.399  accuracy 0.913
+trained trained: true values + noise   true values + noise 0.01                   median error/margin      0.465  accuracy 0.907
+trained trained: true values scaled    neuron 7 scaled 1.01                       median error/margin      0.501  accuracy 0.910
+trained trained: true values scaled    all 16 scaled 1.02                         median error/margin      0.821  accuracy 0.859
+trained trained: true values scaled    neuron 7 scaled 1.02                       median error/margin       0.99  accuracy 0.813
+trained trained: true values + noise   true values + noise 0.03                   median error/margin       1.36  accuracy 0.736
+trained trained: true values scaled    all 16 scaled 1.05                         median error/margin       2.16  accuracy 0.717
+trained trained: true values scaled    neuron 7 scaled 1.05                       median error/margin       2.35  accuracy 0.588
+trained trained: true values + noise   true values + noise 0.1                    median error/margin       4.23  accuracy 0.403
+trained trained: true values scaled    neuron 7 scaled 1.10                       median error/margin        4.3  accuracy 0.409
+trained trained: true values scaled    all 16 scaled 1.10                         median error/margin        4.6  accuracy 0.556
+twin    exact rules + noise            exact rules                                median error/margin    0.00928  accuracy 0.960
+twin    exact rules + noise            exact rules                                median error/margin    0.00928  accuracy 0.960
+twin    exact rules + noise            exact + noise 1e-10 x typical value        median error/margin     0.0111  accuracy 0.959
+twin    exact rules + noise            exact + noise 1e-09 x typical value        median error/margin     0.0298  accuracy 0.954
+twin    exact rules + noise            exact + noise 1e-08 x typical value        median error/margin      0.141  accuracy 0.916
+twin    right idea, one constant off   clock angle 45.5 deg                       median error/margin       0.35  accuracy 0.762
+twin    right idea, one constant off   clock angle 45.5 deg + noise 1e-09         median error/margin      0.353  accuracy 0.761
+twin    right idea, one constant off   clock angle 46 deg, not 45                 median error/margin      0.624  accuracy 0.733
+twin    right idea, one constant off   clock angle 46 deg, not 45 + noise 1e-09   median error/margin      0.631  accuracy 0.733
+twin    right idea, one constant off   gate cutoff 0.765, not 0.75                median error/margin      0.676  accuracy 0.931
+twin    right idea, one constant off   gate cutoff 0.765, not 0.75 + noise 1e-09  median error/margin      0.677  accuracy 0.931
+twin    exact rules + noise            exact + noise 1e-07 x typical value        median error/margin        1.1  accuracy 0.793
+twin    right idea, one constant off   clock angle 45.5 deg + noise 1e-07         median error/margin        1.3  accuracy 0.713
+twin    right idea, one constant off   clock angle 46 deg, not 45 + noise 1e-07   median error/margin       1.54  accuracy 0.693
+twin    right idea, one constant off   gate cutoff 0.765, not 0.75 + noise 1e-07  median error/margin       1.56  accuracy 0.919
+twin    conceptual misreading          wrong clock height (largest, not jump)     median error/margin       3.48  accuracy 0.696
+twin    conceptual misreading          wrong clock height + noise 1e-10           median error/margin       3.48  accuracy 0.696
+twin    conceptual misreading          wrong clock height + noise 1e-09           median error/margin       3.48  accuracy 0.696
+twin    conceptual misreading          flip term left out                         median error/margin       3.53  accuracy 0.594
+twin    conceptual misreading          wrong clock height + noise 1e-08           median error/margin       3.53  accuracy 0.695
+twin    conceptual misreading          wrong clock height + noise 1e-07           median error/margin       4.32  accuracy 0.683
+twin    right idea, one constant off   store gain 2% off                          median error/margin       9.03  accuracy 0.591
+twin    right idea, one constant off   store gain 2% off + noise 1e-09            median error/margin       9.03  accuracy 0.591
+twin    right idea, one constant off   store gain 2% off + noise 1e-07            median error/margin       9.37  accuracy 0.578
+twin    exact rules + noise            exact + noise 1e-06 x typical value        median error/margin       10.7  accuracy 0.726
+twin    conceptual misreading          wrong clock height + noise 1e-06           median error/margin       13.6  accuracy 0.657
+twin    right idea, one constant off   clock angle 45.5 deg + noise 1e-05         median error/margin        106  accuracy 0.635
+twin    exact rules + noise            exact + noise 1e-05 x typical value        median error/margin        106  accuracy 0.639
+twin    right idea, one constant off   clock angle 46 deg, not 45 + noise 1e-05   median error/margin        106  accuracy 0.631
+twin    right idea, one constant off   gate cutoff 0.765, not 0.75 + noise 1e-05  median error/margin        109  accuracy 0.658
+twin    conceptual misreading          wrong clock height + noise 1e-05           median error/margin        112  accuracy 0.601
+twin    right idea, one constant off   store gain 2% off + noise 1e-05            median error/margin        117  accuracy 0.510

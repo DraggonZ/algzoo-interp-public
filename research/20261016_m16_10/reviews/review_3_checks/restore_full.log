@@ -1,0 +1,5 @@
+base sampled accuracy 0.9533
+sigma 0.005: share of full accuracy loss removed by restoring the comparator block 0.64
+sigma 0.01: share of full accuracy loss removed by restoring the comparator block 0.60
+sigma 0.02: share of full accuracy loss removed by restoring the comparator block 0.42
+sigma all: share of full accuracy loss removed by restoring the comparator block 0.49

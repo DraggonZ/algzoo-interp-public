@@ -1,0 +1,18 @@
+share of variance explained (R^2) where the neuron is on; columns: neurons 1, 6, 7, 8
+  largest so far                           0.070  0.077  0.115  -0.008
+  + timer angle                            0.120  0.132  0.128  0.051
+  + second-largest so far                  0.123  0.137  0.153  0.070
+  + last input                             0.915  0.956  0.996  0.935
+  + second harmonic of the angle           0.948  0.964  0.996  0.951
+  angle + last input, no second-largest    0.903  0.944  0.995  0.850
+share of time on: [0.77 0.78 0.82 0.73]
+directions of joint activity, share of variance: [0.92  0.041 0.022 0.017]
+
+after removing the last input and the largest so far: share of the REMAINING variance explained
+  timer angle                              0.48  0.62  0.75  0.41
+  second-largest so far                    0.12  0.09  0.01  0.43
+  angle + second-largest                   0.54  0.70  0.81  0.74
+  angle + second-largest + 2nd harmonic    0.72  0.75  0.81  0.81
+directions of what is left (all four on), share: [0.561 0.226 0.188 0.025]
+weights into neuron 5 from neurons 1, 6, 7, 8: [-0.    0.02 -0.59 -0.85]  from 2, 4: [-0.03  1.19]  input weight: -0.28
+input weights of 1, 6, 7, 8: [-10.56 -11.   -13.17 -12.31]

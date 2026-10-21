@@ -1,0 +1,2 @@
+nodes 10^3 (720,000 runs): interpolated 95.941%, network on the same fine points 95.304%; interpolation right & network wrong / the reverse, points: m2<0 0.228/0.041; a<0.05 0.671/0.454; b<0.05 0.295/0.056; elsewhere 0.187/0.193
+nodes 20^3 (5,760,000 runs): interpolated 95.767%, network on the same fine points 95.314%; interpolation right & network wrong / the reverse, points: m2<0 0.148/0.033; a<0.05 0.243/0.047; b<0.05 0.120/0.018; elsewhere 0.076/0.036

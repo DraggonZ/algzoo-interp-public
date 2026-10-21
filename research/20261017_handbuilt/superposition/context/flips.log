@@ -1,0 +1,13 @@
+571,916 near ties; network names the third on 20.8%
+redraw all seven smaller numbers: decision flips on 17.3% (repeat 17.3%)
+set the smaller numbers to their mean: 15.0%
+redraw the smaller numbers right after the earlier contender    (present in  70% of lists, 1.0 per list): flips   3.4%
+redraw the smaller numbers right after the later contender      (present in  70% of lists, 1.0 per list): flips   3.1%
+redraw the smaller numbers right after the largest              (present in  70% of lists, 1.0 per list): flips   4.2%
+redraw the smaller numbers right before the earlier contender   (present in  70% of lists, 1.0 per list): flips   4.5%
+redraw the smaller numbers between the contenders               (present in  78% of lists, 3.0 per list): flips   8.4%
+redraw the smaller numbers before everything                    (present in  70% of lists, 2.5 per list): flips   7.4%
+redraw the smaller numbers after everything                     (present in  70% of lists, 2.5 per list): flips   4.2%
+largest moved to a random smaller number's slot (swapped; 70% of lists): flips 19.1% (counted over all lists)
+largest's value x0.9: flips 17.2%
+largest's value x1.1: flips 5.4%

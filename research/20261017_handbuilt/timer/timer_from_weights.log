@@ -1,0 +1,22 @@
+ARC    acc 0.953 | common pattern 0.12 of steps, off: 4 5 9         | best dial pair: turn 124.8 deg, shrink 0.837/step, dial right for 5/8 positions
+zoo0   acc 0.909 | common pattern 0.59 of steps, off: 5             | best dial pair: turn  20.9 deg, shrink 0.601/step, dial right for 6/8 positions
+zoo1   acc 0.880 | common pattern 0.29 of steps, off: 10 14         | best dial pair: turn  27.9 deg, shrink 0.882/step, dial right for 6/8 positions
+zoo2   acc 0.947 | common pattern 0.25 of steps, off: 10 15         | best dial pair: turn 109.5 deg, shrink 0.964/step, dial right for 4/8 positions
+zoo3   acc 0.931 | common pattern 0.18 of steps, off: 9             | best dial pair: turn  99.9 deg, shrink 0.989/step, dial right for 6/8 positions
+zoo4   acc 0.888 | common pattern 0.60 of steps, off: 12 15         | best dial pair: turn  41.1 deg, shrink 0.761/step, dial right for 5/8 positions
+s100   acc 0.948 | common pattern 0.26 of steps, off: 0 15          | best dial pair: turn 158.2 deg, shrink 0.939/step, dial right for 6/8 positions
+s101   acc 0.913 | common pattern 0.22 of steps, off: 11            | best dial pair: turn  48.6 deg, shrink 0.796/step, dial right for 5/8 positions
+s102   acc 0.913 | common pattern 0.40 of steps, off: 0             | best dial pair: turn 103.4 deg, shrink 0.990/step, dial right for 5/8 positions
+s103   acc 0.952 | common pattern 0.38 of steps, off: 11 12 14      | best dial pair: turn  15.4 deg, shrink 0.861/step, dial right for 7/8 positions
+s104   acc 0.911 | common pattern 0.47 of steps, off: 5             | best dial pair: turn  24.1 deg, shrink 0.604/step, dial right for 6/8 positions
+s105   acc 0.898 | common pattern 0.34 of steps, off: 3 5           | best dial pair: turn  46.6 deg, shrink 0.832/step, dial right for 5/8 positions
+s106   acc 0.948 | common pattern 0.42 of steps, off: 3 12          | best dial pair: turn  52.6 deg, shrink 0.759/step, dial right for 5/8 positions
+s107   acc 0.921 | common pattern 0.33 of steps, off: 9             | best dial pair: turn  40.4 deg, shrink 0.716/step, dial right for 6/8 positions
+s108   acc 0.938 | common pattern 0.13 of steps, off: 2 14          | best dial pair: turn  51.1 deg, shrink 0.805/step, dial right for 5/8 positions
+s109   acc 0.941 | common pattern 0.55 of steps, off: 6 8           | best dial pair: turn  48.2 deg, shrink 0.619/step, dial right for 4/8 positions
+s110   acc 0.911 | common pattern 0.25 of steps, off: 9 10 15       | best dial pair: turn  97.4 deg, shrink 0.922/step, dial right for 6/8 positions
+s111   acc 0.960 | common pattern 0.09 of steps, off: 0 7 10        | best dial pair: turn  39.3 deg, shrink 0.706/step, dial right for 4/8 positions
+s112   acc 0.914 | common pattern 0.44 of steps, off: 5 7           | best dial pair: turn  30.3 deg, shrink 0.742/step, dial right for 7/8 positions
+s113   acc 0.904 | common pattern 0.31 of steps, off: 1             | best dial pair: turn  13.9 deg, shrink 0.824/step, dial right for 6/8 positions
+s114   acc 0.897 | common pattern 0.41 of steps, off: 0 13          | best dial pair: turn  39.1 deg, shrink 0.566/step, dial right for 6/8 positions
+s115   acc 0.952 | common pattern 0.41 of steps, off: 11 15         | best dial pair: turn 157.6 deg, shrink 0.952/step, dial right for 7/8 positions

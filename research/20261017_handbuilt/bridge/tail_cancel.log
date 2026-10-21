@@ -1,0 +1,25 @@
+record at 1, overtaken at 4 (n=26794); positions 0-9
+   memory     53.4    75.1    22.9   -38.7   -38.0   -38.1   -11.6    13.8   -10.6   -37.8
+   cancel    -39.9   -40.5   -15.4    30.0    44.6    36.2    10.5   -20.4     3.7    -8.2
+   total      12.9    35.0    11.3    -7.2     5.6     0.3    -1.4    -1.5   -12.9   -44.9
+   after the overtaking (positions 5-9): memory sum  -84.3, cancellers sum   21.8, total  -60.4
+record at 2, overtaken at 5 (n=22729); positions 0-9
+   memory     25.4    79.2    85.5    11.8   -44.0   -47.6   -44.4    -7.1   -19.4   -44.8
+   cancel    -36.4   -71.8   -62.3    -7.2    42.3    64.4    46.7     8.8    21.6    -2.1
+   total      -8.1    11.2    30.7     8.8    -6.2    13.8     1.2     0.0     0.7   -46.1
+   after the overtaking (positions 6-9): memory sum -115.8, cancellers sum   75.0, total  -44.2
+record at 3, overtaken at 5 (n=22391); positions 0-9
+   memory     -9.8    50.0    71.4    36.9   -30.8   -38.7   -40.7     1.9    -8.7   -34.2
+   cancel    -41.4   -76.5   -64.7    -5.1    47.6    68.4    48.3     7.4    22.6    -1.9
+   total     -44.1   -17.4    15.8    34.0    14.5    25.7     5.9     8.6    12.2   -34.9
+   after the overtaking (positions 6-9): memory sum  -81.7, cancellers sum   76.4, total   -8.3
+record at 2, overtaken at 7 (n=17232); positions 0-9
+   memory    -53.1    36.7    91.8    80.2    12.3   -67.0   -61.6   -14.6   -15.1   -15.5
+   cancel     25.7   -16.0   -47.5   -55.3   -23.8    16.9    39.8    43.7    18.2    -2.9
+   total     -37.6    19.4    46.8    29.2   -10.6   -49.9   -25.3    24.5     3.4   -18.0
+   after the overtaking (positions 8-9): memory sum  -30.6, cancellers sum   15.3, total  -14.7
+record at 4, overtaken at 7 (n=16903); positions 0-9
+   memory   -110.7   -16.8    53.2    87.5    67.1    -7.8   -41.8   -24.2    -4.9   -25.2
+   cancel     33.6   -24.4   -65.7   -75.4   -34.1    24.2    54.1    59.8    29.5    -3.1
+   total     -81.2   -43.7    -5.5    23.2    38.6    16.2    12.0    30.5    19.4   -26.4
+   after the overtaking (positions 8-9): memory sum  -30.1, cancellers sum   26.4, total   -7.0

@@ -1,0 +1,8 @@
+neuron group            base acc fixed acc  (fix adds)
+     2 store+detector      0.764     0.941  (m1pos+m2)
+     4 store+detector      0.935     0.953  (m1pos+m2)
+     1 cancellers          0.843     0.932  (m2pos)
+     6 cancellers          0.899     0.923  (m2pos)
+     7 cancellers          0.846     0.940  (m2pos)
+     8 cancellers          0.780     0.936  (m2pos)
+     5 keep gate           0.832     0.915  (m1pos)

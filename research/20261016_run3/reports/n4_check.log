@@ -1,0 +1,2 @@
+new largest: corr(neuron 4, excess over running largest) 0.778; slope 6.29 per unit (input weight 10.16)
+not a new largest: neuron 4 is zero in 0.988 of steps; mean 0.009

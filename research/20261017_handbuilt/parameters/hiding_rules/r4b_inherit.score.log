@@ -1,0 +1,11 @@
+score_rule.py sha256 913ce430a8f8; rule r4b_inherit.py; fit seed 101, score seed 202
+
+28 free constants, 2 kinds (feature, feedback); structure 59 bits (23 declared + 6 x 6 spreads); lookup table 2369 bits
+  share 0.001: constants 216 bits (7.7 each) + structure 59 + rest 2019; net +74
+  share 0.002: constants 202 bits (7.2 each) + structure 59 + rest 2035; net +73
+  share 0.005: constants 184 bits (6.6 each) + structure 59 + rest 2086; net +40
+
+| net bits | share | rms 1, 6, 7, 8 | cosine 1, 6, 7, 8 | joint KL of 4 rows | KL, 4 neurons replaced | constants |
+|---|---|---|---|---|---|---|
+| +74 | 0.001 | 0.204, 0.171, 0.151, 0.268 | 0.9995, 0.9946, 0.9969, 0.9979 | 0.694 | 0.247 | 28 |
+NET +74.1

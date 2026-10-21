@@ -1,0 +1,15 @@
+vote at the newest slot (minus best other) by where the new input falls:
+  new largest (x > M): median  -28.9; positive 0.01
+  new second (m < x < M): median    5.4; positive 0.76
+  below second (x < m): median  -66.3; positive 0.01
+for inputs below the largest: vote by x minus the current second (bins):
+  x - second in [-3.0,-1.0): median vote -100.2, newest is top 0.00, n 498839
+  x - second in [-1.0,-0.3): median vote  -42.0, newest is top 0.00, n 354221
+  x - second in [-0.3,-0.1): median vote  -13.5, newest is top 0.00, n 100168
+  x - second in [-0.1,+0.0): median vote   -3.6, newest is top 0.14, n 47993
+  x - second in [+0.0,+0.1): median vote    1.8, newest is top 0.67, n 44509
+  x - second in [+0.1,+0.3): median vote    5.3, newest is top 0.75, n 71137
+  x - second in [+0.3,+1.0): median vote    7.5, newest is top 0.78, n 124308
+  x - second in [+1.0,+3.0): median vote    7.2, newest is top 0.80, n 45040
+
+old second's score change when a new second arrives: median -1.4; when an input below the second arrives: -0.6

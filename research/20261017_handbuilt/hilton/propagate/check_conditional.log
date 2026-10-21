@@ -1,0 +1,12 @@
+truth: mean P(right | top three) 0.9511  (share of conditions with P < 0.5: 0.040)
+full                   mean 0.3935  mean abs error 0.5628  corr 0.200  worst 0.945
+no cross-cov           mean 0.1234  mean abs error 0.8296  corr 0.075  worst 0.990
+background mean only   mean 0.9467  mean abs error 0.0341  corr 0.854  worst 0.850
+  worst: [9 2 4] [1.25 1.2  1.07] truth 0.988 full 0.044 mean-only 1.0
+  worst: [9 3 0] [1.62 1.06 1.02] truth 0.993 full 0.049 mean-only 1.0
+  worst: [8 2 0] [1.33 0.75 0.53] truth 1.0 full 0.057 mean-only 1.0
+  worst: [4 1 8] [0.64 0.55 0.47] truth 1.0 full 0.057 mean-only 1.0
+  worst: [8 1 0] [1.5  1.04 0.89] truth 0.998 full 0.059 mean-only 1.0
+  worst: [6 1 4] [1.49 1.22 1.19] truth 0.998 full 0.066 mean-only 1.0
+  worst: [7 2 4] [1.53 1.4  1.37] truth 1.0 full 0.069 mean-only 1.0
+  worst: [8 3 4] [0.8  0.42 0.29] truth 1.0 full 0.075 mean-only 1.0

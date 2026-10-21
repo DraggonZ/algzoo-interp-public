@@ -1,0 +1,13 @@
+full-range handling: zero
+trained models (primary check):
+  example    true 0.9531 estimate 0.9451 error -0.8 points; cost 13293 samples
+  zoo_seed0  true 0.9100 estimate 0.7804 error -13.0 points; cost 7609 samples
+  zoo_seed1  true 0.8802 estimate 0.7565 error -12.4 points; cost 11571 samples
+  zoo_seed2  true 0.9485 estimate 0.9293 error -1.9 points; cost 13375 samples
+  zoo_seed3  true 0.9321 estimate 0.8972 error -3.5 points; cost 10366 samples
+  zoo_seed4  true 0.8896 estimate 0.8454 error -4.4 points; cost 8234 samples
+noisy copies (diagnostic):
+  σ=0.005: RMSE 0.0145 bias +0.0042; cost 13058 samples; sampling RMSE at that cost 0.0025
+  σ=0.01: RMSE 0.0283 bias +0.0133; cost 13014 samples; sampling RMSE at that cost 0.0034
+  σ=0.02: RMSE 0.0535 bias +0.0153; cost 12686 samples; sampling RMSE at that cost 0.0042
+  copies with accuracy >= 0.6 (85): RMSE 0.0360

@@ -1,0 +1,9 @@
+ARC                                                  right  95.70% | ARC's wrong choices reproduced 100.0% (names largest 100.0%, third 100.0%) | near ties third wins  21.1%
+ARC's per-order rules (36 numbers)                   right  99.96% | ARC's wrong choices reproduced   0.4% (names largest  1.0%, third  0.2%) | near ties third wins   0.0%
+ARC's per-order rules + borrowed leftover            right  88.61% | ARC's wrong choices reproduced  28.2% (names largest 15.2%, third 32.9%) | near ties third wins  25.4%
+v19                                                  right  96.27% | ARC's wrong choices reproduced   7.5% (names largest  2.9%, third  9.2%) | near ties third wins   7.5%
+v19 + borrowed leftover                              right  64.28% | ARC's wrong choices reproduced  50.4% (names largest 22.8%, third 60.4%) | near ties third wins  47.0%
+v19's third-vs-second, ARC's largest-vs-second rule  right  96.29% | ARC's wrong choices reproduced   7.1% (names largest  0.9%, third  9.3%) | near ties third wins   7.5%
+  + borrowed leftover                                right  72.33% | ARC's wrong choices reproduced  48.7% (names largest 11.5%, third 62.2%) | near ties third wins  49.1%
+ARC's third-vs-second rule, v19's largest-vs-second  right  99.88% | ARC's wrong choices reproduced   1.6% (names largest  5.5%, third  0.2%) | near ties third wins   0.0%
+  + borrowed leftover                                right  77.48% | ARC's wrong choices reproduced  30.5% (names largest 28.3%, third 31.3%) | near ties third wins  23.8%

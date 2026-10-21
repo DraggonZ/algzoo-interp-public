@@ -1,0 +1,10 @@
+ARC                  accuracy on 1,000,000 random lists: 95.29%  (neurons: 16)
+v19 kappa 0.5 (16)   accuracy on 1,000,000 random lists: 94.18%  (neurons: 16)
+v22a linear (46)     accuracy on 1,000,000 random lists: 94.18%  (neurons: 46)
+v22a (50)            accuracy on 1,000,000 random lists: 94.17%  (neurons: 50)
+
+network                               acc ARC mistakes: all     L     T | near ties, third wins: all | by x_L/x_S <1.1 1.1-1.25 1.25-1.5 1.5-2 2-3 >3 | by order LST LTS SLT TLS STL TSL
+v19 kappa 0.5 (16)                 95.07%              7.2%  0.5%  5.7% |   7.2% |    7    7    7    7    7    8 |    0    0    0    1   42    1
+v22a linear (46)                   95.07%              7.8%  1.1%  5.8% |   7.2% |    7    7    7    7    7    8 |    0    0    0    1   42    1
+v22a (50)                          95.06%              8.2%  2.9%  5.8% |   7.2% |    7    7    7    7    7    8 |    0    0    0    1   42    1
+5 trained (family)                 95.82%             26.4% 25.5% 28.0% |  20.9% |   23   19   19   20   22   29 |   26   18   24   20   18   21

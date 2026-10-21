@@ -1,0 +1,5 @@
+(1) 179862 random lists; answer = the largest's position: no intervention 0.9%, silence 1, 6, 7, 8 69.5%, silence four random others 5.1%
+    silenced 1-1 steps after the largest: 57.7% (n=56245)
+    silenced 2-4 steps after the largest: 66.7% (n=83323)
+    silenced 5-9 steps after the largest: 91.6% (n=40294)
+(2) 100092 random lists with the second before the largest; network right: no intervention 95.5%, restore 1, 6, 7, 8 15.9%, restore four random others 91.9%

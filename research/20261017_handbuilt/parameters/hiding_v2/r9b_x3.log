@@ -1,0 +1,9 @@
+hiding                                   beta 0.638 gain +7.6
+memory                                   beta 0.638 gain -5.0
+hiding+memory                            beta 0.638 gain -0.6
+hiding                                   beta 0.300 gain +6.9
+hiding                                   beta 0.500 gain +8.7
+hiding                                   beta 0.800 gain +4.4
+row 1 memory + fresh-store memory: -4.1
+row 6 memory + fresh-store memory: +1.5
+row 8 memory + fresh-store memory: -4.8

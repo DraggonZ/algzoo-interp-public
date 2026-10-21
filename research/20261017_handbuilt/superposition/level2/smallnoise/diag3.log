@@ -1,0 +1,8 @@
+random conditions: truth 0.9513; mistakes per list naming the largest 0.0096, the third 0.0306, a smaller number 0.0085
+  oracle Gaussian, nine leads        mean 0.9314 bias -0.0199 mean abs error 0.0230
+  oracle Gaussian, two leads only    mean 0.9551 bias +0.0038 mean abs error 0.0080
+  empirical: P(two leads ok) x P(other seven ok) mean 0.9510 (independence check)
+near-tie conditions: truth 0.8755; mistakes per list naming the largest 0.0207, the third 0.0932, a smaller number 0.0106
+  oracle Gaussian, nine leads        mean 0.8463 bias -0.0292 mean abs error 0.0359
+  oracle Gaussian, two leads only    mean 0.8841 bias +0.0086 mean abs error 0.0178
+  empirical: P(two leads ok) x P(other seven ok) mean 0.8746 (independence check)

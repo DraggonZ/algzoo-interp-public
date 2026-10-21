@@ -1,0 +1,18 @@
+lead shift, in units of the second’s vote (median)                               ARC         v18         v19        v23f         v23 v23 fade.99
+memory x0.95 step 5, earlier minus later (2nd early)                          +0.036      -2.910      -2.909      +0.244      +0.273      +0.110
+memory x1.05 step 5, earlier minus later (2nd early)                          -0.040      +2.910      +2.909      -0.244      -0.273      -0.110
+memory x0.95 step 5, earlier minus later (3rd early)                          +0.021      -2.925      -2.921      +0.248      +0.277      +0.121
+memory x1.05 step 5, earlier minus later (3rd early)                          -0.022      +2.925      +2.921      -0.248      -0.277      -0.121
+store x1.01 step 5, earlier minus later (2nd early)                           +0.036      -0.573      -0.573      +0.057      +0.057      +0.024
+store x1.01 step 5, earlier minus later (3rd early)                           +0.016      -0.573      -0.573      +0.057      +0.057      +0.024
+keep x0.95 all steps, step-9 contender minus other (2nd at 9)                 +0.013      +0.048      +0.073      +0.124      +0.024      +0.024
+keep x1.05 all steps, step-9 contender minus other (2nd at 9)                 -0.011      -0.048      -0.073      -0.124      -0.024      -0.024
+keep x0.95 all steps, step-9 contender minus other (3rd at 9)                 +0.015      +0.049      +0.073      +0.124      +0.025      +0.025
+keep x1.05 all steps, step-9 contender minus other (3rd at 9)                 -0.013      -0.049      -0.073      -0.124      -0.025      -0.025
+hiding x0.9 step 5, largest minus second                                      +0.104      +0.108      +0.170      +0.170      +0.178      +0.181
+hiding x0.8 step 5, largest minus second                                      +0.212      +0.216      +0.341      +0.340      +0.356      +0.362
+v18: same sign as ARC in 50% of tests; median ratio of sizes 10.19
+v19: same sign as ARC in 50% of tests; median ratio of sizes 11.38
+v23f: same sign as ARC in 100% of tests; median ratio of sizes 7.50
+v23: same sign as ARC in 100% of tests; median ratio of sizes 2.10
+v23 fade.99: same sign as ARC in 100% of tests; median ratio of sizes 1.90

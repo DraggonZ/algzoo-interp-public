@@ -1,0 +1,6 @@
+K = 1, kept, all four stay on, number is the answer      (0.00): vote per unit median   19.1
+K = 1, kept, all four stay on, number is the third       (0.37): vote per unit median   65.1
+K = 1, kept, all four stay on, number is fourth or lower (0.63): vote per unit median   56.5
+K >= 2, kept, all four stay on, number is the answer      (0.22): vote per unit median   68.5
+K >= 2, kept, all four stay on, number is the third       (0.41): vote per unit median   68.7
+K >= 2, kept, all four stay on, number is fourth or lower (0.38): vote per unit median   68.6

@@ -1,0 +1,17 @@
+
+=== v19: roles = v19's 16 neurons; 16 with a non-zero part after removing shared quantities; 5 single neurons (store, detect, keep, flip, flag); subspaces: clock (3), memory (8)
+dictionary            | unexpl. | per neuron: mean best, >0.9 all, >0.9 single, raw >0.9 | subspaces, smallest canon. corr. with {own size} latents (all latents) | spliced last / every step; noise-matched last / every
+own neurons           |         | 1.00, 16/16, 5/5, 16/16 | clock 1.00 (1.00), memory 1.00 (1.00)  [16 live]
+random rotation       |         | 0.79, 12/16, 4/5, 13/16 | clock 0.00 (0.01), memory 0.00 (1.00)  [16 live]
+principal components  |         | 0.91, 12/16, 4/5,  9/16 | clock 0.00 (0.01), memory 0.99 (1.00)  [16 live]
+SAE 1x k2             |   2.38% | 0.75, 11/16, 3/5,  6/16 | clock 0.00 (0.02), memory 0.00 (0.00) |  10.0 /   9.3;  10.7 /   9.7  [14 live]
+SAE 1x k4             |   0.04% | 0.79, 12/16, 4/5,  3/16 | clock 0.01 (0.06), memory 0.00 (0.02) |   8.1 /  10.4;  10.7 /  10.2  [16 live]
+   per neuron best (shared removed): store=1.00 detect=1.00 keep=1.00 flip=0.16 clock0=0.20 clock1=0.13 clock2=0.08 flag=1.00 mem0=1.00 mem1=1.00 mem2=1.00 mem3=1.00 mem4=1.00 mem5=1.00 mem6=1.00 mem7=1.00
+SAE 1x k8             |   0.03% | 0.82, 11/16, 3/5, 15/16 | clock 0.00 (0.03), memory 0.00 (0.19) |  12.4 /  10.0;  10.6 /  10.1  [16 live]
+SAE 2x k2             |   2.22% | 0.75, 11/16, 3/5,  6/16 | clock 0.00 (0.03), memory 0.00 (0.01) |  10.5 /  10.1;  10.5 /   9.7  [23 live]
+SAE 2x k4             |   0.04% | 0.82, 11/16, 3/5,  6/16 | clock 0.00 (0.04), memory 0.00 (0.04) |  12.5 /  10.4;  10.8 /  10.1  [28 live]
+SAE 2x k8             |   0.02% | 0.86, 12/16, 4/5,  7/16 | clock 0.01 (0.02), memory 0.01 (0.20) |  12.1 /   9.6;  10.7 /  10.2  [31 live]
+SAE 4x k2             |   2.09% | 0.75, 11/16, 3/5,  6/16 | clock 0.00 (0.02), memory 0.00 (0.01) |  10.3 /  10.1;  10.5 /   9.8  [20 live]
+SAE 4x k4             |   0.02% | 0.89, 12/16, 4/5,  3/16 | clock 0.00 (0.01), memory 0.01 (0.05) |  10.3 /  10.7;  10.8 /  10.0  [39 live]
+SAE 4x k8             |   0.01% | 0.87, 12/16, 4/5, 16/16 | clock 0.00 (0.07), memory 0.05 (0.32) |  11.0 /   9.8;  10.6 /  10.1  [54 live]
+   per neuron best (shared removed): store=1.00 detect=1.00 keep=0.98 flip=0.53 clock0=0.40 clock1=0.58 clock2=0.43 flag=1.00 mem0=1.00 mem1=1.00 mem2=1.00 mem3=1.00 mem4=1.00 mem5=1.00 mem6=1.00 mem7=1.00

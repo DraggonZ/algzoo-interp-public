@@ -1,0 +1,32 @@
+1 extra step(s), input 0: names second-1:  94.5% | the second:   0.7% | largest-1:   1.0% | largest:  11.2%
+      second at 1: names 0 on  95.9%
+      second at 2: names 1 on  92.6%
+      second at 3: names 2 on  95.1%
+      second at 4: names 3 on  95.8%
+      second at 5: names 4 on  91.9%
+      second at 6: names 5 on  95.3%
+      second at 7: names 6 on  95.0%
+      second at 8: names 7 on  93.7%
+      second at 9: names 8 on  95.2%
+2 extra step(s), input 0: names second-2:  92.8% | the second:   0.9% | largest-2:   1.9% | largest:  10.7%
+      second at 2: names 0 on  92.6%
+      second at 3: names 1 on  88.6%
+      second at 4: names 2 on  94.0%
+      second at 5: names 3 on  91.9%
+      second at 6: names 4 on  89.6%
+      second at 7: names 5 on  95.8%
+      second at 8: names 6 on  95.1%
+      second at 9: names 7 on  94.3%
+3 extra step(s), input 0: names second-3:  90.8% | the second:   1.3% | largest-3:   3.0% | largest:  10.4%
+      second at 3: names 0 on  89.2%
+      second at 4: names 1 on  87.6%
+      second at 5: names 2 on  88.5%
+      second at 6: names 3 on  88.3%
+      second at 7: names 4 on  90.0%
+      second at 8: names 5 on  95.9%
+      second at 9: names 6 on  96.1%
+-- an 11th number appended (prediction, written first: the network treats it as an eleventh number, with every old vote one step older. A huge one becomes the new largest and reveals the old largest, so it should name largest-1; one between the largest and second becomes the second, at the last slot, so it should name position 9; a tiny one changes nothing but the shift, so second-1)
+appended huge (10)                   : names largest-1  81.2% | position 9   0.0% | second-1  15.8%
+appended twice the largest           : names largest-1  95.9% | position 9   0.0% | second-1   8.0%
+appended between largest and second  : names largest-1   1.4% | position 9  94.3% | second-1   4.7%
+appended very negative (-3)          : names largest-1   6.3% | position 9   0.0% | second-1  94.7%

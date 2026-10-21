@@ -1,0 +1,11 @@
+mean readout at the largest's own position, and at offsets -2..+2 (positions in range only), per group:
+   store        -2.99   -0.95   -3.31   +1.81   +8.41   | mean over all positions   -1.51
+   detector     -1.71   -0.29   +4.87   -0.57   +0.14   | mean over all positions   +0.01
+   late gate    +0.12   +0.03   -0.35   -0.13   +0.00   | mean over all positions   -0.00
+   hiding       +7.90  -18.22  -33.16  -34.08  -12.78   | mean over all positions   -2.34
+   memory       -7.64  +22.87  +44.34  +32.97   +1.73   | mean over all positions   -0.02
+all scores                      : argmax names the largest   0.9%, argmin   2.4%
+scores minus hiding readout     : argmax names the largest  43.0%, argmin   2.1%
+scores minus hiding and memory  : argmax names the largest  18.5%, argmin  13.6%
+store readout                   : argmax names the largest  10.0%, argmin  13.6%
+memory readout                  : argmax names the largest  21.8%, argmin   0.0%

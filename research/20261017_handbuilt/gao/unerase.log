@@ -1,0 +1,4 @@
+third at record + 1: 19810 lists; accuracy normal 0.970, erasure undone 0.474; answers now naming the third 0.514 (was 0.023); share size median 5.00
+third at record + 2: 15333 lists; accuracy normal 0.981, erasure undone 0.834; answers now naming the third 0.084 (was 0.011); share size median 3.66
+control, record + 1 lists, same-size share in a random direction: accuracy 0.618 (range 0.613-0.622)
+control, record + 1 lists, same-size share in a random direction: accuracy 0.618 (range 0.613-0.622); naming the third 0.141

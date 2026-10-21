@@ -1,0 +1,7 @@
+score_memory_rule.py sha256 d6caf822e120; rule snap42_compensated.py
+296 weights covered, 69 constants, 3 kinds; relative weight error 0.0747; structure 139 bits; lookup table 2369 bits
+  share 0.001: constants 456 bits (6.6 each) + structure 139 + rest 1440; net +333
+  share 0.002: constants 426 bits (6.2 each) + structure 139 + rest 1452; net +352
+  share 0.005: constants 385 bits (5.6 each) + structure 139 + rest 1494; net +350
+KL from ARC 0.0232 (budget 0.02); accuracy 0.9460 (ARC 0.9531)
+NET +351.7

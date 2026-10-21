@@ -1,0 +1,4 @@
+keep gate (pooled rule): 93.51%
+late gate (short rule): 93.36%
+late gate (tables): 94.27%
+both gates (keep pooled + late short): 92.65%

@@ -1,0 +1,24 @@
+L1: account + store/detector rule + previous number + late gate (+4 hiding feedback terms; 13 constants per neuron)
+  neuron 1: rms teacher-forced 0.249, recursive 0.334 (5.52x the account); replaced alone: accuracy 0.9031, KL 0.212
+  neuron 6: rms teacher-forced 0.269, recursive 0.279 (7.05x the account); replaced alone: accuracy 0.9356, KL 0.092
+  neuron 7: rms teacher-forced 0.089, recursive 0.140 (4.50x the account); replaced alone: accuracy 0.9053, KL 0.277
+  neuron 8: rms teacher-forced 0.264, recursive 0.439 (4.86x the account); replaced alone: accuracy 0.8499, KL 0.720
+  all four replaced by the group rule: accuracy 0.8513, KL 0.554
+L1 + kept numbers as one wave (+4 hiding feedback terms; 15 constants per neuron)
+  neuron 1: rms teacher-forced 0.219, recursive 0.304 (6.07x the account); replaced alone: accuracy 0.9098, KL 0.173
+  neuron 6: rms teacher-forced 0.253, recursive 0.268 (7.33x the account); replaced alone: accuracy 0.9356, KL 0.093
+  neuron 7: rms teacher-forced 0.089, recursive 0.135 (4.67x the account); replaced alone: accuracy 0.9132, KL 0.195
+  neuron 8: rms teacher-forced 0.243, recursive 0.375 (5.69x the account); replaced alone: accuracy 0.8940, KL 0.420
+  all four replaced by the group rule: accuracy 0.8903, KL 0.342
+L1 + memory-mode waves (+4 hiding feedback terms; 20 constants per neuron)
+  neuron 1: rms teacher-forced 0.239, recursive 0.321 (5.74x the account); replaced alone: accuracy 0.9097, KL 0.178
+  neuron 6: rms teacher-forced 0.240, recursive 0.253 (7.77x the account); replaced alone: accuracy 0.9382, KL 0.081
+  neuron 7: rms teacher-forced 0.071, recursive 0.119 (5.28x the account); replaced alone: accuracy 0.9271, KL 0.168
+  neuron 8: rms teacher-forced 0.257, recursive 0.429 (4.98x the account); replaced alone: accuracy 0.8513, KL 0.709
+  all four replaced by the group rule: accuracy 0.8641, KL 0.474
+L1 + kept-number lags (+4 hiding feedback terms; 22 constants per neuron)
+  neuron 1: rms teacher-forced 0.198, recursive 0.288 (6.41x the account); replaced alone: accuracy 0.9105, KL 0.177
+  neuron 6: rms teacher-forced 0.246, recursive 0.257 (7.65x the account); replaced alone: accuracy 0.9345, KL 0.087
+  neuron 7: rms teacher-forced 0.085, recursive 0.126 (4.98x the account); replaced alone: accuracy 0.9226, KL 0.147
+  neuron 8: rms teacher-forced 0.216, recursive 0.345 (6.18x the account); replaced alone: accuracy 0.9035, KL 0.346
+  all four replaced by the group rule: accuracy 0.9068, KL 0.263

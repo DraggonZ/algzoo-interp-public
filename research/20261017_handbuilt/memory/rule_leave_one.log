@@ -1,0 +1,9 @@
+all eight by rule: 92.8; trained 95.4
+  neuron  0 back on its own sign: acc 93.2 (+0.4 vs all-rule) | step 9 lists -3.4, step 8 -3.5 vs trained | gain by step: +0.0 +0.0 +0.0 -0.0 +0.0 +0.1 +0.1 +0.1 +0.1 +0.1
+  neuron  3 back on its own sign: acc 93.3 (+0.4 vs all-rule) | step 9 lists -4.8, step 8 -4.3 vs trained | gain by step: +0.0 +0.0 +0.0 +0.0 +0.1 +0.1 +0.1 +0.1 +0.0 +0.0
+  neuron 10 back on its own sign: acc 93.6 (+0.7 vs all-rule) | step 9 lists -3.4, step 8 -2.9 vs trained | gain by step: +0.0 +0.0 +0.0 +0.0 +0.0 +0.0 +0.1 +0.2 +0.3 +0.2
+  neuron 11 back on its own sign: acc 93.2 (+0.3 vs all-rule) | step 9 lists -3.8, step 8 -3.4 vs trained | gain by step: +0.0 +0.0 +0.0 +0.0 -0.0 +0.1 +0.0 +0.0 +0.1 +0.1
+  neuron 12 back on its own sign: acc 92.8 (+0.0 vs all-rule) | step 9 lists -4.9, step 8 -4.4 vs trained | gain by step: +0.0 +0.0 +0.0 -0.0 +0.0 +0.0 +0.0 -0.0 -0.0 +0.0
+  neuron 13 back on its own sign: acc 92.8 (+0.0 vs all-rule) | step 9 lists -4.9, step 8 -4.4 vs trained | gain by step: +0.0 +0.0 +0.0 +0.0 -0.0 +0.0 -0.0 -0.0 -0.0 +0.0
+  neuron 14 back on its own sign: acc 93.2 (+0.3 vs all-rule) | step 9 lists -4.5, step 8 -3.8 vs trained | gain by step: +0.0 +0.0 +0.0 +0.0 +0.0 +0.0 +0.1 +0.0 +0.0 +0.1
+  neuron 15 back on its own sign: acc 93.0 (+0.2 vs all-rule) | step 9 lists -4.7, step 8 -4.3 vs trained | gain by step: +0.0 +0.0 +0.0 +0.0 +0.0 +0.1 +0.1 +0.0 +0.0 -0.0

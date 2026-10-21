@@ -1,0 +1,6 @@
+rotating block eigenvalues (angle per step : size): 0:0.99, 0:0.02, 0:0.22, 43:0.94, 43:0.94, 43:0.74, 43:0.74, 83:0.94, 83:0.94, 126:0.82, 126:0.82, 180:0.90
+mode   0 deg (3 eigvals, size 0.99): answers changed  7.62%; new wrong answers by distance from the second: 1:  27 2:  13 3:  10 4:   6 5:   6 6:   9 7:  12 8:   9 9:   8
+mode  43 deg (4 eigvals, size 0.94): answers changed 14.69%; new wrong answers by distance from the second: 1:  11 2:   9 3:  10 4:   8 5:  10 6:  19 7:  17 8:   9 9:   6
+mode  83 deg (2 eigvals, size 0.94): answers changed  4.68%; new wrong answers by distance from the second: 1:  20 2:  15 3:  10 4:  10 5:   7 6:  12 7:  12 8:   7 9:   7
+mode 126 deg (2 eigvals, size 0.82): answers changed  8.84%; new wrong answers by distance from the second: 1:  44 2:  11 3:   3 4:  11 5:   4 6:   6 7:  12 8:   3 9:   6
+mode 180 deg (1 eigvals, size 0.90): answers changed  5.46%; new wrong answers by distance from the second: 1:  54 2:   3 3:   9 4:   4 5:  10 6:   6 7:   9 8:   3 9:   4

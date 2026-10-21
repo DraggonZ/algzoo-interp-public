@@ -1,0 +1,5 @@
+2nd_argmax_16_4_1073741824_bo5.pth: exact 0.99830662, regions 33322, wall 12.8s (instrumented)
+  counted multiply-adds 1.05e+08 = 91,513 samples (enumeration 61,764)
+  uncounted adjacency product 3.92e+07 = 34,007 samples; pair-constraint ANDs 1.85e+07 = 16,068 samples; cuts 602,936
+  qhull Delaunay: 21,285 calls, 168,225 points, 0.9s of 12.8s wall
+  counted + adjacency = 125,520 samples

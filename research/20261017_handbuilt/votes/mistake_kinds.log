@@ -1,0 +1,6 @@
+error rate 0.0470; shares of all mistakes:
+  at most one positive number  0.180   gap under 3%: 0.00, 3-10%: 0.01, 10-40%: 0.05, over 40%: 0.93
+  names the largest            0.154   gap under 3%: 0.90, 3-10%: 0.08, 10-40%: 0.01, over 40%: 0.01
+  names the third              0.608   gap under 3%: 0.55, 3-10%: 0.29, 10-40%: 0.14, over 40%: 0.02
+  names the fourth or lower    0.058   gap under 3%: 0.09, 3-10%: 0.21, 10-40%: 0.22, over 40%: 0.48
+  of 'names the largest' with gap over 40%: second-largest negative or near zero (< 0.2) in 0.81

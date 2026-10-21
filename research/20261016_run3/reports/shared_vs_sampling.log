@@ -1,0 +1,5 @@
+six trained models: cost 1346-1447 samples' worth; estimate RMSE 0.78 points, sampling at the same cost 0.72; ratio of squared errors 1.17
+unseen checkpoints, accuracy below 0.6 (16): cost 1513-1588; estimate RMSE 2.33 points, sampling 1.20; ratio of squared errors 3.75
+unseen checkpoints, 0.6-0.85 (20): cost 1420-1517; estimate RMSE 1.11 points, sampling 1.10; ratio of squared errors 1.02
+unseen checkpoints, above 0.85 (14): cost 1341-1450; estimate RMSE 0.71 points, sampling 0.80; ratio of squared errors 0.78
+unseen checkpoints, all 50 (50): cost 1341-1588; estimate RMSE 1.54 points, sampling 1.06; ratio of squared errors 2.10

@@ -1,0 +1,9 @@
+deterministic (dense quadrature), all low positions: model, true, break-only rule, two-way rule
+  example    true 0.9531 | break-only 0.9380 (-0.0151) | two-way 0.9475 (-0.0056)
+  zoo_seed0  true 0.9100 | break-only 0.7696 (-0.1404) | two-way 0.9005 (-0.0095)
+  zoo_seed1  true 0.8802 | break-only 0.7121 (-0.1682) | two-way 0.8746 (-0.0056)
+  zoo_seed2  true 0.9485 | break-only 0.9339 (-0.0146) | two-way 0.9529 (+0.0044)
+  zoo_seed3  true 0.9321 | break-only 0.9043 (-0.0278) | two-way 0.9308 (-0.0013)
+  zoo_seed4  true 0.8896 | break-only 0.7915 (-0.0981) | two-way 0.8487 (-0.0409)
+  copies break-only RMSE 0.0207 bias -0.0094 corr 0.991 | σ=0.005: 0.0093 σ=0.01: 0.0169 σ=0.02: 0.0302
+  copies two-way    RMSE 0.0314 bias +0.0248 corr 0.993 | σ=0.005: 0.0133 σ=0.01: 0.0286 σ=0.02: 0.0442

@@ -1,0 +1,7 @@
+278,635 right lists; the worst-case move of the smaller numbers by 1.05 r really flips 6%
+second-third gap    0-0.05: flip radius per unit of the second, 10/50/90%: [0.052 0.274 1.098] (n 21,966)
+second-third gap 0.05-0.1 : flip radius per unit of the second, 10/50/90%: [0.101 0.372 1.399] (n 25,326)
+second-third gap  0.1-0.2 : flip radius per unit of the second, 10/50/90%: [0.157 0.47  1.684] (n 49,514)
+second-third gap  0.2-0.5 : flip radius per unit of the second, 10/50/90%: [0.24  0.618 2.089] (n 109,829)
+second-third gap  0.5-1.01: flip radius per unit of the second, 10/50/90%: [0.359 0.957 3.725] (n 62,908)
+radius compared with the gap itself (median of radius/gap): 2.27

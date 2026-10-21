@@ -1,0 +1,7 @@
+network                        0.953487
+own-position pushes only       0.597687
+spill only                     0.074713
+largest  own push per unit: median   -5.5  IQR  -27.5..  -2.6   spill landing on its position: median   29.4
+second   own push per unit: median   43.2  IQR   22.2..  55.5   spill landing on its position: median   -2.1
+third    own push per unit: median   44.8  IQR    6.1..  62.0   spill landing on its position: median   -9.2
+fourth   own push per unit: median   11.3  IQR    0.7..  55.4   spill landing on its position: median   -3.6

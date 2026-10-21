@@ -1,0 +1,8 @@
+share of (new) mistakes by |named - true| = 1, 2, 3-6, 7-9
+  network's own mistakes           n=  9374  1:   22%  2:   14%  3-6:   43%  7-9:   20%
+  S3 hiding difference flattened   n= 36737  1:   46%  2:   21%  3-6:   24%  7-9:    9%
+  neuron 3 readout at its mean     n= 33610  1:   50%  2:   19%  3-6:   22%  7-9:    9%
+  neuron 3 linear                  n=  2898  1:   16%  2:   25%  3-6:   43%  7-9:   16%
+  matched noise in 3               n= 36814  1:   44%  2:   19%  3-6:   28%  7-9:    9%
+  matched noise in 13              n= 38215  1:   54%  2:   14%  3-6:   25%  7-9:    7%
+  matched noise in 12              n= 35868  1:   35%  2:   19%  3-6:   39%  7-9:    8%

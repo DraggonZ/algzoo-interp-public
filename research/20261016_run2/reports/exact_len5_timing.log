@@ -1,0 +1,23 @@
+2nd_argmax_8_5_1073741824_bo5.pth: exact 0.88150498 regions 77304 wrong pieces 236566 ops 1.74e+10 (enumeration 8.38e+08) (356.3s)
+Traceback (most recent call last):
+  File "/data/output/research/algzoo/20261016_run2/scripts/exact_nd.py", line 256, in <module>
+    acc, st = exact_accuracy(params, return_total="--check" in sys.argv, rank=rank)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/output/research/algzoo/20261016_run2/scripts/exact_nd.py", line 237, in exact_accuracy
+    step(R, H, np.zeros((d, n)), 0)
+  File "/data/output/research/algzoo/20261016_run2/scripts/exact_nd.py", line 234, in step
+    step(R2, H2, B * act[:, None], t + 1)
+  File "/data/output/research/algzoo/20261016_run2/scripts/exact_nd.py", line 234, in step
+    step(R2, H2, B * act[:, None], t + 1)
+  File "/data/output/research/algzoo/20261016_run2/scripts/exact_nd.py", line 234, in step
+    step(R2, H2, B * act[:, None], t + 1)
+  [Previous line repeated 2 more times]
+  File "/data/output/research/algzoo/20261016_run2/scripts/exact_nd.py", line 211, in step
+    finish(R, H, A)
+  File "/data/output/research/algzoo/20261016_run2/scripts/exact_nd.py", line 201, in finish
+    acc["wrong"] += cone_measure(P[0], ops)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/output/research/algzoo/20261016_run2/scripts/exact_nd.py", line 155, in cone_measure
+    tot += simplicial_measure(R[simp].T, ops)
+                              ~^^^^^^
+IndexError: index 6 is out of bounds for axis 0 with size 6

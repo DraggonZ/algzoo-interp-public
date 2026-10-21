@@ -1,0 +1,7 @@
+network accuracy 0.955
+cancelling     : plain formulas 0.446; own recurrence with fitted drive 0.919
+memory         : plain formulas 0.604; own recurrence with fitted drive 0.631
+store+detector : plain formulas 0.919; own recurrence with fitted drive 0.936
+gates          : plain formulas 0.624; own recurrence with fitted drive 0.617
+cancelling and memory together as blocks: 0.629
+all four groups as blocks (all 16 replaced): 0.586; all 16 plain formulas: 0.568

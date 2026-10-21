@@ -1,0 +1,23 @@
+== gap parts (as errmodel/gap_parts.py): gap = ARC's (D_T, D_L) minus the network's, votes
+v19 kappa 0.5  own lists     (90.0% of lists) gap RMS 0.728 (D_T 0.695, D_L 0.759); ARC's D RMS 0.95; explained per arrangement 86%, + ratio bins 92%
+v19 kappa 0.5  common lists  (90.0% of lists) gap RMS 0.728 (D_T 0.695, D_L 0.759); ARC's D RMS 0.95; explained per arrangement 86%, + ratio bins 92%
+v22a linear    own lists     (100.0% of lists) gap RMS 0.637 (D_T 0.704, D_L 0.563); ARC's D RMS 1.01; explained per arrangement 86%, + ratio bins 94%
+v22a linear    common lists  (90.0% of lists) gap RMS 0.603 (D_T 0.695, D_L 0.494); ARC's D RMS 0.95; explained per arrangement 82%, + ratio bins 93%
+v22a           own lists     (100.0% of lists) gap RMS 0.632 (D_T 0.704, D_L 0.550); ARC's D RMS 1.01; explained per arrangement 87%, + ratio bins 94%
+v22a           common lists  (90.0% of lists) gap RMS 0.579 (D_T 0.695, D_L 0.434); ARC's D RMS 0.95; explained per arrangement 84%, + ratio bins 93%
+
+== per order (as errmodel/gap_by_order.py), coefficients per unit of (largest, second, third); second positive
+-- all lists kept by each network (v19 drops a largest at 9)
+LST  D_L: ARC [-0.44 -0.03  0.16]  v19 [-0.51 -1.    0.37]  v22a linear [-0.5  0.   0. ]  v22a [-0.43  0.1   0.04] | D_T: ARC [-0.09 -1.35  1.29]  v19 [ 0. -1.  1.]  v22a [ 0. -1.  1.]
+LTS  D_L: ARC [-0.62 -0.29  0.62]  v19 [-0.51 -1.    0.37]  v22a linear [-0.5  -0.3   0.29]  v22a [-0.4  -0.44  0.52] | D_T: ARC [-0.15 -1.65  1.81]  v19 [ 0. -1.  1.]  v22a [ 0. -1.  1.]
+SLT  D_L: ARC [-0.32 -0.06  0.13]  v19 [-0.5  0.5  0. ]  v22a linear [-0.5  0.   0. ]  v22a [-0.43  0.18 -0.01] | D_T: ARC [-0.03 -1.52  1.33]  v19 [-0. -1.  1.]  v22a [-0. -1.  1.]
+STL  D_L: ARC [-1.07  0.54  0.38]  v19 [-0.5  0.5 -0. ]  v22a linear [-0.5  0.   0. ]  v22a [-0.43  0.18 -0.01] | D_T: ARC [-0.09 -1.74  1.68]  v19 [ 0.   -1.08  0.99]  v22a [ 0.01 -1.11  1.  ]
+TLS  D_L: ARC [-0.43 -0.08  0.38]  v19 [-0.49 -0.97  1.43]  v22a linear [-0.5  -0.29  0.28]  v22a [-0.4  -0.43  0.53] | D_T: ARC [-0.02 -2.51  2.42]  v19 [ 0.01 -0.98  0.95]  v22a [ 0.01 -0.98  0.95]
+TSL  D_L: ARC [-1.    0.74  0.18]  v19 [-0.5  0.5  0. ]  v22a linear [-0.5 -0.   0. ]  v22a [-0.43  0.18 -0.01] | D_T: ARC [-0.02 -2.4   2.28]  v19 [ 0.01 -1.13  1.1 ]  v22a [ 0.01 -1.14  1.11]
+-- largest not at 9 (as errmodel/gap_by_order.log)
+LST  D_L: ARC [-0.44 -0.03  0.16]  v19 [-0.51 -1.    0.37]  v22a linear [-0.5  0.   0. ]  v22a [-0.43  0.1   0.04] | D_T: ARC [-0.09 -1.35  1.29]  v19 [ 0. -1.  1.]  v22a [ 0. -1.  1.]
+LTS  D_L: ARC [-0.62 -0.29  0.62]  v19 [-0.51 -1.    0.37]  v22a linear [-0.5  -0.3   0.29]  v22a [-0.4  -0.44  0.52] | D_T: ARC [-0.15 -1.65  1.81]  v19 [ 0. -1.  1.]  v22a [ 0. -1.  1.]
+SLT  D_L: ARC [-0.32 -0.06  0.13]  v19 [-0.5  0.5  0. ]  v22a linear [-0.5  0.   0. ]  v22a [-0.43  0.18 -0.01] | D_T: ARC [-0.03 -1.52  1.33]  v19 [-0. -1.  1.]  v22a [-0. -1.  1.]
+STL  D_L: ARC [-0.61  0.07  0.36]  v19 [-0.5  0.5  0. ]  v22a linear [-0.5  0.   0. ]  v22a [-0.43  0.18 -0.01] | D_T: ARC [-0.07 -1.74  1.63]  v19 [ 0.   -1.08  0.99]  v22a [ 0.   -1.08  0.99]
+TLS  D_L: ARC [-0.43 -0.08  0.38]  v19 [-0.49 -0.97  1.43]  v22a linear [-0.5  -0.29  0.28]  v22a [-0.4  -0.43  0.53] | D_T: ARC [-0.02 -2.51  2.42]  v19 [ 0.01 -0.98  0.95]  v22a [ 0.01 -0.98  0.95]
+TSL  D_L: ARC [-0.54  0.24  0.17]  v19 [-0.5  0.5  0. ]  v22a linear [-0.5  0.   0. ]  v22a [-0.43  0.18 -0.01] | D_T: ARC [-0.03 -2.35  2.19]  v19 [ 0.01 -1.13  1.1 ]  v22a [ 0.01 -1.13  1.1 ]

@@ -1,0 +1,15 @@
+constant guess RMSE 3.26; all 432 directions: RMSE 0.26 points, correlation 0.997
+top 1 sensitive directions (1 numbers): RMSE 3.32 points, correlation 0.863
+top 2 sensitive directions (2 numbers): RMSE 2.41 points, correlation 0.930
+top 5 sensitive directions (5 numbers): RMSE 1.24 points, correlation 0.982
+top 10 sensitive directions (10 numbers): RMSE 0.76 points, correlation 0.991
+top 20 sensitive directions (20 numbers): RMSE 0.44 points, correlation 0.996
+level of each hiding neuron, all steps (4): RMSE 3.16 points, correlation 0.804
+level of each hiding neuron by K (4 x 4 = 16): RMSE 2.35 points, correlation 0.874
+level of each hiding neuron, K = 2-6 (4): RMSE 3.12 points, correlation 0.807
+hiding: parts following the largest and the runner-up, by K (4 x 4 x 2 = 32): RMSE 2.15 points, correlation 0.887
+hiding: parts following the largest and the runner-up, K = 2-6 (8): RMSE 3.00 points, correlation 0.821
+hiding + memory + store levels, all steps (13): RMSE 2.07 points, correlation 0.896
+hiding + memory + store levels by K (52): RMSE 0.86 points, correlation 0.978
+all 16 neurons, largest and runner-up parts by K (128): RMSE 0.40 points, correlation 0.994
+all recurrent weights into the hiding neurons (64): RMSE 2.12 points, correlation 0.890

@@ -1,0 +1,27 @@
+(1) relative change of the memory's incoming weights by source group, set (b): states fit / output fit
+   input           0.003 / 0.060   (size of ARC's block 1.38)
+   store/detector  0.005 / 0.028   (size of ARC's block 3.10)
+   keep gate       0.047 / 0.060   (size of ARC's block 1.32)
+   late gate       0.143 / 0.083   (size of ARC's block 1.91)
+   hiding          0.081 / 0.085   (size of ARC's block 3.05)
+
+(2) ablations for the 42-degree snap (KL from ARC: states fit / output fit)
+   readout + input              0.1349 / 0.0929
+   readout + store/detector     0.1266 / 0.0489
+   readout + keep gate          0.1508 / 0.0662
+   readout + late gate          0.1485 / 0.0714
+   readout + hiding             0.0303 / 0.0119
+   readout + both gates         0.1600 / 0.0628
+   readout + all but hiding     0.1481 / 0.0428
+   incoming only, no readout      -    / 0.0238  (states fit always refits the readout)
+
+(3) memory's incoming columns in the memory's modes (Vi @ column): ARC vs compensated (set (b), output fit)
+   from input:   180deg: size   0.63->  0.56 turn   -0.0 |   127deg: size   0.71->  0.68 turn   +2.3 |    84deg: size   0.17->  0.20 turn   -6.6 |     0deg: size   0.20->  0.18 turn   +0.0 |    38deg: size   0.77->  0.74 turn   +2.2
+   from 2:   180deg: size   0.64->  0.67 turn   +0.0 |   127deg: size   0.50->  0.48 turn   -2.2 |    84deg: size   0.23->  0.24 turn   +0.3 |     0deg: size   0.03->  0.02 turn   +0.0 |    38deg: size   0.12->  0.10 turn   -5.4
+   from 4:   180deg: size   0.92->  0.96 turn   -0.0 |   127deg: size   0.75->  0.74 turn   -3.0 |    84deg: size   0.44->  0.48 turn   +1.2 |     0deg: size   2.41->  2.40 turn   +0.0 |    38deg: size   1.00->  1.00 turn   -0.2
+   from 5:   180deg: size   0.45->  0.45 turn   -0.0 |   127deg: size   0.82->  0.85 turn   -0.6 |    84deg: size   0.56->  0.60 turn   +2.0 |     0deg: size   0.75->  0.71 turn   +0.0 |    38deg: size   0.46->  0.46 turn   -6.5
+   from 9:   180deg: size   0.95->  0.92 turn   -0.0 |   127deg: size   1.43->  1.43 turn   -2.2 |    84deg: size   1.04->  1.07 turn   -0.1 |     0deg: size   0.37->  0.37 turn   -0.0 |    38deg: size   1.25->  1.32 turn   -0.8
+   from 1:   180deg: size   0.45->  0.43 turn   -0.0 |   127deg: size   0.84->  0.90 turn   +0.7 |    84deg: size   0.62->  0.67 turn   +2.1 |     0deg: size   0.69->  0.68 turn   -0.0 |    38deg: size   0.24->  0.19 turn  -31.7
+   from 6:   180deg: size   0.62->  0.61 turn   +0.0 |   127deg: size   0.88->  0.83 turn   +0.9 |    84deg: size   0.75->  0.76 turn   +2.0 |     0deg: size   0.61->  0.60 turn   -0.0 |    38deg: size   0.96->  0.94 turn   -2.3
+   from 7:   180deg: size   0.42->  0.42 turn   -0.0 |   127deg: size   0.51->  0.56 turn   +0.3 |    84deg: size   0.42->  0.47 turn   -3.9 |     0deg: size   0.51->  0.50 turn   +0.0 |    38deg: size   0.78->  0.84 turn   -4.7
+   from 8:   180deg: size   0.52->  0.50 turn   -0.0 |   127deg: size   0.96->  0.91 turn   +0.8 |    84deg: size   0.74->  0.73 turn   +1.9 |     0deg: size   0.58->  0.58 turn   -0.0 |    38deg: size   0.18->  0.14 turn   -3.4

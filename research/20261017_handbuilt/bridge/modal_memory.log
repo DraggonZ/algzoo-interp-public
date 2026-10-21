@@ -1,0 +1,4 @@
+v18 accuracy 0.95973  smallest slot value 0.0
+level needed per modal neuron (units of m1): [0.03 0.45 0.45 0.36 0.25 0.32 0.31 0.49]
+L = 0.97: accuracy 0.959665  max |score change| 4.540197551250458e-09  smallest modal value 0.0
+modal memory block eigenvalues |.| [0.008 0.008 0.008 0.008 0.008 0.008 0.008 0.008]

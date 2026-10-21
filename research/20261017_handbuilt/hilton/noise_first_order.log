@@ -1,0 +1,4 @@
+accuracy without noise 0.9535
+sigma 0.005: true 0.908; predicted, runner-up only 0.919; all competitors 0.898
+sigma 0.01: true 0.813; predicted, runner-up only 0.857; all competitors 0.762
+sigma 0.02: true 0.643; predicted, runner-up only 0.764; all competitors 0.515

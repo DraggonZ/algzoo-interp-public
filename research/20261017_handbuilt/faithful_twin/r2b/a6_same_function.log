@@ -1,0 +1,7 @@
+r1a_keep_corr vs r2b_mix: answers differ on 0.1027% of lists; max score diff 3.74e-11; accuracy 0.9147 -> 0.9149
+r2b_mix vs r2b_loopL: answers differ on 0.6458% of lists; max score diff 0.443; accuracy 0.9149 -> 0.9187
+/data/output/src/algzoo/research/20261017_handbuilt/faithful_twin/r2b/a6_same_function.py:33: RuntimeWarning: Mean of empty slice.
+  print(f"lists with L or cell 7 clipped at some step: {clip.mean():.3f}; answers differ there {d[clip].mean():.4%}, elsewhere {d[~clip].mean():.4%}")
+/opt/venv/lib/python3.12/site-packages/numpy/_core/_methods.py:144: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+lists with L or cell 7 clipped at some step: 1.000; answers differ there 0.6458%, elsewhere nan%

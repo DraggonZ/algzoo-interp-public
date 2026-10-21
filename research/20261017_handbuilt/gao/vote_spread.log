@@ -1,0 +1,24 @@
+ARC    : neurons carrying the vote (participation) 4.6; share of pushes that cancel 0.70; loss at 1% noise 0.048
+zoo0   : neurons carrying the vote (participation) 6.3; share of pushes that cancel 0.78; loss at 1% noise 0.149
+zoo1   : neurons carrying the vote (participation) 5.4; share of pushes that cancel 0.74; loss at 1% noise 0.122
+zoo2   : neurons carrying the vote (participation) 5.6; share of pushes that cancel 0.73; loss at 1% noise 0.038
+zoo3   : neurons carrying the vote (participation) 3.9; share of pushes that cancel 0.68; loss at 1% noise 0.053
+zoo4   : neurons carrying the vote (participation) 6.1; share of pushes that cancel 0.73; loss at 1% noise 0.120
+new100 : neurons carrying the vote (participation) 5.1; share of pushes that cancel 0.64; loss at 1% noise 0.075
+new101 : neurons carrying the vote (participation) 5.3; share of pushes that cancel 0.71; loss at 1% noise 0.055
+new102 : neurons carrying the vote (participation) 6.1; share of pushes that cancel 0.74; loss at 1% noise 0.096
+new103 : neurons carrying the vote (participation) 4.7; share of pushes that cancel 0.60; loss at 1% noise 0.042
+new104 : neurons carrying the vote (participation) 5.8; share of pushes that cancel 0.76; loss at 1% noise 0.128
+new105 : neurons carrying the vote (participation) 5.6; share of pushes that cancel 0.67; loss at 1% noise 0.141
+new106 : neurons carrying the vote (participation) 5.3; share of pushes that cancel 0.70; loss at 1% noise 0.060
+new107 : neurons carrying the vote (participation) 5.2; share of pushes that cancel 0.65; loss at 1% noise 0.096
+new108 : neurons carrying the vote (participation) 4.8; share of pushes that cancel 0.70; loss at 1% noise 0.058
+new109 : neurons carrying the vote (participation) 5.3; share of pushes that cancel 0.69; loss at 1% noise 0.101
+new110 : neurons carrying the vote (participation) 5.4; share of pushes that cancel 0.76; loss at 1% noise 0.178
+new111 : neurons carrying the vote (participation) 5.0; share of pushes that cancel 0.70; loss at 1% noise 0.041
+new112 : neurons carrying the vote (participation) 5.3; share of pushes that cancel 0.76; loss at 1% noise 0.126
+new113 : neurons carrying the vote (participation) 5.2; share of pushes that cancel 0.71; loss at 1% noise 0.040
+new114 : neurons carrying the vote (participation) 6.0; share of pushes that cancel 0.73; loss at 1% noise 0.109
+new115 : neurons carrying the vote (participation) 5.5; share of pushes that cancel 0.75; loss at 1% noise 0.059
+twin   : neurons carrying the vote (participation) 2.0; share of pushes that cancel 0.05; loss at 1% noise nan
+rank correlation with loss at 1% noise: participation 0.58; cancelling share 0.43

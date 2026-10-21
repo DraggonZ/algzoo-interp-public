@@ -1,0 +1,11 @@
+score_rule.py sha256 913ce430a8f8; rule r5b_cancel7.py; fit seed 101, score seed 202
+
+25 free constants, 2 kinds (feature, feedback); structure 71 bits (35 declared + 6 x 6 spreads); lookup table 2369 bits
+  share 0.001: constants 185 bits (7.4 each) + structure 71 + rest 2011; net +102
+  share 0.002: constants 172 bits (6.9 each) + structure 71 + rest 2027; net +99
+  share 0.005: constants 156 bits (6.2 each) + structure 71 + rest 2078; net +64
+
+| net bits | share | rms 1, 6, 7, 8 | cosine 1, 6, 7, 8 | joint KL of 4 rows | KL, 4 neurons replaced | constants |
+|---|---|---|---|---|---|---|
+| +102 | 0.001 | 0.208, 0.174, 0.198, 0.299 | 0.9995, 0.9977, 0.9974, 0.9970 | 0.582 | 0.318 | 25 |
+NET +101.5

@@ -1,0 +1,25 @@
+example: true 0.9532; estimate 0.9549 (+0.17 points); terms: one positive 0.95, second-third 3.06 (width 0.0120), largest-second 0.50 (width 0.0032); cost 846 runs' worth
+seed0: true 0.9101; estimate 0.9186 (+0.85 points); terms: one positive 0.95, second-third 5.18 (width 0.0204), largest-second 2.01 (width 0.0130); cost 846 runs' worth
+seed1: true 0.8804; estimate 0.9114 (+3.10 points); terms: one positive 0.95, second-third 6.34 (width 0.0249), largest-second 1.57 (width 0.0102); cost 846 runs' worth
+seed2: true 0.9485; estimate 0.9468 (-0.17 points); terms: one positive 0.95, second-third 4.04 (width 0.0159), largest-second 0.33 (width 0.0021); cost 846 runs' worth
+seed3: true 0.9320; estimate 0.9353 (+0.33 points); terms: one positive 0.95, second-third 4.80 (width 0.0189), largest-second 0.71 (width 0.0046); cost 846 runs' worth
+seed4: true 0.8898; estimate 0.9074 (+1.76 points); terms: one positive 0.95, second-third 6.25 (width 0.0246), largest-second 2.06 (width 0.0133); cost 846 runs' worth
+100: true 0.9480; estimate 0.9493 (+0.12 points); terms: one positive 0.95, second-third 3.19 (width 0.0126), largest-second 0.93 (width 0.0060); cost 846 runs' worth
+101: true 0.9136; estimate 0.9349 (+2.13 points); terms: one positive 0.95, second-third 4.27 (width 0.0168), largest-second 1.29 (width 0.0084); cost 846 runs' worth
+102: true 0.9127; estimate 0.9301 (+1.75 points); terms: one positive 0.95, second-third 4.24 (width 0.0167), largest-second 1.80 (width 0.0117); cost 846 runs' worth
+103: true 0.9533; estimate 0.9500 (-0.32 points); terms: one positive 0.95, second-third 3.64 (width 0.0143), largest-second 0.40 (width 0.0026); cost 846 runs' worth
+104: true 0.9122; estimate 0.9281 (+1.58 points); terms: one positive 0.95, second-third 4.57 (width 0.0180), largest-second 1.67 (width 0.0108); cost 846 runs' worth
+105: true 0.8985; estimate 0.9164 (+1.79 points); terms: one positive 0.95, second-third 6.12 (width 0.0241), largest-second 1.29 (width 0.0084); cost 846 runs' worth
+106: true 0.9485; estimate 0.9487 (+0.03 points); terms: one positive 0.95, second-third 3.31 (width 0.0130), largest-second 0.86 (width 0.0056); cost 846 runs' worth
+107: true 0.9214; estimate 0.9177 (-0.37 points); terms: one positive 0.95, second-third 6.77 (width 0.0267), largest-second 0.50 (width 0.0033); cost 846 runs' worth
+108: true 0.9386; estimate 0.9432 (+0.47 points); terms: one positive 0.95, second-third 3.60 (width 0.0142), largest-second 1.13 (width 0.0073); cost 846 runs' worth
+109: true 0.9405; estimate 0.9390 (-0.14 points); terms: one positive 0.95, second-third 4.36 (width 0.0172), largest-second 0.78 (width 0.0051); cost 846 runs' worth
+110: true 0.9119; estimate 0.9230 (+1.10 points); terms: one positive 0.95, second-third 6.33 (width 0.0249), largest-second 0.42 (width 0.0027); cost 846 runs' worth
+111: true 0.9601; estimate 0.9547 (-0.53 points); terms: one positive 0.95, second-third 3.16 (width 0.0124), largest-second 0.41 (width 0.0027); cost 846 runs' worth
+112: true 0.9145; estimate 0.9213 (+0.68 points); terms: one positive 0.95, second-third 6.45 (width 0.0254), largest-second 0.46 (width 0.0030); cost 846 runs' worth
+113: true 0.9043; estimate 0.9149 (+1.06 points); terms: one positive 0.95, second-third 6.06 (width 0.0238), largest-second 1.49 (width 0.0097); cost 846 runs' worth
+114: true 0.8977; estimate 0.9071 (+0.94 points); terms: one positive 0.95, second-third 6.79 (width 0.0267), largest-second 1.55 (width 0.0100); cost 846 runs' worth
+115: true 0.9521; estimate 0.9617 (+0.96 points); terms: one positive 0.95, second-third 2.58 (width 0.0102), largest-second 0.30 (width 0.0019); cost 846 runs' worth
+six original: RMSE 1.50 points, bias +1.01; correlation with truth 0.97; sampling at the same cost 0.93; a constant at the true mean 2.78
+16 new: RMSE 1.08 points, bias +0.70; correlation with truth 0.93; sampling at the same cost 0.89; a constant at the true mean 2.07
+all 22: RMSE 1.21 points, bias +0.79; correlation with truth 0.94; sampling at the same cost 0.90; a constant at the true mean 2.31

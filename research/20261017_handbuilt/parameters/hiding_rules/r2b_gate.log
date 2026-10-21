@@ -1,0 +1,31 @@
+neuron 9: input weight -0.23; ARC weights in: 7:-5.03, 8:-1.09, 9:-0.55, 1:-0.36, 4:+0.15, 14:+0.11, 6:-0.09, 11:+0.05
+   mean activity 0.36, on 0.26; mean |weight x activity| by source: 7:62.27, 8:9.36, 1:3.13, 14:0.87, 6:0.81, 11:0.41, 10:0.34, 4:0.23
+neuron 5: input weight -0.28; ARC weights in: 4:+1.19, 8:-0.85, 7:-0.59, 5:-0.42, 11:+0.33, 9:+0.30, 12:+0.26, 0:+0.22
+   mean activity 3.29, on 0.41; mean |weight x activity| by source: 7:7.34, 8:7.29, 11:2.54, 4:1.84, 14:1.66, 12:1.66, 10:1.28, 5:1.27
+ARC weights from 5 and 9 into 1, 6, 7, 8: [[ 0.118  0.038  0.002 -0.017]
+ [-0.686 -0.64   0.003 -0.068]]
+
+first attempt below (gate from store and detector) is wrong: the gate reads hiding neurons 7, 8, 1, see weights above
+second attempt: gate 9 from ARC's hiding activity (1, 6, 7, 8), its own previous value, and the input, ARC's weights
+   gate from hiding + own vs ARC: rms 0.85; corr 0.357
+   gate from blind hiding + own vs ARC: rms 0.89; corr -0.066
+   gate from all sources (sanity) rms 0.0000
+   memory 14 into gate: corr of its contribution with the hiding contribution -0.55, mean +0.87
+   memory 11 into gate: corr of its contribution with the hiding contribution -0.41, mean +0.41
+   memory 10 into gate: corr of its contribution with the hiding contribution -0.45, mean +0.34
+   memory 3 into gate: corr of its contribution with the hiding contribution +0.38, mean -0.09
+   memory 0 into gate: corr of its contribution with the hiding contribution +0.35, mean -0.17
+   memory 12 into gate: corr of its contribution with the hiding contribution -0.37, mean +0.10
+   memory 13 into gate: corr of its contribution with the hiding contribution +0.55, mean -0.12
+   memory 15 into gate: corr of its contribution with the hiding contribution +0.28, mean -0.03
+   hiding-built gate, free coef, no jump2/nl2    0.308 (coef -0.27, ARC -0.69); 0.333 (coef -0.79, ARC -0.64); 0.117 (coef -0.08, ARC +0.00); 0.359 (coef -0.74, ARC -0.07)
+   hiding-built gate, free coef, no nl2          0.308 (coef -0.25, ARC -0.69); 0.328 (coef -0.85, ARC -0.64); 0.117 (coef -0.08, ARC +0.00); 0.350 (coef -0.66, ARC -0.07)
+   ARC's gate, free coef, no jump2/nl2           0.296 (coef -0.22, ARC -0.69); 0.269 (coef -0.50, ARC -0.64); 0.116 (coef -0.02, ARC +0.00); 0.363 (coef +0.01, ARC -0.07)
+gate 9 rule vs ARC: rms 0.43 (ARC activity rms 0.89); corr 0.862
+   one list: ARC [0.18 0.   0.   0.7  1.56 0.   0.   2.03 0.   0.  ] 
+   rule [0.18 0.36 0.   0.72 0.   0.   0.   1.44 0.   0.  ] 
+   newmax [0. 0. 1. 1. 0. 0. 1. 0. 0. 0.]
+   masked rule                                   [np.float64(0.2906129273085636), np.float64(0.2739697968596616), np.float64(0.11677504748842683), np.float64(0.352878766325663)]
+   gate rule fixed (ARC weight), no jump2/nl2    [np.float64(0.36904383846729377), np.float64(0.33776417858615343), np.float64(0.11675604319442841), np.float64(0.36377937938793736)]
+   gate rule free coef, no jump2/nl2             [(np.float64(0.30659125579824353), np.float64(-0.2098831856314526)), (np.float64(0.3278158724351408), np.float64(0.49689764826321814)), (np.float64(0.11672181952529685), np.float64(5.045861514246146)), (np.float64(0.36338094257591824), np.float64(0.021455021178501798))]
+   ARC's gate fixed, no jump2/nl2                [np.float64(0.3477632362346154), np.float64(0.2740796456381528), np.float64(0.11686610669463612), np.float64(0.36484600462010847)]

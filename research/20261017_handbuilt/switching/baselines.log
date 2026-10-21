@@ -1,0 +1,37 @@
+network: 95.31
+fitted on/off cells in the table: 520
+== no switching: acc 44.35 (-50.96) agree-answer 44.9
+   on/off agreement with the network's own run: 0:0.751 3:0.767 10:0.885 11:0.874 12:0.902 13:0.904 14:0.861 15:0.728  (all 0.8341)
+    all                                    acc  44.4 (-51.0)  agree  44.9  KL  7.964  share 1.000
+    at most one positive                   acc   7.3 (-15.9)  agree  41.3  KL  6.187  share 0.011
+    new largest at step 9                  acc  89.5 ( -4.9)  agree  87.7  KL  1.455  share 0.098
+    new largest at step 8                  acc  89.8 ( -7.2)  agree  89.1  KL  1.203  share 0.099
+    two in a row, earlier                  acc  24.0 (-72.3)  agree  24.5  KL 12.620  share 0.257
+    ordinary                               acc  38.1 (-58.0)  agree  38.6  KL  8.218  share 0.535
+    second after largest                   acc  18.4 (-76.6)  agree  20.1  KL 11.125  share 0.501
+    second an overtaken record             acc  71.1 (-25.3)  agree  70.0  KL  4.787  share 0.493
+    second before largest, not a record    acc  14.1 (-15.8)  agree  46.9  KL  4.627  share 0.005
+== neuron 0 off at age 2, rest on: acc 80.90 (-14.42) agree-answer 82.4
+   on/off agreement with the network's own run: 0:0.887 3:0.767 10:0.885 11:0.874 12:0.902 13:0.904 14:0.861 15:0.728  (all 0.8510)
+    all                                    acc  80.9 (-14.4)  agree  82.4  KL  1.126  share 1.000
+    at most one positive                   acc  18.2 ( -5.0)  agree  67.0  KL  0.564  share 0.011
+    new largest at step 9                  acc  86.3 ( -8.1)  agree  86.8  KL  0.881  share 0.098
+    new largest at step 8                  acc  88.7 ( -8.3)  agree  89.0  KL  0.717  share 0.099
+    two in a row, earlier                  acc  72.2 (-24.1)  agree  73.2  KL  1.702  share 0.257
+    ordinary                               acc  83.9 (-12.2)  agree  85.1  KL  0.982  share 0.535
+    second after largest                   acc  78.3 (-16.7)  agree  81.0  KL  1.215  share 0.501
+    second an overtaken record             acc  84.1 (-12.2)  agree  84.0  KL  1.043  share 0.493
+    second before largest, not a record    acc  28.6 ( -1.4)  agree  64.8  KL  0.436  share 0.005
+== step-by-age table: acc 86.85 (-8.46) agree-answer 88.6
+   on/off agreement with the network's own run: 0:0.962 3:0.817 10:0.978 11:0.978 12:0.952 13:0.967 14:0.933 15:0.808  (all 0.9245)
+    all                                    acc  86.9 ( -8.5)  agree  88.6  KL  0.695  share 1.000
+    at most one positive                   acc  21.7 ( -1.5)  agree  69.5  KL  0.348  share 0.011
+    new largest at step 9                  acc  81.9 (-12.5)  agree  83.9  KL  0.936  share 0.098
+    new largest at step 8                  acc  87.2 ( -9.8)  agree  88.2  KL  0.729  share 0.099
+    two in a row, earlier                  acc  85.7 (-10.7)  agree  86.8  KL  0.853  share 0.257
+    ordinary                               acc  89.6 ( -6.5)  agree  90.8  KL  0.576  share 0.535
+    second after largest                   acc  85.0 (-10.1)  agree  87.8  KL  0.761  share 0.501
+    second an overtaken record             acc  89.4 ( -6.9)  agree  89.7  KL  0.632  share 0.493
+    second before largest, not a record    acc  29.2 ( -0.7)  agree  64.4  KL  0.380  share 0.005
+== own sign: acc 95.31 (+0.00) agree-answer 100.0
+   on/off agreement with the network's own run: 0:1.000 3:1.000 10:1.000 11:1.000 12:1.000 13:1.000 14:1.000 15:1.000  (all 1.0000)

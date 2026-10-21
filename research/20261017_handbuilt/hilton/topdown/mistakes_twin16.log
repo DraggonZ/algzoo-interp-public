@@ -1,0 +1,5 @@
+network                    grid acc    all   coin    mid  clear
+twin16 (v23, ARC constants)   93.72%  16.9%  10.7%  16.8%  23.3%
+v19 (16)                     95.07%   7.2%   5.2%   7.5%   9.0%
+v21 (28 neurons)             96.00%   6.2%   5.8%   6.8%   6.1%
+32 trained networks, median [min, max]: all 29.8 [6.2, 38.1], coin 27.8 [5.8, 36.2], mid 29.5 [6.8, 38.4], clear 31.9 [6.1, 39.9]

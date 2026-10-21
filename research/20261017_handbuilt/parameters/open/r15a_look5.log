@@ -1,0 +1,10 @@
+top3, min arrival                             v2  +168.5   v2c  +208.5   gain 0.902
+top4, min arrival                             v2  +171.6   v2c  +208.2   gain 0.906
+top5, min arrival                             v2  +171.6   v2c  +205.6   gain 0.907
+top6, min arrival                             v2  +171.2   v2c  +203.1   gain 0.908
+top8, min arrival                             v2  +170.2   v2c  +199.8   gain 0.909
+top10, min arrival                            v2  +169.3   v2c  +197.6   gain 0.911
+top3, arrival 0                               v2  +162.3   v2c  +199.1   gain 1.012
+top3, fresh arrival                           v2  +167.1   v2c  +208.2   gain 0.967
+top3, arrival -1                              v2  +172.5   v2c  +214.4   gain 0.936
+top3 among x_1..x_9, min arrival              v2  +170.5   v2c  +210.1   gain 0.903

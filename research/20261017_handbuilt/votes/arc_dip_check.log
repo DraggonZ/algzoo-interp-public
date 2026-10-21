@@ -1,0 +1,8 @@
+timer neurons [0, 3, 9, 10, 11, 12, 13, 14, 15]
+weights from neuron 4 (detector) to timer neurons: [0.59 0.34 0.15 1.76 1.71 1.28 0.46 0.87 0.18]
+weights from neuron 4 to cancellers 1, 6, 7, 8:    [ 0.87 -0.05  1.32 -0.04]
+weights from neuron 2 (store) to timer neurons:    [-0.17  0.    0.    0.04  0.12 -0.16  0.38  0.34  0.38]
+weights from neuron 5 (gate) to timer neurons:     [-0.91 -0.52  0.04 -0.01 -0.07 -0.14 -0.09 -0.42 -0.66]
+input weights of timer neurons:                    [ 0.07 -0.12 -0.23  0.06  0.15  0.3  -0.05 -1.32 -0.12]
+share of timer neurons on, step after a record that beat a positive largest: [0.99 0.68 0.99 1.   1.   1.   1.   1.   0.77]
+share on, other steps:                                                     [0.76 0.8  0.08 0.91 0.9  0.95 0.98 0.91 0.75]

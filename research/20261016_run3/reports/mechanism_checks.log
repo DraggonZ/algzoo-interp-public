@@ -1,0 +1,18 @@
+example: wheel share 0.90, turn 43 deg/step, size age1 41 -> age30 47
+   lone-input score spread 5.2 vs two-input 31.4; slide 100.0%; vote placed 270/270, held 270/270
+   ring speeds (cycles/step) [np.float64(0.0), np.float64(0.119), np.float64(0.231), np.float64(0.347), np.float64(0.5)] with neurons [4, 5, 9] off; driven by input [1, 4, 6, 7, 8, 14]; read most [np.int64(7), np.int64(8), np.int64(1), np.int64(6), np.int64(10), np.int64(14)]
+seed0: wheel share 0.90, turn 14 deg/step, size age1 52 -> age30 133
+   lone-input score spread 36.1 vs two-input 19.3; slide 87.7%; vote placed 185/270, held 156/270
+   ring speeds (cycles/step) [np.float64(0.0), np.float64(0.058), np.float64(0.158), np.float64(0.267), np.float64(0.466)] with neurons [5] off; driven by input [2, 3, 4, 5, 6, 7, 9, 11, 12, 13, 14, 15]; read most [np.int64(6), np.int64(5), np.int64(12), np.int64(4), np.int64(7), np.int64(14)]
+seed1: wheel share 0.94, turn -130 deg/step, size age1 84 -> age30 108
+   lone-input score spread 5.0 vs two-input 19.0; slide 91.9%; vote placed 175/270, held 175/270
+   ring speeds (cycles/step) [np.float64(0.0), np.float64(0.078), np.float64(0.173), np.float64(0.262), np.float64(0.371), np.float64(0.5)] with neurons [10, 14] off; driven by input [0, 2, 5, 7, 8, 10, 11, 14, 15]; read most [np.int64(2), np.int64(11), np.int64(10), np.int64(0), np.int64(4), np.int64(5)]
+seed2: wheel share 0.83, turn -111 deg/step, size age1 50 -> age30 50
+   lone-input score spread 2.6 vs two-input 22.7; slide 99.8%; vote placed 265/270, held 263/270
+   ring speeds (cycles/step) [np.float64(0.0), np.float64(0.121), np.float64(0.227), np.float64(0.304), np.float64(0.355), np.float64(0.5)] with neurons [10, 15] off; driven by input [0, 3, 6, 10, 15]; read most [np.int64(15), np.int64(6), np.int64(0), np.int64(3), np.int64(11), np.int64(10)]
+seed3: wheel share 0.79, turn 57 deg/step, size age1 24 -> age30 49
+   lone-input score spread 3.2 vs two-input 17.3; slide 100.0%; vote placed 239/270, held 239/270
+   ring speeds (cycles/step) [np.float64(0.0), np.float64(0.165), np.float64(0.278), np.float64(0.397), np.float64(0.432), np.float64(0.5)] with neurons [9] off; driven by input [0, 1, 3, 9, 14]; read most [np.int64(14), np.int64(1), np.int64(3), np.int64(5), np.int64(0), np.int64(15)]
+seed4: wheel share 0.78, turn -63 deg/step, size age1 63 -> age30 89
+   lone-input score spread 18.5 vs two-input 19.0; slide 95.8%; vote placed 194/270, held 193/270
+   ring speeds (cycles/step) [np.float64(0.0), np.float64(0.114), np.float64(0.235), np.float64(0.34), np.float64(0.461)] with neurons [12, 15] off; driven by input [0, 2, 4, 6, 7, 10, 11, 12, 13, 14, 15]; read most [np.int64(15), np.int64(12), np.int64(4), np.int64(7), np.int64(0), np.int64(3)]

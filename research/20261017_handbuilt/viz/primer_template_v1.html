@@ -1,0 +1,1033 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Second-largest, step by step</title>
+<style>
+:root {
+  --bg: #f6f4ef; --card: #fdfcfa; --grid: #e6e3dc; --axis: #bdbab2;
+  --ink: #141413; --ink2: #4d4c48; --muted: #85837c;
+  --blue: #2a78d6; --orange: #e0662f; --green: #1a9e6e; --red: #d64545; --grey: #a9a7a0; --purple: #7a5bc7;
+  --blue-l: #cfe0f6; --orange-l: #f8d9c8; --green-l: #cdeee0; --hi: #fff1c2;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.62 Georgia, "Iowan Old Style", "Times New Roman", serif; }
+main { max-width: 760px; margin: 0 auto; padding: 28px 16px 80px; }
+h1 { font: 700 32px/1.2 system-ui, -apple-system, "Segoe UI", sans-serif; margin: 10px 0 8px; }
+h2 { font: 650 23px/1.25 system-ui, -apple-system, "Segoe UI", sans-serif; margin: 56px 0 10px; }
+h2 .n { color: var(--muted); font-weight: 500; margin-right: 6px; }
+h3 { font: 650 17px/1.3 system-ui, sans-serif; margin: 26px 0 6px; }
+p { margin: 0 0 13px; }
+.sub { font-size: 19px; color: var(--ink2); margin: 0 0 22px; }
+.fig { background: var(--card); border: 1px solid var(--grid); border-radius: 12px; padding: 12px 14px 12px; margin: 16px 0 18px; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+.ctl { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; font-size: 14px; color: var(--ink2); margin-bottom: 4px; }
+.ctl .sp { flex: 1; }
+.ctl .lab { font-variant-numeric: tabular-nums; color: var(--muted); }
+button, select { font: 14px system-ui, sans-serif; color: var(--ink); background: #fff; border: 1px solid var(--axis); border-radius: 7px; padding: 4px 11px; cursor: pointer; }
+button:hover { border-color: var(--ink2); }
+button.main { background: var(--ink); color: #fff; border-color: var(--ink); }
+button.on { background: var(--blue); color: #fff; border-color: var(--blue); }
+input[type=range] { width: 150px; vertical-align: middle; }
+svg { display: block; width: 100%; height: auto; overflow: visible; }
+svg text { fill: var(--ink2); font: 12px system-ui, sans-serif; }
+svg text.b { fill: var(--ink); font-weight: 650; }
+svg text.m { fill: var(--muted); font-size: 11px; }
+.cap { font-size: 15px; line-height: 1.5; color: var(--ink); margin: 8px 2px 2px; min-height: 3em; }
+.cap b { font-weight: 650; }
+.legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 13px; color: var(--ink2); margin: 2px 2px 4px; }
+.sw { display: inline-block; width: 11px; height: 11px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+.box { background: var(--card); border: 1px solid var(--grid); border-left: 4px solid var(--blue); border-radius: 8px; padding: 12px 18px; margin: 16px 0; }
+.box.warn { border-left-color: var(--orange); }
+.box ol, .box ul { margin: 4px 0; padding-left: 22px; }
+.box li { margin-bottom: 5px; }
+.draft { font: 13px system-ui, sans-serif; color: var(--muted); border: 1px dashed var(--axis); border-radius: 6px; padding: 6px 10px; }
+table.t { border-collapse: collapse; font: 14px system-ui, sans-serif; width: 100%; margin: 10px 0 16px; }
+table.t th, table.t td { padding: 5px 8px; border-bottom: 1px solid var(--grid); text-align: left; vertical-align: top; }
+table.t th { color: var(--ink2); font-weight: 600; }
+.ev { display: inline-block; font: 12px system-ui, sans-serif; padding: 0 7px; border-radius: 10px; margin-right: 4px; }
+.k { font: 13px ui-monospace, monospace; background: #eeebe4; padding: 0 4px; border-radius: 4px; }
+.toc { font: 15px system-ui, sans-serif; columns: 2; column-gap: 28px; padding-left: 20px; }
+@media (max-width: 600px) { .toc { columns: 1; } body { font-size: 16px; } h1 { font-size: 27px; } }
+</style>
+</head>
+<body>
+<main>
+<p class="draft">Private explainer for the author, built from the research notes of 17 October 2026. Not for posting as is. Every figure marked "trained network" runs ARC's real weights in your browser.</p>
+
+<h1>Second-largest, step by step</h1>
+<p class="sub">How a 16-neuron network finds the second-largest of ten numbers, built up from nothing, one small animation at a time.</p>
+
+<p>This page explains our work on one tiny trained network, from the ground up. It starts with the task, builds a cartoon of the algorithm, then turns each piece of the cartoon into neurons. Only then does it show the trained network doing the same thing, with its real numbers. The last part covers what we built by hand, what is still unsolved, and where the network's mistakes come from.</p>
+<p>Each figure is a short animation. Press <b>▶</b> to move one step, <b>◀</b> to go back, or <b>play</b> to run it. The text under each figure changes with every step and says what just happened.</p>
+
+<ol class="toc">
+<li>The game</li>
+<li>What the network is allowed to do</li>
+<li>A cartoon of the answer</li>
+<li>Neurons I: the largest so far</li>
+<li>Neurons II: a timer is a turning arrow</li>
+<li>Several arrows make a conveyor belt</li>
+<li>Neurons III: hiding the largest's vote</li>
+<li>A bigger number unhides it</li>
+<li>Keep or forget: neuron 5</li>
+<li>Whole lists, and tests by intervention</li>
+<li>Proof by construction: a hand-built network</li>
+<li>The unsolved part: copying the roles</li>
+<li>Where the mistakes come from</li>
+<li>An accuracy estimate, and ARC's challenge</li>
+<li>What is solid and what is open</li>
+</ol>
+
+<!-- ============================================================ 1 -->
+<h2><span class="n">1</span>The game</h2>
+<p>You are shown ten numbers, one at a time. Each is drawn at random from a bell curve centred on zero, so about half are negative and most lie between −2 and 2. After the tenth, you must name the <b>position</b> (0 to 9) of the second-largest number. Not its value: where it was.</p>
+<p>ARC's AlgZoo collection includes a recurrent network trained to do this. It is called M<sub>16,10</sub>: 16 neurons, lists of 10. It is right on 95.3% of random lists. ARC posed it as a puzzle: explain how it works, well enough to estimate its accuracy without running it.</p>
+<div class="fig" id="f1">
+  <div class="ctl"><button data-a="new">New random list</button><button data-a="show" class="main">Show the answer</button></div>
+  <svg viewBox="0 0 640 156"></svg>
+  <p class="cap"></p>
+</div>
+
+<!-- ============================================================ 2 -->
+<h2><span class="n">2</span>What the network is allowed to do</h2>
+<p>The network's whole memory is 16 numbers, one per neuron. We call a neuron's number its <b>activity</b>. All 16 start at zero.</p>
+<p>At each step the network reads one number from the list. Each neuron then computes a weighted sum: the new number times one weight, plus each of the 16 old activities times its own weight. If the sum is negative, the neuron sets its activity to zero instead. This rule, "keep it if positive, else zero", is called <b>ReLU</b>. It is the only bend in the whole machine. Everything else is adding and multiplying by fixed weights.</p>
+<p>After the tenth number, the network makes ten <b>scores</b>, one per position. Each score is another weighted sum of the 16 activities. The position with the highest score is the answer. The weights were set by training and never change. There are 432 of them.</p>
+<div class="fig" id="f2">
+  <div class="ctl"><button data-a="first">start</button><button data-a="prev">◀</button><button data-a="next" class="main">▶</button><button data-a="play">play</button><span class="lab"></span><span class="sp"></span><button data-a="double">× 2 every number</button></div>
+  <svg viewBox="0 0 640 456"></svg>
+  <div class="legend"><span><span class="sw" style="background:var(--ink2)"></span>activity after ReLU</span><span><span class="sw" style="background:var(--red);opacity:.35"></span>negative sum, set to zero by ReLU</span></div>
+  <p class="cap"></p>
+</div>
+<p>Two facts about this machine shape everything that follows.</p>
+<p><b>It has no clock.</b> Nothing tells the network which step it is on. To remember <i>where</i> a number was, it has to start something when the number arrives that changes in a regular way at every later step. That something is the subject of sections 5 and 6.</p>
+<p><b>Only ratios matter.</b> There is no constant term in any sum (no "bias"). So if every number in the list is doubled, every sum doubles, every activity doubles, and every score doubles. The answer cannot change. Press "× 2 every number" above to see it. This is why every threshold in this story is a fraction of another number, like "at least three-quarters of the second-largest so far", never a fixed value like "above 0.5".</p>
+
+<!-- ============================================================ 3 -->
+<h2><span class="n">3</span>A cartoon of the answer</h2>
+<p>Before any neurons, here is the algorithm in pictures. It is the plan the trained network follows, cleaned up.</p>
+<p>When a positive number arrives, it may drop a <b>token</b> onto a conveyor belt. The token's height is the number's value. Each token drops in at the right end and slides one place left at every step. So when the list ends, every token sits exactly under the number that made it. At the end, the tallest visible token names the answer.</p>
+<p>If every positive number dropped a visible token, the tallest token would always be the <i>largest</i> number. The fix has three rules:</p>
+<ol>
+<li><b>Hide the current largest.</b> A new largest drops a hidden token (dashed outline).</li>
+<li><b>Unhide on overtaking.</b> When a bigger number arrives, the old largest's token becomes visible. The old largest has just become the second-largest, so its token is the right one to show.</li>
+<li><b>Forget small numbers.</b> A number that is not a new largest drops a visible token only if it beats the second-largest so far. Anything smaller can never end up second, so it is dropped.</li>
+</ol>
+<div class="fig" id="f3">
+  <div class="ctl"><button data-a="first">start</button><button data-a="prev">◀</button><button data-a="next" class="main">▶</button><button data-a="play">play</button><span class="lab"></span><span class="sp"></span>
+    <select data-a="rule"><option value="0">Rule: every positive number votes</option><option value="1">Rules 1–2: hide and unhide</option><option value="2" selected>Rules 1–3: hide, unhide, forget</option></select>
+    <button data-a="new">Random list</button></div>
+  <svg viewBox="0 0 640 330"></svg>
+  <p class="cap"></p>
+</div>
+<p>With rules 1 and 2, the cartoon is right on <b><span id="acc-cartoon">…</span></b> of random lists (computed in your browser on 100,000 lists). It fails only on lists with at most one positive number, about 1 in 100. Negative numbers drop no tokens, so the cartoon cannot rank them. The trained network also loses most of these lists.</p>
+<p>Rule 3 changes nothing in the cartoon, because its tokens are perfectly sharp: a token at position 3 adds nothing to position 4. In a network, tokens are blurred, and many small blurred tokens can add up and outvote the right one. That is why the trained network forgets, as section 9 shows.</p>
+
+<!-- ============================================================ 4 -->
+<h2><span class="n">4</span>Neurons I: the largest so far</h2>
+<p>The first job is to know the largest number so far. ReLU does comparisons for free: <span class="k">ReLU(10 × (x − largest))</span> is zero unless x beats the largest, and then it is ten times the margin.</p>
+<p>The trained network does exactly this with two neurons. <b>Neuron 4</b> fires only when a new number beats the largest so far, at about ten times the margin. <b>Neuron 2</b> adds up neuron 4's output one step later, so it holds about 17 times the largest so far. Neuron 4 also subtracts its own previous activity (weight −0.99), which stops the stored value from being counted twice. ARC's own hand-designed network uses the same trick.</p>
+<div class="fig" id="f4">
+  <div class="ctl"><button data-a="first">start</button><button data-a="prev">◀</button><button data-a="next" class="main">▶</button><button data-a="play">play</button><span class="lab"></span><span class="sp"></span><button data-a="new">Random list</button></div>
+  <svg viewBox="0 0 640 372"></svg>
+  <div class="legend"><span><span class="sw" style="background:var(--ink)"></span>true largest so far</span><span><span class="sw" style="background:var(--blue)"></span>neuron 2 ÷ 17</span><span><span class="sw" style="background:var(--orange)"></span>neuron 4 ÷ 10 (fires on a new largest)</span></div>
+  <p class="cap"></p>
+</div>
+<p>Neuron 2 lags one step, and it overshoots by up to about 10%. The rest of the network corrects for the lag by reading neuron 4 as well.</p>
+
+<!-- ============================================================ 5 -->
+<h2><span class="n">5</span>Neurons II: a timer is a turning arrow</h2>
+<p>The conveyor belt needs the network to remember <i>when</i> a number arrived. With no clock, the simplest way is something that turns. Picture an arrow that appears when the number arrives and turns 40° at every step. Its angle then says how many steps ago the number came, and since the list always has ten numbers, that says where it was.</p>
+<p>Two neurons are enough to hold such an arrow: one for its left–right part and one for its up–down part. Turning by 40° is a fixed weighted mix of the two, which is exactly what one step of the network computes.</p>
+<p>The output reads the arrow with one <b>spoke</b> per position. A position's score is the arrow's shadow on that position's spoke: big when the arrow points along the spoke, smaller when it points 40° away (cos 40° ≈ 0.77), negative when it points away.</p>
+<div class="fig" id="f5">
+  <div class="ctl"><button data-a="first">start</button><button data-a="prev">◀</button><button data-a="next" class="main">▶</button><button data-a="play">play</button><span class="lab"></span><span class="sp"></span>
+    <label>number at position <select data-a="pos"></select></label>
+    <select data-a="mode"><option value="toy">Cartoon arrow</option><option value="real">Trained network</option></select></div>
+  <div style="display:grid;grid-template-columns:1fr 1.25fr;gap:6px;align-items:center">
+    <svg class="dial" viewBox="0 0 300 300"></svg>
+    <svg class="sh" viewBox="0 0 360 260"></svg>
+  </div>
+  <p class="cap"></p>
+</div>
+<p>In the trained network the arrow is real. Twelve of its sixteen neurons move together, and 96% of their movement lies in one flat plane. Seen in that plane, after the first two steps, they turn about 40° per step, clockwise. The output's weights for positions 0 to 7 also point in position order, about 43° apart, so at the end of the list the arrow points at the spoke of its number's own position. This holds for numbers two to eight steps old. The newest positions and position 0 are read in other ways. Choose "Trained network" above to see it, with a single 1.0 in an otherwise empty list.</p>
+<p>Notice the shadow chart. With one arrow, a number at position 4 also lifts positions 3 and 5 to about three-quarters of its height. A vote read through one arrow is a <b>broad wave</b>, not a sharp spike. That blur is the problem the next section solves.</p>
+
+<!-- ============================================================ 6 -->
+<h2><span class="n">6</span>Several arrows make a conveyor belt</h2>
+<p>One arrow gives a broad wave. Add a second arrow that turns twice as fast (80° per step), a third at 120° and a fourth at 160°. Each arrow's shadow is a wave around the same position, but faster arrows give narrower waves. Added together, the four waves cancel everywhere except at the token's own position.</p>
+<p>This is the conveyor belt of section 3, written in a different way. Nine slots on a belt and four turning arrows plus one constant are two descriptions of the same nine numbers. Mathematicians call the switch between them a Fourier transform. You can watch it below: tick the arrows one by one and see the wave sharpen into a spike.</p>
+<div class="fig" id="f6">
+  <div class="ctl"><span>arrows:</span><button data-a="d1" class="on">40°</button><button data-a="d2">80°</button><button data-a="d3">120°</button><button data-a="d4">160°</button><span class="sp"></span><button data-a="play">play the belt</button></div>
+  <svg viewBox="0 0 640 300"></svg>
+  <p class="cap"></p>
+</div>
+<p>The trained network's twelve neurons contain such a set. Fixing which neurons are on and off (the most common pattern in the middle of the list), each step multiplies the twelve by one matrix. That matrix has turning pairs at about 43°, 83°, 125° and 180° per step, close to the 40°, 80°, 120° and 160° of a nine-slot belt. Each pair shrinks to 0.84–0.95 of its size per step, so the belt fades.</p>
+<p>A second check comes from the output weights alone. If the twelve neurons are a belt, then the weights that read position k+1 should equal the weights that read position k, pushed one step forward through the matrix. They do, with a similarity (cosine) of 0.97. Neighbouring rows of output weights on their own are only 0.56 alike. Of 21 other trained networks, 17 show the same relation. So the timer is a fading belt of about nine slots, seen through turning coordinates, and the output reads it with weights that turn along with it.</p>
+<p>One consequence matters later. Because the reading turns with the belt, a vote reads the same height at its own position whatever its age, and every vote has the same shape around its position. So the network's decisions look like fair votes, even though its activities fade.</p>
+
+<!-- ============================================================ 7 -->
+<h2><span class="n">7</span>Neurons III: hiding the largest's vote</h2>
+<p>Now rule 1 of the cartoon: the current largest must not vote. The trained network does something surprising. The largest's timer runs anyway, in the twelve timer neurons. Four other neurons, <b>1, 6, 7 and 8</b>, build an exact mirror of it. At the output, the timer pushes the scores one way and the mirror pushes them back by the same amount. We call these four the <b>hiding neurons</b>.</p>
+<p>Below, the list holds one 1.0 and nine zeros. The bars show the final scores, split by where the push comes from. Each part is shown relative to its own average over the ten positions, because only differences between scores matter.</p>
+<div class="fig" id="f7">
+  <div class="ctl"><button data-a="first">start</button><button data-a="prev">◀</button><button data-a="next" class="main">▶</button><span class="lab"></span><span class="sp"></span><label>1.0 at position <select data-a="pos"></select></label></div>
+  <svg viewBox="0 0 640 400"></svg>
+  <div class="legend"><span><span class="sw" style="background:var(--blue)"></span>push from the twelve timer neurons</span><span><span class="sw" style="background:var(--orange)"></span>push from the four hiding neurons</span><span><span class="sw" style="background:var(--ink)"></span>total score</span></div>
+  <p class="cap"></p>
+</div>
+<p>The two pushes are each about 50 at their peak, and they cancel to within a few units. The final step above is the key experiment of the whole project in miniature: switch the four hiding neurons off by hand, with no bigger number anywhere, and the largest's hidden vote appears at its own position.</p>
+
+<!-- ============================================================ 8 -->
+<h2><span class="n">8</span>A bigger number unhides it</h2>
+<p>Rule 2 of the cartoon: when a bigger number arrives, the old largest must start to vote. In the trained network this costs nothing extra. The hiding neurons have large negative input weights, −11 to −13. Each holds a value tied to the largest so far, so an ordinary number cannot push it below zero. A number bigger than the largest does push it below zero, and ReLU sets it to exactly zero. The mirror vanishes, and the old largest's timer becomes a visible vote.</p>
+<p>The chart now shows the scores the output would read <b>at each step</b>, using the same output weights. Because the reading turns with the belt (section 6), a vote shows up displaced to the right by the number of steps still to come, and it slides one place left per step. It lands on its own position at the end, like a cartoon token.</p>
+<div class="fig" id="f8">
+  <div class="ctl"><button data-a="first">start</button><button data-a="prev">◀</button><button data-a="next" class="main">▶</button><button data-a="play">play</button><span class="lab"></span><span class="sp"></span>
+    <label>1.0 at <select data-a="a"></select></label><label>1.5 at <select data-a="b"></select></label></div>
+  <svg viewBox="0 0 640 520"></svg>
+  <p class="cap"></p>
+</div>
+<p>The four hiding neurons rebuild from the new largest within a few steps, so the 1.5's own timer is hidden in turn. The output cannot read the newest one or two positions through the belt. Position 8 is read mostly through neuron 5 (next section) and position 9 through the dip the last number causes in the hiding neurons. That is why the right end of these charts is messy before the list is complete.</p>
+
+<!-- ============================================================ 9 -->
+<h2><span class="n">9</span>Keep or forget: neuron 5</h2>
+<p>Rule 3: forget small numbers. One step after a number arrives, <b>neuron 5</b> fires if the number is at least about three-quarters of the second-largest so far. Every new largest passes too. A number that passes is kept and starts a visible vote. A number that fails is forgotten: one step later its effect on the scores falls from about 55 per unit of size to about 1.</p>
+<p>Below, a 1.5 at position 1 and a 1.0 at position 3 come first, so the second-largest so far is 1.0. Move the third number and watch neuron 5.</p>
+<div class="fig" id="f9">
+  <div class="ctl"><button data-a="first">start</button><button data-a="prev">◀</button><button data-a="next" class="main">▶</button><button data-a="play">play</button><span class="lab"></span><span class="sp"></span>
+    <label>number at position 5: <input type="range" data-a="x" min="-50" max="145" value="60"> <b class="xv"></b></label>
+    <button data-a="force">force neuron 5 off</button></div>
+  <svg viewBox="0 0 640 500"></svg>
+  <p class="cap"></p>
+</div>
+<p>Why forget at all, if a small number's token can never win? Because votes in the network are blurred (section 5), and blurred votes add. Our first account said every number votes. An idealized model built on that account reached only 24–43% with a single turning arrow, and about 88% even with votes as sharp as the network's, because many small votes crowded out the right one. That failure sent us back to measure the network on full random lists instead of two-number lists, and that is where neuron 5's forgetting showed up. On two-number lists every positive number is the largest or the second, so there is nothing to forget, and the gate is invisible.</p>
+<p>Forcing neuron 5 off one step after the true second-largest arrives drops accuracy on such lists from 96% to 0%. Forcing it off when a new largest arrives makes the answer wrong in 36 of 36 test lists.</p>
+
+<!-- ============================================================ 10 -->
+<h2><span class="n">10</span>Whole lists, and tests by intervention</h2>
+<p>Now all the parts at once, on full random lists. The event line names what happens at each step, judged by the cartoon's rules and by neuron 5's actual activity. The top row is the cartoon belt, and the chart is the trained network's reading at each step.</p>
+<div class="fig" id="f10">
+  <div class="ctl"><button data-a="first">start</button><button data-a="prev">◀</button><button data-a="next" class="main">▶</button><button data-a="play">play</button><span class="lab"></span><span class="sp"></span>
+    <select data-a="ex"></select><button data-a="new">Random list</button></div>
+  <div class="ctl"><span>Intervention:</span><select data-a="iv"><option value="none">none</option></select></div>
+  <svg viewBox="0 0 640 530"></svg>
+  <div class="legend"><span><span class="sw" style="background:var(--ink2)"></span>new largest</span><span><span class="sw" style="background:var(--blue)"></span>overtakes the largest</span><span><span class="sw" style="background:var(--green)"></span>kept</span><span><span class="sw" style="background:var(--grey)"></span>forgotten or not positive</span></div>
+  <p class="cap"></p>
+</div>
+<p>The intervention menu repeats our main tests on whatever list is shown. Over many random lists, the results were these:</p>
+<table class="t">
+<tr><th>Test</th><th>Result</th><th>Same test on four random other neurons</th></tr>
+<tr><td>Silence the four hiding neurons at one step after the largest arrives, with no bigger number</td><td>the largest's position wins in 70% of 180,000 lists (92% when silenced five or more steps later)</td><td>5%</td></tr>
+<tr><td>When a bigger number arrives, put the four back to the values they would have had without it</td><td>the network is still right in only 16% of 100,000 lists</td><td>92%</td></tr>
+<tr><td>Copy the twelve timer neurons from another list whose second-largest sits elsewhere, 1–4 steps after the overtaking</td><td>the answer follows the other list in 89–94% of random lists</td><td>twelve random neurons: 15–79%</td></tr>
+</table>
+<p>So silencing the four is enough to make the largest vote, and it is needed for the old largest to win. Earlier analyses had seen the silencing and the "boost" from outside. These tests show they cause the answer on random lists.</p>
+
+<!-- ============================================================ 11 -->
+<h2><span class="n">11</span>Proof by construction: a hand-built network</h2>
+<p>An explanation might sound right and still be missing a piece. A strong test is to build the network by hand from the explanation alone, with every weight set from a written rule and nothing trained or tuned against accuracy. If the parts are right, the hand-built network should work.</p>
+<p>Our hand-built network has the trained network's form and size: 16 neurons, ReLU, no bias. It is right on <b>98.97%</b> of random lists, more than the trained network's 95.3%. Earlier hand-built networks for this task needed 21 or 22 neurons.</p>
+<table class="t">
+<tr><th>Part</th><th>Hand-built neurons</th><th>Trained network's neurons</th></tr>
+<tr><td>Largest so far: store and detector</td><td>2</td><td>neurons 2 and 4</td></tr>
+<tr><td>Hiding the largest's wave</td><td>3 turning "clock" neurons + 1</td><td>neurons 1, 6, 7, 8</td></tr>
+<tr><td>Gate one step late</td><td>1</td><td>neuron 5 (and 9)</td></tr>
+<tr><td>The belt (memory)</td><td>9 slots, shifting one slot per step</td><td>the timer neurons, a fading nine-slot belt</td></tr>
+</table>
+<p>Below, both networks read the same list. The hand-built network's reading is almost a cartoon: the score at each surviving vote's position is that number's own value.</p>
+<div class="fig" id="f11">
+  <div class="ctl"><button data-a="first">start</button><button data-a="prev">◀</button><button data-a="next" class="main">▶</button><button data-a="play">play</button><span class="lab"></span><span class="sp"></span><select data-a="ex"></select><button data-a="new">Random list</button></div>
+  <svg viewBox="0 0 640 545"></svg>
+  <p class="cap"></p>
+</div>
+<p>The hand-built network differs from the trained one in three ways. It uses weights up to about 500, so its switches are sharp; the trained network's largest weight is about 13. It keeps every positive number instead of forgetting small ones. Instead, one step after an overtaking, its whole belt dips by a share of the old largest. That dip trims the old largest's wave to a single spike and wipes out older, smaller votes. And its belt does not fade.</p>
+<p>Building it also corrected the account. Our first version of the explanation said every number votes. A model built that way could not reach the trained network's accuracy (section 9), which is how we found neuron 5.</p>
+
+<!-- ============================================================ 12 -->
+<h2><span class="n">12</span>The unsolved part: copying the roles</h2>
+<p>The hand-built network matches the trained one in size, but it uses its own version of each part. The harder test is a network that gives each group of neurons the trained network's exact job, neuron group by neuron group. We call it the <b>role-copying network</b>. It has the store and detector (trained neurons 2 and 4), a keep-or-forget gate relative to the second-largest (neuron 5), a gate that fires one step after a new largest (neuron 9), three hiding neurons plus one that stores the second-largest (1, 6, 7, 8), and eight belt neurons.</p>
+<div class="fig" id="f12">
+  <div class="ctl"><span>Accuracy by kind of list (300,000 random lists; each list counted once, in the first kind it fits)</span></div>
+  <svg viewBox="0 0 640 330"></svg>
+  <p class="cap">Hover over a bar for its value.</p>
+</div>
+<p>The role-copying network is right on 97–99% of lists, except one kind: <b>when a new largest arrives at the very last step</b>, it drops to 11%. Here is why, in plain terms. Its hiding neurons rebuild their mirror from the stored largest at each step. That rebuild leaves a constant extra amount in them, which the output removes using the stored largest. When the new largest arrives on the last step, the hiding neurons have just been wiped, so the extra amount is gone. The output still subtracts it, which creates a false vote.</p>
+<p>Our sharp-switching designs needed one or two more neurons to fix this: 17 neurons reach 96%, 18 reach 98%. That is not a proof that 16 is impossible. The trained network does manage with 16, at 94% on these lists. We measured three ways it seems to manage, each with a different kind of evidence:</p>
+<ol>
+<li><b>Smooth comparisons instead of sharp switches</b> (evidence: counts and a swap test). Its hiding neurons switch off gradually, starting near 0.9 of the largest. At the last step the detector and the hiding neurons decide together. The price shows up in its mistakes: with a rival at 0.97 of the old largest, it errs 17% of the time when the new largest is only 1% bigger than the old one, and 4% when it is 30% bigger.</li>
+<li><b>A clock driven by the jump</b> (evidence: fits). After a new largest, the hiding neurons push about "new value minus 0.7 × old value", not "new value". A new largest at the last step therefore leaves no stale correction.</li>
+<li><b>A belt that splits its work</b> (evidence: interventions on twin lists). Two steps after an overtaking, belt neurons 10–13 change with the jump, while neurons 0, 14 and 15 are pushed down by the old largest's value. Copying either group from a twin list lowers how often the network names the old largest from 98% to 60–87%. So the trained network does dip its belt by the old value, like our hand-built network, but only in a few neurons. Our role-copying network dipped the whole belt, which also clipped the new largest's wave.</li>
+</ol>
+<p>Our current 16-neuron attempt has the first two and reaches 70%. Its remaining problem is that an overtaken largest's wave spills about 0.7 of its peak onto the neighbouring positions. Trimming that spill without also trimming the new largest's wave, which enters the same belt neurons on the same step, is the open design question. Mechanism 3 suggests the answer: put the two waves in different belt neurons.</p>
+
+<!-- ============================================================ 13 -->
+<h2><span class="n">13</span>Where the mistakes come from</h2>
+<p>The trained network's mistakes are almost all <b>close calls</b>. About 61% name the third-largest instead of the second, mostly when the two differ by under 3%. About 15% name the largest, almost all within 3%. About 18% are lists with at most one positive number. The remaining 6% name the fourth or lower.</p>
+<p>To see a close call up close, fix the largest at 1.6 and the second at 1.0, set every other number to −0.46, and slide the third-largest's value from 0.90 to 1.10. A perfect network would switch from the second's position to the third's exactly at 1.00. Pick the positions below.</p>
+<div class="fig" id="f13">
+  <div class="ctl"><label>largest at <select data-a="a"></select></label><label>second (1.00) at <select data-a="b"></select></label><label>third at <select data-a="c"></select></label><button data-a="rand">Random placement</button></div>
+  <svg viewBox="0 0 640 250"></svg>
+  <p class="cap"></p>
+</div>
+<p>The offset of the switch point from 1.00 is that placement's <b>bias</b>, typically about 2%. The network errs on any list where the second and third are closer than the bias, on the wrong side. Biases are stable within one network, but they look random across networks. Across 22 networks trained the same way, their patterns are essentially unrelated (median correlation 0.02). Changing one network's weights by half a percent reshuffles them. We found no simple rule that predicts them: per-position vote sizes explain about a third of their spread.</p>
+
+<!-- ============================================================ 14 -->
+<h2><span class="n">14</span>An accuracy estimate, and ARC's challenge</h2>
+<p>ARC's challenge asks for a <b>mechanistic estimate</b>: predict the network's accuracy from an understanding of its weights, at least as well as random sampling does for the same amount of computing.</p>
+<p>If biases behave like random noise, only their size should matter. So our estimate adds three terms: lists with at most one positive number, close calls between the second and third, and close calls between the largest and second. Each close-call term multiplies how often random lists produce a near-tie of a given width (pure probability) by how wide the network's wrong band is, averaged over the 720 placements of the top three. The wrong bands are computed exactly: with no bias terms, the network is exactly linear between the points where a neuron switches on or off, so we walk each line one linear piece at a time.</p>
+<div class="fig" id="f14">
+  <svg viewBox="0 0 640 360"></svg>
+  <p class="cap">Each dot is one trained network. Filled dots were used while developing the estimate; open dots were scored only afterwards. The line is a perfect estimate.</p>
+</div>
+<p>The estimate misses by about 0.65 percentage points on the 22 development networks and 1.0 on the 16 later ones. That is far better than guessing the average (2.3 and 3.5). But it costs about 53,000 network runs per network, and random sampling with 53,000 lists misses by only about 0.1 points. So it does <b>not</b> meet ARC's challenge. At its cost, it is worth about 400–1,000 random lists. Its main gaps: mistakes that name the fourth-largest or lower (about half a point), a largest-versus-second term that runs low, and the assumption that the 720 fixed lines represent all lists.</p>
+
+<!-- ============================================================ 15 -->
+<h2><span class="n">15</span>What is solid and what is open</h2>
+<table class="t">
+<tr><th>Claim</th><th>Evidence</th></tr>
+<tr><td>Neurons 2 and 4 keep the largest so far</td><td>direct reading of activities; matches ARC's own account</td></tr>
+<tr><td>Twelve neurons are a fading nine-slot belt, read by turning weights</td><td>derived from the weights in the most common on/off pattern (12% of steps); 17 of 21 other networks agree. Switching between patterns is not covered.</td></tr>
+<tr><td>Four hiding neurons cancel the largest's vote; a bigger number silences them and that unhides it</td><td>interventions on random lists against random-neuron controls (70% vs 5%; 16% vs 92%)</td></tr>
+<tr><td>Neuron 5 keeps numbers above about three-quarters of the second-largest and forgets the rest</td><td>interventions (forcing it off and on)</td></tr>
+<tr><td>The parts suffice for the task in 16 neurons</td><td>hand-built network, 98.97%</td></tr>
+<tr><td>How the trained network handles a new largest at the last step with only 16 neurons</td><td>open. Three measured hypotheses; only the belt split has intervention evidence.</td></tr>
+<tr><td>Mistakes are close calls decided by network-specific small biases</td><td>measured on 22 networks; the biases themselves are not explained</td></tr>
+<tr><td>Only some trained networks use the silencing trick</td><td>4 of 21 pass both tests; the count depends on what "silenced" means</td></tr>
+<tr><td>ARC's challenge</td><td>not met: the estimate is ten times worse than sampling at equal cost</td></tr>
+</table>
+<p>Two lessons for interpretability came out of the work. First, rebuilding by hand found what checks on simple inputs missed: the forgetting gate is invisible on two-number lists. Second, a summary model that agrees with 95% of the network's answers but repeats few of its mistakes is not necessarily missing a mechanism. The same summary repeats even fewer of the hand-built network's mistakes, whose mechanism we know completely. Mistakes depend on fine details that a summary does not encode.</p>
+</main>
+
+<script>
+const M = /*TRAINED*/null, HB = /*HB*/null, DIAL = /*DIAL*/null, EXS = /*EX*/null, EST = /*EST*/null;
+const N = 10, D = 16;
+const HIDE = [1, 6, 7, 8], TIMER = [0, 2, 3, 4, 5, 9, 10, 11, 12, 13, 14, 15];
+const NS = 'http://www.w3.org/2000/svg';
+const cssv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const C = { blue: cssv('--blue'), orange: cssv('--orange'), green: cssv('--green'), red: cssv('--red'), grey: cssv('--grey'), ink: cssv('--ink'), ink2: cssv('--ink2'), muted: cssv('--muted'), grid: cssv('--grid'), axis: cssv('--axis'), hi: cssv('--hi'), purple: cssv('--purple'), bluel: cssv('--blue-l'), orangel: cssv('--orange-l'), greenl: cssv('--green-l') };
+function S(tag, a = {}, p) { const e = document.createElementNS(NS, tag); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; }
+function T(p, x, y, s, a = {}) { const e = S('text', Object.assign({ x, y }, a), p); e.textContent = s; return e; }
+const clear = e => { while (e.firstChild) e.removeChild(e.firstChild); };
+const f2 = v => (Math.abs(v) < 0.005 ? 0 : v).toFixed(2);
+const f1 = v => (Math.abs(v) < 0.05 ? 0 : v).toFixed(1);
+const f0 = v => Math.round(v).toString();
+const argmax = a => a.reduce((b, v, i) => v > a[b] ? i : b, 0);
+const sum = a => a.reduce((x, y) => x + y, 0);
+const centre = a => { const m = sum(a) / a.length; return a.map(v => v - m); };
+const order = xs => xs.map((v, i) => i).sort((a, b) => xs[b] - xs[a]);
+let seed = 7;
+const rnd = () => { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; };
+const randn = () => { let u = 0; while (!u) u = rnd(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * rnd()); };
+const randList = () => Array.from({ length: N }, () => Math.round(randn() * 100) / 100);
+const ALL = [...Array(D).keys()];
+
+// ---------- the network ----------
+// iv: { zero: {t, ks}, force: {t, k, v}, restore: {t, ks, from: states} }
+function run(W, xs, iv = {}) {
+  let h = new Array(D).fill(0); const H = [], P = [];
+  for (let t = 0; t < xs.length; t++) {
+    const p = new Array(D);
+    for (let i = 0; i < D; i++) { let s = W.w_hi[i] * xs[t]; const r = W.w_hh[i]; for (let j = 0; j < D; j++) s += r[j] * h[j]; p[i] = s; }
+    h = p.map(v => v > 0 ? v : 0);
+    if (iv.zero && iv.zero.t === t) iv.zero.ks.forEach(k => h[k] = 0);
+    if (iv.force && iv.force.t === t) h[iv.force.k] = iv.force.v;
+    if (iv.restore && iv.restore.t === t) iv.restore.ks.forEach(k => h[k] = iv.restore.from[t][k]);
+    H.push(h); P.push(p);
+  }
+  return { H, P };
+}
+const readout = (W, h, ks = ALL) => W.w_oh.map(r => ks.reduce((a, j) => a + r[j] * h[j], 0));
+const reading = (W, h, ks) => centre(readout(W, h, ks));
+const answerOf = (W, xs, iv) => argmax(readout(W, run(W, xs, iv).H[N - 1]));
+
+// ---------- cartoon ----------
+// returns per step: event {kind, text}, and token state after the step
+function cartoon(xs, rule = 2) {
+  let m = 0, s2 = 0, mpos = -1; const toks = []; const steps = [];
+  xs.forEach((x, t) => {
+    let ev;
+    if (x > m && x > 0) {
+      if (mpos >= 0 && rule >= 1) { const old = toks.find(k => k.p === mpos); old.hidden = false; ev = { kind: 'over', text: `${f2(x)} beats the largest ${f2(m)}: the ${f2(m)}'s token is unhidden, and ${f2(x)} drops a hidden token` }; }
+      else ev = { kind: 'new', text: rule >= 1 ? `${f2(x)} is the new largest: it drops a hidden token` : `${f2(x)} drops a token` };
+      if (mpos >= 0) s2 = m;
+      toks.push({ p: t, v: x, hidden: rule >= 1 }); m = x; mpos = t;
+    } else if (x > 0) {
+      if (rule < 2 || x > s2) { toks.push({ p: t, v: x, hidden: false }); ev = { kind: 'keep', text: rule < 2 ? `${f2(x)} drops a token` : `${f2(x)} beats the second-largest so far (${f2(s2)}): it drops a visible token` }; }
+      else ev = { kind: 'forget', text: `${f2(x)} is below the second-largest so far (${f2(s2)}): forgotten` };
+      if (x > s2) s2 = x;
+    } else ev = { kind: 'neg', text: `${f2(x)} is not positive: no token` };
+    steps.push({ ev, toks: toks.map(k => Object.assign({}, k)) });
+  });
+  return steps;
+}
+const cartoonAnswer = (xs, rule) => { const st = cartoon(xs, rule)[N - 1].toks.filter(k => !k.hidden); if (!st.length) return 0; return st.reduce((b, k) => k.v > b.v ? k : b).p; };
+
+// ---------- layout helpers ----------
+const X = i => 92 + i * 54, BW = 30;
+function tape(g, xs, o = {}) {
+  const y0 = o.y0, k = o.k || 16, upto = o.upto == null ? N - 1 : o.upto;
+  if (o.title) T(g, 6, y0 - (o.titleDy || 46), o.title, { class: 'b' });
+  S('line', { x1: X(0) - 26, x2: X(9) + 26, y1: y0, y2: y0, stroke: C.axis }, g);
+  if (o.cur != null && o.cur >= 0) S('rect', { x: X(o.cur) - 25, y: y0 - 64, width: 50, height: 128, rx: 6, fill: C.hi }, g).parentNode.insertBefore(g.lastChild, g.firstChild);
+  xs.forEach((v, i) => {
+    if (i > upto) { S('rect', { x: X(i) - BW / 2, y: y0 - 14, width: BW, height: 14, fill: 'none', stroke: C.grid, 'stroke-dasharray': '3 3' }, g); T(g, X(i), y0 - 20, '?', { 'text-anchor': 'middle', class: 'm' }); }
+    else {
+      const h = Math.max(-44, Math.min(44, v * k)), col = o.color ? o.color(i) : C.grey;
+      S('rect', { x: X(i) - BW / 2, y: h > 0 ? y0 - h : y0, width: BW, height: Math.max(1, Math.abs(h)), fill: col, rx: 2 }, g);
+      T(g, X(i), h >= 0 ? y0 - h - 5 : y0 - h + 14, f2(v), { 'text-anchor': 'middle', class: i === o.cur ? 'b' : '' });
+    }
+    if (o.labels !== false) T(g, X(i), y0 + (o.labDy || 62), i, { 'text-anchor': 'middle', class: 'm' });
+  });
+  if (o.marks) for (const i in o.marks) T(g, X(+i), y0 - 60, o.marks[i][0], { 'text-anchor': 'middle', fill: o.marks[i][1], style: `fill:${o.marks[i][1]};font-weight:650` });
+}
+// bar chart of scores (centred), clipped at lim
+function barsChart(g, series, o) {
+  // series: [{vals, color, w, dx, opacity}], o: {y0, k, lim, title, win}
+  const y0 = o.y0, k = o.k, lim = o.lim;
+  if (o.title) T(g, 6, y0 - lim * k - 10, o.title, { class: 'b' });
+  for (const gv of (o.grid || [])) { S('line', { x1: X(0) - 26, x2: X(9) + 26, y1: y0 - gv * k, y2: y0 - gv * k, stroke: C.grid }, g); T(g, X(0) - 30, y0 - gv * k + 4, gv > 0 ? '+' + gv : gv, { 'text-anchor': 'end', class: 'm' }); }
+  S('line', { x1: X(0) - 26, x2: X(9) + 26, y1: y0, y2: y0, stroke: C.axis }, g);
+  T(g, X(0) - 30, y0 + 4, '0', { 'text-anchor': 'end', class: 'm' });
+  if (o.win != null) S('rect', { x: X(o.win) - 25, y: y0 - lim * k - 4, width: 50, height: 2 * lim * k + 8, rx: 6, fill: o.winColor || C.greenl, opacity: 0.6 }, g);
+  for (const s of series) s.vals.forEach((v, i) => {
+    const vv = Math.max(-lim, Math.min(lim, v)), h = vv * k, w = s.w || BW, x = X(i) + (s.dx || 0) - w / 2;
+    S('rect', { x, y: h > 0 ? y0 - h : y0, width: w, height: Math.max(0.5, Math.abs(h)), fill: s.color, opacity: s.opacity == null ? 1 : s.opacity, rx: 1.5 }, g);
+    if (Math.abs(v) > lim) T(g, X(i) + (s.dx || 0), v > 0 ? y0 - lim * k - 2 : y0 + lim * k + 11, '…', { 'text-anchor': 'middle', class: 'm' });
+    if (s.labels) T(g, X(i) + (s.dx || 0), h >= 0 ? y0 - h - 4 : y0 - h + 13, s.fmt ? s.fmt(v) : f0(v), { 'text-anchor': 'middle', class: s.labelClass || 'm' });
+  });
+  if (o.posLabels) for (let i = 0; i < N; i++) T(g, X(i), y0 + lim * k + 28, i, { 'text-anchor': 'middle', class: 'm' });
+}
+
+// ---------- tweening ----------
+const ease = u => u < .5 ? 2 * u * u : 1 - Math.pow(-2 * u + 2, 2) / 2;
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+function tweener(draw, ms = 480) {
+  let cur = null, raf = 0;
+  return function to(target, instant) {
+    cancelAnimationFrame(raf);
+    if (!cur || instant || reduce || cur.length !== target.length) { cur = target.slice(); draw(cur); return; }
+    const from = cur.slice(), t0 = performance.now();
+    const f = now => { const u = ease(Math.min(1, (now - t0) / ms)); cur = from.map((v, i) => v + (target[i] - v) * u); draw(cur); if (u < 1) raf = requestAnimationFrame(f); };
+    raf = requestAnimationFrame(f);
+  };
+}
+
+// ---------- stepper ----------
+function stepper(fig, { min = 0, max, start, label, onStep, ms = 1000 }) {
+  let s = start == null ? min : start, timer = null;
+  const lab = fig.querySelector('.lab');
+  const go = (n, instant) => { s = Math.max(min, Math.min(max, n)); if (lab) lab.textContent = label ? label(s) : `step ${s}`; onStep(s, instant); };
+  const stop = () => { clearInterval(timer); timer = null; const b = fig.querySelector('[data-a=play]'); if (b) b.textContent = 'play'; };
+  fig.querySelectorAll('[data-a]').forEach(b => {
+    const a = b.dataset.a;
+    if (a === 'first') b.onclick = () => { stop(); go(min); };
+    if (a === 'prev') b.onclick = () => { stop(); go(s - 1); };
+    if (a === 'next') b.onclick = () => { stop(); go(s + 1); };
+    if (a === 'play') b.onclick = () => {
+      if (timer) return stop();
+      if (s >= max) go(min, true);
+      b.textContent = 'pause';
+      timer = setInterval(() => { if (s >= max) return stop(); go(s + 1); }, ms);
+    };
+  });
+  return { go, get s() { return s; }, set max(v) { max = v; }, stop };
+}
+function fillSelect(sel, items, val) { sel.innerHTML = ''; items.forEach(([v, t]) => { const o = document.createElement('option'); o.value = v; o.textContent = t; sel.appendChild(o); }); if (val != null) sel.value = val; }
+const posItems = (a = 0, b = 9) => Array.from({ length: b - a + 1 }, (_, i) => [a + i, a + i]);
+
+// ======================================================= figure 1
+(() => {
+  const f = document.getElementById('f1'), svg = f.querySelector('svg'), cap = f.querySelector('.cap');
+  let xs = [0.48, -1.2, 0.3, 1.09, -1.06, -0.52, 1.61, -1.04, -0.67, 0.21], shown = false;
+  function draw() {
+    clear(svg); const o = order(xs), net = answerOf(M, xs);
+    const color = i => !shown ? C.grey : i === o[1] ? C.green : i === o[0] ? C.ink2 : C.grey;
+    const marks = shown ? { [o[0]]: ['largest', C.ink2], [o[1]]: ['second', C.green] } : {};
+    tape(svg, xs, { y0: 80, color, marks });
+    T(svg, 6, 146, 'position', { class: 'm' });
+    cap.innerHTML = shown ? `The second-largest is <b>${f2(xs[o[1]])} at position ${o[1]}</b>. The trained network answers <b>position ${net}</b> ${net === o[1] ? '(right)' : '(wrong)'}.` : 'Which position holds the second-largest number?';
+  }
+  f.querySelector('[data-a=new]').onclick = () => { xs = randList(); shown = false; draw(); };
+  f.querySelector('[data-a=show]').onclick = () => { shown = !shown; draw(); };
+  draw();
+})();
+
+// ======================================================= figure 2
+(() => {
+  const f = document.getElementById('f2'), svg = f.querySelector('svg'), cap = f.querySelector('.cap');
+  const base = [0.48, -1.2, 0.3, 1.09, -1.06, -0.52, 1.61, -1.04, -0.67, 0.21];
+  let mult = 1, xs = base.slice(), R = run(M, xs);
+  const NX = i => 40 + i * 37.5;
+  let st;
+  const tw = tweener(v => paint(v));
+  let shownStep = 0;
+  function paint(v) {
+    clear(svg);
+    const s = shownStep;
+    tape(svg, xs, { y0: 72, upto: s - 1, cur: s - 1, title: 'the list', titleDy: 62 });
+    // neurons
+    const y0 = 250, k = 2.2;
+    T(svg, 6, 166, 'the 16 neurons (activity)', { class: 'b' });
+    S('line', { x1: 24, x2: 620, y1: y0, y2: y0, stroke: C.axis }, svg);
+    for (let i = 0; i < D; i++) {
+      const a = v[i], p = v[D + i];
+      const h = Math.min(80, a * k);
+      if (p < 0) { const hn = Math.min(26, -p * k * 0.4); S('rect', { x: NX(i) - 12, y: y0, width: 24, height: hn, fill: C.red, opacity: 0.3, rx: 2 }, svg); }
+      S('rect', { x: NX(i) - 12, y: y0 - h, width: 24, height: Math.max(0.5, h), fill: C.ink2, rx: 2 }, svg);
+      if (a > 0.05) T(svg, NX(i), y0 - h - 4, f1(a), { 'text-anchor': 'middle', class: 'm' });
+      T(svg, NX(i), y0 + 40, i, { 'text-anchor': 'middle' });
+    }
+    T(svg, 6, y0 + 40, '#', { class: 'm' });
+    // scores
+    const sc = v.slice(2 * D, 2 * D + N);
+    barsChart(svg, [{ vals: sc, color: C.blue, labels: s === N }], { y0: 365, k: 1.1, lim: 45, win: s === N ? argmax(sc) : null, title: s === N ? 'the 10 scores (each minus their average)' : 'the 10 scores: computed only after the last number', posLabels: true });
+  }
+  function target(s) {
+    const h = s > 0 ? R.H[s - 1] : new Array(D).fill(0), p = s > 0 ? R.P[s - 1] : new Array(D).fill(0);
+    const sc = s === N ? reading(M, R.H[N - 1]) : new Array(N).fill(0);
+    return [...h, ...p, ...sc];
+  }
+  function onStep(s, instant) {
+    shownStep = s; tw(target(s), instant);
+    const o = order(xs);
+    if (s === 0) cap.innerHTML = 'All 16 activities start at zero. Press ▶ to read the first number.';
+    else if (s < N) {
+      const p = R.P[s - 1], neg = p.filter(v => v < 0).length, on = R.H[s - 1].filter(v => v > 0).length;
+      cap.innerHTML = `Read <b>${f2(xs[s - 1])}</b> at position ${s - 1}. Each neuron took a weighted sum of this number and the 16 previous activities. ${neg} sums were negative, so ReLU set those neurons to zero (red stubs); ${on} neurons are active.`;
+    } else {
+      const sc = reading(M, R.H[N - 1]), w = argmax(sc);
+      cap.innerHTML = `After the tenth number, ten weighted sums of the final activities give the scores. The highest is at <b>position ${w}</b>. The second-largest number is ${f2(xs[o[1]])} at position ${o[1]}, so the network is ${w === o[1] ? 'right' : 'wrong'}.` + (mult === 2 ? ' Every number was doubled, so every activity and score is exactly twice as large, and the answer is the same.' : '');
+    }
+  }
+  st = stepper(f, { max: N, start: N, label: s => s === 0 ? 'start' : `after ${s} number${s > 1 ? 's' : ''}`, onStep, ms: 900 });
+  f.querySelector('[data-a=double]').onclick = e => { mult = 3 - mult; e.target.classList.toggle('on', mult === 2); xs = base.map(v => v * mult); R = run(M, xs); st.go(st.s); };
+  st.go(N, true);
+})();
+
+// ======================================================= figure 3: cartoon belt
+(() => {
+  const f = document.getElementById('f3'), svg = f.querySelector('svg'), cap = f.querySelector('.cap');
+  let xs = [0.4, 1.0, -0.5, 0.3, 1.4, 0.8, -1.2, 0.2, 1.1, -0.3], rule = 2, steps = cartoon(xs, rule);
+  let shown = N;
+  // token animation: for each token, x position and opacity
+  const tw = tweener(v => paint(v), 520);
+  function paint(v) {
+    clear(svg); const s = shown;
+    tape(svg, xs, { y0: 76, upto: s - 1, cur: s - 1, title: 'the list', titleDy: 64 });
+    const y0 = 290, k = 45;
+    T(svg, 6, 172, 'the belt: tokens drop in at the right and slide one place left per step', { class: 'b' });
+    S('rect', { x: X(0) - 27, y: y0, width: X(9) - X(0) + 54 + 40, height: 10, fill: C.grid, rx: 3 }, svg);
+    for (let i = 0; i <= 10; i++) S('line', { x1: X(0) - 27 + i * 54, x2: X(0) - 27 + i * 54, y1: y0, y2: y0 + 10, stroke: C.axis }, svg);
+    T(svg, X(9) + 40, y0 + 26, 'drop-in', { 'text-anchor': 'middle', class: 'm' });
+    for (let i = 0; i < N; i++) T(svg, X(i), y0 + 26, i, { 'text-anchor': 'middle', class: 'm' });
+    // tokens: v holds [x, op, hidden] per position i
+    let best = null;
+    const fin = s === N ? steps[N - 1].toks.filter(t => !t.hidden) : [];
+    if (fin.length) best = fin.reduce((b, t) => t.v > b.v ? t : b).p;
+    for (let i = 0; i < N; i++) {
+      const x = v[3 * i], op = v[3 * i + 1], hid = v[3 * i + 2];
+      if (op < 0.02) continue;
+      const h = Math.min(2.2, xs[i]) * k;
+      const col = best === i ? C.green : C.blue;
+      S('rect', { x: x - 18, y: y0 - h, width: 36, height: h, rx: 3, fill: col, 'fill-opacity': op * (1 - hid), stroke: col, 'stroke-opacity': op, 'stroke-dasharray': hid > 0.5 ? '4 3' : 'none', 'stroke-width': 1.5 }, svg);
+      T(svg, x, y0 - h - 5, f2(xs[i]) + (hid > 0.5 ? ' hidden' : ''), { 'text-anchor': 'middle', class: hid > 0.5 ? 'm' : 'b', opacity: op });
+    }
+  }
+  function target(s) {
+    const out = [];
+    const toks = s > 0 ? steps[s - 1].toks : [];
+    for (let i = 0; i < N; i++) {
+      const tk = toks.find(t => t.p === i);
+      const age = s - 1 - i; // steps since it arrived
+      const x = X(9) + 54 - (age + 1) * 54 + 54 * 0; // drop-in at X(9)+54 at age -1 → at arrival age 0 at X(9)?
+      if (tk) out.push(X(i) + 54 * (N - s), 1, tk.hidden ? 1 : 0);
+      else if (s - 1 === i && xs[i] > 0) out.push(X(9) + 54, 0, 0); // forgotten: fades at the drop-in point
+      else out.push(X(9) + 54, 0, 0);
+    }
+    return out;
+  }
+  function onStep(s, instant) {
+    shown = s; tw(target(s), instant);
+    if (s === 0) { cap.innerHTML = 'The belt is empty. Press ▶.'; return; }
+    let t = steps[s - 1].ev.text;
+    if (s === N) {
+      const vis = steps[N - 1].toks.filter(k => !k.hidden), o = order(xs);
+      const a = vis.length ? vis.reduce((b, k) => k.v > b.v ? k : b).p : null;
+      t += `. <b>The list has ended</b>: every token sits under its own number. The tallest visible token is at position ${a}` + (a === o[1] ? ', the second-largest. Right.' : a === o[0] ? ', the largest. Wrong: that is why the largest must be hidden.' : '.');
+    } else t += '.';
+    cap.innerHTML = `Step ${s - 1}: ` + t;
+  }
+  const st = stepper(f, { max: N, start: 0, label: s => s === 0 ? 'start' : `after ${s}`, onStep, ms: 1300 });
+  f.querySelector('[data-a=rule]').onchange = e => { rule = +e.target.value; steps = cartoon(xs, rule); st.go(st.s, true); };
+  f.querySelector('[data-a=new]').onclick = () => { xs = randList(); steps = cartoon(xs, rule); st.go(0, true); };
+  st.go(0, true);
+  // accuracy of the cartoon
+  setTimeout(() => { seed = 11; let ok = 0; const n = 100000; for (let j = 0; j < n; j++) { const l = Array.from({ length: N }, randn); if (cartoonAnswer(l, 1) === order(l)[1]) ok++; } document.getElementById('acc-cartoon').textContent = (100 * ok / n).toFixed(1) + '%'; seed = 99; }, 50);
+})();
+
+// ======================================================= figure 4: largest so far
+(() => {
+  const f = document.getElementById('f4'), svg = f.querySelector('svg'), cap = f.querySelector('.cap');
+  let xs = [0.48, -1.2, 0.3, 1.09, -1.06, -0.52, 1.61, -1.04, -0.67, 0.21], R = run(M, xs);
+  let shown = 0;
+  const tw = tweener(v => paint(v));
+  function paint(v) {
+    clear(svg); const s = shown;
+    tape(svg, xs, { y0: 72, upto: s - 1, cur: s - 1, title: 'the list', titleDy: 62 });
+    const y0 = 340, k = 60;
+    T(svg, 6, 166, 'the largest so far, and what neurons 2 and 4 hold', { class: 'b' });
+    for (const gv of [0, 0.5, 1, 1.5, 2]) { S('line', { x1: X(0) - 26, x2: X(9) + 26, y1: y0 - gv * k, y2: y0 - gv * k, stroke: gv ? C.grid : C.axis }, svg); T(svg, X(0) - 30, y0 - gv * k + 4, gv, { 'text-anchor': 'end', class: 'm' }); }
+    // true running max staircase
+    let m = 0, d = '';
+    for (let i = 0; i < s; i++) { m = Math.max(m, xs[i]); const y = y0 - Math.min(2.3, m) * k; d += (i ? ' L' : 'M') + (X(i) - 27) + ',' + y + ' L' + (X(i) + 27) + ',' + y; }
+    if (d) S('path', { d, fill: 'none', stroke: C.ink, 'stroke-width': 2 }, svg);
+    for (let i = 0; i < N; i++) {
+      const n4 = v[i], n2 = v[N + i];
+      if (i >= s) continue;
+      // neuron 4 as orange bar (scaled /10 so it is in units of the list)
+      const h4 = Math.min(2.3, n4 / 10.16) * k;
+      if (n4 > 0.01) { S('rect', { x: X(i) - 9, y: y0 - h4, width: 18, height: h4, fill: C.orange, rx: 2 }, svg); T(svg, X(i), y0 + 14, 'n4 = ' + f1(n4), { 'text-anchor': 'middle', style: `fill:${C.orange};font-size:11px` }); }
+      S('circle', { cx: X(i), cy: y0 - Math.min(2.3, n2 / 17) * k, r: 5, fill: C.blue }, svg);
+    }
+    T(svg, 6, y0 + 4, '', {});
+  }
+  function target(s) { return [...R.H.map(h => h[4]), ...R.H.map(h => h[2])]; }
+  function onStep(s, instant) {
+    shown = s; tw(target(s), instant);
+    if (s === 0) { cap.innerHTML = 'Nothing read yet. Press ▶.'; return; }
+    const t = s - 1, x = xs[t]; let m = 0; for (let i = 0; i < t; i++) m = Math.max(m, xs[i]);
+    const n4 = R.H[t][4], n2 = R.H[t][2];
+    cap.innerHTML = x > m ? `Step ${t}: <b>${f2(x)} beats the largest so far (${f2(m)})</b>. Neuron 4 fires ${f1(n4)}, about ten times the margin (10 × ${f2(x - m)} = ${f1(10.16 * (x - m))}). Neuron 2 will add this in on the next step; it now reads ${f2(n2 / 17)} after dividing by 17.`
+      : `Step ${t}: ${f2(x)} does not beat ${f2(m)}, so the sum for neuron 4 is negative (about ${f1(R.P[t][4])}) and ReLU sets it to zero. Neuron 2 ÷ 17 reads ${f2(n2 / 17)}; the true largest so far is ${f2(m)}.`;
+  }
+  const st = stepper(f, { max: N, start: 0, label: s => s === 0 ? 'start' : `after ${s}`, onStep, ms: 1000 });
+  f.querySelector('[data-a=new]').onclick = () => { xs = randList(); R = run(M, xs); st.go(0, true); };
+  st.go(0, true);
+})();
+
+// ======================================================= figure 5: dial
+function dialProj(h) { const v = DIAL.dial_neurons.map((k, j) => h[k] - DIAL.dial_mean[j]); return DIAL.dial_axes.map(ax => ax.reduce((a, w, j) => a + w * v[j], 0)); }
+(() => {
+  const f = document.getElementById('f5'), dial = f.querySelector('.dial'), sh = f.querySelector('.sh'), cap = f.querySelector('.cap');
+  const selP = f.querySelector('[data-a=pos]'), selM = f.querySelector('[data-a=mode]');
+  fillSelect(selP, posItems(0, 8), 3);
+  let pos = 3, mode = 'toy', shown = 0;
+  const cx = 150, cy = 150, R0 = 108;
+  // cartoon spokes: position p is read at angle (9 - p) * 40 deg from where a new number starts
+  const toySpoke = p => (90 - (9 - p) * 40) * Math.PI / 180;
+  const realSpokes = DIAL.spokes.map(q => Math.atan2(q[1], q[0]));
+  const realLen = DIAL.spokes.map(q => Math.hypot(q[0], q[1])), realMax = Math.max(...realLen);
+  // the trained network's trajectory for a lone 1.0 at each position; arrow from the zero-list state
+  function realPts(p) { const xs = new Array(N).fill(0); xs[p] = 1; return run(M, xs).H.map(dialProj); }
+  let rp = realPts(pos), rscale = 1;
+  const tw = tweener(v => paint(v), 600);
+  function paint(v) {
+    clear(dial); clear(sh);
+    const [ang, len] = v;
+    S('circle', { cx, cy, r: R0, fill: 'none', stroke: C.grid }, dial);
+    T(dial, 4, 14, mode === 'toy' ? 'cartoon arrow and spokes' : 'twelve neurons, seen in their main plane', { class: 'b' });
+    const spokes = mode === 'toy' ? posItems(0, 8).map(([p]) => [toySpoke(p), 1]) : realSpokes.slice(0, 9).map((a, j) => [a, realLen[j] / realMax]);
+    spokes.forEach(([a, l], j) => {
+      const hi = j === pos;
+      S('line', { x1: cx, y1: cy, x2: cx + R0 * l * Math.cos(a), y2: cy - R0 * l * Math.sin(a), stroke: hi ? C.green : C.axis, 'stroke-width': hi ? 3 : 1.5 }, dial);
+      T(dial, cx + (R0 * l + 12) * Math.cos(a), cy - (R0 * l + 12) * Math.sin(a) + 4, j, { 'text-anchor': 'middle', class: hi ? 'b' : 'm' });
+    });
+    if (len > 0.01) {
+      const L = len * R0 * 0.92;
+      const ex = cx + L * Math.cos(ang), ey = cy - L * Math.sin(ang);
+      S('line', { x1: cx, y1: cy, x2: ex, y2: ey, stroke: C.blue, 'stroke-width': 4, 'stroke-linecap': 'round', opacity: 0.75 }, dial);
+      S('circle', { cx: ex, cy: ey, r: 6, fill: C.blue }, dial);
+    }
+    S('circle', { cx, cy, r: 3, fill: C.ink }, dial);
+    // shadows
+    const y0 = 150, k = 95;
+    T(sh, 4, 14, 'shadow on each spoke = score', { class: 'b' });
+    S('line', { x1: 20, x2: 350, y1: y0, y2: y0, stroke: C.axis }, sh);
+    const vals = spokes.map(([a, l]) => len * l * Math.cos(ang - a));
+    const best = len > 0.01 ? argmax(vals) : -1;
+    vals.forEach((val, j) => {
+      const x = 36 + j * 35, h = val * k;
+      S('rect', { x: x - 12, y: h > 0 ? y0 - h : y0, width: 24, height: Math.max(0.5, Math.abs(h)), fill: j === best ? C.green : C.blue, rx: 2 }, sh);
+      if (len > 0.01) T(sh, x, h >= 0 ? y0 - h - 4 : y0 - h + 13, val.toFixed(2), { 'text-anchor': 'middle', class: 'm' });
+      T(sh, x, 252, j, { 'text-anchor': 'middle', class: j === pos ? 'b' : 'm' });
+    });
+    T(sh, 4, 252, 'pos.', { class: 'm' });
+  }
+  function target(s) {
+    // s = step index 0..10 (number of numbers read)
+    if (mode === 'toy') {
+      if (s <= pos) return [toySpoke(9), 0];
+      const age = s - 1 - pos; return [toySpoke(9) - age * 40 * Math.PI / 180, 1];
+    } else {
+      if (s <= pos) return [0, 0];
+      const q = rp[s - 1]; const a = Math.atan2(q[1], q[0]);
+      return [a, Math.hypot(q[0], q[1]) / rscale];
+    }
+  }
+  let lastAng = null;
+  function onStep(s, instant) {
+    shown = s;
+    let tg = target(s);
+    // unwrap angle so the arrow turns the short way it actually turns
+    if (lastAng != null && !instant) { while (tg[0] - lastAng > Math.PI) tg[0] -= 2 * Math.PI; while (tg[0] - lastAng < -Math.PI) tg[0] += 2 * Math.PI; }
+    lastAng = tg[0];
+    tw(tg, instant);
+    const age = s - 1 - pos;
+    if (s <= pos) cap.innerHTML = `No number yet: the arrow appears when the number at position ${pos} arrives.`;
+    else if (mode === 'toy') cap.innerHTML = `${age === 0 ? 'The number arrives; the arrow starts pointing straight up. (Up is also spoke 0: nine turns of 40° make a full circle, so the oldest position shares an angle with the newest.)' : `${age} step${age > 1 ? 's' : ''} later the arrow has turned ${age * 40}°.`} ` + (s === N ? `<b>The list has ended</b>, and the arrow points along spoke ${pos}, its own position. Its neighbours get 0.77 of the peak: a broad wave.` : `If the list ended now it would point at spoke ${Math.min(9, pos + N - s)}.`);
+    else {
+      const prev = s - 2 >= pos ? rp[s - 2] : null, q = rp[s - 1];
+      let turn = prev ? (Math.atan2(q[1], q[0]) - Math.atan2(prev[1], prev[0])) * 180 / Math.PI : null;
+      if (turn != null) { while (turn > 180) turn -= 360; while (turn < -180) turn += 360; }
+      const shrink = prev ? Math.hypot(q[0], q[1]) / Math.hypot(prev[0], prev[1]) : null;
+      cap.innerHTML = (age === 0 ? 'The 1.0 arrives. The arrow is the twelve neurons\' activity minus their average over random lists, seen in their main plane. The first two steps are irregular; after that it turns steadily.' : `Step ${s - 1}: the arrow turned ${Math.abs(turn).toFixed(0)}° and its length changed to ${(100 * shrink).toFixed(0)}% of the step before.`) + (s === N ? ` <b>End of list</b>: the largest shadow is on spoke ${argmax(realSpokes.slice(0, 9).map((a, j) => realLen[j] * Math.cos(target(N)[0] - a)))}; the 1.0 is at position ${pos}.` : '');
+    }
+  }
+  const st = stepper(f, { max: N, start: 0, label: s => s === 0 ? 'start' : `after ${s} numbers`, onStep, ms: 900 });
+  function reset() { rp = realPts(pos); rscale = Math.max(...rp.slice(pos).map(q => Math.hypot(q[0], q[1]))); lastAng = null; st.go(0, true); }
+  selP.onchange = () => { pos = +selP.value; reset(); };
+  selM.onchange = () => { mode = selM.value; reset(); };
+  reset();
+})();
+
+// ======================================================= figure 6: several arrows = belt
+(() => {
+  const f = document.getElementById('f6'), svg = f.querySelector('svg'), cap = f.querySelector('.cap');
+  const on = [true, false, false, false];
+  let slot = 4;
+  // 9-slot belt: a token at slot s0 read at slot j: (1 + 2 sum_k on_k cos(2 pi k (j - s0) / 9)) / 9
+  function profile(s0) { return Array.from({ length: 9 }, (_, j) => { let v = 1; for (let k = 1; k <= 4; k++) if (on[k - 1]) v += 2 * Math.cos(2 * Math.PI * k * (j - s0) / 9); return v / 9; }); }
+  const tw = tweener(v => paint(v), 420);
+  const BX = j => 110 + j * 56;
+  function paint(v) {
+    clear(svg);
+    T(svg, 6, 18, 'one token on a nine-slot belt, read through the chosen arrows', { class: 'b' });
+    const y0 = 190, k = 140;
+    for (const gv of [-0.25, 0, 0.5, 1]) { S('line', { x1: BX(0) - 28, x2: BX(8) + 28, y1: y0 - gv * k, y2: y0 - gv * k, stroke: gv ? C.grid : C.axis }, svg); T(svg, BX(0) - 34, y0 - gv * k + 4, gv, { 'text-anchor': 'end', class: 'm' }); }
+    v.forEach((val, j) => {
+      const h = val * k;
+      S('rect', { x: BX(j) - 18, y: h > 0 ? y0 - h : y0, width: 36, height: Math.max(0.5, Math.abs(h)), fill: j === slot ? C.green : C.blue, rx: 2 }, svg);
+      T(svg, BX(j), h >= 0 ? y0 - h - 5 : y0 - h + 14, val.toFixed(2), { 'text-anchor': 'middle', class: 'm' });
+      T(svg, BX(j), 286, 'slot ' + j, { 'text-anchor': 'middle', class: j === slot ? 'b' : 'm' });
+    });
+    T(svg, 6, y0 - 1 * k + 4, 'reading', { class: 'm' });
+  }
+  function upd(instant) {
+    const p = profile(slot); tw(p, instant);
+    const n = on.filter(Boolean).length, nb = p[(slot + 1) % 9] / p[slot];
+    cap.innerHTML = n === 0 ? 'No arrows: every slot reads the same 1/9, so the reading says nothing about where the token is.' : n === 4 ? `All four arrows plus the constant: the reading is exactly 1 at the token's slot and 0 everywhere else. This is a perfect belt.` : `With ${n} arrow${n > 1 ? 's' : ''}, the neighbouring slots read ${(100 * nb).toFixed(0)}% of the peak. Add faster arrows to sharpen the spike.`;
+  }
+  ['d1', 'd2', 'd3', 'd4'].forEach((a, i) => { const b = f.querySelector(`[data-a=${a}]`); b.onclick = () => { on[i] = !on[i]; b.classList.toggle('on', on[i]); upd(); }; });
+  let timer = null;
+  f.querySelector('[data-a=play]').onclick = e => { if (timer) { clearInterval(timer); timer = null; e.target.textContent = 'play the belt'; return; } e.target.textContent = 'pause'; timer = setInterval(() => { slot = (slot + 1) % 9; upd(slot === 0); }, 800); };
+  upd(true);
+})();
+
+// ======================================================= figure 7: hiding
+(() => {
+  const f = document.getElementById('f7'), svg = f.querySelector('svg'), cap = f.querySelector('.cap');
+  const sel = f.querySelector('[data-a=pos]'); fillSelect(sel, posItems(0, 7), 2);
+  let pos = 2, parts;
+  function compute() {
+    const xs = new Array(N).fill(0); xs[pos] = 1; const R = run(M, xs), h = R.H[N - 1];
+    const blue = reading(M, h, TIMER), orange = reading(M, h, HIDE), tot = reading(M, h);
+    const t0 = Math.min(N - 1, pos + 2); const Rs = run(M, xs, { zero: { t: t0, ks: HIDE } }); const sil = reading(M, Rs.H[N - 1]);
+    parts = { xs, blue, orange, tot, sil, t0, hide: h.filter((v, i) => HIDE.includes(i)) };
+  }
+  const tw = tweener(v => paint(v), 600);
+  let stage = 0;
+  function paint(v) {
+    clear(svg);
+    tape(svg, parts.xs, { y0: 60, k: 30, title: 'the list: one 1.0, nine zeros', titleDy: 46, labDy: 22, labels: true });
+    const b = v.slice(0, N), o = v.slice(N, 2 * N), t = v.slice(2 * N, 3 * N), op = v.slice(3 * N, 3 * N + 3);
+    const win = stage >= 2 ? argmax(t) : null;
+    barsChart(svg, [
+      { vals: b, color: C.blue, w: 13, dx: -14, opacity: op[0] },
+      { vals: o, color: C.orange, w: 13, dx: 0, opacity: op[1] },
+      { vals: t, color: C.ink, w: 13, dx: 14, opacity: op[2], labels: op[2] > 0.5, fmt: f0, labelClass: 'b' },
+    ], { y0: 250, k: 1.7, lim: 80, grid: [-50, 50], title: stage === 3 ? 'final scores with the four hiding neurons silenced at step ' + parts.t0 : 'final scores, split by source', posLabels: true, win, winColor: stage === 3 ? C.greenl : C.hi });
+  }
+  function target(s) {
+    const z = new Array(N).fill(0);
+    if (s === 0) return [...parts.blue, ...z, ...z, 1, 0, 0];
+    if (s === 1) return [...parts.blue, ...parts.orange, ...z, 1, 1, 0];
+    if (s === 2) return [...parts.blue, ...parts.orange, ...parts.tot, 0.35, 0.35, 1];
+    return [...z, ...z, ...parts.sil, 0, 0, 1];
+  }
+  function onStep(s, instant) {
+    stage = s; tw(target(s), instant);
+    const pb = argmax(parts.blue), mx = Math.max(...parts.tot) - Math.min(...parts.tot);
+    cap.innerHTML = [
+      `The twelve timer neurons alone push the scores into a wave that peaks at <b>position ${pb}</b> (+${f0(parts.blue[pb])}). On its own this is a strong vote for the 1.0's position.`,
+      `The four hiding neurons push back with a near mirror image: ${f0(parts.orange[pb])} at position ${pb}.`,
+      `Added up, the two nearly cancel. The total scores span only ${f0(mx)} from highest to lowest, against about 100 for each part. The 1.0's vote is hidden, and the highest total (position ${argmax(parts.tot)}) is just leftover noise.`,
+      `Now an intervention: set the four hiding neurons to zero once, at step ${parts.t0}, with no bigger number in the list. The network then runs on as usual. The final scores peak at <b>position ${argmax(parts.sil)}</b>${argmax(parts.sil) === pos ? ', the 1.0\'s own position' : ''}. Silencing the four is enough to unhide the vote.`
+    ][s];
+  }
+  const st = stepper(f, { max: 3, start: 0, label: s => ['timer', '+ hiders', 'total', 'silence'][s], onStep });
+  sel.onchange = () => { pos = +sel.value; compute(); st.go(st.s, true); };
+  compute(); st.go(0, true);
+})();
+
+// ======================================================= per-step reading figure (used by 8, 9, 10)
+// draws: tape, a row of neuron lamps, the reading chart
+function lampRow(g, y, items, o = {}) {
+  // items: [{name, v, max, color}]
+  T(g, 6, y - 26, o.title || '', { class: 'b' });
+  items.forEach((it, j) => {
+    const x = 92 + j * (o.dx || 80), w = 56, fr = Math.max(0, Math.min(1, it.v / it.max));
+    S('rect', { x: x - w / 2, y: y - 14, width: w, height: 28, rx: 6, fill: '#fff', stroke: C.axis }, g);
+    S('rect', { x: x - w / 2, y: y - 14, width: w * fr, height: 28, rx: 6, fill: it.color, opacity: 0.85 }, g);
+    T(g, x, y + 5, f1(it.v), { 'text-anchor': 'middle', class: 'b' });
+    T(g, x, y + 30, it.name, { 'text-anchor': 'middle', class: 'm' });
+  });
+}
+
+// ======================================================= figure 8: a bigger number unhides
+(() => {
+  const f = document.getElementById('f8'), svg = f.querySelector('svg'), cap = f.querySelector('.cap');
+  const sa = f.querySelector('[data-a=a]'), sb = f.querySelector('[data-a=b]');
+  let a = 2, b = 6; fillSelect(sa, posItems(0, 7), a); fillSelect(sb, posItems(1, 9), b);
+  let xs, R, shown = 0;
+  function compute() { xs = new Array(N).fill(0); xs[a] = 1.0; xs[b] = 1.5; R = run(M, xs); }
+  const tw = tweener(v => paint(v), 520);
+  function paint(v) {
+    clear(svg); const s = shown;
+    tape(svg, xs, { y0: 64, upto: s - 1, cur: s - 1, k: 26, title: 'the list', titleDy: 50, labDy: 20, color: i => i === a ? C.blue : i === b ? C.purple : C.grey });
+    lampRow(svg, 150, HIDE.map((k, j) => ({ name: 'neuron ' + k, v: v[j], max: 25, color: C.orange })), { title: 'the four hiding neurons', dx: 80 });
+    const rd = v.slice(4, 4 + N);
+    const win = s === N ? argmax(rd) : null;
+    barsChart(svg, [{ vals: rd, color: C.ink, labels: true, labelClass: 'm' }], { y0: 350, k: 1.2, lim: 95, grid: [-50, 50], title: s === N ? 'final scores' : 'what the output would read now (scores minus their average)', posLabels: true, win });
+    if (s > 0 && s < N && s - 1 >= a) {
+      // mark where the 1.0's vote should sit now: a + (9 - t)
+      const t = s - 1, p = a + (N - 1 - t);
+      if (p <= 9) T(svg, X(p), 512, "▲ the 1.0's vote, if visible", { 'text-anchor': 'middle', style: `fill:${C.blue};font-size:11px;font-weight:600` });
+    }
+  }
+  function target(s) { const h = s > 0 ? R.H[s - 1] : new Array(D).fill(0); return [...HIDE.map(k => h[k]), ...(s > 0 ? reading(M, h) : new Array(N).fill(0))]; }
+  function onStep(s, instant) {
+    shown = s; tw(target(s), instant);
+    if (s === 0) { cap.innerHTML = 'A 1.0 and a later 1.5 in a list of zeros. The 1.0 will be overtaken, so it is the true second-largest. Press ▶.'; return; }
+    const t = s - 1, h = R.H[t], hid = HIDE.map(k => h[k]), rd = reading(M, h), p = a + (N - 1 - t);
+    let txt;
+    if (t < a) txt = `Step ${t}: zeros so far. Nothing happens: with no bias, zeros leave every activity at zero.`;
+    else if (t === a) txt = `Step ${t}: the 1.0 arrives and is the new largest. Its timer starts in the twelve timer neurons.`;
+    else if (t < b) { const r8 = rd.slice(0, 8); txt = `Step ${t}: the hiding neurons now hold ${hid.map(f0).join(', ')} and cancel the 1.0's timer. Over positions 0–7 the reading spans only ${f0(Math.max(...r8) - Math.min(...r8))}: no visible vote. (Positions 8 and 9 are read through other neurons and are not part of the belt.)`; }
+    else if (t === b) { const pre = R.P[t]; txt = `Step ${t}: <b>the 1.5 arrives</b>. Its input weights (−11 to −13) push the hiding neurons' sums to ${HIDE.map(k => f0(pre[k])).join(', ')}. ReLU sets all four to zero. The 1.0's timer is no longer cancelled: a vote of ${f0(rd[Math.min(9, p)])} appears at position ${Math.min(9, p)}, ${N - 1 - t} place${N - 1 - t === 1 ? '' : 's'} right of position ${a}.`; }
+    else txt = `Step ${t}: the vote slides one place left, to position ${p} (${f0(rd[p])}). The hiding neurons are rebuilding (${hid.map(f0).join(', ')}), now hiding the 1.5's timer instead.`;
+    if (s === N) txt += ` <b>End of list</b>: the highest score is at position ${argmax(rd)}${argmax(rd) === a ? ', where the 1.0 is. Right.' : '.'}`;
+    cap.innerHTML = txt;
+  }
+  const st = stepper(f, { max: N, start: 0, label: s => s === 0 ? 'start' : `after ${s}`, onStep, ms: 1100 });
+  const re = () => { a = +sa.value; b = +sb.value; if (b <= a) { b = Math.min(9, a + 1); sb.value = b; } compute(); st.go(0, true); };
+  sa.onchange = re; sb.onchange = re;
+  compute(); st.go(0, true);
+})();
+
+// ======================================================= figure 9: neuron 5
+(() => {
+  const f = document.getElementById('f9'), svg = f.querySelector('svg'), cap = f.querySelector('.cap');
+  const slider = f.querySelector('[data-a=x]'), xv = f.querySelector('.xv'), fb = f.querySelector('[data-a=force]');
+  let x = 0.6, force = false, xs, R, shown = 0, thr = null;
+  function threshold() {
+    // smallest x in [0, 1.0] for which neuron 5 one step later exceeds 0.5
+    for (let v = 0; v <= 1.0; v += 0.005) { const l = [0, 1.5, 0, 1.0, 0, v, 0, 0, 0, 0]; if (run(M, l).H[6][5] > 0.5) return v; }
+    return null;
+  }
+  function compute() { xs = [0, 1.5, 0, 1.0, 0, x, 0, 0, 0, 0]; R = run(M, xs, force ? { force: { t: 6, k: 5, v: 0 } } : {}); }
+  const tw = tweener(v => paint(v), 520);
+  function paint(v) {
+    clear(svg); const s = shown;
+    tape(svg, xs, { y0: 64, upto: s - 1, cur: s - 1, k: 24, title: 'the list', titleDy: 50, labDy: 44, color: i => i === 5 ? C.green : C.grey });
+    lampRow(svg, 160, [{ name: 'neuron 5', v: v[0], max: 20, color: C.green }], { title: 'the keep-or-forget gate' });
+    if (thr != null) { T(svg, 140, 156, `In this list neuron 5 keeps the number at position 5 if it is at least ${thr.toFixed(2)},`, { class: 'm' }); T(svg, 140, 172, `that is ${(100 * thr).toFixed(0)}% of the second-largest so far (1.00).`, { class: 'm' }); }
+    const rd = v.slice(1, 1 + N);
+    barsChart(svg, [{ vals: rd, color: C.ink, labels: true }], { y0: 350, k: 1.2, lim: 95, grid: [-50, 50], title: s === N ? 'final scores' : 'what the output would read now', posLabels: true, win: s === N ? argmax(rd) : null });
+  }
+  function target(s) { const h = s > 0 ? R.H[s - 1] : new Array(D).fill(0); return [h[5], ...(s > 0 ? reading(M, h) : new Array(N).fill(0))]; }
+  function onStep(s, instant) {
+    shown = s; tw(target(s), instant);
+    const t = s - 1, o = order(xs);
+    let txt = '';
+    if (s === 0) txt = 'Press ▶.';
+    else if (t === 1) txt = 'Step 1: 1.5 is the new largest. One step later neuron 5 fires, as it does for every new largest.';
+    else if (t === 3) txt = 'Step 3: 1.0 arrives. It is not a new largest; it is the second-largest so far, so it will be kept.';
+    else if (t === 4) txt = `Step 4: neuron 5 is ${f1(R.H[4][5])}: the 1.0 is kept, and its vote enters the belt.`;
+    else if (t === 5) txt = `Step 5: ${f2(x)} arrives. Will neuron 5 keep it? The threshold here is about ${thr == null ? '?' : thr.toFixed(2)}.`;
+    else if (t === 6) { const n5 = R.H[6][5]; txt = force ? `Step 6: neuron 5 is <b>forced to zero</b> by hand. The ${f2(x)} is forgotten whatever its size.` : n5 > 0.5 ? `Step 6: neuron 5 fires ${f1(n5)}: <b>${f2(x)} is kept</b> and starts a visible vote, now at position ${5 + 3}.` : `Step 6: neuron 5 stays at ${f1(n5)}: <b>${f2(x)} is forgotten</b>. No new vote appears.`; }
+    else if (s === N) { const w = argmax(reading(M, R.H[N - 1])); txt = `End of list: the answer is position ${w}. The true second-largest is ${f2(xs[o[1]])} at position ${o[1]}, so the network is <b>${w === o[1] ? 'right' : 'wrong'}</b>.`; }
+    else txt = `Step ${t}: zeros. Visible votes slide one place left per step.`;
+    cap.innerHTML = txt;
+  }
+  const st = stepper(f, { max: N, start: 0, label: s => s === 0 ? 'start' : `after ${s}`, onStep, ms: 1000 });
+  slider.oninput = () => { x = +slider.value / 100; xv.textContent = f2(x); compute(); st.go(st.s, true); };
+  fb.onclick = () => { force = !force; fb.classList.toggle('on', force); compute(); st.go(st.s, true); };
+  xv.textContent = f2(x); thr = threshold(); compute(); st.go(0, true);
+})();
+
+// ======================================================= figure 10: whole lists, interventions
+(() => {
+  const f = document.getElementById('f10'), svg = f.querySelector('svg'), cap = f.querySelector('.cap');
+  const sx = f.querySelector('[data-a=ex]'), siv = f.querySelector('[data-a=iv]');
+  fillSelect(sx, Object.keys(EXS).map(k => [k, 'Example: ' + k]), 'typical');
+  let xs = EXS.typical.slice(), R, base, steps, ev, shown = 0, iv = 'none';
+  const KC = { new: C.ink2, over: C.blue, keep: C.green, last: C.green, forget: C.grey, neg: C.grey };
+  function events() {
+    // label each step with the cartoon's rule and neuron 5's actual activity one step later
+    let m = 0, s2 = 0; const out = [];
+    xs.forEach((x, t) => {
+      const n5 = t < N - 1 ? base.H[t + 1][5] : null;
+      if (x > m && x > 0) { out.push({ k: m > 0 ? 'over' : 'new', s: m > 0 ? `${f2(x)} overtakes ${f2(m)}: the ${f2(m)}'s vote is unhidden` : `${f2(x)}: new largest, vote hidden` }); s2 = m; m = x; }
+      else if (x > 0) {
+        if (n5 == null) out.push({ k: 'last', s: `${f2(x)}: the last number, read directly through its dip in the hiding neurons` });
+        else out.push({ k: n5 > 0.5 ? 'keep' : 'forget', s: `${f2(x)}: neuron 5 is ${f1(n5)} one step later, so it is ${n5 > 0.5 ? 'kept' : 'forgotten'} (second-largest so far ${f2(s2)})` });
+        if (x > s2) s2 = x;
+      } else out.push({ k: 'neg', s: `${f2(x)}: not positive, no vote` });
+    });
+    return out;
+  }
+  function ivOptions() {
+    const o = order(xs), L = o[0], items = [['none', 'none']];
+    for (let t = L + 1; t < N; t++) items.push(['sil' + t, `silence the four hiding neurons at step ${t}`]);
+    // restore: at the step a bigger number arrives, put the four back to their values without it
+    let m = 0; xs.forEach((x, t) => { if (x > m && x > 0 && m > 0) items.push(['res' + t, `at step ${t}, keep the hiding neurons as if ${f2(x)} were not bigger`]); if (x > m) m = x; });
+    fillSelect(siv, items, 'none'); iv = 'none';
+  }
+  function compute() {
+    base = run(M, xs);
+    if (iv.startsWith('sil')) R = run(M, xs, { zero: { t: +iv.slice(3), ks: HIDE } });
+    else if (iv.startsWith('res')) { const t = +iv.slice(3); const alt = xs.slice(); alt[t] = 0; const A = run(M, alt); R = run(M, xs, { restore: { t, ks: HIDE, from: A.H } }); }
+    else R = base;
+    steps = cartoon(xs, 2); ev = events();
+  }
+  const tw = tweener(v => paint(v), 520);
+  function paint(v) {
+    clear(svg); const s = shown;
+    tape(svg, xs, { y0: 72, upto: s - 1, cur: s - 1, title: 'the list', titleDy: 62, color: i => i < s ? KC[ev[i].k] : C.grey });
+    // cartoon belt row
+    T(svg, 6, 160, 'cartoon belt', { class: 'b' });
+    const yb = 214; S('line', { x1: X(0) - 26, x2: X(9) + 26, y1: yb, y2: yb, stroke: C.axis }, svg);
+    if (s > 0) steps[s - 1].toks.forEach(tk => { const x = X(tk.p) + 54 * (N - s); if (x > X(9) + 27) return; const h = Math.min(50, tk.v * 24); S('rect', { x: x - 14, y: yb - h, width: 28, height: h, rx: 2, fill: tk.hidden ? 'none' : C.blue, stroke: C.blue, 'stroke-dasharray': tk.hidden ? '3 3' : 'none' }, svg); });
+    const rd = v.slice(0, N);
+    barsChart(svg, [{ vals: rd, color: C.ink, labels: true }], { y0: 380, k: 1.1, lim: 100, grid: [-50, 50], title: (s === N ? 'final scores' : 'trained network: what the output would read now') + (iv !== 'none' ? '  (with the intervention)' : ''), posLabels: true, win: s === N ? argmax(rd) : null });
+  }
+  function target(s) { return s > 0 ? reading(M, R.H[s - 1]) : new Array(N).fill(0); }
+  function onStep(s, instant) {
+    shown = s; tw(target(s), instant);
+    if (s === 0) { cap.innerHTML = 'Press ▶ to read the list one number at a time.'; return; }
+    const t = s - 1, e = ev[t];
+    let txt = `<span class="ev" style="background:${KC[e.k]};color:#fff">${{ new: 'new largest', over: 'overtaking', keep: 'kept', last: 'last number', forget: 'forgotten', neg: 'ignored' }[e.k]}</span> Step ${t}: ${e.s}.`;
+    if (iv.startsWith('sil') && t === +iv.slice(3)) txt += ' <b>Intervention: the four hiding neurons are set to zero now.</b>';
+    if (iv.startsWith('res') && t === +iv.slice(3)) txt += ' <b>Intervention: the four hiding neurons keep their values from the list without this bigger number.</b>';
+    if (s === N) { const o = order(xs), w = argmax(reading(M, R.H[N - 1])), w0 = argmax(reading(M, base.H[N - 1])); txt += ` <b>Answer: position ${w}</b>. The second-largest is at ${o[1]}, the largest at ${o[0]}.` + (iv !== 'none' ? ` Without the intervention the answer was ${w0}.` : ''); }
+    cap.innerHTML = txt;
+  }
+  const st = stepper(f, { max: N, start: 0, label: s => s === 0 ? 'start' : `after ${s}`, onStep, ms: 1100 });
+  sx.onchange = () => { xs = EXS[sx.value].slice(); ivOptions(); compute(); st.go(0, true); };
+  f.querySelector('[data-a=new]').onclick = () => { xs = randList(); ivOptions(); compute(); st.go(0, true); };
+  siv.onchange = () => { iv = siv.value; compute(); st.go(st.s, true); };
+  ivOptions(); compute(); st.go(0, true);
+})();
+
+// ======================================================= figure 11: trained vs hand-built
+(() => {
+  const f = document.getElementById('f11'), svg = f.querySelector('svg'), cap = f.querySelector('.cap');
+  const sx = f.querySelector('[data-a=ex]');
+  fillSelect(sx, Object.keys(EXS).map(k => [k, 'Example: ' + k]), 'close call, right');
+  let xs = EXS['close call, right'].slice(), RT, RH, shown = 0;
+  function compute() { RT = run(M, xs); RH = run(HB, xs); }
+  const tw = tweener(v => paint(v), 520);
+  function paint(v) {
+    clear(svg); const s = shown;
+    tape(svg, xs, { y0: 72, upto: s - 1, cur: s - 1, title: 'the list', titleDy: 62 });
+    const t = v.slice(0, N), h = v.slice(N, 2 * N);
+    barsChart(svg, [{ vals: t, color: C.ink, labels: true }], { y0: 236, k: 0.85, lim: 80, title: 'trained network' + (s === N ? ': final scores' : ': reading now'), win: s === N ? argmax(t) : null });
+    barsChart(svg, [{ vals: h, color: C.purple, labels: true, fmt: f2 }], { y0: 424, k: 50, lim: 1.6, grid: [1], title: 'hand-built network' + (s === N ? ': final scores' : ': reading now'), posLabels: true, win: s === N ? argmax(h) : null });
+  }
+  // hand-built scores are centred on the median, so a vote reads its value above a flat zero
+  const med = a => { const b = a.slice().sort((x, y) => x - y); return (b[4] + b[5]) / 2; };
+  const hbRead = h => { const r = readout(HB, h); const m = med(r); return r.map(v => v - m); };
+  function target(s) { const z = new Array(N).fill(0); return s > 0 ? [...reading(M, RT.H[s - 1]), ...hbRead(RH.H[s - 1])] : [...z, ...z]; }
+  function onStep(s, instant) {
+    shown = s; tw(target(s), instant);
+    if (s === 0) { cap.innerHTML = 'Press ▶.'; return; }
+    if (s < N) { cap.innerHTML = `Step ${s - 1}: read ${f2(xs[s - 1])}. Both networks keep their votes on a sliding belt; the hand-built one is sharp and does not fade. Its belt has nine slots and wraps around, so votes that are still far from the end can show up at the wrong end of this chart.`; return; }
+    const o = order(xs), wt = argmax(reading(M, RT.H[N - 1])), wh = argmax(hbRead(RH.H[N - 1]));
+    cap.innerHTML = `End of list. Second-largest: ${f2(xs[o[1]])} at position ${o[1]}. Trained network answers <b>${wt}</b>, hand-built answers <b>${wh}</b>. The hand-built scores are in the list's own units: the winning score is close to the second-largest number's value.`;
+  }
+  const st = stepper(f, { max: N, start: N, label: s => s === 0 ? 'start' : `after ${s}`, onStep, ms: 1000 });
+  sx.onchange = () => { xs = EXS[sx.value].slice(); compute(); st.go(N, true); };
+  f.querySelector('[data-a=new]').onclick = () => { xs = randList(); compute(); st.go(0, true); };
+  compute(); st.go(N, true);
+})();
+
+// ======================================================= figure 12: table 2b
+(() => {
+  const f = document.getElementById('f12'), svg = f.querySelector('svg');
+  const kinds = ['At most one positive (1%)', 'New largest at the last step (10%)', 'New largest at step 8 (10%)', 'Two new largests in a row (26%)', 'Ordinary (54%)'];
+  const nets = [['Trained, 16', C.ink, [22, 94, 97, 96, 96]], ['Hand-built, 16', C.purple, [7, 100, 100, 100, 100]], ['Role-copying, 16', C.orange, [9, 11, 99, 97, 98]], ['Role-copying + 1, 17', C.blue, [9, 89, 99, 97, 98]], ['Role-copying + 2, 18', C.green, [8, 100, 99, 98, 99]]];
+  const y0 = 260, k = 2.0, gx = j => 70 + j * 116;
+  for (const gv of [0, 50, 100]) { S('line', { x1: 50, x2: 630, y1: y0 - gv * k, y2: y0 - gv * k, stroke: gv ? C.grid : C.axis }, svg); T(svg, 44, y0 - gv * k + 4, gv + '%', { 'text-anchor': 'end', class: 'm' }); }
+  kinds.forEach((kd, j) => {
+    nets.forEach(([nm, col, v], i) => { const x = gx(j) + i * 19, r = S('rect', { x, y: y0 - v[j] * k, width: 16, height: v[j] * k, fill: col, rx: 2 }, svg); const tt = S('title', {}, r); tt.textContent = `${nm} neurons: ${v[j]}%`; });
+    const words = kd.split(' '); let line = '', ly = y0 + 16;
+    words.forEach(w => { if ((line + ' ' + w).length > 16) { T(svg, gx(j) + 46, ly, line.trim(), { 'text-anchor': 'middle', class: 'm' }); ly += 13; line = w; } else line += ' ' + w; });
+    T(svg, gx(j) + 46, ly, line.trim(), { 'text-anchor': 'middle', class: 'm' });
+  });
+  nets.forEach(([nm, col], i) => { const lx = 60 + (i % 3) * 190, ly = 4 + Math.floor(i / 3) * 18; S('rect', { x: lx, y: ly, width: 11, height: 11, fill: col, rx: 2 }, svg); T(svg, lx + 16, ly + 10, nm + ' neurons', { class: 'm' }); });
+  T(svg, gx(1) + 2 * 19 + 8, y0 - 11 * k - 6, '11%', { 'text-anchor': 'middle', style: `fill:${C.orange};font-size:12px;font-weight:700` });
+})();
+
+// ======================================================= figure 13: close calls
+(() => {
+  const f = document.getElementById('f13'), svg = f.querySelector('svg'), cap = f.querySelector('.cap');
+  const sa = f.querySelector('[data-a=a]'), sb = f.querySelector('[data-a=b]'), sc = f.querySelector('[data-a=c]');
+  [sa, sb, sc].forEach(s => fillSelect(s, posItems()));
+  let a = 0, b = 4, c = 7; sa.value = a; sb.value = b; sc.value = c;
+  const NV = 401, lo = 0.9, hi = 1.1;
+  function sweep(W) { return Array.from({ length: NV }, (_, j) => { const v = lo + (hi - lo) * j / (NV - 1); const xs = new Array(N).fill(-0.46); xs[a] = 1.6; xs[b] = 1.0; xs[c] = v; return answerOf(W, xs); }); }
+  function draw() {
+    clear(svg);
+    const XS = v => 70 + (v - lo) / (hi - lo) * 540;
+    const rows = [['trained', sweep(M)], ['hand-built', sweep(HB)]];
+    T(svg, 6, 18, `third-largest's value, from ${lo} to ${hi}; the second is 1.00`, { class: 'b' });
+    rows.forEach(([nm, ans], r) => {
+      const y = 40 + r * 70;
+      T(svg, 6, y + 24, nm, { class: 'm' });
+      ans.forEach((p, j) => { const v = lo + (hi - lo) * j / (NV - 1); const right = v < 1 ? p === b : p === c; S('rect', { x: XS(v) - 0.8, y, width: 1.8, height: 36, fill: right ? C.green : C.red }, svg); });
+    });
+    S('line', { x1: XS(1), x2: XS(1), y1: 32, y2: 190, stroke: C.ink, 'stroke-dasharray': '4 3' }, svg);
+    for (const v of [0.9, 0.95, 1, 1.05, 1.1]) T(svg, XS(v), 200, v.toFixed(2), { 'text-anchor': 'middle', class: 'm' });
+    S('rect', { x: 70, y: 216, width: 11, height: 11, fill: C.green }, svg); T(svg, 86, 226, 'right answer', { class: 'm' });
+    S('rect', { x: 180, y: 216, width: 11, height: 11, fill: C.red }, svg); T(svg, 196, 226, 'wrong answer', { class: 'm' });
+    const tr = rows[0][1]; const wrong = tr.map((p, j) => { const v = lo + (hi - lo) * j / (NV - 1); return !(v < 1 ? p === b : p === c); });
+    const firstC = tr.findIndex(p => p === c); const sw = firstC < 0 ? null : lo + (hi - lo) * firstC / (NV - 1);
+    const nw = wrong.filter(Boolean).length;
+    cap.innerHTML = (a === b || b === c || a === c) ? 'Pick three different positions.' :
+      sw == null ? `Here the trained network never switches to the third's position in this range; it is wrong on ${(100 * nw / NV).toFixed(0)}% of the range.` :
+      `The trained network switches from position ${b} to position ${c} at about <b>${sw.toFixed(3)}</b>, a bias of ${((sw - 1) * 100).toFixed(1)}%. It is wrong on ${(100 * nw / NV).toFixed(1)}% of this narrow range, all of it near 1.00. The hand-built network switches almost exactly at 1.00.`;
+  }
+  const re = () => { a = +sa.value; b = +sb.value; c = +sc.value; draw(); };
+  [sa, sb, sc].forEach(s => s.onchange = re);
+  f.querySelector('[data-a=rand]').onclick = () => { const p = [...Array(N).keys()].sort(() => Math.random() - 0.5); sa.value = p[0]; sb.value = p[1]; sc.value = p[2]; re(); };
+  draw();
+})();
+
+// ======================================================= figure 14: estimate
+(() => {
+  const svg = document.querySelector('#f14 svg');
+  const pts = EST.map(([k, m, p]) => ({ k, m: 100 * m, p: 100 * p, fresh: k.startsWith('s2') }));
+  const lo = 0, hi = Math.ceil(Math.max(...pts.flatMap(q => [q.m, q.p])) / 2) * 2;
+  const XS = v => 70 + (v - lo) / (hi - lo) * 520, YS = v => 320 - (v - lo) / (hi - lo) * 290;
+  for (let g = 0; g <= hi; g += 2) { S('line', { x1: XS(lo), x2: XS(hi), y1: YS(g), y2: YS(g), stroke: C.grid }, svg); S('line', { x1: XS(g), x2: XS(g), y1: YS(lo), y2: YS(hi), stroke: C.grid }, svg); T(svg, XS(lo) - 6, YS(g) + 4, g + '%', { 'text-anchor': 'end', class: 'm' }); T(svg, XS(g), YS(lo) + 16, g + '%', { 'text-anchor': 'middle', class: 'm' }); }
+  S('line', { x1: XS(lo), y1: YS(lo), x2: XS(hi), y2: YS(hi), stroke: C.axis, 'stroke-dasharray': '4 3' }, svg);
+  T(svg, XS((lo + hi) / 2), 352, 'measured error rate', { 'text-anchor': 'middle' });
+  T(svg, 14, YS(hi) - 10, 'estimated error rate', {});
+  pts.forEach(q => { const c = S('circle', { cx: XS(q.m), cy: YS(q.p), r: 5.5, fill: q.fresh ? '#fff' : C.blue, stroke: q.k === 'ARC' ? C.orange : C.blue, 'stroke-width': q.k === 'ARC' ? 3 : 1.5 }, svg); const tt = S('title', {}, c); tt.textContent = `${q.k}: measured ${q.m.toFixed(2)}%, estimated ${q.p.toFixed(2)}%`; });
+  const arc = pts.find(q => q.k === 'ARC'); if (arc) T(svg, XS(arc.m) + 10, YS(arc.p) + 16, "ARC's network", { style: `fill:${C.orange};font-weight:600` });
+})();
+</script>
+</body>
+</html>

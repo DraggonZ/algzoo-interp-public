@@ -1,0 +1,10 @@
+== overtaken by near tie (under 5%): 38198 lists
+   none                                         margin median   5.47, accuracy 0.944, level slope median   4.04
+   late gate without memory input               margin median  -2.06, accuracy 0.156, level slope median  -2.43
+   control: same cut on a random other neuron   margin median   5.99, accuracy 0.922, level slope median   4.17
+   late gate = 6.8 x jump only                  margin median  -2.19, accuracy 0.153, level slope median  -2.75
+== overtaken by clear (20-50%): 123591 lists
+   none                                         margin median  10.85, accuracy 0.990, level slope median  10.63
+   late gate without memory input               margin median   0.68, accuracy 0.565, level slope median  -0.08
+   control: same cut on a random other neuron   margin median  11.49, accuracy 0.980, level slope median  11.67
+   late gate = 6.8 x jump only                  margin median  12.67, accuracy 0.979, level slope median  -1.08

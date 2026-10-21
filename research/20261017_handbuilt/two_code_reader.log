@@ -1,0 +1,8 @@
+order (second before / after largest) read linearly: 79.1% correct
+second before largest (50% of lists): ARC's readout 4.44%, its own readout 2.54%, the other order's readout 16.52%
+second after largest (50% of lists): ARC's readout 4.92%, its own readout 2.86%, the other order's readout 17.85%
+two-stage linear reader (order read from the state, then that order's readout): 8.00% error (ARC 4.68%)
+order read by a small nonlinear reader: 97.9% correct
+two-stage reader (nonlinear order, then linear readout): 4.19% error
+  order misread in 2.1% of lists; answer error there 87.8%
+neuron: readout difference / mean readout size  -> 0:0.04  1:0.01  2:0.06  3:0.08  4:0.44  5:0.14  6:0.01  7:0.01  8:0.01  9:0.66  10:0.03  11:0.05  12:0.04  13:0.07  14:0.05  15:0.04

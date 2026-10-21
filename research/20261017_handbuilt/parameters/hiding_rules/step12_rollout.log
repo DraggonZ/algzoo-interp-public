@@ -1,0 +1,29 @@
+
+  rows [1] from the rule: accuracy -0.65 points, KL 0.030
+  rows [6] from the rule: accuracy -0.57 points, KL 0.026
+  rows [7] from the rule: accuracy -0.14 points, KL 0.008
+  rows [8] from the rule: accuracy -1.68 points, KL 0.098
+  rows [1, 6, 7, 8] from the rule: accuracy -5.76 points, KL 0.304
+step 0: rollout loss on the fit lists 0.1783
+step 500: rollout loss on the fit lists 0.0490
+step 1000: rollout loss on the fit lists 0.0487
+step 1500: rollout loss on the fit lists 0.0486
+step 2000: rollout loss on the fit lists 0.0485
+step 2500: rollout loss on the fit lists 0.0488
+step 3000: rollout loss on the fit lists 0.0485
+
+rule fitted to its own run (33 constants + 4 feedback per neuron):
+  neuron 1: rms 0.222 (8.33x the account); replaced alone: accuracy 0.9312, KL 0.107
+  neuron 6: rms 0.247 (7.96x the account); replaced alone: accuracy 0.9397, KL 0.066
+  neuron 7: rms 0.090 (6.98x the account); replaced alone: accuracy 0.9461, KL 0.066
+  neuron 8: rms 0.273 (7.83x the account); replaced alone: accuracy 0.9281, KL 0.224
+  all four replaced: accuracy 0.9312, KL 0.177
+  weights for 1: cosine 0.998, relative distance 0.07
+  weights for 6: cosine 0.967, relative distance 0.29
+  weights for 7: cosine 1.000, relative distance 0.03
+  weights for 8: cosine 0.998, relative distance 0.07
+  rows [1] from the rule: accuracy -0.38 points, KL 0.017
+  rows [6] from the rule: accuracy -1.48 points, KL 0.047
+  rows [7] from the rule: accuracy -0.12 points, KL 0.004
+  rows [8] from the rule: accuracy -0.94 points, KL 0.056
+  rows [1, 6, 7, 8] from the rule: accuracy -4.28 points, KL 0.187

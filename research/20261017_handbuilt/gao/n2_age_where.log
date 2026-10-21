@@ -1,0 +1,11 @@
+m1 moved: answers moved 0.185; accuracy 0.804
+m1 kept: answers moved 0.029; accuracy 0.941
+lists moved only when m1's place changes: 0.169
+   all lists                 : share of lists 1.000, share of these moved 0.169
+   overtaken second          : share of lists 0.494, share of these moved 0.149
+     with third right after  : share of lists 0.049, share of these moved 0.133
+   largest at last step      : share of lists 0.100, share of these moved 0.123
+   position of the largest among moved lists: [0.11919825 0.112517   0.10814167 0.10441672 0.10092828 0.10542186
+ 0.10601313 0.09205936 0.07822385 0.07307988]
+   position of the largest among all lists:   [0.10037 0.09969 0.09865 0.09965 0.1011  0.10102 0.0998  0.09984 0.09968
+ 0.1002 ]

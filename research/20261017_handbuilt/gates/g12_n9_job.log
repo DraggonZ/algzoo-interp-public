@@ -1,0 +1,47 @@
+revealed lists (second-largest came before the largest): intact 95.5%, path removed 49.3%
+  of the revealed lists the removal breaks (47076), the network now names:
+    the largest's position     94.0%
+    one after the largest      0.4%
+    the third-largest          4.0%
+    one after the second       30.8%
+    a later position than L    1.3%
+  revealed, largest 1 step(s) after the second: intact 93.5%, removed 20.8%
+  revealed, largest 2 step(s) after the second: intact 96.2%, removed 24.4%
+  revealed, largest 3 step(s) after the second: intact 95.9%, removed 28.4%
+  revealed, largest 4+ steps after the second: intact 95.9%, removed 77.8%
+  revealed, largest at 1: intact 95.7%, removed 0.2%  (2191 lists)
+  revealed, largest at 2: intact 95.6%, removed 0.1%  (4365 lists)
+  revealed, largest at 3: intact 96.1%, removed 0.2%  (6551 lists)
+  revealed, largest at 4: intact 96.9%, removed 9.1%  (8729 lists)
+  revealed, largest at 5: intact 96.0%, removed 19.0%  (11092 lists)
+  revealed, largest at 6: intact 95.3%, removed 29.4%  (13264 lists)
+  revealed, largest at 7: intact 95.3%, removed 40.7%  (15704 lists)
+  revealed, largest at 8: intact 96.7%, removed 96.3%  (17668 lists)
+  revealed, largest at 9: intact 93.6%, removed 93.8%  (20171 lists)
+kept lists (second after the largest): intact 95.1%, removed 83.1%
+
+Part 2: one overtaking, other numbers -0.5. Scores of S = p's position and L = the largest's position, and the best other.
+  d=0.05 p at 1, m at 3: intact S   22.3 L   13.9 other    3.0 | removed S   13.0 L   23.7 other    5.1
+  d=0.05 p at 2, m at 5: intact S   22.2 L   11.9 other    6.5 | removed S   10.7 L   23.5 other    5.4
+  d=0.05 p at 3, m at 4: intact S   27.3 L   22.5 other    9.2 | removed S   34.3 L   43.3 other   17.4
+  d=0.05 p at 4, m at 8: intact S   45.0 L   41.2 other   28.1 | removed S   46.6 L   41.9 other   27.6
+  d=0.05 p at 0, m at 6: intact S   47.0 L   46.5 other   26.4 | removed S   63.9 L   56.4 other   21.6
+  d=0.20 p at 1, m at 3: intact S   21.7 L   12.8 other    2.6 | removed S   11.2 L   24.0 other    5.2
+  d=0.20 p at 2, m at 5: intact S   22.3 L   11.2 other    6.8 | removed S    9.9 L   22.7 other    5.0
+  d=0.20 p at 3, m at 4: intact S   27.1 L   21.6 other    8.6 | removed S   34.3 L   44.2 other   16.8
+  d=0.20 p at 4, m at 8: intact S   51.7 L   36.8 other   31.1 | removed S   51.9 L   37.7 other   33.5
+  d=0.20 p at 0, m at 6: intact S   53.7 L   41.6 other   34.1 | removed S   74.8 L   55.5 other   29.9
+  d=0.50 p at 1, m at 3: intact S   20.6 L   10.6 other    1.7 | removed S    8.1 L   24.4 other    5.2
+  d=0.50 p at 2, m at 5: intact S   22.4 L    9.9 other    7.3 | removed S    7.1 L   23.9 other    5.0
+  d=0.50 p at 3, m at 4: intact S   26.8 L   19.7 other    7.4 | removed S   34.3 L   45.0 other   16.4
+  d=0.50 p at 4, m at 8: intact S   53.4 L   29.3 other   33.1 | removed S   53.6 L   30.2 other   34.9
+  d=0.50 p at 0, m at 6: intact S   59.2 L   36.1 other   40.5 | removed S   79.5 L   55.2 other   32.2
+
+switch points of the hiding neurons k steps after a record, as a share of the new largest m and the overtaken p
+(fit r = a p + b m on lists with p > 0.2 and m > p + 0.05 and negative numbers in between; intact / path removed)
+  intact   k=1: 1: +0.16 p +0.83 m | 6: +0.99 p -0.04 m | 7: -0.01 p +1.02 m | 8: +1.05 p -0.03 m
+  intact   k=2: 1: +0.94 p -0.02 m | 6: +0.23 p +0.68 m | 7: -0.01 p +1.01 m | 8: +0.72 p +0.31 m
+  intact   k=3: 1: +0.59 p +0.29 m | 6: -0.06 p +1.05 m | 7: +0.00 p +1.01 m | 8: +0.92 p +0.06 m
+  removed  k=1: 1: +0.18 p +0.83 m | 6: +1.01 p -0.05 m | 7: -0.01 p +1.02 m | 8: +1.05 p -0.03 m
+  removed  k=2: 1: +0.98 p +0.07 m | 6: +0.25 p +0.77 m | 7: -0.01 p +1.01 m | 8: +0.73 p +0.31 m
+  removed  k=3: 1: +0.63 p +0.42 m | 6: -0.06 p +1.07 m | 7: -0.00 p +0.99 m | 8: +0.97 p +0.11 m

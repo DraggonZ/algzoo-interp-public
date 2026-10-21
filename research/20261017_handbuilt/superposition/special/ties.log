@@ -1,0 +1,5 @@
+copy at 1.000 x largest: names the later of the two  45.5% | copy after the largest: names the copy  45.6% | copy before: names the copy  51.2%, names the largest  45.4%
+copy at 0.999 x largest: names the later of the two  45.5% | copy after the largest: names the copy  52.4% | copy before: names the copy  57.8%, names the largest  38.7%
+copy at 0.990 x largest: names the later of the two  46.3% | copy after the largest: names the copy  80.8% | copy before: names the copy  84.2%, names the largest  11.8%
+copy at 0.970 x largest: names the later of the two  47.4% | copy after the largest: names the copy  92.1% | copy before: names the copy  91.8%, names the largest   2.7%
+copy at 0.900 x largest: names the later of the two  42.6% | copy after the largest: names the copy  84.3% | copy before: names the copy  84.5%, names the largest   0.8%

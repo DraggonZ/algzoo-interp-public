@@ -1,0 +1,5 @@
+leak_check: rule check_states_rows.py, 296 covered weights, 69 constants, relative perturbation 0.05, draws [11, 12, 13]
+  draw 11: slope +0.9871; rms change of rule weights 8.07e-02 (of ARC's 8.09e-02)
+  draw 12: slope +0.9798; rms change of rule weights 8.43e-02 (of ARC's 8.44e-02)
+  draw 13: slope +0.9945; rms change of rule weights 8.90e-02 (of ARC's 8.90e-02)
+LEAK +0.9871 0.9945 FAIL

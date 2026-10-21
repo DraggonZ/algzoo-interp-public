@@ -1,0 +1,13 @@
+cancellers      ours       account             : measured 0.559; first order 0.734; trapezoid 0.762
+cancellers      misreading wave from m2        : measured 0.426; first order 0.649; trapezoid 0.680
+cancellers      misreading no wave             : measured 0.181; first order 0.406; trapezoid 0.423
+cancellers      misreading angle +20           : measured 0.386; first order 0.613; trapezoid 0.628
+store+detector  ours       account             : measured 0.851; first order 0.846; trapezoid 0.864
+store+detector  misreading store tracks second : measured 0.434; first order 0.678; trapezoid 0.682
+keep gate       ours       account             : measured 0.872; first order 0.878; trapezoid 0.885
+keep gate       misreading gate vs largest     : measured 0.667; first order 0.775; trapezoid 0.774
+memory          ours       account             : measured 0.509; first order 0.632; trapezoid 0.653
+memory          misreading keep above half     : measured 0.502; first order 0.628; trapezoid 0.650
+memory          misreading keep all            : measured 0.502; first order 0.628; trapezoid 0.650
+first order: rank correlation 0.86; median |miss| 0.127
+trapezoid: rank correlation 0.86; median |miss| 0.148

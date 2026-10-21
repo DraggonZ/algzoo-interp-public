@@ -1,0 +1,66 @@
+== example: mistakes 4.70 points
+  second <= 0                   0.82 points ( 18%); answers: largest's slot 21%, third's slot 12%, slot 9 0%
+  largest-second < 0.1 only     0.74 points ( 16%); answers: largest's slot 81%, third's slot 19%, slot 9 0%
+  second-third < 0.1 only       2.36 points ( 50%); answers: largest's slot 0%, third's slot 98%, slot 9 0%
+  both gaps < 0.1               0.48 points ( 10%); answers: largest's slot 38%, third's slot 62%, slot 9 0%
+  neither                       0.29 points (  6%); answers: largest's slot 2%, third's slot 82%, slot 9 0%
+  largest arrives last: mistakes 1.13 points
+  second arrives last: mistakes 1.72 points
+  third arrives last: mistakes 1.85 points
+  second-third near-tie mistakes: third arrives after the second 1.32 points, before 1.04
+  largest-second near-tie mistakes: second arrives after the largest 0.44 points, before 0.30
+== 2: mistakes 5.12 points
+  second <= 0                   0.83 points ( 16%); answers: largest's slot 29%, third's slot 11%, slot 9 0%
+  largest-second < 0.1 only     0.49 points ( 10%); answers: largest's slot 70%, third's slot 28%, slot 9 0%
+  second-third < 0.1 only       2.74 points ( 54%); answers: largest's slot 3%, third's slot 96%, slot 9 0%
+  both gaps < 0.1               0.62 points ( 12%); answers: largest's slot 19%, third's slot 81%, slot 9 0%
+  neither                       0.44 points (  9%); answers: largest's slot 27%, third's slot 71%, slot 9 0%
+  largest arrives last: mistakes 1.51 points
+  second arrives last: mistakes 1.37 points
+  third arrives last: mistakes 2.24 points
+  second-third near-tie mistakes: third arrives after the second 1.86 points, before 0.89
+  largest-second near-tie mistakes: second arrives after the largest 0.17 points, before 0.32
+== 3: mistakes 6.83 points
+  second <= 0                   0.80 points ( 12%); answers: largest's slot 16%, third's slot 14%, slot 9 0%
+  largest-second < 0.1 only     1.40 points ( 20%); answers: largest's slot 84%, third's slot 16%, slot 9 0%
+  second-third < 0.1 only       3.16 points ( 46%); answers: largest's slot 5%, third's slot 95%, slot 9 0%
+  both gaps < 0.1               0.93 points ( 14%); answers: largest's slot 46%, third's slot 54%, slot 9 0%
+  neither                       0.55 points (  8%); answers: largest's slot 20%, third's slot 77%, slot 9 0%
+  largest arrives last: mistakes 1.89 points
+  second arrives last: mistakes 2.67 points
+  third arrives last: mistakes 2.27 points
+  second-third near-tie mistakes: third arrives after the second 2.03 points, before 1.13
+  largest-second near-tie mistakes: second arrives after the largest 1.03 points, before 0.37
+== 0: mistakes 8.92 points
+  second <= 0                   0.60 points (  7%); answers: largest's slot 86%, third's slot 10%, slot 9 0%
+  largest-second < 0.1 only     2.25 points ( 25%); answers: largest's slot 85%, third's slot 15%, slot 9 0%
+  second-third < 0.1 only       3.85 points ( 43%); answers: largest's slot 1%, third's slot 99%, slot 9 0%
+  both gaps < 0.1               1.00 points ( 11%); answers: largest's slot 36%, third's slot 64%, slot 9 0%
+  neither                       1.23 points ( 14%); answers: largest's slot 14%, third's slot 86%, slot 9 0%
+  largest arrives last: mistakes 3.27 points
+  second arrives last: mistakes 2.93 points
+  third arrives last: mistakes 2.72 points
+  second-third near-tie mistakes: third arrives after the second 1.99 points, before 1.86
+  largest-second near-tie mistakes: second arrives after the largest 1.38 points, before 0.86
+== 4: mistakes 11.07 points
+  second <= 0                   0.78 points (  7%); answers: largest's slot 90%, third's slot 6%, slot 9 0%
+  largest-second < 0.1 only     2.57 points ( 23%); answers: largest's slot 81%, third's slot 19%, slot 9 0%
+  second-third < 0.1 only       4.67 points ( 42%); answers: largest's slot 8%, third's slot 92%, slot 9 0%
+  both gaps < 0.1               1.14 points ( 10%); answers: largest's slot 47%, third's slot 53%, slot 9 0%
+  neither                       1.91 points ( 17%); answers: largest's slot 16%, third's slot 84%, slot 9 0%
+  largest arrives last: mistakes 5.05 points
+  second arrives last: mistakes 2.67 points
+  third arrives last: mistakes 3.34 points
+  second-third near-tie mistakes: third arrives after the second 2.79 points, before 1.88
+  largest-second near-tie mistakes: second arrives after the largest 0.98 points, before 1.59
+== 1: mistakes 10.53 points
+  second <= 0                   0.86 points (  8%); answers: largest's slot 67%, third's slot 5%, slot 9 0%
+  largest-second < 0.1 only     2.19 points ( 21%); answers: largest's slot 66%, third's slot 34%, slot 9 0%
+  second-third < 0.1 only       3.95 points ( 37%); answers: largest's slot 4%, third's slot 95%, slot 9 0%
+  both gaps < 0.1               1.05 points ( 10%); answers: largest's slot 29%, third's slot 71%, slot 9 0%
+  neither                       2.48 points ( 24%); answers: largest's slot 15%, third's slot 85%, slot 9 0%
+  largest arrives last: mistakes 5.34 points
+  second arrives last: mistakes 2.10 points
+  third arrives last: mistakes 3.09 points
+  second-third near-tie mistakes: third arrives after the second 2.23 points, before 1.72
+  largest-second near-tie mistakes: second arrives after the largest 0.59 points, before 1.60

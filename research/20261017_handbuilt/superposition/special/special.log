@@ -1,0 +1,18 @@
+P1 scale x1e-06: same answer on 100.000%
+P1 scale x0.001: same answer on 100.000%
+P1 scale x1000: same answer on 100.000%
+P1 scale x1e+06: same answer on 100.000%
+P2 ten zeros: names 0
+P3 increasing 1..10: names 8; 101..110: 8; 1.00..1.09: 8
+P4 decreasing 10..1: names 1
+P5 sorted ascending normals: names 8 on 85.3%; descending: names 1 on 99.4%
+P6/P7 spikes 2.0 and 1.5, others +0.0: right at 90/90 placements; misses (largest at, second at, named): []
+P6/P7 spikes 2.0 and 1.5, others -2.0: right at 90/90 placements; misses (largest at, second at, named): []
+P6/P7 spikes 2.0 and 1.5, others -0.5: right at 90/90 placements; misses (largest at, second at, named): []
+P6/P7 spikes 2.0 and 1.5, others +0.5: right at 90/90 placements; misses (largest at, second at, named): []
+P8 all equal positive: names 1
+P9 all negative: names position 0 on 51%, 1 on 23%; true second named on 12%
+P10 list repeated 2x (20 numbers): names the list's second 9.0%, its largest 89.7%
+P10 list repeated 3x (30 numbers): names the list's second 7.1%, its largest 92.5%
+P10 list repeated 10x (100 numbers): names the list's second 5.7%, its largest 93.8%
+P11 20 numbers: names the account's answer 63.9%

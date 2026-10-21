@@ -1,0 +1,14 @@
+share6 0.5
+cancel: 92.19%  margin via C1: 83.36%  answers changed 9.994%
+  largest at 0: lists 0.100, changed 0.068%, right 78.50 -> 78.55
+  largest at 1: lists 0.100, changed 0.023%, right 87.86 -> 87.86
+  largest at 2: lists 0.100, changed 0.391%, right 97.21 -> 97.18
+  largest at 3: lists 0.100, changed 0.712%, right 97.54 -> 97.37
+  largest at 4: lists 0.100, changed 13.865%, right 97.56 -> 84.70
+  largest at 5: lists 0.101, changed 15.057%, right 97.67 -> 83.69
+  largest at 6: lists 0.100, changed 14.601%, right 97.43 -> 83.90
+  largest at 7: lists 0.100, changed 16.572%, right 94.02 -> 79.15
+  largest at 8: lists 0.100, changed 18.107%, right 89.94 -> 73.87
+  largest at 9: lists 0.099, changed 20.484%, right 84.10 -> 67.33
+designed exception (step after next within 0.95 d below the largest): 17.59% of lists; changed there 0.10%, elsewhere 12.107%
+score difference on unchanged-exception lists: max 1.162307703310717

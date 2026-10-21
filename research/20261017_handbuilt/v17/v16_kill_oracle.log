@@ -1,0 +1,10 @@
+v16                            all 0.695 | onepos 0.082 last 0.622 step8 0.605 row 0.522 ord 0.821 | wrong: third 0.37 largest 0.37 onepos 0.03
+v16 + spike reveal             all 0.893 | onepos 0.082 last 0.877 step8 0.875 row 0.836 ord 0.944 | wrong: third 0.68 largest 0.10 onepos 0.09
+shrink earlier votes to 0.5    all 0.732 | onepos 0.082 last 0.701 step8 0.663 row 0.532 ord 0.860 | wrong: third 0.38 largest 0.44 onepos 0.04
+  + spike reveal               all 0.901 | onepos 0.082 last 0.880 step8 0.875 row 0.840 ord 0.957 | wrong: third 0.68 largest 0.11 onepos 0.10
+shrink earlier votes to 0.2    all 0.753 | onepos 0.082 last 0.762 step8 0.708 row 0.534 ord 0.879 | wrong: third 0.38 largest 0.48 onepos 0.04
+  + spike reveal               all 0.901 | onepos 0.082 last 0.880 step8 0.875 row 0.840 ord 0.957 | wrong: third 0.68 largest 0.11 onepos 0.10
+shrink earlier votes to 0.0    all 0.756 | onepos 0.082 last 0.763 step8 0.708 row 0.534 ord 0.883 | wrong: third 0.38 largest 0.49 onepos 0.04
+  + spike reveal               all 0.901 | onepos 0.082 last 0.880 step8 0.875 row 0.840 ord 0.957 | wrong: third 0.68 largest 0.11 onepos 0.10
+kill+spike, later votes 0.5 broad all 0.872 | onepos 0.082 last 0.880 step8 0.875 row 0.794 ord 0.924 | wrong: third 0.56 largest 0.25 onepos 0.08
+kill+spike, later votes 0.9 broad all 0.807 | onepos 0.082 last 0.880 step8 0.875 row 0.721 ord 0.837 | wrong: third 0.39 largest 0.28 onepos 0.05

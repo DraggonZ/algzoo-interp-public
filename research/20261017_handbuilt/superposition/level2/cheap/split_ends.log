@@ -1,0 +1,12 @@
+ARC: error 4.680%; share at 2-3 end 0.82, at 1-2 end 0.17, middle 0.01; lines never right 0.38% (share 0.08)
+   S in [-9,0):   1.1% of lists; error share 2-3 0.076 1-2 0.001 mid 0.000
+   S in [0,0.3):   4.8% of lists; error share 2-3 0.075 1-2 0.005 mid 0.001
+   S in [0.3,9):  94.2% of lists; error share 2-3 0.668 1-2 0.160 mid 0.014
+114: error 10.236%; share at 2-3 end 0.72, at 1-2 end 0.25, middle 0.03; lines never right 1.48% (share 0.14)
+   S in [-9,0):   1.1% of lists; error share 2-3 0.026 1-2 0.001 mid 0.000
+   S in [0,0.3):   4.8% of lists; error share 2-3 0.037 1-2 0.010 mid 0.001
+   S in [0.3,9):  94.2% of lists; error share 2-3 0.657 1-2 0.243 mid 0.025
+203: error 10.122%; share at 2-3 end 0.75, at 1-2 end 0.24, middle 0.01; lines never right 1.72% (share 0.17)
+   S in [-9,0):   1.1% of lists; error share 2-3 0.040 1-2 0.001 mid 0.000
+   S in [0,0.3):   4.8% of lists; error share 2-3 0.047 1-2 0.007 mid 0.000
+   S in [0.3,9):  94.2% of lists; error share 2-3 0.659 1-2 0.236 mid 0.009

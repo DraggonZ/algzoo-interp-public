@@ -1,0 +1,5 @@
+timer level g   30: accuracy 0.946; switching rate 0.138; lead/pushes 0.0012; noise 1e-3 0.724, 1e-2 0.327 (kept 0.35 of accuracy)
+timer level g   10: accuracy 0.921; switching rate 0.139; lead/pushes 0.0033; noise 1e-3 0.770, 1e-2 0.569 (kept 0.62 of accuracy)
+timer level g    3: accuracy 0.835; switching rate 0.141; lead/pushes 0.0088; noise 1e-3 0.763, 1e-2 0.661 (kept 0.79 of accuracy)
+timer level g    1: accuracy 0.666; switching rate 0.151; lead/pushes 0.0131; noise 1e-3 0.643, 1e-2 0.592 (kept 0.89 of accuracy)
+timer level g  0.3: accuracy 0.323; switching rate 0.164; lead/pushes 0.0300; noise 1e-3 0.322, 1e-2 0.316 (kept 0.98 of accuracy)

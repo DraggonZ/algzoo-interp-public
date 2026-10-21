@@ -1,0 +1,18 @@
+T1/T2: single input of +1, view by age. 'other' = ten other neurons, 'comp' = comparing neurons
+age | size other | size comp | size sum | corr(other, comp) | argmax other (own position 9-age) | argmin comp
+  0 |      1.2 |     53.1 |    52.7 | -0.39 | 0 (9) | 9
+  1 |    108.5 |    120.3 |    26.1 | -0.98 | 9 (8) | 8
+  2 |    146.2 |    148.0 |     5.0 | -1.00 | 9 (7) | 7
+  3 |    138.9 |    138.5 |     6.0 | -1.00 | 9 (6) | 9
+  4 |    120.3 |    122.2 |     5.3 | -1.00 | 9 (5) | 5
+  5 |     99.4 |     99.6 |     4.3 | -1.00 | 4 (4) | 4
+  6 |    103.9 |    104.9 |     6.2 | -1.00 | 9 (3) | 3
+  7 |    134.8 |    135.4 |     4.3 | -1.00 | 1 (2) | 1
+  8 |    153.0 |    151.4 |     3.4 | -1.00 | 1 (1) | 1
+  9 |    146.1 |    142.1 |     5.7 | -1.00 | 1 (0) | 1
+
+T4: largest = 1 first, second = 0.7 later. Change caused by adding the second: does it point at the second's position?
+argmax of the change's scores = second's position in 44 of 45 pairs
+
+Same for second first (second = 0.7 earlier, largest = 1 later): change caused by adding the second
+argmax of the change's scores = second's position in 28 of 45 pairs

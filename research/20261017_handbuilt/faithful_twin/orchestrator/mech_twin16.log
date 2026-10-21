@@ -1,0 +1,26 @@
+== candidate candidates/twin16.py: jobs by ARC's mechanism
+  PASS   1 store (2) follows the largest so far: correlation >= 0.9
+          0.995
+  PASS   2 new-largest (4) on at records >= 0.9, elsewhere <= 0.05
+          1.000 / 0.000
+  PASS   3 new-largest (4) size follows the amount beaten: correlation >= 0.75
+          0.835
+  FAIL   4 keep gate cuts against the second-largest: cut = a x largest + b x second, b >= 0.5, |a| <= 0.2
+          a -0.00, b -0.00
+  FAIL   5 late gate (9) on one step after a record >= 0.9, elsewhere <= 0.05
+          1.000 / 0.900
+  FAIL   6 late gate's push two steps after a record: on 1 and 6 >= 0.04 sd and >= 3x that on 7 and 8
+          1:0.00 6:0.00 7:0.00 8:0.00
+  FAIL   7 hiding references are ARC's mixes: weight of the previous largest per neuron within 0.35 of ARC's (1 and 2 steps after a record), and job 7
+          1 step: 1:-0.00 6:-0.00 7:-0.00 8:-0.00 | 2 step: 1:-0.00 6:-0.00 7:-0.00 8:-0.00
+  FAIL   8 hiding rebuilt each step: share of a 10% nudge at step 5 left at step 6, activity <= 0.3 and readout view <= 0.8
+          activity 0.000, readout view 0.893
+  FAIL   9 memory rotates (basis-free): >= 2 turning pairs, modulus >= 0.7, memory participation >= 0.5
+          0 pairs (45 deg |1.00| part 0.00)
+  FAIL  10 switch-off ages 2, 5, 6 (score_twin job 10) on a rotating memory (job 9 here)
+          ages fail, rotation fail
+  FAIL  11 neuron 3 reads the gap from hiding and it is used: input replaced by the gap fit within 5 points, by another list's gap >= 10 points worse, and job 11
+          intact 92.6%, gap fit 92.6%, other list's gap 92.6%, job 11 fail
+  PASS  12 blindness: recurrent rows outside the gates read hiding at right angles (median ratio <= 0.1)
+          median 0.000 (readout rows 0.000)
+MECH jobs=4/12 passes=1,2,3,12 (score_twin jobs 5/12)

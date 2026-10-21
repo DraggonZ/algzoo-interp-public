@@ -1,0 +1,16 @@
+record at 1, overtaken at 4: full wipe (0.34): dM/dx_r    +5.1, dM/dx_q    +9.2, level  +13.5 (late gate's share +12.7), margin   9.7 | partial wipe (0.66): dM/dx_r  -138.6, dM/dx_q  +142.3, level   +3.4 (late gate's share +12.3), margin   8.6
+   late gate at q+1 = -4.35 x (x_r) +5.71 x (x_q)  (variance matched 0.76); median value 1.95
+   late gate at q+1 = +1.37 x (x_r) +5.71 x (jump)  (variance matched 0.76); median value 1.95
+   its input at q+1, medians: hiding -0.01, store +0.10, detector +0.10, keep gate +0.00, late gate +0.00, memory +1.67, input +0.04
+record at 2, overtaken at 5: full wipe (0.45): dM/dx_r    +8.8, dM/dx_q    +5.0, level  +14.3 (late gate's share +14.6), margin   9.3 | partial wipe (0.55): dM/dx_r  -127.1, dM/dx_q  +129.5, level   +2.7 (late gate's share +11.7), margin   6.8
+   late gate at q+1 = -7.28 x (x_r) +8.54 x (x_q)  (variance matched 0.71); median value 1.87
+   late gate at q+1 = +1.26 x (x_r) +8.54 x (jump)  (variance matched 0.71); median value 1.87
+   its input at q+1, medians: hiding -0.01, store +0.10, detector +0.10, keep gate +0.00, late gate +0.00, memory +1.67, input +0.03
+record at 3, overtaken at 6: full wipe (0.51): dM/dx_r    +5.6, dM/dx_q    +6.5, level  +12.2 (late gate's share +14.5), margin   7.6 | partial wipe (0.49): dM/dx_r  -119.0, dM/dx_q  +120.8, level   +1.9 (late gate's share +11.1), margin   5.9
+   late gate at q+1 = -5.55 x (x_r) +6.82 x (x_q)  (variance matched 0.67); median value 1.81
+   late gate at q+1 = +1.27 x (x_r) +6.82 x (jump)  (variance matched 0.67); median value 1.81
+   its input at q+1, medians: hiding +0.00, store +0.10, detector +0.09, keep gate +0.00, late gate +0.00, memory +1.58, input +0.04
+record at 4, overtaken at 7: full wipe (0.55): dM/dx_r    +1.2, dM/dx_q    +8.5, level   +9.9 (late gate's share +12.3), margin   5.8 | partial wipe (0.45): dM/dx_r  -102.7, dM/dx_q  +104.6, level   +1.9 (late gate's share  +9.5), margin   4.6
+   late gate at q+1 = -4.93 x (x_r) +6.17 x (x_q)  (variance matched 0.67); median value 1.73
+   late gate at q+1 = +1.24 x (x_r) +6.17 x (jump)  (variance matched 0.67); median value 1.73
+   its input at q+1, medians: hiding +0.00, store +0.10, detector +0.09, keep gate +0.00, late gate +0.00, memory +1.52, input +0.04

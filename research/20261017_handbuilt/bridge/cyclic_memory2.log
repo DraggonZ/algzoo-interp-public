@@ -1,0 +1,7 @@
+removed weights into slot 0: {'flip': np.float64(0.167), 'clock0': np.float64(0.023), 'clock1': np.float64(-0.163), 'clock2': np.float64(-0.027)}
+v18 0.95973  wrap-around, no forward copies 0.68265  agree 0.70547
+  0 records after the first number: share 0.10  v18 0.991  wrap 0.990
+  1 records after the first number: share 0.28  v18 0.948  wrap 0.711
+  2 records after the first number: share 0.32  v18 0.954  wrap 0.642
+  3 records after the first number: share 0.20  v18 0.963  wrap 0.605
+  4 records after the first number: share 0.07  v18 0.972  wrap 0.578

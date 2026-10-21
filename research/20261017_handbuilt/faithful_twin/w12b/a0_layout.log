@@ -1,0 +1,23 @@
+neurons 24 {'store': 0, 'detect': 1, 'keep': 2, 'linear': 3, 'clock0': 5, 'clock1': 6, 'clock2': 7, 'mem0': 8, 'mem1': 9, 'mem2': 10, 'mem3': 11, 'mem4': 12, 'mem5': 13, 'mem6': 14, 'Q': 15, 'late': 16, 'c7': 17, 'c6': 18, 'c1': 19, 'cancel': 20, 'h7': 21, 'turn0': 4, 'turn1': 22, 'turn2': 23}
+
+linear: wi=0  reads: {'store': 0.2625, 'detect': 0.00525, 'clock1': -0.2887, 'clock2': 0.2887, 'c7': -7.5e-05, 'turn1': 0.2887, 'turn2': -0.2887}
+  read by: {'mem0': -1.0}
+  readout: [0. 0. 0. 0. 0. 0. 0. 0. 1. 0.]
+
+keep: wi=0  reads: {'store': 0.0125, 'detect': 0.00025, 'Q': -7.5e-05, 'c7': -2.5e-05}
+  read by: {'mem0': -1.0}
+  readout: [0. 0. 0. 0. 0. 0. 0. 0. 1. 0.]
+
+store: wi=0  reads: {'store': 1.0, 'detect': 0.02}
+  read by: {'store': 1.0, 'detect': -50.0, 'keep': 0.0125, 'linear': 0.2625, 'turn0': 500.0, 'clock0': 500.0, 'clock1': 500.0, 'clock2': 500.0, 'mem0': 0.275, 'Q': 500.0, 'c7': 500.0, 'c6': 500.0, 'c1': 500.0, 'cancel': -50.0, 'h7': 500.0, 'turn1': 500.0, 'turn2': 500.0}
+  readout: [ 0.0495  0.05    0.05    0.05    0.05    0.05    0.05    0.05   -0.225   0.05  ]
+
+mem0: wi=0  reads: {'store': 0.275, 'detect': 0.001, 'keep': -1.0, 'linear': -1.0, 'late': -0.1}
+  read by: {'mem1': 0.99}
+  readout: [ 0.  0.  0.  0.  0.  0.  0. -1.  0.  0.]
+
+mem1: wi=0  reads: {'detect': 0.00099, 'mem0': 0.99}
+  read by: {'mem2': 0.99}
+  readout: [ 0.      0.      0.      0.      0.      0.     -1.0101  0.      0.      0.    ]
+
+base accuracy 0.95909

@@ -1,0 +1,17 @@
+3,908,810 clear-gap lists; wrong on 0.56%; wrong margin quantiles 99/99.9/max of the wrong ones: [   6.755   84.801 1039.467], max 137615.683
+margin 137615.683 | largest at 5, second at 0, third at 2, names 1 | largest/second 58590.15 | [ 0.   -0.08 -0.04 -0.42 -0.82  0.47 -1.89 -1.34 -1.09 -1.56]
+margin 77498.071 | largest at 3, second at 5, third at 2, names 7 | largest/second 83194.00 | [-0.77 -0.09 -0.04  0.83 -0.42  0.   -1.1  -0.24 -0.16 -2.14]
+margin 50949.792 | largest at 8, second at 5, third at 6, names 6 | largest/second 20025.90 | [-0.22 -0.1  -0.42 -0.05 -0.12  0.   -0.02 -0.24  1.37 -1.62]
+margin 46435.440 | largest at 5, second at 6, third at 2, names 0 | largest/second 20653.74 | [-0.24 -1.03 -0.08 -0.62 -0.21  1.63  0.   -0.42 -0.59 -0.34]
+margin 43150.428 | largest at 7, second at 0, third at 2, names 1 | largest/second 28680.28 | [ 0.   -0.63 -0.12 -0.89 -1.12 -1.93 -1.43  1.42 -1.49 -1.3 ]
+margin 40967.995 | largest at 2, second at 1, third at 9, names 9 | largest/second 16309.30 | [-0.05  0.    1.13 -1.63 -0.93 -1.01 -1.26 -0.22 -0.7  -0.04]
+margin 30970.258 | largest at 2, second at 0, third at 8, names 8 | largest/second 26846.74 | [ 0.   -0.09  1.79 -0.24 -0.74 -0.65 -1.55 -0.39 -0.01 -0.86]
+margin 30783.064 | largest at 5, second at 4, third at 6, names 1 | largest/second 6049.88 | [-0.44 -0.29 -0.91 -0.62  0.    2.29 -0.12 -0.68 -0.74 -0.12]
+margin 30308.324 | largest at 3, second at 0, third at 7, names 7 | largest/second 12272.56 | [ 0.   -0.47 -0.74  1.25 -1.99 -0.06 -0.67 -0.03 -0.55 -0.53]
+margin 27993.087 | largest at 7, second at 6, third at 4, names 4 | largest/second 9259.12 | [-0.72 -0.54 -2.23 -0.5  -0.3  -0.57  0.    1.9  -2.   -0.72]
+margin 25187.033 | largest at 9, second at 0, third at 4, names 3 | largest/second 9242.99 | [ 0.   -0.61 -0.31 -1.1  -0.05 -1.48 -0.28 -0.21 -1.25  1.6 ]
+margin 23441.018 | largest at 0, second at 3, third at 4, names 0 | largest/second 6621.87 | [ 1.3  -0.3  -0.94  0.   -0.16 -1.85 -0.34 -1.8  -1.56 -0.54]
+margin 23096.142 | largest at 4, second at 1, third at 6, names 0 | largest/second 18828.03 | [-0.84  0.   -1.43 -2.24  0.62 -0.31 -0.06 -0.34 -0.11 -0.07]
+margin 21118.126 | largest at 6, second at 5, third at 8, names 0 | largest/second 6254.57 | [-0.61 -0.67 -0.9  -0.48 -0.6   0.    1.6  -1.86 -0.29 -1.41]
+margin 21006.088 | largest at 7, second at 8, third at 4, names 4 | largest/second 23273.64 | [-1.9  -0.36 -0.87 -0.17 -0.   -0.08 -1.07  1.68  0.   -0.3 ]
+wrong answers on clear-gap lists: the largest 3%, the third 60%, a smaller number 37%

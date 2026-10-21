@@ -1,0 +1,7 @@
+x + m1                   R2 0.838  coefficients -12.31 +6.37
+x + m2                   R2 0.834  coefficients -12.31 +13.86
+x + m1 + m2              R2 0.859  coefficients -12.31 +1.75 +11.09
+x + m1 + m2 + d          R2 0.874  coefficients -12.31 +2.47 +10.33 -2.81
+x + m1 + m2 + d + hid    R2 0.998  coefficients -12.31 +10.33 +2.50 -10.68 +0.52 -0.05 -0.81 +0.46
+x + m1 + hid             R2 0.950  coefficients -12.31 +7.76 +0.50 +0.01 -0.56 +0.27
+neuron 8 on (pre-activation > 0) on 75% of steps 3-9

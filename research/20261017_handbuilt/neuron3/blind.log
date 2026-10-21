@@ -1,0 +1,9 @@
+3 terms [-12.63  -5.34   5.26  13.23] blindness ratio all hiding 0.014  1&8 only 0.023
+0 terms [ -7.51 -12.46  10.22   9.76] blindness ratio all hiding 0.0  1&8 only 0.13
+10 terms [-2.32  2.12 -2.76  2.58] blindness ratio all hiding 0.038  1&8 only 0.053
+11 terms [-2.56  5.2  -5.03  2.  ] blindness ratio all hiding 0.026  1&8 only 0.123
+12 terms [-4.96  1.14  0.69  3.44] blindness ratio all hiding 0.031  1&8 only 0.181
+13 terms [-2.37 -1.32 -0.03  3.56] blindness ratio all hiding 0.023  1&8 only 0.2
+14 terms [-1.8  -8.41  9.38  0.8 ] blindness ratio all hiding 0.002  1&8 only 0.386
+15 terms [-6.89 -4.18  2.13  8.91] blindness ratio all hiding 0.002  1&8 only 0.128
+predicted W[3,8] from W[3,1] and exact blindness to the arriving number over 1 and 8: -1.026 actual -1.074

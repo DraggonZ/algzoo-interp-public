@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accuracy without sampling</title>
+<style>
+:root {
+  --bg: #f6f4ef; --card: #fdfcfa; --grid: #e6e3dc; --axis: #bdbab2;
+  --ink: #141413; --ink2: #4d4c48; --muted: #85837c;
+  --blue: #2a78d6; --orange: #e0662f; --green: #1a9e6e; --red: #d64545; --grey: #a9a7a0; --purple: #7a5bc7;
+  --blue-l: #cfe0f6; --orange-l: #f8d9c8; --green-l: #cdeee0;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.62 Georgia, "Iowan Old Style", "Times New Roman", serif; }
+main { max-width: 760px; margin: 0 auto; padding: 28px 16px 80px; }
+h1 { font: 700 32px/1.2 system-ui, -apple-system, "Segoe UI", sans-serif; margin: 10px 0 8px; }
+h2 { font: 650 23px/1.25 system-ui, -apple-system, "Segoe UI", sans-serif; margin: 52px 0 10px; }
+h2 .n { color: var(--muted); font-weight: 500; margin-right: 6px; }
+p { margin: 0 0 13px; }
+.sub { font-size: 19px; color: var(--ink2); margin: 0 0 22px; }
+.fig { background: var(--card); border: 1px solid var(--grid); border-radius: 12px; padding: 12px 14px; margin: 16px 0 18px; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+.ctl { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; font-size: 14px; color: var(--ink2); margin-bottom: 4px; }
+.ctl .lab { font-variant-numeric: tabular-nums; color: var(--ink); font-weight: 600; min-width: 4.5em; }
+button { font: 14px system-ui, sans-serif; color: var(--ink); background: #fff; border: 1px solid var(--axis); border-radius: 7px; padding: 4px 11px; cursor: pointer; }
+button:hover { border-color: var(--ink2); }
+button.on { background: var(--blue); color: #fff; border-color: var(--blue); }
+input[type=range] { width: 180px; vertical-align: middle; }
+svg { display: block; width: 100%; height: auto; overflow: visible; }
+svg text { fill: var(--ink2); font: 12px system-ui, sans-serif; }
+svg text.b { fill: var(--ink); font-weight: 650; }
+svg text.m { fill: var(--muted); font-size: 11px; }
+.cap { font-size: 15px; line-height: 1.5; color: var(--ink); margin: 8px 2px 2px; }
+.legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 13px; color: var(--ink2); margin: 2px 2px 4px; }
+.sw { display: inline-block; width: 11px; height: 11px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+.box { background: var(--card); border: 1px solid var(--grid); border-left: 4px solid var(--blue); border-radius: 8px; padding: 12px 18px; margin: 16px 0; }
+.box ol, .box ul { margin: 4px 0; padding-left: 22px; }
+.box li { margin-bottom: 5px; }
+.draft { font: 13px system-ui, sans-serif; color: var(--muted); border: 1px dashed var(--axis); border-radius: 6px; padding: 6px 10px; }
+table.t { border-collapse: collapse; font: 14px system-ui, sans-serif; width: 100%; margin: 10px 0 16px; }
+table.t th, table.t td { padding: 6px 8px; border-bottom: 1px solid var(--grid); text-align: left; vertical-align: top; }
+table.t th { color: var(--ink2); font-weight: 600; }
+.ok { color: var(--green); font-weight: 650; } .part { color: var(--orange); font-weight: 650; } .no { color: var(--red); font-weight: 650; }
+@media (max-width: 600px) { body { font-size: 16px; } h1 { font-size: 27px; } }
+</style>
+</head>
+<body>
+<main>
+<p class="draft">Private explainer for the author, 18 October 2026. Every figure uses ARC's trained network on 200,000 random lists. Not for posting as is.</p>
+
+<h1>Accuracy without sampling</h1>
+<p class="sub">Jacob Hilton's proposed test of an explanation, shown step by step on ARC's network.</p>
+
+<p>ARC's network reads ten random numbers, one at a time, and names the position of the second-largest. It is right on 95.3% of lists. The usual way to get that number is to run the network on many random lists and count. Hilton proposes computing it instead, from the explanation alone. If the computed number comes out close to 95.3%, the explanation has captured what matters.</p>
+
+<div class="fig">
+<svg id="flow" viewBox="0 0 720 230"></svg>
+<p class="cap">Top: sampling treats the network as a black box. Bottom: propagation never runs the network. It carries a probability distribution forward step by step, using a formula for each neuron. Whatever a formula misses is added as noise.</p>
+</div>
+
+<h2><span class="n">1</span>Track a few quantities, not sixteen neurons</h2>
+<p>The inputs are random, so after each step the network's sixteen neuron values are random too. They are not sixteen separate random things, though. Our explanation says most neurons are formulas of a few shared quantities: the largest number so far, when it arrived, the second-largest, and so on. So the calculation keeps one distribution over those quantities.</p>
+<p>The simplest is the largest so far. Its update rule is exact: the new largest is the bigger of the old one and the new number. So the chance that it is still below some value <i>a</i> after <i>t</i> numbers is the chance that each of the <i>t</i> numbers was, multiplied together.</p>
+
+<div class="fig">
+<div class="ctl">Step <input type="range" id="tS" min="1" max="10" value="3"> <span class="lab" id="tL"></span></div>
+<svg id="fmax" viewBox="0 0 720 270"></svg>
+<div class="legend"><span><span class="sw" style="background:var(--blue-l)"></span>largest so far, measured on 200,000 lists</span><span><span class="sw" style="background:var(--blue)"></span>formula, no lists needed</span><span><span class="sw" style="background:var(--grey)"></span>formula, one step earlier</span></div>
+<p class="cap" id="maxCap"></p>
+</div>
+
+<p>The calculation also needs to know when the largest arrived, because some neurons change with its age. This part is easy too. Each step is equally likely to hold the largest. And when it arrived says nothing about how big it is. For example, at the last step the largest averages <b id="ie"></b> when it arrived in the first five steps and <b id="il"></b> when it arrived later. So the two can be tracked separately.</p>
+
+<div class="fig">
+<svg id="farr" viewBox="0 0 720 170"></svg>
+<p class="cap" id="arrCap"></p>
+</div>
+
+<h2><span class="n">2</span>Each neuron becomes a formula</h2>
+<p>Next, each neuron is written as a formula of the tracked quantities. Take the store neuron. It holds about 17.6 times the largest number seen before the current step. It lags by one step, because it hears about a new largest from the detector neuron. Each dot below is one list at one step.</p>
+
+<div class="fig">
+<svg id="fstore" viewBox="0 0 720 330"></svg>
+<div class="legend" id="ageLeg"></div>
+<p class="cap">The dots sit close to the dashed line "17.6 × the largest" while the largest is young. Older largests (orange and red) fall below the line: the store fades. A formula for the store has to know the largest's age, not just its value.</p>
+</div>
+
+<h2><span class="n">3</span>What a formula misses becomes noise</h2>
+<p>No formula is exact. The leftover, the real value minus the formula, is added to the calculation as random noise and carried forward. This is honest only if the leftover looks like noise: centred on zero and not pushing the same way on every list. The figure compares two store formulas. Each bar shows the leftover on lists whose largest has a given age. The thick part covers the middle half of lists; the thin line covers 80%.</p>
+
+<div class="fig">
+<div class="ctl"><button id="bIdeal" class="on">Clean rule: always 17.6 × the largest</button><button id="bFade">Rule with the fade: 17.6 × the largest, lowered by age</button></div>
+<svg id="fleft" viewBox="0 0 720 300"></svg>
+<p class="cap" id="leftCap"></p>
+</div>
+
+<p>This is why our first rough try failed. We wrote the store and detector as an exact running maximum and treated the gaps as random noise. That predicted 60–80% accuracy instead of 95%. The gaps were not random. The fade pushes the same way on every list, and this network turns small one-way errors into large changes in its answer. Stopping the fade alone drops the network to 85%.</p>
+
+<h2><span class="n">4</span>At the end: ten scores, tracked together</h2>
+<p>After the tenth number, the network gives each position a score and names the highest. The calculation therefore ends with a distribution over the ten scores. The predicted accuracy is the chance that the right position's score is highest. Call the right score minus another position's score the right answer's <i>lead</i> over that position. The answer is right when all nine leads are positive.</p>
+<p>These scores must come out of one shared distribution, not ten separate ones. The figure shows why, using the right answer's score against the score of the largest number's position, its main rival.</p>
+
+<div class="fig">
+<div class="ctl"><button id="bReal" class="on">Real: both scores from the same list</button><button id="bShuf">Tracked separately: scores paired at random</button></div>
+<svg id="fsc" viewBox="0 0 720 360"></svg>
+<p class="cap" id="scCap"></p>
+</div>
+
+<p>The same happens across all nine rivals. Multiplying the nine separate chances of a positive lead gives <b id="lp"></b>. The real share of lists where all nine are positive is <b id="lj"></b>. The leads move together because they are built from the same few quantities. A calculation that tracks those quantities keeps the link automatically.</p>
+
+<h2><span class="n">5</span>Weight noise uses the same calculation</h2>
+<p>Hilton's second test adds a small random number to each of the 432 weights and asks how much accuracy drops. ARC's standard noise has a standard deviation of 0.0025 per weight. It costs between 1 and 20 points, depending on the draw. In the propagation, extra weight noise is just more leftover in step 3. It is added to each formula's noise, and the same calculation predicts the lower accuracy.</p>
+<p>We can already predict those drops accurately, but not this way. A straight-line estimate from the network's own gradients predicts each noisy copy's accuracy within about a quarter of a point. It shows the damage is predictable. It does not use the explanation, so it does not test it.</p>
+
+<h2><span class="n">6</span>Where we stand</h2>
+<table class="t">
+<tr><th>Piece</th><th>Written as a formula?</th></tr>
+<tr><td>Largest so far, and when it arrived</td><td><span class="ok">Yes, exact.</span> Figures above.</td></tr>
+<tr><td>Store and detector (neurons 2 and 4)</td><td><span class="part">Partly.</span> 17.6 × the largest, with a fade read off the network. The fade is not yet derived from the weights, and its spread grows with age.</td></tr>
+<tr><td>Cancelling neurons (1, 6, 7, 8)</td><td><span class="part">Mostly.</span> Each holds about 11–13 × (a reference number minus the new number). The reference mixes the previous and current largest, depending on age. With this rule in place of the four neurons, accuracy is 94.4% against 95.4%. The rule still has 648 numbers read off the network.</td></tr>
+<tr><td>Memory (0, 3, 10–15)</td><td><span class="part">Half.</span> While no neuron switches off, it turns its contents in a fixed, exactly linear way. When each neuron switches off is the hard part. A detailed rule gives 93.6%, but it has about 8,300 numbers read off the network. A short table by step and age gives 87%.</td></tr>
+<tr><td>Gates (5 and 9)</td><td><span class="part">Mostly.</span> The late gate (neuron 9) is off unless a new largest arrives, then holds about 1.5 × it; a rule built on that loses under 1 point. The keep gate (neuron 5) keeps a number if it is a new largest or at least about 0.7 × the second-largest; that on/off rule alone loses almost nothing. But its exact value matters, and the rule for the value has about 550 numbers read off the network.</td></tr>
+<tr><td>Ten scores, then accuracy</td><td><span class="no">Not yet.</span> The scores are formulas of the same quantities. The last step is a single integral.</td></tr>
+</table>
+<p>An earlier estimate already avoids sampling. It keeps only the three largest numbers and computes accuracy exactly from their distribution. It misses by under one point on average. But it rests on "only the three largest matter", not on each neuron's formula, so it is not yet Hilton's test. The next step is to compute with the formulas above in place of that shortcut, then see how far the result lands from 95.3%.</p>
+</main>
+<script>
+const D = /*DATA*/;
+const NS = "http://www.w3.org/2000/svg";
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+function el(svg, tag, at, txt) { const e = document.createElementNS(NS, tag); for (const k in at) e.setAttribute(k, at[k]); if (txt !== undefined) e.textContent = txt; svg.appendChild(e); return e; }
+function clear(svg) { while (svg.firstChild) svg.removeChild(svg.firstChild); }
+function frame(svg, o) {
+  const W = svg.viewBox.baseVal.width, H = svg.viewBox.baseVal.height, L = o.l || 56, R = 16, T = 14, B = 42;
+  const x = v => L + (v - o.x[0]) / (o.x[1] - o.x[0]) * (W - L - R), y = v => H - B - (v - o.y[0]) / (o.y[1] - o.y[0]) * (H - T - B);
+  for (const v of o.yt) { el(svg, "line", {x1: L, x2: W - R, y1: y(v), y2: y(v), stroke: css("--grid")}); el(svg, "text", {x: L - 6, y: y(v) + 4, "text-anchor": "end"}, o.yf ? o.yf(v) : v); }
+  for (const v of o.xt) { el(svg, "line", {x1: x(v), x2: x(v), y1: H - B, y2: H - B + 4, stroke: css("--axis")}); el(svg, "text", {x: x(v), y: H - B + 17, "text-anchor": "middle"}, o.xf ? o.xf(v) : v); }
+  el(svg, "line", {x1: L, x2: W - R, y1: H - B, y2: H - B, stroke: css("--axis")});
+  el(svg, "text", {x: (L + W - R) / 2, y: H - 6, "text-anchor": "middle"}, o.xl);
+  el(svg, "text", {x: 14, y: (T + H - B) / 2, "text-anchor": "middle", transform: `rotate(-90 14 ${(T + H - B) / 2})`}, o.yl);
+  return {x, y};
+}
+const pct = v => (100 * v).toFixed(1) + "%";
+
+// flow diagram
+(function () {
+  const s = document.getElementById("flow");
+  const boxes = (row, items, color) => items.forEach((t, i) => {
+    const X = 10 + i * 178, Y = row;
+    el(s, "rect", {x: X, y: Y, width: 160, height: 62, rx: 9, fill: css("--card"), stroke: color, "stroke-width": 1.6});
+    t.split("|").forEach((ln, k, a) => el(s, "text", {x: X + 80, y: Y + 31 + (k - (a.length - 1) / 2) * 15, "text-anchor": "middle", class: k ? "" : "b"}, ln));
+    if (i < items.length - 1) el(s, "path", {d: `M${X + 162} ${Y + 31} l14 0 m-5 -4 l5 4 l-5 4`, stroke: css("--ink2"), fill: "none", "stroke-width": 1.4});
+  });
+  el(s, "text", {x: 10, y: 14, class: "b"}, "Sampling");
+  boxes(22, ["Draw 10 random|numbers", "Run the network", "Right or wrong?", "Repeat 100,000 times,|count"], css("--grey"));
+  el(s, "text", {x: 10, y: 122, class: "b"}, "Propagation (Hilton)");
+  boxes(130, ["Distribution of a few|quantities at step t", "Neuron formulas|+ leftover as noise", "Distribution|at step t + 1", "After step 10: chance|right score is highest"], css("--blue"));
+  el(s, "path", {d: "M436 194 C 436 222, 90 222, 90 194", stroke: css("--blue"), fill: "none", "stroke-dasharray": "4 3"});
+  el(s, "text", {x: 263, y: 226, "text-anchor": "middle", class: "m"}, "repeat for each of the ten steps");
+})();
+
+// 1. largest so far
+(function () {
+  const s = document.getElementById("fmax"), sl = document.getElementById("tS");
+  function draw() {
+    const t = +sl.value, m = D.max[t - 1], e = D.max_edges, g = D.max_grid; clear(s);
+    document.getElementById("tL").textContent = `${t} of 10`;
+    const f = frame(s, {x: [0, 3.5], y: [0, 0.9], xt: [0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5], yt: [0, 0.3, 0.6, 0.9], xl: "largest number so far", yl: "density"});
+    m.hist.forEach((v, i) => el(s, "rect", {x: f.x(e[i]) + 0.5, y: f.y(Math.min(v, 0.9)), width: f.x(e[i + 1]) - f.x(e[i]) - 1, height: f.y(0) - f.y(Math.min(v, 0.9)), fill: css("--blue-l")}));
+    const line = (dens, col, w, dash) => el(s, "path", {d: "M" + g.map((a, i) => `${f.x(a)} ${f.y(Math.min(dens[i], 0.9))}`).join(" L"), fill: "none", stroke: col, "stroke-width": w, "stroke-dasharray": dash || ""});
+    if (t > 1) line(D.max[t - 2].dens, css("--grey"), 1.6, "5 4");
+    line(m.dens, css("--blue"), 2.4);
+    document.getElementById("maxCap").innerHTML = `After ${t} number${t > 1 ? "s" : ""}, the formula (blue line) matches the measured shape (pale bars). Each new number pushes the distribution right, from the grey curve to the blue one. Lists with no positive number yet, where the store holds 0, are left out of the picture: ${pct(m.zero_exact)} by the formula (one half to the power ${t}), ${pct(m.zero)} measured.`;
+  }
+  sl.addEventListener("input", draw); draw();
+})();
+
+// arrival
+(function () {
+  const s = document.getElementById("farr"), a = D.arrive[9];
+  const f = frame(s, {x: [0.5, 10.5], y: [0, 0.15], xt: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], yt: [0, 0.05, 0.1, 0.15], yf: v => (v * 100).toFixed(0) + "%", xl: "step at which the largest arrived (after all ten numbers)", yl: "share of lists"});
+  a.forEach((v, j) => el(s, "rect", {x: f.x(j + 1) - 18, y: f.y(v), width: 36, height: f.y(0) - f.y(v), fill: css("--blue-l"), stroke: css("--blue")}));
+  el(s, "line", {x1: f.x(0.5), x2: f.x(10.5), y1: f.y(0.1), y2: f.y(0.1), stroke: css("--blue"), "stroke-width": 2, "stroke-dasharray": "6 4"});
+  document.getElementById("arrCap").textContent = "Bars: measured. Dashed line: the formula, one in ten for each step. Among lists with at least one positive number.";
+  document.getElementById("ie").textContent = D.indep.mean_max_if_early.toFixed(2);
+  document.getElementById("il").textContent = D.indep.mean_max_if_late.toFixed(2);
+})();
+
+// 2. store against the largest
+const AGES = [[1, 2, "--blue", "1–2 steps"], [3, 4, "--green", "3–4 steps"], [5, 6, "--orange", "5–6 steps"], [7, 9, "--red", "7–9 steps"]];
+(function () {
+  const s = document.getElementById("fstore");
+  const f = frame(s, {x: [0.3, 3.6], y: [0, 66], xt: [0.5, 1, 1.5, 2, 2.5, 3, 3.5], yt: [0, 15, 30, 45, 60], xl: "largest number before this step", yl: "store neuron's value"});
+  for (const [m, v, a] of D.store_pts) { const g = AGES.find(q => a >= q[0] && a <= q[1]); el(s, "circle", {cx: f.x(m), cy: f.y(Math.min(v, 66)), r: 2.1, fill: css(g[2]), "fill-opacity": 0.45}); }
+  el(s, "line", {x1: f.x(0.3), y1: f.y(17.6 * 0.3), x2: f.x(3.6), y2: f.y(Math.min(17.6 * 3.6, 66)), stroke: css("--ink"), "stroke-width": 1.6, "stroke-dasharray": "6 4"});
+  el(s, "text", {x: f.x(3.1), y: f.y(60) - 6, class: "b"}, "17.6 × the largest");
+  document.getElementById("ageLeg").innerHTML = "Largest arrived: " + AGES.map(q => `<span><span class="sw" style="background:var(${q[2]})"></span>${q[3]} ago</span>`).join("");
+})();
+
+// 3. leftovers
+(function () {
+  const s = document.getElementById("fleft"); let mode = "ideal";
+  function draw() {
+    clear(s); const Q = D.left[mode];
+    const f = frame(s, {x: [0.4, 9.6], y: [-4, 2], xt: [1, 2, 3, 4, 5, 6, 7, 8, 9], yt: [-4, -3, -2, -1, 0, 1, 2], xl: "steps since the largest arrived", yl: "leftover (in units of the largest)"});
+    el(s, "line", {x1: f.x(0.4), x2: f.x(9.6), y1: f.y(0), y2: f.y(0), stroke: css("--ink"), "stroke-width": 1.3});
+    Q.forEach((q, i) => {
+      const a = i + 1, col = css(AGES.find(g => a >= g[0] && a <= g[1])[2]);
+      el(s, "line", {x1: f.x(a), x2: f.x(a), y1: f.y(Math.max(q[0], -4)), y2: f.y(Math.min(q[4], 2)), stroke: col, "stroke-width": 1.5});
+      el(s, "rect", {x: f.x(a) - 14, y: f.y(Math.min(q[3], 2)), width: 28, height: f.y(Math.max(q[1], -4)) - f.y(Math.min(q[3], 2)), fill: col, "fill-opacity": 0.35, stroke: col});
+      el(s, "line", {x1: f.x(a) - 14, x2: f.x(a) + 14, y1: f.y(q[2]), y2: f.y(q[2]), stroke: col, "stroke-width": 2.6});
+    });
+    document.getElementById("leftCap").innerHTML = mode === "ideal"
+      ? "With the clean rule, the leftover drifts below zero once the largest is five or more steps old. At 7 steps old, its middle sits near −2.8, so the store is about 2.8 × the largest below the rule on most lists. That pushes the same way on every list. It is a missing piece of the formula, not noise."
+      : "With the fade written into the rule, the leftover is centred on zero at every age, so treating it as noise is fair. But it is not small: for old largests it spreads to about ±2.5 × the largest. The calculation has to carry that spread forward, and the next step is to explain it, because a smaller spread means a sharper estimate.";
+  }
+  const bi = document.getElementById("bIdeal"), bf = document.getElementById("bFade");
+  bi.onclick = () => { mode = "ideal"; bi.classList.add("on"); bf.classList.remove("on"); draw(); };
+  bf.onclick = () => { mode = "fade"; bf.classList.add("on"); bi.classList.remove("on"); draw(); };
+  draw();
+})();
+
+// 4. scores
+(function () {
+  const s = document.getElementById("fsc"); let mode = "real";
+  function draw() {
+    clear(s); const P = D.scores[mode];
+    const f = frame(s, {x: [-50, 90], y: [-50, 90], xt: [-40, -20, 0, 20, 40, 60, 80], yt: [-40, -20, 0, 20, 40, 60, 80], xl: "score of the largest number's position (the main rival)", yl: "score of the right answer"});
+    el(s, "path", {d: `M${f.x(-50)} ${f.y(-50)} L${f.x(90)} ${f.y(-50)} L${f.x(90)} ${f.y(90)} Z`, fill: css("--orange-l"), "fill-opacity": 0.55});
+    el(s, "line", {x1: f.x(-50), y1: f.y(-50), x2: f.x(90), y2: f.y(90), stroke: css("--ink2"), "stroke-dasharray": "5 4"});
+    el(s, "text", {x: f.x(55), y: f.y(-38), class: "m", "text-anchor": "middle"}, "rival wins (wrong answer)");
+    for (const [r, o] of P) { const wrong = o >= r; el(s, "circle", {cx: f.x(Math.max(-50, Math.min(90, o))), cy: f.y(Math.max(-50, Math.min(90, r))), r: 2.1, fill: css(wrong ? "--red" : "--blue"), "fill-opacity": wrong ? 0.8 : 0.4}); }
+    const p = mode === "real" ? D.scores.p_real : D.scores.p_shuf;
+    document.getElementById("scCap").innerHTML = mode === "real"
+      ? `Each dot is one list. The right answer beats its main rival on <b>${pct(p)}</b> of lists, because the two scores rise and fall together. When the largest number is big, both scores tend to be big.`
+      : `Same scores, but each right score is paired with a rival score from a different list. That is what tracking them as two separate distributions would assume. The right answer now wins on only <b>${pct(p)}</b> of lists.`;
+  }
+  const br = document.getElementById("bReal"), bs = document.getElementById("bShuf");
+  br.onclick = () => { mode = "real"; br.classList.add("on"); bs.classList.remove("on"); draw(); };
+  bs.onclick = () => { mode = "shuf"; bs.classList.add("on"); br.classList.remove("on"); draw(); };
+  draw();
+  document.getElementById("lp").textContent = pct(D.leads.product);
+  document.getElementById("lj").textContent = pct(D.leads.joint);
+})();
+</script>
+</body>
+</html>

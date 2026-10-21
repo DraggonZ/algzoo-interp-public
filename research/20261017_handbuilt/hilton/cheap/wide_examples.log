@@ -1,0 +1,28 @@
+tie 23 width quantiles (losers): [3.00e-03 8.00e-03 2.00e-02 3.90e-02 2.12e-01 5.00e+00 5.00e+00]  share of width sum from widths > 0.3: 0.95
+    [9 3 8] width 5.000 D -1.16 tangent -35.3 winner 8
+    [9 8 2] width 5.000 D -0.58 tangent -1.5 winner 2
+    [9 8 5] width 5.000 D -0.98 tangent 10.1 winner 5
+    [9 8 4] width 5.000 D -0.65 tangent -11.6 winner 4
+    [9 8 7] width 5.000 D -0.57 tangent -14.5 winner 7
+    [9 8 6] width 5.000 D -0.84 tangent -1.3 winner 6
+    [9 7 0] width 5.000 D -3.30 tangent -120.3 winner 0
+    [9 6 3] width 5.000 D -0.44 tangent -19.0 winner 3
+    [9 7 4] width 5.000 D -1.87 tangent 8.2 winner 4
+    [9 7 3] width 5.000 D -0.69 tangent -44.1 winner 3
+    [9 7 5] width 5.000 D -0.11 tangent -8.4 winner 5
+    [9 7 2] width 5.000 D -0.95 tangent -74.7 winner 2
+   right at tie but width>0?  0
+tie 12 width quantiles (losers): [3.0e-03 8.0e-03 1.8e-02 7.3e-02 5.0e+00 5.0e+00 5.0e+00]  share of width sum from widths > 0.3: 0.97
+    [9 8 7] width 5.000 D -13.20 tangent 888.0 winner 9
+    [9 8 3] width 5.000 D -16.82 tangent 887.1 winner 9
+    [9 8 6] width 5.000 D -21.34 tangent 887.1 winner 9
+    [9 8 5] width 5.000 D -17.07 tangent 887.1 winner 9
+    [9 8 1] width 5.000 D -17.41 tangent 887.1 winner 9
+    [9 2 4] width 5.000 D -2.47 tangent 0.4 winner 4
+    [9 7 6] width 5.000 D -4.90 tangent 887.5 winner 9
+    [9 8 4] width 5.000 D -18.20 tangent 887.1 winner 9
+    [9 7 5] width 5.000 D -8.78 tangent 887.5 winner 9
+    [9 3 6] width 5.000 D -2.61 tangent -0.1 winner 6
+    [9 3 7] width 5.000 D -3.18 tangent 0.6 winner 7
+    [9 3 8] width 5.000 D -1.40 tangent 0.4 winner 8
+   right at tie but width>0?  0

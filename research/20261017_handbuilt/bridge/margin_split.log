@@ -1,0 +1,4 @@
+r1 q4: jump grows: score[q]   -94.4, score[r]    46.5 | both grow: score[r]    17.2, score[q]    11.9
+r2 q5: jump grows: score[q]   -80.5, score[r]    38.8 | both grow: score[r]    20.9, score[q]    13.9
+r3 q6: jump grows: score[q]    -7.7, score[r]     5.4 | both grow: score[r]    27.6, score[q]    20.4
+r4 q7: jump grows: score[q]    -6.1, score[r]     8.8 | both grow: score[r]    38.8, score[q]    33.0

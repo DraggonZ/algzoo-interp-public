@@ -1,0 +1,8 @@
+== drive from the rest
+  previous largest, largest        1: rms  0.55, >0.2 0.35 | 6: rms  0.55, >0.2 0.31 | 7: rms  0.50, >0.2 0.17 | 8: rms  0.48, >0.2 0.24
+  + numbers since the record       1: rms  0.33, >0.2 0.25 | 6: rms  0.37, >0.2 0.22 | 7: rms  0.30, >0.2 0.14 | 8: rms  0.36, >0.2 0.20
+  + numbers before the record      1: rms  0.31, >0.2 0.22 | 6: rms  0.32, >0.2 0.20 | 7: rms  0.30, >0.2 0.14 | 8: rms  0.30, >0.2 0.16
+== whole reference (x c)
+  previous largest, largest        1: rms  1.47, >0.2 0.58 | 6: rms  0.72, >0.2 0.47 | 7: rms  0.67, >0.2 0.27 | 8: rms  2.21, >0.2 0.65
+  + numbers since the record       1: rms  0.75, >0.2 0.48 | 6: rms  0.44, >0.2 0.33 | 7: rms  0.41, >0.2 0.23 | 8: rms  1.23, >0.2 0.56
+  + numbers before the record      1: rms  0.74, >0.2 0.46 | 6: rms  0.40, >0.2 0.31 | 7: rms  0.41, >0.2 0.23 | 8: rms  1.20, >0.2 0.55

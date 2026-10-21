@@ -1,0 +1,8 @@
+== ARC
+  one step after: 1: 0.9%  6: 1.9%  7: 48.2%  8: 7.0%  all four: 81.3%
+  three of four (leave one in): without 1: 33.5%  without 6: 70.1%  without 7: 0.4%  without 8: 46.8%
+  every step from one after: 1: 11.5%  6: 16.0%  7: 21.6%  8: 12.5%
+== candidates/w8b_gapread.py
+  one step after: 1: 27.1%  6: 0.5%  7: 65.9%  8: 6.1%  all four: 69.9%
+  three of four (leave one in): without 1: 25.4%  without 6: 79.8%  without 7: 3.0%  without 8: 70.0%
+  every step from one after: 1: 15.5%  6: 12.6%  7: 11.2%  8: 5.8%

@@ -1,0 +1,15 @@
+most common on/off pattern at steps 4-8 (11.9% of steps): off neurons [np.int64(4), np.int64(5), np.int64(9)]
+ARC 0.95314
+
+anchored at position 0 (9 fitted numbers): cost 30.06 points; cosine with ARC's centred rows by position [0.98 0.92 0.96 0.99 0.99 0.95 0.94 0.9  0.78 0.6 ]
+  relative error (centred, by source group): store/detector 0.66, gates 0.88, hiding 0.32, memory 0.36
+
+global fit residual (relative, uncentred): 0.270; scales s_k [ 1.    0.92  1.02  0.94  0.83  0.8   0.74  0.6   0.73 -0.16]
+
+global fit (41 fitted numbers): cost 36.81 points; cosine with ARC's centred rows by position [0.99 0.96 0.99 0.99 0.99 0.98 0.97 0.95 0.85 0.8 ]
+  relative error (centred, by source group): store/detector 0.36, gates 0.76, hiding 0.19, memory 0.33
+  ARC + 0.02 x (rule - ARC): cost 0.07 points
+  ARC + 0.05 x (rule - ARC): cost 0.95 points
+  ARC + 0.10 x (rule - ARC): cost 3.32 points
+  ARC + 0.25 x (rule - ARC): cost 10.37 points
+  ARC + 0.50 x (rule - ARC): cost 19.41 points

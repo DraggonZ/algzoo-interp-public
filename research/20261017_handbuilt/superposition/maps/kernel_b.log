@@ -1,0 +1,7 @@
+  signed slope on scored lists: median -0.19, mean 0.05, sd 16.94
+  kept number at 0.00-0.50 of the third: n  2298, |slope| median   2.49, 90th percentile   11.50
+  kept number at 0.50-0.70 of the third: n  1015, |slope| median   2.88, 90th percentile   13.20
+  kept number at 0.70-0.80 of the third: n   534, |slope| median   3.92, 90th percentile   11.50
+  kept number at 0.80-0.90 of the third: n   701, |slope| median   4.41, 90th percentile   16.62
+  kept number at 0.90-0.95 of the third: n   349, |slope| median   6.26, 90th percentile   34.32
+  kept number at 0.95-1.00 of the third: n   317, |slope| median   8.63, 90th percentile   60.78

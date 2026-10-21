@@ -1,0 +1,6 @@
+example: background -0.5: network right 0.9836; tiny model agrees 0.9784; predicts mistakes 0.51; false alarms 0.0114; c 69
+0: background -0.5: network right 0.9670; tiny model agrees 0.9017; predicts mistakes 0.15; false alarms 0.0697; c 25
+1: background -0.5: network right 0.9662; tiny model agrees 0.8421; predicts mistakes 0.23; false alarms 0.1323; c 24
+2: background -0.5: network right 0.9853; tiny model agrees 0.9830; predicts mistakes 0.56; false alarms 0.0075; c 22
+3: background -0.5: network right 0.9789; tiny model agrees 0.9591; predicts mistakes 0.44; false alarms 0.0268; c 30
+4: background -0.5: network right 0.9590; tiny model agrees 0.8250; predicts mistakes 0.19; false alarms 0.1443; c 27

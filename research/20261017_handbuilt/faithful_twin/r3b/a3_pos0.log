@@ -1,0 +1,12 @@
+level_exact 0
+score_0 - 0.99 s_9: median abs 2.220446049250313e-16
+second's score - its value (lists with second not at 0): median 0.0  10/90% [-0.01885374  0.00625269]
+accuracy 0.8169500000000001 ; wrong answers naming position 0: 0.144 ; second at 0 but missed: 0.0201
+score - value, non-largest positions 1-9, by position (median): [0.106 0.072 0.013 0.    0.    0.016 0.028 0.035 0.   ]
+relu part: score - (0.75 x + 0.25 relu(x)) median by position: [ 0.    -0.    -0.    -0.    -0.    -0.    -0.    -0.    -0.029]
+level_exact 1
+score_0 - 0.99 s_9: median abs 2.220446049250313e-16
+second's score - its value (lists with second not at 0): median 1.1102230246251565e-16  10/90% [-5.68062264e-12  6.54122559e-03]
+accuracy 0.92125 ; wrong answers naming position 0: 0.0346 ; second at 0 but missed: 0.021
+score - value, non-largest positions 1-9, by position (median): [0.122 0.08  0.018 0.    0.    0.016 0.028 0.035 0.   ]
+relu part: score - (0.75 x + 0.25 relu(x)) median by position: [ 0.    -0.    -0.    -0.    -0.    -0.    -0.    -0.    -0.029]

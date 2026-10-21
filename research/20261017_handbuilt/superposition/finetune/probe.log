@@ -1,0 +1,12 @@
+ratio by age: 1:17.69 2:17.59 3:18.48 4:18.16 5:16.93 6:15.56 7:14.76 8:14.88 9:15.87
+residual spread (robust SD, units of L): 1:0.40 2:0.46 3:0.29 4:0.58 5:1.28 6:2.00 7:2.38 8:2.19 9:1.67
+ARC                                accuracy 95.318% | third wins at gaps <1/1-3/3-8/8-20%: 40.0 21.5 7.5 1.8 | largest wins 0.95% | weight change RMS 0.00000, in top-20 sensitive nan
+ARC's recipe, final rate, 100 steps accuracy 95.610% | third wins at gaps <1/1-3/3-8/8-20%: 39.0 19.7 6.4 1.5 | largest wins 0.99% | weight change RMS 0.00133, in top-20 sensitive 0.01
+ARC's recipe, final rate, 1000 steps accuracy 95.700% | third wins at gaps <1/1-3/3-8/8-20%: 38.4 19.0 5.9 1.3 | largest wins 1.07% | weight change RMS 0.00652, in top-20 sensitive 0.00
+ARC's recipe, final rate, 10000 steps accuracy 96.039% | third wins at gaps <1/1-3/3-8/8-20%: 37.2 17.1 5.0 1.2 | largest wins 0.94% | weight change RMS 0.02932, in top-20 sensitive 0.00
+big batch, final rate, 100 steps   accuracy 95.723% | third wins at gaps <1/1-3/3-8/8-20%: 38.7 19.1 6.0 1.4 | largest wins 0.99% | weight change RMS 0.00308, in top-20 sensitive 0.00
+big batch, final rate, 1000 steps  accuracy 96.037% | third wins at gaps <1/1-3/3-8/8-20%: 37.6 17.3 5.0 1.2 | largest wins 0.97% | weight change RMS 0.01728, in top-20 sensitive 0.00
+big batch, final rate, 10000 steps accuracy 96.278% | third wins at gaps <1/1-3/3-8/8-20%: 36.5 15.9 4.2 1.0 | largest wins 0.95% | weight change RMS 0.07182, in top-20 sensitive 0.00
+big batch, 10x rate, 100 steps     accuracy 95.736% | third wins at gaps <1/1-3/3-8/8-20%: 38.5 19.1 5.9 1.3 | largest wins 1.00% | weight change RMS 0.00933, in top-20 sensitive 0.00
+big batch, 10x rate, 1000 steps    accuracy 96.111% | third wins at gaps <1/1-3/3-8/8-20%: 37.2 16.8 4.7 1.2 | largest wins 0.95% | weight change RMS 0.05446, in top-20 sensitive 0.00
+big batch, 10x rate, 10000 steps   accuracy 96.356% | third wins at gaps <1/1-3/3-8/8-20%: 36.4 16.0 4.0 1.0 | largest wins 0.93% | weight change RMS 0.13966, in top-20 sensitive 0.00

@@ -1,0 +1,30 @@
+r2b features           rms [0.29  0.172 0.131 0.271]  n const 20
+      1: {'m2': np.float64(0.441), 'store': np.float64(-0.083), 'det': np.float64(-0.613), 'pjump': np.float64(3.306), 'jump2': np.float64(0.385), 'nm2': np.float64(-0.363)}
+      6: {'m2': np.float64(0.295), 'store': np.float64(0.065), 'det': np.float64(-1.177), 'pjump': np.float64(1.919), 'jump2': np.float64(0.391), 'nm2': np.float64(-0.722)}
+      7: {'m2': np.float64(-0.368), 'store': np.float64(0.013), 'det': np.float64(0.027)}
+      8: {'m2': np.float64(-0.575), 'store': np.float64(-0.079), 'det': np.float64(-1.247), 'pjump': np.float64(-2.266), 'jump2': np.float64(0.391)}
+no prev jump           rms [0.302 0.178 0.131 0.277]  n const 17
+      1: {'m2': np.float64(0.29), 'store': np.float64(-0.057), 'det': np.float64(-0.253), 'jump2': np.float64(0.393), 'nm2': np.float64(-0.305)}
+      6: {'m2': np.float64(0.219), 'store': np.float64(0.077), 'det': np.float64(-0.973), 'jump2': np.float64(0.396), 'nm2': np.float64(-0.692)}
+      7: {'m2': np.float64(-0.368), 'store': np.float64(0.013), 'det': np.float64(0.027)}
+      8: {'m2': np.float64(-0.49), 'store': np.float64(-0.095), 'det': np.float64(-1.49), 'jump2': np.float64(0.352)}
+gate9 for 2-back       rms [0.291 0.159 0.131 0.279]  n const 18
+      1: {'m2': np.float64(0.491), 'store': np.float64(-0.114), 'det': np.float64(-0.676), 'pjump': np.float64(3.426), 'gate9': np.float64(-0.199)}
+      6: {'m2': np.float64(0.346), 'store': np.float64(0.034), 'det': np.float64(-1.239), 'pjump': np.float64(2.028), 'gate9': np.float64(-0.45)}
+      7: {'m2': np.float64(-0.368), 'store': np.float64(0.013), 'det': np.float64(0.027)}
+      8: {'m2': np.float64(-0.509), 'store': np.float64(-0.117), 'det': np.float64(-1.33), 'pjump': np.float64(-2.055), 'gate9': np.float64(0.031)}
+gate9, no prev jump    rms [0.304 0.167 0.131 0.283]  n const 15
+      1: {'m2': np.float64(0.337), 'store': np.float64(-0.088), 'det': np.float64(-0.306), 'gate9': np.float64(-0.159)}
+      6: {'m2': np.float64(0.268), 'store': np.float64(0.046), 'det': np.float64(-1.025), 'gate9': np.float64(-0.429)}
+      7: {'m2': np.float64(-0.368), 'store': np.float64(0.013), 'det': np.float64(0.027)}
+      8: {'m2': np.float64(-0.421), 'store': np.float64(-0.131), 'det': np.float64(-1.549), 'gate9': np.float64(0.008)}
+gate9 all four         rms [0.304 0.167 0.131 0.283]  n const 16
+      1: {'m2': np.float64(0.337), 'store': np.float64(-0.088), 'det': np.float64(-0.306), 'gate9': np.float64(-0.159)}
+      6: {'m2': np.float64(0.268), 'store': np.float64(0.046), 'det': np.float64(-1.025), 'gate9': np.float64(-0.429)}
+      7: {'m2': np.float64(-0.365), 'store': np.float64(0.012), 'det': np.float64(0.026), 'gate9': np.float64(-0.005)}
+      8: {'m2': np.float64(-0.421), 'store': np.float64(-0.131), 'det': np.float64(-1.549), 'gate9': np.float64(0.008)}
+gate9+5 all four       rms [0.166 0.141 0.13  0.277]  n const 20
+      1: {'m2': np.float64(0.056), 'store': np.float64(0.084), 'det': np.float64(-0.002), 'gate9': np.float64(-0.629), 'gate5': np.float64(0.1)}
+      6: {'m2': np.float64(0.169), 'store': np.float64(0.106), 'det': np.float64(-0.92), 'gate9': np.float64(-0.591), 'gate5': np.float64(0.035)}
+      7: {'m2': np.float64(-0.386), 'store': np.float64(0.026), 'det': np.float64(0.049), 'gate9': np.float64(-0.04), 'gate5': np.float64(0.008)}
+      8: {'m2': np.float64(-0.487), 'store': np.float64(-0.09), 'det': np.float64(-1.477), 'gate9': np.float64(-0.102), 'gate5': np.float64(0.024)}

@@ -1,0 +1,11 @@
+== hand-built ../../superposition/twin/twin16_matched.npz
+   trained network 95.23%   hand-built network on its own 93.51%
+   (1) Hilton's metric, gap as noise (12 copies): predicted 10.04% (copies 4.1-16.2) against the trained 95.23%
+       straight path H + 0.25 (T - H): 11.40%
+       straight path H + 0.5 (T - H): 11.20%
+       straight path H + 0.75 (T - H): 18.03%
+   (2) store and detector (2, 4)    hand-built values patched in:  85.43%   everything else patched in:  16.00%
+   (2) cancelling (1, 6, 7, 8)      hand-built values patched in:  15.55%   everything else patched in:  23.42%
+   (2) keep gate (5)                hand-built values patched in:  70.28%   everything else patched in:  15.82%
+   (2) late gate (9)                hand-built values patched in:  76.83%   everything else patched in:  16.29%
+   (2) memory (0, 3, 10-15)         hand-built values patched in:  24.56%   everything else patched in:  20.89%

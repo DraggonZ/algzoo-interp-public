@@ -1,0 +1,123 @@
+Per network. strict = neuron-3-like memory neurons; loose = memory neurons with a loose cancelling pair.
+For each strict neuron: top pair, corr of the two terms, median|pre| / larger term, gap-fit median R2 (weighted), readout peakedness and peak positions,
+cost of flattening the pair (points), cost with the gap formula. 'random' = a random non-flagged memory neuron: cost of flattening its largest hiding term / its top opposite pair.
+net      acc hid mem best9 strict loose  details
+ARC     95.3   4   8            1     3  n3: 1-8 corr -0.91 pre/term 0.28 R2 0.65 peak 2.8 at [1 6] flatten 17.2 gapformula 4.39 | random n13: largest term 21.51, top pair 6.71 (R2 0.30)
+zoo0    91.1   2  12            0     0   | random n13: largest term 41.14, top pair  (R2 )
+zoo1    88.1   2  12            0     0   | random n0: largest term 64.04, top pair 59.71 (R2 0.24)
+zoo2    94.8   3  10   yes      0     0   | random n13: largest term 8.45, top pair 2.88 (R2 0.74)
+zoo3    93.2   3  11            0     1   | random n7: largest term 16.80, top pair 5.72 (R2 0.06)
+zoo4    89.0   1  12            0     0   | random n7: largest term 51.71, top pair  (R2 )
+s100    94.9   4  10   yes      0     4   | random n8: largest term 49.88, top pair 20.18 (R2 0.38)
+s101    91.4   3  11            0     0   | random n3: largest term 25.42, top pair 16.18 (R2 0.60)
+s102    91.3   3  11            0     1   | random n15: largest term 28.03, top pair 8.53 (R2 0.76)
+s103    95.4   3   9   yes      0     0   | random n1: largest term 7.48, top pair 3.98 (R2 0.11)
+s104    91.3   4  10            0     0   | random n2: largest term 43.42, top pair 18.26 (R2 0.58)
+s105    90.0   1  12            0     0   | random n7: largest term 15.13, top pair  (R2 )
+s106    94.9   4   9   yes      0     0   | random n11: largest term 30.50, top pair 7.66 (R2 0.72)
+s107    92.2   3  11            0     0   | random n7: largest term 57.96, top pair 52.04 (R2 0.20)
+s108    93.8   3  10            0     3   | random n3: largest term 55.40, top pair 25.04 (R2 0.45)
+s109    94.1   2  11            0     0   | random n0: largest term 57.35, top pair 43.78 (R2 0.27)
+s110    91.3   2  10            0     0   | random n1: largest term 17.16, top pair 9.84 (R2 0.14)
+s111    96.0   4   9   yes      0     3   | random n0: largest term 18.36, top pair 6.28 (R2 0.90)
+s112    91.5   1  12            0     0   | random n2: largest term 9.69, top pair  (R2 )
+s113    90.5   4  10            0     0   | random n15: largest term 22.84, top pair 3.81 (R2 0.52)
+s114    89.8   2  11            0     0   | random n5: largest term 29.77, top pair 18.93 (R2 0.42)
+s115    95.3   3  10   yes      1     4  n8: 5-7 corr -0.85 pre/term 0.26 R2 0.42 peak 4.9 at [7] flatten 55.3 gapformula 46.37 | random n10: largest term 23.93, top pair 13.55 (R2 0.85)
+s200    93.3   3  11            0     0   | random n11: largest term 42.53, top pair  (R2 )
+s201    94.4   4  10            0     0   | random n5: largest term 15.82, top pair 5.59 (R2 0.22)
+s202    89.7   3  11            0     0   | random n5: largest term 45.45, top pair 36.12 (R2 0.10)
+s203    90.0   4  10            0     2   | random n7: largest term 52.50, top pair 39.22 (R2 0.15)
+s204    89.0   2  12            0     0   | random n6: largest term 33.69, top pair  (R2 )
+s205    93.6   3   9            0     0   | random n14: largest term 24.57, top pair 15.87 (R2 0.36)
+s206    91.3   3  11            0     1   | random n1: largest term 37.39, top pair 12.23 (R2 0.69)
+s207    91.2   2  12            0     0   | random n12: largest term 21.80, top pair 10.82 (R2 0.10)
+s208    84.2   0  11            0     0  
+s209    95.9   6   8   yes      0     1   | random n11: largest term 11.37, top pair 2.61 (R2 0.88)
+s210    96.2   4  10   yes      0     0   | random n13: largest term 27.91, top pair 11.49 (R2 0.31)
+s211    93.5   3  11            0     0   | random n1: largest term 38.63, top pair 16.97 (R2 0.78)
+s212    84.7   3  11            0     0   | random n5: largest term 20.61, top pair 1.31 (R2 0.39)
+s213    94.0   0  12            0     0  
+s214    94.9   3  10   yes      0     0   | random n11: largest term 51.99, top pair 28.46 (R2 0.36)
+s215    92.6   3  10            0     0   | random n7: largest term 30.42, top pair 12.76 (R2 0.66)
+
+Sisters with a strict neuron: 1 of 37 (1 of the best nine); strict neurons: 1
+Sisters with a loose neuron: 9 of 37; loose neurons: 20 of 392 memory neurons
+Sisters with >= 2 hiding neurons (a pair is possible): 32
+
+Memory neurons whose two largest terms are both hiding: 29 (in 14 sisters); of these corr < -0.7: 20; and pre under a third of the larger term: 1
+  their median |pre| / larger term: 0.26 0.37 0.42 0.47 0.57 0.67 0.71 0.75 0.79 0.82 0.84 0.87 0.87 0.92 0.94 0.95 0.99 1.18 1.27 1.51 1.54 1.59 1.62 1.90 2.02 2.23 2.42 3.17 3.36
+
+Gap formula (median over cells of R2 for g(step, age) * (largest - second) + c):
+  all hiding pairs x memory neurons    ARC      n=  48  weighted R2 median 0.16 (10-90%: 0.06-0.64); with the arriving number added 0.78;  unweighted (sd 1) difference median 0.80
+  all hiding pairs x memory neurons    sisters  n=1169  weighted R2 median 0.14 (10-90%: 0.06-0.57); with the arriving number added 0.77;  unweighted (sd 1) difference median 0.70
+  opposite-sign pairs                  ARC      n=  30  weighted R2 median 0.35 (10-90%: 0.13-0.79); with the arriving number added 0.79;  unweighted (sd 1) difference median 0.79
+  opposite-sign pairs                  sisters  n= 715  weighted R2 median 0.19 (10-90%: 0.07-0.68); with the arriving number added 0.78;  unweighted (sd 1) difference median 0.72
+  same-sign pairs                      ARC      n=  18  weighted R2 median 0.12 (10-90%: 0.03-0.16); with the arriving number added 0.77;  unweighted (sd 1) difference median 0.80
+  same-sign pairs                      sisters  n= 454  weighted R2 median 0.12 (10-90%: 0.06-0.19); with the arriving number added 0.77;  unweighted (sd 1) difference median 0.70
+  strict neurons' top pair, sisters: R2 0.42; ARC 0.65
+  non-flagged neurons' top opposite pair, sisters: median R2 0.30
+
+Readout peakedness (largest |w| / median |w|), memory neurons:
+  strict, sisters: 4.9;  all other sister memory neurons: median 3.7, share >= 3: 0.64
+
+Substitution costs (points of accuracy, closed):
+  strict neurons, flatten their pair: ARC/n3: 17.2 s115/n8: 55.3
+  strict neurons, gap formula for the top pair: ARC/n3: 4.39 s115/n8: 46.37
+  random non-flagged (sisters, n=35): largest term median 29.8 (10-90%: 12.9-54.2); top opposite pair median 12.8 (10-90%: 3.6-40.1)
+  all non-flagged sister memory neurons with an opposite pair: top pair flatten median 15.0; largest term median 32.1
+  strict neurons: largest single term flatten 49.1 68.6
+  ARC/n3: its top-pair cost ranks 2 of 8 memory neurons in its network (costs: 21.2 17.2 14.3 13.0 12.6 8.0 6.7 3.7)
+  s115/n8: its top-pair cost ranks 2 of 10 memory neurons in its network (costs: 57.5 55.3 44.4 33.9 25.5 20.7 13.6 9.3 5.7 1.4)
+
+Hiding references (x largest, x second; R2) per network:
+  ARC    1: 0.58, 0.26 (0.67); 6: 0.62, 0.22 (0.70); 7: 0.88, -0.02 (0.94); 8: 0.31, 0.48 (0.68)
+  zoo0   6: 0.64, 0.18 (0.75); 12: 0.67, 0.15 (0.78)
+  zoo1   2: 0.63, 0.19 (0.53); 11: 0.53, 0.26 (0.60)
+  zoo2   0: -24.35, 22.59 (0.13); 3: -21.10, 19.62 (0.13); 6: -23.08, 21.42 (0.13)
+  zoo3   1: 0.66, 0.17 (0.73); 3: 0.60, 0.20 (0.78); 14: 0.62, 0.19 (0.75)
+  zoo4   4: 0.71, 0.14 (0.54)
+  s100   1: 0.73, 0.13 (0.88); 4: 0.75, 0.11 (0.82); 9: 0.76, 0.09 (0.67); 13: 0.64, 0.12 (0.92)
+  s101   8: 0.76, 0.10 (0.55); 10: 0.69, 0.15 (0.71); 13: 0.72, 0.14 (0.81)
+  s102   3: 0.55, 0.26 (0.69); 5: 0.65, 0.18 (0.75); 6: 0.61, 0.21 (0.83)
+  s103   0: -21.06, 19.55 (0.13); 2: -22.56, 20.93 (0.13); 10: -20.54, 19.08 (0.13)
+  s104   8: 0.69, 0.14 (0.84); 10: 0.60, 0.20 (0.75); 11: 0.64, 0.04 (0.67); 13: 0.74, 0.21 (0.72)
+  s105   11: 0.81, 0.05 (0.79)
+  s106   1: 0.33, 0.47 (0.70); 2: 0.81, 0.03 (0.80); 7: 0.54, 0.26 (0.68); 8: 0.57, 0.22 (0.66)
+  s107   1: 1.04, -0.14 (0.80); 2: 0.79, 0.07 (0.76); 4: 0.86, 0.02 (0.94)
+  s108   1: 0.67, 0.16 (0.88); 12: 0.68, 0.14 (0.67); 15: 0.74, 0.11 (0.71)
+  s109   5: 0.71, 0.12 (0.89); 14: 0.78, 0.08 (0.79)
+  s110   0: 0.79, 0.10 (0.53); 11: 0.64, 0.27 (0.55)
+  s111   4: -14.21, 13.67 (0.13); 8: -13.54, 12.88 (0.13); 9: 0.90, -0.04 (0.93); 12: 0.34, 0.48 (0.64)
+  s112   13: 0.23, 0.49 (0.53)
+  s113   3: 0.60, 0.22 (0.79); 5: 0.59, 0.21 (0.81); 7: 0.70, 0.13 (0.68); 9: 0.56, 0.20 (0.58)
+  s114   1: 0.70, 0.12 (0.50); 7: 0.90, -0.09 (0.56)
+  s115   5: 0.52, 0.26 (0.65); 6: 0.35, 0.44 (0.70); 7: 0.69, 0.12 (0.74)
+  s200   1: 0.34, 0.50 (0.73); 10: 0.69, 0.19 (0.71); 14: 0.86, 0.00 (0.97)
+  s201   2: 0.91, -0.01 (0.71); 3: 0.94, -0.03 (0.93); 6: -29.68, 27.48 (0.13); 10: -31.76, 29.38 (0.13)
+  s202   4: 0.59, 0.18 (0.63); 7: 0.62, 0.23 (0.73); 9: 0.53, 0.26 (0.82)
+  s203   2: 0.64, 0.17 (0.60); 6: 0.48, 0.30 (0.74); 9: 0.59, 0.25 (0.74); 10: 0.88, 0.15 (0.79)
+  s204   1: 0.79, 0.09 (0.66); 5: 0.69, 0.15 (0.76)
+  s205   1: -6.70, 6.68 (0.13); 4: -6.78, 6.81 (0.11); 5: 0.94, -0.03 (0.97)
+  s206   5: 0.53, 0.25 (0.74); 7: 0.59, 0.20 (0.71); 12: 0.55, 0.17 (0.65)
+  s207   7: 0.41, 0.44 (0.62); 8: 0.64, 0.19 (0.60)
+  s209   3: 0.45, 0.31 (0.65); 4: 0.34, 0.44 (0.69); 6: 0.74, 0.06 (0.76); 7: 0.97, -0.03 (0.97); 12: 0.80, 0.06 (0.97); 13: 0.44, 0.30 (0.62)
+  s210   7: 0.50, 0.36 (0.70); 9: 0.52, 0.30 (0.75); 11: 0.90, -0.03 (0.94); 14: 0.53, 0.25 (0.64)
+  s211   4: 0.74, 0.11 (0.82); 5: 0.85, 0.00 (0.63); 15: 0.74, 0.11 (0.87)
+  s212   9: 0.66, 0.06 (0.73); 11: 0.46, 0.38 (0.62); 12: 0.62, 0.06 (0.80)
+  s214   6: 0.50, 0.30 (0.69); 9: 0.65, 0.18 (0.69); 15: 0.56, 0.24 (0.63)
+  s215   0: 0.67, 0.17 (0.89); 4: 0.75, 0.07 (0.72); 13: 0.73, 0.10 (0.67)
+  sisters: 103 hiding neurons; share of the reference on the largest: median 0.80; below 0.5 (mostly the second): 8; fit R2 median 0.71
+
+Near misses: memory neurons whose two largest terms are hiding, opposite in sign, correlate below -0.7, with median |pre| under half the larger term:
+  ARC/n3 (95.3%): 1-8 corr -0.91 pre/term 0.28 gap R2 0.65 (with arriving number 0.72) peak 2.8 at [1 6] flatten pair 17.21 gap formula 4.39 strict=True
+  s108/n5 (93.8%): 15-1 corr -0.90 pre/term 0.37 gap R2 0.83 (with arriving number 0.84) peak 5.7 at [3] flatten pair 12.22 gap formula 3.48 strict=False
+  s111/n14 (96.0%): 9-12 corr -0.83 pre/term 0.47 gap R2 0.86 (with arriving number 0.87) peak 3.6 at [7] flatten pair 32.41 gap formula 10.30 strict=False
+  s115/n4 (95.3%): 5-7 corr -0.85 pre/term 0.42 gap R2 0.46 (with arriving number 0.84) peak 3.7 at [8] flatten pair 57.46 gap formula 51.86 strict=False
+  s115/n8 (95.3%): 5-7 corr -0.85 pre/term 0.26 gap R2 0.42 (with arriving number 0.82) peak 4.9 at [7] flatten pair 55.30 gap formula 46.37 strict=True
+
+Gap formula in place of the per-cell mean, every memory neuron's top opposite pair (sisters):
+  263 neurons whose flattening costs >= 3 points: share of the loss the gap formula recovers, median 0.26 (10-90%: 0.06-0.68); recovers >= 2/3 in 28
+  ARC: n0: 21.2 -> 15.7 n3: 17.2 -> 4.4 n10: 3.7 -> 0.4 n11: 8.0 -> 0.8 n12: 14.3 -> 7.9 n13: 6.7 -> 5.0 n14: 13.0 -> 4.4 n15: 12.6 -> 8.6
+  top pairs' gap R2 (sisters): median 0.31; with the arriving number added 0.78
+  rank correlation, gap R2 of top pair vs share recovered: 0.76

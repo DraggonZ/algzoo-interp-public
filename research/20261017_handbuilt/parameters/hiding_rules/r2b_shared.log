@@ -1,0 +1,3 @@
+free: [0.291 0.274 0.117 0.353]
+feature 1 shared: best common value +0.080; rms [0.291 0.274 0.118 0.355]
+feature 2 shared: best common value -0.150; rms [0.291 0.309 0.183 0.356]

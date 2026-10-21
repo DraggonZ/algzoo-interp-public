@@ -1,0 +1,4 @@
+two-number lists: four are zero at the wipe step in 1.00; right before intervention 1.00
+neuron 5 fires one step after the smaller number (then the largest so far): 1.00
+switching neuron 5 off at that one step makes the answer wrong in 1.00 of 36 lists
+random lists, second before largest: share of the four at zero at the wipe step: mean 0.970, all four zero in 0.896

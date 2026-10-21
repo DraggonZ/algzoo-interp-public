@@ -1,0 +1,10 @@
+== candidates/w7b_twopair.py
+  silence one slot one step after the largest -> names the largest: slot 1: 1.7%  slot 6: 0.4%  slot 7: 88.8%  slot 8: 5.7%  all four: 88.8%
+  accuracy intact 97.25
+  without the late gate's push on c6: accuracy 97.25
+  without the late gate's push on c1: accuracy 76.94
+== candidates/w8b_gapread.py
+  silence one slot one step after the largest -> names the largest: slot 1: 27.1%  slot 6: 0.5%  slot 7: 65.9%  slot 8: 6.1%  all four: 69.9%
+  accuracy intact 95.90
+  without the late gate's push on c6: accuracy 89.67
+  without the late gate's push on c1: accuracy 69.35

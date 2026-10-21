@@ -1,0 +1,7 @@
+only keep-first right: 6572  only w8b right: 895  (of 1000000)
+gains by (largest pos, second pos): [((np.int64(9), np.int64(0)), 5420), ((np.int64(6), np.int64(8)), 90), ((np.int64(3), np.int64(8)), 83), ((np.int64(4), np.int64(8)), 82), ((np.int64(5), np.int64(8)), 77), ((np.int64(1), np.int64(8)), 68), ((np.int64(2), np.int64(8)), 64), ((np.int64(1), np.int64(0)), 63)]
+losses by (largest pos, second pos): [((np.int64(1), np.int64(0)), 100), ((np.int64(5), np.int64(0)), 93), ((np.int64(2), np.int64(0)), 85), ((np.int64(4), np.int64(0)), 81), ((np.int64(3), np.int64(0)), 66), ((np.int64(6), np.int64(0)), 55), ((np.int64(7), np.int64(6)), 50), ((np.int64(6), np.int64(1)), 38)]
+on gains, w8b named: [(np.int64(8), 5454), (np.int64(0), 546), (np.int64(2), 147), (np.int64(6), 116), (np.int64(1), 113)]
+on losses, keep-first named: [(np.int64(8), 538), (np.int64(6), 240), (np.int64(0), 36), (np.int64(4), 32), (np.int64(5), 16)]
+on gains, w8b's named number was below the keep cut when it arrived: 62.8% (on 6572 lists)
+on losses, the true second was below the keep cut when it arrived: 13.5%

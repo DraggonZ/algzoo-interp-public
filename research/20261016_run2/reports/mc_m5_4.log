@@ -1,0 +1,5 @@
+M5,4 torch.float64 seed 11 0.74565318 +- 6.6e-06
+M5,4 torch.float64 seed 12 0.74564473 +- 6.6e-06
+M5,4 torch.float64 seed 13 0.74565415 +- 6.6e-06
+M5,4 torch.float32 seed 11 0.74563564 +- 6.6e-06
+M5,4 torch.float32 seed 12 0.74564823 +- 6.6e-06

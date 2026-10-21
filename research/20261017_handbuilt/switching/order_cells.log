@@ -1,0 +1,30 @@
+== order cells: step, age of largest (65 cells): acc 86.85 (-8.46) agree-answer 88.6
+   on/off agreement with the network's own run: 0:0.962 3:0.817 10:0.978 11:0.978 12:0.952 13:0.967 14:0.933 15:0.808  (all 0.9245)
+== order cells: + age of second (395 cells): acc 92.50 (-2.81) agree-answer 94.6
+   on/off agreement with the network's own run: 0:0.990 3:0.868 10:0.986 11:0.980 12:0.954 13:0.979 14:0.961 15:0.873  (all 0.9488)
+    all                                    acc  92.5 ( -2.8)  agree  94.6  KL  0.278  share 1.000
+    at most one positive                   acc  22.9 ( -0.2)  agree  78.4  KL  0.215  share 0.011
+    new largest at step 9                  acc  89.8 ( -4.6)  agree  93.0  KL  0.264  share 0.098
+    new largest at step 8                  acc  94.8 ( -2.3)  agree  96.1  KL  0.154  share 0.099
+    two in a row, earlier                  acc  93.0 ( -3.3)  agree  94.3  KL  0.278  share 0.257
+    ordinary                               acc  93.7 ( -2.4)  agree  95.2  KL  0.305  share 0.535
+    second after largest                   acc  92.3 ( -2.8)  agree  95.0  KL  0.300  share 0.501
+    second an overtaken record             acc  93.4 ( -2.9)  agree  94.6  KL  0.255  share 0.493
+    second before largest, not a record    acc  29.7 ( -0.3)  agree  73.0  KL  0.265  share 0.005
+== order cells: + second was a record (395 cells): acc 92.50 (-2.81) agree-answer 94.6
+   on/off agreement with the network's own run: 0:0.990 3:0.868 10:0.986 11:0.980 12:0.954 13:0.979 14:0.961 15:0.873  (all 0.9488)
+== order cells: + age of third (2375 cells): acc 94.60 (-0.71) agree-answer 97.4
+   on/off agreement with the network's own run: 0:0.990 3:0.900 10:0.987 11:0.982 12:0.957 13:0.979 14:0.969 15:0.906  (all 0.9587)
+== order cells: + third was a record (2375 cells): acc 94.60 (-0.71) agree-answer 97.4
+   on/off agreement with the network's own run: 0:0.990 3:0.900 10:0.987 11:0.982 12:0.957 13:0.979 14:0.969 15:0.906  (all 0.9587)
+== order cells: + current number positive (3635 cells): acc 94.58 (-0.74) agree-answer 97.4
+   on/off agreement with the network's own run: 0:0.990 3:0.900 10:0.987 11:0.982 12:0.957 13:0.979 14:0.969 15:0.906  (all 0.9588)
+    all                                    acc  94.6 ( -0.7)  agree  97.4  KL  0.089  share 1.000
+    at most one positive                   acc  22.9 ( -0.2)  agree  78.4  KL  0.215  share 0.011
+    new largest at step 9                  acc  93.2 ( -1.2)  agree  96.5  KL  0.098  share 0.098
+    new largest at step 8                  acc  96.6 ( -0.5)  agree  98.2  KL  0.040  share 0.099
+    two in a row, earlier                  acc  95.7 ( -0.6)  agree  97.7  KL  0.062  share 0.257
+    ordinary                               acc  95.4 ( -0.8)  agree  97.6  KL  0.107  share 0.535
+    second after largest                   acc  93.9 ( -1.1)  agree  97.3  KL  0.112  share 0.501
+    second an overtaken record             acc  96.0 ( -0.3)  agree  97.7  KL  0.064  share 0.493
+    second before largest, not a record    acc  29.7 ( -0.3)  agree  73.0  KL  0.265  share 0.005

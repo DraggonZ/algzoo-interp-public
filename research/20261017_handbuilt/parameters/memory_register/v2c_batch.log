@@ -1,0 +1,43 @@
+../open/rules/r14a_minarrival.py
+223 weights covered, 1 constants, 1 kinds; relative weight error 0.1943; structure 187 bits; lookup table 1916 bits
+  share 0.001: constants 6 bits (6.1 each) + structure 187 + rest 1525; net +198
+  share 0.002: constants 6 bits (5.6 each) + structure 187 + rest 1540; net +184
+  share 0.005: constants 5 bits (4.9 each) + structure 187 + rest 1590; net +134
+KL from ARC 7.7845 (budget 0.02); accuracy 0.4964 (ARC 0.9531)
+NET +197.9
+../open/rules/r13b_gauge.py
+223 weights covered, 1 constants, 1 kinds; relative weight error 0.2157; structure 182 bits; lookup table 1916 bits
+  share 0.001: constants 6 bits (6.0 each) + structure 182 + rest 1541; net +187
+  share 0.002: constants 6 bits (5.5 each) + structure 182 + rest 1556; net +172
+  share 0.005: constants 5 bits (4.9 each) + structure 182 + rest 1607; net +122
+KL from ARC 8.5212 (budget 0.02); accuracy 0.4919 (ARC 0.9531)
+NET +186.7
+../open/rules/r12a_regpush.py
+223 weights covered, 1 constants, 1 kinds; relative weight error 0.2328; structure 179 bits; lookup table 1916 bits
+  share 0.001: constants 6 bits (6.0 each) + structure 179 + rest 1536; net +194
+  share 0.002: constants 6 bits (5.5 each) + structure 179 + rest 1551; net +180
+  share 0.005: constants 5 bits (4.9 each) + structure 179 + rest 1602; net +130
+KL from ARC 8.9898 (budget 0.02); accuracy 0.4745 (ARC 0.9531)
+NET +194.4
+../hiding_v2/rules/r9b_chain.py
+207 weights covered, 1 constants, 1 kinds; relative weight error 0.2147; structure 182 bits; lookup table 1916 bits
+  share 0.001: constants 6 bits (6.0 each) + structure 182 + rest 1532; net +196
+  share 0.002: constants 6 bits (5.5 each) + structure 182 + rest 1547; net +181
+  share 0.005: constants 5 bits (4.9 each) + structure 182 + rest 1598; net +131
+KL from ARC 8.9878 (budget 0.02); accuracy 0.4515 (ARC 0.9531)
+NET +195.7
+rules/chain_push_sum.py
+128 weights covered, 1 constants, 1 kinds; relative weight error 0.2162; structure 91 bits; lookup table 1916 bits
+  share 0.001: constants 6 bits (6.0 each) + structure 91 + rest 1684; net +135
+  share 0.002: constants 6 bits (5.5 each) + structure 91 + rest 1699; net +120
+  share 0.005: constants 5 bits (4.9 each) + structure 91 + rest 1750; net +70
+KL from ARC 2.6158 (budget 0.02); accuracy 0.7535 (ARC 0.9531)
+NET +135.1
+rules/delay_kick.py
+137 weights covered, 1 constants, 1 kinds; relative weight error 0.2159; structure 108 bits; lookup table 1916 bits
+  share 0.001: constants 6 bits (6.0 each) + structure 108 + rest 1658; net +143
+  share 0.002: constants 6 bits (5.5 each) + structure 108 + rest 1674; net +128
+  share 0.005: constants 5 bits (4.8 each) + structure 108 + rest 1725; net +78
+KL from ARC 6.5852 (budget 0.02); accuracy 0.5599 (ARC 0.9531)
+NET +143.2
+done

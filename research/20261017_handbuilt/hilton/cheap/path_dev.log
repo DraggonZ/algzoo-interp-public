@@ -1,0 +1,22 @@
+ ARC: true 95.32, converged 95.32; 1 pieces: 92.73 (1448 runs, 759 step-eq); 2 pieces: 94.94 (1666 runs, 826 step-eq); 3 pieces: 95.28 (1711 runs, 841 step-eq); 60 pieces: 95.23 (1718 runs, 843 step-eq)
+ 200: true 93.24, converged 93.56; 1 pieces: 91.65 (1466 runs, 765 step-eq); 2 pieces: 93.31 (1597 runs, 796 step-eq); 3 pieces: 93.55 (1623 runs, 804 step-eq); 60 pieces: 93.52 (1631 runs, 808 step-eq)
+ 201: true 94.38, converged 94.13; 1 pieces: 80.83 (1453 runs, 733 step-eq); 2 pieces: 88.34 (1782 runs, 846 step-eq); 3 pieces: 92.20 (1943 runs, 902 step-eq); 60 pieces: 94.30 (2013 runs, 924 step-eq)
+ 202: true 89.72, converged 90.59; 1 pieces: 88.08 (1449 runs, 759 step-eq); 2 pieces: 89.68 (1618 runs, 828 step-eq); 3 pieces: 91.05 (1666 runs, 849 step-eq); 60 pieces: 91.17 (1685 runs, 861 step-eq)
+ 203: true 89.88, converged 89.86; 1 pieces: 88.22 (1445 runs, 772 step-eq); 2 pieces: 89.53 (1613 runs, 819 step-eq); 3 pieces: 89.89 (1666 runs, 838 step-eq); 60 pieces: 89.95 (1702 runs, 848 step-eq)
+ 204: true 88.93, converged 88.72; 1 pieces: 83.82 (1459 runs, 724 step-eq); 2 pieces: 88.33 (1619 runs, 778 step-eq); 3 pieces: 88.74 (1652 runs, 788 step-eq); 60 pieces: 88.82 (1677 runs, 799 step-eq)
+ 205: true 93.62, converged 94.02; 1 pieces: 88.92 (1461 runs, 729 step-eq); 2 pieces: 92.52 (1752 runs, 830 step-eq); 3 pieces: 93.27 (1886 runs, 878 step-eq); 60 pieces: 94.16 (1957 runs, 910 step-eq)
+ 206: true 91.29, converged 90.93; 1 pieces: 87.02 (1447 runs, 777 step-eq); 2 pieces: 90.86 (1677 runs, 852 step-eq); 3 pieces: 91.29 (1741 runs, 876 step-eq); 60 pieces: 91.29 (1757 runs, 883 step-eq)
+ 207: true 91.14, converged 90.29; 1 pieces: 87.83 (1466 runs, 751 step-eq); 2 pieces: 89.17 (1661 runs, 820 step-eq); 3 pieces: 89.76 (1718 runs, 839 step-eq); 60 pieces: 89.95 (1731 runs, 842 step-eq)
+ 208: true 84.03, converged 85.21; 1 pieces: 83.22 (1493 runs, 751 step-eq); 2 pieces: 84.56 (1733 runs, 815 step-eq); 3 pieces: 84.64 (1814 runs, 840 step-eq); 60 pieces: 84.63 (2046 runs, 932 step-eq)
+ 209: true 95.89, converged 96.22; 1 pieces: 93.61 (1441 runs, 718 step-eq); 2 pieces: 95.01 (1687 runs, 812 step-eq); 3 pieces: 95.51 (1781 runs, 856 step-eq); 60 pieces: 95.67 (1833 runs, 884 step-eq)
+ 210: true 96.15, converged 96.27; 1 pieces: 94.84 (1446 runs, 757 step-eq); 2 pieces: 94.85 (1656 runs, 827 step-eq); 3 pieces: 95.78 (1719 runs, 848 step-eq); 60 pieces: 95.78 (1740 runs, 858 step-eq)
+ 211: true 93.47, converged 93.55; 1 pieces: 90.89 (1447 runs, 737 step-eq); 2 pieces: 92.32 (1601 runs, 794 step-eq); 3 pieces: 92.90 (1633 runs, 808 step-eq); 60 pieces: 93.03 (1638 runs, 810 step-eq)
+ 212: true 84.53, converged 84.44; 1 pieces: 83.54 (1472 runs, 760 step-eq); 2 pieces: 84.42 (1671 runs, 837 step-eq); 3 pieces: 84.62 (1735 runs, 862 step-eq); 60 pieces: 84.81 (1809 runs, 890 step-eq)
+ 213: true 93.89, converged 94.37; 1 pieces: 89.56 (1442 runs, 728 step-eq); 2 pieces: 93.03 (1674 runs, 790 step-eq); 3 pieces: 93.96 (1754 runs, 810 step-eq); 60 pieces: 94.30 (1803 runs, 826 step-eq)
+ 214: true 94.84, converged 94.02; 1 pieces: 91.82 (1445 runs, 763 step-eq); 2 pieces: 92.88 (1576 runs, 809 step-eq); 3 pieces: 93.54 (1617 runs, 822 step-eq); 60 pieces: 94.10 (1635 runs, 828 step-eq)
+ 215: true 92.60, converged 93.16; 1 pieces: 85.86 (1456 runs, 755 step-eq); 2 pieces: 90.63 (1718 runs, 843 step-eq); 3 pieces: 91.89 (1818 runs, 877 step-eq); 60 pieces: 92.75 (1891 runs, 904 step-eq)
+up to 1 pieces: mean cost 1455 runs (749 step-equivalents); error against converged reduction: RMSE 4.66, mean -3.66; against truth: RMSE 4.63, mean -3.56; sampling at the same runs 0.55, at the same step-equivalents 0.77
+up to 2 pieces: mean cost 1665 runs (819 step-equivalents); error against converged reduction: RMSE 1.77, mean -1.19; against truth: RMSE 1.79, mean -1.09; sampling at the same runs 0.51, at the same step-equivalents 0.73
+up to 3 pieces: mean cost 1734 runs (843 step-equivalents); error against converged reduction: RMSE 0.71, mean -0.40; against truth: RMSE 0.83, mean -0.30; sampling at the same runs 0.50, at the same step-equivalents 0.72
+up to 60 pieces: mean cost 1780 runs (862 step-equivalents); error against converged reduction: RMSE 0.35, mean -0.07; against truth: RMSE 0.57, mean +0.03; sampling at the same runs 0.50, at the same step-equivalents 0.72
+converged reduction against truth on these networks: RMSE 0.53

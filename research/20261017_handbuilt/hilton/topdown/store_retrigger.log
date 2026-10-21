@@ -1,0 +1,9 @@
+iteration 0: c(b) = 17.8 17.6 18.5 18.1 16.8 15.3 14.3 14.3 | theta(b) = 0.86 0.85 0.90 0.88 0.81 0.74 0.69 0.69 | q(b) = 0.71 0.56 0.49 0.50 1.01 1.78 2.17 2.14
+iteration 1: c(b) = 17.8 17.6 18.5 18.1 16.8 15.3 14.3 14.3 | theta(b) = 0.86 0.85 0.89 0.88 0.81 0.74 0.69 0.69 | q(b) = 0.70 0.55 0.49 0.49 0.99 1.74 2.14 2.16
+iteration 2: c(b) = 17.8 17.6 18.5 18.1 16.8 15.3 14.3 14.3 | theta(b) = 0.86 0.85 0.89 0.88 0.81 0.74 0.69 0.69 | q(b) = 0.70 0.55 0.49 0.49 0.99 1.74 2.14 2.16
+A: c(age) L            share of the store's variance explained on random lists: 0.9871
+B: c(b) V              share of the store's variance explained on random lists: 0.9869
+C: c(b) V + q(b) P     share of the store's variance explained on random lists: 0.9904
+A: largest so far, age table (9 numbers)           mistakes reproduced  63.9%   agreement  92.61%   accuracy  90.90%
+B: re-trigger rule, c(b) V (9 numbers)             mistakes reproduced  64.0%   agreement  92.64%   accuracy  90.93%
+C: re-trigger rule + previous stored number (18)   mistakes reproduced  64.0%   agreement  93.31%   accuracy  91.63%

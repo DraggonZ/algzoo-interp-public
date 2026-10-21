@@ -1,0 +1,6 @@
+gain   10000 (largest weight    10000): all 0.883  rec 9 0.109  rec 8 0.882  b2b 0.881
+gain    1000 (largest weight     1000): all 0.882  rec 9 0.109  rec 8 0.881  b2b 0.880
+gain     300 (largest weight     1000): all 0.877  rec 9 0.109  rec 8 0.876  b2b 0.875
+gain     100 (largest weight     1000): all 0.862  rec 9 0.111  rec 8 0.862  b2b 0.860
+gain      30 (largest weight     1000): all 0.811  rec 9 0.114  rec 8 0.814  b2b 0.810
+gain      10 (largest weight     1000): all 0.666  rec 9 0.123  rec 8 0.697  b2b 0.669

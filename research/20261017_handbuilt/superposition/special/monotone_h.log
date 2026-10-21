@@ -1,0 +1,2 @@
+M1 second up 5% (second <= 0.9 largest): simplest [1.0, 1.0, 0.0, 0.0, 1.0, 0.0, -2.0, 0.0, 2.0, -3.0] | largest at 8, second at 0, third at 1 | names 0, after the change names 1
+M2 third down 5%: simplest [2.0, 0.0, 2.0, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 3.0] | largest at 9, second at 0, third at 2 | names 0, after the change names 6

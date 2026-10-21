@@ -1,0 +1,16 @@
+variance share of principal directions: [0.898 0.05  0.032 0.02 ]
+partly switched steps: which of (1, 6, 7, 8) are on, most common: [((1, 0, 1, 0), np.float64(0.298)), ((0, 1, 1, 0), np.float64(0.186)), ((1, 1, 1, 0), np.float64(0.151)), ((0, 1, 1, 1), np.float64(0.11)), ((0, 0, 1, 0), np.float64(0.101)), ((1, 0, 1, 1), np.float64(0.025))]
+partial switching by timer age (steps since the largest), positive numbers below the largest (ratio 0-1):
+  age 1: 0.63 of 66310 steps; median ratio at which it happens 0.51
+  age 2: 0.54 of 54083 steps; median ratio at which it happens 0.56
+  age 3: 0.43 of 43802 steps; median ratio at which it happens 0.62
+  age 4: 0.36 of 34955 steps; median ratio at which it happens 0.64
+  age 5: 0.17 of 27439 steps; median ratio at which it happens 0.82
+  age 6: 0.11 of 20630 steps; median ratio at which it happens 0.88
+  age 7: 0.12 of 14662 steps; median ratio at which it happens 0.86
+  age 8: 0.16 of 9374 steps; median ratio at which it happens 0.83
+pre-activations of the four at partly switched steps, median (on / off):
+  neuron 1: on   3.50, off  -2.37
+  neuron 6: on   4.08, off  -2.90
+  neuron 7: on   5.97, off  -1.78
+  neuron 8: on   1.90, off  -3.58

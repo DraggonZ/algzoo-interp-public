@@ -1,0 +1,7 @@
+ring-up as before                          all 0.797  rec 9 0.113  rec 8 0.107  b2b only 0.974
++ late's readout removes the step-8 phantom all 0.884  rec 9 0.113  rec 8 0.988  b2b only 0.974
++ detector's readout removes x9 - P' part  all 0.893  rec 9 0.199  rec 8 0.988  b2b only 0.974
+oracle: step-9 phantom removed             all 0.960  rec 9 0.890
+ARC as is                                  all 0.953  rec 9 0.944  rec 8 0.973  neither 0.962
+ARC, neuron 9's readout at its mean        all 0.950  rec 9 0.949  rec 8 0.926  neither 0.963
+ARC, neuron 2's readout at its mean        all 0.759  rec 9 0.694  rec 8 0.767  neither 0.774

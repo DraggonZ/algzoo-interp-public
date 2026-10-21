@@ -1,0 +1,6 @@
+negatives x0.0: right 96.28% (lists with the top three positive, 95% of all)
+negatives x0.25: right 96.29% (lists with the top three positive, 95% of all)
+negatives x0.5: right 96.24% (lists with the top three positive, 95% of all)
+negatives x1.0: right 96.03% (lists with the top three positive, 95% of all)
+negatives x2.0: right 95.28% (lists with the top three positive, 95% of all)
+negatives x4.0: right 93.03% (lists with the top three positive, 95% of all)

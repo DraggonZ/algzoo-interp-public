@@ -1,0 +1,7 @@
+group            wrong switches      KL accuracy  agree
+store+detector            0.022   0.009    0.953  0.997
+cancellers                0.026   0.894    0.892  0.915
+keep gate                 0.012   0.002    0.953  0.999
+late gate                 0.006   0.010    0.952  0.997
+memory                    0.142   1.501    0.788  0.801
+all 16                    0.081   2.230    0.754  0.763

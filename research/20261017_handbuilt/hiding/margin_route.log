@@ -1,0 +1,68 @@
+== record at 1, overtaken at 4 by under 5% (n=2721): median margin 8.96, right 0.976
+  level (both up, jump fixed): dM per unit, median   +4.04 (backprop   +4.04)
+     input at step 1 enters through: hiding    +0.0, store    -0.0, detector  -137.8, keep gate    +0.0, late gate    +0.0, memory    -0.2
+     input at step 4 enters through: hiding  +132.2, store    +0.0, detector    +7.6, keep gate    +0.0, late gate    +0.0, memory    +1.8
+     carried at step 3: total -138.22 | hiding    -3.8, store  -114.2, detector    +0.0, keep gate    +0.0, late gate    +0.0, memory   -16.2
+     carried at step 4: total   +4.04 | hiding    -6.2, store   +25.6, detector    +0.3, keep gate    +0.0, late gate    +0.0, memory   -14.9
+     carried at step 5: total   +4.04 | hiding    +5.4, store    +5.8, detector    +0.0, keep gate   -11.0, late gate   +12.3, memory    -8.3
+     carried at step 6: total   +4.04 | hiding   +10.4, store    +5.6, detector    +0.0, keep gate    +0.0, late gate    +0.0, memory   -10.8
+     carried at step 7: total   +4.04 | hiding    +2.6, store    -1.0, detector    +0.0, keep gate    +0.0, late gate    +0.0, memory    +2.9
+     carried at step 8: total   +4.04 | hiding    +2.2, store   -28.0, detector    +0.0, keep gate    +0.0, late gate    +0.0, memory   +30.5
+     carried at step 9: total   +4.04 | hiding    +6.0, store   -44.4, detector    +0.0, keep gate    +0.0, late gate    +0.0, memory   +42.9
+  jump (new largest up): dM per unit, median +141.92 (backprop +141.92)
+     input at step 4 enters through: hiding  +132.2, store    +0.0, detector    +7.6, keep gate    +0.0, late gate    +0.0, memory    +1.8
+     carried at step 3: total   +0.00 | hiding    +0.0, store    +0.0, detector    +0.0, keep gate    +0.0, late gate    +0.0, memory    +0.0
+     carried at step 4: total +141.92 | hiding  +132.2, store    +0.0, detector    +7.6, keep gate    +0.0, late gate    +0.0, memory    +1.8
+     carried at step 5: total +141.92 | hiding  +230.7, store    +5.6, detector    +0.0, keep gate   -15.1, late gate   +20.9, memory   -98.0
+     carried at step 6: total +141.92 | hiding  +298.0, store    +5.9, detector    +0.0, keep gate    +0.0, late gate    +0.0, memory  -161.9
+     carried at step 7: total +141.92 | hiding  +302.9, store    -1.1, detector    +0.0, keep gate    +0.0, late gate    +0.0, memory  -159.5
+     carried at step 8: total +141.92 | hiding  +306.9, store   -25.9, detector    +0.0, keep gate    +0.0, late gate    +0.0, memory  -138.7
+     carried at step 9: total +141.92 | hiding  +265.3, store   -31.5, detector    +0.0, keep gate    +0.0, late gate    +0.0, memory   -91.6
+== record at 2, overtaken at 5 by under 5% (n=2712): median margin 7.99, right 0.963
+  level (both up, jump fixed): dM per unit, median   +9.09 (backprop   +9.09)
+     input at step 2 enters through: hiding    +0.0, store    -0.1, detector  -117.2, keep gate    +0.0, late gate    +0.0, memory    -0.1
+     input at step 5 enters through: hiding  +121.9, store    +0.0, detector    +3.0, keep gate    +0.0, late gate    +0.0, memory    +2.0
+     carried at step 4: total -117.63 | hiding    +0.6, store  -101.4, detector    +0.0, keep gate    +0.0, late gate    +0.0, memory    -4.2
+     carried at step 5: total   +9.10 | hiding    -4.5, store   +26.4, detector    +0.1, keep gate    +0.0, late gate    +0.0, memory   -14.4
+     carried at step 6: total   +9.10 | hiding    +5.5, store    -1.5, detector    +0.0, keep gate   -10.0, late gate   +12.2, memory    -1.0
+     carried at step 7: total   +9.09 | hiding   +11.8, store    +3.8, detector    +0.0, keep gate    +0.0, late gate    +0.0, memory    -9.2
+     carried at step 8: total   +9.09 | hiding    +1.8, store   -21.0, detector    +0.0, keep gate    +0.0, late gate    +0.0, memory   +25.0
+     carried at step 9: total   +9.09 | hiding    +3.2, store   -16.8, detector    +0.0, keep gate    +0.0, late gate    +0.0, memory   +19.1
+  jump (new largest up): dM per unit, median +125.70 (backprop +127.07)
+     input at step 5 enters through: hiding  +121.9, store    +0.0, detector    +3.0, keep gate    +0.0, late gate    +0.0, memory    +2.0
+     carried at step 4: total   +0.00 | hiding    +0.0, store    +0.0, detector    +0.0, keep gate    +0.0, late gate    +0.0, memory    +0.0
+     carried at step 5: total +125.54 | hiding  +120.6, store    +0.0, detector    +3.0, keep gate    +0.0, late gate    +0.0, memory    +2.0
+     carried at step 6: total +125.54 | hiding   +89.9, store    -1.4, detector    +0.0, keep gate   -13.5, late gate   +19.6, memory   -76.5
+     carried at step 7: total +125.70 | hiding  +281.2, store    +3.6, detector    +0.0, keep gate    +0.0, late gate    +0.0, memory  -155.4
+     carried at step 8: total +125.70 | hiding  +295.3, store   -20.7, detector    +0.0, keep gate    +0.0, late gate    +0.0, memory  -142.7
+     carried at step 9: total +125.70 | hiding  +313.9, store   -15.5, detector    +0.0, keep gate    +0.0, late gate    +0.0, memory  -168.6
+== record at 3, overtaken at 6 by under 5% (n=2815): median margin 6.81, right 0.966
+  level (both up, jump fixed): dM per unit, median   +7.88 (backprop   +7.88)
+     input at step 3 enters through: hiding    +0.0, store    -0.0, detector    -0.0, keep gate    +0.0, late gate    +0.0, memory    -0.1
+     input at step 6 enters through: hiding    +0.0, store    +0.0, detector    +4.5, keep gate    +0.0, late gate    +0.0, memory    +1.9
+     carried at step 5: total   -0.22 | hiding    +0.8, store    -9.3, detector    +0.0, keep gate    +0.0, late gate    +0.0, memory    +0.7
+     carried at step 6: total   +7.88 | hiding    +0.0, store   +25.8, detector    +0.2, keep gate    +0.0, late gate    +0.0, memory   -15.4
+     carried at step 7: total   +7.88 | hiding    +8.2, store    -3.8, detector    +0.0, keep gate    -9.4, late gate   +12.9, memory    +0.9
+     carried at step 8: total   +7.88 | hiding   +11.1, store    +2.3, detector    +0.0, keep gate    +0.0, late gate    +0.0, memory    -8.0
+     carried at step 9: total   +7.88 | hiding    +5.6, store   -15.1, detector    +0.0, keep gate    +0.0, late gate    +0.0, memory   +17.4
+  jump (new largest up): dM per unit, median   +7.67 (backprop   +7.67)
+     input at step 6 enters through: hiding    +0.0, store    +0.0, detector    +4.5, keep gate    +0.0, late gate    +0.0, memory    +1.9
+     carried at step 5: total   +0.00 | hiding    +0.0, store    +0.0, detector    +0.0, keep gate    +0.0, late gate    +0.0, memory    +0.0
+     carried at step 6: total   +7.67 | hiding    +0.0, store    +0.0, detector    +4.5, keep gate    +0.0, late gate    +0.0, memory    +1.9
+     carried at step 7: total   +7.67 | hiding   +81.6, store    -3.7, detector    +0.0, keep gate   -12.8, late gate   +11.1, memory   -69.1
+     carried at step 8: total   +7.67 | hiding  +132.7, store    +2.2, detector    +0.0, keep gate    +0.0, late gate    +0.0, memory  -128.6
+     carried at step 9: total   +7.67 | hiding  +129.1, store   -14.7, detector    +0.0, keep gate    +0.0, late gate    +0.0, memory  -108.2
+== record at 4, overtaken at 7 by under 5% (n=2706): median margin 5.31, right 0.965
+  level (both up, jump fixed): dM per unit, median   +6.87 (backprop   +6.87)
+     input at step 4 enters through: hiding    +0.0, store    -0.0, detector    -2.1, keep gate    +0.0, late gate    +0.0, memory    -0.1
+     input at step 7 enters through: hiding    +0.0, store    +0.0, detector    +6.8, keep gate    +0.0, late gate    +0.0, memory    +1.6
+     carried at step 6: total   -2.15 | hiding    +1.0, store   -10.9, detector    +0.0, keep gate    +0.0, late gate    +0.0, memory    +1.3
+     carried at step 7: total   +6.87 | hiding    +0.0, store   +21.5, detector    +0.3, keep gate    +0.0, late gate    +0.0, memory   -12.1
+     carried at step 8: total   +6.87 | hiding    +7.2, store    -2.9, detector    +0.0, keep gate    -8.5, late gate   +11.2, memory    +0.8
+     carried at step 9: total   +6.87 | hiding   +10.6, store    +0.9, detector    +0.0, keep gate    +0.0, late gate    +0.0, memory    -6.0
+  jump (new largest up): dM per unit, median   +8.88 (backprop   +8.88)
+     input at step 7 enters through: hiding    +0.0, store    +0.0, detector    +6.8, keep gate    +0.0, late gate    +0.0, memory    +1.6
+     carried at step 6: total   +0.00 | hiding    +0.0, store    +0.0, detector    +0.0, keep gate    +0.0, late gate    +0.0, memory    +0.0
+     carried at step 7: total   +8.88 | hiding    +0.0, store    +0.0, detector    +6.8, keep gate    +0.0, late gate    +0.0, memory    +1.6
+     carried at step 8: total   +8.88 | hiding   +68.8, store    -2.8, detector    +0.0, keep gate   -11.5, late gate    +9.4, memory   -55.1
+     carried at step 9: total   +8.88 | hiding  +111.2, store    +0.9, detector    +0.0, keep gate    +0.0, late gate    +0.0, memory  -103.9

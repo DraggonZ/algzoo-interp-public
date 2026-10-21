@@ -1,0 +1,11 @@
+cancellers      ours       account             : error at the neurons 0.159 of typical value; accuracy 0.559, with its errors shuffled 0.543
+cancellers      misreading wave from m2        : error at the neurons 0.232 of typical value; accuracy 0.426, with its errors shuffled 0.510
+cancellers      misreading no wave             : error at the neurons 0.273 of typical value; accuracy 0.181, with its errors shuffled 0.463
+cancellers      misreading angle +20           : error at the neurons 0.215 of typical value; accuracy 0.386, with its errors shuffled 0.460
+store+detector  ours       account             : error at the neurons 0.096 of typical value; accuracy 0.851, with its errors shuffled 0.852
+store+detector  misreading store tracks second : error at the neurons 0.411 of typical value; accuracy 0.434, with its errors shuffled 0.504
+keep gate       ours       account             : error at the neurons 0.253 of typical value; accuracy 0.872, with its errors shuffled 0.903
+keep gate       misreading gate vs largest     : error at the neurons 0.456 of typical value; accuracy 0.667, with its errors shuffled 0.770
+memory          ours       account             : error at the neurons 0.830 of typical value; accuracy 0.509, with its errors shuffled 0.478
+memory          misreading keep above half     : error at the neurons 0.831 of typical value; accuracy 0.502, with its errors shuffled 0.474
+memory          misreading keep all            : error at the neurons 0.824 of typical value; accuracy 0.502, with its errors shuffled 0.480

@@ -1,0 +1,16 @@
+with the record signal two steps back (11 constants + 4 feedback per neuron):
+  neuron 1: rms 0.260 (7.10x the account)
+  neuron 6: rms 0.260 (7.58x the account)
+  neuron 7: rms 0.109 (5.75x the account)
+  neuron 8: rms 0.365 (5.84x the account)
+  all four replaced: accuracy 0.8768, KL 0.441
+  weights for 1: cosine 0.994, relative distance 0.12
+  weights for 6: cosine 0.999, relative distance 0.05
+  weights for 7: cosine 0.999, relative distance 0.05
+  weights for 8: cosine 0.994, relative distance 0.13
+  late gate into 1 and 6: ARC -0.69 -0.64; from the rule -0.47 -0.63
+  rows [1] from the rule: accuracy -0.60 points, KL 0.022
+  rows [6] from the rule: accuracy -0.77 points, KL 0.030
+  rows [7] from the rule: accuracy -0.26 points, KL 0.013
+  rows [8] from the rule: accuracy -6.23 points, KL 0.334
+  rows [1, 6, 7, 8] from the rule: accuracy -8.24 points, KL 0.404

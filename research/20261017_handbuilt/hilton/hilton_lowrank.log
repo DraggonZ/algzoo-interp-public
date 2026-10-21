@@ -1,0 +1,15 @@
+share of near-tie leads' noise variance in the top r directions: r=1: 0.580, r=2: 0.708, r=5: 0.878, r=10: 0.946, r=20: 0.977, r=50: 0.996
+all 432 directions: RMSE 0.25 points, correlation 0.997; constant guess 3.31
+top  1 directions: RMSE 3.22 points, correlation 0.878
+top  2 directions: RMSE 2.32 points, correlation 0.943
+top  5 directions: RMSE 1.16 points, correlation 0.985
+top 10 directions: RMSE 0.68 points, correlation 0.992
+top 20 directions: RMSE 0.40 points, correlation 0.996
+top 50 directions: RMSE 0.26 points, correlation 0.997
+direction 1: 2->7 -0.39, 7->7 -0.32, 6->7 -0.27, 14->7 -0.25, 8->7 -0.23, 1->7 -0.23, 10->7 -0.22, 2->8 +0.16
+direction 2: 2->8 +0.26, 7->6 -0.25, 7->8 +0.24, 6->6 -0.23, 2->6 -0.23, 1->6 -0.22, 8->6 -0.21, 6->8 +0.20
+direction 3: 10->7 +0.34, 10->1 -0.28, 12->8 +0.24, 11->6 -0.24, 11->7 +0.22, 11->1 -0.20, 0->7 -0.19, 10->6 -0.19
+level shifts of the four hiding neurons (4 numbers per copy): RMSE 2.90 points, correlation 0.833
+level shifts of neuron 7 only (1 numbers per copy): RMSE 4.62 points, correlation 0.588
+level shifts of hiding and memory neurons (12 numbers per copy): RMSE 2.42 points, correlation 0.869
+top eigen-direction against neuron 7's level-shift direction: |cosine| 0.77

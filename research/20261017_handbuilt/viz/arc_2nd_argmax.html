@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How a 16-neuron network finds the second-largest number</title>
+<style>
+.viz-root {
+  color-scheme: light;
+  --surface-0: #f4f3f0;
+  --surface-1: #fcfcfb;
+  --grid: #e4e3df;
+  --axis: #c9c8c2;
+  --text-primary: #0b0b0b;
+  --text-secondary: #52514e;
+  --text-muted: #7d7c77;
+  --series-1: #2a78d6;   /* the model */
+  --series-2: #eb6834;   /* the largest */
+  --series-3: #1baf7a;   /* the second-largest */
+  --neutral: #a3a29c;    /* ground truth / reference */
+  --seq-0: #f0efec; --seq-1: #b7d3f6; --seq-2: #6da7ec; --seq-3: #2a78d6; --seq-4: #184f95; --seq-5: #0d366b;
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) .viz-root {
+    color-scheme: dark;
+    --surface-0: #121211; --surface-1: #1a1a19; --grid: #2c2c2a; --axis: #45453f;
+    --text-primary: #f0efec; --text-secondary: #c3c2b7; --text-muted: #8f8e86;
+    --series-1: #3987e5; --series-2: #d95926; --series-3: #199e70; --neutral: #6f6e68;
+    --seq-0: #262624; --seq-1: #104281; --seq-2: #1c5cab; --seq-3: #2a78d6; --seq-4: #6da7ec; --seq-5: #b7d3f6;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--surface-0); }
+.viz-root { font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; color: var(--text-primary); background: var(--surface-0); padding: 20px; max-width: 1180px; margin: 0 auto; }
+h1 { font-size: 22px; margin: 0 0 6px; font-weight: 650; }
+h2 { font-size: 15px; margin: 0 0 4px; font-weight: 600; }
+p { margin: 0 0 8px; }
+.lede { color: var(--text-secondary); max-width: 900px; }
+.muted { color: var(--text-muted); font-size: 12.5px; }
+.card { background: var(--surface-1); border-radius: 10px; padding: 14px 16px; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+.full { margin-top: 14px; }
+@media (max-width: 860px) { .grid2 { grid-template-columns: 1fr; } }
+.row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+button, select { font: inherit; color: var(--text-primary); background: var(--surface-1); border: 1px solid var(--axis); border-radius: 6px; padding: 4px 10px; cursor: pointer; }
+button:hover { border-color: var(--text-muted); }
+button.on { background: var(--text-primary); color: var(--surface-1); border-color: var(--text-primary); }
+.controls { position: sticky; top: 0; z-index: 5; background: var(--surface-0); padding: 10px 0 8px; margin-top: 10px; border-bottom: 1px solid var(--grid); }
+input[type=range] { width: 260px; }
+svg text { fill: var(--text-secondary); font-size: 11.5px; }
+svg .label-strong { fill: var(--text-primary); font-weight: 600; }
+.tip { position: fixed; pointer-events: none; background: var(--text-primary); color: var(--surface-1); padding: 6px 9px; border-radius: 6px; font-size: 12.5px; max-width: 300px; opacity: 0; transition: opacity .08s; z-index: 10; }
+.events { margin: 0; padding-left: 18px; }
+.events li { margin: 0 0 5px; }
+.events li.now { font-weight: 600; }
+.legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12.5px; color: var(--text-secondary); margin-top: 4px; }
+.sw { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+.answer { font-size: 15px; margin-top: 6px; }
+.chips button { padding: 2px 8px; min-width: 34px; }
+table.data { border-collapse: collapse; font-size: 12px; font-variant-numeric: tabular-nums; }
+table.data td, table.data th { padding: 2px 6px; text-align: right; border-bottom: 1px solid var(--grid); }
+details summary { cursor: pointer; color: var(--text-secondary); }
+</style>
+</head>
+<body>
+<div class="viz-root">
+  <h1>How a 16-neuron network finds the second-largest number</h1>
+  <p class="lede">ARC's AlgZoo model reads ten random numbers one at a time and must point at the position of the second-largest. It has 16 ReLU neurons and no biases, and gets 95.3% of random inputs right. This page runs the real network in your browser. Drag the bars to change the inputs, step through time, and switch neurons off to see what breaks. The explanations come from our reverse-engineering; where it is uncertain, the text says so.</p>
+
+  <div class="controls">
+    <div class="row">
+      <span class="muted">Examples:</span>
+      <span id="presets" class="row"></span>
+      <button id="rand">Random input</button>
+    </div>
+    <div class="row" style="margin-top:8px">
+      <button id="prev" aria-label="previous step">◀</button>
+      <input id="step" type="range" min="0" max="10" value="10" aria-label="step">
+      <button id="next" aria-label="next step">▶</button>
+      <button id="play">Play</button>
+      <span id="steplabel" class="muted"></span>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h2>The input</h2>
+      <p class="muted">Ten numbers, read left to right. Drag a bar up or down. Orange marks the largest, green the second-largest (the right answer).</p>
+      <svg id="inputs" width="100%" viewBox="0 0 520 230" role="img" aria-label="input values"></svg>
+    </div>
+    <div class="card">
+      <h2>What happened at each step</h2>
+      <ol id="events" class="events" start="0"></ol>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h2>Scores</h2>
+      <p class="muted">The network's ten output scores, read from its state now (minus their average). Only the scores after the last step are the real answer; earlier ones show what it would say if the sequence ended here. Votes move one position left each step.</p>
+      <svg id="scores" width="100%" viewBox="0 0 520 220" role="img" aria-label="scores per position"></svg>
+      <div id="answer" class="answer"></div>
+    </div>
+    <div class="card">
+      <h2>The hidden clock</h2>
+      <p class="muted">Ten of the neurons, seen in the plane where a single input makes them turn about 40° per step (faint loop: a lone input of 1). Any positive input starts the clock. The output layer cannot see it: two copies of it cancel at the output, so the largest number casts no vote. When a new largest arrives it wipes one copy, and the other shows where the old largest arrived.</p>
+      <svg id="clock" width="100%" viewBox="0 0 520 260" role="img" aria-label="clock plane"></svg>
+    </div>
+  </div>
+
+  <div class="card full">
+    <h2>All 16 neurons over time</h2>
+    <p class="muted">Darker = more active, relative to each neuron's usual range (hover for the value). Rows are grouped by role. Click a neuron's name to switch it off at every step.</p>
+    <svg id="heat" width="100%" viewBox="0 0 1100 420" role="img" aria-label="neuron activity heatmap"></svg>
+    <div class="row chips" style="margin-top:6px"><span class="muted">Switched off:</span><span id="kolist" class="muted">none</span><button id="koclear">Restore all</button></div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h2>Running maximum</h2>
+      <p class="muted">Neuron 4 fires only when a number beats the largest so far. Neuron 2 adds up those jumps, so it holds about 17× the largest (it starts to forget after about four steps).</p>
+      <svg id="maxchart" width="100%" viewBox="0 0 520 200" role="img" aria-label="running maximum"></svg>
+      <div class="legend"><span><span class="sw" style="background:var(--neutral)"></span>largest so far (true)</span><span><span class="sw" style="background:var(--series-1)"></span>neuron 2 ÷ 17</span></div>
+    </div>
+    <div class="card">
+      <h2>Who gets a lasting vote: neuron 5</h2>
+      <p class="muted">Each dot is a positive number, placed by its size relative to the second-largest so far when it arrived. Neuron 5 fires one step later for numbers above about 0.8 of the second (filled dots), and those keep a lasting vote. Below that, the number is forgotten after one step. New largest numbers are drawn at the top.</p>
+      <svg id="gate" width="100%" viewBox="0 0 520 200" role="img" aria-label="neuron 5 gate"></svg>
+    </div>
+  </div>
+
+  <div class="card full">
+    <h2>Close calls: change one number and watch the answer</h2>
+    <p class="muted">Pick a position. The blue line is the network's answer as that number goes from −3 to 3 with the rest held fixed; the grey line is the right answer. Where they part, the network errs. Most mistakes are near-ties between the second and third. Which side wins there differs from model to model and is set by fine detail in the weights, so no short rule predicts it.</p>
+    <div class="row"><span class="muted">Position:</span><select id="sweeppos"></select></div>
+    <svg id="sweep" width="100%" viewBox="0 0 1100 230" role="img" aria-label="answer as one input varies"></svg>
+  </div>
+
+  <div class="card full">
+    <h2>What we know, and what we don't</h2>
+    <ul>
+      <li><b>Known:</b> a running maximum (neurons 2 and 4); a hidden clock in two cancelling copies; a new largest wipes the lowering neurons (1, 6, 7, 8) and reveals the old largest's position; neuron 5 decides which numbers keep a lasting vote; votes slide one position per step; several lasting votes can coexist and the biggest usually wins; neuron 3 votes for positions 1 and 6 and helps the clock at positions 0 and 2–5.</li>
+      <li><b>Not known:</b> why neuron 5's cut sits near 0.8 of the second (it looks like a hedge, since the network knows the second only roughly); why the clock needs neuron 3 at those positions; exactly how votes interact. A model built from independent votes matches the network's answers 95% of the time but only about a quarter of its mistakes.</li>
+    </ul>
+    <details><summary>Numbers behind this page (table view)</summary><div id="table"></div></details>
+    <p class="muted" style="margin-top:8px">Model: ARC's <code>one_layer_16_hidden_94_acc_2nd_argmax</code> from AlgZoo. Each step computes h ← ReLU(W<sub>hh</sub> h + W<sub>hi</sub> x); scores = W<sub>oh</sub> h.</p>
+  </div>
+  <div id="tip" class="tip"></div>
+</div>
+
+<script>
+const M = {"w_hi":[0.069195,-10.564791,0.014607,-0.122653,10.156976,-0.281305,-10.995722,-13.168691,-12.312334,-0.227563,0.05985,0.147997,0.298007,-0.047013,-1.320663,-0.119108],"w_hh":[[0.16086,0.710879,-0.173731,0.021223,0.594879,-0.913422,1.132756,-0.775819,-0.792995,-1.423736,0.30745,0.150225,0.224845,0.076663,0.420385,0.008338],[-0.108289,0.409359,0.503703,0.011614,0.871355,0.117748,0.9954,-1.047672,-0.120379,-0.686277,0.023891,0.008446,0.043004,0.029532,0.079147,0.020058],[-0.083544,-0.101951,0.968838,0.039087,1.730719,-0.010148,-0.102536,0.022689,0.154534,-0.228853,0.015224,0.017619,0.055332,0.040499,0.026864,-0.04666],[-1.229385,1.195253,0.001677,-0.358557,0.344194,-0.517539,0.485193,-0.399203,-1.074143,0.208118,0.213852,-0.193707,0.498837,-0.258568,0.588454,0.810454],[0.035378,0.035623,-0.492309,-0.003394,-0.985611,0.001695,0.0933,-0.029369,-0.081555,0.083392,-0.006544,-0.012212,-0.059153,-0.026931,-0.032631,-0.01095],[0.22449,-0.000509,-0.031152,-0.200491,1.187052,-0.421113,0.015222,-0.593338,-0.849756,0.297361,0.122414,0.327788,0.261386,-0.009049,0.2048,0.073787],[-0.092882,-0.135107,0.534964,0.027262,-0.047094,0.038272,0.360572,-0.126076,-0.082024,-0.640081,0.028036,0.018916,0.039557,0.016068,0.086124,-0.007888],[-0.02142,-0.100362,0.673674,-0.008009,1.316617,0.002308,-0.182463,0.078154,0.166688,0.002782,-0.003885,0.0299,0.069512,0.021722,-1.4e-05,-0.012528],[-0.00461,0.633902,0.625356,0.00046,-0.041493,-0.01696,-0.000288,-1.094118,0.615391,-0.068357,0.038094,0.054888,0.04158,0.00066,0.031891,-0.013365],[-0.031755,-0.357315,0.004241,-0.043868,0.14581,0.042859,-0.089189,-5.031696,-1.091538,-0.55285,0.03272,0.052663,0.01644,-0.025794,0.107155,-0.009744],[0.023295,0.219336,0.040268,-0.076554,1.75515,-0.01441,-0.19325,0.209535,-0.209331,0.136742,-0.000918,1.096391,-0.052944,0.076988,-0.144153,-0.018233],[0.091598,0.242721,0.120528,-0.0768,1.714794,-0.073363,-0.473048,0.381814,-0.16269,0.677092,0.004319,0.198647,0.662752,-0.375098,-0.096079,-0.11855],[0.048059,0.469167,-0.156106,-0.31037,1.277097,-0.135634,-0.103764,-0.052235,-0.279418,0.809755,-0.119562,0.006818,0.611684,0.413919,0.341305,0.451483],[0.15144,0.224702,0.3836,0.427061,0.464019,-0.085521,0.12046,0.002114,-0.288919,0.039414,0.276887,-0.088457,-0.261485,-0.605007,-0.219977,0.653734],[0.402839,0.170812,0.33529,-0.357689,0.870553,-0.423923,0.765088,-0.711931,-0.06498,-0.649361,0.25044,0.017238,-0.018885,-0.159203,0.355044,-0.193473],[0.265714,0.651883,0.38409,0.378732,0.179425,-0.663162,0.380569,-0.161418,-0.723532,-0.195146,-1.092972,1.279595,-0.224101,-0.529175,0.137633,0.228663]],"w_oh":[[1.961927,6.094294,-0.918874,0.667681,-0.149997,-0.228254,2.527653,-2.782298,-3.574001,-2.099736,0.16317,1.005324,1.185569,0.244466,-5.143979,1.009926],[-2.691626,2.561821,-2.223388,1.694286,0.423909,-0.082492,4.782693,0.482716,-6.698232,-1.034248,-1.666194,1.266942,1.702571,0.372937,0.608324,2.300555],[-1.651926,-1.660886,-0.400355,-0.505212,0.576592,-0.076804,3.192256,4.694181,-6.205326,0.412086,-2.808088,0.005136,1.417537,-2.234519,1.112987,2.615083],[0.772718,-5.861678,0.287335,-0.541305,0.666133,-0.347126,-1.21728,7.328176,-1.494553,0.747185,-3.869936,0.294983,0.235795,0.247238,1.30942,-1.136893],[0.683209,-4.892791,0.201016,-0.473225,0.749872,-0.50995,-5.554021,5.869283,3.101134,1.592995,1.661018,-4.55816,0.321424,0.177599,1.228839,-0.936742],[1.962526,-1.211473,0.483473,-0.914852,0.567156,-0.640164,-5.634928,0.921393,5.485322,1.954205,1.107845,-0.005139,-2.794713,2.08636,-0.622879,-0.724262],[1.243086,2.167666,1.083253,1.695943,0.46124,-0.678203,-3.08025,-2.848763,4.394223,0.435801,2.026922,0.453834,-2.219471,-1.388562,-1.006412,-0.94938],[-2.904761,4.410152,0.15164,-0.583535,0.414399,-0.369399,0.953504,-5.407825,1.436473,0.216594,1.641836,0.785707,0.251718,0.227325,1.216101,-0.829355],[-0.295008,-1.434064,0.578148,-0.609623,0.497516,3.397568,3.623573,-4.996724,3.644773,-1.659319,0.703968,0.181025,-0.458528,0.073287,0.087839,-0.916097],[0.685931,-0.473966,0.174049,-0.599926,-4.991731,-0.419146,-0.670969,-3.789433,0.328122,-0.603733,1.674416,0.784695,0.265781,0.260287,1.182039,-0.852532]],"clock_neurons":[0,3,5,9,10,11,12,13,14,15],"clock_mean":[14.815755,3.167684,0.667354,0.037338,12.901783,13.087589,18.010037,6.675933,14.562329,9.773852],"clock_axes":[[0.470321,0.046017,-0.048894,-0.006064,-0.504342,-0.193229,0.377159,-0.029775,0.46986,0.344459],[0.217381,-0.109019,0.00633,-0.000183,-0.122188,-0.518013,-0.678047,0.06194,0.25893,-0.356264]],"p99":[38.634,40.197,49.605,15.802,18.778,25.755,41.37,50.749,44.064,3.515,49.647,41.087,44.367,21.052,42.599,30.534],"examples":{"typical":[-0.16,-1.04,-1.67,-0.49,-0.05,1.77,0.13,0.98,-0.5,-1.18],"close call, right":[1.72,-2.32,-2.0,-0.54,0.01,0.69,0.47,-0.38,1.02,1.03],"close call, wrong":[1.73,1.36,0.26,1.35,0.01,0.2,-1.09,0.4,0.06,-1.3],"largest arrives last":[-1.56,-0.3,0.1,-0.09,0.79,0.34,0.67,-0.69,0.9,1.63],"one positive number":[-1.69,-0.02,-0.9,-0.34,-0.08,-1.71,-1.62,0.48,-0.52,-2.56]}};
+const N = 10, D = 16;
+const GROUPS = [
+  ["Running maximum", [2, 4]],
+  ["Lowering (wiped by a new largest)", [1, 6, 7, 8]],
+  ["Gate for lasting votes", [5]],
+  ["Clock hands", [0, 10, 11, 12, 13, 14, 15]],
+  ["Fires after any input", [9]],
+  ["Votes for positions 1 and 6", [3]],
+];
+const css = n => getComputedStyle(document.querySelector('.viz-root')).getPropertyValue(n).trim();
+const svgNS = "http://www.w3.org/2000/svg";
+function el(tag, attrs = {}, parent) { const e = document.createElementNS(svgNS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; }
+function clear(s) { while (s.firstChild) s.removeChild(s.firstChild); }
+const tip = document.getElementById('tip');
+function addTip(e, text) {
+  e.addEventListener('mousemove', ev => { tip.textContent = text; tip.style.opacity = 1; tip.style.left = (ev.clientX + 14) + 'px'; tip.style.top = (ev.clientY + 12) + 'px'; });
+  e.addEventListener('mouseleave', () => tip.style.opacity = 0);
+}
+const fmt = v => (Math.abs(v) < 0.005 ? 0 : v).toFixed(2);
+
+let x = M.examples["typical"].slice();
+let step = 10;
+const off = new Set();
+
+function run(xs, offSet = off) {
+  let h = new Array(D).fill(0);
+  const hs = [h.slice()];
+  for (let t = 0; t < N; t++) {
+    const nh = new Array(D);
+    for (let i = 0; i < D; i++) {
+      let a = M.w_hi[i] * xs[t];
+      for (let j = 0; j < D; j++) a += M.w_hh[i][j] * h[j];
+      nh[i] = (a > 0 && !offSet.has(i)) ? a : 0;
+    }
+    h = nh; hs.push(h.slice());
+  }
+  return hs;
+}
+function scoresOf(h) {
+  const s = M.w_oh.map(row => row.reduce((a, w, j) => a + w * h[j], 0));
+  const m = s.reduce((a, b) => a + b, 0) / N;
+  return s.map(v => v - m);
+}
+const argmax = a => a.reduce((bi, v, i) => v > a[bi] ? i : bi, 0);
+function ranks(xs) { const o = xs.map((v, i) => i).sort((a, b) => xs[b] - xs[a]); return { first: o[0], second: o[1], third: o[2] }; }
+function prefixStats(xs, t) {  // largest and second-largest so far before input t (floored at 0, as the network sees it)
+  const p = [0, 0].concat(xs.slice(0, t)).sort((a, b) => b - a);
+  return { m1: p[0], m2: p[1] };
+}
+
+function events(xs, hs) {
+  const out = [];
+  for (let t = 0; t < N; t++) {
+    const v = xs[t], { m1, m2 } = prefixStats(xs, t);
+    const n5 = t < N - 1 ? hs[t + 2][5] : null;
+    let kind, text;
+    if (v > m1) { kind = "max"; text = `${fmt(v)} is a new largest. Neuron 4 fires; the lowering neurons are wiped${t > 0 && m1 > 0 ? ", which turns the old largest's hidden clock into a vote for its position" : ""}.`; }
+    else if (v <= 0) { kind = "neg"; text = `${fmt(v)} is negative: it leaves almost no trace.`; }
+    else if (t === N - 1) { kind = "last"; text = `${fmt(v)} is the last input. It votes for the last position directly, through its dip in the lowering neurons.`; }
+    else if (n5 > 0) { kind = "vote"; text = `${fmt(v)} is ${m2 > 0 ? (v / m2).toFixed(2) + "× the second so far" : "the first positive below the largest"}. Neuron 5 fires next step (${n5.toFixed(1)}), so it keeps a lasting vote.`; }
+    else { kind = "quiet"; text = `${fmt(v)} is ${m2 > 0 ? (v / m2).toFixed(2) + "× the second so far" : "small"}. Neuron 5 stays off, so it is forgotten after one step.`; }
+    out.push({ t, v, m1, m2, n5, kind, text });
+  }
+  return out;
+}
+
+// ---------- input editor ----------
+const IN = document.getElementById('inputs');
+const inY = v => 115 - v * 33;  // value -3..3 -> y
+function drawInputs(r) {
+  clear(IN);
+  for (const g of [-3, -2, -1, 0, 1, 2, 3]) {
+    el('line', { x1: 40, x2: 510, y1: inY(g), y2: inY(g), stroke: g === 0 ? css('--axis') : css('--grid'), 'stroke-width': 1 }, IN);
+    el('text', { x: 32, y: inY(g) + 4, 'text-anchor': 'end' }, IN).textContent = g;
+  }
+  for (let i = 0; i < N; i++) {
+    const cx = 64 + i * 46, v = x[i];
+    const col = i === r.first ? css('--series-2') : i === r.second ? css('--series-3') : css('--neutral');
+    const y0 = inY(0), y1 = inY(v);
+    const read = i < step;
+    el('rect', { x: cx - 13, y: Math.min(y0, y1), width: 26, height: Math.max(Math.abs(y1 - y0), 1.5), rx: 4, fill: col, opacity: read ? 1 : 0.35 }, IN);
+    el('text', { x: cx, y: 228, 'text-anchor': 'middle', class: i === step - 1 ? 'label-strong' : '' }, IN).textContent = i;
+    el('text', { x: cx, y: v >= 0 ? y1 - 5 : y1 + 13, 'text-anchor': 'middle' }, IN).textContent = fmt(v);
+    const hit = el('rect', { x: cx - 23, y: 10, width: 46, height: 205, fill: 'transparent', style: 'cursor:ns-resize' }, IN);
+    addTip(hit, `Position ${i}: ${fmt(v)}. Drag to change.`);
+    hit.addEventListener('pointerdown', ev => { ev.preventDefault(); dragIndex = i; dragTo(ev); });
+  }
+}
+
+// dragging is tracked on the window, because each move redraws the bars
+let dragIndex = null;
+function dragTo(ev) {
+  const pt = IN.createSVGPoint(); pt.x = ev.clientX; pt.y = ev.clientY;
+  const p = pt.matrixTransform(IN.getScreenCTM().inverse());
+  x[dragIndex] = Math.max(-3, Math.min(3, Math.round(((115 - p.y) / 33) * 100) / 100));
+  render();
+}
+window.addEventListener('pointermove', ev => { if (dragIndex !== null) dragTo(ev); });
+window.addEventListener('pointerup', () => { dragIndex = null; });
+IN.style.touchAction = 'none';
+
+// ---------- scores ----------
+const SC = document.getElementById('scores');
+function drawScores(s, r, final) {
+  clear(SC);
+  const lim = Math.max(10, ...s.map(Math.abs));
+  const y = v => 100 - v / lim * 85;
+  el('line', { x1: 40, x2: 510, y1: y(0), y2: y(0), stroke: css('--axis') }, SC);
+  const best = argmax(s);
+  for (let i = 0; i < N; i++) {
+    const cx = 64 + i * 46, v = s[i];
+    const col = i === best ? css('--series-1') : css('--neutral');
+    el('rect', { x: cx - 13, y: Math.min(y(0), y(v)), width: 26, height: Math.max(Math.abs(y(v) - y(0)), 1.5), rx: 4, fill: col }, SC);
+    el('text', { x: cx, y: 214, 'text-anchor': 'middle', class: final && i === r.second ? 'label-strong' : '' }, SC).textContent = i;
+    const hit = el('rect', { x: cx - 23, y: 5, width: 46, height: 195, fill: 'transparent' }, SC);
+    addTip(hit, `Position ${i}: score ${v.toFixed(1)}${i === best ? " (highest)" : ""}`);
+  }
+  if (final) {
+    const cx = 64 + r.second * 46;
+    el('path', { d: `M${cx - 6},200 L${cx + 6},200 L${cx},192 Z`, fill: css('--series-3') }, SC);
+  }
+  el('text', { x: 40, y: 12 }, SC).textContent = `score (minus average); highest in blue`;
+}
+
+// ---------- clock ----------
+const CL = document.getElementById('clock');
+function proj(h) {
+  const v = M.clock_neurons.map((k, j) => h[k] - M.clock_mean[j]);
+  return M.clock_axes.map(ax => ax.reduce((a, w, j) => a + w * v[j], 0));
+}
+const lone = (() => { const xs = new Array(N).fill(0); xs[0] = 1; const hs = []; let h = new Array(D).fill(0);
+  for (let t = 0; t < 40; t++) { const nh = []; for (let i = 0; i < D; i++) { let a = (t === 0 ? M.w_hi[i] : 0); for (let j = 0; j < D; j++) a += M.w_hh[i][j] * h[j]; nh.push(Math.max(0, a)); } h = nh; hs.push(h); } return hs; })();
+function drawClock(hs) {
+  clear(CL);
+  const pts = hs.slice(1).map(proj), ref = lone.map(proj);
+  const all = pts.concat(ref).flat();
+  const lim = Math.max(5, ...all.map(Math.abs)) * 1.08;
+  const X = v => 260 + v / lim * 120, Y = v => 130 - v / lim * 120;
+  el('line', { x1: X(-lim), x2: X(lim), y1: Y(0), y2: Y(0), stroke: css('--grid') }, CL);
+  el('line', { x1: X(0), x2: X(0), y1: Y(-lim), y2: Y(lim), stroke: css('--grid') }, CL);
+  el('path', { d: 'M' + ref.map(p => `${X(p[0])},${Y(p[1])}`).join(' L'), fill: 'none', stroke: css('--axis'), 'stroke-width': 1.5 }, CL);
+  const shown = pts.slice(0, step);
+  if (shown.length > 1) el('path', { d: 'M' + shown.map(p => `${X(p[0])},${Y(p[1])}`).join(' L'), fill: 'none', stroke: css('--series-1'), 'stroke-width': 2 }, CL);
+  shown.forEach((p, i) => {
+    const c = el('circle', { cx: X(p[0]), cy: Y(p[1]), r: i === step - 1 ? 7 : 5, fill: css('--series-1'), stroke: css('--surface-1'), 'stroke-width': 2 }, CL);
+    addTip(c, `After input ${i} (${fmt(x[i])})`);
+    el('text', { x: X(p[0]) + 9, y: Y(p[1]) - 6 }, CL).textContent = i;
+  });
+}
+
+// ---------- heatmap ----------
+const HM = document.getElementById('heat');
+function seqColor(f) {
+  const stops = ['--seq-0', '--seq-1', '--seq-2', '--seq-3', '--seq-4', '--seq-5'].map(css);
+  if (f <= 0) return stops[0];
+  const k = Math.min(stops.length - 1, 1 + Math.floor(Math.min(f, 0.999) * (stops.length - 1)));
+  return stops[k];
+}
+function drawHeat(hs) {
+  clear(HM);
+  let row = 0; const cw = 70, rh = 21, x0 = 300, y0 = 22;
+  for (let t = 0; t < N; t++) el('text', { x: x0 + t * cw + cw / 2, y: 14, 'text-anchor': 'middle', class: t === step - 1 ? 'label-strong' : '' }, HM).textContent = `after ${t}`;
+  for (const [name, ids] of GROUPS) {
+    el('text', { x: 4, y: y0 + row * rh + 15 + (ids.length - 1) * rh / 2, class: 'label-strong' }, HM).textContent = name;
+    for (const k of ids) {
+      const y = y0 + row * rh;
+      const lab = el('text', { x: x0 - 10, y: y + 15, 'text-anchor': 'end', style: 'cursor:pointer', class: off.has(k) ? 'label-strong' : '' }, HM);
+      lab.textContent = off.has(k) ? `neuron ${k} (off)` : `neuron ${k}`;
+      lab.addEventListener('click', () => { off.has(k) ? off.delete(k) : off.add(k); render(); });
+      addTip(lab, off.has(k) ? 'Click to switch back on' : 'Click to switch off at every step');
+      for (let t = 0; t < N; t++) {
+        const v = hs[t + 1][k];
+        const c = el('rect', { x: x0 + t * cw + 1, y: y + 1, width: cw - 2, height: rh - 2, rx: 3, fill: seqColor(v / M.p99[k]), opacity: t < step ? 1 : 0.3 }, HM);
+        addTip(c, `Neuron ${k} after input ${t}: ${v.toFixed(2)}`);
+      }
+      row++;
+    }
+    row += 0.35;
+  }
+  HM.setAttribute('viewBox', `0 0 1100 ${y0 + row * rh + 6}`);
+  document.getElementById('kolist').textContent = off.size ? [...off].sort((a, b) => a - b).map(k => 'neuron ' + k).join(', ') : 'none';
+}
+
+// ---------- running max ----------
+const MX = document.getElementById('maxchart');
+function drawMax(hs) {
+  clear(MX);
+  const truth = [], n2 = [];
+  for (let t = 0; t < N; t++) { truth.push(Math.max(0, ...x.slice(0, t + 1))); n2.push(hs[t + 1][2] / 17); }
+  const lim = Math.max(1, ...truth, ...n2) * 1.1;
+  const X = t => 50 + t * 50, Y = v => 175 - v / lim * 160;
+  for (const g of [0, lim / 2, lim]) { el('line', { x1: 40, x2: 510, y1: Y(g), y2: Y(g), stroke: css('--grid') }, MX); el('text', { x: 34, y: Y(g) + 4, 'text-anchor': 'end' }, MX).textContent = g.toFixed(1); }
+  for (let t = 0; t < N; t++) el('text', { x: X(t), y: 194, 'text-anchor': 'middle' }, MX).textContent = t;
+  const line = (arr, col) => el('path', { d: 'M' + arr.slice(0, step).map((v, t) => `${X(t)},${Y(v)}`).join(' L'), fill: 'none', stroke: col, 'stroke-width': 2 }, MX);
+  line(truth, css('--neutral')); line(n2, css('--series-1'));
+  for (let t = 0; t < step; t++) {
+    const c = el('circle', { cx: X(t), cy: Y(n2[t]), r: 4, fill: css('--series-1'), stroke: css('--surface-1'), 'stroke-width': 2 }, MX);
+    addTip(c, `After input ${t}: largest so far ${fmt(truth[t])}, neuron 2 ÷ 17 = ${n2[t].toFixed(2)}, neuron 4 = ${hs[t + 1][4].toFixed(1)}`);
+  }
+}
+
+// ---------- neuron 5 gate ----------
+const GT = document.getElementById('gate');
+function drawGate(ev) {
+  clear(GT);
+  const X = t => 50 + t * 50, Y = r => 170 - (Math.min(r, 1.6) / 1.6) * 150;
+  for (const g of [0, 0.8, 1.0, 1.6]) {
+    el('line', { x1: 40, x2: 510, y1: Y(g), y2: Y(g), stroke: g === 0.8 ? css('--axis') : css('--grid'), 'stroke-width': 1 }, GT);
+    el('text', { x: 34, y: Y(g) + 4, 'text-anchor': 'end' }, GT).textContent = g === 1.6 ? 'new max' : g.toFixed(1);
+  }
+  el('text', { x: 512, y: Y(0.8) - 4, 'text-anchor': 'end' }, GT).textContent = 'about where neuron 5 switches';
+  for (let t = 0; t < N; t++) el('text', { x: X(t), y: 194, 'text-anchor': 'middle' }, GT).textContent = t;
+  for (const e of ev) {
+    if (e.t >= step || e.v <= 0) continue;
+    const r = e.kind === 'max' ? 1.6 : (e.m2 > 0 ? e.v / e.m2 : 1.6);
+    const filled = e.kind === 'vote' || e.kind === 'max';
+    const c = el('circle', { cx: X(e.t), cy: Y(r), r: 6, fill: filled ? css('--series-1') : css('--surface-1'), stroke: css('--series-1'), 'stroke-width': 2 }, GT);
+    addTip(c, e.text);
+  }
+}
+
+// ---------- sweep ----------
+const SW = document.getElementById('sweep');
+const sp = document.getElementById('sweeppos');
+for (let i = 0; i < N; i++) { const o = document.createElement('option'); o.value = i; o.textContent = i; sp.appendChild(o); }
+sp.value = 1;
+sp.addEventListener('change', render);
+function drawSweep() {
+  clear(SW);
+  const k = +sp.value, vals = [], model = [], truth = [];
+  for (let v = -3; v <= 3.0001; v += 0.01) {
+    const xs = x.slice(); xs[k] = v;
+    vals.push(v); model.push(argmax(scoresOf(run(xs)[N]))); truth.push(ranks(xs).second);
+  }
+  const X = v => 60 + (v + 3) / 6 * 1020, Y = s => 200 - s * 19;
+  for (let s = 0; s < N; s++) { el('line', { x1: 60, x2: 1080, y1: Y(s), y2: Y(s), stroke: css('--grid') }, SW); el('text', { x: 52, y: Y(s) + 4, 'text-anchor': 'end' }, SW).textContent = s; }
+  for (const g of [-3, -2, -1, 0, 1, 2, 3]) el('text', { x: X(g), y: 222, 'text-anchor': 'middle' }, SW).textContent = g;
+  el('text', { x: 4, y: 12 }, SW).textContent = 'answer (position)';
+  const path = (arr, col, w) => el('path', { d: 'M' + arr.map((s, i) => `${X(vals[i])},${Y(s)}`).join(' L'), fill: 'none', stroke: col, 'stroke-width': w, 'stroke-linejoin': 'round' }, SW);
+  path(truth, css('--neutral'), 5); path(model, css('--series-1'), 2);
+  el('line', { x1: X(x[k]), x2: X(x[k]), y1: 10, y2: 205, stroke: css('--text-muted'), 'stroke-width': 1 }, SW);
+  el('text', { x: X(x[k]) + 4, y: 20 }, SW).textContent = `now ${fmt(x[k])}`;
+  const hit = el('rect', { x: 60, y: 10, width: 1020, height: 200, fill: 'transparent' }, SW);
+  hit.addEventListener('mousemove', ev => {
+    const pt = SW.createSVGPoint(); pt.x = ev.clientX; pt.y = ev.clientY;
+    const p = pt.matrixTransform(SW.getScreenCTM().inverse());
+    const i = Math.max(0, Math.min(vals.length - 1, Math.round((p.x - 60) / 1020 * (vals.length - 1))));
+    tip.textContent = `x[${k}] = ${vals[i].toFixed(2)}: network says ${model[i]}, right answer ${truth[i]}`;
+    tip.style.opacity = 1; tip.style.left = (ev.clientX + 14) + 'px'; tip.style.top = (ev.clientY + 12) + 'px';
+  });
+  hit.addEventListener('mouseleave', () => tip.style.opacity = 0);
+  hit.addEventListener('click', ev => {
+    const pt = SW.createSVGPoint(); pt.x = ev.clientX; pt.y = ev.clientY;
+    const p = pt.matrixTransform(SW.getScreenCTM().inverse());
+    x[k] = Math.round(((p.x - 60) / 1020 * 6 - 3) * 100) / 100; render();
+  });
+  const legend = el('g', {}, SW);
+  el('rect', { x: 900, y: 2, width: 10, height: 10, rx: 3, fill: css('--series-1') }, legend); el('text', { x: 915, y: 11 }, legend).textContent = 'network';
+  el('rect', { x: 980, y: 2, width: 10, height: 10, rx: 3, fill: css('--neutral') }, legend); el('text', { x: 995, y: 11 }, legend).textContent = 'right answer';
+}
+
+// ---------- table ----------
+function drawTable(hs, s) {
+  let h = '<table class="data"><tr><th>after input</th><th>x</th>' + [...Array(D).keys()].map(k => `<th>n${k}</th>`).join('') + '</tr>';
+  for (let t = 0; t < N; t++) h += `<tr><td>${t}</td><td>${fmt(x[t])}</td>` + hs[t + 1].map(v => `<td>${v.toFixed(1)}</td>`).join('') + '</tr>';
+  h += '</table><p class="muted">Final scores: ' + s.map((v, i) => `${i}: ${v.toFixed(1)}`).join(', ') + '</p>';
+  document.getElementById('table').innerHTML = h;
+}
+
+// ---------- main ----------
+function render() {
+  const hs = run(x), r = ranks(x), ev = events(x, hs);
+  document.getElementById('step').value = step;
+  document.getElementById('steplabel').textContent = step === 0 ? 'before any input' : `after input ${step - 1}${step === N ? ' (final)' : ''}`;
+  drawInputs(r);
+  const s = scoresOf(hs[step]);
+  drawScores(s, r, step === N);
+  const fin = scoresOf(hs[N]), pred = argmax(fin);
+  document.getElementById('answer').innerHTML = step === N
+    ? (pred === r.second ? `Answer: position <b>${pred}</b>, correct.` : `Answer: position <b>${pred}</b>, wrong (the second-largest is at ${r.second}).`)
+    : `<span class="muted">Step to the end to see the real answer.</span>`;
+  const ol = document.getElementById('events'); ol.innerHTML = '';
+  ev.forEach(e => { if (e.t < step) { const li = document.createElement('li'); li.textContent = e.text; if (e.t === step - 1) li.className = 'now'; ol.appendChild(li); } });
+  if (step === 0) ol.innerHTML = '<li class="muted">Nothing read yet.</li>';
+  drawClock(hs); drawHeat(hs); drawMax(hs); drawGate(ev); drawSweep(); drawTable(hs, fin);
+}
+
+const pre = document.getElementById('presets');
+for (const name in M.examples) {
+  const b = document.createElement('button'); b.textContent = name;
+  b.addEventListener('click', () => { x = M.examples[name].slice(); step = N; render(); });
+  pre.appendChild(b);
+}
+const two = document.createElement('button'); two.textContent = 'two numbers only';
+two.addEventListener('click', () => { x = new Array(N).fill(0); x[2] = 1.5; x[6] = 1.0; step = N; render(); }); pre.appendChild(two);
+document.getElementById('rand').addEventListener('click', () => {
+  x = x.map(() => { let u = 0, v = 0; while (!u) u = Math.random(); v = Math.random(); return Math.round(Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v) * 100) / 100; });
+  step = N; render();
+});
+document.getElementById('step').addEventListener('input', e => { step = +e.target.value; render(); });
+document.getElementById('prev').addEventListener('click', () => { step = Math.max(0, step - 1); render(); });
+document.getElementById('next').addEventListener('click', () => { step = Math.min(N, step + 1); render(); });
+document.getElementById('koclear').addEventListener('click', () => { off.clear(); render(); });
+let timer = null;
+document.getElementById('play').addEventListener('click', e => {
+  if (timer) { clearInterval(timer); timer = null; e.target.textContent = 'Play'; return; }
+  step = 0; render(); e.target.textContent = 'Stop';
+  timer = setInterval(() => { step++; render(); if (step >= N) { clearInterval(timer); timer = null; e.target.textContent = 'Play'; } }, 900);
+});
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', render);
+render();
+</script>
+</body>
+</html>

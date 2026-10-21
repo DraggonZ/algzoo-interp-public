@@ -1,0 +1,16 @@
+random conditions: truth mean P(right) 0.9513
+  oracle       mean 0.9316  bias -0.0197  mean abs error 0.0230  corr 0.986
+  oracle|4th   mean 0.9417  bias -0.0096  mean abs error 0.0103  corr 0.997
+  jac|4th      mean 0.9398  bias -0.0115  mean abs error 0.0150  corr 0.988
+  mean|4th     mean 0.9510  bias -0.0003  mean abs error 0.0109  corr 0.980
+  most dangerous competitor is the largest: 0.04 of conditions; median skew of that lead +0.02; oracle bias there +0.0055
+  most dangerous competitor is the third: 0.11 of conditions; median skew of that lead +0.05; oracle bias there -0.0149
+  most dangerous competitor is a smaller number: 0.86 of conditions; median skew of that lead +0.70; oracle bias there -0.0214
+near-tie conditions: truth mean P(right) 0.8762
+  oracle       mean 0.8466  bias -0.0296  mean abs error 0.0362  corr 0.989
+  oracle|4th   mean 0.8620  bias -0.0142  mean abs error 0.0162  corr 0.998
+  jac|4th      mean 0.8629  bias -0.0133  mean abs error 0.0260  corr 0.988
+  mean|4th     mean 0.8819  bias +0.0057  mean abs error 0.0255  corr 0.980
+  most dangerous competitor is the largest: 0.07 of conditions; median skew of that lead +0.04; oracle bias there -0.0094
+  most dangerous competitor is the third: 0.27 of conditions; median skew of that lead +0.08; oracle bias there -0.0177
+  most dangerous competitor is a smaller number: 0.66 of conditions; median skew of that lead +0.68; oracle bias there -0.0365

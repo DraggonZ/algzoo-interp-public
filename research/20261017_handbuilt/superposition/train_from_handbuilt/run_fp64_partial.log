@@ -1,0 +1,4 @@
+hand-built v19 as built            accuracy 94.23% | near ties lost to the third  7.2% | lead maps covering half     46 | tree's share of possible gain  90%
+hand-built v19 rescaled (same function) accuracy 94.24% | near ties lost to the third  7.2% | lead maps covering half     46 | tree's share of possible gain  91%
+hand-built v19, lr 0.0001, 100 steps accuracy 52.26% | near ties lost to the third 30.2% | lead maps covering half  4,386 | tree's share of possible gain  60%
+hand-built v19, lr 0.0001, 1000 steps accuracy 71.22% | near ties lost to the third 37.5% | lead maps covering half  3,912 | tree's share of possible gain  64%

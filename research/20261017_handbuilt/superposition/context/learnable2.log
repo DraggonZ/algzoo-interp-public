@@ -1,0 +1,7 @@
+   1 trees x   2 leaves (about      2 numbers): held-out 79.3%
+  10 trees x   4 leaves (about     40 numbers): held-out 79.3%
+  10 trees x   8 leaves (about     80 numbers): held-out 79.3%
+  50 trees x   8 leaves (about    400 numbers): held-out 80.4%
+ 100 trees x  16 leaves (about   1600 numbers): held-out 82.2%
+ 400 trees x  63 leaves (about  25200 numbers): held-out 86.1%
+ 800 trees x 255 leaves (about 204000 numbers): held-out 86.4%

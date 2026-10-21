@@ -1,0 +1,6 @@
+M8,3: exact 0.99943426, regions 288, multiply-adds 2.38e+05 (adjacency counted, qhull not) = 992 samples
+M16,3: exact 0.99950432, regions 926, multiply-adds 7.85e+05 (adjacency counted, qhull not) = 909 samples
+M32,3: exact 0.99956272, regions 3174, multiply-adds 3.45e+06 (adjacency counted, qhull not) = 1057 samples
+M8,4: exact 0.98745909, regions 4078, multiply-adds 3.94e+07 (adjacency counted, qhull not) = 123176 samples
+M16,4: exact 0.99830662, regions 33322, multiply-adds 1.63e+08 (adjacency counted, qhull not) = 141588 samples
+M32,4: exact 0.99879996, regions 224749, multiply-adds 1.03e+09 (adjacency counted, qhull not) = 237792 samples

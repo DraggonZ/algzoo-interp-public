@@ -1,0 +1,3 @@
+ARC: estimate 94.408 (true 95.317; missing middle), 2-3 4.444 1-2 1.148;  var per sample 0.04430 (Bernoulli 0.04463); within-arrangement 0.04239; pieces 1.42+1.31; cost 4.01 lists; efficiency vs sampling 0.3x, stratified by arrangement 0.3x
+114: estimate 88.386 (true 89.790; missing middle), 2-3 7.523 1-2 4.091;  var per sample 0.06604 (Bernoulli 0.09167); within-arrangement 0.05095; pieces 1.49+1.38; cost 4.26 lists; efficiency vs sampling 0.3x, stratified by arrangement 0.4x
+203: estimate 87.577 (true 89.878; missing middle), 2-3 8.192 1-2 4.231;  var per sample 0.07859 (Bernoulli 0.09097); within-arrangement 0.07097; pieces 1.46+1.31; cost 4.02 lists; efficiency vs sampling 0.3x, stratified by arrangement 0.3x

@@ -1,0 +1,31 @@
+5,882,259 clear-gap lists, wrong 0.14%
+S1: largest at step 9, second before the third (the second was the record), error by the second's position:
+   second at 0: wrong  3.82% (n 65,152); third named 3.43%
+   second at 1: wrong  0.08% (n 57,037); third named 0.05%
+   second at 2: wrong  0.12% (n 49,025); third named 0.03%
+   second at 3: wrong  0.07% (n 40,964); third named 0.06%
+   second at 4: wrong  0.05% (n 32,689); third named 0.05%
+   second at 5: wrong  0.11% (n 24,599); third named 0.11%
+   second at 6: wrong  0.19% (n 16,045); third named 0.03%
+   second at 7: wrong  0.21% (n 8,160); third named 0.16%
+   for comparison, largest not at step 9: wrong 0.08%
+S2: error by the third's offset from the second (third position - second position):
+   offset -3: wrong  0.01%, third named 0.00% (n 458,451)
+   offset -2: wrong  0.19%, third named 0.19% (n 524,060)
+   offset -1: wrong  0.42%, third named 0.41% (n 586,880)
+   offset +1: wrong  0.04%, third named 0.03% (n 588,113)
+   offset +2: wrong  0.10%, third named 0.09% (n 523,789)
+   offset +3: wrong  0.01%, third named 0.00% (n 458,532)
+S2 split, third right before the second (offset -1), by where the largest is:
+   largest before both                     : wrong  0.31% (n 293,474)
+   largest after both (both were records)  : wrong  0.53% (n 293,406)
+S1 split, second at position 0, by the largest's position:
+   largest at 1: wrong  0.02% (n 65,235)
+   largest at 2: wrong  0.01% (n 65,151)
+   largest at 3: wrong  0.00% (n 64,704)
+   largest at 4: wrong  0.00% (n 65,759)
+   largest at 5: wrong  0.00% (n 65,360)
+   largest at 6: wrong  0.06% (n 64,966)
+   largest at 7: wrong  1.23% (n 65,656)
+   largest at 8: wrong  0.03% (n 65,761)
+   largest at 9: wrong  3.82% (n 65,152)

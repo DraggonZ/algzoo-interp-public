@@ -1,0 +1,6 @@
+w4b hiding slots: c1 c6 c7 Q     names the largest  11.1%
+wave only                        names the largest  11.2%
+wave + c7                        names the largest   6.2%
+wave + c7 + c1 + c6              names the largest   6.2%
+wave + c7 + c1 + c6 + Q          names the largest   0.0%
+wave + c1 + c6 + Q               names the largest   6.5%

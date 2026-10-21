@@ -1,0 +1,12 @@
+leak_check_chain: rule delay_line.py, chained, 10 rows, order ['in10', 'out1', 'out2', 'out3', 'out4', 'out5', 'out6', 'out7', 'out8', 'out9']
+  perturb row in10: largest sensitivity of rows up to it 0.0000
+  perturb row out1: largest sensitivity of rows up to it 0.0000
+  perturb row out2: largest sensitivity of rows up to it 0.0000
+  perturb row out3: largest sensitivity of rows up to it 0.0000
+  perturb row out4: largest sensitivity of rows up to it 0.0000
+  perturb row out5: largest sensitivity of rows up to it 0.0000
+  perturb row out6: largest sensitivity of rows up to it 0.0000
+  perturb row out7: largest sensitivity of rows up to it 0.0000
+  perturb row out8: largest sensitivity of rows up to it 0.0000
+  perturb row out9: largest sensitivity of rows up to it 0.0000
+CHAIN 0.0000 PASS

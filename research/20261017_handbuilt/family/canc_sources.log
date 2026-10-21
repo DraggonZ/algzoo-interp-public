@@ -1,0 +1,8 @@
+network                               acc ARC mistakes: all     L     T | near ties, third wins: all | by x_L/x_S <1.1 1.1-1.25 1.25-1.5 1.5-2 2-3 >3 | by order LST LTS SLT TLS STL TSL
+real (all sources)                 95.23%            100.0% 100.0% 100.0% |  20.9% |   18   17   19   21   26   34 |   26   21   25   22   14   17
+drop gates (zero)                  82.66%             68.3% 71.6% 69.9% |  25.9% |   18   22   25   27   32   37 |   54   13   43   14   13   19
+drop gates (average)               80.43%             68.3% 74.2% 67.5% |  24.4% |   16   20   23   27   31   36 |   49   12   41   15   12   17
+drop memory (zero)                 57.77%             39.5% 53.0% 33.4% |  26.3% |   27   24   25   27   29   28 |   13    9   21   39   51   25
+drop memory (average)              73.55%             40.0% 40.0% 44.3% |  31.8% |   29   30   32   33   34   33 |   32   34   21   43   36   25
+x, store, detector, self only (avg) 64.99%             38.8% 39.0% 42.6% |  26.4% |   25   24   25   28   30   31 |   32   19   22   34   33   20
+x, store, self only (avg)          22.35%             19.9% 50.3% 10.3% |  12.6% |   24   17   12    9    6    5 |    3    4    5   27   26   12

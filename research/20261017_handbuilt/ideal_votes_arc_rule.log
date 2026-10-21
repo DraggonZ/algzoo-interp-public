@@ -1,0 +1,17 @@
+kernel                            c=0.8    c=0.95   c=1.0
+delta                             0.9904  0.9904  0.9904
+ARC-like (nbr .4, then -.25..)    0.8755  0.8927  0.9005
+nbr .4 rest 0                     0.9126  0.9253  0.9294
+nbr .6 rest 0                     0.8046  0.8256  0.8329
+one clock 36deg (cos)             0.4371  0.4559  0.4626
+two freqs 36,72                   0.6797  0.7073  0.7174
+mean number of nonzero lasting votes at the end, c=0.8: 2.97  c=1.0: 2.78
+
+with shrinkage rho^(later bigger numbers), c = 0.8
+kernel                            rho=1    rho=0.75  rho=0.5
+delta                             0.9904  0.9198  0.8882
+ARC-like (nbr .4, then -.25..)    0.8755  0.9040  0.8755
+nbr .4 rest 0                     0.9126  0.9119  0.8801
+nbr .6 rest 0                     0.8046  0.8530  0.8415
+one clock 36deg (cos)             0.4371  0.4998  0.6063
+two freqs 36,72                   0.6797  0.7698  0.8045

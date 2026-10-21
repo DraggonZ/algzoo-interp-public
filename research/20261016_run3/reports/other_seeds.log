@@ -1,0 +1,24 @@
+
+example: lone input of +1, top slot and its lead over the next, by age 0..9:
+   a0:4(+0)  a1:6(+1)  a2:9(+1)  a3:8(+1)  a4:0(+0)  a5:9(+1)  a6:9(+1)  a7:9(+1)  a8:9(+1)  a9:9(+1)
+   two-spike right, largest first, by gap 1..9: [1. 1. 1. 1. 1. 1. 1. 1. 1.]
+   two-spike right, second first, by gap 1..9:  [1. 1. 1. 1. 1. 1. 1. 1. 1.]
+   with every other input at -0.5 instead of 0: right 90/90
+
+0: lone input of +1, top slot and its lead over the next, by age 0..9:
+   a0:6(+4)  a1:5(+7)  a2:4(+10)  a3:3(+7)  a4:2(+5)  a5:1(+20)  a6:0(+20)  a7:1(+0)  a8:0(+1)  a9:8(+0)
+   two-spike right, largest first, by gap 1..9: [0.67 0.75 0.62 0.61 0.87 0.83 0.89 1.   1.  ]
+   two-spike right, second first, by gap 1..9:  [1.   0.79 1.   1.   1.   1.   1.   1.   0.67]
+   with every other input at -0.5 instead of 0: right 90/90
+
+1: lone input of +1, top slot and its lead over the next, by age 0..9:
+   a0:2(+2)  a1:9(+1)  a2:5(+1)  a3:4(+1)  a4:8(+1)  a5:7(+2)  a6:4(+0)  a7:7(+0)  a8:2(+0)  a9:0(+0)
+   two-spike right, largest first, by gap 1..9: [0.89 1.   1.   0.94 1.   1.   1.   1.   1.  ]
+   two-spike right, second first, by gap 1..9:  [0.93 1.   0.62 0.44 0.4  0.5  0.56 0.67 1.  ]
+   with every other input at -0.5 instead of 0: right 90/90
+
+4: lone input of +1, top slot and its lead over the next, by age 0..9:
+   a0:1(+3)  a1:0(+2)  a2:1(+1)  a3:0(+1)  a4:4(+3)  a5:3(+2)  a6:2(+1)  a7:1(+4)  a8:0(+3)  a9:0(+1)
+   two-spike right, largest first, by gap 1..9: [0.85 0.96 1.   0.94 1.   1.   1.   1.   1.  ]
+   two-spike right, second first, by gap 1..9:  [0.96 1.   1.   1.   0.93 1.   1.   1.   1.  ]
+   with every other input at -0.5 instead of 0: right 90/90

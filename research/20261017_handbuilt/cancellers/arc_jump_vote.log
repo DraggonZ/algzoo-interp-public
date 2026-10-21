@@ -1,0 +1,7 @@
+42475 lists (records at a < r < r', gaps >= 2, r' <= 8)
+d score_r / d x_r       mean   46.2  median   49.1
+d score_r / d P_prev    mean  -17.9  median  -17.2   ratio of means -0.39
+d score_r / d kept number between them (control, 16546 lists)  mean   -7.1
+  gap r - a in [2,3): ratio -0.34  (21196 lists)
+  gap r - a in [3,5): ratio -0.47  (17968 lists)
+  gap r - a in [5,9): ratio -0.21  (3311 lists)

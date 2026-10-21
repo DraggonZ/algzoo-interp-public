@@ -1,0 +1,3 @@
+trained           : median lead 8.17; median sum of |pushes| on the lead 387.1; condition number (median pushes / lead per list) 46
+v21               : median lead 1.78; median sum of |pushes| on the lead 70.5; condition number (median pushes / lead per list) 40
+v18 trained scale : median lead 0.86; median sum of |pushes| on the lead 311.2; condition number (median pushes / lead per list) 310

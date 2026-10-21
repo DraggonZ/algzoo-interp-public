@@ -1,0 +1,10 @@
+ratio by age: 1:17.69 2:17.59 3:18.48 4:18.16 5:16.93 6:15.56 7:14.76 8:14.88 9:15.87
+residual spread (robust SD, units of L): 1:0.40 2:0.46 3:0.29 4:0.58 5:1.28 6:2.00 7:2.38 8:2.19 9:1.67
+ARC                      vote per unit      51.2 | per smaller number, median 0.0061, 90th pct 0.062 | summed effect RMS 0.371 votes
+trained 209              vote per unit      36.7 | per smaller number, median 0.0061, 90th pct 0.034 | summed effect RMS 0.162 votes
+trained 111              vote per unit      40.3 | per smaller number, median 0.0069, 90th pct 0.061 | summed effect RMS 1.072 votes
+v19 traces eta 0.0       vote per unit      0.25 | per smaller number, median 0.0000, 90th pct 0.000 | summed effect RMS 0.085 votes
+v19 traces eta 0.003     vote per unit      0.25 | per smaller number, median 0.0004, 90th pct 0.004 | summed effect RMS 0.085 votes
+v19 traces eta 0.01      vote per unit      0.25 | per smaller number, median 0.0004, 90th pct 0.012 | summed effect RMS 0.086 votes
+v19 traces eta 0.03      vote per unit      0.25 | per smaller number, median 0.0004, 90th pct 0.036 | summed effect RMS 0.097 votes
+v19 traces eta 0.1       vote per unit      0.25 | per smaller number, median 0.0004, 90th pct 0.121 | summed effect RMS 0.175 votes

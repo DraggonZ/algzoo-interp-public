@@ -1,0 +1,6 @@
+trained network on these lists: 0.9536
+rung 1:
+   idealized network's own accuracy 0.8454; (A) first-order correction 0.9058; (B) gaps as noise 0.7994; truth 0.9536
+rung 2:
+   hiding block: kept eigenvalues [0.69+0.634j 0.69-0.634j], dropped [0.041+0.013j 0.041-0.013j]
+   idealized network's own accuracy 0.8024; (A) first-order correction 0.8868; (B) gaps as noise 0.2473; truth 0.9536

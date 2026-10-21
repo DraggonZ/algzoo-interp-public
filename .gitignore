@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+.venv/
+# downloaded models and generated outputs (tools/download_models.py fills data/models/)
+data/
+*.npz
+*.npy
+*.pth
+*.png
+
+# keep our own small trained networks and saved tensors, and the paper figures
+!research/**/*.pth
+!research/**/figures/*.png

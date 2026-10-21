@@ -1,0 +1,19 @@
+twin with clock gain 10000, flag gain 10000, detector gain 1000
+twin accuracy 0.960
+exact rules                             : acc 0.960 agree 0.992 KL 0.000
+clock angle 46 deg, not 45              : acc 0.730 agree 0.758 KL 0.185
+clock angle 45.5 deg                    : acc 0.759 agree 0.788 KL 0.055
+gate cutoff 0.765, not 0.75             : acc 0.933 agree 0.953 KL 0.749
+store gain 2% off                       : acc 0.583 agree 0.595 KL 10.086
+clock angle 46 deg, not 45 + noise 1e-09: acc 0.730 agree 0.757 KL 0.186
+clock angle 46 deg, not 45 + noise 1e-07: acc 0.689 agree 0.716 KL 0.476
+clock angle 46 deg, not 45 + noise 1e-05: acc 0.626 agree 0.641 KL 98.855
+clock angle 45.5 deg + noise 1e-09      : acc 0.758 agree 0.787 KL 0.055
+clock angle 45.5 deg + noise 1e-07      : acc 0.706 agree 0.734 KL 0.341
+clock angle 45.5 deg + noise 1e-05      : acc 0.631 agree 0.646 KL 98.042
+gate cutoff 0.765, not 0.75 + noise 1e-09: acc 0.934 agree 0.952 KL 0.748
+gate cutoff 0.765, not 0.75 + noise 1e-07: acc 0.920 agree 0.939 KL 0.966
+gate cutoff 0.765, not 0.75 + noise 1e-05: acc 0.663 agree 0.674 KL 95.557
+store gain 2% off + noise 1e-09         : acc 0.583 agree 0.595 KL 10.086
+store gain 2% off + noise 1e-07         : acc 0.570 agree 0.581 KL 10.297
+store gain 2% off + noise 1e-05         : acc 0.509 agree 0.517 KL 105.973

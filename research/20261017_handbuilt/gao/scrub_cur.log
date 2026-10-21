@@ -1,0 +1,4 @@
+memory      + cur               : KL 0.032 acc 0.948 agree 0.974
+memory      + cur+prev          : KL 0.027 acc 0.949 agree 0.977
+cancellers  + asmemory+cur      : KL 0.022 acc 0.950 agree 0.979
+cancellers  + asmemory+cur+prev : KL 0.012 acc 0.952 agree 0.985

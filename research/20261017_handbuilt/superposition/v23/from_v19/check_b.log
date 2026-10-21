@@ -1,0 +1,7 @@
+P5a ring=False: max |difference| positions 0-8 1.06e+00, position 9 0.00e+00
+P5a ring=True: max |difference| positions 0-8 1.06e+00, position 9 0.00e+00
+v19 94.20%
+gate route only                                  94.20%
+half direct (default)                            94.65%
+half direct, loop gain 0.3                       83.62%
+half direct, loop gain 0.3, forward-only hiding  67.06%

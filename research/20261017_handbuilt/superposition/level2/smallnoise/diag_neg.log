@@ -1,0 +1,21 @@
+net 114, third < 0: truth 0.8526, wrong naming largest/third/another 0.0987/0.0330/0.0158
+  Jacobian, 3 leads            bias +0.0003 mean abs error 0.0153 | wrong 0.0980/0.0384/0.0108
+  Jacobian, 9 leads (frozen)   bias -0.0680 mean abs error 0.0713 | wrong 0.0830/0.0299/0.1024
+  axis, 3 leads                bias +0.0037 mean abs error 0.0101 | wrong 0.0992/0.0352/0.0093
+  axis, 9 leads                bias -0.0363 mean abs error 0.0377 | wrong 0.0895/0.0291/0.0652
+  axis, 3 leads + 1-D others, Qa=3 bias -0.0122 mean abs error 0.0156 | wrong 0.0992/0.0352/0.0160
+  axis, 3 leads + 1-D others, Qa=6 bias -0.0148 mean abs error 0.0171 | wrong 0.1004/0.0355/0.0168
+net 207, third < 0: truth 0.8445, wrong naming largest/third/another 0.0826/0.0500/0.0229
+  Jacobian, 3 leads            bias +0.0102 mean abs error 0.0197 | wrong 0.0853/0.0506/0.0093
+  Jacobian, 9 leads (frozen)   bias -0.0317 mean abs error 0.0379 | wrong 0.0764/0.0445/0.0663
+  axis, 3 leads                bias +0.0112 mean abs error 0.0164 | wrong 0.0855/0.0497/0.0091
+  axis, 9 leads                bias -0.0223 mean abs error 0.0248 | wrong 0.0784/0.0444/0.0550
+  axis, 3 leads + 1-D others, Qa=3 bias -0.0093 mean abs error 0.0150 | wrong 0.0855/0.0497/0.0205
+  axis, 3 leads + 1-D others, Qa=6 bias -0.0123 mean abs error 0.0165 | wrong 0.0858/0.0499/0.0226
+net ARC, third < 0: truth 0.8094, wrong naming largest/third/another 0.0456/0.0228/0.1222
+  Jacobian, 3 leads            bias +0.0386 mean abs error 0.0410 | wrong 0.0722/0.0458/0.0339
+  Jacobian, 9 leads (frozen)   bias -0.0088 mean abs error 0.0132 | wrong 0.0443/0.0236/0.1315
+  axis, 3 leads                bias +0.0410 mean abs error 0.0413 | wrong 0.0713/0.0447/0.0336
+  axis, 9 leads                bias -0.0050 mean abs error 0.0076 | wrong 0.0439/0.0225/0.1291
+  axis, 3 leads + 1-D others, Qa=3 bias -0.0035 mean abs error 0.0055 | wrong 0.0713/0.0447/0.0445
+  axis, 3 leads + 1-D others, Qa=6 bias -0.0041 mean abs error 0.0059 | wrong 0.0709/0.0447/0.0451

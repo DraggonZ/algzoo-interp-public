@@ -1,0 +1,6 @@
+neuron 2: coefficients largest 16.64, input -0.17, second 1.23; leftover / largest by age:
+   1: +0.671  2: +0.352  3: +1.200  4: +0.757  5: -0.539  6: -1.961  7: -2.809  8: -2.647  9: -1.578
+neuron 4: coefficients largest -0.01, input 0.02, second 0.03; leftover / largest by age:
+   1: +0.000  2: -0.002  3: -0.003  4: +0.001  5: +0.015  6: +0.029  7: +0.028  8: +0.010  9: -0.004
+neuron 5: coefficients largest 4.40, input -0.01, second -2.35; leftover / largest by age:
+   1: +7.708  2: -2.036  3: -1.772  4: -2.210  5: -2.188  6: -1.896  7: -1.741  8: -1.719  9: -1.744

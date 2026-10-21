@@ -1,0 +1,50 @@
+
+=== v21: roles = v21's 28 neurons; 26 with a non-zero part after removing shared quantities; 7 single neurons (S, D, Zc, Z, G, F, QF); subspaces: clock 45 (C) (3), clock 90 (E) (3), reveal 45 (QC) (3), reveal 90 (QE) (3), memory (9)
+dictionary            | unexpl. | per neuron: mean best, >0.9 all, >0.9 single, raw >0.9 | subspaces, smallest canon. corr. with {own size} latents (all latents) | spliced last / every step; noise-matched last / every
+own neurons           |         | 1.00, 26/26, 5/5, 28/28 | clock 45 (C) 1.00 (1.00), clock 90 (E) 1.00 (1.00), reveal 45 (QC) 1.00 (1.00), reveal 90 (QE) 1.00 (1.00), memory 1.00 (1.00)  [28 live]
+random rotation       |         | 0.74,  0/26, 0/5,  7/28 | clock 45 (C) 0.74 (1.00), clock 90 (E) 0.76 (1.00), reveal 45 (QC) 0.01 (1.00), reveal 90 (QE) 0.09 (1.00), memory 0.17 (1.00)  [28 live]
+principal components  |         | 0.75,  2/26, 1/5,  1/28 | clock 45 (C) 0.61 (1.00), clock 90 (E) 0.63 (1.00), reveal 45 (QC) 0.66 (1.00), reveal 90 (QE) 0.72 (1.00), memory 0.42 (1.00)  [28 live]
+SAE 1x k2             |   3.85% | 0.71,  8/26, 2/5, 10/28 | clock 45 (C) 0.35 (0.97), clock 90 (E) 0.54 (0.98), reveal 45 (QC) 0.15 (0.26), reveal 90 (QE) 0.14 (0.28), memory 0.16 (0.49) |  15.7 /   9.9;  32.0 /  16.7  [26 live]
+SAE 1x k4             |   1.75% | 0.74,  8/26, 2/5, 10/28 | clock 45 (C) 0.35 (0.98), clock 90 (E) 0.60 (0.99), reveal 45 (QC) 0.26 (0.35), reveal 90 (QE) 0.11 (0.29), memory 0.34 (0.53) |  26.0 /  10.4;  36.5 /  18.3  [27 live]
+   per neuron best (shared removed): Zc=1.00 Z=0.64 G=0.46 C0=0.62 C1=0.65 C2=0.51 E0=0.65 E1=0.59 E2=0.61 F=0.54 QC0=0.99 QC1=0.99 QC2=0.99 QE0=0.99 QE1=0.99 QE2=0.99 QF=0.99 Y0=0.74 Y1=0.66 Y2=0.69 Y3=0.76 Y4=0.60 Y5=0.57 Y6=0.54 Y7=0.58 Y8=0.81
+SAE 1x k8             |   0.56% | 0.77,  8/26, 2/5, 10/28 | clock 45 (C) 0.49 (1.00), clock 90 (E) 0.71 (1.00), reveal 45 (QC) 0.27 (0.44), reveal 90 (QE) 0.17 (0.47), memory 0.32 (0.88) |  40.8 /  10.7;  42.5 /  19.6  [28 live]
+SAE 2x k2             |   3.49% | 0.70,  8/26, 2/5, 10/28 | clock 45 (C) 0.36 (0.99), clock 90 (E) 0.54 (0.99), reveal 45 (QC) 0.16 (0.36), reveal 90 (QE) 0.09 (0.29), memory 0.08 (0.55) |  17.9 /  10.4;  32.5 /  16.7  [44 live]
+SAE 2x k4             |   1.00% | 0.74,  8/26, 2/5, 10/28 | clock 45 (C) 0.37 (1.00), clock 90 (E) 0.55 (1.00), reveal 45 (QC) 0.23 (0.35), reveal 90 (QE) 0.18 (0.30), memory 0.30 (0.77) |  46.5 /  10.9;  39.5 /  19.2  [46 live]
+SAE 2x k8             |   0.23% | 0.78,  8/26, 2/5, 10/28 | clock 45 (C) 0.73 (1.00), clock 90 (E) 0.61 (1.00), reveal 45 (QC) 0.40 (0.56), reveal 90 (QE) 0.28 (0.53), memory 0.31 (0.96) |  51.8 /  18.4;  45.2 /  20.3  [53 live]
+SAE 4x k2             |   3.19% | 0.69,  8/26, 2/5, 10/28 | clock 45 (C) 0.34 (0.98), clock 90 (E) 0.52 (0.98), reveal 45 (QC) 0.41 (0.68), reveal 90 (QE) 0.48 (0.71), memory 0.11 (0.62) |  23.5 /  10.3;  33.3 /  17.1  [83 live]
+SAE 4x k4             |   0.84% | 0.72,  8/26, 2/5, 10/28 | clock 45 (C) 0.37 (1.00), clock 90 (E) 0.55 (1.00), reveal 45 (QC) 0.24 (0.59), reveal 90 (QE) 0.43 (0.61), memory 0.36 (0.85) |  52.0 /  10.1;  40.7 /  19.3  [69 live]
+SAE 4x k8             |   0.20% | 0.73,  8/26, 2/5, 10/28 | clock 45 (C) 0.37 (1.00), clock 90 (E) 0.55 (1.00), reveal 45 (QC) 0.47 (0.82), reveal 90 (QE) 0.63 (0.83), memory 0.36 (0.96) |  39.4 /  13.3;  48.3 /  20.9  [108 live]
+   per neuron best (shared removed): Zc=0.99 Z=0.86 G=0.28 C0=0.64 C1=0.64 C2=0.55 E0=0.66 E1=0.58 E2=0.56 F=0.53 QC0=0.99 QC1=0.99 QC2=0.99 QE0=0.99 QE1=0.99 QE2=0.99 QF=0.99 Y0=0.74 Y1=0.67 Y2=0.62 Y3=0.62 Y4=0.57 Y5=0.63 Y6=0.53 Y7=0.50 Y8=0.81
+
+=== v19: roles = v19's 16 neurons; 14 with a non-zero part after removing shared quantities; 5 single neurons (store, detect, keep, flip, flag); subspaces: clock (3), memory (8)
+dictionary            | unexpl. | per neuron: mean best, >0.9 all, >0.9 single, raw >0.9 | subspaces, smallest canon. corr. with {own size} latents (all latents) | spliced last / every step; noise-matched last / every
+own neurons           |         | 1.00, 14/14, 3/3, 16/16 | clock 1.00 (1.00), memory 1.00 (1.00)  [16 live]
+random rotation       |         | 0.62,  2/14, 1/3, 13/16 | clock 0.00 (0.01), memory 0.05 (1.00)  [16 live]
+principal components  |         | 0.79,  3/14, 1/3,  9/16 | clock 0.00 (0.01), memory 0.99 (1.00)  [16 live]
+SAE 1x k2             |   2.38% | 0.13,  0/14, 0/3,  6/16 | clock 0.00 (0.02), memory 0.00 (0.00) |  10.0 /   9.3;  10.5 /   9.7  [14 live]
+SAE 1x k4             |   0.04% | 0.18,  1/14, 1/3,  3/16 | clock 0.00 (0.06), memory 0.01 (0.02) |   8.1 /  10.4;  10.5 /  10.2  [16 live]
+   per neuron best (shared removed): keep=1.00 flip=0.16 clock0=0.10 clock1=0.12 clock2=0.07 flag=0.16 mem0=0.07 mem1=0.05 mem2=0.17 mem3=0.08 mem4=0.13 mem5=0.14 mem6=0.07 mem7=0.16
+SAE 1x k8             |   0.03% | 0.40,  0/14, 0/3, 15/16 | clock 0.01 (0.03), memory 0.00 (0.05) |  12.4 /  10.0;  10.6 /  10.1  [16 live]
+SAE 2x k2             |   2.22% | 0.13,  0/14, 0/3,  6/16 | clock 0.00 (0.03), memory 0.00 (0.01) |  10.5 /  10.1;  10.5 /   9.7  [23 live]
+SAE 2x k4             |   0.04% | 0.37,  1/14, 1/3,  6/16 | clock 0.00 (0.04), memory 0.00 (0.02) |  12.5 /  10.4;  10.7 /  10.2  [28 live]
+SAE 2x k8             |   0.02% | 0.50,  1/14, 1/3,  7/16 | clock 0.00 (0.02), memory 0.01 (0.14) |  12.1 /   9.6;  10.7 /  10.3  [31 live]
+SAE 4x k2             |   2.09% | 0.14,  0/14, 0/3,  6/16 | clock 0.00 (0.02), memory 0.00 (0.00) |  10.3 /  10.1;  10.6 /   9.7  [20 live]
+SAE 4x k4             |   0.02% | 0.60,  1/14, 1/3,  3/16 | clock 0.00 (0.01), memory 0.00 (0.05) |  10.3 /  10.7;  10.6 /  10.1  [39 live]
+SAE 4x k8             |   0.01% | 0.59,  1/14, 1/3, 16/16 | clock 0.00 (0.07), memory 0.03 (0.31) |  11.0 /   9.8;  10.7 /  10.1  [54 live]
+   per neuron best (shared removed): keep=0.97 flip=0.54 clock0=0.44 clock1=0.57 clock2=0.44 flag=0.46 mem0=0.56 mem1=0.51 mem2=0.67 mem3=0.73 mem4=0.66 mem5=0.43 mem6=0.54 mem7=0.72
+
+=== v21proj: roles = v21's 28 neurons; 26 with a non-zero part after removing shared quantities; 7 single neurons (S, D, Zc, Z, G, F, QF); subspaces: clock 45 (C) (3), clock 90 (E) (3), reveal 45 (QC) (3), reveal 90 (QE) (3), memory (9)
+dictionary            | unexpl. | per neuron: mean best, >0.9 all, >0.9 single, raw >0.9 | subspaces, smallest canon. corr. with {own size} latents (all latents) | 
+(linear from 16 dims) |         | multiple corr. mean 0.97, >0.9 25/26
+16 projected dims     |         | 0.64,  0/26, 0/5,  1/28 | clock 45 (C) 0.36 (0.91), clock 90 (E) 0.58 (0.96), reveal 45 (QC) 0.01 (0.30), reveal 90 (QE) 0.04 (0.37), memory 0.37 (0.82)  [16 live]
+SAE 1x k2             |   5.24% | 0.72,  8/26, 2/5, 10/28 | clock 45 (C) 0.53 (0.92), clock 90 (E) 0.52 (0.93), reveal 45 (QC) 0.14 (0.24), reveal 90 (QE) 0.16 (0.27), memory 0.39 (0.48)  [16 live]
+SAE 1x k4             |   2.14% | 0.77,  8/26, 2/5, 10/28 | clock 45 (C) 0.58 (0.88), clock 90 (E) 0.69 (0.96), reveal 45 (QC) 0.02 (0.26), reveal 90 (QE) 0.20 (0.29), memory 0.01 (0.17)  [16 live]
+   per neuron best (shared removed): Zc=0.95 Z=0.54 G=0.70 C0=0.81 C1=0.67 C2=0.67 E0=0.70 E1=0.69 E2=0.60 F=0.58 QC0=0.99 QC1=0.99 QC2=0.99 QE0=0.99 QE1=0.99 QE2=0.99 QF=0.98 Y0=0.80 Y1=0.52 Y2=0.73 Y3=0.69 Y4=0.58 Y5=0.78 Y6=0.64 Y7=0.59 Y8=0.79
+SAE 1x k8             |   0.66% | 0.77,  8/26, 2/5, 12/28 | clock 45 (C) 0.61 (0.89), clock 90 (E) 0.67 (0.95), reveal 45 (QC) 0.06 (0.28), reveal 90 (QE) 0.18 (0.34), memory 0.12 (0.62)  [16 live]
+SAE 2x k2             |   4.56% | 0.72,  8/26, 2/5, 10/28 | clock 45 (C) 0.56 (0.93), clock 90 (E) 0.52 (0.94), reveal 45 (QC) 0.14 (0.33), reveal 90 (QE) 0.19 (0.31), memory 0.40 (0.54)  [30 live]
+SAE 2x k4             |   2.07% | 0.75,  8/26, 2/5, 10/28 | clock 45 (C) 0.72 (0.90), clock 90 (E) 0.66 (0.97), reveal 45 (QC) 0.21 (0.33), reveal 90 (QE) 0.05 (0.33), memory 0.31 (0.53)  [31 live]
+SAE 2x k8             |   0.48% | 0.77,  8/26, 2/5, 10/28 | clock 45 (C) 0.54 (0.91), clock 90 (E) 0.75 (0.97), reveal 45 (QC) 0.17 (0.31), reveal 90 (QE) 0.25 (0.34), memory 0.26 (0.74)  [32 live]
+SAE 4x k2             |   3.85% | 0.70,  8/26, 2/5, 10/28 | clock 45 (C) 0.35 (0.94), clock 90 (E) 0.53 (0.95), reveal 45 (QC) 0.09 (0.30), reveal 90 (QE) 0.14 (0.30), memory 0.06 (0.59)  [51 live]
+SAE 4x k4             |   1.53% | 0.74,  8/26, 2/5, 11/28 | clock 45 (C) 0.52 (0.96), clock 90 (E) 0.58 (0.98), reveal 45 (QC) 0.20 (0.38), reveal 90 (QE) 0.01 (0.37), memory 0.39 (0.67)  [57 live]
+SAE 4x k8             |   0.47% | 0.74,  8/26, 2/5, 10/28 | clock 45 (C) 0.55 (0.96), clock 90 (E) 0.64 (0.98), reveal 45 (QC) 0.02 (0.60), reveal 90 (QE) 0.03 (0.63), memory 0.28 (0.79)  [64 live]
+   per neuron best (shared removed): Zc=0.98 Z=0.54 G=0.35 C0=0.67 C1=0.70 C2=0.60 E0=0.78 E1=0.66 E2=0.63 F=0.64 QC0=0.98 QC1=0.98 QC2=0.99 QE0=0.99 QE1=0.98 QE2=0.98 QF=0.98 Y0=0.82 Y1=0.66 Y2=0.62 Y3=0.66 Y4=0.59 Y5=0.71 Y6=0.51 Y7=0.50 Y8=0.80

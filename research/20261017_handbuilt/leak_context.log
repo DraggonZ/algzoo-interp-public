@@ -1,0 +1,5 @@
+(oracle) separate readouts by largest position: 3.11%
+(oracle) separate readouts by class: 3.49%
+(oracle) separate readouts by largest position x class: 2.92%
+largest position read from the state: 99.3% correct; class read: 90.6% correct
+(no oracle) readouts by read largest position: 3.61%; by read position x read class: 3.56%

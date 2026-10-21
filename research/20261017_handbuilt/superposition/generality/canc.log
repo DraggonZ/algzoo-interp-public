@@ -1,0 +1,37 @@
+Each cell: median of (sum of |pushes|) / |decision|. 'neuron' = per neuron; 'hide/rest' = two groups (the hiding group, the rest); 'roles' = ARC's four named roles.
+
+ARC (hiding group [1, 6, 7, 8])
+  random lists         second vs third    neuron    28.4   hide/rest    2.6   roles    5.3
+  random lists         second vs largest  neuron    37.2   hide/rest    3.7   roles    7.8
+  random, second > 0   second vs third    neuron    28.1   hide/rest    2.5   roles    5.3
+  random, second > 0   second vs largest  neuron    37.0   hide/rest    3.6   roles    7.8
+  near ties            second vs third    neuron   144.2   hide/rest   12.7   roles   29.6
+  near ties            second vs largest  neuron    44.8   hide/rest    4.6   roles   10.0
+seed 100 (hiding group [1, 4, 9, 13])
+  random lists         second vs third    neuron    36.8   hide/rest    2.3
+  random lists         second vs largest  neuron    46.3   hide/rest    3.4
+  random, second > 0   second vs third    neuron    36.5   hide/rest    2.3
+  random, second > 0   second vs largest  neuron    45.9   hide/rest    3.4
+  near ties            second vs third    neuron   286.5   hide/rest   14.0
+  near ties            second vs largest  neuron    59.5   hide/rest    4.0
+seed 111 (hiding group [4, 8, 9, 12])
+  random lists         second vs third    neuron    25.3   hide/rest    2.4
+  random lists         second vs largest  neuron    35.8   hide/rest    3.3
+  random, second > 0   second vs third    neuron    25.1   hide/rest    2.4
+  random, second > 0   second vs largest  neuron    35.6   hide/rest    3.3
+  near ties            second vs third    neuron   145.8   hide/rest   12.6
+  near ties            second vs largest  neuron    46.2   hide/rest    4.3
+seed 115 (hiding group [5, 6, 7])
+  random lists         second vs third    neuron    34.3   hide/rest    2.2
+  random lists         second vs largest  neuron    62.3   hide/rest    4.9
+  random, second > 0   second vs third    neuron    33.9   hide/rest    2.1
+  random, second > 0   second vs largest  neuron    61.9   hide/rest    4.9
+  near ties            second vs third    neuron   206.9   hide/rest   13.0
+  near ties            second vs largest  neuron    79.1   hide/rest    7.0
+seed 209 (hiding group [3, 4, 6, 7, 12, 13])
+  random lists         second vs third    neuron    31.8   hide/rest    1.9
+  random lists         second vs largest  neuron    41.8   hide/rest    3.2
+  random, second > 0   second vs third    neuron    31.6   hide/rest    1.9
+  random, second > 0   second vs largest  neuron    41.7   hide/rest    3.2
+  near ties            second vs third    neuron   222.9   hide/rest   12.6
+  near ties            second vs largest  neuron    47.3   hide/rest    3.8

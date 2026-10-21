@@ -1,0 +1,3 @@
+neuron  3: guess  79.6%, linear threshold on content + lags  90.0%, boosted trees  96.1%
+neuron 12: guess  94.6%, linear threshold on content + lags  96.9%, boosted trees  98.8%
+neuron 15: guess  75.4%, linear threshold on content + lags  86.2%, boosted trees  96.3%

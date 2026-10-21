@@ -1,0 +1,10 @@
+accuracy 0.952
+cancelling (1,6,7,8)   relative noise 0.01: independent per neuron 0.895, shared by the group 0.951
+cancelling (1,6,7,8)   relative noise 0.03: independent per neuron 0.703, shared by the group 0.938
+cancelling (1,6,7,8)   relative noise 0.10: independent per neuron 0.397, shared by the group 0.844
+memory (0,3,10-15)     relative noise 0.01: independent per neuron 0.947, shared by the group 0.949
+memory (0,3,10-15)     relative noise 0.03: independent per neuron 0.907, shared by the group 0.926
+memory (0,3,10-15)     relative noise 0.10: independent per neuron 0.680, shared by the group 0.763
+all 16                 relative noise 0.01: independent per neuron 0.881, shared by the group 0.941
+all 16                 relative noise 0.03: independent per neuron 0.662, shared by the group 0.899
+all 16                 relative noise 0.10: independent per neuron 0.325, shared by the group 0.759

@@ -1,0 +1,40 @@
+zero
+  row 1: err all 16 0.280, push cols 0.255, best scale 0.948, residual cos with row 0 +0.82
+  row 2: err all 16 0.133, push cols 0.125, best scale 1.049, residual cos with row 0 +0.28
+  row 3: err all 16 0.225, push cols 0.188, best scale 1.116, residual cos with row 0 -0.90
+  row 4: err all 16 0.255, push cols 0.253, best scale 1.173, residual cos with row 0 -0.90
+  row 5: err all 16 0.301, push cols 0.291, best scale 1.223, residual cos with row 0 -0.80
+  row 6: err all 16 0.229, push cols 0.217, best scale 1.015, residual cos with row 0 -0.74
+  row 7: err all 16 0.240, push cols 0.145, best scale 0.936, residual cos with row 0 -0.81
+  row 8: err all 16 0.359, push cols 0.350, best scale 1.277, residual cos with row 0 -0.52
+  row 9: err all 16 0.744, push cols 0.722, best scale 0.939, residual cos with row 0 -0.21
+  price rows 1-8 all 16: -16.1 (gain 1.132)
+     out1 rel err 0.332
+     out2 rel err 0.147
+     out3 rel err 0.201
+     out4 rel err 0.214
+     out5 rel err 0.254
+     out6 rel err 0.254
+     out7 rel err 0.308
+     out8 rel err 0.313
+     out9 rel err 0.268
+fresh
+  row 1: err all 16 0.291, push cols 0.273, best scale 0.970, residual cos with row 0 +0.83
+  row 2: err all 16 0.174, push cols 0.149, best scale 1.100, residual cos with row 0 +0.20
+  row 3: err all 16 0.245, push cols 0.232, best scale 1.193, residual cos with row 0 -0.81
+  row 4: err all 16 0.296, push cols 0.287, best scale 1.223, residual cos with row 0 -0.87
+  row 5: err all 16 0.335, push cols 0.327, best scale 1.278, residual cos with row 0 -0.75
+  row 6: err all 16 0.254, push cols 0.230, best scale 1.072, residual cos with row 0 -0.65
+  row 7: err all 16 0.284, push cols 0.126, best scale 0.962, residual cos with row 0 -0.74
+  row 8: err all 16 0.399, push cols 0.405, best scale 1.377, residual cos with row 0 -0.39
+  row 9: err all 16 0.852, push cols 0.705, best scale 0.807, residual cos with row 0 -0.21
+  price rows 1-8 all 16: -27.6 (gain 1.054)
+     out1 rel err 0.302
+     out2 rel err 0.154
+     out3 rel err 0.219
+     out4 rel err 0.272
+     out5 rel err 0.311
+     out6 rel err 0.246
+     out7 rel err 0.296
+     out8 rel err 0.375
+     out9 rel err 0.268

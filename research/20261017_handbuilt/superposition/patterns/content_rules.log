@@ -1,0 +1,8 @@
+neuron  3: on  79.6%, guess  79.6%, linear threshold on content  81.3%
+neuron 12: on  94.6%, guess  94.6%, linear threshold on content  96.1%
+neuron 15: on  75.3%, guess  75.4%, linear threshold on content  81.2%
+neuron  0: on  78.0%, guess  78.0%, linear threshold on content  95.9%
+neuron 10: on  92.8%, guess  92.8%, linear threshold on content  97.5%
+neuron 11: on  91.6%, guess  91.6%, linear threshold on content  97.7%
+neuron 13: on  94.9%, guess  94.9%, linear threshold on content  98.4%
+neuron 14: on  90.1%, guess  90.2%, linear threshold on content  95.8%

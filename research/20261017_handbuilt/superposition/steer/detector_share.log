@@ -1,0 +1,9 @@
+near-tie lists 50,000. Share of each contender's part of the lead that passes through the detector (median, 10-90%):
+   second: +0.44 (-0.06 to +1.38) | third: +0.53 (-0.00 to +1.58)
+   second before third              n 25,129: second +0.50, third +0.70
+   third before second              n 24,871: second +0.28, third +0.46
+   second right after the largest   n  5,023: second +0.62, third +0.57
+   third right after the largest    n  5,014: second +0.71, third +0.67
+   second at step 9                 n  5,033: second +0.00, third +0.38
+   third at step 9                  n  4,953: second +0.42, third -0.00
+largest's part through the detector, median share +0.00; sum over inputs of the detector path, median |.| 17.71 against |D| median 2.60

@@ -1,0 +1,8 @@
+corrected prune 3e-06 σ=0.005: RMSE 9.71e-05 (bias +9.50e-05); cost 45573 samples; sampling RMSE 3.74e-04; squared-error ratio 0.068
+corrected prune 3e-06 σ=0.01: RMSE 1.26e-04 (bias +1.24e-04); cost 49976 samples; sampling RMSE 5.42e-04; squared-error ratio 0.054
+corrected prune 3e-06 σ=0.02: RMSE 1.74e-04 (bias +1.71e-04); cost 57492 samples; sampling RMSE 7.25e-04; squared-error ratio 0.057
+corrected prune 3e-06 all 96: RMSE 1.36e-04, cost 51014 samples, sampling RMSE 5.79e-04, ratio 0.055
+corrected prune 1e-05 σ=0.005: RMSE 2.25e-04 (bias +2.17e-04); cost 36751 samples; sampling RMSE 4.16e-04; squared-error ratio 0.294
+corrected prune 1e-05 σ=0.01: RMSE 2.94e-04 (bias +2.91e-04); cost 40526 samples; sampling RMSE 6.02e-04; squared-error ratio 0.238
+corrected prune 1e-05 σ=0.02: RMSE 4.90e-04 (bias +4.80e-04); cost 46000 samples; sampling RMSE 8.11e-04; squared-error ratio 0.366
+corrected prune 1e-05 all 96: RMSE 3.55e-04, cost 41092 samples, sampling RMSE 6.45e-04, ratio 0.303

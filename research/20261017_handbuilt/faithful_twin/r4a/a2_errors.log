@@ -1,0 +1,12 @@
+r3b (flip wave): errors 7.86% of lists
+   second was an overtaken record     share of lists  45.2%  error rate  6.96%  (named the largest: 0.58%)
+   second never the largest           share of lists  45.2%  error rate  7.67%  (named the largest: 4.31%)
+   near tie (third within 5%)         share of lists   9.6%  error rate 13.04%  (named the largest: 1.98%)
+r4a (2-D wave, growth 4): errors 2.20% of lists
+   second was an overtaken record     share of lists  45.2%  error rate  2.20%  (named the largest: 0.68%)
+   second never the largest           share of lists  45.2%  error rate  1.38%  (named the largest: 0.22%)
+   near tie (third within 5%)         share of lists   9.6%  error rate  6.05%  (named the largest: 0.35%)
+r4a, growth 3: errors 3.16% of lists
+   second was an overtaken record     share of lists  45.2%  error rate  4.51%  (named the largest: 0.69%)
+   second never the largest           share of lists  45.2%  error rate  1.19%  (named the largest: 0.21%)
+   near tie (third within 5%)         share of lists   9.6%  error rate  6.04%  (named the largest: 0.35%)

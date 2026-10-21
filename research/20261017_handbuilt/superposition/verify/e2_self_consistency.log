@@ -1,0 +1,7 @@
+wrong lists: 47155 of 1000000
+ARC wrong pick is among top-3 positions: 83.9%
+random redraw (20 redraws per list): same wrong choice 55.81% (SE across lists 0.15)
+  share of lists where majority of redraws repeat it: 55.31%
+seven at conditional mean: same wrong choice 62.09%
+breakdown, random redraw: wrong pick in top-3 -> 57.81%, wrong pick among the seven -> 45.36%
+breakdown, conditional mean: top-3 -> 64.36%, seven -> 50.22%

@@ -1,0 +1,5 @@
+register waves                                       (23 quantities): angle median 1.45 deg; accuracy 0.708
+register waves + kept numbers since the largest      (33 quantities): angle median 1.46 deg; accuracy 0.733
+register waves + all kept numbers (no wipe)          (33 quantities): angle median 1.51 deg; accuracy 0.728
+register waves + every input since the largest       (33 quantities): angle median 1.53 deg; accuracy 0.594
+register waves + every input (no wipe)               (33 quantities): angle median 1.56 deg; accuracy 0.708

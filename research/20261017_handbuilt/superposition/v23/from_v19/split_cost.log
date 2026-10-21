@@ -1,0 +1,14 @@
+v19 rules, gate level 0.5    94.20%
+gate level 4                 94.20%
+wrap 0.1, gate only          89.72%
+wrap 0.1, half direct        90.18%
+wrap 0.1, all direct         90.21%
+lost 4.69%, gained 0.22%
+lost by order: second before largest 3.43% after 1.26%
+  1 records (22.9% of lists): lost 0.05%
+  2 records (41.3% of lists): lost 4.57%
+  3 records (26.3% of lists): lost 6.85%
+  4 records ( 8.0% of lists): lost 10.42%
+  5 records ( 1.3% of lists): lost 11.02%
+  on lost lists it names the largest 45%, the third 51%, other 5%
+  named position after the largest: 18%; the second after the largest: 27%

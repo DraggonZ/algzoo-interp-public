@@ -1,0 +1,6 @@
+v5 all 0.989
+   new largest at step 9          share 0.10  accuracy 0.990
+   new largest at step 8          share 0.11  accuracy 0.991
+   back-to-back new largests      share 0.33  accuracy 0.999
+   none of these, 2+ positives    share 0.54  accuracy 1.000
+   at most one positive           share 0.01  accuracy 0.065

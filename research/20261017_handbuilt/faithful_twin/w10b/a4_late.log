@@ -1,0 +1,15 @@
+modes 45+135             dims 4  start age 2  records served 1..8 (8)  rank 4  not possible  cond inf
+modes 45+135             dims 4  start age 3  records served 1..7 (7)  rank 4  not possible  cond inf
+modes 45+135             dims 4  start age 4  records served 1..6 (6)  rank 4  not possible  cond inf
+modes 45+90+135          dims 6  start age 2  records served 1..8 (8)  rank 6  not possible  cond inf
+modes 45+90+135          dims 6  start age 3  records served 1..7 (7)  rank 6  not possible  cond inf
+modes 45+90+135          dims 6  start age 4  records served 1..6 (6)  rank 6  exact hiding possible  cond 2.0
+modes 45+90+135+flip     dims 7  start age 2  records served 1..8 (8)  rank 7  not possible  cond inf
+modes 45+90+135+flip     dims 7  start age 3  records served 1..7 (7)  rank 7  exact hiding possible  cond 2.8
+modes 45+90+135+flip     dims 7  start age 4  records served 1..6 (6)  rank 6  exact hiding possible  cond 2.0
+modes 38+84+127          dims 6  start age 2  records served 1..8 (8)  rank 6  not possible  cond inf
+modes 38+84+127          dims 6  start age 3  records served 1..7 (7)  rank 6  not possible  cond inf
+modes 38+84+127          dims 6  start age 4  records served 1..6 (6)  rank 6  exact hiding possible  cond 3.0
+modes 38+84+127+flip     dims 7  start age 2  records served 1..8 (8)  rank 7  not possible  cond inf
+modes 38+84+127+flip     dims 7  start age 3  records served 1..7 (7)  rank 7  exact hiding possible  cond 1.9
+modes 38+84+127+flip     dims 7  start age 4  records served 1..6 (6)  rank 6  exact hiding possible  cond 1.7

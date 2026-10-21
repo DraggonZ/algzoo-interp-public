@@ -1,0 +1,18 @@
+1. memory nudged at step 5, second early, third late, v23: earlier wins, base 100.0% | -0.05:  99.0% | +0.05:   0.0%
+1. memory nudged at step 5, second early, third late, ARC: earlier wins, base  72.5% | -0.05:  80.2% | +0.05:  55.7%
+1. memory nudged at step 5, third early, second late, v23: earlier wins, base   0.0% | -0.05:  98.7% | +0.05:   0.0%
+1. memory nudged at step 5, third early, second late, ARC: earlier wins, base  24.9% | -0.05:  43.9% | +0.05:  10.4%
+1. memory nudged at step 7, second early, third late, v23: earlier wins, base 100.0% | -0.05:  98.5% | +0.05:   0.0%
+1. memory nudged at step 7, second early, third late, ARC: earlier wins, base  71.6% | -0.05:  85.2% | +0.05:  47.2%
+1. memory nudged at step 7, third early, second late, v23: earlier wins, base   0.0% | -0.05:  97.8% | +0.05:   0.0%
+1. memory nudged at step 7, third early, second late, ARC: earlier wins, base  20.0% | -0.05:  43.0% | +0.05:   8.9%
+2. keep gate scaled, v23, second at step 9: step-9 contender wins, base  98.5% | 0.95:  98.6% | 1.05:  50.1%
+2. keep gate scaled, v23, third at step 9: step-9 contender wins, base   0.0% | 0.95:  49.6% | 1.05:   0.0%
+2. keep gate scaled, v23, contenders at steps 0-8: second wins, base  95.6% | 0.95:  94.6% | 1.05:  95.7%
+2. keep gate scaled, ARC, second at step 9: step-9 contender wins, base  79.9% | 0.95:  84.6% | 1.05:  68.3%
+2. keep gate scaled, ARC, third at step 9: step-9 contender wins, base  35.2% | 0.95:  48.7% | 1.05:  27.2%
+2. keep gate scaled, ARC, contenders at steps 0-8: second wins, base  78.6% | 0.95:  76.1% | 1.05:  76.6%
+3. extra step with input 0, v23: names the position before the second  97.7% (second at 1-9); names the second   0.1%
+3. extra step with input 0, ARC: names the position before the second  94.5% (second at 1-9); names the second   0.7%
+4. hiding turned down at step 5, v23: largest named, base   0.0% | x0.9:   0.0% | x0.8:   0.1%
+4. hiding turned down at step 5, ARC: largest named, base   1.2% | x0.9:   3.7% | x0.8:  11.7%

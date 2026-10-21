@@ -1,0 +1,5 @@
+v26(delta 0, kappa 0.5) == v25: True
+kappa 0.50: accuracy 0.9139  job 8: activity 0.000, readout view 0.892
+kappa 0.35: accuracy 0.9196  job 8: activity 0.000, readout view 0.873
+kappa 0.25: accuracy 0.9238  job 8: activity 0.000, readout view 0.857
+kappa 0.15: accuracy 0.9087  job 8: activity 0.000, readout view 0.838

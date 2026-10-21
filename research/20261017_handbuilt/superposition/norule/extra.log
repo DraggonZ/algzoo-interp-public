@@ -1,0 +1,16 @@
+== 16 neurons: memory neurons that switch 299, of them on 60-90%: 159
+   on 60-90%, one-line rule  n  67: |pre|/terms median 0.264, near zero 0.21, rotating 0.28, largest-so-far 0.42, linear cost 45.15
+   on 60-90%, partial        n  79: |pre|/terms median 0.159, near zero 0.33, rotating 0.27, largest-so-far 0.54, linear cost 2.30
+   on 60-90%, no rule        n  13: |pre|/terms median 0.067, near zero 0.64, rotating 0.49, largest-so-far 0.29, linear cost 1.76
+   hovering memory neurons (median |pre|/terms < 0.12): 58; tags {'one-line rule': 9, 'partial': 34, 'no rule': 15, 'nearly constant': 0}; on rate median 80%
+   rank correlation with |pre|/terms (low = hovering): rotating share -0.38, largest-so-far share +0.42
+   on 60-90%: rank correlation of linear cost with |pre|/terms +0.11
+   on 60-90%: linear cost, hovering n 46 median 3.20; others n 113 median 15.02
+== 20 and 32 neurons: memory neurons that switch 95, of them on 60-90%: 57
+   on 60-90%, one-line rule  n  21: |pre|/terms median 0.294, near zero 0.16, rotating 0.02, largest-so-far 0.16, linear cost 56.00
+   on 60-90%, partial        n  27: |pre|/terms median 0.153, near zero 0.45, rotating 0.14, largest-so-far 0.32, linear cost 3.68
+   on 60-90%, no rule        n   9: |pre|/terms median 0.145, near zero 0.40, rotating 0.47, largest-so-far 0.28, linear cost 0.14
+   hovering memory neurons (median |pre|/terms < 0.12): 22; tags {'one-line rule': 1, 'partial': 21, 'no rule': 0, 'nearly constant': 0}; on rate median 56%
+   rank correlation with |pre|/terms (low = hovering): rotating share -0.20, largest-so-far share +0.45
+   on 60-90%: rank correlation of linear cost with |pre|/terms +0.54
+   on 60-90%: linear cost, hovering n 8 median 6.22; others n 49 median 9.69

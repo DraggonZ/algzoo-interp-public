@@ -1,0 +1,25 @@
+--- x_p positive, below the largest
+  p=1 (     0): x_p    0.0  m1    0.0  m2    0.0  x_9    0.0  R2 nan
+  p=2 ( 13351): x_p   27.9  m1   -5.6  m2   -2.2  x_9   -6.2  R2 0.66
+  p=3 ( 26562): x_p   29.1  m1   -4.2  m2   -6.9  x_9   -7.6  R2 0.60
+  p=4 ( 40257): x_p   26.3  m1   -0.8  m2   -7.5  x_9   -7.9  R2 0.61
+  p=5 ( 53261): x_p   26.7  m1    1.8  m2   -9.6  x_9   -7.3  R2 0.64
+  p=6 ( 66863): x_p   26.7  m1    3.9  m2  -11.2  x_9   -6.5  R2 0.67
+  p=7 ( 79906): x_p   26.4  m1    5.2  m2  -11.9  x_9   -6.2  R2 0.67
+--- x_p negative
+  p=1 (     0): x_p    0.0  m1    0.0  m2    0.0  x_9    0.0  R2 nan
+  p=2 ( 16541): x_p    0.7  m1   -9.9  m2   15.3  x_9   -6.1  R2 0.53
+  p=3 ( 33059): x_p    0.9  m1   -8.8  m2   11.5  x_9   -8.4  R2 0.37
+  p=4 ( 49410): x_p    0.9  m1   -5.1  m2   10.1  x_9   -8.6  R2 0.38
+  p=5 ( 66578): x_p    0.6  m1   -3.3  m2    9.2  x_9   -7.5  R2 0.46
+  p=6 ( 82938): x_p    0.6  m1   -1.2  m2    7.5  x_9   -6.5  R2 0.48
+  p=7 ( 99621): x_p    0.7  m1    0.6  m2    5.7  x_9   -6.1  R2 0.43
+--- new-largest positions. old largest r (overtaken later, exactly two new largests after r's predecessor...):
+  score at old largest r: coefficients on old largest P, current largest x_L, previous record P_prev, second-largest-before-L
+    position 1-2 ( 51241): P   45.0  x_L  -11.4  P_prev   -4.4  m2   -4.7  R2 0.48
+    position 3-4 ( 23715): P   41.1  x_L   -4.0  P_prev   -6.9  m2   -7.8  R2 0.57
+    position 5-7 (  4151): P   44.3  x_L    3.9  P_prev  -17.0  m2   -9.7  R2 0.81
+  score at current largest L: coefficients on old largest P, current largest x_L, previous record P_prev, second-largest-before-L
+    position 1-2 ( 10464): P    9.3  x_L   -1.4  P_prev    0.0  m2   -4.4  R2 0.15
+    position 3-4 ( 36754): P    4.7  x_L    1.3  P_prev    0.5  m2   -1.8  R2 0.04
+    position 5-7 ( 71799): P   15.4  x_L    4.6  P_prev   -1.2  m2  -11.7  R2 0.17

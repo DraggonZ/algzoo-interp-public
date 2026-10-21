@@ -1,0 +1,4 @@
+network          | third vs second: offset RMS diff (%), lean |diff| | largest vs second, S before L: same | largest vs second, S after L: same | median lean (votes): ARC / network, S before L; S after L
+v19 kappa 0.5    |     19.64  0.053 |      9.64  0.082 |     88.67  0.972 | -0.082 / -0.000; -0.040 / -1.024
+v22a linear      |     19.63  0.053 |     90.92  0.417 |     97.40  0.469 | -0.082 / -0.500; -0.040 / -0.500
+v22a             |     19.63  0.053 |      7.37  0.043 |     53.36  0.103 | -0.082 / -0.085; -0.040 / -0.086

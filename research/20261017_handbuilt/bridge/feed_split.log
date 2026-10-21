@@ -1,0 +1,6 @@
+trained record at 2: detector share at positions <= r 0.53; hiding neurons' share at positions <= r 0.26   (positions <= r are 0.33 of 0-8)
+trained record at 4: detector share at positions <= r 0.90; hiding neurons' share at positions <= r 0.59   (positions <= r are 0.56 of 0-8)
+trained record at 6: detector share at positions <= r 0.83; hiding neurons' share at positions <= r 0.81   (positions <= r are 0.78 of 0-8)
+v18     record at 2: detector share at positions <= r 1.00; hiding neurons' share at positions <= r 0.29   (positions <= r are 0.33 of 0-8)
+v18     record at 4: detector share at positions <= r 1.00; hiding neurons' share at positions <= r 0.44   (positions <= r are 0.56 of 0-8)
+v18     record at 6: detector share at positions <= r 1.00; hiding neurons' share at positions <= r 0.88   (positions <= r are 0.78 of 0-8)

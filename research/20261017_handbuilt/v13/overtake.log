@@ -1,0 +1,23 @@
+87970 lists; network names the old largest in 0.978
+difference real - twin, mean over lists, neurons 0-15, at steps L .. L+3:
+  L+0: [  0.14 -14.43   0.03  -0.19   6.19  -0.13 -16.95 -19.05 -14.08  -0.     0.11   0.25   0.57  -0.1   -2.69  -0.15]
+  L+1: [-0.63  4.06 11.3  -0.82 -0.02 13.88 -1.09  8.88  2.49  2.22 10.48 10.79  7.17  1.99  3.73 -1.17]
+  L+2: [-12.96  -2.19  11.54  -1.65  -0.03  -0.78   4.03   9.31   2.43  -0.01  13.94  12.06   3.98   0.14  -6.24  -5.23]
+  L+3: [-6.86 -0.38 13.56  3.92 -0.04 -0.99  7.83  9.48 -1.35 -0.01 13.84  7.17 -8.7   0.36 -2.86 -5.64]
+at L+2, regress each memory neuron's difference on P and x_L (coefficients):
+  neuron  0: P -11.60  x_L  -0.03
+  neuron  3: P  -5.20  x_L   2.44
+  neuron 10: P -22.27  x_L  23.65
+  neuron 11: P -17.71  x_L  19.40
+  neuron 12: P -12.91  x_L  11.17
+  neuron 13: P  -7.99  x_L   5.46
+  neuron 14: P  -4.96  x_L  -0.39
+  neuron 15: P  -8.35  x_L   2.38
+copy from the twin into the real run at one step, then continue: share still naming the old largest
+  at L+1: all memory 0.61  0 0.87  3 0.98  15 0.95  0,3,15 0.87  10-14 0.60  cancellers 0.00  store 2 0.58
+  at L+2: all memory 0.62  0 0.66  3 0.96  15 0.76  0,3,15 0.75  10-14 0.66  cancellers 0.00  store 2 0.63
+  at L+3: all memory 0.88  0 0.81  3 0.93  15 0.75  0,3,15 0.83  10-14 0.91  cancellers 0.39  store 2 0.74
+
+before the overtaking (step L-1): R2 of each memory neuron from a wave of the value vs a wave of the jump
+  40 deg/step  0: value 0.76 jump 0.77 | 3: value 0.13 jump 0.14 | 10: value 0.74 jump 0.92 | 11: value 0.77 jump 0.90 | 12: value 0.81 jump 0.58 | 13: value 0.71 jump 0.77 | 14: value 0.81 jump 0.89 | 15: value 0.22 jump 0.06
+  45 deg/step  0: value 0.76 jump 0.75 | 3: value 0.13 jump 0.14 | 10: value 0.74 jump 0.92 | 11: value 0.77 jump 0.90 | 12: value 0.81 jump 0.62 | 13: value 0.71 jump 0.76 | 14: value 0.81 jump 0.89 | 15: value 0.22 jump 0.08

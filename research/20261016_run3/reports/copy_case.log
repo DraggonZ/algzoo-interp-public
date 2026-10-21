@@ -1,0 +1,24 @@
+mult0.02_8 at ratio 0.7: 22 failing pairs (largest, second, step where vote lost, final answer):
+   [(0, 1, 7, np.int64(0)), (0, 3, 9, np.int64(8)), (1, 3, 9, np.int64(6)), (2, 1, 4, np.int64(2)), (2, 3, 9, np.int64(7)), (3, 1, 5, np.int64(6)), (3, 2, 5, np.int64(7)), (4, 1, 6, np.int64(7)), (4, 2, 6, np.int64(4)), (4, 3, 6, np.int64(4)), (5, 1, 7, np.int64(0)), (5, 2, 7, np.int64(5)), (5, 3, 7, np.int64(5)), (5, 4, 7, np.int64(5)), (6, 2, 8, np.int64(6)), (6, 3, 8, np.int64(6)), (6, 4, 8, np.int64(6)), (6, 5, 8, np.int64(6)), (7, 3, 9, np.int64(7)), (7, 4, 9, np.int64(7)), (7, 5, 9, np.int64(7)), (7, 6, 9, np.int64(7))]
+vote lost at step: Counter({9: 7, 7: 5, 8: 4, 6: 3, 5: 2, 4: 1})
+lost at age of largest: Counter({2: 18, 7: 2, 9: 1, 8: 1})  age of second: Counter({6: 7, 3: 6, 4: 5, 5: 4})
+
+case largest 0, second 1: scores by step (copy | ARC's model)
+  t1: copy [ -7.9 -21.6 -32.2 -30.2 -20.4   1.5  17.   19.3  34.7  39.7]  | base [-11.2 -20.5 -30.4 -24.8 -18.2   0.6  15.2  18.5  31.1  39.7]
+       neurons on in copy but not base: [], on in base but not copy: []
+  t2: copy [-12.6 -23.6 -29.6 -40.1  -5.3   9.5  22.   39.4  43.9  -3.5]  | base [-16.2 -25.4 -30.1 -28.3  -2.7  12.3  20.1  34.5  39.3  -3.5]
+       neurons on in copy but not base: [], on in base but not copy: []
+  t3: copy [-11.6 -18.1 -27.2 -34.2  -2.5  10.   33.1  37.8  21.3  -8.6]  | base [-20.6 -20.9 -22.9 -21.4   3.7  13.4  28.   32.2  18.6 -10.2]
+       neurons on in copy but not base: [], on in base but not copy: []
+  t4: copy [-11.4 -30.  -35.2 -20.    3.8  26.5  37.7  18.7  19.5  -9.6]  | base [-22.4 -26.6 -28.7  -5.4  11.8  25.4  29.9  14.2  15.3 -13.4]
+       neurons on in copy but not base: [], on in base but not copy: []
+  t5: copy [-22.4 -33.9 -19.7 -10.3  15.6  28.   21.8  15.3  17.9 -12.3]  | base [-28.5 -28.7 -11.7   5.9  19.8  25.2  12.8   9.8  13.5 -18. ]
+       neurons on in copy but not base: [np.int64(11)], on in base but not copy: []
+  t6: copy [-29.  -24.4  -7.8   4.5  18.6  11.6  11.8  14.9  14.1 -14.4]  | base [-32.9 -16.8   0.5  15.5  21.9   8.6   5.5   9.8   9.  -21.2]
+       neurons on in copy but not base: [], on in base but not copy: []
+  t7: copy [-19.7 -10.3   9.    8.6   2.4  -0.5   8.8  10.1   9.6 -18. ]  | base [-20.6  -2.9  11.4  17.8   5.3   0.1   4.8   4.3   5.1 -25.3]
+       neurons on in copy but not base: [np.int64(10)], on in base but not copy: []
+  t8: copy [ -4.2   8.7  14.5  -9.3  -8.5  -1.2   5.5   8.8   4.4 -18.7]  | base [ -4.7  10.1  16.2   2.3  -3.5   1.9   1.1   2.4   1.3 -27.1]
+       neurons on in copy but not base: [], on in base but not copy: []
+  t9: copy [ 16.6  16.   -2.2 -21.4  -4.7  -2.2   7.    5.9   1.6 -16.7]  | base [ 10.7  16.    1.7  -6.5   1.2   0.8   2.1   1.2  -1.  -26.2]
+       neurons on in copy but not base: [], on in base but not copy: []

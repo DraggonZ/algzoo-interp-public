@@ -1,0 +1,7 @@
+regenerated copies: max difference from hilton_noise.npz accuracy 0.00e+00
+ARC_0.0025   clean 95.35%  copies: mean 90.34, SD 3.26, range 74.6-94.3  (3 s)
+ARC_0.001    clean 95.35%  copies: mean 94.47, SD 0.56, range 92.0-95.3  (6 s)
+ARC_0.005    clean 95.35%  copies: mean 81.15, SD 6.19, range 56.5-91.5  (8 s)
+106_0.0025   clean 94.88%  copies: mean 88.16, SD 3.13, range 72.8-92.8  (10 s)
+111_0.0025   clean 96.05%  copies: mean 89.49, SD 4.06, range 75.1-94.5  (12 s)
+115_0.0025   clean 95.19%  copies: mean 89.27, SD 2.64, range 81.5-93.2  (15 s)

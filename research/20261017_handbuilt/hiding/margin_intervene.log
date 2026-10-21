@@ -1,0 +1,18 @@
+== overtaken by near tie (under 5%): 38198 lists
+   none               margin median   5.47, accuracy 0.944, level slope median   4.04
+   phantom removed    margin median   4.27, accuracy 0.790, level slope median   2.99
+   phantom doubled    margin median   6.08, accuracy 0.953, level slope median   5.23
+   control at q       margin median   5.49, accuracy 0.939, level slope median   5.15
+   late gate zeroed   margin median  -2.71, accuracy 0.082, level slope median  -2.75
+   late gate doubled  margin median  16.84, accuracy 0.959, level slope median  15.54
+   keep gate zeroed   margin median  40.19, accuracy 0.988, level slope median  44.67
+   control at q+1     margin median   5.30, accuracy 0.881, level slope median   3.30
+== overtaken by clear (20-50%): 123591 lists
+   none               margin median  10.85, accuracy 0.990, level slope median  10.63
+   phantom removed    margin median  10.54, accuracy 0.990, level slope median   9.63
+   phantom doubled    margin median  11.14, accuracy 0.991, level slope median  11.20
+   control at q       margin median  10.83, accuracy 0.990, level slope median  10.47
+   late gate zeroed   margin median  -3.62, accuracy 0.265, level slope median   0.97
+   late gate doubled  margin median  24.69, accuracy 0.966, level slope median  23.54
+   keep gate zeroed   margin median  53.06, accuracy 0.988, level slope median  48.87
+   control at q+1     margin median  10.81, accuracy 0.945, level slope median  10.80

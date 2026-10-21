@@ -1,0 +1,3 @@
+largest before both    n 253,031: earlier contender wins, largest scaled x0.9:  44.0% | x1.0:  46.8% | x1.1:  48.5% | x1.3:  50.5%
+largest between them   n 253,296: earlier contender wins, largest scaled x0.9:  46.9% | x1.0:  47.5% | x1.1:  48.3% | x1.3:  46.4%
+largest after both     n 254,313: earlier contender wins, largest scaled x0.9:  48.7% | x1.0:  50.7% | x1.1:  50.9% | x1.3:  50.6%

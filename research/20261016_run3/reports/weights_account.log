@@ -1,0 +1,9 @@
+1. input weights: n0 +0.07, n1 -10.56, n2 +0.01, n3 -0.12, n4 +10.16, n5 -0.28, n6 -11.00, n7 -13.17, n8 -12.31, n9 -0.23, n10 +0.06, n11 +0.15, n12 +0.30, n13 -0.05, n14 -1.32, n15 -0.12
+2. vote from the weights of a unit input on neurons 1, 6, 7, 8 (all on): slot scores +13 +5 +5 +4 +4 +7 +7 +5 +5 -57; newest slot (9) minus mean of others -62.8
+   with only neurons [1, 6, 7, 8] on: newest slot minus others -62.8; top slot 0
+   with only neurons [6, 7, 8] on: newest slot minus others -57.6; top slot 3
+   with only neurons [1, 7, 8] on: newest slot minus others -56.0; top slot 5
+   with only neurons [7, 8] on: newest slot minus others -50.8; top slot 4
+3. strongest rotation (43 deg/step, |eig| 0.95): readout of its comparing-neuron part 7.21, of its other-ten part 7.93, of the whole 0.88; share of the rotation's weight on comparing neurons 0.13
+   cosine between the two parts' readouts -1.00 (−1 = exact cancellation)
+4. neuron 4: input weight +10.16, recurrent weight from neuron 2 -0.49, neuron 2's input weight +0.01, neuron 2's self-weight +0.97

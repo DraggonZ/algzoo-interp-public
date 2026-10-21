@@ -1,0 +1,5 @@
+v7 late clock with dip (reference)   all 0.813 ord 0.979 (revealed 0.974, kept 0.981) rec9 0.880 b2b 0.498 | wrong: third 0.23 largest 0.01
+no dip, wave x1.0, push-down 0       all 0.739 ord 0.865 (revealed 0.651, kept 0.970) rec9 0.583 b2b 0.587 | wrong: third 0.39 largest 0.00
+no dip, wave x2.0, push-down 1       all 0.458 ord 0.549 (revealed 0.129, kept 0.756) rec9 0.095 b2b 0.442 | wrong: third 0.23 largest 0.00
+no dip, wave x3.0, push-down 2       all 0.351 ord 0.452 (revealed 0.039, kept 0.656) rec9 0.020 b2b 0.311 | wrong: third 0.18 largest 0.00
+no dip, wave x5.0, push-down 4       all 0.284 ord 0.400 (revealed 0.011, kept 0.592) rec9 0.001 b2b 0.200 | wrong: third 0.16 largest 0.00

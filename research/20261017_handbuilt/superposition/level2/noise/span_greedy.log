@@ -1,0 +1,25 @@
+closed form, hiding block eigenvalues (3): RMSE 5.41 points, correlation 0.248
+closed form, comparator gains (4): RMSE 6.07 points, correlation 0.057
+closed form, store and detector ratios (4): RMSE 5.93 points, correlation -0.032
+closed form, store's share of each reference (4): RMSE 5.37 points, correlation 0.351
+closed form, memory eigenvalues (8 distinct): RMSE 5.97 points, correlation 0.045
+closed form, late gate weights (6): RMSE 6.05 points, correlation 0.112
+closed form, all of the above together (35): RMSE 4.44 points, correlation 0.518
+
+greedy selection among the 52 levels by age:
+   1: + neuron 7 level, K=4-6        RMSE 4.87 points, correlation 0.458
+   2: + neuron 1 level, K=4-6        RMSE 4.25 points, correlation 0.632
+   3: + neuron 6 level, K=4-6        RMSE 3.57 points, correlation 0.761
+   4: + neuron 8 level, K=7-9        RMSE 3.00 points, correlation 0.827
+   5: + neuron 2 level, K=2-3        RMSE 2.53 points, correlation 0.859
+   6: + neuron 10 level, K=4-6       RMSE 2.21 points, correlation 0.904
+   7: + neuron 11 level, K=4-6       RMSE 2.09 points, correlation 0.911
+   8: + neuron 12 level, K=7-9       RMSE 1.98 points, correlation 0.922
+   9: + neuron 8 level, K=2-3        RMSE 1.88 points, correlation 0.927
+  10: + neuron 6 level, K=7-9        RMSE 1.78 points, correlation 0.934
+  11: + neuron 6 level, K=2-3        RMSE 1.69 points, correlation 0.943
+  12: + neuron 7 level, K=7-9        RMSE 1.60 points, correlation 0.946
+  13: + neuron 0 level, K=2-3        RMSE 1.53 points, correlation 0.949
+  14: + neuron 7 level, K=1          RMSE 1.47 points, correlation 0.951
+  15: + neuron 15 level, K=7-9       RMSE 1.41 points, correlation 0.958
+  16: + neuron 1 level, K=7-9        RMSE 1.35 points, correlation 0.961

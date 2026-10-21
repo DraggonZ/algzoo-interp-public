@@ -1,0 +1,48 @@
+ARC accuracy on 4194304 lists: 0.95314
+
+zeroed alone, accuracy loss under 0.1 point: 56 of 432
+  input    :   6 of 16
+  recurrent:  34 of 256
+  readout  :  16 of 160
+
+zeroed together in order of single cost: largest prefix with joint loss under 0.1 point: 29
+  first  10: accuracy change +0.007 points, KL 0.01115, same answer as ARC 98.54%
+  first  20: accuracy change -0.048 points, KL 0.01443, same answer as ARC 98.26%
+  first  29: accuracy change -0.087 points, KL 0.01401, same answer as ARC 98.25%
+  first  30: accuracy change -0.132 points, KL 0.01601, same answer as ARC 98.07%
+  first  40: accuracy change -0.522 points, KL 0.02838, same answer as ARC 97.37%
+  first  50: accuracy change -1.539 points, KL 0.08357, same answer as ARC 95.30%
+  first  59: accuracy change -2.067 points, KL 0.09982, same answer as ARC 94.67%
+  by block: {'input': 2, 'recurrent': 19, 'readout': 8}
+
+25 weights most sensitive to a 1% nudge (mean KL of +1% and -1%):
+  2->2          +0.969  KL 1.02e-01  acc +1%: -1.887  -1%: -2.378  zero: -74.00
+  2->7          +0.674  KL 1.02e-01  acc +1%: -2.522  -1%: -2.125  zero: -81.36
+  7->8          -1.094  KL 7.71e-02  acc +1%: -2.263  -1%: -1.282  zero: -84.81
+  7->1          -1.048  KL 5.12e-02  acc +1%: -1.371  -1%: -1.315  zero: -81.37
+  input->7     -13.169  KL 4.94e-02  acc +1%: -1.374  -1%: -1.176  zero: -83.53
+  6->1          +0.995  KL 3.11e-02  acc +1%: -0.784  -1%: -0.893  zero: -68.81
+  2->8          +0.625  KL 2.79e-02  acc +1%: -0.400  -1%: -1.017  zero: -73.25
+  2->6          +0.535  KL 2.11e-02  acc +1%: -0.630  -1%: -0.517  zero: -80.76
+  8->8          +0.615  KL 1.71e-02  acc +1%: -0.124  -1%: -0.737  zero: -58.17
+  input->8     -12.312  KL 1.69e-02  acc +1%: -0.312  -1%: -0.558  zero: -73.81
+  1->8          +0.634  KL 1.67e-02  acc +1%: -0.142  -1%: -0.698  zero: -62.97
+  input->6     -10.996  KL 1.56e-02  acc +1%: -0.513  -1%: -0.358  zero: -79.10
+  input->4     +10.157  KL 1.55e-02  acc +1%: -0.295  -1%: -0.512  zero: -77.42
+  2->1          +0.504  KL 1.26e-02  acc +1%: -0.170  -1%: -0.511  zero: -76.14
+  4->2          +1.731  KL 1.14e-02  acc +1%: -0.169  -1%: -0.372  zero: -76.22
+  input->1     -10.565  KL 1.04e-02  acc +1%: -0.273  -1%: -0.330  zero: -79.58
+  6->0          +1.133  KL 6.92e-03  acc +1%: -0.114  -1%: -0.298  zero: -61.12
+  4->7          +1.317  KL 6.40e-03  acc +1%: -0.262  -1%: -0.094  zero: -79.85
+  7->out3       +7.328  KL 5.77e-03  acc +1%: -0.148  -1%: -0.216  zero: -8.34
+  6->6          +0.361  KL 5.37e-03  acc +1%: -0.250  -1%: -0.040  zero: -67.85
+  8->out1       -6.698  KL 4.73e-03  acc +1%: -0.100  -1%: -0.206  zero: -63.98
+  7->0          -0.776  KL 4.61e-03  acc +1%: -0.217  -1%: -0.063  zero: -56.89
+  7->out7       -5.408  KL 4.39e-03  acc +1%: -0.130  -1%: -0.158  zero: -70.13
+  1->1          +0.409  KL 4.25e-03  acc +1%: -0.072  -1%: -0.172  zero: -58.85
+  11->10        +1.096  KL 4.10e-03  acc +1%: -0.026  -1%: -0.151  zero: -82.37
+
+nudge sensitivity summed by block (sum of mean KL):
+  input    : 1.079e-01
+  recurrent: 5.750e-01
+  readout  : 6.953e-02

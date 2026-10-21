@@ -1,0 +1,4 @@
+record at 1, overtaken at 4: D(q) / (10.16 jump) median 2.3; detector threshold / x_r 0.966; partial wipe at q on 0.66 of lists (margin median 8.6, right 0.973) vs full wipe (margin 9.7, right 0.982); late gate at q+1 / D(q) median 2.668
+record at 2, overtaken at 5: D(q) / (10.16 jump) median 2.2; detector threshold / x_r 0.968; partial wipe at q on 0.55 of lists (margin median 6.8, right 0.946) vs full wipe (margin 9.3, right 0.983); late gate at q+1 / D(q) median 2.718
+record at 3, overtaken at 6: D(q) / (10.16 jump) median 2.2; detector threshold / x_r 0.970; partial wipe at q on 0.49 of lists (margin median 5.9, right 0.943) vs full wipe (margin 7.6, right 0.988); late gate at q+1 / D(q) median 2.706
+record at 4, overtaken at 7: D(q) / (10.16 jump) median 2.2; detector threshold / x_r 0.971; partial wipe at q on 0.45 of lists (margin median 4.6, right 0.932) vs full wipe (margin 5.8, right 0.992); late gate at q+1 / D(q) median 2.700

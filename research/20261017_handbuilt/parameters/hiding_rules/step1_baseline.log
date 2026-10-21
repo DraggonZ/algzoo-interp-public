@@ -1,0 +1,41 @@
+account's formulas (should match gao/sim_tolerance.log):
+  neuron 1:   5 constants, rms 1.846 (1.00x better than the account), replaced: accuracy 0.6769, KL 4.4211
+  neuron 6:   5 constants, rms 1.968 (1.00x better than the account), replaced: accuracy 0.6489, KL 6.2310
+  neuron 7:   5 constants, rms 0.628 (1.00x better than the account), replaced: accuracy 0.7466, KL 4.0595
+  neuron 8:   5 constants, rms 2.133 (1.00x better than the account), replaced: accuracy 0.5500, KL 10.9680
+
+neuron 1: parts of its input (rms over all steps), and how much of each part the account's features explain
+  input      rms  10.564   unexplained rms  0.000
+  store      rms   9.899   unexplained rms  2.356
+  detector   rms   3.711   unexplained rms  2.576
+  keep gate  rms   0.774   unexplained rms  0.569
+  late gate  rms   0.588   unexplained rms  0.451
+  hiding     rms   4.885   unexplained rms  2.869
+  memory     rms   1.251   unexplained rms  0.419
+
+neuron 6: parts of its input (rms over all steps), and how much of each part the account's features explain
+  input      rms  10.994   unexplained rms  0.000
+  store      rms  10.514   unexplained rms  2.470
+  detector   rms   0.201   unexplained rms  0.139
+  keep gate  rms   0.252   unexplained rms  0.185
+  late gate  rms   0.548   unexplained rms  0.423
+  hiding     rms   1.347   unexplained rms  1.074
+  memory     rms   1.418   unexplained rms  0.515
+
+neuron 7: parts of its input (rms over all steps), and how much of each part the account's features explain
+  input      rms  13.167   unexplained rms  0.000
+  store      rms  13.240   unexplained rms  3.136
+  detector   rms   5.608   unexplained rms  3.838
+  keep gate  rms   0.015   unexplained rms  0.011
+  late gate  rms   0.002   unexplained rms  0.002
+  hiding     rms   0.748   unexplained rms  0.526
+  memory     rms   0.946   unexplained rms  0.551
+
+neuron 8: parts of its input (rms over all steps), and how much of each part the account's features explain
+  input      rms  12.311   unexplained rms  0.000
+  store      rms  12.290   unexplained rms  2.945
+  detector   rms   0.177   unexplained rms  0.119
+  keep gate  rms   0.112   unexplained rms  0.085
+  late gate  rms   0.059   unexplained rms  0.047
+  hiding     rms   6.425   unexplained rms  3.292
+  memory     rms   1.852   unexplained rms  0.822

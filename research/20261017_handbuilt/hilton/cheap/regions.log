@@ -1,0 +1,5 @@
+probability mass: A 1.14 points, B 5.16, C 93.70
+ ARC: error points A 0.84 (right in A: 0.301), B 0.08, C: band23 1.85 band12 0.57 both 1.33 rest 0.02; total 4.68
+ 200: error points A 0.67 (right in A: 0.471), B 0.05, C: band23 1.71 band12 1.40 both 2.53 rest 0.07; total 6.44
+ 208: error points A 0.92 (right in A: 0.220), B 0.35, C: band23 1.74 band12 4.57 both 7.10 rest 0.10; total 14.79
+ 212: error points A 0.75 (right in A: 0.386), B 0.46, C: band23 3.18 band12 2.44 both 8.53 rest 0.19; total 15.56

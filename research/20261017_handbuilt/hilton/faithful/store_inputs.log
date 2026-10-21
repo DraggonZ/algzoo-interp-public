@@ -1,0 +1,34 @@
+== row 2 (store); input weight +0.015
+   from  0: weight -0.084  effect  0.892  accuracy without it  86.87%
+   from  1: weight -0.102  effect  1.487  accuracy without it  73.86%
+   from  2: weight +0.969  effect 20.754  accuracy without it  26.89%
+   from  3: weight +0.039  effect  0.173  accuracy without it  94.21%
+   from  4: weight +1.731  effect  7.485  accuracy without it  23.74%
+   from  5: weight -0.010  effect  0.070  accuracy without it  95.17%
+   from  6: weight -0.103  effect  1.546  accuracy without it  72.39%
+   from  7: weight +0.023  effect  0.443  accuracy without it  89.72%
+   from  8: weight +0.155  effect  2.359  accuracy without it  72.17%
+   from  9: weight -0.229  effect  0.203  accuracy without it  94.32%
+   from 10: weight +0.015  effect  0.258  accuracy without it  91.34%
+   from 11: weight +0.018  effect  0.234  accuracy without it  92.02%
+   from 12: weight +0.055  effect  0.703  accuracy without it  86.75%
+   from 13: weight +0.040  effect  0.314  accuracy without it  91.52%
+   from 14: weight +0.027  effect  0.369  accuracy without it  91.72%
+   from 15: weight -0.047  effect  0.352  accuracy without it  94.19%
+== row 4 (detector); input weight +10.157
+   from  0: weight +0.035  effect  0.378  accuracy without it  94.94%
+   from  1: weight +0.036  effect  0.519  accuracy without it  94.05%
+   from  2: weight -0.492  effect 10.546  accuracy without it  68.01%
+   from  3: weight -0.003  effect  0.015  accuracy without it  95.23%
+   from  4: weight -0.986  effect  4.263  accuracy without it  86.07%
+   from  5: weight +0.002  effect  0.012  accuracy without it  95.23%
+   from  6: weight +0.093  effect  1.407  accuracy without it  90.91%
+   from  7: weight -0.029  effect  0.573  accuracy without it  94.16%
+   from  8: weight -0.082  effect  1.245  accuracy without it  91.91%
+   from  9: weight +0.083  effect  0.074  accuracy without it  95.18%
+   from 10: weight -0.007  effect  0.111  accuracy without it  95.16%
+   from 11: weight -0.012  effect  0.162  accuracy without it  95.10%
+   from 12: weight -0.059  effect  0.751  accuracy without it  94.04%
+   from 13: weight -0.027  effect  0.209  accuracy without it  95.05%
+   from 14: weight -0.033  effect  0.448  accuracy without it  94.63%
+   from 15: weight -0.011  effect  0.083  accuracy without it  95.21%

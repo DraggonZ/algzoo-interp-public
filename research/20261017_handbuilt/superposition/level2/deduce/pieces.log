@@ -1,0 +1,16 @@
+2,000,000 random lists; accuracy 0.9532; distinct pattern sequences 931,058; seen once 734,262
+  most common sequences covering 25% of lists: 6,146
+  most common sequences covering 50% of lists: 76,867
+  most common sequences covering 75% of lists: 431,058
+  most common sequences covering 90% of lists: 731,058
+wrong lists 93,642: distinct sequences 72,680; share of wrong lists whose sequence is seen once overall 0.52
+  step 0: distinct patterns     2
+  step 1: distinct patterns    32
+  step 2: distinct patterns   170
+  step 3: distinct patterns   377
+  step 4: distinct patterns   640
+  step 5: distinct patterns   884
+  step 6: distinct patterns   917
+  step 7: distinct patterns   887
+  step 8: distinct patterns   887
+  step 9: distinct patterns   923

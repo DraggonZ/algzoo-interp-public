@@ -1,0 +1,6 @@
+r1 q4 (n=2721): M =  3.34 x_r +131.51 (x_q - x_r) +0.83  (variance matched 0.55); right 0.98
+r2 q5 (n=2712): M =  3.61 x_r +122.91 (x_q - x_r) -0.18  (variance matched 0.54); right 0.96
+r3 q6 (n=2815): M =  3.27 x_r +92.79 (x_q - x_r) +0.12  (variance matched 0.49); right 0.97
+r4 q7 (n=2706): M =  2.55 x_r +80.85 (x_q - x_r) -0.13  (variance matched 0.52); right 0.97
+r2 q8 (n=2709): M =  0.51 x_r +110.81 (x_q - x_r) +0.10  (variance matched 0.57); right 0.89
+r5 q8 (n=2724): M =  0.85 x_r +56.29 (x_q - x_r) +0.28  (variance matched 0.42); right 0.92

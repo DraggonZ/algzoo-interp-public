@@ -1,0 +1,3 @@
+ARC                    angle change vs ARC per position:    +0    +0    +0    +0    +0    +0    +0    +0    +0    +0 | spoke length / ARC: 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00
+second before largest  angle change vs ARC per position:    +2    +1    +1    +1    +1    +1    +3    +0    +3    -2 | spoke length / ARC: 1.01 1.01 1.01 1.01 1.03 1.02 1.02 1.02 0.99 1.03
+second after largest   angle change vs ARC per position:    -1    -1    -1    -1    -1    -2    -1    +0    -0    +0 | spoke length / ARC: 0.99 1.00 1.01 1.01 1.01 1.01 1.01 1.02 1.02 1.10

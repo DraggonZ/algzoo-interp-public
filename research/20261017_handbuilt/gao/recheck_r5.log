@@ -1,0 +1,10 @@
+(1) gate off one step after a later positive second-largest (78827 lists): accuracy 0.960 -> 0.001
+(2) second an overtaken record, third right after it (9991 lists): trained 0.966, twin 0.831
+(3) cancellers from 'account': output error 2.58 margins, accuracy 0.559
+(3) cancellers from 'wave from m2': output error 3.01 margins, accuracy 0.426
+(3) cancellers from 'no wave': output error 3.45 margins, accuracy 0.181
+(3) cancellers from 'wrong angle': output error 3.55 margins, accuracy 0.386
+(3) cancellers' true values scaled 1.02: output error 0.36 margins, accuracy 0.930
+(3) cancellers' true values scaled 1.05: output error 0.94 margins, accuracy 0.865
+(3) cancellers' true values scaled 1.10: output error 2.03 margins, accuracy 0.749
+(3) cancellers' true values scaled 1.20: output error 4.70 margins, accuracy 0.552

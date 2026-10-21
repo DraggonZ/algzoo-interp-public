@@ -1,0 +1,6 @@
+gap 3-12%: real lead median 5.970, predicted mean median 6.043; real minus predicted mean: median +0.023; spread of (real - predicted mean) 7.537 against predicted spread median 1.398
+   largest/second 1-1.2: third wins observed 2.41%, predicted 3.95%
+   largest/second 1.2-1.5: third wins observed 2.17%, predicted 3.20%
+   largest/second 1.5-2: third wins observed 2.63%, predicted 3.59%
+   largest/second 2-3: third wins observed 3.76%, predicted 5.53%
+   largest/second 3-100: third wins observed 6.09%, predicted 9.65%

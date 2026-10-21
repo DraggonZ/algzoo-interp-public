@@ -1,0 +1,38 @@
+ARC        16 neurons: cancellation   28.4, accuracy 95.33%, drop with 0.5% noise on the final state  22.4 points
+run3 100   16 neurons: cancellation   36.8, accuracy 94.80%, drop with 0.5% noise on the final state  25.4 points
+run3 101   16 neurons: cancellation   45.6, accuracy 91.29%, drop with 0.5% noise on the final state  24.3 points
+run3 102   16 neurons: cancellation   53.1, accuracy 91.21%, drop with 0.5% noise on the final state  26.4 points
+run3 103   16 neurons: cancellation   31.7, accuracy 95.32%, drop with 0.5% noise on the final state  32.0 points
+run3 104   16 neurons: cancellation   77.9, accuracy 91.02%, drop with 0.5% noise on the final state  29.0 points
+run3 105   16 neurons: cancellation   94.0, accuracy 89.77%, drop with 0.5% noise on the final state  36.8 points
+run3 106   16 neurons: cancellation   38.4, accuracy 94.81%, drop with 0.5% noise on the final state  29.5 points
+run3 107   16 neurons: cancellation   70.5, accuracy 92.09%, drop with 0.5% noise on the final state  32.5 points
+run3 108   16 neurons: cancellation   33.3, accuracy 93.91%, drop with 0.5% noise on the final state  25.2 points
+run3 109   16 neurons: cancellation   66.9, accuracy 94.00%, drop with 0.5% noise on the final state  30.1 points
+run3 110   16 neurons: cancellation  105.5, accuracy 91.15%, drop with 0.5% noise on the final state  42.7 points
+run3 111   16 neurons: cancellation   25.3, accuracy 95.99%, drop with 0.5% noise on the final state  24.9 points
+run3 112   16 neurons: cancellation  135.1, accuracy 91.37%, drop with 0.5% noise on the final state  46.6 points
+run3 113   16 neurons: cancellation   40.8, accuracy 90.43%, drop with 0.5% noise on the final state  21.4 points
+run3 114   16 neurons: cancellation   85.8, accuracy 89.69%, drop with 0.5% noise on the final state  30.4 points
+run3 115   16 neurons: cancellation   34.3, accuracy 95.14%, drop with 0.5% noise on the final state  38.5 points
+run3 200   16 neurons: cancellation   44.6, accuracy 93.24%, drop with 0.5% noise on the final state  31.5 points
+run3 201   16 neurons: cancellation   39.2, accuracy 94.39%, drop with 0.5% noise on the final state  31.8 points
+run3 202   16 neurons: cancellation   57.0, accuracy 89.69%, drop with 0.5% noise on the final state  26.8 points
+run3 203   16 neurons: cancellation   31.8, accuracy 89.85%, drop with 0.5% noise on the final state  19.5 points
+run3 204   16 neurons: cancellation  114.2, accuracy 88.96%, drop with 0.5% noise on the final state  33.7 points
+run3 205   16 neurons: cancellation   28.5, accuracy 93.50%, drop with 0.5% noise on the final state  47.5 points
+run3 206   16 neurons: cancellation   39.3, accuracy 91.29%, drop with 0.5% noise on the final state  24.3 points
+run3 207   16 neurons: cancellation  103.2, accuracy 91.00%, drop with 0.5% noise on the final state  38.8 points
+run3 208   16 neurons: cancellation   18.6, accuracy 83.91%, drop with 0.5% noise on the final state  36.0 points
+run3 209   16 neurons: cancellation   31.8, accuracy 95.80%, drop with 0.5% noise on the final state  25.0 points
+run3 210   16 neurons: cancellation   33.2, accuracy 96.12%, drop with 0.5% noise on the final state  22.8 points
+run3 211   16 neurons: cancellation   63.0, accuracy 93.41%, drop with 0.5% noise on the final state  30.6 points
+run3 212   16 neurons: cancellation   74.1, accuracy 84.42%, drop with 0.5% noise on the final state  23.6 points
+run3 213   16 neurons: cancellation   15.8, accuracy 93.76%, drop with 0.5% noise on the final state  48.2 points
+run3 214   16 neurons: cancellation   37.8, accuracy 94.89%, drop with 0.5% noise on the final state  31.5 points
+run3 215   16 neurons: cancellation   45.0, accuracy 92.48%, drop with 0.5% noise on the final state  26.7 points
+16 bo5     16 neurons: cancellation   36.2, accuracy 94.83%, drop with 0.5% noise on the final state  40.3 points
+20         20 neurons: cancellation   37.0, accuracy 97.89%, drop with 0.5% noise on the final state  30.6 points
+32 bo5     32 neurons: cancellation    7.6, accuracy 99.45%, drop with 0.5% noise on the final state   5.4 points
+32 long    32 neurons: cancellation   12.7, accuracy 99.25%, drop with 0.5% noise on the final state   7.4 points
+rank correlation between cancellation and the drop, all 37 networks: 0.30; 16-neuron networks only: 0.19

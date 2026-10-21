@@ -1,0 +1,13 @@
+trained accuracy on these lists 0.953
+role claims   store+detector : KL 0.056 acc 0.942 agree 0.973
+role claims   cancellers     : KL 0.185 acc 0.932 agree 0.947
+role claims   keep gate      : KL 0.284 acc 0.914 agree 0.939
+role claims   late gate      : KL 0.040 acc 0.943 agree 0.979
+role claims   memory         : KL 0.027 acc 0.948 agree 0.977
+role claims   all            : KL 0.345 acc 0.913 agree 0.925
+memory claim  store+detector : KL 0.001 acc 0.953 agree 0.996
+memory claim  cancellers     : KL 0.012 acc 0.952 agree 0.985
+memory claim  keep gate      : KL 0.016 acc 0.949 agree 0.983
+memory claim  late gate      : KL 0.000 acc 0.953 agree 0.998
+memory claim  memory         : KL 0.028 acc 0.948 agree 0.976
+memory claim  all            : KL 0.030 acc 0.949 agree 0.975

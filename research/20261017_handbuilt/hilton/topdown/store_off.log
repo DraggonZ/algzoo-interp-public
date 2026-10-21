@@ -1,0 +1,14 @@
+/data/output/research/algzoo/20261017_handbuilt/hilton/topdown/store_off.py:12: RuntimeWarning: Mean of empty slice.
+  print(f"age {a}: store off on {100*off.mean():.1f}% | by P/L: " + "  ".join(f"[{lo:.1f},{hi:.1f}) {100*off[(ratio>=lo)&(ratio<hi)].mean():.0f}%" for lo, hi in zip(bins[:-1], bins[1:])))
+/opt/venv/lib/python3.12/site-packages/numpy/_core/_methods.py:144: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+age 4: store off on 0.0% | by P/L: [-9.0,0.0) nan%  [0.0,0.5) 0%  [0.5,0.7) 0%  [0.7,0.8) 0%  [0.8,0.9) 0%  [0.9,1.0) 0%
+        by the largest number since / L: [-9.0,0.0) 0%  [0.0,0.5) 0%  [0.5,0.7) 0%  [0.7,0.8) 0%  [0.8,0.9) 0%  [0.9,1.0) 0%
+age 5: store off on 0.0% | by P/L: [-9.0,0.0) nan%  [0.0,0.5) 0%  [0.5,0.7) 0%  [0.7,0.8) 0%  [0.8,0.9) 0%  [0.9,1.0) 0%
+        by the largest number since / L: [-9.0,0.0) 0%  [0.0,0.5) 0%  [0.5,0.7) 0%  [0.7,0.8) 0%  [0.8,0.9) 0%  [0.9,1.0) 0%
+age 6: store off on 0.0% | by P/L: [-9.0,0.0) nan%  [0.0,0.5) 0%  [0.5,0.7) 0%  [0.7,0.8) 0%  [0.8,0.9) 0%  [0.9,1.0) 0%
+        by the largest number since / L: [-9.0,0.0) 0%  [0.0,0.5) 0%  [0.5,0.7) 0%  [0.7,0.8) 0%  [0.8,0.9) 0%  [0.9,1.0) 0%
+age 7: store off on 0.0% | by P/L: [-9.0,0.0) nan%  [0.0,0.5) 0%  [0.5,0.7) 0%  [0.7,0.8) 0%  [0.8,0.9) 0%  [0.9,1.0) 0%
+        by the largest number since / L: [-9.0,0.0) 0%  [0.0,0.5) 0%  [0.5,0.7) 0%  [0.7,0.8) 0%  [0.8,0.9) 0%  [0.9,1.0) 0%
+age 8: store off on 0.0% | by P/L: [-9.0,0.0) nan%  [0.0,0.5) 0%  [0.5,0.7) 0%  [0.7,0.8) 0%  [0.8,0.9) 0%  [0.9,1.0) 0%
+        by the largest number since / L: [-9.0,0.0) 0%  [0.0,0.5) 0%  [0.5,0.7) 0%  [0.7,0.8) 0%  [0.8,0.9) 0%  [0.9,1.0) 0%

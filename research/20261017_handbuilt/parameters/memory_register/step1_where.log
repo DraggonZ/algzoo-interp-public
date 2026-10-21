@@ -1,0 +1,48 @@
+
+t=3: median relative error 1.73
+  memory all on now and along continuation: 0.00 of lists, median error nan
+  neuron  0: off at step t 0.38, off somewhere along continuation 0.58, median error then 1.74
+  neuron  3: off at step t 0.13, off somewhere along continuation 0.56, median error then 1.90
+  neuron 10: off at step t 0.00, off somewhere along continuation 0.92, median error then 1.66
+  neuron 11: off at step t 0.02, off somewhere along continuation 0.80, median error then 1.74
+  neuron 12: off at step t 0.06, off somewhere along continuation 0.18, median error then 1.66
+  neuron 13: off at step t 0.06, off somewhere along continuation 0.14, median error then 2.23
+  neuron 14: off at step t 0.29, off somewhere along continuation 0.37, median error then 2.16
+  neuron 15: off at step t 0.01, off somewhere along continuation 0.99, median error then 1.74
+  most common final on/off of the other neurons along continuation (off listed): [([4, 5, 9], 0.9), ([4, 9], 0.1)]
+
+t=5: median relative error 1.21
+  memory all on now and along continuation: 0.00 of lists, median error 0.81
+  neuron  0: off at step t 0.23, off somewhere along continuation 0.40, median error then 1.47
+  neuron  3: off at step t 0.25, off somewhere along continuation 0.66, median error then 1.42
+  neuron 10: off at step t 0.00, off somewhere along continuation 0.77, median error then 1.26
+  neuron 11: off at step t 0.02, off somewhere along continuation 0.87, median error then 1.29
+  neuron 12: off at step t 0.05, off somewhere along continuation 0.19, median error then 1.28
+  neuron 13: off at step t 0.01, off somewhere along continuation 0.04, median error then 0.99
+  neuron 14: off at step t 0.08, off somewhere along continuation 0.08, median error then 1.06
+  neuron 15: off at step t 0.50, off somewhere along continuation 0.74, median error then 1.34
+  most common final on/off of the other neurons along continuation (off listed): [([4, 5, 9], 0.83), ([4, 9], 0.17), ([1, 4, 9], 0.0)]
+
+t=7: median relative error 0.69
+  memory all on now and along continuation: 0.00 of lists, median error 0.44
+  neuron  0: off at step t 0.17, off somewhere along continuation 0.29, median error then 1.04
+  neuron  3: off at step t 0.34, off somewhere along continuation 0.38, median error then 0.94
+  neuron 10: off at step t 0.15, off somewhere along continuation 0.46, median error then 0.71
+  neuron 11: off at step t 0.14, off somewhere along continuation 0.41, median error then 0.70
+  neuron 12: off at step t 0.07, off somewhere along continuation 0.07, median error then 0.61
+  neuron 13: off at step t 0.01, off somewhere along continuation 0.03, median error then 0.69
+  neuron 14: off at step t 0.02, off somewhere along continuation 0.02, median error then 0.88
+  neuron 15: off at step t 0.33, off somewhere along continuation 0.31, median error then 1.11
+  most common final on/off of the other neurons along continuation (off listed): [([4, 5, 9], 0.92), ([4, 9], 0.08), ([2, 4, 9], 0.0)]
+
+t=9: median relative error 0.37
+  memory all on now and along continuation: 0.26 of lists, median error 0.16
+  neuron  0: off at step t 0.13, off somewhere along continuation 0.12, median error then 0.94
+  neuron  3: off at step t 0.16, off somewhere along continuation 0.13, median error then 0.54
+  neuron 10: off at step t 0.15, off somewhere along continuation 0.13, median error then 0.38
+  neuron 11: off at step t 0.12, off somewhere along continuation 0.11, median error then 0.60
+  neuron 12: off at step t 0.03, off somewhere along continuation 0.01, median error then 0.28
+  neuron 13: off at step t 0.01, off somewhere along continuation 0.01, median error then 0.23
+  neuron 14: off at step t 0.01, off somewhere along continuation 0.01, median error then 0.73
+  neuron 15: off at step t 0.14, off somewhere along continuation 0.10, median error then 0.81
+  most common final on/off of the other neurons along continuation (off listed): [([4, 5, 9], 0.7), ([4, 9], 0.18), ([4], 0.12)]

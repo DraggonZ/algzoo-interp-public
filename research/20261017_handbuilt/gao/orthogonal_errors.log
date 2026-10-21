@@ -1,0 +1,5 @@
+network 0.954
+errors 1% of typical values: as drawn 0.943; orthogonal to g 0.945; along g 0.828 | first-order predicted: as drawn 0.916; orthogonal 0.954; along g 0.560
+errors 2% of typical values: as drawn 0.916; orthogonal to g 0.922; along g 0.688 | first-order predicted: as drawn 0.857; orthogonal 0.954; along g 0.511
+errors 5% of typical values: as drawn 0.799; orthogonal to g 0.815; along g 0.531 | first-order predicted: as drawn 0.739; orthogonal 0.954; along g 0.496
+errors 10% of typical values: as drawn 0.636; orthogonal to g 0.655; along g 0.453 | first-order predicted: as drawn 0.650; orthogonal 0.954; along g 0.493

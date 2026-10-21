@@ -1,0 +1,12 @@
+v22a linear: accuracy 94.21%
+   S>0, S at 0-7      |D_L + margin| median 0.0003, 99th pct 0.001, share > 0.01 0.01%
+   S>0, S at 8, L<8   |D_L + margin| median 0.0006, 99th pct 0.001, share > 0.01 0.00%
+   S>0, S at 9, L<9   |D_L + margin| median 0.2548, 99th pct 1.359, share > 0.01 97.31%
+   S>0, L at 8        |D_L + margin| median 0.0002, 99th pct 0.778, share > 0.01 10.93%
+   S>0, L at 9        |D_L + margin| median 0.0002, 99th pct 0.001, share > 0.01 0.02%
+v22a ARC shape: accuracy 94.20%
+   S>0, S at 0-7      |D_L + margin| median 0.0003, 99th pct 0.001, share > 0.01 0.01%
+   S>0, S at 8, L<8   |D_L + margin| median 0.3251, 99th pct 1.642, share > 0.01 98.02%
+   S>0, S at 9, L<9   |D_L + margin| median 0.3209, 99th pct 1.635, share > 0.01 97.94%
+   S>0, L at 8        |D_L + margin| median 0.0002, 99th pct 0.883, share > 0.01 10.97%
+   S>0, L at 9        |D_L + margin| median 0.0002, 99th pct 0.001, share > 0.01 0.02%

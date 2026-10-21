@@ -1,0 +1,3 @@
+designed split (clockA vs rest): group push spread 2.0, sum 2.1e-14, corr -1.00
+random 3-neuron splits: 377 of 500 push at all; among those, sum spread max 5.7e-14, correlation median -1.00
+So mirror-image pushes follow from the total being invisible; they do not single out a designed pair.

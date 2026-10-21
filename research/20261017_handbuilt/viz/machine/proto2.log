@@ -1,0 +1,15 @@
+ -126.6 0.858
+  -83.5 0.996
+  -38.3 0.815
+    0.0 1.025
+   38.3 0.815
+   83.5 0.996
+  126.6 0.858
+  180.0 0.918
+neuron  0: |angle between largest's slow arrow and neuron's mark| by age 0..8:  130   90   98   65   13   44   81  113  151
+neuron 10: |angle between largest's slow arrow and neuron's mark| by age 0..8:   19   22   13   46   98  155  168  136   98
+neuron 11: |angle between largest's slow arrow and neuron's mark| by age 0..8:   19   60   51   84  136  167  130   98   60
+neuron 12: |angle between largest's slow arrow and neuron's mark| by age 0..8:   83  124  115  148  160  103   66   34    5
+neuron 14: |angle between largest's slow arrow and neuron's mark| by age 0..8:  131   90   98   65   14   44   81  112  150
+neuron 15: |angle between largest's slow arrow and neuron's mark| by age 0..8:  116  157  148  178  127   70   33    1   37
+neuron  3: |angle between largest's slow arrow and neuron's mark| by age 0..8:  101  142  133  167  142   85   48   16   22

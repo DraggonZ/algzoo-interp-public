@@ -1,0 +1,27 @@
+base +107.8
+columns block
+  row  0 rms 0.22; net change at rel err .05/.1/.2/.4, zeros: [22.1 20.5 15.1 12.6 -0.6]
+  row  3 rms 0.62; net change at rel err .05/.1/.2/.4, zeros: [18.8 16.7 12.2  3.3 -5.6]
+  row 11 rms 0.29; net change at rel err .05/.1/.2/.4, zeros: [20.7 17.6 13.   5.4 -3.1]
+  row 12 rms 0.35; net change at rel err .05/.1/.2/.4, zeros: [17.5 17.2 11.6  6.  -4.6]
+  row 13 rms 0.39; net change at rel err .05/.1/.2/.4, zeros: [16.  14.  12.6  4.4 -5.1]
+  row 14 rms 0.26; net change at rel err .05/.1/.2/.4, zeros: [18.5 17.4 13.8  9.3 -2.3]
+  row 15 rms 0.66; net change at rel err .05/.1/.2/.4, zeros: [21.5 17.3 12.6  8.5 -5.3]
+columns 1,6,7,8
+  row  0 rms 0.87; net change at rel err .05/.1/.2/.4, zeros: [10.8  8.   5.9  3.5 -3.9]
+  row  3 rms 0.86; net change at rel err .05/.1/.2/.4, zeros: [ 9.3  7.1  4.7  1.3 -3.9]
+  row 10 rms 0.21; net change at rel err .05/.1/.2/.4, zeros: [11.7 11.6 11.2  9.9 -0.8]
+  row 11 rms 0.34; net change at rel err .05/.1/.2/.4, zeros: [ 8.8  8.7  5.1  2.4 -5.1]
+  row 12 rms 0.28; net change at rel err .05/.1/.2/.4, zeros: [ 8.6  8.   4.4  0.9 -4.4]
+  row 13 rms 0.19; net change at rel err .05/.1/.2/.4, zeros: [ 7.5  6.3  4.8  1.4 -2.7]
+  row 14 rms 0.53; net change at rel err .05/.1/.2/.4, zeros: [ 7.3  5.   3.9  1.2 -6. ]
+  row 15 rms 0.53; net change at rel err .05/.1/.2/.4, zeros: [ 8.   6.5  3.1 -1.6 -6. ]
+columns 4
+  row  0 rms 0.59; net change at rel err .05/.1/.2/.4, zeros: [-3.  -3.6 -4.2 -4.2 -6. ]
+  row  3 rms 0.34; net change at rel err .05/.1/.2/.4, zeros: [-3.5 -3.5 -4.2 -5.2 -5.8]
+  row 10 rms 1.76; net change at rel err .05/.1/.2/.4, zeros: [  9.1   8.    5.5  -8.7 -15.7]
+  row 11 rms 1.71; net change at rel err .05/.1/.2/.4, zeros: [ 2.3  1.9  2.3  1.4 -0.7]
+  row 12 rms 1.28; net change at rel err .05/.1/.2/.4, zeros: [-0.9 -1.2 -1.2 -2.1 -3.7]
+  row 13 rms 0.46; net change at rel err .05/.1/.2/.4, zeros: [-3.7 -3.7 -3.9 -3.8 -6. ]
+  row 14 rms 0.87; net change at rel err .05/.1/.2/.4, zeros: [-2.8 -2.9 -3.2 -3.  -5.4]
+  row 15 rms 0.18; net change at rel err .05/.1/.2/.4, zeros: [-2.6 -2.6 -3.  -3.2 -5.1]

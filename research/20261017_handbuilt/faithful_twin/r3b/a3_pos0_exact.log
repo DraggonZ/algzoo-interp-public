@@ -1,0 +1,10 @@
+level_exact 1
+score_0 - 0.99 s_9: median abs 2.220446049250313e-16
+second's score - its value (lists with second not at 0): median 1.1102230246251565e-16  10/90% [-5.68062264e-12  6.54122559e-03]
+accuracy 0.92125 ; wrong answers naming position 0: 0.0346 ; second at 0 but missed: 0.021
+score - value, non-largest positions 1-9, by position (median): [0.122 0.08  0.018 0.    0.    0.016 0.028 0.035 0.   ]
+relu part: score - (0.75 x + 0.25 relu(x)) median by position: [ 0.    -0.    -0.    -0.    -0.    -0.    -0.    -0.    -0.029]
+wrong-0 lists: second <= 0: 0.00355 ; second > 0: 0.03105
+  of these, the second was an overtaken largest (largest after it): 5e-05 ; second's score / value median: 0.2911534358985003
+  position of the second in these lists: [  0   0   0   0   1   0 215 405   0   0] ; position of the largest: [412 208   0   0   0   0   1   0   0   0]
+second at 0 missed: named a position before the largest: 0.0178 ; after: 0.0005 ; the largest: 0.0027

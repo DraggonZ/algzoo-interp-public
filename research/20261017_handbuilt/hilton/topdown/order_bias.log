@@ -1,0 +1,14 @@
+near ties on ordinary lists: third within 5% of the second; share naming the third
+group               share    ARC  trained    v18
+all                100.0%   20.7%   21.2%    7.9%
+T after S           50.0%   23.8%   26.4%   14.7%
+T before S          50.0%   17.6%   16.0%    1.1%
+S right after L     10.0%   14.5%   22.7%    1.3%
+T right after L     10.0%   29.2%   22.5%    0.0%
+both after L        33.3%   25.5%   24.3%    0.0%
+both before L       33.3%   12.6%   17.3%   22.4%
+L between           33.3%   24.0%   22.0%    1.3%
+T at step 9         10.0%   37.9%   37.3%    0.0%
+S at step 9         10.0%   20.1%   16.1%    1.3%
+T at step 8         10.0%   31.9%   30.7%    0.0%
+S at step 8         10.0%   25.1%   22.4%    1.1%

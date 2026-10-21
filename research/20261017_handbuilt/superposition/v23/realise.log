@@ -1,0 +1,8 @@
+spread memory, shared level 4.0 m1 accuracy 95.72% | third wins  1.4% of near ties | lead maps covering half     47 | tree 99.7% vs guess 98.6%,  79% of the possible gain
+spread memory, shared level 3.0 m1 accuracy 95.48% | third wins  1.6% of near ties | lead maps covering half     47 | tree 99.6% vs guess 98.4%,  73% of the possible gain
+spread memory, shared level 2.0 m1 accuracy 94.01% | third wins  3.0% of near ties | lead maps covering half     51 | tree 98.0% vs guess 97.0%,  34% of the possible gain
+spread memory, shared level 1.5 m1 accuracy 88.51% | third wins 13.2% of near ties | lead maps covering half     77 | tree 90.9% vs guess 86.8%,  31% of the possible gain
+hiding gain 100                    accuracy 95.03% | third wins  3.1% of near ties | lead maps covering half     48 | tree 98.9% vs guess 96.9%,  65% of the possible gain
+hiding gain 30                     accuracy 93.38% | third wins  6.5% of near ties | lead maps covering half     50 | tree 97.8% vs guess 93.5%,  66% of the possible gain
+hiding gain 10                     accuracy 89.50% | third wins 15.0% of near ties | lead maps covering half     58 | tree 94.5% vs guess 85.0%,  64% of the possible gain
+hiding gain 10 + spread memory, level 2 accuracy 88.05% | third wins 15.9% of near ties | lead maps covering half     64 | tree 92.8% vs guess 84.1%,  55% of the possible gain

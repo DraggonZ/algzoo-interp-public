@@ -1,0 +1,4 @@
+second 0, largest 9 (fails 4%)   lead per unit of second, median +21.32 | parts of the lead (median): store -22.17 detector  +0.00 late gate  -0.00 hiding  +0.00 memory +47.47
+second 0, largest 8 (works)      lead per unit of second, median +32.25 | parts of the lead (median): store -30.00 detector  +3.75 late gate  -5.74 hiding  +6.83 memory +47.61
+second 1, largest 9 (works)      lead per unit of second, median +30.16 | parts of the lead (median): store -35.07 detector  +0.00 late gate  -0.00 hiding  +0.00 memory +65.66
+second 0, largest 7 (fails 1%)   lead per unit of second, median +30.09 | parts of the lead (median): store -31.38 detector  +0.00 late gate  -0.00 hiding -22.16 memory +93.06

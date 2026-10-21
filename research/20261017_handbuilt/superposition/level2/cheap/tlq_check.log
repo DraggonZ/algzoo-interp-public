@@ -1,0 +1,9 @@
+ARC m 1: mean over 8 seeds 95.320 (true 95.317), spread (SD) 0.243, RMS error 0.243; cost 2648 lists; sampling SE at that cost 0.411  4s
+ARC m 4: mean over 8 seeds 95.304 (true 95.317), spread (SD) 0.101, RMS error 0.102; cost 11178 lists; sampling SE at that cost 0.200  4s
+ARC m 16: mean over 8 seeds 95.363 (true 95.317), spread (SD) 0.078, RMS error 0.090; cost 43445 lists; sampling SE at that cost 0.101  4s
+203 m 1: mean over 8 seeds 89.867 (true 89.878), spread (SD) 0.325, RMS error 0.325; cost 2610 lists; sampling SE at that cost 0.590  3s
+203 m 4: mean over 8 seeds 89.781 (true 89.878), spread (SD) 0.198, RMS error 0.220; cost 10798 lists; sampling SE at that cost 0.290  4s
+203 m 16: mean over 8 seeds 90.015 (true 89.878), spread (SD) 0.111, RMS error 0.176; cost 42175 lists; sampling SE at that cost 0.147  5s
+208 m 1: mean over 8 seeds 84.247 (true 84.031), spread (SD) 0.444, RMS error 0.494; cost 3416 lists; sampling SE at that cost 0.627  4s
+208 m 4: mean over 8 seeds 84.119 (true 84.031), spread (SD) 0.181, RMS error 0.201; cost 13720 lists; sampling SE at that cost 0.313  5s
+208 m 16: mean over 8 seeds 84.278 (true 84.031), spread (SD) 0.099, RMS error 0.266; cost 55628 lists; sampling SE at that cost 0.155  5s

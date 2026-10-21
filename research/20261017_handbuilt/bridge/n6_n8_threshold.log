@@ -1,0 +1,9 @@
+x / previous largest:  [-9.00,0.00)  [0.00,0.25)  [0.25,0.50)  [0.50,0.65)  [0.65,0.75)  [0.75,0.85)  [0.85,0.95)  [0.95,1.05)  [1.05,9.00)
+   neuron 6 off share:        0.00         0.00         0.00         0.01         0.03         0.09         0.30         0.90         1.00
+   neuron 8 off share:        0.00         0.00         0.00         0.00         0.01         0.02         0.10         0.38         1.00
+   neuron 1 off share:        0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.55
+   neuron 7 off share:        0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.00         0.48
+   neuron 6 pre-activation at r+1 =  11.05 p +  -0.50 new largest + -11.00 x  (variance matched 1.00)
+   neuron 8 pre-activation at r+1 =  13.05 p +  -0.39 new largest + -12.31 x  (variance matched 1.00)
+   neuron 1 pre-activation at r+1 =   1.76 p +   8.80 new largest + -10.56 x  (variance matched 1.00)
+   neuron 7 pre-activation at r+1 =  -0.10 p +  13.41 new largest + -13.17 x  (variance matched 1.00)

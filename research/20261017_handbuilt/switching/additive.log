@@ -1,0 +1,21 @@
+== neuron 15
+   A        fitted numbers   12  agreement 0.778  alone -7.18
+   A+B      fitted numbers   23  agreement 0.779  alone -4.02
+   A+B+C    fitted numbers   34  agreement 0.823  alone -2.86
+   A+B+C+S  fitted numbers   43  agreement 0.834  alone -2.23
+   AxB      fitted numbers  102  agreement 0.842  alone -2.12
+   AxB+C    fitted numbers  113  agreement 0.861  alone -1.50
+== neuron 3
+   A        fitted numbers   12  agreement 0.817  alone -1.03
+   A+B      fitted numbers   23  agreement 0.849  alone -0.15
+   A+B+C    fitted numbers   34  agreement 0.877  alone -0.28
+   A+B+C+S  fitted numbers   43  agreement 0.885  alone -0.24
+   AxB      fitted numbers  102  agreement 0.864  alone +0.04
+   AxB+C    fitted numbers  113  agreement 0.890  alone -0.16
+== neuron 14
+   A        fitted numbers   12  agreement 0.911  alone -0.24
+   A+B      fitted numbers   23  agreement 0.952  alone -2.03
+   A+B+C    fitted numbers   34  agreement 0.969  alone -0.00
+   A+B+C+S  fitted numbers   43  agreement 0.969  alone -0.02
+   AxB      fitted numbers  102  agreement 0.953  alone -2.04
+   AxB+C    fitted numbers  113  agreement 0.969  alone +0.01

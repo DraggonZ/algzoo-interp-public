@@ -1,0 +1,4 @@
+age 4, P/L in [0.0,0.5): store's weight on P median +0.71; from store itself (2) +0.72, detector (4) +0.00, cancelling (1,6,7,8) +0.25, keep gate (5) +0.00, late gate (9) +0.00, memory (0,3,10-15) -0.51
+age 4, P/L in [0.5,1.0): store's weight on P median +1.84; from store itself (2) +0.74, detector (4) +0.00, cancelling (1,6,7,8) +1.25, keep gate (5) +0.00, late gate (9) +0.00, memory (0,3,10-15) -0.10
+age 6, P/L in [0.0,0.5): store's weight on P median +1.03; from store itself (2) +0.67, detector (4) +0.00, cancelling (1,6,7,8) +0.02, keep gate (5) +0.00, late gate (9) +0.00, memory (0,3,10-15) +0.34
+age 6, P/L in [0.5,1.0): store's weight on P median +5.94; from store itself (2) +3.66, detector (4) +0.00, cancelling (1,6,7,8) +1.34, keep gate (5) +0.00, late gate (9) +0.00, memory (0,3,10-15) +0.86

@@ -1,0 +1,10 @@
+rho 4 ring 0.0: cut last-step loop False cut writes into empty cells False: 97.59   by position of the second: 95.0 99.1 97.2 97.8 97.5 97.8 97.7 97.8 97.9 98.1
+rho 4 ring 0.062: cut last-step loop False cut writes into empty cells False: 90.35   by position of the second: 96.6 99.0 97.2 97.6 97.3 97.5 92.6 73.9 53.8 98.0
+rho 4 ring 0.062: cut last-step loop True  cut writes into empty cells False: 94.46   by position of the second: 96.0 98.8 97.0 97.3 96.9 97.2 92.3 73.6 98.0 97.5
+rho 4 ring 0.062: cut last-step loop False cut writes into empty cells True : 93.01   by position of the second: 95.5 98.9 97.0 97.4 97.1 97.5 97.6 97.8 53.7 97.6
+rho 4 ring 0.062: cut last-step loop True  cut writes into empty cells True : 97.14   by position of the second: 95.0 98.7 96.7 97.1 96.8 97.2 97.3 97.6 98.0 97.1
+rho 6 ring 0.0: cut last-step loop False cut writes into empty cells False: 97.45   by position of the second: 95.1 99.1 97.6 97.8 97.7 97.8 97.5 97.2 97.4 97.5
+rho 6 ring 0.062: cut last-step loop False cut writes into empty cells False: 92.06   by position of the second: 96.3 99.0 97.6 97.7 97.8 97.7 97.3 81.1 58.9 97.4
+rho 6 ring 0.062: cut last-step loop True  cut writes into empty cells False: 95.65   by position of the second: 95.7 98.8 97.4 97.5 97.5 97.4 97.0 80.8 97.5 97.0
+rho 6 ring 0.062: cut last-step loop False cut writes into empty cells True : 93.55   by position of the second: 95.6 98.9 97.5 97.6 97.7 97.6 97.4 97.3 58.8 97.2
+rho 6 ring 0.062: cut last-step loop True  cut writes into empty cells True : 97.15   by position of the second: 95.0 98.7 97.2 97.3 97.4 97.3 97.2 97.0 97.5 96.8

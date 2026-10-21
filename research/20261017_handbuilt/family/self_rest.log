@@ -1,0 +1,2 @@
+ARC: on its own grid mistakes, with the smaller numbers redrawn: same wrong choice 62.1%, right 31.2%; on lists it gets right, still right 98.4%
+trained 209: on its own grid mistakes, with the smaller numbers redrawn: same wrong choice 65.0%, right 32.0%; on lists it gets right, still right 98.4%

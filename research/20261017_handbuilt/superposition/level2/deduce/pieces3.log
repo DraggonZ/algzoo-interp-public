@@ -1,0 +1,5 @@
+200,000 random lists; distinct second-over-third lead maps (unit length) after rounding to step p; in brackets: maps covering half the lists
+ARC (trained, 16)          p 0.01: 126,351 (26,351) | p 0.03:  92,219 (9,040) | p 0.1:  43,131 (802) | p 0.3:  11,435 (103)
+trained seed 111           p 0.01: 139,355 (39,355) | p 0.03:  95,677 (10,194) | p 0.1:  43,420 (756) | p 0.3:  11,162 (91)
+hand-built v19 kappa 0.5   p 0.01:     689 (46) | p 0.03:     688 (46) | p 0.1:     670 (46) | p 0.3:     636 (46)
+hand-built v21 (28)        p 0.01:   1,042 (48) | p 0.03:   1,029 (48) | p 0.1:     856 (48) | p 0.3:     563 (48)

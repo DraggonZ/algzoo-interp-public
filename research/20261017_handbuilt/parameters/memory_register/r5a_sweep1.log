@@ -1,0 +1,24 @@
+== S=14,15 m=2
+backpush.py: C [0.92]; structure 126; quick net +89.7
+  row relative errors: {np.str_('in10'): 0.19, np.str_('in14'): 0.14, np.str_('in15'): 0.14, np.str_('out1'): 0.18, np.str_('out2'): 0.1, np.str_('out3'): 0.1, np.str_('out4'): 0.15, np.str_('out5'): 0.21, np.str_('out6'): 0.25, np.str_('out7'): 0.25, np.str_('out8'): 0.44, np.str_('out9'): 0.27}
+== S=14,15 m=3
+backpush.py: C [0.92]; structure 126; quick net +76.7
+  row relative errors: {np.str_('in10'): 0.19, np.str_('in14'): 0.1, np.str_('in15'): 0.09, np.str_('out1'): 0.18, np.str_('out2'): 0.1, np.str_('out3'): 0.1, np.str_('out4'): 0.15, np.str_('out5'): 0.21, np.str_('out6'): 0.25, np.str_('out7'): 0.25, np.str_('out8'): 0.44, np.str_('out9'): 0.27}
+== S=14,3 m=2
+backpush.py: C [0.92]; structure 126; quick net +86.6
+  row relative errors: {np.str_('in10'): 0.19, np.str_('in14'): 0.13, np.str_('in3'): 0.21, np.str_('out1'): 0.18, np.str_('out2'): 0.1, np.str_('out3'): 0.1, np.str_('out4'): 0.15, np.str_('out5'): 0.21, np.str_('out6'): 0.25, np.str_('out7'): 0.25, np.str_('out8'): 0.44, np.str_('out9'): 0.27}
+== S=14,15,3 m=3
+backpush.py: C [0.92]; structure 134; quick net +81.1
+  row relative errors: {np.str_('in10'): 0.19, np.str_('in14'): 0.13, np.str_('in15'): 0.11, np.str_('in3'): 0.26, np.str_('out1'): 0.18, np.str_('out2'): 0.1, np.str_('out3'): 0.1, np.str_('out4'): 0.15, np.str_('out5'): 0.21, np.str_('out6'): 0.25, np.str_('out7'): 0.25, np.str_('out8'): 0.44, np.str_('out9'): 0.27}
+== S=14,15,3 m=4
+backpush.py: C [0.92]; structure 134; quick net +69.0
+  row relative errors: {np.str_('in10'): 0.19, np.str_('in14'): 0.1, np.str_('in15'): 0.08, np.str_('in3'): 0.29, np.str_('out1'): 0.18, np.str_('out2'): 0.1, np.str_('out3'): 0.1, np.str_('out4'): 0.1, np.str_('out5'): 0.21, np.str_('out6'): 0.25, np.str_('out7'): 0.25, np.str_('out8'): 0.44, np.str_('out9'): 0.27}
+== S=14,15,3,0 m=4
+backpush.py: C [0.92]; structure 141; quick net -13.4
+  row relative errors: {np.str_('in0'): 4.6, np.str_('in10'): 0.19, np.str_('in14'): 2.1, np.str_('in15'): 0.88, np.str_('in3'): 0.92, np.str_('out1'): 0.18, np.str_('out2'): 0.1, np.str_('out3'): 0.1, np.str_('out4'): 0.1, np.str_('out5'): 0.21, np.str_('out6'): 0.25, np.str_('out7'): 0.25, np.str_('out8'): 0.44, np.str_('out9'): 0.27}
+== S=14,15,3,0,12 m=5
+backpush.py: C [0.92]; structure 147; quick net -213.8
+  row relative errors: {np.str_('in0'): 85.21, np.str_('in10'): 0.19, np.str_('in12'): 27.06, np.str_('in14'): 37.61, np.str_('in15'): 23.47, np.str_('in3'): 23.54, np.str_('out1'): 0.18, np.str_('out2'): 0.1, np.str_('out3'): 0.1, np.str_('out4'): 0.1, np.str_('out5'): 0.21, np.str_('out6'): 0.25, np.str_('out7'): 0.25, np.str_('out8'): 0.44, np.str_('out9'): 0.27}
+== S=14,15,3,0,12 m=6
+backpush.py: C [0.92]; structure 147; quick net +5.5
+  row relative errors: {np.str_('in0'): 2.13, np.str_('in10'): 0.19, np.str_('in12'): 0.22, np.str_('in14'): 0.95, np.str_('in15'): 0.48, np.str_('in3'): 0.45, np.str_('out1'): 0.18, np.str_('out2'): 0.1, np.str_('out3'): 0.1, np.str_('out4'): 0.1, np.str_('out5'): 0.21, np.str_('out6'): 0.25, np.str_('out7'): 0.25, np.str_('out8'): 0.44, np.str_('out9'): 0.27}

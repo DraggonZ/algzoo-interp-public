@@ -1,0 +1,9 @@
+trained                      all 0.953 | onepos 0.224 last 0.944 step8 0.973 row 0.962 ord 0.962 | wrong: third 0.61 largest 0.15 onepos 0.18
+gamma 0.0                    all 0.634 | onepos 0.082 last 0.646 step8 0.266 row 0.498 ord 0.777 | wrong: third 0.25 largest 0.57 onepos 0.03
+gamma 0.25                   all 0.695 | onepos 0.082 last 0.622 step8 0.605 row 0.522 ord 0.821 | wrong: third 0.37 largest 0.37 onepos 0.03
+gamma 0.5                    all 0.653 | onepos 0.082 last 0.606 step8 0.663 row 0.514 ord 0.738 | wrong: third 0.35 largest 0.22 onepos 0.03
+gamma 0.75                   all 0.640 | onepos 0.082 last 0.601 step8 0.684 row 0.489 ord 0.722 | wrong: third 0.35 largest 0.14 onepos 0.03
+delay line, gamma 0.0        all 0.351 | onepos 0.111 last 0.357 step8 0.112 row 0.418 ord 0.366 | wrong: third 0.22 largest 0.31 onepos 0.02
+delay line, gamma 0.25       all 0.337 | onepos 0.111 last 0.335 step8 0.133 row 0.374 ord 0.362 | wrong: third 0.24 largest 0.16 onepos 0.01
+delay line, gamma 0.5        all 0.330 | onepos 0.111 last 0.302 step8 0.273 row 0.346 ord 0.344 | wrong: third 0.26 largest 0.04 onepos 0.01
+delay line, gamma 0.75       all 0.315 | onepos 0.111 last 0.286 step8 0.329 row 0.313 ord 0.323 | wrong: third 0.26 largest 0.01 onepos 0.01

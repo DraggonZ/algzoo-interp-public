@@ -1,0 +1,6 @@
+trained   which neurons clip (share of lists): 1 0.08, 6 1.00, 7 0.00, 8 0.96
+          clipped neurons' share of the group's sensitivity to the largest: median 0.02; of the group's value: 0.03
+          sensitivities d h / d x_r (counterfactual), median by neuron: 1 8.86, 6 0.00, 7 13.41, 8 0.00
+v18 g 10  which neurons clip (share of lists): 4 0.00, 5 1.00, 6 0.00, 3 0.00
+          clipped neurons' share of the group's sensitivity to the largest: median 0.22; of the group's value: 0.22
+          sensitivities d h / d x_r (counterfactual), median by neuron: 4 10.71, 5 9.03, 6 10.26, 3 10.50

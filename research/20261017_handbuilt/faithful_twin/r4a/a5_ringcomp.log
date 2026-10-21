@@ -1,0 +1,4 @@
+{'ring_w': 0.07, 'ring_comp': True} 89.93
+{'bw_late': True, 'ring_w': 0.07, 'ring_comp': True} 89.73
+{'bw_late': True, 'ring_w': 0.07, 'ring_comp': True, 'eps': 0.0} 89.83
+{'bw_late': True, 'ring_w': 0.062, 'ring_comp': True} 90.35

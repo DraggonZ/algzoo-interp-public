@@ -1,0 +1,6 @@
+per-neuron noise sd: [0.6036 0.7361 0.9337 0.2521 0.2838 0.4278 0.7635 0.942  0.8004 0.0574
+ 0.872  0.7015 0.6951 0.3627 0.6965 0.464 ]
+clean: 95.33%
+noise on h_10 only: 73.02%
+noise added to the state after the relu at every step: 47.14%
+variant, noise added before the relu at every step: 53.70%

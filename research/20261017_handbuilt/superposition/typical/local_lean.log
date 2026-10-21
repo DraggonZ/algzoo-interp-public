@@ -1,0 +1,33 @@
+
+== third against second: median over arrangements of lean (votes, >0 favours the wrong answer), slope, and the spread around the fit
+group                       ARC lean  v7z lean  ARC slope  v7z slope  ARC spread  v7z spread
+all                           -0.018    -0.055      -2.63      -1.29       0.086       0.123
+order LST                     +0.014    +0.005      -2.64      -4.51       0.072       0.144
+order LTS                     -0.013    -0.018      -2.28      -1.07       0.074       0.144
+order SLT                     +0.004    +0.063      -3.02      -4.58       0.087       0.095
+order TLS                     -0.016    -0.070      -2.96      -1.02       0.095       0.139
+order STL                     -0.096    -0.873      -2.02      -1.56       0.104       0.190
+order TSL                     -0.068    -0.990      -2.90      -0.88       0.088       0.078
+third at 0                    -0.011    -0.197      -3.08      -0.98       0.102       0.093
+third at 1                    -0.027    -0.170      -2.95      -1.02       0.093       0.093
+third at 2                    -0.048    -0.166      -2.63      -1.01       0.090       0.128
+third at 3                    -0.045    -0.161      -2.68      -1.11       0.086       0.150
+third at 4                    -0.049    -0.158      -2.59      -1.15       0.084       0.150
+third at 5                    -0.030    -0.071      -2.69      -1.38       0.084       0.153
+third at 6                    -0.002    -0.005      -2.71      -1.69       0.083       0.127
+third at 7                    -0.010    -0.003      -2.62      -4.46       0.075       0.154
+third at 8                    -0.002    +0.002      -2.62      -4.53       0.077       0.115
+third at 9                    +0.022    +0.201      -2.35      -4.61       0.083       0.108
+
+== largest against second (overtaking near ties): median over arrangements of lean (votes, >0 favours the wrong answer), slope, and the spread around the fit
+group                       ARC lean  v7z lean  ARC slope  v7z slope  ARC spread  v7z spread
+S before L                    -0.065    -0.952      -2.23      -2.61       0.058       0.310
+largest at 1, S before        -0.099    -1.083      -0.87      -0.65       0.051       0.132
+largest at 2, S before        -0.137    -1.037      -1.02      -1.01       0.059       0.214
+largest at 3, S before        -0.173    -1.004      -1.10      -1.33       0.072       0.274
+largest at 4, S before        -0.128    -0.921      -1.44      -1.90       0.087       0.392
+largest at 5, S before        -0.103    -0.908      -1.88      -2.38       0.079       0.521
+largest at 6, S before        -0.083    -0.870      -2.28      -2.61       0.069       0.537
+largest at 7, S before        -0.059    -0.878      -2.63      -2.40       0.059       0.510
+largest at 8, S before        -0.038    -0.882      -3.14      -2.02       0.049       0.422
+largest at 9, S before        +0.004    -4.379      -3.44 -4499998.92       0.046       0.076

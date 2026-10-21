@@ -1,0 +1,11 @@
+== partial switch at K0: 0.08 of lists have one; 23500 used
+  record stays the largest     (0.70): accuracy 0.928 -> 0.111; score change at x_j  -9.67, largest  -9.67, answer -27.73, others  +3.96; vote of x_j per unit  -51.4 ->    6.1
+  record overtaken later       (0.30): accuracy 0.867 -> 0.428; score change at x_j  +7.09, largest  +6.30, answer  +6.89, others  +0.02; vote of x_j per unit   64.0 ->   94.1
+== partial switch at K1: 0.40 of lists have one; 60000 used
+  x_j is the answer            (0.21): accuracy 0.971 -> 0.516; score change at x_j  -5.80, largest -18.39, answer  -5.80, others  +1.99; vote of x_j per unit   43.9 ->    8.4
+  x_j is the third             (0.24): accuracy 0.953 -> 0.763; score change at x_j  +4.06, largest  -1.27, answer  +1.08, others  +0.01; vote of x_j per unit   12.0 ->   10.3
+  x_j is fourth or lower       (0.56): accuracy 0.955 -> 0.902; score change at x_j  +2.86, largest  -0.44, answer  -0.20, others  -0.11; vote of x_j per unit    9.6 ->   16.6
+== partial switch at K2+: 0.54 of lists have one; 60000 used
+  x_j is the answer            (0.37): accuracy 0.969 -> 0.881; score change at x_j  +2.35, largest -15.99, answer  +2.35, others  +0.56; vote of x_j per unit   35.2 ->   61.7
+  x_j is the third             (0.28): accuracy 0.952 -> 0.702; score change at x_j  +3.83, largest  -2.11, answer  -0.00, others  +0.07; vote of x_j per unit   44.0 ->   67.3
+  x_j is fourth or lower       (0.35): accuracy 0.946 -> 0.872; score change at x_j  +1.05, largest  -0.20, answer  -0.07, others  +0.01; vote of x_j per unit   38.5 ->   63.9

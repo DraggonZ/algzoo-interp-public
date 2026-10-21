@@ -1,0 +1,6 @@
+register waves + previous true values of none                      : angle (all four on) median 1.40 deg; accuracy 0.717
+register waves + previous true values of neuron 0                  : angle (all four on) median 1.59 deg; accuracy 0.706
+register waves + previous true values of neuron 15                 : angle (all four on) median 1.52 deg; accuracy 0.670
+register waves + previous true values of neurons 0 and 15          : angle (all four on) median 1.63 deg; accuracy 0.680
+register waves + previous true values of all eight memory neurons  : angle (all four on) median 2.02 deg; accuracy 0.642
+register waves + previous true values of store and detector        : angle (all four on) median 1.39 deg; accuracy 0.742

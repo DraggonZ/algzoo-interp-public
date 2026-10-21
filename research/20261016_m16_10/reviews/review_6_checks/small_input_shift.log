@@ -1,0 +1,7 @@
+subset: second-third gap < 0.1, largest > 0.1 above, third positive: 19.2% of inputs
+example: margin change mean -0.16 (median -0.09), spread 2.30 score units; slope 79 per unit gap -> mean shift -0.0020, spread 0.0290 in value; in subset: wrong full 12.6%, reduced 12.1%, caused 4.6%, fixed 4.1%
+0: margin change mean +0.01 (median +0.01), spread 1.55 score units; slope 32 per unit gap -> mean shift +0.0002, spread 0.0488 in value; in subset: wrong full 20.3%, reduced 19.9%, caused 7.8%, fixed 7.3%
+1: margin change mean -0.06 (median -0.03), spread 1.72 score units; slope 34 per unit gap -> mean shift -0.0019, spread 0.0501 in value; in subset: wrong full 23.0%, reduced 20.8%, caused 9.5%, fixed 7.3%
+2: margin change mean -0.23 (median -0.08), spread 2.12 score units; slope 47 per unit gap -> mean shift -0.0049, spread 0.0455 in value; in subset: wrong full 14.1%, reduced 14.3%, caused 6.3%, fixed 6.5%
+3: margin change mean +0.05 (median +0.02), spread 1.56 score units; slope 38 per unit gap -> mean shift +0.0012, spread 0.0405 in value; in subset: wrong full 16.3%, reduced 16.6%, caused 6.2%, fixed 6.6%
+4: margin change mean -0.02 (median -0.00), spread 1.55 score units; slope 35 per unit gap -> mean shift -0.0006, spread 0.0444 in value; in subset: wrong full 23.3%, reduced 24.5%, caused 6.8%, fixed 8.0%

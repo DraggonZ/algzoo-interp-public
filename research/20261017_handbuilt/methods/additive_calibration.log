@@ -1,0 +1,8 @@
+hand-built (gains 100) cut 0.8 no shrink  : agrees with the network 0.970; accuracy 0.978; network's mistakes reproduced 0.14 (network error rate 0.020)
+hand-built (gains 100) cut 0.8 with shrink: agrees with the network 0.976; accuracy 0.990; network's mistakes reproduced 0.04 (network error rate 0.020)
+hand-built (gains 100) cut 1.0 no shrink  : agrees with the network 0.967; accuracy 0.977; network's mistakes reproduced 0.12 (network error rate 0.020)
+hand-built (gains 100) cut 1.0 with shrink: agrees with the network 0.978; accuracy 0.992; network's mistakes reproduced 0.03 (network error rate 0.020)
+ARC                    cut 0.8 no shrink  : agrees with the network 0.951; accuracy 0.963; network's mistakes reproduced 0.29 (network error rate 0.047)
+ARC                    cut 0.8 with shrink: agrees with the network 0.953; accuracy 0.984; network's mistakes reproduced 0.11 (network error rate 0.047)
+ARC                    cut 1.0 no shrink  : agrees with the network 0.950; accuracy 0.972; network's mistakes reproduced 0.20 (network error rate 0.047)
+ARC                    cut 1.0 with shrink: agrees with the network 0.954; accuracy 0.986; network's mistakes reproduced 0.10 (network error rate 0.047)

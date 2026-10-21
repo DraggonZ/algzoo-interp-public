@@ -1,0 +1,9 @@
+rho 4: g(-1..-4) 0.705 0.237 0.067 0.017  |g(8)| 1.85e+05  gc 1e+10  lf 2e+05
+   ring 0.0: accuracy 97.59
+   ring 0.062: accuracy 90.35
+rho 6: g(-1..-4) 0.470 0.106 0.020 0.003  |g(8)| 4.73e+06  gc 2.56e+11  lf 5.13e+06
+   ring 0.0: accuracy 97.45
+   ring 0.062: accuracy 92.06
+rho 8: g(-1..-4) 0.352 0.059 0.008 0.001  |g(8)| 4.73e+07  gc 2.56e+12  lf 5.12e+07
+   ring 0.0: accuracy 95.41
+   ring 0.062: accuracy 91.96

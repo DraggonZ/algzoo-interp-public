@@ -1,0 +1,7 @@
+most-explained block account: 0.854
+  cancellers exact:                0.865
+  store and detector exact:        0.868
+  late gate exact:                 0.850
+  neuron 0 switching exact:        0.857
+  neuron 15 switching exact:       0.859
+  all memory switching exact:      0.912

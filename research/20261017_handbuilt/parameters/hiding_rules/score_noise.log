@@ -1,0 +1,44 @@
+score_rule.py sha256 913ce430a8f8; rule constrained_lean.py; fit seed 111, score seed 212
+
+52 free constants, 2 kinds (feature, feedback); structure 96 bits (60 declared + 6 x 6 spreads); lookup table 2369 bits
+  share 0.001: constants 345 bits (6.6 each) + structure 96 + rest 2032; net -104
+  share 0.002: constants 320 bits (6.1 each) + structure 96 + rest 2047; net -94
+  share 0.005: constants 287 bits (5.5 each) + structure 96 + rest 2098; net -113
+
+| net bits | share | rms 1, 6, 7, 8 | cosine 1, 6, 7, 8 | joint KL of 4 rows | KL, 4 neurons replaced | constants |
+|---|---|---|---|---|---|---|
+| -94 | 0.002 | 0.274, 0.260, 0.111, 0.385 | 0.9932, 0.9987, 0.9990, 0.9937 | 0.472 | 0.455 | 52 |
+NET -93.9
+score_rule.py sha256 913ce430a8f8; rule constrained_lean.py; fit seed 121, score seed 222
+
+52 free constants, 2 kinds (feature, feedback); structure 96 bits (60 declared + 6 x 6 spreads); lookup table 2369 bits
+  share 0.001: constants 345 bits (6.6 each) + structure 96 + rest 2032; net -105
+  share 0.002: constants 320 bits (6.2 each) + structure 96 + rest 2047; net -95
+  share 0.005: constants 287 bits (5.5 each) + structure 96 + rest 2099; net -114
+
+| net bits | share | rms 1, 6, 7, 8 | cosine 1, 6, 7, 8 | joint KL of 4 rows | KL, 4 neurons replaced | constants |
+|---|---|---|---|---|---|---|
+| -95 | 0.002 | 0.274, 0.261, 0.111, 0.383 | 0.9930, 0.9986, 0.9989, 0.9939 | 0.412 | 0.448 | 52 |
+NET -94.6
+score_rule.py sha256 913ce430a8f8; rule constrained_lean.py; fit seed 131, score seed 232
+
+52 free constants, 2 kinds (feature, feedback); structure 96 bits (60 declared + 6 x 6 spreads); lookup table 2369 bits
+  share 0.001: constants 345 bits (6.6 each) + structure 96 + rest 2031; net -104
+  share 0.002: constants 320 bits (6.1 each) + structure 96 + rest 2047; net -94
+  share 0.005: constants 287 bits (5.5 each) + structure 96 + rest 2098; net -113
+
+| net bits | share | rms 1, 6, 7, 8 | cosine 1, 6, 7, 8 | joint KL of 4 rows | KL, 4 neurons replaced | constants |
+|---|---|---|---|---|---|---|
+| -94 | 0.002 | 0.275, 0.260, 0.111, 0.381 | 0.9932, 0.9987, 0.9990, 0.9938 | 0.404 | 0.445 | 52 |
+NET -93.5
+score_rule.py sha256 913ce430a8f8; rule constrained_lean.py; fit seed 141, score seed 242
+
+52 free constants, 2 kinds (feature, feedback); structure 96 bits (60 declared + 6 x 6 spreads); lookup table 2369 bits
+  share 0.001: constants 345 bits (6.6 each) + structure 96 + rest 2033; net -105
+  share 0.002: constants 319 bits (6.1 each) + structure 96 + rest 2048; net -95
+  share 0.005: constants 287 bits (5.5 each) + structure 96 + rest 2100; net -114
+
+| net bits | share | rms 1, 6, 7, 8 | cosine 1, 6, 7, 8 | joint KL of 4 rows | KL, 4 neurons replaced | constants |
+|---|---|---|---|---|---|---|
+| -95 | 0.002 | 0.275, 0.262, 0.112, 0.382 | 0.9927, 0.9986, 0.9990, 0.9938 | 0.452 | 0.458 | 52 |
+NET -95.1

@@ -1,0 +1,10 @@
+ARC: ends only 95.150, full walk 95.097, middle stretches cost +0.053 points (true 95.317); full-walk cost 15.4 lists per line vs ends 3.7
+100: ends only 94.923, full walk 94.898, middle stretches cost +0.025 points (true 94.806); full-walk cost 12.0 lists per line vs ends 3.3
+103: ends only 95.257, full walk 95.066, middle stretches cost +0.190 points (true 95.319); full-walk cost 12.0 lists per line vs ends 4.1
+108: ends only 93.974, full walk 93.838, middle stretches cost +0.136 points (true 93.865); full-walk cost 13.5 lists per line vs ends 3.6
+114: ends only 89.977, full walk 89.665, middle stretches cost +0.312 points (true 89.790); full-walk cost 10.2 lists per line vs ends 3.6
+200: ends only 93.317, full walk 93.199, middle stretches cost +0.118 points (true 93.240); full-walk cost 10.2 lists per line vs ends 3.4
+203: ends only 89.838, full walk 89.727, middle stretches cost +0.111 points (true 89.878); full-walk cost 10.3 lists per line vs ends 3.6
+208: ends only 84.457, full walk 84.224, middle stretches cost +0.233 points (true 84.031); full-walk cost 13.5 lists per line vs ends 4.8
+213: ends only 94.359, full walk 94.261, middle stretches cost +0.098 points (true 93.891); full-walk cost 14.1 lists per line vs ends 4.3
+middle-stretch bias: mean +0.142 points, range +0.025 to +0.312

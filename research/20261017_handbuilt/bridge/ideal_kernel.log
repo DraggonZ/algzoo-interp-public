@@ -1,0 +1,10 @@
+sharp 0.9903566666666667
+trained profile (offsets -4..4, 0 beyond) 0.85467
+band-limited, period 8, modes [0, 1, 2, 3, 4]: K(1)=0.00 0.77083
+band-limited, period 8, modes [1, 2, 3, 4]: K(1)=-0.12 0.7740333333333334
+band-limited, period 9, modes [0, 1, 2, 3, 4]: K(1)=0.00 0.88627
+band-limited, period 9, modes [1, 2, 3, 4]: K(1)=-0.11 0.8874966666666667
+band-limited, period 10, modes [0, 1, 2, 3, 4, 5]: K(1)=0.00 0.9903566666666667
+band-limited, period 10, modes [1, 2, 3, 4, 5]: K(1)=-0.10 0.9903566666666667
+band-limited, period 12, modes [0, 1, 2, 3, 4, 5, 6]: K(1)=0.00 0.9903566666666667
+band-limited, period 12, modes [1, 2, 3, 4, 5, 6]: K(1)=-0.08 0.9903566666666667

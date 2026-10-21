@@ -1,0 +1,9 @@
+model example: vote height per unit value by age 0..8: [61.4 64.9 54.7 52.3 45.3 35.7 33.2 27.6 23.4]
+network accuracy 0.9530
+  measured slope of score at slot 9 (age 0) on its own value: 53.5
+  measured slope of score at slot 7 (age 2) on its own value: 9.2
+  measured slope of score at slot 4 (age 5) on its own value: 10.4
+  measured slope of score at slot 1 (age 8) on its own value: 11.2
+V0 ideal rule: same answer as network 0.9530; predicts network's mistakes 0.00, same wrong slot 0.00; false alarms 0.0000
+V1 ledger with vote heights: same answer as network 0.6524; predicts network's mistakes 0.55, same wrong slot 0.35; false alarms 0.3325
+V2 ledger + largest's leftover: same answer as network 0.6449; predicts network's mistakes 0.57, same wrong slot 0.36; false alarms 0.3410

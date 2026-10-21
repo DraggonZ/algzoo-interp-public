@@ -1,0 +1,9 @@
+FIT_SEED 101
+rules/r14a_minarrival.py         v2 +192.8  v2c +197.9  gain 0.924  struct 187
+rules/r15a_contender.py          v2 +193.3  v2c +204.6  gain 0.915  struct 192
+FIT_SEED 102
+rules/r14a_minarrival.py         v2 +193.1  v2c +198.3  gain 0.924  struct 187
+rules/r15a_contender.py          v2 +193.9  v2c +205.5  gain 0.916  struct 192
+FIT_SEED 103
+rules/r14a_minarrival.py         v2 +193.1  v2c +198.4  gain 0.924  struct 187
+rules/r15a_contender.py          v2 +194.8  v2c +206.9  gain 0.916  struct 192

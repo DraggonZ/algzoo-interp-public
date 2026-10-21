@@ -1,0 +1,9 @@
+|P row9|/|row0| 0.36, cos(P row9, row0) +0.34
+cos(d*, mean residual) +0.84; |d*|/|mean res| 0.92
+base                                                         net +172.5 gain 1.018 rest 1558 struct 179 | out1:0.19 out2:0.14 out3:0.09 out4:0.27 out5:0.16 out6:0.23 out7:0.35 out8:0.37 out9:0.27
+base, row 9 uncovered                                        net +112.8 gain 0.805 rest 1624 struct 173 | out1:0.21 out2:0.27 out3:0.20 out4:0.22 out5:0.30 out6:0.27 out7:0.28 out8:0.45
+c = 1/9, row 9 zero-sum                                      net +184.3 gain 1.033 rest 1546 struct 179 | out1:0.15 out2:0.16 out3:0.14 out4:0.31 out5:0.18 out6:0.13 out7:0.26 out8:0.29 out9:0.27
+c = 1/9, row 9 uncovered                                     net +135.9 gain 0.820 rest 1601 struct 173 | out1:0.23 out2:0.27 out3:0.13 out4:0.18 out5:0.26 out6:0.20 out7:0.23 out8:0.40
+d from zero sums (uses ARC row 9), row 9 uncovered           net +156.4 gain 0.879 rest 1581 struct 173 | out1:0.18 out2:0.23 out3:0.10 out4:0.19 out5:0.22 out6:0.16 out7:0.22 out8:0.37
+d from zero sums, row 9 zero-sum [circular, diagnostic]      net +168.6 gain 1.080 rest 1562 struct 179 | out1:0.17 out2:0.15 out3:0.18 out4:0.35 out5:0.19 out6:0.16 out7:0.30 out8:0.29 out9:0.27
+d from zero sums, row 9 pushed too [circular, diagnostic]    net +29.2 gain 0.540 rest 1703 struct 179 | out1:0.49 out2:0.51 out3:0.40 out4:0.36 out5:0.47 out6:0.47 out7:0.46 out8:0.59 out9:0.80

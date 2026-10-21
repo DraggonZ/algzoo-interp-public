@@ -1,0 +1,13 @@
+second an overtaken record; third 1-3 steps after the largest     : 0.119 of lists; right 0.951 -> 0.802; names the third 0.032 -> 0.035
+second an overtaken record; third 4+ steps after the largest      : 0.048 of lists; right 0.951 -> 0.880; names the third 0.038 -> 0.045
+second an overtaken record; third before the largest              : 0.334 of lists; right 0.958 -> 0.638; names the third 0.024 -> 0.133
+second and third both after the largest                           : 0.333 of lists; right 0.947 -> 0.674; names the third 0.032 -> 0.188
+second after the largest; third before it                         : 0.166 of lists; right 0.959 -> 0.837; names the third 0.028 -> 0.082
+all lists: right 0.953 -> 0.714
+
+what the new wrong answers name (lists right before, wrong after):
+  second an overtaken record; third 1-3 steps after the largest     : largest 0.02, third 0.12, fourth 0.24, a non-positive number 0.43, other 0.21; named position = second's +1: 0.26, -1: 0.04
+  second an overtaken record; third 4+ steps after the largest      : largest 0.01, third 0.18, fourth 0.31, a non-positive number 0.28, other 0.22; named position = second's +1: 0.43, -1: 0.05
+  second an overtaken record; third before the largest              : largest 0.15, third 0.37, fourth 0.15, a non-positive number 0.24, other 0.11; named position = second's +1: 0.23, -1: 0.05
+  second and third both after the largest                           : largest 0.01, third 0.59, fourth 0.15, a non-positive number 0.19, other 0.07; named position = second's +1: 0.08, -1: 0.03
+  second after the largest; third before it                         : largest 0.03, third 0.48, fourth 0.13, a non-positive number 0.28, other 0.10; named position = second's +1: 0.04, -1: 0.01

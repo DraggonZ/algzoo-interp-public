@@ -1,0 +1,10 @@
+v16                      all 0.695 | onepos 0.082 last 0.622 step8 0.605 row 0.522 ord 0.821 | wrong: third 0.37 largest 0.37 onepos 0.03
+spike                    all 0.893 | onepos 0.082 last 0.877 step8 0.875 row 0.836 ord 0.944 | wrong: third 0.68 largest 0.10 onepos 0.09
+cut                      all 0.793 | onepos 0.082 last 0.743 step8 0.730 row 0.652 ord 0.896 | wrong: third 0.42 largest 0.30 onepos 0.05
+cut+spike                all 0.883 | onepos 0.082 last 0.879 step8 0.875 row 0.796 ord 0.944 | wrong: third 0.65 largest 0.10 onepos 0.09
+cut, phase back 15       all 0.788 | onepos 0.082 last 0.763 step8 0.758 row 0.643 ord 0.882 | wrong: third 0.39 largest 0.17 onepos 0.05
+cut, phase back 22.5     all 0.751 | onepos 0.082 last 0.661 step8 0.676 row 0.627 ord 0.854 | wrong: third 0.31 largest 0.12 onepos 0.04
+cut, phase back 30       all 0.698 | onepos 0.082 last 0.486 step8 0.560 row 0.599 ord 0.823 | wrong: third 0.23 largest 0.09 onepos 0.03
+two-sided, 55 deg per position all 0.674 | onepos 0.082 last 0.615 step8 0.601 row 0.533 ord 0.779 | wrong: third 0.33 largest 0.43 onepos 0.03
+two-sided, 60 deg per position all 0.635 | onepos 0.082 last 0.558 step8 0.538 row 0.526 ord 0.731 | wrong: third 0.29 largest 0.44 onepos 0.03
+two-sided, 72 deg per position all 0.653 | onepos 0.082 last 0.548 step8 0.549 row 0.553 ord 0.752 | wrong: third 0.30 largest 0.33 onepos 0.03

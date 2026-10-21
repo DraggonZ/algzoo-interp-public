@@ -1,0 +1,6 @@
+example (against m2 0.9, gap 0.5): m2 0.9, gap 0.2: corr 0.78, same sign 0.80; m2 0.9, gap 1.0: corr 0.84, same sign 0.86; m2 0.5, gap 0.5: corr 0.88, same sign 0.89; m2 1.5, gap 0.5: corr 0.88, same sign 0.89
+2 (against m2 0.9, gap 0.5): m2 0.9, gap 0.2: corr 0.92, same sign 0.87; m2 0.9, gap 1.0: corr 0.91, same sign 0.86; m2 0.5, gap 0.5: corr 0.78, same sign 0.84; m2 1.5, gap 0.5: corr 0.93, same sign 0.90
+3 (against m2 0.9, gap 0.5): m2 0.9, gap 0.2: corr 0.75, same sign 0.84; m2 0.9, gap 1.0: corr 0.87, same sign 0.85; m2 0.5, gap 0.5: corr 0.86, same sign 0.86; m2 1.5, gap 0.5: corr 0.90, same sign 0.89
+0 (against m2 0.9, gap 0.5): m2 0.9, gap 0.2: corr 0.82, same sign 0.84; m2 0.9, gap 1.0: corr 0.83, same sign 0.80; m2 0.5, gap 0.5: corr 0.91, same sign 0.84; m2 1.5, gap 0.5: corr 0.92, same sign 0.88
+4 (against m2 0.9, gap 0.5): m2 0.9, gap 0.2: corr 0.77, same sign 0.84; m2 0.9, gap 1.0: corr 0.80, same sign 0.86; m2 0.5, gap 0.5: corr 0.84, same sign 0.86; m2 1.5, gap 0.5: corr 0.90, same sign 0.92
+1 (against m2 0.9, gap 0.5): m2 0.9, gap 0.2: corr 0.87, same sign 0.86; m2 0.9, gap 1.0: corr 0.93, same sign 0.88; m2 0.5, gap 0.5: corr 0.95, same sign 0.90; m2 1.5, gap 0.5: corr 0.95, same sign 0.92

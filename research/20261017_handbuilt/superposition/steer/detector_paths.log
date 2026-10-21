@@ -1,0 +1,19 @@
+near-tie lists 100,000; final lead |D| median 2.60
+effect on D of scaling the detector by 1 (i.e. per unit a), summed over steps, by the group it feeds:
+   via store 2,4        mean    +0.00  mean |.|     0.67
+   via memory           mean    -5.35  mean |.|    25.38
+   via hiding 1,6,7,8   mean    +0.51  mean |.|     6.84
+   via detector 5       mean    +0.86  mean |.|     6.75
+   via gate 9           mean    +0.01  mean |.|     0.33
+   direct readout      mean    +0.18  mean |.|     4.66
+   total               mean    -3.79  mean |.|    24.21; share of lists where 5% flips the sign of D (first order): 11.4%
+mean |path| by step (via memory / hiding / store):
+   step 0->1:    0.02    0.00    0.00
+   step 1->2:    4.17    0.91    0.17
+   step 2->3:    3.61    0.95    0.17
+   step 3->4:    4.31    1.18    0.14
+   step 4->5:    4.21    1.25    0.11
+   step 5->6:    4.32    1.20    0.08
+   step 6->7:    5.28    1.24    0.06
+   step 7->8:    6.02    1.29    0.04
+   step 8->9:    5.59    1.46    0.02

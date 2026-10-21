@@ -1,0 +1,16 @@
+r12a (arrival 0, no offset)                   v2  +172.5   v2c  +194.4   gain 1.018
+r13b (arrival 0, offset)                      v2  +181.3   v2c  +186.7   gain 1.033
+r14a (min arrival, offset)                    v2  +192.8   v2c  +197.9   gain 0.924
+min arrival, no offset                        v2  +169.3   v2c  +197.6   gain 0.911
+contender top1, min arrival, no offset        v2   -53.9   v2c   -49.6   gain 0.199
+contender top1, min arrival, offset           v2   -53.9   v2c   -51.2   gain 0.201
+contender top1, arrival 0, no offset          v2   -32.2   v2c   -28.7   gain 0.289
+contender top2, min arrival, no offset        v2  +140.9   v2c  +177.5   gain 0.895
+contender top2, min arrival, offset           v2  +161.7   v2c  +175.7   gain 0.908
+contender top2, arrival 0, no offset          v2  +139.6   v2c  +174.0   gain 1.002
+contender top3, min arrival, no offset        v2  +168.5   v2c  +208.5   gain 0.902
+contender top3, min arrival, offset           v2  +198.3   v2c  +209.6   gain 0.915
+contender top3, arrival 0, no offset          v2  +162.3   v2c  +199.1   gain 1.012
+contender top4, min arrival, no offset        v2  +171.6   v2c  +208.2   gain 0.906
+contender top4, min arrival, offset           v2  +200.8   v2c  +209.2   gain 0.919
+contender top4, arrival 0, no offset          v2  +168.1   v2c  +200.3   gain 1.016

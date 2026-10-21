@@ -1,0 +1,43 @@
+v23 from v19, accuracy on 1,000,000 fresh lists: 94.67%
+test                                                                             ARC         v19v23 from v19         v23
+near tie, step 5, 2nd early: earlier wins                                       72.5       100.0       100.0       100.0
+  memory x0.95 at step 5 (2nd early)                                            80.2         0.0        97.9        99.0
+  memory x1.05 at step 5 (2nd early)                                            55.7        98.2         0.0         0.0
+near tie, step 5, 3rd early: earlier wins                                       24.9         0.0         0.0         0.0
+  memory x0.95 at step 5 (3rd early)                                            43.9         0.0        96.8        98.7
+  memory x1.05 at step 5 (3rd early)                                            10.4        97.7         0.0         0.0
+near tie, step 7, 2nd early: earlier wins                                       71.6       100.0       100.0       100.0
+  memory x0.95 at step 7 (2nd early)                                            85.2         0.0        97.5        98.5
+  memory x1.05 at step 7 (2nd early)                                            47.2        97.0         0.0         0.0
+near tie, step 7, 3rd early: earlier wins                                       20.0         0.0         0.0         0.0
+  memory x0.95 at step 7 (3rd early)                                            43.0         0.0        96.4        97.8
+  memory x1.05 at step 7 (3rd early)                                             8.9        95.9         0.0         0.0
+near tie, largest and 2nd early by step 3, other after 5: earlier wins          75.2       100.0       100.0       100.0
+  store x1.01 at step 5 (2nd early)                                             84.8         0.0       100.0       100.0
+  largest's value x0.9 (2nd early)                                              62.9        83.5        83.5        83.5
+  largest's value x1.1 (2nd early)                                              76.0       100.0       100.0       100.0
+near tie, largest and 3rd early by step 3, other after 5: earlier wins          27.7         0.0         0.0         0.0
+  store x1.01 at step 5 (3rd early)                                             39.2         0.0        96.5        96.5
+  largest's value x0.9 (3rd early)                                              32.3        15.1        15.1        12.4
+  largest's value x1.1 (3rd early)                                              31.1         0.0         0.0         0.0
+near tie, 2nd at step 9: it wins                                                79.9        95.4        95.4        98.5
+  keep gate x0.95, all steps (2nd at 9)                                         84.6        96.6         0.1        98.6
+  keep gate x1.05, all steps (2nd at 9)                                         68.3        23.1         4.5        50.1
+near tie, 3rd at step 9: it wins                                                35.2         0.0         0.0         0.0
+  keep gate x0.95, all steps (3rd at 9)                                         48.7        67.8         0.1        49.6
+  keep gate x1.05, all steps (3rd at 9)                                         27.2         0.0         3.2         0.0
+near ties: answers changed by keep gate x1.05, all steps                        11.5        23.1        35.8         4.9
+late bias: step-9 contender wins (truly second half the time)                   57.5        47.7        47.7        49.3
+  last input x0.99                                                              50.4        38.0        38.0        39.4
+largest by step 3: largest named                                                 1.2         0.0         0.2         0.0
+  hiding x0.9 at step 5                                                          3.7         0.1         0.2         0.0
+  hiding x0.8 at step 5                                                         11.7         1.9         2.1         0.1
+  hiding silenced at all steps (all lists)                                      10.3         0.0         0.0        47.1
+extra input 0: names second-1                                                   94.5        95.5        95.4        97.7
+append 2 x largest: names largest-1                                             95.9        89.1        89.1        80.3
+append between largest and second: names 9                                      94.3        97.8        97.9        97.8
+append -3: names second-1                                                       94.7        95.7        96.2        98.0
+accuracy                                                                        95.3        94.2        94.6        95.8
+v19: mean |rate - ARC's| 30.1 points over 37 tests; within 5 points 14%; sensitivity map (40 cells): correlation of logs 0.80, median ratio 5.18
+v23 from v19: mean |rate - ARC's| 25.2 points over 37 tests; within 5 points 14%; sensitivity map (40 cells): correlation of logs 0.79, median ratio 3.99
+v23: mean |rate - ARC's| 21.7 points over 37 tests; within 5 points 16%; sensitivity map (40 cells): correlation of logs 0.90, median ratio 2.47

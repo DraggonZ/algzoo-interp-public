@@ -1,0 +1,4 @@
+ARC (trained)                          accuracy 95.35% | near ties lost to the third 20.8% | maps covering half  7,955 | tree  86.0% vs guess  79.2% (share of possible gain  33%)
+hand-built v19                         accuracy 94.23% | near ties lost to the third  7.2% | maps covering half     46 | tree  99.3% vs guess  92.8% (share of possible gain  91%)
+v23 from v19, loop gain 1e-4           accuracy 94.67% | near ties lost to the third  7.2% | maps covering half     46 | tree  99.3% vs guess  92.8% (share of possible gain  90%)
+v23 from v19, loop gain 0.3            accuracy 83.65% | near ties lost to the third 28.6% | maps covering half     87 | tree  84.7% vs guess  71.4% (share of possible gain  46%)

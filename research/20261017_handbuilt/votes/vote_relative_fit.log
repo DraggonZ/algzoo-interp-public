@@ -1,0 +1,7 @@
+fit: accuracy 0.9704 (ARC 0.9531); agrees 0.946; ARC mistakes reproduced 0.17
+sizes relative to a kept number at position 5
+  rec_x   [1.01 1.03 1.04 1.06 1.08 1.09 1.1  1.13 1.08 0.08]
+  kept_x  [0.08 0.96 0.96 0.97 0.98 1.   1.04 1.09 1.28 1.68]
+  kept_s  [ 0.    0.   -0.   -0.01 -0.01 -0.03 -0.05 -0.1  -0.28 -0.64]
+  forg_x  [0.05 0.13 0.21 0.3  0.46 0.7  0.57 0.33 0.58 0.67]
+  discount -b/a for kept numbers by position: [-0.   -0.    0.    0.01  0.01  0.03  0.05  0.1   0.22  0.38]

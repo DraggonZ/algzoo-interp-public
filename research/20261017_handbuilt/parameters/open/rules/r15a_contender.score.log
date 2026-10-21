@@ -1,0 +1,7 @@
+score_memory_rule_v2.py sha256 45d18216a799; rule r15a_contender.py
+223 weights covered, 1 constants, 1 kinds; relative weight error 0.1901; structure 192 bits; lookup table 1916 bits
+  share 0.001: constants 6 bits (6.1 each) + structure 192 + rest 1524; net +193
+  share 0.002: constants 6 bits (5.6 each) + structure 192 + rest 1539; net +179
+  share 0.005: constants 5 bits (4.9 each) + structure 192 + rest 1590; net +129
+KL from ARC 7.7913 (budget 0.02); accuracy 0.4939 (ARC 0.9531)
+NET +193.3

@@ -1,0 +1,31 @@
+scores multiplied by 56.94 so the median top-two gap is 8.2, as in the trained network
+twin16 accuracy 0.9297
+neuron  0 exact rule: largest error 1.42e-14 (values up to 103)
+neuron  1 exact rule: largest error 9.09e-13 (values up to 4463)
+neuron  2 exact rule: largest error 1.84e-05 (values up to 1)
+neuron  3 exact rule: largest error 9.59e-01 (values up to 27)
+neuron  4 exact rule: largest error 4.91e-01 (values up to 79134)
+neuron  5 exact rule: largest error 9.36e-01 (values up to 79130)
+neuron  6 exact rule: largest error 9.36e-01 (values up to 79137)
+neuron  7 exact rule: largest error 1.44e+00 (values up to 79132)
+neuron  8 exact rule: largest error 8.19e-01 (values up to 12)
+neuron  9 exact rule: largest error 6.00e-01 (values up to 12)
+neuron 10 exact rule: largest error 4.58e-01 (values up to 12)
+neuron 11 exact rule: largest error 3.96e-01 (values up to 12)
+neuron 12 exact rule: largest error 3.92e-01 (values up to 12)
+neuron 13 exact rule: largest error 2.70e-01 (values up to 11)
+neuron 14 exact rule: largest error 7.88e-02 (values up to 11)
+neuron 15 exact rule: largest error 3.55e-15 (values up to 11)
+group                simulator       KL accuracy  agree      R2
+store+detector       exact      -0.000    0.930  0.996  1.0000
+store+detector       account    -0.000    0.925  0.992  1.0000
+keep                 exact       0.000    0.930  0.997  1.0000
+keep                 account     0.000    0.931  0.995  1.0000
+linear route         exact       0.000    0.930  0.996  1.0000
+linear route         account    20.516    0.589  0.577  0.9629
+hiding (clock+flip)  exact       0.000    0.930  0.996  1.0000
+hiding (clock+flip)  account    10.354    0.587  0.575  1.0000
+memory               exact       0.000    0.930  0.996  1.0000
+memory               account    11.853    0.495  0.519  0.8811
+all 16               exact       0.000    0.930  0.995  1.0000
+all 16               account    19.734    0.453  0.445  1.0000

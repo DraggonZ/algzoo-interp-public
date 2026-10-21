@@ -1,0 +1,7 @@
+exact timer rules against the network's own timer values: largest difference 4.34e+00
+network 0.959; exact timer rules 0.960
+misreading: height from the largest           : 0.787
+misreading: flip left out                     : 0.730
+slightly off: 45-degree clock at 45.5 degrees : 0.949
+slightly off: wave height 2% too large        : 0.956
+slightly off: store 2% too large              : 0.901

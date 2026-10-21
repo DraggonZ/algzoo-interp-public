@@ -1,0 +1,10 @@
+
+ARC:
+  runner-up when the earlier contender arrived     178 sweeps: change at least once  29.2%; one-change sweeps raising it moves toward the third 18, toward the second 15
+  runner-up when the later contender arrived       109 sweeps: change at least once  25.7%; one-change sweeps raising it moves toward the third 8, toward the second 5
+  other smaller number                            1813 sweeps: change at least once  21.2%; one-change sweeps raising it moves toward the third 114, toward the second 131
+
+hand-built:
+  runner-up when the earlier contender arrived     178 sweeps: change at least once   0.0%; one-change sweeps raising it moves toward the third 0, toward the second 0
+  runner-up when the later contender arrived       109 sweeps: change at least once   0.9%; one-change sweeps raising it moves toward the third 0, toward the second 0
+  other smaller number                            1813 sweeps: change at least once   1.8%; one-change sweeps raising it moves toward the third 0, toward the second 2

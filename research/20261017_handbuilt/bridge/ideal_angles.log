@@ -1,0 +1,4 @@
+regular 45-degree grid (period 8)                K(0..9) =  1.00  0.00 -0.00  0.00  0.00 -0.00  0.00 -0.00  1.00  0.00  accuracy 0.771
+trained memory's angles                          K(0..9) =  1.00  0.08 -0.01  0.05  0.04 -0.10  0.09 -0.43  0.65  0.58  accuracy 0.865
+trained, in the full network's common pattern    K(0..9) =  1.00  0.07 -0.06 -0.01  0.03 -0.08  0.23 -0.29  0.67  0.62  accuracy 0.860
+regular 40-degree grid (period 9) without 160    K(0..9) =  1.00  0.11 -0.07 -0.00  0.08 -0.17  0.25 -0.32  0.36  0.75  accuracy 0.871

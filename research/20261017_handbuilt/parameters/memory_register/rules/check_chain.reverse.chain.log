@@ -1,0 +1,5 @@
+leak_check_chain: rule check_chain.py, chained, 3 rows, order ['out3', 'out2', 'out1']
+  perturb row out3: largest sensitivity of rows up to it 0.0000
+  perturb row out2: largest sensitivity of rows up to it 1.3432
+  perturb row out1: largest sensitivity of rows up to it 1.2960
+CHAIN 1.3432 FAIL

@@ -1,0 +1,7 @@
+score_memory_rule.py sha256 d6caf822e120; rule shift_readout.py
+64 weights covered, 15 constants, 2 kinds; relative weight error 0.3955; structure 65 bits; lookup table 2369 bits
+  share 0.001: constants 115 bits (7.7 each) + structure 65 + rest 2310; net -122
+  share 0.002: constants 107 bits (7.2 each) + structure 65 + rest 2326; net -130
+  share 0.005: constants 98 bits (6.5 each) + structure 65 + rest 2378; net -172
+KL from ARC 5.6106 (budget 0.02); accuracy 0.5493 (ARC 0.9531)
+NET -121.5

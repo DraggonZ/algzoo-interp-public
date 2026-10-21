@@ -1,0 +1,17 @@
+2 memory row 6:+0.83 row 1:+0.77 row 4:-0.76 col 9:+0.73 out7:+0.72
+2 hiding row 15:-0.98 row 13:-0.97 out1:-0.97 row 7:+0.95 row 3:-0.94
+2 all row 4:-1.00 row 7:+0.99 row 10:+0.71 row 11:+0.69 out9:-0.59
+4 memory row 1:-0.84 row 7:-0.82 row 6:-0.80 row 2:-0.76 row 12:-0.73
+4 hiding row 7:-0.99 out5:-0.98 row 0:+0.95 row 2:-0.94 out1:+0.94
+4 all row 2:-1.00 row 7:-0.99 row 11:-0.74 row 10:-0.74 out9:+0.62
+5 memory col 4:+0.79 row 8:+0.77 row 0:+0.75 out9:+0.67 row 9:+0.61
+5 hiding col 11:-0.94 col 8:-0.92 col 2:-0.76 input:+0.74 col 12:-0.73
+5 all row 12:+0.72 row 10:+0.67 input:+0.67 row 11:+0.65 row 14:+0.56
+9 memory out0:-0.71 row 8:+0.71 row 0:+0.69 row 6:+0.68 out7:+0.66
+9 hiding out9:+0.94 col 4:-0.84 col 12:-0.80 row 5:+0.73 col 2:-0.71
+9 all input:+0.64 out3:-0.61 row 8:+0.58 out7:+0.57 row 1:+0.56
+2 hiding read [-0.102 -0.103  0.023  0.155] cos with input weights 0.001
+4 hiding read [ 0.036  0.093 -0.029 -0.082] cos with input weights -0.004
+5 hiding read [-0.001  0.015 -0.593 -0.85 ] cos with input weights 0.74
+9 hiding read [-0.357 -0.089 -5.032 -1.092] cos with input weights 0.693
+row4 = c row2, c -0.552 resid [-0.011 -0.021  0.043  0.018 -0.03  -0.004  0.037 -0.017  0.004 -0.043  0.002 -0.002 -0.029 -0.005 -0.018 -0.037]

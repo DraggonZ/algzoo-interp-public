@@ -1,0 +1,290 @@
+== cells of three ages, no step (821 cells): acc 94.37 (-0.95) agree-answer 96.8
+   on/off agreement with the network's own run: 0:0.965 3:0.878 10:0.948 11:0.953 12:0.946 13:0.968 14:0.969 15:0.881  (all 0.9385)
+== trees, at most 2 leaves per neuron: acc 44.32 (-51.00) agree-answer 44.7  fitted numbers 32
+   on/off agreement with the network's own run: 0:0.751 3:0.767 10:0.895 11:0.896 12:0.942 13:0.904 14:0.861 15:0.728  (all 0.8431)
+== trees, at most 3 leaves per neuron: acc 70.60 (-24.71) agree-answer 71.6  fitted numbers 56
+   on/off agreement with the network's own run: 0:0.887 3:0.817 10:0.895 11:0.925 12:0.952 13:0.930 14:0.869 15:0.728  (all 0.8752)
+== trees, at most 4 leaves per neuron: acc 81.15 (-14.17) agree-answer 82.5  fitted numbers 80
+   on/off agreement with the network's own run: 0:0.938 3:0.817 10:0.935 11:0.925 12:0.952 13:0.967 14:0.944 15:0.778  (all 0.9068)
+  -- neuron 0:
+     |--- age1 <= 2.50
+     |   |--- age1 <= 1.50
+     |   |   |--- age1 <= -0.50
+     |   |   |   |--- class: off
+     |   |   |--- age1 >  -0.50
+     |   |   |   |--- class: on
+     |   |--- age1 >  1.50
+     |   |   |--- class: off
+     |--- age1 >  2.50
+     |   |--- class: on
+  -- neuron 3:
+     |--- step <= 0.50
+     |   |--- age1 <= -0.50
+     |   |   |--- class: on
+     |   |--- age1 >  -0.50
+     |   |   |--- class: off
+     |--- step >  0.50
+     |   |--- age2 <= 0.50
+     |   |   |--- class: on
+     |   |--- age2 >  0.50
+     |   |   |--- class: on
+  -- neuron 10:
+     |--- age1 <= -0.50
+     |   |--- step <= 0.50
+     |   |   |--- class: off
+     |   |--- step >  0.50
+     |   |   |--- class: on
+     |--- age1 >  -0.50
+     |   |--- age1 <= 5.50
+     |   |   |--- class: on
+     |   |--- age1 >  5.50
+     |   |   |--- class: on
+  -- neuron 11:
+     |--- age1 <= -0.50
+     |   |--- step <= 0.50
+     |   |   |--- class: off
+     |   |--- step >  0.50
+     |   |   |--- class: on
+     |--- age1 >  -0.50
+     |   |--- age1 <= 4.50
+     |   |   |--- class: on
+     |   |--- age1 >  4.50
+     |   |   |--- class: on
+  -- neuron 12:
+     |--- age1 <= -0.50
+     |   |--- step <= 0.50
+     |   |   |--- class: off
+     |   |--- step >  0.50
+     |   |   |--- class: on
+     |--- age1 >  -0.50
+     |   |--- age1 <= 3.50
+     |   |   |--- class: on
+     |   |--- age1 >  3.50
+     |   |   |--- class: on
+  -- neuron 13:
+     |--- step <= 1.50
+     |   |--- age1 <= -0.50
+     |   |   |--- class: on
+     |   |--- age1 >  -0.50
+     |   |   |--- age1 <= 0.50
+     |   |   |   |--- class: off
+     |   |   |--- age1 >  0.50
+     |   |   |   |--- class: on
+     |--- step >  1.50
+     |   |--- class: on
+  -- neuron 14:
+     |--- age1 <= 0.50
+     |   |--- age1 <= -0.50
+     |   |   |--- class: on
+     |   |--- age1 >  -0.50
+     |   |   |--- age2 <= 0.00
+     |   |   |   |--- class: off
+     |   |   |--- age2 >  0.00
+     |   |   |   |--- class: on
+     |--- age1 >  0.50
+     |   |--- class: on
+  -- neuron 15:
+     |--- age1 <= 5.50
+     |   |--- age1 <= -0.50
+     |   |   |--- class: on
+     |   |--- age1 >  -0.50
+     |   |   |--- step <= 0.50
+     |   |   |   |--- class: off
+     |   |   |--- step >  0.50
+     |   |   |   |--- class: on
+     |--- age1 >  5.50
+     |   |--- class: on
+== trees, at most 6 leaves per neuron: acc 85.70 (-9.62) agree-answer 87.5  fitted numbers 128
+   on/off agreement with the network's own run: 0:0.962 3:0.817 10:0.978 11:0.978 12:0.952 13:0.979 14:0.948 15:0.778  (all 0.9240)
+== trees, at most 8 leaves per neuron: acc 91.28 (-4.03) agree-answer 92.8  fitted numbers 176
+   on/off agreement with the network's own run: 0:0.989 3:0.824 10:0.982 11:0.979 12:0.952 13:0.979 14:0.956 15:0.787  (all 0.9311)
+  -- neuron 0:
+     |--- age1 <= 2.50
+     |   |--- age1 <= 1.50
+     |   |   |--- age1 <= -0.50
+     |   |   |   |--- step <= 1.50
+     |   |   |   |   |--- class: off
+     |   |   |   |--- step >  1.50
+     |   |   |   |   |--- class: on
+     |   |   |--- age1 >  -0.50
+     |   |   |   |--- age1 <= 0.50
+     |   |   |   |   |--- age2 <= 1.50
+     |   |   |   |   |   |--- class: on
+     |   |   |   |   |--- age2 >  1.50
+     |   |   |   |   |   |--- age2 <= 2.50
+     |   |   |   |   |   |   |--- class: off
+     |   |   |   |   |   |--- age2 >  2.50
+     |   |   |   |   |   |   |--- class: on
+     |   |   |   |--- age1 >  0.50
+     |   |   |   |   |--- class: on
+     |   |--- age1 >  1.50
+     |   |   |--- class: off
+     |--- age1 >  2.50
+     |   |--- class: on
+  -- neuron 3:
+     |--- step <= 0.50
+     |   |--- age1 <= -0.50
+     |   |   |--- class: on
+     |   |--- age1 >  -0.50
+     |   |   |--- class: off
+     |--- step >  0.50
+     |   |--- age2 <= 0.50
+     |   |   |--- class: on
+     |   |--- age2 >  0.50
+     |   |   |--- age2 <= 2.50
+     |   |   |   |--- age1 <= 3.50
+     |   |   |   |   |--- class: on
+     |   |   |   |--- age1 >  3.50
+     |   |   |   |   |--- class: off
+     |   |   |--- age2 >  2.50
+     |   |   |   |--- age2 <= 3.50
+     |   |   |   |   |--- class: on
+     |   |   |   |--- age2 >  3.50
+     |   |   |   |   |--- age2 <= 5.50
+     |   |   |   |   |   |--- class: on
+     |   |   |   |   |--- age2 >  5.50
+     |   |   |   |   |   |--- class: on
+  -- neuron 10:
+     |--- age1 <= -0.50
+     |   |--- step <= 0.50
+     |   |   |--- class: off
+     |   |--- step >  0.50
+     |   |   |--- class: on
+     |--- age1 >  -0.50
+     |   |--- age1 <= 5.50
+     |   |   |--- class: on
+     |   |--- age1 >  5.50
+     |   |   |--- age1 <= 6.50
+     |   |   |   |--- class: off
+     |   |   |--- age1 >  6.50
+     |   |   |   |--- age2 <= 5.50
+     |   |   |   |   |--- class: on
+     |   |   |   |--- age2 >  5.50
+     |   |   |   |   |--- age2 <= 6.50
+     |   |   |   |   |   |--- age1 <= 7.50
+     |   |   |   |   |   |   |--- class: off
+     |   |   |   |   |   |--- age1 >  7.50
+     |   |   |   |   |   |   |--- class: on
+     |   |   |   |   |--- age2 >  6.50
+     |   |   |   |   |   |--- class: on
+  -- neuron 11:
+     |--- age1 <= -0.50
+     |   |--- step <= 0.50
+     |   |   |--- class: off
+     |   |--- step >  0.50
+     |   |   |--- class: on
+     |--- age1 >  -0.50
+     |   |--- age1 <= 4.50
+     |   |   |--- class: on
+     |   |--- age1 >  4.50
+     |   |   |--- age1 <= 5.50
+     |   |   |   |--- age2 <= 0.50
+     |   |   |   |   |--- age3 <= 0.00
+     |   |   |   |   |   |--- age2 <= -0.50
+     |   |   |   |   |   |   |--- class: off
+     |   |   |   |   |   |--- age2 >  -0.50
+     |   |   |   |   |   |   |--- class: on
+     |   |   |   |   |--- age3 >  0.00
+     |   |   |   |   |   |--- class: off
+     |   |   |   |--- age2 >  0.50
+     |   |   |   |   |--- class: off
+     |   |   |--- age1 >  5.50
+     |   |   |   |--- class: on
+  -- neuron 12:
+     |--- age1 <= -0.50
+     |   |--- step <= 0.50
+     |   |   |--- class: off
+     |   |--- step >  0.50
+     |   |   |--- step <= 3.50
+     |   |   |   |--- class: on
+     |   |   |--- step >  3.50
+     |   |   |   |--- class: on
+     |--- age1 >  -0.50
+     |   |--- age1 <= 3.50
+     |   |   |--- class: on
+     |   |--- age1 >  3.50
+     |   |   |--- age1 <= 4.50
+     |   |   |   |--- age2 <= 0.50
+     |   |   |   |   |--- class: on
+     |   |   |   |--- age2 >  0.50
+     |   |   |   |   |--- age2 <= 2.50
+     |   |   |   |   |   |--- class: on
+     |   |   |   |   |--- age2 >  2.50
+     |   |   |   |   |   |--- class: on
+     |   |   |--- age1 >  4.50
+     |   |   |   |--- class: on
+  -- neuron 13:
+     |--- step <= 1.50
+     |   |--- age1 <= -0.50
+     |   |   |--- step <= 0.50
+     |   |   |   |--- class: on
+     |   |   |--- step >  0.50
+     |   |   |   |--- class: on
+     |   |--- age1 >  -0.50
+     |   |   |--- age1 <= 0.50
+     |   |   |   |--- age2 <= 0.00
+     |   |   |   |   |--- class: off
+     |   |   |   |--- age2 >  0.00
+     |   |   |   |   |--- class: on
+     |   |   |--- age1 >  0.50
+     |   |   |   |--- class: on
+     |--- step >  1.50
+     |   |--- age2 <= -0.50
+     |   |   |--- age1 <= 0.50
+     |   |   |   |--- class: on
+     |   |   |--- age1 >  0.50
+     |   |   |   |--- class: on
+     |   |--- age2 >  -0.50
+     |   |   |--- class: on
+  -- neuron 14:
+     |--- age1 <= 0.50
+     |   |--- age1 <= -0.50
+     |   |   |--- class: on
+     |   |--- age1 >  -0.50
+     |   |   |--- age2 <= 0.00
+     |   |   |   |--- class: off
+     |   |   |--- age2 >  0.00
+     |   |   |   |--- age3 <= 0.00
+     |   |   |   |   |--- age2 <= 1.50
+     |   |   |   |   |   |--- class: on
+     |   |   |   |   |--- age2 >  1.50
+     |   |   |   |   |   |--- age2 <= 2.50
+     |   |   |   |   |   |   |--- class: off
+     |   |   |   |   |   |--- age2 >  2.50
+     |   |   |   |   |   |   |--- class: on
+     |   |   |   |--- age3 >  0.00
+     |   |   |   |   |--- class: on
+     |--- age1 >  0.50
+     |   |--- age2 <= 0.50
+     |   |   |--- class: on
+     |   |--- age2 >  0.50
+     |   |   |--- class: on
+  -- neuron 15:
+     |--- age1 <= 5.50
+     |   |--- age1 <= -0.50
+     |   |   |--- class: on
+     |   |--- age1 >  -0.50
+     |   |   |--- step <= 0.50
+     |   |   |   |--- class: off
+     |   |   |--- step >  0.50
+     |   |   |   |--- step <= 3.50
+     |   |   |   |   |--- class: on
+     |   |   |   |--- step >  3.50
+     |   |   |   |   |--- age2 <= 5.50
+     |   |   |   |   |   |--- age3 <= 6.50
+     |   |   |   |   |   |   |--- age2 <= 0.50
+     |   |   |   |   |   |   |   |--- class: on
+     |   |   |   |   |   |   |--- age2 >  0.50
+     |   |   |   |   |   |   |   |--- class: off
+     |   |   |   |   |   |--- age3 >  6.50
+     |   |   |   |   |   |   |--- class: on
+     |   |   |   |   |--- age2 >  5.50
+     |   |   |   |   |   |--- class: on
+     |--- age1 >  5.50
+     |   |--- class: on
+== trees, at most 12 leaves per neuron: acc 91.42 (-3.90) agree-answer 93.3  fitted numbers 272
+   on/off agreement with the network's own run: 0:0.989 3:0.846 10:0.986 11:0.982 12:0.952 13:0.979 14:0.968 15:0.802  (all 0.9381)
+== trees, at most 16 leaves per neuron: acc 92.12 (-3.19) agree-answer 93.9  fitted numbers 368
+   on/off agreement with the network's own run: 0:0.990 3:0.859 10:0.987 11:0.982 12:0.955 13:0.979 14:0.968 15:0.816  (all 0.9419)
+== trees, at most 32 leaves per neuron: acc 92.62 (-2.70) agree-answer 94.7  fitted numbers 752
+   on/off agreement with the network's own run: 0:0.990 3:0.874 10:0.987 11:0.982 12:0.956 13:0.979 14:0.969 15:0.856  (all 0.9491)

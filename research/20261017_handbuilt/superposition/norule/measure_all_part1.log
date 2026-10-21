@@ -1,0 +1,687 @@
+Traceback (most recent call last):
+  File "/data/output/research/algzoo/20261017_handbuilt/superposition/norule/measure.py", line 40, in <module>
+    y = Z[:, 1:, n].reshape(-1); cc = torch.linalg.lstsq(A2, y[:, None]).solution[:, 0]
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 5.19 GiB. GPU 0 has a total capacity of 31.37 GiB of which 4.45 GiB is free. Process 1992521 has 4.40 GiB memory in use. Including non-PyTorch memory, this process has 7.01 GiB memory in use. Process 2011782 has 12.95 GiB memory in use. Process 2011804 has 2.51 GiB memory in use. Of the allocated memory 2.26 GiB is allocated by PyTorch, and 4.10 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+seed 100: 16 neurons, acc 94.80%, dominant pattern 20.0% of steps 4-8, modes 158:0.94 157:0.92 115:0.70 72:0.74 0:1.20 0:0.97 17:0.79 180:0.03 0:0.24
+   0 gate   on  38.3% d2  90.4% partial         near0  16.7%/ 21.0% canc 0.201 rot 0.07 inp 0.00 (sumsq/z 1.0) pos 0.02 offset -0.11 | linear 74.52% (cost 20.28) clip 0.517
+   1 hiding on  77.9% d2  97.0% one-line rule   near0   7.3%/ 13.8% canc 0.339 rot 0.01 inp 0.43 (sumsq/z 1.0) pos 0.55 offset +4.23 | linear 13.08% (cost 81.72) clip 0.096
+   2 memory on  90.8% d2  96.3% one-line rule   near0  20.5%/ 21.0% canc 0.367 rot 0.26 inp 0.00 (sumsq/z 0.9) pos 0.68 offset +1.22 | linear 94.81% (cost -0.02) clip 0.001
+   3 memory on  86.3% d2  86.3% no rule         near0  13.8%/ 65.0% canc 0.065 rot 0.55 inp 0.00 (sumsq/z 2.1) pos 0.45 offset +0.76 | linear 93.94% (cost 0.86) clip 0.028
+   4 hiding on  77.9% d2  96.3% one-line rule   near0   7.3%/ 14.3% canc 0.327 rot 0.03 inp 0.43 (sumsq/z 1.0) pos 0.55 offset +3.48 | linear 14.81% (cost 79.99) clip 0.095
+   5 memory on  97.2% d2  98.2% nearly constant near0  13.5%/ 15.0% canc 0.405 rot 0.19 inp 0.00 (sumsq/z 0.9) pos 0.78 offset +1.57 | linear 94.78% (cost 0.01) clip 0.000
+   6 memory on  93.5% d2  97.2% one-line rule   near0  17.2%/ 22.8% canc 0.231 rot 0.20 inp 0.00 (sumsq/z 0.8) pos 0.77 offset +1.50 | linear 94.79% (cost 0.01) clip 0.000
+   7 memory on  93.8% d2  96.9% one-line rule   near0  17.9%/ 23.4% canc 0.262 rot 0.13 inp 0.00 (sumsq/z 1.1) pos 0.80 offset +1.66 | linear 94.79% (cost 0.01) clip 0.000
+   8 memory on  98.9% d2  98.9% nearly constant near0  18.6%/ 27.7% canc 0.250 rot 0.18 inp 0.00 (sumsq/z 1.2) pos 0.79 offset +1.63 | linear 94.80% (cost -0.01) clip 0.000
+   9 hiding on  77.9% d2  94.8% partial         near0   7.6%/ 11.9% canc 0.410 rot 0.03 inp 0.38 (sumsq/z 1.0) pos 0.54 offset +2.42 | linear 44.27% (cost 50.52) clip 0.093
+  10 memory on  99.7% d2  99.7% nearly constant near0  17.9%/ 37.1% canc 0.186 rot 0.20 inp 0.00 (sumsq/z 1.6) pos 0.72 offset +1.33 | linear 94.80% (cost -0.01) clip 0.000
+  11 memory on  95.4% d2  98.9% one-line rule   near0  12.1%/ 14.5% canc 0.249 rot 0.08 inp 0.00 (sumsq/z 1.2) pos 0.95 offset +3.51 | linear 94.73% (cost 0.06) clip 0.001
+  12 memory on  80.0% d2  98.0% one-line rule   near0  15.8%/ 32.7% canc 0.162 rot 0.35 inp 0.00 (sumsq/z 1.1) pos 0.39 offset +0.67 | linear 38.81% (cost 55.98) clip 0.119
+  13 hiding on  76.5% d2  98.0% one-line rule   near0   7.4%/ 13.9% canc 0.342 rot 0.00 inp 0.49 (sumsq/z 1.0) pos 0.50 offset +5.55 | linear 20.39% (cost 74.41) clip 0.108
+  14 memory on  80.0% d2  83.2% partial         near0  17.5%/ 57.2% canc 0.082 rot 0.24 inp 0.00 (sumsq/z 1.4) pos 0.43 offset +0.72 | linear 93.40% (cost 1.40) clip 0.046
+  15 gate   on  22.9% d2  98.2% one-line rule   near0   7.3%/ 10.8% canc 0.445 rot 0.01 inp 0.48 (sumsq/z 1.0) pos 0.52 offset -6.08 | linear 17.72% (cost 77.08) clip 0.703
+Traceback (most recent call last):
+  File "/data/output/research/algzoo/20261017_handbuilt/superposition/norule/measure.py", line 40, in <module>
+    y = Z[:, 1:, n].reshape(-1); cc = torch.linalg.lstsq(A2, y[:, None]).solution[:, 0]
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 5.19 GiB. GPU 0 has a total capacity of 31.37 GiB of which 4.45 GiB is free. Process 1992521 has 4.40 GiB memory in use. Process 2011804 has 2.51 GiB memory in use. Process 2012008 has 12.95 GiB memory in use. Including non-PyTorch memory, this process has 7.01 GiB memory in use. Of the allocated memory 2.26 GiB is allocated by PyTorch, and 4.10 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+seed 101: 16 neurons, acc 91.29%, dominant pattern 18.3% of steps 4-8, modes 0:1.00 49:0.80 87:0.76 170:0.86 180:0.78 132:0.66 0:0.60 41:0.43 122:0.41
+   0 memory on  64.0% d2  65.4% partial         near0   8.1%/ 51.7% canc 0.104 rot 0.56 inp 0.00 (sumsq/z 8.7) pos 0.02 offset +0.13 | linear 86.41% (cost 4.88) clip 0.289
+   1 memory on  99.4% d2  99.4% nearly constant near0   2.3%/  2.6% canc 0.398 rot 0.36 inp 0.00 (sumsq/z 7.1) pos 0.76 offset +1.51 | linear 91.22% (cost 0.07) clip 0.000
+   2 memory on  99.4% d2  99.4% nearly constant near0  12.2%/ 20.8% canc 0.221 rot 0.33 inp 0.00 (sumsq/z 2.9) pos 0.87 offset +2.15 | linear 91.29% (cost -0.00) clip 0.000
+   3 memory on  89.8% d2  95.5% one-line rule   near0  15.4%/ 41.2% canc 0.119 rot 0.46 inp 0.00 (sumsq/z 13.7) pos 0.70 offset +1.28 | linear 89.88% (cost 1.41) clip 0.007
+   4 memory on  99.7% d2  99.7% nearly constant near0   3.5%/  2.4% canc 0.312 rot 0.46 inp 0.00 (sumsq/z 15.5) pos 0.79 offset +1.63 | linear 91.29% (cost -0.00) clip 0.000
+   5 memory on  93.1% d2  97.5% one-line rule   near0   7.7%/  8.7% canc 0.309 rot 0.45 inp 0.00 (sumsq/z 7.5) pos 0.89 offset +2.40 | linear 91.20% (cost 0.09) clip 0.005
+   6 memory on  97.3% d2  99.7% nearly constant near0   7.9%/ 12.2% canc 0.334 rot 0.37 inp 0.00 (sumsq/z 2.3) pos 0.73 offset +1.40 | linear 91.26% (cost 0.02) clip 0.000
+   7 memory on  75.8% d2  99.1% one-line rule   near0   7.6%/  6.0% canc 0.415 rot 0.28 inp 0.00 (sumsq/z 0.9) pos 0.35 offset +0.61 | linear 58.94% (cost 32.34) clip 0.102
+   8 hiding on  76.6% d2  92.6% partial         near0   7.9%/ 15.5% canc 0.288 rot 0.08 inp 0.35 (sumsq/z 1.1) pos 0.52 offset +1.82 | linear 45.15% (cost 46.14) clip 0.100
+   9 memory on  90.3% d2  93.5% partial         near0  19.0%/ 14.9% canc 0.375 rot 0.48 inp 0.00 (sumsq/z 1.3) pos 0.60 offset +1.03 | linear 90.63% (cost 0.66) clip 0.002
+  10 hiding on  75.7% d2  94.2% partial         near0   7.6%/ 17.5% canc 0.248 rot 0.37 inp 0.15 (sumsq/z 2.9) pos 0.50 offset +2.27 | linear 60.76% (cost 30.53) clip 0.110
+  11 gate   on  23.6% d2  96.3% one-line rule   near0   7.4%/ 16.4% canc 0.271 rot 0.01 inp 0.47 (sumsq/z 1.0) pos 0.51 offset -3.74 | linear 13.21% (cost 78.08) clip 0.696
+  12 memory on  81.3% d2  85.4% partial         near0  23.4%/ 26.8% canc 0.230 rot 0.37 inp 0.00 (sumsq/z 1.2) pos 0.52 offset +0.87 | linear 56.71% (cost 34.57) clip 0.036
+  13 hiding on  76.9% d2  95.6% one-line rule   near0   7.4%/ 16.6% canc 0.268 rot 0.03 inp 0.44 (sumsq/z 1.0) pos 0.53 offset +3.13 | linear 30.78% (cost 60.51) clip 0.103
+  14 memory on  84.2% d2  96.8% one-line rule   near0  17.0%/ 26.2% canc 0.268 rot 0.44 inp 0.00 (sumsq/z 1.5) pos 0.58 offset +0.99 | linear 77.88% (cost 13.41) clip 0.020
+  15 memory on  99.0% d2  99.0% nearly constant near0   8.9%/ 10.2% canc 0.323 rot 0.25 inp 0.00 (sumsq/z 1.7) pos 0.95 offset +3.67 | linear 91.05% (cost 0.24) clip 0.000
+Traceback (most recent call last):
+  File "/data/output/research/algzoo/20261017_handbuilt/superposition/norule/measure.py", line 40, in <module>
+    y = Z[:, 1:, n].reshape(-1); cc = torch.linalg.lstsq(A2, y[:, None]).solution[:, 0]
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 5.19 GiB. GPU 0 has a total capacity of 31.37 GiB of which 4.45 GiB is free. Process 1992521 has 4.40 GiB memory in use. Process 2011804 has 2.51 GiB memory in use. Process 2012280 has 12.95 GiB memory in use. Including non-PyTorch memory, this process has 7.01 GiB memory in use. Of the allocated memory 2.26 GiB is allocated by PyTorch, and 4.10 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+seed 103: 16 neurons, acc 95.32%, dominant pattern 32.4% of steps 4-8, modes 180:0.78 111:0.97 136:0.77 100:0.71 62:0.83 0:0.01 15:0.86 0:1.00
+   0 hiding on  57.1% d2  93.8% partial         near0  72.3%/ 10.0% canc 0.440 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.16 offset -0.36 | linear 7.58% (cost 87.74) clip 0.382
+   1 memory on  99.8% d2  99.8% nearly constant near0  15.4%/  7.0% canc 0.325 rot 0.26 inp 0.00 (sumsq/z 1.2) pos 0.69 offset +1.25 | linear 95.31% (cost 0.01) clip 0.000
+   2 hiding on  60.4% d2  96.3% one-line rule   near0  72.7%/  9.4% canc 0.479 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.16 offset -0.36 | linear 10.00% (cost 85.32) clip 0.381
+   3 memory on  90.1% d2  90.1% no rule         near0  15.5%/ 54.6% canc 0.112 rot 0.38 inp 0.00 (sumsq/z 1.3) pos 0.53 offset +0.89 | linear 94.18% (cost 1.14) clip 0.016
+   4 memory on  99.3% d2  99.3% nearly constant near0  14.3%/ 21.5% canc 0.211 rot 0.15 inp 0.00 (sumsq/z 1.0) pos 0.77 offset +1.54 | linear 95.31% (cost 0.01) clip 0.000
+   5 memory on  99.7% d2  99.7% nearly constant near0  13.9%/ 18.0% canc 0.422 rot 0.10 inp 0.00 (sumsq/z 0.9) pos 0.80 offset +1.64 | linear 95.32% (cost 0.00) clip 0.000
+   6 memory on  99.0% d2  99.1% nearly constant near0  12.2%/ 20.0% canc 0.244 rot 0.15 inp 0.00 (sumsq/z 1.3) pos 0.83 offset +1.82 | linear 95.31% (cost 0.01) clip 0.000
+   7 memory on  81.0% d2  97.9% one-line rule   near0  20.6%/ 44.3% canc 0.129 rot 0.32 inp 0.00 (sumsq/z 1.7) pos 0.58 offset +0.97 | linear 73.02% (cost 22.30) clip 0.027
+   8 memory on  89.2% d2  96.9% one-line rule   near0  14.6%/ 11.8% canc 0.400 rot 0.12 inp 0.00 (sumsq/z 0.8) pos 0.75 offset +1.46 | linear 95.20% (cost 0.12) clip 0.003
+   9 store  on  97.4% d2  97.6% nearly constant near0  13.3%/  3.1% canc 0.787 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.99 offset +10.02 | linear 95.33% (cost -0.00) clip 0.000
+  10 hiding on  58.3% d2  94.9% partial         near0  71.9%/ 11.5% canc 0.390 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.16 offset -0.36 | linear 14.23% (cost 81.09) clip 0.382
+  11 gate   on  24.4% d2  98.9% one-line rule   near0   8.1%/  6.3% canc 0.443 rot 0.02 inp 0.00 (sumsq/z 1.1) pos 0.22 offset -0.45 | linear 14.19% (cost 81.13) clip 0.593
+  12 gate   on  19.4% d2  99.9% one-line rule   near0   7.1%/  6.3% canc 0.971 rot 0.00 inp 0.38 (sumsq/z 1.0) pos 0.62 offset -139.81 | linear 10.16% (cost 85.16) clip 0.734
+  13 memory on  94.5% d2  97.9% one-line rule   near0  13.8%/  9.3% canc 0.455 rot 0.08 inp 0.00 (sumsq/z 1.0) pos 0.84 offset +1.88 | linear 95.32% (cost 0.01) clip 0.000
+  14 gate   on  40.6% d2  97.5% one-line rule   near0   8.0%/ 15.8% canc 0.276 rot 0.00 inp 0.85 (sumsq/z 1.0) pos 0.09 offset -1.05 | linear 69.54% (cost 25.78) clip 0.516
+  15 memory on  98.7% d2  98.8% nearly constant near0  14.2%/  4.3% canc 0.429 rot 0.13 inp 0.00 (sumsq/z 0.9) pos 0.84 offset +1.94 | linear 95.33% (cost -0.01) clip 0.000
+seed 105: 16 neurons, acc 89.77%, dominant pattern 31.0% of steps 4-8, modes 0:1.00 0:0.76 47:0.83 75:0.66 114:0.62 142:0.75 156:0.58 180:0.63 180:0.92
+   0 store  on  97.4% d2  97.4% nearly constant near0   4.5%/  2.3% canc 0.335 rot 0.16 inp 0.01 (sumsq/z 1.2) pos 0.96 offset +4.87 | linear 89.73% (cost 0.04) clip 0.001
+   1 memory on  87.2% d2  92.8% partial         near0  11.5%/ 69.6% canc 0.076 rot 0.41 inp 0.00 (sumsq/z 1.4) pos 0.78 offset +1.59 | linear 89.24% (cost 0.52) clip 0.030
+   2 memory on  72.0% d2  94.7% partial         near0  11.1%/ 23.0% canc 0.176 rot 0.13 inp 0.00 (sumsq/z 0.8) pos 0.01 offset +0.08 | linear 29.86% (cost 59.91) clip 0.308
+   3 gate   on  20.9% d2  98.7% one-line rule   near0   7.2%/ 11.7% canc 0.367 rot 0.00 inp 0.42 (sumsq/z 1.0) pos 0.58 offset -10.99 | linear 5.64% (cost 84.13) clip 0.722
+   4 memory on  97.8% d2  97.8% nearly constant near0   3.6%/  1.4% canc 0.472 rot 0.03 inp 0.01 (sumsq/z 1.0) pos 0.95 offset +4.22 | linear 88.47% (cost 1.30) clip 0.001
+   5 gate   on  27.0% d2  95.5% one-line rule   near0   9.9%/ 20.6% canc 0.175 rot 0.35 inp 0.00 (sumsq/z 1.2) pos 0.02 offset -0.12 | linear 18.13% (cost 71.64) clip 0.447
+   6 memory on 100.0% d2 100.0% nearly constant near0   8.3%/  2.4% canc 0.449 rot 0.02 inp 0.00 (sumsq/z 0.9) pos 0.95 offset +3.81 | linear 89.77% (cost 0.00) clip 0.000
+   7 memory on  99.4% d2  99.4% nearly constant near0   4.6%/  2.6% canc 0.242 rot 0.15 inp 0.00 (sumsq/z 1.3) pos 0.95 offset +3.61 | linear 89.77% (cost -0.00) clip 0.000
+   8 memory on  97.1% d2  97.1% nearly constant near0   5.5%/  3.4% canc 0.230 rot 0.07 inp 0.00 (sumsq/z 1.3) pos 0.85 offset +1.99 | linear 89.58% (cost 0.19) clip 0.001
+   9 memory on  78.5% d2  93.0% partial         near0  10.1%/ 48.6% canc 0.085 rot 0.09 inp 0.12 (sumsq/z 1.5) pos 0.50 offset +1.05 | linear 66.91% (cost 22.85) clip 0.069
+  10 memory on  99.2% d2  99.2% nearly constant near0   5.2%/ 16.5% canc 0.208 rot 0.11 inp 0.00 (sumsq/z 1.0) pos 0.80 offset +1.66 | linear 89.77% (cost -0.01) clip 0.000
+  11 hiding on  77.9% d2  96.0% one-line rule   near0   7.4%/ 29.8% canc 0.144 rot 0.17 inp 0.36 (sumsq/z 1.1) pos 0.56 offset +3.27 | linear 52.45% (cost 37.31) clip 0.096
+  12 memory on  97.7% d2  97.7% nearly constant near0   3.4%/  1.6% canc 0.489 rot 0.05 inp 0.01 (sumsq/z 1.0) pos 0.92 offset +2.95 | linear 89.15% (cost 0.62) clip 0.001
+  13 memory on  99.6% d2  99.6% nearly constant near0   5.0%/  0.9% canc 0.318 rot 0.20 inp 0.00 (sumsq/z 1.1) pos 0.96 offset +3.87 | linear 89.75% (cost 0.02) clip 0.000
+  14 memory on  99.8% d2  99.8% nearly constant near0  12.1%/  8.3% canc 0.322 rot 0.14 inp 0.00 (sumsq/z 0.9) pos 0.77 offset +1.55 | linear 89.77% (cost 0.00) clip 0.000
+  15 memory on  60.4% d2  63.3% partial         near0   8.8%/ 38.8% canc 0.107 rot 0.86 inp 0.00 (sumsq/z 2.0) pos 0.07 offset +0.23 | linear 83.42% (cost 6.35) clip 0.290
+Traceback (most recent call last):
+  File "/data/output/research/algzoo/20261017_handbuilt/superposition/norule/measure.py", line 40, in <module>
+    y = Z[:, 1:, n].reshape(-1); cc = torch.linalg.lstsq(A2, y[:, None]).solution[:, 0]
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 5.19 GiB. GPU 0 has a total capacity of 31.37 GiB of which 4.45 GiB is free. Process 1992521 has 4.40 GiB memory in use. Process 2011804 has 2.51 GiB memory in use. Process 2012558 has 12.95 GiB memory in use. Including non-PyTorch memory, this process has 7.01 GiB memory in use. Of the allocated memory 2.26 GiB is allocated by PyTorch, and 4.10 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/data/output/research/algzoo/20261017_handbuilt/superposition/norule/measure.py", line 40, in <module>
+    y = Z[:, 1:, n].reshape(-1); cc = torch.linalg.lstsq(A2, y[:, None]).solution[:, 0]
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 5.19 GiB. GPU 0 has a total capacity of 31.37 GiB of which 4.45 GiB is free. Process 1992521 has 4.40 GiB memory in use. Process 2011804 has 2.51 GiB memory in use. Process 2012784 has 12.95 GiB memory in use. Including non-PyTorch memory, this process has 7.01 GiB memory in use. Of the allocated memory 2.26 GiB is allocated by PyTorch, and 4.10 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+seed 107: 16 neurons, acc 92.09%, dominant pattern 30.5% of steps 4-8, modes 0:1.09 0:0.97 0:0.90 40:0.72 72:0.68 106:0.67 140:0.67 180:0.15 173:0.82 180:0.72
+   0 memory on  96.0% d2  98.5% partial         near0   6.1%/  3.8% canc 0.368 rot 0.03 inp 0.01 (sumsq/z 1.0) pos 0.94 offset +3.73 | linear 91.70% (cost 0.39) clip 0.003
+   1 hiding on  81.0% d2  97.2% one-line rule   near0   7.6%/ 17.0% canc 0.250 rot 0.05 inp 0.31 (sumsq/z 1.1) pos 0.62 offset +3.09 | linear 65.51% (cost 26.58) clip 0.072
+   2 hiding on  77.0% d2  95.2% one-line rule   near0   7.5%/ 19.3% canc 0.220 rot 0.02 inp 0.42 (sumsq/z 1.0) pos 0.53 offset +2.64 | linear 57.50% (cost 34.59) clip 0.100
+   3 memory on  65.6% d2  71.0% partial         near0   8.3%/ 71.8% canc 0.042 rot 0.75 inp 0.00 (sumsq/z 2.2) pos 0.03 offset +0.14 | linear 90.55% (cost 1.54) clip 0.238
+   4 hiding on  79.4% d2  98.4% one-line rule   near0   7.2%/ 10.8% canc 0.426 rot 0.01 inp 0.40 (sumsq/z 1.0) pos 0.59 offset +7.77 | linear 46.98% (cost 45.11) clip 0.086
+   5 memory on  86.2% d2  91.3% partial         near0  24.6%/ 44.1% canc 0.134 rot 0.27 inp 0.00 (sumsq/z 1.1) pos 0.65 offset +1.15 | linear 91.15% (cost 0.94) clip 0.006
+   6 memory on  75.8% d2  99.4% one-line rule   near0  13.3%/  3.1% canc 0.457 rot 0.06 inp 0.00 (sumsq/z 0.9) pos 0.02 offset -0.13 | linear 17.33% (cost 74.76) clip 0.361
+   7 memory on  99.1% d2  99.2% nearly constant near0   2.3%/  1.0% canc 0.395 rot 0.17 inp 0.00 (sumsq/z 1.2) pos 0.91 offset +2.73 | linear 92.13% (cost -0.04) clip 0.000
+   8 memory on  99.4% d2  99.4% nearly constant near0   5.1%/ 10.3% canc 0.261 rot 0.13 inp 0.00 (sumsq/z 1.1) pos 0.86 offset +2.11 | linear 92.09% (cost -0.00) clip 0.000
+   9 gate   on  19.9% d2  99.7% one-line rule   near0   7.1%/  8.9% canc 0.532 rot 0.00 inp 0.39 (sumsq/z 1.0) pos 0.61 offset -46.66 | linear 11.27% (cost 80.82) clip 0.730
+  10 memory on  99.5% d2  99.5% nearly constant near0   2.0%/  0.5% canc 0.467 rot 0.09 inp 0.00 (sumsq/z 1.0) pos 0.85 offset +2.00 | linear 91.83% (cost 0.26) clip 0.000
+  11 memory on  71.7% d2  95.1% one-line rule   near0  23.1%/  8.3% canc 0.400 rot 0.02 inp 0.00 (sumsq/z 1.0) pos 0.06 offset -0.21 | linear 10.85% (cost 81.24) clip 0.373
+  12 memory on  98.9% d2  99.4% nearly constant near0   3.5%/  1.7% canc 0.471 rot 0.18 inp 0.00 (sumsq/z 1.1) pos 0.82 offset +1.79 | linear 92.02% (cost 0.07) clip 0.000
+  13 memory on  69.8% d2  93.4% partial         near0  25.5%/ 18.4% canc 0.203 rot 0.05 inp 0.00 (sumsq/z 1.0) pos 0.05 offset -0.19 | linear 12.52% (cost 79.57) clip 0.370
+  14 store  on  99.6% d2  99.7% nearly constant near0   9.0%/  2.2% canc 0.552 rot 0.01 inp 0.00 (sumsq/z 1.0) pos 0.99 offset +9.26 | linear 92.07% (cost 0.02) clip 0.000
+  15 memory on  99.3% d2  99.3% nearly constant near0   5.1%/  0.5% canc 0.418 rot 0.08 inp 0.00 (sumsq/z 1.0) pos 0.82 offset +1.78 | linear 92.08% (cost 0.01) clip 0.000
+Traceback (most recent call last):
+  File "/data/output/research/algzoo/20261017_handbuilt/superposition/norule/measure.py", line 40, in <module>
+    y = Z[:, 1:, n].reshape(-1); cc = torch.linalg.lstsq(A2, y[:, None]).solution[:, 0]
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 5.19 GiB. GPU 0 has a total capacity of 31.37 GiB of which 4.45 GiB is free. Process 1992521 has 4.40 GiB memory in use. Process 2011804 has 2.51 GiB memory in use. Process 2013042 has 12.95 GiB memory in use. Including non-PyTorch memory, this process has 7.01 GiB memory in use. Of the allocated memory 2.26 GiB is allocated by PyTorch, and 4.10 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+seed 109: 16 neurons, acc 94.00%, dominant pattern 50.7% of steps 4-8, modes 45:1.04 137:0.60 180:0.53 92:0.55 48:0.62 0:1.01 16:0.46 0:0.16 180:0.27
+   0 memory on  94.3% d2  98.9% one-line rule   near0   6.7%/  7.0% canc 0.315 rot 0.42 inp 0.00 (sumsq/z 8.2) pos 0.93 offset +3.13 | linear 93.99% (cost 0.01) clip 0.003
+   1 memory on  99.5% d2  99.5% nearly constant near0  11.9%/ 10.9% canc 0.322 rot 0.33 inp 0.00 (sumsq/z 2.7) pos 0.93 offset +2.95 | linear 94.00% (cost -0.00) clip 0.000
+   2 memory on  89.0% d2  94.3% partial         near0   9.6%/ 38.9% canc 0.135 rot 0.43 inp 0.00 (sumsq/z 6.1) pos 0.82 offset +1.78 | linear 93.97% (cost 0.02) clip 0.004
+   3 memory on  85.8% d2  91.0% partial         near0  20.2%/ 37.2% canc 0.118 rot 0.35 inp 0.00 (sumsq/z 3.1) pos 0.64 offset +1.12 | linear 93.01% (cost 0.98) clip 0.009
+   4 memory on  96.3% d2  97.9% partial         near0   4.8%/  3.3% canc 0.364 rot 0.48 inp 0.00 (sumsq/z 31.4) pos 0.94 offset +3.87 | linear 92.24% (cost 1.76) clip 0.003
+   5 hiding on  76.8% d2  97.1% one-line rule   near0   7.4%/ 15.6% canc 0.288 rot 0.25 inp 0.21 (sumsq/z 2.1) pos 0.53 offset +4.41 | linear 13.58% (cost 80.41) clip 0.105
+   6 gate   on  21.7% d2  97.8% one-line rule   near0   7.2%/ 13.5% canc 0.332 rot 0.15 inp 0.30 (sumsq/z 1.4) pos 0.57 offset -6.20 | linear 14.81% (cost 79.18) clip 0.714
+   7 memory on  74.9% d2  98.7% one-line rule   near0   6.4%/ 22.4% canc 0.153 rot 0.61 inp 0.00 (sumsq/z 1.6) pos 0.26 offset +0.50 | linear 53.91% (cost 40.08) clip 0.156
+   8 gate   on  20.3% d2  98.3% one-line rule   near0   7.3%/ 12.9% canc 0.341 rot 0.09 inp 0.34 (sumsq/z 1.2) pos 0.60 offset -6.85 | linear 13.15% (cost 80.84) clip 0.726
+   9 memory on  95.9% d2  97.8% partial         near0   3.9%/  4.5% canc 0.334 rot 0.49 inp 0.00 (sumsq/z 24.5) pos 0.90 offset +2.80 | linear 91.78% (cost 2.22) clip 0.004
+  10 memory on  98.7% d2  98.7% nearly constant near0   2.7%/  1.0% canc 0.428 rot 0.50 inp 0.00 (sumsq/z 144.6) pos 0.94 offset +3.46 | linear 93.94% (cost 0.05) clip 0.001
+  11 store  on  96.3% d2  98.9% partial         near0  11.8%/  7.0% canc 0.385 rot 0.46 inp 0.00 (sumsq/z 14.0) pos 0.98 offset +6.33 | linear 93.95% (cost 0.05) clip 0.000
+  12 memory on  97.3% d2  97.4% nearly constant near0  12.8%/ 48.8% canc 0.091 rot 0.39 inp 0.00 (sumsq/z 2.6) pos 0.66 offset +1.17 | linear 93.98% (cost 0.02) clip 0.000
+  13 memory on  99.3% d2  99.2% nearly constant near0   3.3%/  1.0% canc 0.465 rot 0.51 inp 0.00 (sumsq/z 131.4) pos 0.92 offset +2.85 | linear 93.99% (cost 0.00) clip 0.000
+  14 hiding on  77.2% d2  95.5% one-line rule   near0   7.4%/ 17.2% canc 0.254 rot 0.33 inp 0.16 (sumsq/z 2.6) pos 0.54 offset +2.96 | linear 33.44% (cost 60.56) clip 0.100
+  15 memory on  97.5% d2  98.4% nearly constant near0   4.4%/  3.0% canc 0.312 rot 0.50 inp 0.00 (sumsq/z 80.7) pos 0.88 offset +2.28 | linear 93.62% (cost 0.38) clip 0.001
+Traceback (most recent call last):
+  File "/data/output/research/algzoo/20261017_handbuilt/superposition/norule/measure.py", line 40, in <module>
+    y = Z[:, 1:, n].reshape(-1); cc = torch.linalg.lstsq(A2, y[:, None]).solution[:, 0]
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 5.19 GiB. GPU 0 has a total capacity of 31.37 GiB of which 4.45 GiB is free. Process 1992521 has 4.40 GiB memory in use. Process 2013287 has 12.95 GiB memory in use. Including non-PyTorch memory, this process has 7.01 GiB memory in use. Process 2013340 has 2.51 GiB memory in use. Of the allocated memory 2.26 GiB is allocated by PyTorch, and 4.10 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+seed 111: 16 neurons, acc 95.99%, dominant pattern 7.2% of steps 4-8, modes 147:0.67 103:0.65 33:1.03 0:1.00 0:0.98 39:0.71 0:0.19 180:0.00 180:0.03
+   0 gate   on  30.0% d2  83.1% partial         near0  14.0%/ 57.1% canc 0.081 rot 0.51 inp 0.00 (sumsq/z 143.9) pos 0.07 offset -0.24 | linear 61.39% (cost 34.60) clip 0.434
+   1 memory on  85.5% d2  89.5% partial         near0  20.0%/ 49.2% canc 0.113 rot 0.36 inp 0.00 (sumsq/z 5.0) pos 0.53 offset +0.88 | linear 95.92% (cost 0.07) clip 0.010
+   2 memory on  81.7% d2  83.8% partial         near0  13.5%/ 45.2% canc 0.110 rot 0.37 inp 0.00 (sumsq/z 3.4) pos 0.39 offset +0.67 | linear 95.30% (cost 0.69) clip 0.027
+   3 memory on  86.9% d2  95.8% one-line rule   near0  25.7%/ 21.1% canc 0.503 rot 0.36 inp 0.00 (sumsq/z 1.9) pos 0.48 offset +0.79 | linear 95.90% (cost 0.09) clip 0.005
+   4 hiding on  62.2% d2  98.8% one-line rule   near0  60.4%/  6.5% canc 0.641 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.14 offset -0.34 | linear 12.30% (cost 83.69) clip 0.381
+   5 store  on  99.5% d2  99.6% nearly constant near0  13.3%/ 11.0% canc 0.845 rot 0.01 inp 0.00 (sumsq/z 0.9) pos 0.99 offset +9.51 | linear 95.99% (cost 0.00) clip 0.000
+   6 memory on  73.3% d2  73.3% no rule         near0  12.0%/ 49.9% canc 0.108 rot 0.41 inp 0.00 (sumsq/z 3.3) pos 0.27 offset +0.50 | linear 94.24% (cost 1.76) clip 0.076
+   7 gate   on  19.3% d2  99.9% one-line rule   near0   7.1%/  6.2% canc 0.963 rot 0.00 inp 0.37 (sumsq/z 1.0) pos 0.63 offset -259.74 | linear 5.02% (cost 90.97) clip 0.735
+   8 hiding on  56.2% d2  95.3% one-line rule   near0  65.2%/ 15.8% canc 0.303 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.15 offset -0.35 | linear 9.56% (cost 86.43) clip 0.382
+   9 hiding on  80.3% d2  98.7% one-line rule   near0   7.2%/  9.3% canc 0.511 rot 0.01 inp 0.40 (sumsq/z 1.0) pos 0.61 offset +7.20 | linear 22.93% (cost 73.06) clip 0.080
+  10 gate   on  39.7% d2  92.5% partial         near0   8.7%/  7.9% canc 0.461 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.12 offset -0.31 | linear 55.52% (cost 40.47) clip 0.590
+  11 memory on  97.2% d2  97.9% nearly constant near0  13.6%/ 11.1% canc 0.454 rot 0.14 inp 0.00 (sumsq/z 1.2) pos 0.77 offset +1.51 | linear 95.93% (cost 0.06) clip 0.000
+  12 hiding on  70.8% d2  96.0% one-line rule   near0   7.7%/ 17.5% canc 0.267 rot 0.08 inp 0.44 (sumsq/z 1.1) pos 0.37 offset +1.45 | linear 32.05% (cost 63.94) clip 0.148
+  13 memory on  93.0% d2  98.4% one-line rule   near0  17.2%/ 18.5% canc 0.314 rot 0.23 inp 0.00 (sumsq/z 0.6) pos 0.70 offset +1.26 | linear 96.00% (cost -0.01) clip 0.001
+  14 memory on  80.2% d2  98.1% one-line rule   near0  11.9%/ 37.3% canc 0.159 rot 0.49 inp 0.00 (sumsq/z 1.2) pos 0.25 offset +0.47 | linear 64.69% (cost 31.30) clip 0.130
+  15 memory on  90.1% d2  96.1% one-line rule   near0  26.4%/ 13.9% canc 0.657 rot 0.28 inp 0.00 (sumsq/z 1.8) pos 0.56 offset +0.94 | linear 96.02% (cost -0.03) clip 0.002
+seed 113: 16 neurons, acc 90.43%, dominant pattern 24.8% of steps 4-8, modes 60:1.03 0:0.95 0:0.76 14:0.82 61:0.84 102:0.82 149:0.75 180:0.07 180:0.64 180:0.54
+   0 memory on  96.6% d2  96.9% no rule         near0  13.9%/ 23.5% canc 0.304 rot 0.15 inp 0.00 (sumsq/z 1.2) pos 0.69 offset +1.23 | linear 90.32% (cost 0.11) clip 0.001
+   1 gate   on  38.6% d2  96.9% one-line rule   near0   8.0%/ 17.6% canc 0.243 rot 0.00 inp 0.83 (sumsq/z 1.0) pos 0.13 offset -1.69 | linear 37.11% (cost 53.32) clip 0.540
+   2 memory on  89.8% d2  96.0% one-line rule   near0  17.3%/ 18.0% canc 0.366 rot 0.08 inp 0.00 (sumsq/z 1.1) pos 0.79 offset +1.61 | linear 90.36% (cost 0.07) clip 0.001
+   3 hiding on  76.3% d2  95.2% one-line rule   near0   7.4%/ 18.5% canc 0.235 rot 0.02 inp 0.45 (sumsq/z 1.0) pos 0.50 offset +2.82 | linear 26.75% (cost 63.68) clip 0.107
+   4 memory on  92.7% d2  92.7% no rule         near0   8.2%/ 21.5% canc 0.208 rot 0.19 inp 0.00 (sumsq/z 1.0) pos 0.65 offset +1.14 | linear 90.10% (cost 0.33) clip 0.008
+   5 hiding on  75.9% d2  95.8% one-line rule   near0   7.4%/ 17.7% canc 0.237 rot 0.02 inp 0.48 (sumsq/z 1.0) pos 0.49 offset +2.95 | linear 24.77% (cost 65.66) clip 0.111
+   6 memory on  75.4% d2  99.0% one-line rule   near0   7.4%/ 15.2% canc 0.194 rot 0.07 inp 0.00 (sumsq/z 0.8) pos 0.28 offset +0.52 | linear 18.35% (cost 72.08) clip 0.176
+   7 hiding on  76.5% d2  93.8% partial         near0   7.5%/ 18.4% canc 0.235 rot 0.05 inp 0.47 (sumsq/z 0.9) pos 0.51 offset +2.18 | linear 22.45% (cost 67.98) clip 0.104
+   8 memory on  85.7% d2  90.9% partial         near0   8.1%/ 11.4% canc 0.331 rot 0.05 inp 0.00 (sumsq/z 1.0) pos 0.77 offset +1.52 | linear 88.73% (cost 1.70) clip 0.016
+   9 hiding on  75.9% d2  93.4% partial         near0   7.8%/ 25.9% canc 0.176 rot 0.06 inp 0.45 (sumsq/z 1.0) pos 0.47 offset +1.98 | linear 49.44% (cost 40.99) clip 0.108
+  10 memory on  67.8% d2  76.6% partial         near0  11.5%/ 32.5% canc 0.148 rot 0.40 inp 0.00 (sumsq/z 1.2) pos 0.27 offset +0.51 | linear 87.92% (cost 2.51) clip 0.090
+  11 memory on  97.1% d2  97.5% nearly constant near0   3.8%/  4.5% canc 0.444 rot 0.12 inp 0.00 (sumsq/z 1.1) pos 0.75 offset +1.44 | linear 90.37% (cost 0.06) clip 0.001
+  12 memory on  99.0% d2  99.0% nearly constant near0   1.9%/  1.5% canc 0.399 rot 0.06 inp 0.00 (sumsq/z 1.1) pos 0.67 offset +1.20 | linear 90.41% (cost 0.02) clip 0.000
+  13 memory on  90.6% d2  96.6% one-line rule   near0  17.0%/ 32.4% canc 0.185 rot 0.42 inp 0.00 (sumsq/z 0.8) pos 0.69 offset +1.23 | linear 88.13% (cost 2.30) clip 0.006
+  14 memory on  88.8% d2  90.5% partial         near0   6.6%/  9.1% canc 0.386 rot 0.08 inp 0.00 (sumsq/z 1.1) pos 0.67 offset +1.18 | linear 88.30% (cost 2.13) clip 0.007
+  15 memory on  85.8% d2  95.2% one-line rule   near0   7.0%/ 18.4% canc 0.226 rot 0.17 inp 0.05 (sumsq/z 1.2) pos 0.67 offset +1.34 | linear 88.64% (cost 1.80) clip 0.025
+Traceback (most recent call last):
+  File "/data/output/research/algzoo/20261017_handbuilt/superposition/norule/measure.py", line 40, in <module>
+    y = Z[:, 1:, n].reshape(-1); cc = torch.linalg.lstsq(A2, y[:, None]).solution[:, 0]
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 5.19 GiB. GPU 0 has a total capacity of 31.37 GiB of which 4.45 GiB is free. Process 1992521 has 4.40 GiB memory in use. Process 2013340 has 2.51 GiB memory in use. Process 2013522 has 12.95 GiB memory in use. Including non-PyTorch memory, this process has 7.01 GiB memory in use. Of the allocated memory 2.26 GiB is allocated by PyTorch, and 4.10 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/data/output/research/algzoo/20261017_handbuilt/superposition/norule/measure.py", line 40, in <module>
+    y = Z[:, 1:, n].reshape(-1); cc = torch.linalg.lstsq(A2, y[:, None]).solution[:, 0]
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 5.19 GiB. GPU 0 has a total capacity of 31.37 GiB of which 4.45 GiB is free. Process 1992521 has 4.40 GiB memory in use. Process 2013340 has 2.51 GiB memory in use. Process 2013800 has 12.95 GiB memory in use. Including non-PyTorch memory, this process has 7.01 GiB memory in use. Of the allocated memory 2.26 GiB is allocated by PyTorch, and 4.10 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+seed 115: 16 neurons, acc 95.14%, dominant pattern 35.9% of steps 4-8, modes 158:0.95 109:0.92 66:0.98 71:0.84 180:0.03 39:0.83 0:1.00 0:0.89 0:0.40
+   0 memory on  98.6% d2  98.6% nearly constant near0  13.6%/  5.3% canc 0.662 rot 0.10 inp 0.00 (sumsq/z 0.9) pos 0.84 offset +1.90 | linear 95.13% (cost 0.01) clip 0.000
+   1 memory on  98.4% d2  98.4% nearly constant near0  18.4%/ 35.8% canc 0.181 rot 0.25 inp 0.00 (sumsq/z 1.6) pos 0.67 offset +1.18 | linear 95.12% (cost 0.02) clip 0.000
+   2 memory on  61.8% d2  89.2% partial         near0  62.4%/ 29.3% canc 0.181 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.15 offset -0.34 | linear 8.40% (cost 86.74) clip 0.379
+   3 memory on  93.0% d2  96.1% one-line rule   near0  17.5%/ 29.2% canc 0.159 rot 0.30 inp 0.00 (sumsq/z 0.8) pos 0.73 offset +1.36 | linear 94.86% (cost 0.29) clip 0.003
+   4 memory on  78.4% d2  95.4% one-line rule   near0  24.6%/ 63.8% canc 0.084 rot 0.27 inp 0.00 (sumsq/z 1.0) pos 0.48 offset +0.81 | linear 93.49% (cost 1.66) clip 0.008
+   5 hiding on  73.8% d2  93.0% partial         near0   7.6%/ 13.7% canc 0.353 rot 0.04 inp 0.49 (sumsq/z 1.0) pos 0.44 offset +1.86 | linear 33.99% (cost 61.16) clip 0.126
+   6 hiding on  71.8% d2  95.5% one-line rule   near0   7.6%/ 13.5% canc 0.347 rot 0.04 inp 0.49 (sumsq/z 1.1) pos 0.39 offset +1.67 | linear 36.25% (cost 58.89) clip 0.143
+   7 hiding on  77.5% d2  96.1% one-line rule   near0   7.5%/ 13.1% canc 0.363 rot 0.03 inp 0.41 (sumsq/z 1.0) pos 0.53 offset +2.84 | linear 37.72% (cost 57.42) clip 0.098
+   8 memory on  80.1% d2  80.2% no rule         near0  17.0%/ 67.5% canc 0.061 rot 0.41 inp 0.00 (sumsq/z 0.9) pos 0.41 offset +0.69 | linear 93.90% (cost 1.24) clip 0.043
+   9 memory on  96.9% d2  97.0% no rule         near0  21.5%/ 26.4% canc 0.276 rot 0.24 inp 0.00 (sumsq/z 1.1) pos 0.76 offset +1.46 | linear 94.90% (cost 0.25) clip 0.001
+  10 memory on  93.8% d2  97.6% one-line rule   near0  13.9%/ 10.2% canc 0.526 rot 0.11 inp 0.00 (sumsq/z 1.0) pos 0.86 offset +2.09 | linear 95.14% (cost 0.00) clip 0.000
+  11 gate   on  35.7% d2  99.0% one-line rule   near0   7.9%/ 15.3% canc 0.301 rot 0.01 inp 0.72 (sumsq/z 1.0) pos 0.18 offset -1.24 | linear 48.66% (cost 46.49) clip 0.574
+  12 memory on  93.7% d2  96.7% one-line rule   near0  14.6%/ 34.5% canc 0.170 rot 0.19 inp 0.00 (sumsq/z 1.0) pos 0.73 offset +1.38 | linear 95.11% (cost 0.04) clip 0.001
+  13 memory on  90.7% d2  94.2% partial         near0  15.2%/ 38.9% canc 0.217 rot 0.25 inp 0.00 (sumsq/z 1.1) pos 0.62 offset +1.07 | linear 94.94% (cost 0.20) clip 0.005
+  14 memory on  95.2% d2  97.9% partial         near0  17.3%/ 13.3% canc 0.435 rot 0.16 inp 0.00 (sumsq/z 1.2) pos 0.80 offset +1.64 | linear 95.11% (cost 0.04) clip 0.000
+  15 gate   on  19.4% d2  99.9% one-line rule   near0   7.1%/  6.3% canc 0.971 rot 0.00 inp 0.38 (sumsq/z 1.0) pos 0.62 offset -131.46 | linear 9.21% (cost 85.94) clip 0.734
+Traceback (most recent call last):
+  File "/data/output/research/algzoo/20261017_handbuilt/superposition/norule/measure.py", line 40, in <module>
+    y = Z[:, 1:, n].reshape(-1); cc = torch.linalg.lstsq(A2, y[:, None]).solution[:, 0]
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 5.19 GiB. GPU 0 has a total capacity of 31.37 GiB of which 4.45 GiB is free. Process 1992521 has 4.40 GiB memory in use. Process 2013340 has 2.51 GiB memory in use. Process 2014078 has 12.95 GiB memory in use. Including non-PyTorch memory, this process has 7.01 GiB memory in use. Of the allocated memory 2.26 GiB is allocated by PyTorch, and 4.10 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+seed 201: 16 neurons, acc 94.39%, dominant pattern 19.5% of steps 4-8, modes 0:1.00 0:0.77 40:0.78 107:0.93 81:0.69 157:0.73 115:0.70 100:0.28 180:0.30
+   0 memory on  80.4% d2  93.5% partial         near0  15.2%/ 19.5% canc 0.233 rot 0.34 inp 0.00 (sumsq/z 4.4) pos 0.33 offset +0.59 | linear 79.90% (cost 14.50) clip 0.071
+   1 store  on  98.9% d2  98.9% nearly constant near0  13.1%/  8.5% canc 0.879 rot 0.03 inp 0.00 (sumsq/z 1.0) pos 1.00 offset +19.05 | linear 94.40% (cost -0.00) clip 0.000
+   2 hiding on  78.9% d2  96.1% one-line rule   near0   7.5%/ 15.6% canc 0.308 rot 0.22 inp 0.22 (sumsq/z 1.7) pos 0.58 offset +2.65 | linear 65.10% (cost 29.30) clip 0.086
+   3 hiding on  80.5% d2  98.5% one-line rule   near0   7.2%/  9.3% canc 0.503 rot 0.09 inp 0.31 (sumsq/z 1.2) pos 0.62 offset +7.04 | linear 56.75% (cost 37.64) clip 0.078
+   4 memory on  95.3% d2  97.3% partial         near0  17.6%/ 24.2% canc 0.231 rot 0.47 inp 0.00 (sumsq/z 11.1) pos 0.74 offset +1.41 | linear 94.38% (cost 0.01) clip 0.001
+   5 memory on  98.3% d2  98.5% nearly constant near0  17.1%/ 18.2% canc 0.263 rot 0.42 inp 0.00 (sumsq/z 3.6) pos 0.79 offset +1.62 | linear 94.41% (cost -0.01) clip 0.000
+   6 hiding on  56.9% d2  94.7% partial         near0  76.3%/ 13.9% canc 0.341 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.16 offset -0.37 | linear 12.80% (cost 81.59) clip 0.381
+   7 memory on  82.4% d2  98.0% one-line rule   near0  25.4%/ 30.2% canc 0.289 rot 0.35 inp 0.00 (sumsq/z 1.1) pos 0.59 offset +1.00 | linear 86.72% (cost 7.67) clip 0.009
+   8 gate   on  19.3% d2  99.9% one-line rule   near0   7.1%/  6.5% canc 0.872 rot 0.00 inp 0.37 (sumsq/z 1.0) pos 0.63 offset -224.76 | linear 6.63% (cost 87.77) clip 0.735
+   9 memory on  99.4% d2  99.4% nearly constant near0   4.9%/  1.9% canc 0.501 rot 0.36 inp 0.00 (sumsq/z 1.2) pos 0.75 offset +1.48 | linear 94.40% (cost -0.01) clip 0.000
+  10 hiding on  60.2% d2  96.9% one-line rule   near0  76.6%/ 11.2% canc 0.383 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.16 offset -0.37 | linear 12.20% (cost 82.20) clip 0.380
+  11 memory on  99.5% d2  99.5% nearly constant near0   4.1%/  1.2% canc 0.506 rot 0.14 inp 0.00 (sumsq/z 1.0) pos 0.83 offset +1.85 | linear 94.40% (cost -0.01) clip 0.000
+  12 memory on  99.8% d2  99.8% nearly constant near0   2.3%/  1.8% canc 0.265 rot 0.37 inp 0.00 (sumsq/z 4.4) pos 0.86 offset +2.12 | linear 94.39% (cost 0.00) clip 0.000
+  13 memory on  95.9% d2  95.9% no rule         near0   6.0%/ 10.7% canc 0.313 rot 0.29 inp 0.00 (sumsq/z 2.4) pos 0.75 offset +1.46 | linear 94.04% (cost 0.35) clip 0.006
+  14 memory on  56.4% d2  61.8% partial         near0   7.9%/ 40.9% canc 0.120 rot 0.79 inp 0.00 (sumsq/z 2.1) pos 0.00 offset -0.03 | linear 83.12% (cost 11.28) clip 0.403
+  15 memory on  91.0% d2  97.9% one-line rule   near0  10.6%/ 10.6% canc 0.238 rot 0.46 inp 0.00 (sumsq/z 8.3) pos 0.89 offset +2.42 | linear 94.38% (cost 0.01) clip 0.004
+Traceback (most recent call last):
+  File "/data/output/research/algzoo/20261017_handbuilt/superposition/norule/measure.py", line 40, in <module>
+    y = Z[:, 1:, n].reshape(-1); cc = torch.linalg.lstsq(A2, y[:, None]).solution[:, 0]
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 5.19 GiB. GPU 0 has a total capacity of 31.37 GiB of which 4.45 GiB is free. Process 1992521 has 4.40 GiB memory in use. Process 2013340 has 2.51 GiB memory in use. Process 2014314 has 12.95 GiB memory in use. Including non-PyTorch memory, this process has 7.01 GiB memory in use. Of the allocated memory 2.26 GiB is allocated by PyTorch, and 4.10 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+seed 203: 16 neurons, acc 89.85%, dominant pattern 21.4% of steps 4-8, modes 180:0.99 133:0.93 84:0.95 89:0.82 0:1.01 60:0.77 10:0.65 143:0.36 0:0.02
+   0 memory on  86.7% d2  94.4% partial         near0  13.1%/ 22.7% canc 0.294 rot 0.25 inp 0.00 (sumsq/z 0.9) pos 0.60 offset +1.01 | linear 87.21% (cost 2.63) clip 0.027
+   1 memory on  94.3% d2  97.3% partial         near0  11.8%/ 15.7% canc 0.273 rot 0.10 inp 0.00 (sumsq/z 1.3) pos 0.79 offset +1.64 | linear 89.69% (cost 0.16) clip 0.002
+   2 hiding on  75.0% d2  92.3% partial         near0   7.7%/ 19.3% canc 0.235 rot 0.05 inp 0.34 (sumsq/z 1.3) pos 0.47 offset +1.83 | linear 37.07% (cost 52.78) clip 0.114
+   3 memory on  96.9% d2  98.4% partial         near0  16.3%/ 18.0% canc 0.310 rot 0.15 inp 0.00 (sumsq/z 1.1) pos 0.81 offset +1.74 | linear 89.82% (cost 0.02) clip 0.000
+   4 gate   on  42.1% d2  97.0% one-line rule   near0   8.0%/ 14.4% canc 0.290 rot 0.09 inp 0.66 (sumsq/z 1.4) pos 0.06 offset -1.04 | linear 33.12% (cost 56.73) clip 0.498
+   5 memory on  94.9% d2  94.9% no rule         near0  21.2%/ 24.4% canc 0.281 rot 0.22 inp 0.00 (sumsq/z 1.0) pos 0.72 offset +1.35 | linear 89.69% (cost 0.15) clip 0.001
+   6 hiding on  73.5% d2  94.9% partial         near0   7.6%/ 15.8% canc 0.290 rot 0.08 inp 0.35 (sumsq/z 1.4) pos 0.43 offset +2.14 | linear 19.83% (cost 70.01) clip 0.129
+   7 memory on  74.7% d2  98.5% one-line rule   near0  14.7%/ 16.4% canc 0.249 rot 0.08 inp 0.00 (sumsq/z 0.8) pos 0.27 offset +0.51 | linear 14.54% (cost 75.31) clip 0.184
+   8 memory on  83.2% d2  90.5% partial         near0  22.9%/ 43.0% canc 0.130 rot 0.18 inp 0.00 (sumsq/z 1.6) pos 0.71 offset +1.29 | linear 89.76% (cost 0.09) clip 0.005
+   9 hiding on  75.3% d2  94.2% partial         near0   7.4%/ 11.9% canc 0.376 rot 0.06 inp 0.34 (sumsq/z 1.3) pos 0.48 offset +2.28 | linear 27.13% (cost 62.72) clip 0.113
+  10 memory on  82.0% d2  97.3% one-line rule   near0   7.2%/ 10.9% canc 0.371 rot 0.01 inp 0.28 (sumsq/z 1.1) pos 0.65 offset +3.40 | linear 70.28% (cost 19.57) clip 0.066
+  11 memory on  92.7% d2  95.9% one-line rule   near0  16.1%/ 23.3% canc 0.261 rot 0.48 inp 0.00 (sumsq/z 0.7) pos 0.69 offset +1.24 | linear 89.78% (cost 0.06) clip 0.001
+  12 memory on  99.9% d2  99.9% nearly constant near0  13.4%/ 14.6% canc 0.267 rot 0.07 inp 0.00 (sumsq/z 1.0) pos 0.91 offset +2.72 | linear 89.85% (cost -0.00) clip 0.000
+  13 memory on  82.9% d2  96.7% one-line rule   near0  11.9%/ 35.4% canc 0.139 rot 0.54 inp 0.00 (sumsq/z 1.1) pos 0.39 offset +0.66 | linear 35.51% (cost 54.34) clip 0.107
+  14 memory on  96.6% d2  97.8% partial         near0  11.8%/ 23.8% canc 0.213 rot 0.20 inp 0.00 (sumsq/z 1.2) pos 0.73 offset +1.35 | linear 89.84% (cost 0.00) clip 0.000
+  15 memory on  91.8% d2  96.8% one-line rule   near0  18.0%/ 16.2% canc 0.310 rot 0.04 inp 0.00 (sumsq/z 1.3) pos 0.73 offset +1.35 | linear 89.76% (cost 0.09) clip 0.001
+Traceback (most recent call last):
+  File "/data/output/research/algzoo/20261017_handbuilt/superposition/norule/measure.py", line 40, in <module>
+    y = Z[:, 1:, n].reshape(-1); cc = torch.linalg.lstsq(A2, y[:, None]).solution[:, 0]
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 5.19 GiB. GPU 0 has a total capacity of 31.37 GiB of which 4.45 GiB is free. Process 1992521 has 4.40 GiB memory in use. Process 2013340 has 2.51 GiB memory in use. Process 2014551 has 12.95 GiB memory in use. Including non-PyTorch memory, this process has 7.01 GiB memory in use. Of the allocated memory 2.26 GiB is allocated by PyTorch, and 4.10 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+seed 205: 16 neurons, acc 93.50%, dominant pattern 19.4% of steps 4-8, modes 103:0.83 143:0.65 0:1.00 41:0.93 55:0.73 180:0.03 29:0.62 0:0.40
+   0 memory on  90.8% d2  90.8% no rule         near0   8.9%/ 19.0% canc 0.290 rot 0.45 inp 0.00 (sumsq/z 1.5) pos 0.64 offset +1.12 | linear 92.97% (cost 0.53) clip 0.010
+   1 hiding on  56.3% d2  94.7% partial         near0  46.0%/ 20.6% canc 0.225 rot 0.01 inp 0.01 (sumsq/z 1.0) pos 0.13 offset -0.33 | linear 10.10% (cost 83.40) clip 0.387
+   2 memory on  45.4% d2  64.4% partial         near0  12.0%/ 73.3% canc 0.056 rot 0.54 inp 0.00 (sumsq/z 28.0) pos 0.12 offset -0.30 | linear 66.63% (cost 26.87) clip 0.505
+   3 memory on  98.4% d2  98.4% nearly constant near0  12.8%/ 13.9% canc 0.477 rot 0.13 inp 0.00 (sumsq/z 0.9) pos 0.65 offset +1.14 | linear 93.51% (cost -0.01) clip 0.000
+   4 memory on  62.1% d2  96.1% one-line rule   near0  39.5%/ 17.3% canc 0.276 rot 0.03 inp 0.00 (sumsq/z 1.0) pos 0.12 offset -0.30 | linear 7.72% (cost 85.78) clip 0.383
+   5 hiding on  80.8% d2  99.9% one-line rule   near0   7.1%/  6.5% canc 0.859 rot 0.00 inp 0.37 (sumsq/z 1.0) pos 0.63 offset +77.91 | linear 35.93% (cost 57.57) clip 0.076
+   6 memory on  88.0% d2  95.2% one-line rule   near0  26.2%/ 21.8% canc 0.490 rot 0.07 inp 0.00 (sumsq/z 1.4) pos 0.57 offset +0.97 | linear 93.35% (cost 0.15) clip 0.003
+   7 memory on  79.3% d2  90.1% partial         near0  23.3%/ 37.1% canc 0.277 rot 0.61 inp 0.00 (sumsq/z 2.0) pos 0.46 offset +0.78 | linear 79.86% (cost 13.64) clip 0.030
+   8 memory on  91.8% d2  95.5% one-line rule   near0  14.1%/ 11.8% canc 0.864 rot 0.01 inp 0.00 (sumsq/z 1.0) pos 0.88 offset +2.28 | linear 93.50% (cost -0.00) clip 0.000
+   9 memory on  87.3% d2  97.5% one-line rule   near0  15.5%/ 48.6% canc 0.115 rot 0.40 inp 0.00 (sumsq/z 5.2) pos 0.48 offset +0.80 | linear 90.98% (cost 2.52) clip 0.019
+  10 memory on  94.9% d2  97.2% partial         near0  17.5%/ 11.0% canc 0.550 rot 0.43 inp 0.00 (sumsq/z 7.1) pos 0.71 offset +1.30 | linear 93.39% (cost 0.11) clip 0.001
+  11 memory on  96.8% d2  96.8% no rule         near0  21.6%/ 25.9% canc 0.355 rot 0.43 inp 0.00 (sumsq/z 1.5) pos 0.64 offset +1.10 | linear 93.38% (cost 0.12) clip 0.001
+  12 gate   on  43.7% d2  93.1% partial         near0  43.2%/ 24.7% canc 0.248 rot 0.02 inp 0.01 (sumsq/z 1.1) pos 0.13 offset +0.32 | linear 25.46% (cost 68.04) clip 0.060
+  13 gate   on  24.0% d2  99.6% one-line rule   near0   6.3%/  0.7% canc 0.940 rot 0.05 inp 0.00 (sumsq/z 0.8) pos 0.24 offset -0.47 | linear 11.46% (cost 82.04) clip 0.651
+  14 memory on  93.6% d2  99.0% one-line rule   near0   6.4%/ 34.0% canc 0.274 rot 0.16 inp 0.00 (sumsq/z 2.6) pos 0.78 offset +1.58 | linear 93.49% (cost 0.01) clip 0.002
+  15 gate   on  19.7% d2  99.8% one-line rule   near0   7.1%/  6.4% canc 0.900 rot 0.01 inp 0.39 (sumsq/z 1.0) pos 0.62 offset -68.86 | linear 8.10% (cost 85.40) clip 0.732
+Traceback (most recent call last):
+  File "/data/output/research/algzoo/20261017_handbuilt/superposition/norule/measure.py", line 40, in <module>
+    y = Z[:, 1:, n].reshape(-1); cc = torch.linalg.lstsq(A2, y[:, None]).solution[:, 0]
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 5.19 GiB. GPU 0 has a total capacity of 31.37 GiB of which 4.45 GiB is free. Process 1992521 has 4.40 GiB memory in use. Process 2014791 has 12.95 GiB memory in use. Including non-PyTorch memory, this process has 7.01 GiB memory in use. Process 2014892 has 2.51 GiB memory in use. Of the allocated memory 2.26 GiB is allocated by PyTorch, and 4.10 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+seed 207: 16 neurons, acc 91.00%, dominant pattern 31.2% of steps 4-8, modes 68:0.94 163:0.60 109:0.62 0:1.00 71:0.60 44:0.68 6:0.70 0:0.21 180:0.31
+   0 memory on  69.3% d2  94.0% partial         near0  13.5%/ 21.4% canc 0.219 rot 0.09 inp 0.00 (sumsq/z 0.8) pos 0.00 offset -0.02 | linear 28.53% (cost 62.47) clip 0.336
+   1 memory on  67.4% d2  67.4% no rule         near0   7.5%/ 62.9% canc 0.075 rot 0.50 inp 0.00 (sumsq/z 105.0) pos 0.07 offset +0.23 | linear 88.33% (cost 2.67) clip 0.270
+   2 memory on  89.6% d2  99.3% one-line rule   near0   9.8%/  9.5% canc 0.203 rot 0.39 inp 0.00 (sumsq/z 8.5) pos 0.92 offset +2.90 | linear 90.81% (cost 0.19) clip 0.007
+   3 memory on  74.1% d2  97.3% one-line rule   near0   9.4%/ 25.4% canc 0.148 rot 0.17 inp 0.00 (sumsq/z 0.8) pos 0.00 offset +0.02 | linear 22.87% (cost 68.13) clip 0.328
+   4 memory on  98.5% d2  98.7% nearly constant near0   2.8%/  0.8% canc 0.777 rot 0.35 inp 0.00 (sumsq/z 3.3) pos 0.96 offset +4.64 | linear 90.84% (cost 0.16) clip 0.001
+   5 memory on  98.8% d2  98.8% nearly constant near0   2.7%/  2.2% canc 0.276 rot 0.48 inp 0.00 (sumsq/z 13.9) pos 0.91 offset +2.76 | linear 90.98% (cost 0.02) clip 0.001
+   6 memory on  99.6% d2  99.6% nearly constant near0   1.7%/  2.0% canc 0.285 rot 0.10 inp 0.00 (sumsq/z 1.4) pos 0.81 offset +1.75 | linear 90.93% (cost 0.07) clip 0.000
+   7 hiding on  72.2% d2  91.9% partial         near0   7.6%/ 53.4% canc 0.081 rot 0.12 inp 0.41 (sumsq/z 1.1) pos 0.39 offset +1.29 | linear 47.63% (cost 43.37) clip 0.143
+   8 hiding on  73.9% d2  92.0% partial         near0   7.6%/ 21.9% canc 0.196 rot 0.19 inp 0.32 (sumsq/z 1.4) pos 0.45 offset +1.67 | linear 49.46% (cost 41.54) clip 0.124
+   9 memory on  92.5% d2  97.5% one-line rule   near0  10.5%/  8.6% canc 0.300 rot 0.49 inp 0.00 (sumsq/z 8.8) pos 0.91 offset +2.64 | linear 90.78% (cost 0.22) clip 0.004
+  10 memory on  91.5% d2  91.5% no rule         near0  12.5%/ 16.7% canc 0.295 rot 0.21 inp 0.00 (sumsq/z 1.0) pos 0.57 offset +0.97 | linear 85.36% (cost 5.64) clip 0.005
+  11 memory on  97.3% d2  97.3% nearly constant near0   5.2%/ 30.5% canc 0.130 rot 0.48 inp 0.00 (sumsq/z 99.6) pos 0.75 offset +1.46 | linear 90.65% (cost 0.35) clip 0.004
+  12 memory on 100.0% d2 100.0% nearly constant near0   8.2%/ 18.4% canc 0.217 rot 0.49 inp 0.00 (sumsq/z 8.6) pos 0.79 offset +1.64 | linear 91.00% (cost -0.00) clip 0.000
+  13 store  on  99.0% d2  99.0% nearly constant near0   6.1%/  0.8% canc 0.657 rot 0.24 inp 0.00 (sumsq/z 1.6) pos 0.99 offset +7.79 | linear 90.99% (cost 0.01) clip 0.000
+  14 gate   on  20.0% d2  99.5% one-line rule   near0   7.2%/ 15.1% canc 0.279 rot 0.05 inp 0.36 (sumsq/z 1.1) pos 0.61 offset -29.44 | linear 6.87% (cost 84.13) clip 0.729
+  15 memory on  98.8% d2  98.8% nearly constant near0   3.0%/  0.8% canc 0.462 rot 0.45 inp 0.00 (sumsq/z 6.1) pos 0.88 offset +2.29 | linear 90.99% (cost 0.01) clip 0.001
+Traceback (most recent call last):
+  File "/data/output/research/algzoo/20261017_handbuilt/superposition/norule/measure.py", line 40, in <module>
+    y = Z[:, 1:, n].reshape(-1); cc = torch.linalg.lstsq(A2, y[:, None]).solution[:, 0]
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 5.19 GiB. GPU 0 has a total capacity of 31.37 GiB of which 4.45 GiB is free. Process 1992521 has 4.40 GiB memory in use. Process 2014892 has 2.51 GiB memory in use. Process 2015087 has 12.95 GiB memory in use. Including non-PyTorch memory, this process has 7.01 GiB memory in use. Of the allocated memory 2.26 GiB is allocated by PyTorch, and 4.10 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+seed 209: 16 neurons, acc 95.80%, dominant pattern 17.8% of steps 4-8, modes 0:1.00 0:0.98 66:0.94 32:0.75 64:0.69 99:0.67 144:0.63 180:0.53 0:0.24 180:0.17
+   0 memory on  99.9% d2  99.9% nearly constant near0   9.6%/ 17.8% canc 0.322 rot 0.21 inp 0.00 (sumsq/z 1.1) pos 0.74 offset +1.40 | linear 95.79% (cost 0.00) clip 0.000
+   1 memory on  80.9% d2  98.1% one-line rule   near0  13.4%/ 16.0% canc 0.374 rot 0.47 inp 0.00 (sumsq/z 1.9) pos 0.49 offset +0.83 | linear 79.58% (cost 16.22) clip 0.051
+   2 memory on  72.1% d2  72.1% no rule         near0   6.8%/ 63.7% canc 0.067 rot 0.76 inp 0.00 (sumsq/z 1.7) pos 0.02 offset +0.13 | linear 90.02% (cost 5.78) clip 0.282
+   3 hiding on  74.0% d2  93.0% partial         near0   7.7%/ 25.9% canc 0.189 rot 0.11 inp 0.37 (sumsq/z 1.3) pos 0.43 offset +1.98 | linear 40.67% (cost 55.12) clip 0.126
+   4 hiding on  71.6% d2  95.2% one-line rule   near0   7.6%/ 21.3% canc 0.224 rot 0.06 inp 0.50 (sumsq/z 1.0) pos 0.38 offset +1.62 | linear 50.29% (cost 45.50) clip 0.144
+   5 gate   on  19.5% d2  99.9% one-line rule   near0   7.1%/  7.6% canc 0.673 rot 0.00 inp 0.38 (sumsq/z 1.0) pos 0.62 offset -121.51 | linear 8.02% (cost 87.78) clip 0.734
+   6 hiding on  78.0% d2  96.6% one-line rule   near0   7.5%/ 22.3% canc 0.215 rot 0.37 inp 0.12 (sumsq/z 3.6) pos 0.54 offset +3.11 | linear 67.47% (cost 28.33) clip 0.095
+   7 hiding on  81.3% d2  99.8% one-line rule   near0   7.0%/  8.2% canc 0.586 rot 0.00 inp 0.35 (sumsq/z 1.0) pos 0.64 offset +76.69 | linear 11.16% (cost 84.64) clip 0.073
+   8 memory on  99.9% d2  99.9% nearly constant near0   9.6%/ 11.8% canc 0.329 rot 0.41 inp 0.00 (sumsq/z 4.9) pos 0.87 offset +2.12 | linear 95.80% (cost -0.00) clip 0.000
+   9 memory on  93.7% d2  96.9% one-line rule   near0  21.9%/ 23.7% canc 0.340 rot 0.40 inp 0.00 (sumsq/z 1.0) pos 0.68 offset +1.21 | linear 95.31% (cost 0.49) clip 0.003
+  10 memory on  90.4% d2  93.0% partial         near0  23.9%/ 23.8% canc 0.364 rot 0.45 inp 0.00 (sumsq/z 4.3) pos 0.68 offset +1.21 | linear 95.78% (cost 0.02) clip 0.001
+  11 memory on  98.7% d2  98.7% nearly constant near0   6.2%/  3.1% canc 0.354 rot 0.14 inp 0.00 (sumsq/z 1.2) pos 0.94 offset +3.38 | linear 95.79% (cost 0.00) clip 0.000
+  12 hiding on  79.1% d2  99.2% one-line rule   near0   7.2%/ 11.3% canc 0.411 rot 0.01 inp 0.41 (sumsq/z 1.0) pos 0.58 offset +15.20 | linear 28.52% (cost 67.28) clip 0.089
+  13 hiding on  72.4% d2  94.1% partial         near0   7.7%/ 20.7% canc 0.227 rot 0.36 inp 0.16 (sumsq/z 3.1) pos 0.40 offset +1.69 | linear 54.10% (cost 41.70) clip 0.139
+  14 memory on  76.0% d2  99.4% one-line rule   near0   6.3%/  0.4% canc 0.552 rot 0.01 inp 0.00 (sumsq/z 0.9) pos 0.34 offset +0.60 | linear 80.78% (cost 15.02) clip 0.124
+  15 store  on  99.9% d2  99.9% nearly constant near0  12.1%/  0.9% canc 0.623 rot 0.09 inp 0.00 (sumsq/z 1.2) pos 0.99 offset +7.67 | linear 95.80% (cost -0.00) clip 0.000
+Traceback (most recent call last):
+  File "/data/output/research/algzoo/20261017_handbuilt/superposition/norule/measure.py", line 40, in <module>
+    y = Z[:, 1:, n].reshape(-1); cc = torch.linalg.lstsq(A2, y[:, None]).solution[:, 0]
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 5.19 GiB. GPU 0 has a total capacity of 31.37 GiB of which 4.45 GiB is free. Process 1992521 has 4.40 GiB memory in use. Process 2014892 has 2.51 GiB memory in use. Process 2015344 has 12.95 GiB memory in use. Including non-PyTorch memory, this process has 7.01 GiB memory in use. Of the allocated memory 2.26 GiB is allocated by PyTorch, and 4.10 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+seed 211: 16 neurons, acc 93.41%, dominant pattern 36.0% of steps 4-8, modes 0:1.00 38:0.67 0:0.56 112:0.95 79:0.60 111:0.57 180:0.56 145:0.58 180:0.17 180:0.09
+   0 memory on  92.0% d2  97.5% one-line rule   near0  10.1%/ 15.1% canc 0.221 rot 0.40 inp 0.00 (sumsq/z 3.6) pos 0.89 offset +2.37 | linear 93.33% (cost 0.09) clip 0.004
+   1 memory on  95.2% d2  98.2% partial         near0   4.6%/  5.7% canc 0.364 rot 0.28 inp 0.00 (sumsq/z 1.8) pos 0.81 offset +1.72 | linear 93.43% (cost -0.01) clip 0.001
+   2 memory on  99.5% d2  99.5% nearly constant near0   3.0%/  0.7% canc 0.316 rot 0.42 inp 0.00 (sumsq/z 9.6) pos 0.83 offset +1.84 | linear 93.41% (cost 0.01) clip 0.000
+   3 memory on  96.0% d2  98.9% partial         near0   5.4%/ 10.4% canc 0.207 rot 0.31 inp 0.00 (sumsq/z 2.5) pos 0.86 offset +2.09 | linear 93.20% (cost 0.21) clip 0.001
+   4 hiding on  77.7% d2  96.6% one-line rule   near0   7.4%/ 14.7% canc 0.299 rot 0.03 inp 0.40 (sumsq/z 1.1) pos 0.55 offset +3.61 | linear 32.90% (cost 60.51) clip 0.097
+   5 hiding on  77.7% d2  94.6% partial         near0   7.7%/ 28.9% canc 0.158 rot 0.18 inp 0.29 (sumsq/z 1.3) pos 0.54 offset +2.20 | linear 53.70% (cost 39.71) clip 0.094
+   6 memory on  96.2% d2  96.9% no rule         near0  13.4%/  5.0% canc 0.459 rot 0.11 inp 0.00 (sumsq/z 0.8) pos 0.73 offset +1.37 | linear 93.45% (cost -0.03) clip 0.000
+   7 memory on  78.6% d2  96.6% one-line rule   near0  14.4%/ 20.5% canc 0.251 rot 0.46 inp 0.00 (sumsq/z 1.2) pos 0.42 offset +0.71 | linear 31.71% (cost 61.70) clip 0.073
+   8 memory on  99.9% d2  99.9% nearly constant near0  12.4%/ 13.1% canc 0.336 rot 0.16 inp 0.00 (sumsq/z 1.0) pos 0.91 offset +2.71 | linear 93.41% (cost 0.00) clip 0.000
+   9 memory on  96.0% d2  98.8% partial         near0  11.3%/  9.3% canc 0.408 rot 0.33 inp 0.00 (sumsq/z 3.1) pos 0.97 offset +4.41 | linear 93.35% (cost 0.06) clip 0.000
+  10 memory on  99.9% d2  99.9% nearly constant near0   4.4%/  9.8% canc 0.357 rot 0.32 inp 0.00 (sumsq/z 2.8) pos 0.82 offset +1.80 | linear 93.41% (cost 0.00) clip 0.000
+  11 memory on  99.8% d2  99.8% nearly constant near0   9.7%/  9.7% canc 0.287 rot 0.38 inp 0.00 (sumsq/z 4.0) pos 0.87 offset +2.12 | linear 93.41% (cost 0.00) clip 0.000
+  12 memory on  73.8% d2  97.7% one-line rule   near0   9.2%/ 12.4% canc 0.264 rot 0.63 inp 0.00 (sumsq/z 1.6) pos 0.26 offset +0.49 | linear 47.12% (cost 46.30) clip 0.143
+  13 memory on  94.7% d2  94.7% no rule         near0  11.2%/  4.6% canc 0.313 rot 0.35 inp 0.00 (sumsq/z 2.3) pos 0.67 offset +1.21 | linear 93.32% (cost 0.09) clip 0.003
+  14 gate   on  22.8% d2  97.3% one-line rule   near0   7.4%/ 17.0% canc 0.252 rot 0.01 inp 0.46 (sumsq/z 1.0) pos 0.53 offset -4.86 | linear 16.53% (cost 76.88) clip 0.704
+  15 hiding on  77.4% d2  96.7% one-line rule   near0   7.4%/ 17.9% canc 0.241 rot 0.02 inp 0.45 (sumsq/z 1.0) pos 0.54 offset +3.96 | linear 27.08% (cost 66.33) clip 0.100
+Traceback (most recent call last):
+  File "/data/output/research/algzoo/20261017_handbuilt/superposition/norule/measure.py", line 40, in <module>
+    y = Z[:, 1:, n].reshape(-1); cc = torch.linalg.lstsq(A2, y[:, None]).solution[:, 0]
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 5.19 GiB. GPU 0 has a total capacity of 31.37 GiB of which 4.45 GiB is free. Process 1992521 has 4.40 GiB memory in use. Process 2014892 has 2.51 GiB memory in use. Process 2015610 has 12.95 GiB memory in use. Including non-PyTorch memory, this process has 7.01 GiB memory in use. Of the allocated memory 2.26 GiB is allocated by PyTorch, and 4.10 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+seed 213: 16 neurons, acc 93.76%, dominant pattern 22.2% of steps 4-8, modes 155:0.60 180:0.53 100:0.92 109:0.69 82:0.79 26:0.89 0:1.00 0:0.98
+   0 memory on  88.0% d2  91.8% partial         near0  18.9%/ 23.4% canc 0.369 rot 0.04 inp 0.00 (sumsq/z 1.1) pos 0.71 offset +1.31 | linear 93.68% (cost 0.07) clip 0.002
+   1 memory on  78.1% d2  96.1% one-line rule   near0  18.1%/  6.9% canc 0.425 rot 0.43 inp 0.00 (sumsq/z 2.5) pos 0.22 offset +0.44 | linear 35.25% (cost 58.51) clip 0.173
+   2 gate   on  19.5% d2  99.9% one-line rule   near0   7.1%/  6.2% canc 0.981 rot 0.00 inp 0.39 (sumsq/z 1.0) pos 0.62 offset -135.76 | linear 8.77% (cost 84.98) clip 0.734
+   3 memory on  96.5% d2  98.3% partial         near0  15.3%/  1.7% canc 0.832 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.65 offset +1.13 | linear 93.76% (cost -0.00) clip 0.000
+   4 memory on  62.5% d2  87.4% partial         near0  28.5%/ 21.1% canc 0.301 rot 0.05 inp 0.00 (sumsq/z 1.1) pos 0.05 offset -0.19 | linear 16.33% (cost 77.43) clip 0.364
+   5 memory on  98.0% d2  98.4% nearly constant near0  14.6%/  2.8% canc 0.779 rot 0.07 inp 0.00 (sumsq/z 0.8) pos 0.92 offset +2.79 | linear 93.75% (cost 0.00) clip 0.000
+   6 memory on  82.8% d2  90.1% partial         near0  19.4%/ 25.3% canc 0.313 rot 0.34 inp 0.00 (sumsq/z 1.0) pos 0.54 offset +0.91 | linear 90.02% (cost 3.73) clip 0.027
+   7 memory on  84.6% d2  92.1% partial         near0  19.3%/ 25.2% canc 0.252 rot 0.22 inp 0.00 (sumsq/z 1.2) pos 0.65 offset +1.14 | linear 92.20% (cost 1.55) clip 0.016
+   8 memory on  77.6% d2  89.9% partial         near0  16.7%/ 35.3% canc 0.163 rot 0.16 inp 0.00 (sumsq/z 2.5) pos 0.70 offset +1.27 | linear 93.60% (cost 0.15) clip 0.012
+   9 gate   on  34.6% d2  99.3% one-line rule   near0   7.9%/ 10.6% canc 0.449 rot 0.00 inp 0.71 (sumsq/z 1.0) pos 0.21 offset -1.29 | linear 23.07% (cost 70.68) clip 0.586
+  10 memory on  88.9% d2  94.7% partial         near0  18.8%/ 20.6% canc 0.393 rot 0.09 inp 0.00 (sumsq/z 1.3) pos 0.76 offset +1.47 | linear 93.74% (cost 0.02) clip 0.001
+  11 memory on  91.8% d2  91.9% no rule         near0  20.7%/ 29.8% canc 0.175 rot 0.62 inp 0.00 (sumsq/z 0.8) pos 0.61 offset +1.04 | linear 92.89% (cost 0.86) clip 0.005
+  12 memory on  45.5% d2  77.4% partial         near0  47.8%/ 17.8% canc 0.320 rot 0.02 inp 0.00 (sumsq/z 1.0) pos 0.13 offset -0.33 | linear 11.97% (cost 81.78) clip 0.404
+  13 memory on  81.7% d2  91.6% partial         near0  17.0%/ 23.7% canc 0.207 rot 0.45 inp 0.00 (sumsq/z 0.7) pos 0.58 offset +0.98 | linear 92.79% (cost 0.96) clip 0.021
+  14 memory on  49.4% d2  95.2% one-line rule   near0  35.2%/ 27.0% canc 0.172 rot 0.34 inp 0.00 (sumsq/z 1.0) pos 0.25 offset -0.49 | linear 12.16% (cost 81.59) clip 0.506
+  15 gate   on  23.9% d2  94.2% partial         near0   7.5%/  6.7% canc 0.789 rot 0.04 inp 0.44 (sumsq/z 0.9) pos 0.51 offset -2.10 | linear 14.10% (cost 79.65) clip 0.693
+Traceback (most recent call last):
+  File "/data/output/research/algzoo/20261017_handbuilt/superposition/norule/measure.py", line 40, in <module>
+    y = Z[:, 1:, n].reshape(-1); cc = torch.linalg.lstsq(A2, y[:, None]).solution[:, 0]
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 5.19 GiB. GPU 0 has a total capacity of 31.37 GiB of which 4.45 GiB is free. Process 1992521 has 4.40 GiB memory in use. Process 2014892 has 2.51 GiB memory in use. Process 2015866 has 12.95 GiB memory in use. Including non-PyTorch memory, this process has 7.01 GiB memory in use. Of the allocated memory 2.26 GiB is allocated by PyTorch, and 4.10 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+seed 215: 16 neurons, acc 92.48%, dominant pattern 19.1% of steps 4-8, modes 0:1.00 24:0.74 80:0.93 56:0.70 89:0.69 124:0.71 163:0.71 180:0.37
+   0 hiding on  77.2% d2  97.2% one-line rule   near0   7.3%/ 13.3% canc 0.342 rot 0.01 inp 0.45 (sumsq/z 1.0) pos 0.53 offset +4.54 | linear 16.21% (cost 76.26) clip 0.101
+   1 memory on  99.9% d2  99.9% nearly constant near0   2.0%/  0.0% canc 0.644 rot 0.13 inp 0.00 (sumsq/z 1.0) pos 0.80 offset +1.67 | linear 92.48% (cost 0.00) clip 0.000
+   2 gate   on  24.0% d2  99.4% one-line rule   near0   9.7%/  3.2% canc 0.705 rot 0.28 inp 0.00 (sumsq/z 0.8) pos 0.42 offset -0.71 | linear 17.67% (cost 74.80) clip 0.704
+   3 memory on  88.5% d2  95.3% one-line rule   near0  12.2%/ 43.1% canc 0.103 rot 0.22 inp 0.01 (sumsq/z 1.2) pos 0.67 offset +1.21 | linear 91.78% (cost 0.70) clip 0.009
+   4 hiding on  77.7% d2  95.9% one-line rule   near0   7.6%/ 14.8% canc 0.308 rot 0.06 inp 0.39 (sumsq/z 1.1) pos 0.54 offset +2.73 | linear 40.87% (cost 51.61) clip 0.096
+   5 memory on  99.4% d2  99.4% nearly constant near0   1.8%/  0.3% canc 0.471 rot 0.17 inp 0.00 (sumsq/z 0.9) pos 0.80 offset +1.69 | linear 92.47% (cost 0.01) clip 0.000
+   6 memory on  79.8% d2  96.8% one-line rule   near0  15.3%/  5.4% canc 0.716 rot 0.45 inp 0.00 (sumsq/z 1.0) pos 0.51 offset +0.85 | linear 80.99% (cost 11.48) clip 0.038
+   7 memory on  99.3% d2  99.3% nearly constant near0   4.3%/  5.6% canc 0.355 rot 0.11 inp 0.00 (sumsq/z 0.9) pos 0.84 offset +1.88 | linear 92.47% (cost 0.01) clip 0.000
+   8 memory on  97.3% d2  97.5% nearly constant near0   3.4%/  1.1% canc 0.455 rot 0.12 inp 0.00 (sumsq/z 1.1) pos 0.81 offset +1.75 | linear 92.48% (cost -0.00) clip 0.001
+   9 memory on  97.8% d2  98.1% nearly constant near0   2.7%/  2.1% canc 0.449 rot 0.15 inp 0.01 (sumsq/z 1.0) pos 0.83 offset +1.86 | linear 92.43% (cost 0.04) clip 0.001
+  10 memory on  96.8% d2  99.5% partial         near0  12.1%/ 11.7% canc 0.346 rot 0.03 inp 0.00 (sumsq/z 1.0) pos 0.96 offset +3.84 | linear 92.44% (cost 0.04) clip 0.000
+  11 memory on  83.0% d2  96.6% one-line rule   near0  15.6%/  8.1% canc 0.612 rot 0.46 inp 0.00 (sumsq/z 1.0) pos 0.53 offset +0.88 | linear 49.76% (cost 42.72) clip 0.038
+  12 memory on  75.9% d2  99.1% one-line rule   near0   7.8%/  1.6% canc 0.880 rot 0.39 inp 0.00 (sumsq/z 0.9) pos 0.34 offset +0.60 | linear 64.34% (cost 28.13) clip 0.111
+  13 hiding on  76.4% d2  94.2% partial         near0   7.6%/ 17.8% canc 0.255 rot 0.08 inp 0.42 (sumsq/z 1.0) pos 0.51 offset +2.26 | linear 56.91% (cost 35.56) clip 0.103
+  14 gate   on  24.0% d2  96.7% one-line rule   near0   7.4%/ 12.9% canc 0.355 rot 0.01 inp 0.47 (sumsq/z 1.0) pos 0.50 offset -3.95 | linear 17.76% (cost 74.72) clip 0.692
+  15 memory on  48.5% d2  71.1% partial         near0  27.1%/ 21.3% canc 0.279 rot 0.17 inp 0.00 (sumsq/z 1.9) pos 0.04 offset -0.16 | linear 58.85% (cost 33.63) clip 0.393
+Traceback (most recent call last):
+  File "/data/output/research/algzoo/20261017_handbuilt/superposition/norule/measure.py", line 40, in <module>
+    y = Z[:, 1:, n].reshape(-1); cc = torch.linalg.lstsq(A2, y[:, None]).solution[:, 0]
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 5.19 GiB. GPU 0 has a total capacity of 31.37 GiB of which 4.45 GiB is free. Process 1992521 has 4.40 GiB memory in use. Process 2014892 has 2.51 GiB memory in use. Process 2016089 has 12.95 GiB memory in use. Including non-PyTorch memory, this process has 7.01 GiB memory in use. Of the allocated memory 2.26 GiB is allocated by PyTorch, and 4.10 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+zoo16 0: 16 neurons, acc 90.99%, dominant pattern 54.2% of steps 4-8, modes 0:1.01 21:0.60 57:0.62 96:0.60 168:0.90 125:0.57 162:0.60 180:0.36 0:0.16
+   0 memory on  99.9% d2  99.9% nearly constant near0   3.8%/  4.7% canc 0.270 rot 0.34 inp 0.00 (sumsq/z 1.7) pos 0.84 offset +1.93 | linear 90.99% (cost -0.01) clip 0.000
+   1 memory on  99.7% d2  99.7% nearly constant near0   2.0%/  0.8% canc 0.321 rot 0.05 inp 0.00 (sumsq/z 0.9) pos 0.94 offset +3.27 | linear 91.00% (cost -0.01) clip 0.000
+   2 memory on  98.6% d2  98.6% nearly constant near0   1.7%/  1.2% canc 0.355 rot 0.21 inp 0.00 (sumsq/z 1.9) pos 0.83 offset +1.89 | linear 90.93% (cost 0.06) clip 0.001
+   3 memory on  75.1% d2  88.0% partial         near0   8.4%/ 31.4% canc 0.138 rot 0.15 inp 0.25 (sumsq/z 1.2) pos 0.47 offset +1.19 | linear 52.56% (cost 38.43) clip 0.106
+   4 memory on  99.0% d2  99.0% nearly constant near0   1.4%/  0.6% canc 0.334 rot 0.22 inp 0.00 (sumsq/z 1.2) pos 0.88 offset +2.32 | linear 90.93% (cost 0.06) clip 0.000
+   5 gate   on  23.8% d2  95.3% one-line rule   near0   7.4%/ 22.4% canc 0.187 rot 0.03 inp 0.49 (sumsq/z 0.9) pos 0.50 offset -2.90 | linear 13.85% (cost 77.13) clip 0.695
+   6 hiding on  76.7% d2  95.5% one-line rule   near0   7.5%/ 25.7% canc 0.168 rot 0.04 inp 0.39 (sumsq/z 1.1) pos 0.52 offset +2.91 | linear 46.03% (cost 44.95) clip 0.105
+   7 memory on  98.0% d2  98.0% nearly constant near0   1.7%/  1.5% canc 0.370 rot 0.08 inp 0.01 (sumsq/z 0.9) pos 0.85 offset +2.10 | linear 91.12% (cost -0.13) clip 0.001
+   8 memory on  81.1% d2  98.5% one-line rule   near0  11.9%/ 28.2% canc 0.183 rot 0.47 inp 0.00 (sumsq/z 1.2) pos 0.38 offset +0.65 | linear 32.91% (cost 58.08) clip 0.095
+   9 memory on  98.2% d2  98.2% nearly constant near0   3.1%/  5.6% canc 0.335 rot 0.16 inp 0.00 (sumsq/z 1.2) pos 0.83 offset +1.87 | linear 90.98% (cost 0.01) clip 0.001
+  10 memory on  99.7% d2  99.7% nearly constant near0   1.2%/  0.2% canc 0.381 rot 0.17 inp 0.00 (sumsq/z 0.9) pos 0.82 offset +1.84 | linear 91.01% (cost -0.02) clip 0.000
+  11 memory on  94.2% d2  95.2% partial         near0   4.3%/ 11.3% canc 0.209 rot 0.22 inp 0.04 (sumsq/z 0.9) pos 0.81 offset +1.87 | linear 90.18% (cost 0.81) clip 0.007
+  12 hiding on  76.9% d2  95.8% one-line rule   near0   7.5%/ 26.6% canc 0.164 rot 0.16 inp 0.29 (sumsq/z 1.6) pos 0.51 offset +3.04 | linear 59.64% (cost 31.34) clip 0.103
+  13 memory on  98.5% d2  98.5% nearly constant near0   1.5%/  0.9% canc 0.437 rot 0.14 inp 0.01 (sumsq/z 1.1) pos 0.85 offset +2.07 | linear 91.12% (cost -0.13) clip 0.001
+  14 memory on  85.1% d2  88.9% partial         near0   9.9%/ 60.0% canc 0.074 rot 0.48 inp 0.00 (sumsq/z 8.2) pos 0.58 offset +1.00 | linear 89.73% (cost 1.26) clip 0.029
+  15 memory on  98.9% d2  98.9% nearly constant near0   1.7%/  0.8% canc 0.350 rot 0.12 inp 0.01 (sumsq/z 0.9) pos 0.81 offset +1.81 | linear 91.09% (cost -0.11) clip 0.000
+Traceback (most recent call last):
+  File "/data/output/research/algzoo/20261017_handbuilt/superposition/norule/measure.py", line 40, in <module>
+    y = Z[:, 1:, n].reshape(-1); cc = torch.linalg.lstsq(A2, y[:, None]).solution[:, 0]
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 5.19 GiB. GPU 0 has a total capacity of 31.37 GiB of which 4.45 GiB is free. Process 1992521 has 4.40 GiB memory in use. Process 2016347 has 12.95 GiB memory in use. Including non-PyTorch memory, this process has 7.01 GiB memory in use. Process 2016462 has 2.51 GiB memory in use. Of the allocated memory 2.26 GiB is allocated by PyTorch, and 4.10 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+zoo16 2: 16 neurons, acc 94.85%, dominant pattern 18.1% of steps 4-8, modes 0:0.99 0:1.00 44:0.84 109:0.96 82:0.69 128:0.75 180:0.67 0:0.06 180:0.29 180:0.11
+   0 hiding on  57.6% d2  94.0% partial         near0  74.6%/ 14.6% canc 0.295 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.16 offset -0.36 | linear 9.31% (cost 85.54) clip 0.381
+   1 memory on  90.1% d2  94.0% partial         near0  11.8%/ 14.5% canc 0.298 rot 0.14 inp 0.00 (sumsq/z 1.0) pos 0.72 offset +1.32 | linear 94.80% (cost 0.05) clip 0.004
+   2 memory on  67.9% d2  67.9% no rule         near0  16.5%/ 76.9% canc 0.041 rot 0.50 inp 0.00 (sumsq/z 15.9) pos 0.12 offset +0.30 | linear 90.71% (cost 4.14) clip 0.131
+   3 hiding on  55.5% d2  94.8% partial         near0  73.0%/ 11.5% canc 0.381 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.16 offset -0.36 | linear 9.16% (cost 85.68) clip 0.382
+   4 memory on  82.8% d2  91.8% partial         near0  22.1%/ 26.7% canc 0.420 rot 0.04 inp 0.00 (sumsq/z 0.9) pos 0.66 offset +1.15 | linear 92.38% (cost 2.46) clip 0.009
+   5 memory on  94.0% d2  97.0% partial         near0  13.9%/ 10.9% canc 0.379 rot 0.18 inp 0.00 (sumsq/z 1.8) pos 0.87 offset +2.19 | linear 94.84% (cost 0.01) clip 0.000
+   6 hiding on  58.1% d2  95.2% one-line rule   near0  73.9%/ 13.6% canc 0.335 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.16 offset -0.36 | linear 5.07% (cost 89.78) clip 0.381
+   7 memory on  97.2% d2  97.5% nearly constant near0  14.0%/  8.9% canc 0.602 rot 0.04 inp 0.00 (sumsq/z 0.9) pos 0.92 offset +2.88 | linear 94.84% (cost 0.00) clip 0.000
+   8 memory on  84.7% d2  95.0% one-line rule   near0  15.7%/ 20.5% canc 0.302 rot 0.67 inp 0.00 (sumsq/z 1.5) pos 0.72 offset +1.33 | linear 94.80% (cost 0.05) clip 0.003
+   9 memory on  83.4% d2  86.3% partial         near0  25.3%/ 47.7% canc 0.098 rot 0.68 inp 0.00 (sumsq/z 2.9) pos 0.51 offset +0.85 | linear 93.84% (cost 1.01) clip 0.013
+  10 gate   on  38.2% d2  97.9% one-line rule   near0   7.9%/ 13.1% canc 0.344 rot 0.01 inp 0.77 (sumsq/z 1.0) pos 0.13 offset -1.09 | linear 55.79% (cost 39.06) clip 0.546
+  11 memory on  78.9% d2  96.6% one-line rule   near0  18.7%/ 22.6% canc 0.323 rot 0.44 inp 0.00 (sumsq/z 3.5) pos 0.47 offset +0.78 | linear 42.64% (cost 52.21) clip 0.066
+  12 memory on  98.4% d2  98.4% nearly constant near0  13.9%/  6.1% canc 0.367 rot 0.03 inp 0.00 (sumsq/z 0.9) pos 0.85 offset +1.95 | linear 94.84% (cost 0.01) clip 0.000
+  13 memory on  88.3% d2  92.8% partial         near0  19.1%/ 33.4% canc 0.160 rot 0.56 inp 0.00 (sumsq/z 2.8) pos 0.67 offset +1.18 | linear 94.70% (cost 0.15) clip 0.004
+  14 memory on  96.8% d2  96.8% no rule         near0  13.8%/ 10.1% canc 0.723 rot 0.09 inp 0.00 (sumsq/z 1.4) pos 0.91 offset +2.57 | linear 94.85% (cost 0.00) clip 0.000
+  15 gate   on  19.4% d2  99.9% one-line rule   near0   7.1%/  6.2% canc 0.979 rot 0.00 inp 0.38 (sumsq/z 1.0) pos 0.62 offset -193.87 | linear 8.39% (cost 86.46) clip 0.735
+zoo16 4: 16 neurons, acc 88.86%, dominant pattern 54.5% of steps 4-8, modes 0:1.00 85:0.79 41:0.76 0:0.71 0:0.33 122:0.62 180:0.16 166:0.81 164:0.59
+   0 memory on  96.7% d2  97.1% no rule         near0   9.1%/ 28.7% canc 0.141 rot 0.30 inp 0.00 (sumsq/z 1.1) pos 0.68 offset +1.23 | linear 87.02% (cost 1.85) clip 0.001
+   1 memory on  95.6% d2  95.5% no rule         near0   9.0%/ 37.5% canc 0.126 rot 0.52 inp 0.00 (sumsq/z 6.6) pos 0.68 offset +1.23 | linear 88.77% (cost 0.10) clip 0.002
+   2 memory on  98.1% d2  98.1% nearly constant near0   4.1%/  2.2% canc 0.328 rot 0.06 inp 0.00 (sumsq/z 0.9) pos 0.90 offset +2.60 | linear 88.70% (cost 0.16) clip 0.001
+   3 memory on  75.7% d2  99.1% one-line rule   near0   8.6%/ 29.6% canc 0.137 rot 0.53 inp 0.00 (sumsq/z 1.0) pos 0.35 offset +0.61 | linear 29.63% (cost 59.23) clip 0.102
+   4 hiding on  75.4% d2  91.5% partial         near0   7.9%/ 35.8% canc 0.120 rot 0.22 inp 0.15 (sumsq/z 2.5) pos 0.50 offset +1.69 | linear 55.43% (cost 33.43) clip 0.111
+   5 memory on  99.7% d2  99.7% nearly constant near0   3.8%/  1.9% canc 0.325 rot 0.14 inp 0.00 (sumsq/z 1.3) pos 0.90 offset +2.52 | linear 88.87% (cost -0.01) clip 0.000
+   6 memory on  98.9% d2  98.9% nearly constant near0   5.1%/  2.1% canc 0.330 rot 0.06 inp 0.00 (sumsq/z 1.1) pos 0.94 offset +3.49 | linear 88.81% (cost 0.06) clip 0.000
+   7 memory on  96.9% d2  97.5% no rule         near0   2.5%/  1.5% canc 0.482 rot 0.03 inp 0.02 (sumsq/z 1.1) pos 0.90 offset +2.90 | linear 88.09% (cost 0.78) clip 0.003
+   8 memory on  98.8% d2  98.9% nearly constant near0   3.9%/  2.0% canc 0.313 rot 0.05 inp 0.00 (sumsq/z 1.1) pos 0.90 offset +2.50 | linear 88.86% (cost 0.00) clip 0.000
+   9 memory on  99.4% d2  99.5% nearly constant near0   2.3%/  1.4% canc 0.298 rot 0.22 inp 0.00 (sumsq/z 1.4) pos 0.83 offset +1.87 | linear 88.84% (cost 0.03) clip 0.000
+  10 memory on  97.4% d2  98.6% nearly constant near0   3.5%/  1.1% canc 0.460 rot 0.18 inp 0.00 (sumsq/z 1.7) pos 0.87 offset +2.17 | linear 88.33% (cost 0.53) clip 0.001
+  11 memory on  95.7% d2  98.7% partial         near0   4.1%/  2.7% canc 0.225 rot 0.22 inp 0.00 (sumsq/z 1.9) pos 0.93 offset +3.11 | linear 88.02% (cost 0.85) clip 0.003
+  12 gate   on  23.2% d2  96.1% one-line rule   near0   7.4%/ 16.2% canc 0.260 rot 0.14 inp 0.32 (sumsq/z 1.4) pos 0.52 offset -3.41 | linear 19.03% (cost 69.84) clip 0.699
+  13 memory on  98.4% d2  98.4% nearly constant near0   6.6%/  1.2% canc 0.558 rot 0.18 inp 0.00 (sumsq/z 1.3) pos 0.96 offset +4.03 | linear 88.51% (cost 0.36) clip 0.000
+  14 memory on  95.5% d2  95.5% no rule         near0   4.2%/  5.6% canc 0.280 rot 0.32 inp 0.00 (sumsq/z 3.7) pos 0.83 offset +1.95 | linear 87.96% (cost 0.91) clip 0.003
+  15 gate   on  22.8% d2  94.4% partial         near0   7.7%/ 16.4% canc 0.258 rot 0.06 inp 0.38 (sumsq/z 1.1) pos 0.53 offset -2.25 | linear 16.57% (cost 72.30) clip 0.701
+20: 20 neurons, acc 97.89%, dominant pattern 18.5% of steps 4-8, modes 180:1.00 112:0.95 0:1.00 0:1.01 27:0.72 70:0.63 113:0.57 180:0.50 180:0.40 136:0.32 0:0.11 0:0.05
+   0 memory on  99.5% d2  99.5% nearly constant near0   5.2%/  1.0% canc 0.406 rot 0.49 inp 0.00 (sumsq/z 6.8) pos 0.89 offset +2.33 | linear 97.87% (cost 0.01) clip 0.000
+   1 hiding on  76.7% d2  95.0% one-line rule   near0   7.7%/ 19.1% canc 0.241 rot 0.08 inp 0.41 (sumsq/z 1.1) pos 0.50 offset +2.32 | linear 46.65% (cost 51.23) clip 0.104
+   2 gate   on  34.3% d2  99.3% one-line rule   near0   7.9%/ 16.9% canc 0.275 rot 0.07 inp 0.61 (sumsq/z 1.1) pos 0.21 offset -1.26 | linear 47.80% (cost 50.08) clip 0.590
+   3 hiding on  76.4% d2  95.0% partial         near0   7.6%/ 14.8% canc 0.319 rot 0.04 inp 0.43 (sumsq/z 1.0) pos 0.50 offset +2.33 | linear 11.70% (cost 86.19) clip 0.106
+   4 memory on  94.4% d2  99.2% one-line rule   near0  11.5%/  6.7% canc 0.362 rot 0.43 inp 0.00 (sumsq/z 10.2) pos 0.85 offset +1.97 | linear 97.89% (cost 0.00) clip 0.000
+   5 memory on  75.6% d2  99.0% one-line rule   near0  15.4%/  8.2% canc 0.251 rot 0.07 inp 0.00 (sumsq/z 1.3) pos 0.00 offset +0.02 | linear 13.18% (cost 84.71) clip 0.329
+   6 memory on  97.4% d2  98.7% nearly constant near0  13.6%/  8.8% canc 0.478 rot 0.22 inp 0.00 (sumsq/z 1.4) pos 0.87 offset +2.16 | linear 97.88% (cost 0.01) clip 0.000
+   7 memory on  98.5% d2  98.6% nearly constant near0   9.2%/  3.6% canc 0.317 rot 0.49 inp 0.00 (sumsq/z 207.8) pos 0.91 offset +2.69 | linear 97.87% (cost 0.01) clip 0.000
+   8 memory on  75.9% d2  99.3% one-line rule   near0  36.7%/  1.9% canc 0.263 rot 0.10 inp 0.00 (sumsq/z 1.2) pos 0.11 offset -0.29 | linear 20.70% (cost 77.19) clip 0.376
+   9 hiding on  78.1% d2  95.6% one-line rule   near0   7.6%/ 20.2% canc 0.226 rot 0.27 inp 0.32 (sumsq/z 1.3) pos 0.54 offset +2.58 | linear 73.01% (cost 24.88) clip 0.093
+  10 memory on  80.8% d2  98.6% one-line rule   near0  11.1%/ 11.5% canc 0.376 rot 0.23 inp 0.00 (sumsq/z 1.4) pos 0.41 offset +0.69 | linear 79.44% (cost 18.45) clip 0.102
+  11 memory on  99.4% d2  99.4% nearly constant near0  13.0%/  7.2% canc 0.347 rot 0.48 inp 0.00 (sumsq/z 97.6) pos 0.88 offset +2.28 | linear 97.89% (cost 0.00) clip 0.000
+  12 memory on  95.0% d2  99.0% one-line rule   near0  13.3%/  5.4% canc 0.552 rot 0.53 inp 0.00 (sumsq/z 63.0) pos 0.95 offset +3.72 | linear 97.88% (cost 0.01) clip 0.001
+  13 memory on  84.0% d2  97.5% one-line rule   near0  22.0%/ 22.2% canc 0.333 rot 0.19 inp 0.00 (sumsq/z 0.9) pos 0.66 offset +1.15 | linear 83.29% (cost 14.60) clip 0.012
+  14 gate   on  19.4% d2  99.9% one-line rule   near0   7.1%/  7.0% canc 0.743 rot 0.00 inp 0.37 (sumsq/z 1.0) pos 0.62 offset -113.87 | linear 7.62% (cost 90.27) clip 0.735
+  15 gate   on  23.6% d2  99.1% one-line rule   near0  16.2%/  6.4% canc 0.524 rot 0.05 inp 0.00 (sumsq/z 1.0) pos 0.47 offset -0.80 | linear 11.19% (cost 86.69) clip 0.710
+  16 memory on  88.5% d2  88.5% no rule         near0   8.6%/ 37.5% canc 0.124 rot 0.49 inp 0.00 (sumsq/z 112.4) pos 0.53 offset +0.89 | linear 97.37% (cost 0.52) clip 0.048
+  17 memory on  68.9% d2  98.3% one-line rule   near0  39.6%/ 16.6% canc 0.198 rot 0.01 inp 0.00 (sumsq/z 1.0) pos 0.11 offset -0.29 | linear 13.06% (cost 84.82) clip 0.376
+  18 hiding on  74.0% d2  93.1% partial         near0   7.7%/ 14.0% canc 0.331 rot 0.08 inp 0.49 (sumsq/z 0.9) pos 0.44 offset +1.82 | linear 34.62% (cost 63.27) clip 0.124
+  19 memory on  96.1% d2  97.3% partial         near0  12.2%/  8.5% canc 0.422 rot 0.48 inp 0.00 (sumsq/z 148.8) pos 0.76 offset +1.46 | linear 97.90% (cost -0.01) clip 0.000
+32 bo5: 32 neurons, acc 99.45%, dominant pattern 2.0% of steps 4-8, modes 0:1.06 0:1.00 180:0.76 0:0.62 122:0.47 150:0.19 53:0.15 0:0.11 180:0.02
+   0 hiding on  55.9% d2  94.6% partial         near0  77.0%/ 11.9% canc 0.374 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.17 offset -0.37 | linear 19.32% (cost 80.13) clip 0.381
+   1 memory on  70.0% d2  97.7% one-line rule   near0  33.9%/ 16.3% canc 0.400 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.09 offset -0.26 | linear 16.84% (cost 82.61) clip 0.374
+   2 memory on  51.2% d2  74.5% partial         near0  10.1%/ 35.1% canc 0.157 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.04 offset -0.17 | linear 92.92% (cost 6.53) clip 0.408
+   3 gate   on  38.4% d2  86.8% partial         near0  65.7%/ 25.0% canc 0.185 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.24 offset -0.47 | linear 14.20% (cost 85.25) clip 0.446
+   4 memory on  62.3% d2  72.8% partial         near0  27.4%/ 48.1% canc 0.107 rot 0.00 inp 0.01 (sumsq/z 1.0) pos 0.02 offset -0.10 | linear 88.09% (cost 11.36) clip 0.260
+   5 memory on  99.5% d2  99.5% nearly constant near0  12.7%/  7.3% canc 0.393 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.77 offset +1.51 | linear 99.44% (cost 0.00) clip 0.000
+   6 hiding on  70.5% d2  93.9% partial         near0   7.7%/ 15.4% canc 0.314 rot 0.01 inp 0.58 (sumsq/z 1.0) pos 0.36 offset +1.79 | linear 93.79% (cost 5.66) clip 0.157
+   7 gate   on  19.4% d2 100.0% one-line rule   near0   7.1%/  6.4% canc 0.917 rot 0.00 inp 0.37 (sumsq/z 1.0) pos 0.63 offset -579.27 | linear 12.04% (cost 87.41) clip 0.735
+   8 memory on  99.1% d2  99.1% nearly constant near0   8.3%/ 18.1% canc 0.241 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.62 offset +1.08 | linear 99.45% (cost 0.00) clip 0.000
+   9 gate   on  20.1% d2  95.4% one-line rule   near0  14.4%/ 26.7% canc 0.356 rot 0.00 inp 0.01 (sumsq/z 1.0) pos 0.74 offset -1.40 | linear 32.78% (cost 66.67) clip 0.720
+  10 gate   on  19.3% d2  85.3% partial         near0  54.6%/ 29.8% canc 0.220 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.25 offset -0.49 | linear 24.15% (cost 75.30) clip 0.456
+  11 gate   on  35.5% d2  83.2% partial         near0  73.6%/ 24.8% canc 0.186 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.18 offset -0.39 | linear 10.31% (cost 89.14) clip 0.393
+  12 hiding on  66.7% d2  99.2% one-line rule   near0   7.8%/ 10.6% canc 0.474 rot 0.00 inp 0.64 (sumsq/z 1.0) pos 0.25 offset +1.27 | linear 88.04% (cost 11.41) clip 0.195
+  13 hiding on  57.8% d2  95.6% one-line rule   near0  77.2%/ 11.8% canc 0.388 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.17 offset -0.37 | linear 19.46% (cost 79.98) clip 0.380
+  14 gate   on  34.7% d2  87.1% partial         near0  22.6%/ 18.8% canc 0.235 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.23 offset -0.46 | linear 88.08% (cost 11.37) clip 0.605
+  15 memory on  55.7% d2  75.5% partial         near0  13.1%/ 50.6% canc 0.088 rot 0.00 inp 0.01 (sumsq/z 1.0) pos 0.00 offset -0.05 | linear 98.83% (cost 0.62) clip 0.288
+  16 gate   on  33.2% d2  99.9% one-line rule   near0   7.8%/ 10.2% canc 0.487 rot 0.00 inp 0.66 (sumsq/z 1.0) pos 0.24 offset -1.30 | linear 23.50% (cost 75.94) clip 0.602
+  17 store  on 100.0% d2 100.0% nearly constant near0  13.2%/  5.2% canc 0.910 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 1.00 offset +12.80 | linear 99.45% (cost 0.00) clip 0.000
+  18 hiding on  69.3% d2  94.8% partial         near0   7.9%/ 21.3% canc 0.227 rot 0.01 inp 0.61 (sumsq/z 1.0) pos 0.31 offset +1.66 | linear 96.70% (cost 2.75) clip 0.168
+  19 memory on  65.6% d2  65.6% no rule         near0  17.2%/ 40.5% canc 0.148 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.11 offset +0.29 | linear 99.32% (cost 0.13) clip 0.164
+  20 memory on  87.8% d2  95.9% one-line rule   near0   8.9%/ 26.7% canc 0.213 rot 0.01 inp 0.02 (sumsq/z 1.0) pos 0.70 offset +1.31 | linear 94.84% (cost 4.60) clip 0.022
+  21 gate   on  24.3% d2  95.1% one-line rule   near0   7.5%/ 10.3% canc 0.485 rot 0.00 inp 0.47 (sumsq/z 1.0) pos 0.48 offset -2.73 | linear 32.15% (cost 67.30) clip 0.689
+  22 memory on  55.8% d2  70.7% partial         near0  14.6%/ 46.0% canc 0.102 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.07 offset +0.22 | linear 99.08% (cost 0.37) clip 0.197
+  23 gate   on  21.5% d2  96.8% one-line rule   near0  30.0%/  8.8% canc 0.512 rot 0.00 inp 0.02 (sumsq/z 1.0) pos 0.26 offset -0.49 | linear 20.30% (cost 79.15) clip 0.471
+  24 memory on  68.2% d2  78.9% partial         near0   8.9%/ 44.8% canc 0.155 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.05 offset +0.20 | linear 89.76% (cost 9.69) clip 0.239
+  25 memory on  63.4% d2  91.9% partial         near0  66.5%/  2.3% canc 0.286 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.23 offset -0.46 | linear 14.28% (cost 85.17) clip 0.442
+  26 memory on  80.1% d2  82.6% partial         near0  13.9%/ 37.2% canc 0.151 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.32 offset +0.57 | linear 99.43% (cost 0.01) clip 0.037
+  27 gate   on  31.3% d2  75.3% partial         near0  69.4%/ 35.4% canc 0.151 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.19 offset -0.40 | linear 21.78% (cost 77.67) clip 0.397
+  28 memory on  76.0% d2  99.3% one-line rule   near0  77.0%/  2.9% canc 0.294 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.16 offset -0.37 | linear 27.55% (cost 71.90) clip 0.378
+  29 hiding on  57.2% d2  95.7% one-line rule   near0  77.2%/ 12.4% canc 0.372 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.17 offset -0.37 | linear 10.87% (cost 88.58) clip 0.380
+  30 memory on  84.6% d2  92.2% partial         near0  17.6%/ 50.6% canc 0.134 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.51 offset +0.85 | linear 98.25% (cost 1.20) clip 0.033
+  31 memory on  94.0% d2  96.0% partial         near0  15.3%/ 21.9% canc 0.492 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.78 offset +1.55 | linear 99.38% (cost 0.07) clip 0.001
+32 long: 32 neurons, acc 99.25%, dominant pattern 5.1% of steps 4-8, modes 0:1.13 0:1.00 0:0.87 44:0.79 65:0.63 90:0.66 152:0.74 136:0.69 0:0.35 0:0.29 180:0.34 135:0.26 180:0.14 0:0.00 180:0.03
+   0 memory on  94.4% d2  99.3% one-line rule   near0   9.9%/ 15.9% canc 0.271 rot 0.21 inp 0.00 (sumsq/z 1.3) pos 0.62 offset +1.07 | linear 99.25% (cost 0.00) clip 0.000
+   1 hiding on  75.9% d2  94.5% partial         near0   7.8%/ 18.8% canc 0.261 rot 0.16 inp 0.51 (sumsq/z 0.9) pos 0.48 offset +2.10 | linear 72.90% (cost 26.35) clip 0.110
+   2 gate   on  23.6% d2  99.3% one-line rule   near0  29.3%/  5.9% canc 0.979 rot 0.02 inp 0.00 (sumsq/z 1.0) pos 0.47 offset -0.79 | linear 9.86% (cost 89.39) clip 0.698
+   3 memory on  81.5% d2  85.4% partial         near0  14.7%/ 20.0% canc 0.288 rot 0.20 inp 0.00 (sumsq/z 0.9) pos 0.52 offset +0.87 | linear 95.57% (cost 3.68) clip 0.053
+   4 hiding on  75.1% d2  93.6% partial         near0   7.8%/ 19.8% canc 0.246 rot 0.08 inp 0.44 (sumsq/z 1.0) pos 0.46 offset +1.91 | linear 82.89% (cost 16.36) clip 0.115
+   5 memory on  57.5% d2  72.9% partial         near0  20.8%/ 61.7% canc 0.075 rot 0.22 inp 0.01 (sumsq/z 1.4) pos 0.00 offset +0.05 | linear 95.28% (cost 3.97) clip 0.258
+   6 hiding on  79.0% d2  96.9% one-line rule   near0   7.4%/ 15.7% canc 0.311 rot 0.06 inp 0.40 (sumsq/z 1.0) pos 0.57 offset +3.10 | linear 85.30% (cost 13.95) clip 0.088
+   7 hiding on  68.9% d2  96.2% one-line rule   near0   7.8%/ 24.0% canc 0.206 rot 0.13 inp 0.35 (sumsq/z 1.6) pos 0.32 offset +1.32 | linear 75.08% (cost 24.17) clip 0.168
+   8 gate   on  29.1% d2  96.1% one-line rule   near0   7.8%/ 14.9% canc 0.319 rot 0.02 inp 0.55 (sumsq/z 1.0) pos 0.35 offset -1.52 | linear 16.45% (cost 82.80) clip 0.644
+   9 gate   on  19.4% d2  99.9% one-line rule   near0   7.1%/  6.8% canc 0.836 rot 0.00 inp 0.36 (sumsq/z 1.1) pos 0.63 offset -170.54 | linear 10.67% (cost 88.58) clip 0.735
+  10 memory on  87.0% d2  97.7% one-line rule   near0  16.8%/ 15.5% canc 0.373 rot 0.03 inp 0.00 (sumsq/z 0.9) pos 0.54 offset +0.89 | linear 77.84% (cost 21.42) clip 0.035
+  11 memory on  98.0% d2  98.5% nearly constant near0  14.1%/ 13.9% canc 0.351 rot 0.31 inp 0.00 (sumsq/z 5.9) pos 0.90 offset +2.44 | linear 99.25% (cost 0.01) clip 0.001
+  12 gate   on  33.7% d2  99.7% one-line rule   near0   7.9%/ 14.4% canc 0.330 rot 0.00 inp 0.69 (sumsq/z 1.0) pos 0.23 offset -1.30 | linear 28.70% (cost 70.55) clip 0.597
+  13 memory on  53.2% d2  72.7% partial         near0   8.6%/ 38.6% canc 0.185 rot 0.24 inp 0.00 (sumsq/z 1.9) pos 0.08 offset -0.25 | linear 98.72% (cost 0.54) clip 0.452
+  14 memory on  69.5% d2  82.6% partial         near0  18.9%/ 61.1% canc 0.090 rot 0.11 inp 0.00 (sumsq/z 1.0) pos 0.38 offset +0.65 | linear 91.73% (cost 7.52) clip 0.042
+  15 hiding on  69.3% d2  96.1% one-line rule   near0   7.9%/ 22.1% canc 0.221 rot 0.15 inp 0.44 (sumsq/z 1.2) pos 0.32 offset +1.32 | linear 72.37% (cost 26.88) clip 0.164
+  16 gate   on   7.0% d2  99.5% one-line rule   near0   7.2%/  2.7% canc 0.775 rot 0.05 inp 0.01 (sumsq/z 1.0) pos 0.97 offset -6.65 | linear 15.35% (cost 83.91) clip 0.825
+  17 memory on  47.5% d2  85.3% partial         near0  25.1%/ 66.1% canc 0.075 rot 0.49 inp 0.00 (sumsq/z 6.6) pos 0.13 offset +0.32 | linear 95.34% (cost 3.91) clip 0.151
+  18 gate   on  16.8% d2  88.1% partial         near0  48.9%/ 31.0% canc 0.261 rot 0.01 inp 0.00 (sumsq/z 1.0) pos 0.24 offset -0.46 | linear 14.51% (cost 84.74) clip 0.438
+  19 hiding on  71.3% d2  96.2% one-line rule   near0   7.9%/ 16.5% canc 0.291 rot 0.03 inp 0.46 (sumsq/z 1.2) pos 0.35 offset +1.56 | linear 25.00% (cost 74.25) clip 0.149
+  20 memory on  98.5% d2  98.5% nearly constant near0   8.4%/ 29.9% canc 0.244 rot 0.04 inp 0.00 (sumsq/z 0.9) pos 0.52 offset +0.87 | linear 99.25% (cost 0.00) clip 0.000
+  21 memory on  77.2% d2  96.5% one-line rule   near0  21.7%/ 55.3% canc 0.067 rot 0.83 inp 0.00 (sumsq/z 1.3) pos 0.30 offset +0.55 | linear 98.60% (cost 0.65) clip 0.033
+  22 hiding on  67.2% d2  99.8% one-line rule   near0   7.8%/ 14.2% canc 0.339 rot 0.01 inp 0.66 (sumsq/z 1.0) pos 0.26 offset +1.32 | linear 33.79% (cost 65.47) clip 0.190
+  23 gate   on  36.6% d2  91.8% partial         near0  40.2%/  1.9% canc 0.807 rot 0.01 inp 0.00 (sumsq/z 1.0) pos 0.33 offset -0.60 | linear 17.55% (cost 81.70) clip 0.644
+  24 memory on  90.9% d2  95.0% one-line rule   near0  16.8%/ 19.1% canc 0.253 rot 0.25 inp 0.00 (sumsq/z 0.8) pos 0.58 offset +0.98 | linear 99.23% (cost 0.03) clip 0.004
+  25 gate   on  21.9% d2  96.9% one-line rule   near0  24.4%/ 17.0% canc 0.284 rot 0.00 inp 0.03 (sumsq/z 1.0) pos 0.28 offset -0.53 | linear 18.56% (cost 80.69) clip 0.495
+  26 memory on  99.7% d2  99.7% nearly constant near0  13.2%/ 15.0% canc 0.335 rot 0.02 inp 0.00 (sumsq/z 0.9) pos 0.83 offset +1.86 | linear 99.26% (cost -0.01) clip 0.000
+  27 store  on  93.1% d2  99.4% one-line rule   near0   7.2%/  2.6% canc 0.807 rot 0.01 inp 0.01 (sumsq/z 0.9) pos 0.97 offset +6.55 | linear 92.79% (cost 6.46) clip 0.006
+  28 memory on  93.0% d2  97.2% one-line rule   near0  18.0%/ 23.8% canc 0.319 rot 0.21 inp 0.00 (sumsq/z 1.0) pos 0.79 offset +1.61 | linear 99.23% (cost 0.02) clip 0.001
+  29 memory on  95.8% d2  99.0% one-line rule   near0   8.2%/ 36.6% canc 0.142 rot 0.38 inp 0.00 (sumsq/z 1.2) pos 0.66 offset +1.15 | linear 99.25% (cost 0.01) clip 0.001
+  30 hiding on  69.2% d2  96.3% one-line rule   near0   7.9%/ 23.1% canc 0.211 rot 0.09 inp 0.54 (sumsq/z 1.0) pos 0.32 offset +1.35 | linear 86.30% (cost 12.96) clip 0.166
+  31 hiding on  76.3% d2  95.4% one-line rule   near0   7.3%/  6.2% canc 0.800 rot 0.00 inp 0.39 (sumsq/z 1.1) pos 0.52 offset +2.32 | linear 29.10% (cost 70.15) clip 0.106
+zoo32 0: 32 neurons, acc 99.45%, dominant pattern 2.0% of steps 4-8, modes 0:1.06 0:1.00 180:0.76 0:0.62 122:0.48 156:0.20 49:0.14 0:0.11 180:0.04
+   0 hiding on  55.9% d2  94.6% partial         near0  76.9%/ 11.8% canc 0.375 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.17 offset -0.37 | linear 18.99% (cost 80.47) clip 0.381
+   1 memory on  70.0% d2  97.7% one-line rule   near0  34.0%/ 16.3% canc 0.404 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.09 offset -0.26 | linear 16.76% (cost 82.69) clip 0.374
+   2 memory on  51.2% d2  74.5% partial         near0  10.0%/ 34.9% canc 0.158 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.03 offset -0.16 | linear 93.62% (cost 5.83) clip 0.405
+   3 gate   on  38.1% d2  86.8% partial         near0  65.7%/ 25.1% canc 0.185 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.24 offset -0.47 | linear 13.30% (cost 86.15) clip 0.447
+   4 memory on  62.1% d2  72.4% partial         near0  27.5%/ 47.7% canc 0.109 rot 0.00 inp 0.01 (sumsq/z 1.0) pos 0.02 offset -0.11 | linear 88.13% (cost 11.32) clip 0.261
+   5 memory on  99.5% d2  99.5% nearly constant near0  12.9%/  8.9% canc 0.395 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.76 offset +1.50 | linear 99.45% (cost 0.00) clip 0.000
+   6 hiding on  70.5% d2  93.9% partial         near0   7.7%/ 15.6% canc 0.310 rot 0.01 inp 0.58 (sumsq/z 1.0) pos 0.36 offset +1.79 | linear 93.72% (cost 5.73) clip 0.158
+   7 gate   on  19.4% d2 100.0% one-line rule   near0   7.1%/  6.4% canc 0.917 rot 0.00 inp 0.37 (sumsq/z 1.0) pos 0.63 offset -569.68 | linear 11.65% (cost 87.80) clip 0.735
+   8 memory on  99.2% d2  99.2% nearly constant near0   7.6%/ 18.5% canc 0.235 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.62 offset +1.08 | linear 99.45% (cost 0.00) clip 0.000
+   9 gate   on  19.9% d2  95.6% one-line rule   near0  14.8%/ 26.6% canc 0.363 rot 0.00 inp 0.01 (sumsq/z 1.0) pos 0.73 offset -1.39 | linear 32.59% (cost 66.86) clip 0.718
+  10 gate   on  18.5% d2  86.0% partial         near0  54.8%/ 30.0% canc 0.216 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.25 offset -0.48 | linear 24.92% (cost 74.53) clip 0.455
+  11 gate   on  35.4% d2  83.4% partial         near0  73.6%/ 24.4% canc 0.193 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.18 offset -0.39 | linear 10.26% (cost 89.19) clip 0.393
+  12 hiding on  66.6% d2  99.2% one-line rule   near0   7.8%/ 10.6% canc 0.472 rot 0.00 inp 0.64 (sumsq/z 1.0) pos 0.25 offset +1.27 | linear 88.45% (cost 11.00) clip 0.195
+  13 hiding on  57.7% d2  95.6% one-line rule   near0  77.2%/ 11.7% canc 0.393 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.17 offset -0.37 | linear 18.17% (cost 81.28) clip 0.380
+  14 gate   on  35.2% d2  87.8% partial         near0  22.0%/ 18.8% canc 0.233 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.22 offset -0.45 | linear 89.11% (cost 10.34) clip 0.604
+  15 memory on  56.1% d2  74.9% partial         near0  13.5%/ 50.8% canc 0.087 rot 0.00 inp 0.01 (sumsq/z 1.0) pos 0.00 offset -0.04 | linear 98.77% (cost 0.69) clip 0.284
+  16 gate   on  33.2% d2  99.9% one-line rule   near0   7.8%/ 10.2% canc 0.485 rot 0.00 inp 0.66 (sumsq/z 1.0) pos 0.24 offset -1.30 | linear 23.30% (cost 76.15) clip 0.602
+  17 store  on  99.9% d2  99.9% nearly constant near0  13.2%/  1.3% canc 0.910 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 1.00 offset +12.51 | linear 99.45% (cost 0.00) clip 0.000
+  18 hiding on  69.1% d2  94.7% partial         near0   7.9%/ 21.5% canc 0.225 rot 0.01 inp 0.61 (sumsq/z 1.0) pos 0.30 offset +1.62 | linear 96.71% (cost 2.74) clip 0.170
+  19 memory on  65.3% d2  65.3% no rule         near0  17.2%/ 40.8% canc 0.145 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.10 offset +0.28 | linear 99.31% (cost 0.14) clip 0.166
+  20 memory on  88.1% d2  96.2% one-line rule   near0   8.8%/ 26.9% canc 0.211 rot 0.02 inp 0.02 (sumsq/z 1.0) pos 0.70 offset +1.31 | linear 95.04% (cost 4.41) clip 0.022
+  21 gate   on  24.4% d2  95.1% one-line rule   near0   7.5%/ 10.3% canc 0.483 rot 0.00 inp 0.48 (sumsq/z 1.0) pos 0.48 offset -2.71 | linear 32.22% (cost 67.23) clip 0.689
+  22 memory on  55.7% d2  70.7% partial         near0  14.6%/ 46.1% canc 0.102 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.07 offset +0.22 | linear 99.07% (cost 0.38) clip 0.196
+  23 gate   on  21.4% d2  96.8% one-line rule   near0  30.1%/  8.8% canc 0.515 rot 0.00 inp 0.02 (sumsq/z 1.0) pos 0.26 offset -0.49 | linear 21.14% (cost 78.31) clip 0.470
+  24 memory on  66.7% d2  77.4% partial         near0   7.8%/ 45.0% canc 0.154 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.04 offset +0.17 | linear 89.31% (cost 10.14) clip 0.249
+  25 memory on  63.4% d2  91.9% partial         near0  66.5%/  2.3% canc 0.289 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.23 offset -0.46 | linear 14.02% (cost 85.43) clip 0.441
+  26 memory on  80.4% d2  82.8% partial         near0  13.9%/ 36.4% canc 0.153 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.33 offset +0.59 | linear 99.43% (cost 0.02) clip 0.033
+  27 gate   on  30.3% d2  75.6% partial         near0  68.7%/ 35.7% canc 0.148 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.19 offset -0.40 | linear 21.16% (cost 78.29) clip 0.398
+  28 memory on  76.0% d2  99.3% one-line rule   near0  77.0%/  2.9% canc 0.295 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.16 offset -0.37 | linear 27.92% (cost 71.53) clip 0.378
+  29 hiding on  57.3% d2  95.7% one-line rule   near0  77.2%/ 12.3% canc 0.374 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.17 offset -0.37 | linear 11.58% (cost 87.87) clip 0.380
+  30 memory on  84.5% d2  92.2% partial         near0  17.3%/ 50.4% canc 0.135 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.51 offset +0.84 | linear 98.18% (cost 1.27) clip 0.034
+  31 memory on  93.5% d2  95.9% partial         near0  15.7%/ 23.1% canc 0.483 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.77 offset +1.53 | linear 99.36% (cost 0.09) clip 0.001
+zoo32 1: 32 neurons, acc 99.33%, dominant pattern 2.5% of steps 4-8, modes 0:1.19 148:0.72 180:0.80 0:1.00 0:0.92 60:0.63 0:0.73 180:0.54 149:0.42 132:0.13 19:0.13 49:0.08
+   0 memory on  55.9% d2  74.2% partial         near0  19.6%/ 44.9% canc 0.122 rot 0.25 inp 0.00 (sumsq/z 2.9) pos 0.01 offset -0.06 | linear 96.49% (cost 2.84) clip 0.314
+   1 hiding on  64.4% d2  95.7% one-line rule   near0   7.9%/ 19.7% canc 0.242 rot 0.44 inp 0.03 (sumsq/z 24.7) pos 0.20 offset +1.02 | linear 82.59% (cost 16.74) clip 0.216
+   2 hiding on  59.3% d2  96.6% one-line rule   near0  52.9%/ 11.0% canc 0.422 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.14 offset -0.33 | linear 34.58% (cost 64.75) clip 0.382
+   3 memory on  78.7% d2  87.7% partial         near0  22.6%/ 25.1% canc 0.272 rot 0.53 inp 0.00 (sumsq/z 103.5) pos 0.42 offset +0.71 | linear 99.28% (cost 0.04) clip 0.015
+   4 memory on  56.4% d2  71.4% partial         near0  10.5%/ 51.9% canc 0.107 rot 0.51 inp 0.00 (sumsq/z 156.7) pos 0.00 offset +0.05 | linear 99.11% (cost 0.22) clip 0.300
+   5 store  on  96.3% d2  99.0% partial         near0  13.3%/ 10.1% canc 0.805 rot 0.12 inp 0.00 (sumsq/z 2.2) pos 0.97 offset +4.93 | linear 99.32% (cost 0.00) clip 0.000
+   6 hiding on  68.8% d2  99.0% one-line rule   near0   7.8%/ 11.5% canc 0.429 rot 0.15 inp 0.61 (sumsq/z 1.0) pos 0.29 offset +1.54 | linear 38.35% (cost 60.98) clip 0.174
+   7 memory on  60.1% d2  68.3% partial         near0   8.0%/ 13.9% canc 0.362 rot 0.50 inp 0.00 (sumsq/z 46.1) pos 0.01 offset -0.06 | linear 98.86% (cost 0.47) clip 0.378
+   8 hiding on  74.0% d2  92.9% partial         near0   7.8%/ 14.9% canc 0.326 rot 0.53 inp 0.01 (sumsq/z 66.3) pos 0.43 offset +1.82 | linear 93.94% (cost 5.39) clip 0.125
+   9 gate   on  24.2% d2  99.2% one-line rule   near0  14.4%/  2.7% canc 0.738 rot 0.11 inp 0.00 (sumsq/z 0.9) pos 0.01 offset -0.10 | linear 20.23% (cost 79.10) clip 0.388
+  10 memory on  54.3% d2  87.7% partial         near0  65.9%/ 12.8% canc 0.349 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.25 offset -0.48 | linear 20.84% (cost 78.49) clip 0.454
+  11 gate   on  44.3% d2  86.7% partial         near0  37.7%/ 34.6% canc 0.304 rot 0.51 inp 0.00 (sumsq/z 760.8) pos 0.26 offset -0.49 | linear 21.39% (cost 77.94) clip 0.492
+  12 store  on  95.8% d2  98.5% partial         near0  13.5%/ 10.5% canc 0.921 rot 0.05 inp 0.00 (sumsq/z 0.8) pos 0.97 offset +4.94 | linear 99.32% (cost 0.01) clip 0.000
+  13 memory on  70.9% d2  71.1% no rule         near0  17.6%/ 41.9% canc 0.136 rot 0.51 inp 0.00 (sumsq/z 68.7) pos 0.00 offset +0.04 | linear 98.41% (cost 0.92) clip 0.272
+  14 gate   on  34.3% d2  90.1% partial         near0  60.0%/ 26.1% canc 0.227 rot 0.10 inp 0.00 (sumsq/z 1.2) pos 0.28 offset -0.52 | linear 15.90% (cost 83.43) clip 0.481
+  15 hiding on  65.7% d2  96.0% one-line rule   near0   7.8%/ 17.1% canc 0.276 rot 0.45 inp 0.02 (sumsq/z 41.7) pos 0.23 offset +1.16 | linear 87.63% (cost 11.70) clip 0.203
+  16 gate   on  11.4% d2  97.6% one-line rule   near0  48.3%/ 14.8% canc 0.311 rot 0.04 inp 0.00 (sumsq/z 1.1) pos 0.36 offset -0.62 | linear 11.33% (cost 88.00) clip 0.537
+  17 gate   on  38.1% d2  87.1% partial         near0  52.8%/ 31.3% canc 0.218 rot 0.02 inp 0.00 (sumsq/z 1.1) pos 0.37 offset -0.64 | linear 14.31% (cost 85.02) clip 0.547
+  18 gate   on  17.9% d2  92.6% partial         near0  25.2%/  7.9% canc 0.534 rot 0.00 inp 0.02 (sumsq/z 1.0) pos 0.38 offset -0.67 | linear 14.84% (cost 84.49) clip 0.565
+  19 gate   on  26.6% d2  95.6% one-line rule   near0   7.6%/ 10.4% canc 0.476 rot 0.07 inp 0.34 (sumsq/z 1.6) pos 0.42 offset -2.26 | linear 21.61% (cost 77.72) clip 0.668
+  20 hiding on  56.8% d2  94.9% partial         near0  54.6%/ 11.7% canc 0.389 rot 0.06 inp 0.00 (sumsq/z 1.1) pos 0.14 offset -0.34 | linear 27.04% (cost 72.29) clip 0.383
+  21 memory on  94.1% d2  97.6% one-line rule   near0   2.5%/ 16.4% canc 0.329 rot 0.08 inp 0.00 (sumsq/z 0.8) pos 0.59 offset +1.00 | linear 99.32% (cost 0.01) clip 0.002
+  22 gate   on  19.4% d2 100.0% one-line rule   near0   7.1%/  6.3% canc 0.948 rot 0.00 inp 0.37 (sumsq/z 1.0) pos 0.63 offset -290.58 | linear 8.70% (cost 90.63) clip 0.735
+  23 gate   on  19.8% d2  98.4% one-line rule   near0  33.7%/  6.7% canc 0.873 rot 0.02 inp 0.00 (sumsq/z 0.8) pos 0.59 offset -0.99 | linear 15.09% (cost 84.24) clip 0.650
+  24 memory on  69.3% d2  87.5% partial         near0  28.2%/ 23.8% canc 0.386 rot 0.25 inp 0.00 (sumsq/z 1.7) pos 0.09 offset -0.26 | linear 25.52% (cost 73.81) clip 0.362
+  25 memory on  72.2% d2  72.2% no rule         near0  33.1%/ 48.5% canc 0.125 rot 0.49 inp 0.00 (sumsq/z 124.6) pos 0.00 offset -0.01 | linear 89.10% (cost 10.22) clip 0.250
+  26 memory on  70.9% d2  97.8% one-line rule   near0  19.4%/ 10.0% canc 0.895 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.01 offset +0.08 | linear 14.99% (cost 84.34) clip 0.312
+  27 gate   on  26.2% d2  82.1% partial         near0  21.5%/ 58.9% canc 0.098 rot 0.53 inp 0.00 (sumsq/z 23.4) pos 0.30 offset -0.55 | linear 75.78% (cost 23.55) clip 0.523
+  28 memory on  84.3% d2  90.2% partial         near0   9.1%/ 38.8% canc 0.259 rot 0.52 inp 0.00 (sumsq/z 182.2) pos 0.44 offset +0.74 | linear 97.71% (cost 1.62) clip 0.053
+  29 memory on  85.7% d2  88.2% partial         near0   8.8%/ 32.4% canc 0.248 rot 0.57 inp 0.00 (sumsq/z 13.1) pos 0.40 offset +0.68 | linear 98.27% (cost 1.05) clip 0.083
+  30 gate   on  13.0% d2  94.7% partial         near0  34.1%/ 19.3% canc 0.882 rot 0.56 inp 0.00 (sumsq/z 5.6) pos 0.41 offset -0.70 | linear 9.90% (cost 89.42) clip 0.676
+  31 gate   on  33.3% d2  99.9% one-line rule   near0   7.8%/ 11.2% canc 0.434 rot 0.00 inp 0.66 (sumsq/z 1.0) pos 0.24 offset -1.30 | linear 20.46% (cost 78.87) clip 0.601
+zoo32 2: 32 neurons, acc 99.17%, dominant pattern 2.4% of steps 4-8, modes 81:0.93 180:0.84 134:0.83 0:1.13 0:1.00 132:0.59 14:0.75 152:0.34 0:0.55 101:0.29 0:0.27 62:0.19
+   0 memory on  96.5% d2  97.5% no rule         near0   7.5%/ 24.5% canc 0.250 rot 0.13 inp 0.00 (sumsq/z 1.0) pos 0.55 offset +0.92 | linear 99.17% (cost -0.00) clip 0.000
+   1 memory on  62.6% d2  74.7% partial         near0  29.5%/ 62.6% canc 0.066 rot 0.14 inp 0.00 (sumsq/z 1.4) pos 0.00 offset +0.00 | linear 97.77% (cost 1.40) clip 0.250
+   2 memory on  50.5% d2  73.8% partial         near0  13.4%/ 50.7% canc 0.112 rot 0.56 inp 0.00 (sumsq/z 6.7) pos 0.00 offset -0.03 | linear 97.74% (cost 1.43) clip 0.316
+   3 hiding on  71.0% d2  94.5% partial         near0   7.9%/ 27.2% canc 0.181 rot 0.05 inp 0.51 (sumsq/z 1.0) pos 0.37 offset +1.42 | linear 64.47% (cost 34.70) clip 0.147
+   4 memory on  98.5% d2  98.5% nearly constant near0  14.5%/ 19.9% canc 0.275 rot 0.02 inp 0.00 (sumsq/z 1.1) pos 0.76 offset +1.50 | linear 99.17% (cost -0.00) clip 0.000
+   5 memory on  69.0% d2  88.4% partial         near0  66.4%/ 55.1% canc 0.094 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.17 offset -0.38 | linear 30.32% (cost 68.85) clip 0.375
+   6 memory on  83.1% d2  97.1% one-line rule   near0  15.2%/ 30.7% canc 0.213 rot 0.07 inp 0.00 (sumsq/z 1.5) pos 0.39 offset +0.66 | linear 76.11% (cost 23.06) clip 0.080
+   7 hiding on  76.3% d2  95.2% one-line rule   near0   7.3%/ 10.7% canc 0.417 rot 0.00 inp 0.42 (sumsq/z 1.0) pos 0.52 offset +2.32 | linear 24.84% (cost 74.33) clip 0.106
+   8 gate   on  19.7% d2  99.7% one-line rule   near0   7.1%/  7.3% canc 0.722 rot 0.00 inp 0.38 (sumsq/z 1.0) pos 0.62 offset -26.32 | linear 7.74% (cost 91.42) clip 0.732
+   9 hiding on  78.7% d2  98.3% one-line rule   near0   7.4%/ 11.7% canc 0.412 rot 0.01 inp 0.41 (sumsq/z 1.0) pos 0.57 offset +5.11 | linear 20.13% (cost 79.04) clip 0.091
+  10 gate   on   8.3% d2  96.8% one-line rule   near0  24.3%/  3.4% canc 0.729 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.58 offset -0.98 | linear 11.35% (cost 87.82) clip 0.736
+  11 memory on  46.6% d2  75.5% partial         near0  19.6%/ 48.3% canc 0.112 rot 0.09 inp 0.00 (sumsq/z 1.2) pos 0.00 offset +0.00 | linear 98.53% (cost 0.64) clip 0.259
+  12 memory on  85.2% d2  97.3% one-line rule   near0  13.5%/ 26.5% canc 0.239 rot 0.24 inp 0.00 (sumsq/z 1.4) pos 0.61 offset +1.05 | linear 67.96% (cost 31.21) clip 0.039
+  13 gate   on  33.0% d2  99.2% one-line rule   near0   7.8%/ 14.5% canc 0.329 rot 0.00 inp 0.64 (sumsq/z 1.0) pos 0.26 offset -1.30 | linear 19.89% (cost 79.28) clip 0.604
+  14 memory on  75.6% d2  99.0% one-line rule   near0   8.4%/  2.7% canc 0.512 rot 0.02 inp 0.00 (sumsq/z 1.0) pos 0.15 offset +0.34 | linear 43.17% (cost 56.00) clip 0.197
+  15 memory on  83.3% d2  91.2% partial         near0  13.2%/ 51.6% canc 0.139 rot 0.08 inp 0.00 (sumsq/z 1.1) pos 0.47 offset +0.78 | linear 99.14% (cost 0.03) clip 0.003
+  16 gate   on   4.0% d2  97.3% partial         near0  19.2%/ 15.1% canc 0.654 rot 0.01 inp 0.00 (sumsq/z 1.0) pos 0.66 offset -1.17 | linear 21.50% (cost 77.67) clip 0.712
+  17 hiding on  68.1% d2  98.2% one-line rule   near0   7.7%/ 15.1% canc 0.313 rot 0.01 inp 0.60 (sumsq/z 1.0) pos 0.30 offset +1.35 | linear 64.31% (cost 34.86) clip 0.178
+  18 hiding on  76.0% d2  94.3% partial         near0   7.7%/ 21.9% canc 0.222 rot 0.05 inp 0.41 (sumsq/z 1.1) pos 0.48 offset +2.07 | linear 46.58% (cost 52.58) clip 0.109
+  19 store  on  94.0% d2  99.2% one-line rule   near0   9.1%/  3.2% canc 0.839 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.98 offset +5.61 | linear 93.89% (cost 5.28) clip 0.003
+  20 hiding on  68.6% d2  97.2% one-line rule   near0   7.8%/ 22.7% canc 0.217 rot 0.06 inp 0.50 (sumsq/z 1.1) pos 0.31 offset +1.28 | linear 47.65% (cost 51.52) clip 0.169
+  21 memory on  46.9% d2  75.5% partial         near0  28.2%/ 71.2% canc 0.040 rot 0.13 inp 0.00 (sumsq/z 1.2) pos 0.00 offset +0.02 | linear 96.19% (cost 2.98) clip 0.197
+  22 hiding on  77.6% d2  95.9% one-line rule   near0   7.6%/ 20.7% canc 0.234 rot 0.04 inp 0.43 (sumsq/z 1.0) pos 0.53 offset +2.50 | linear 69.74% (cost 29.43) clip 0.097
+  23 memory on  51.3% d2  65.8% partial         near0   9.4%/ 32.3% canc 0.192 rot 0.39 inp 0.00 (sumsq/z 1.4) pos 0.00 offset -0.01 | linear 96.95% (cost 2.22) clip 0.357
+  24 memory on  80.0% d2  98.1% one-line rule   near0   8.0%/ 23.3% canc 0.215 rot 0.19 inp 0.00 (sumsq/z 0.8) pos 0.21 offset +0.42 | linear 64.30% (cost 34.87) clip 0.185
+  25 gate   on   6.4% d2  99.4% one-line rule   near0   9.0%/  3.2% canc 0.816 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.99 offset -8.09 | linear 10.27% (cost 88.90) clip 0.830
+  26 gate   on  36.9% d2  81.1% partial         near0  10.4%/ 30.8% canc 0.227 rot 0.05 inp 0.00 (sumsq/z 1.0) pos 0.18 offset -0.39 | linear 93.46% (cost 5.71) clip 0.572
+  27 gate   on  24.0% d2  99.4% one-line rule   near0   9.1%/  0.9% canc 0.861 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.40 offset -0.69 | linear 11.50% (cost 87.67) clip 0.701
+  28 hiding on  76.5% d2  94.7% partial         near0   7.6%/ 28.0% canc 0.179 rot 0.07 inp 0.39 (sumsq/z 1.0) pos 0.51 offset +2.13 | linear 66.05% (cost 33.12) clip 0.104
+  29 gate   on  39.9% d2  81.9% partial         near0  24.8%/ 73.0% canc 0.041 rot 0.14 inp 0.00 (sumsq/z 1.4) pos 0.16 offset -0.36 | linear 58.53% (cost 40.64) clip 0.425
+  30 hiding on  78.4% d2  96.7% one-line rule   near0   7.5%/ 17.9% canc 0.270 rot 0.04 inp 0.40 (sumsq/z 1.0) pos 0.56 offset +2.80 | linear 66.37% (cost 32.80) clip 0.092
+  31 memory on  55.0% d2  88.4% partial         near0  67.1%/ 56.9% canc 0.075 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.22 offset -0.44 | linear 10.87% (cost 88.30) clip 0.428
+zoo32 3: 32 neurons, acc 99.28%, dominant pattern 1.8% of steps 4-8, modes 52:1.11 0:1.16 0:1.02 180:0.81 0:0.68 107:0.63 180:0.57 145:0.48 0:0.38 117:0.19 0:0.10 0:0.00 180:0.06
+   0 hiding on  69.8% d2  97.2% one-line rule   near0   7.7%/ 20.7% canc 0.251 rot 0.29 inp 0.66 (sumsq/z 0.9) pos 0.33 offset +1.55 | linear 82.83% (cost 16.45) clip 0.163
+   1 gate   on  44.2% d2  76.6% partial         near0  13.2%/ 47.6% canc 0.115 rot 0.51 inp 0.00 (sumsq/z 66.2) pos 0.06 offset -0.21 | linear 98.76% (cost 0.53) clip 0.407
+   2 gate   on  21.2% d2  96.4% one-line rule   near0  57.9%/  9.6% canc 0.402 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.31 offset -0.56 | linear 19.03% (cost 80.25) clip 0.503
+   3 memory on  75.1% d2  98.7% one-line rule   near0  29.0%/  5.1% canc 0.633 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.09 offset -0.26 | linear 22.11% (cost 77.17) clip 0.374
+   4 memory on  72.5% d2  80.9% partial         near0  15.7%/ 39.8% canc 0.220 rot 0.47 inp 0.00 (sumsq/z 14.0) pos 0.46 offset +0.77 | linear 98.28% (cost 1.00) clip 0.065
+   5 gate   on  20.0% d2  94.2% partial         near0  34.2%/ 21.3% canc 0.675 rot 0.96 inp 0.00 (sumsq/z 1.0) pos 0.42 offset -0.72 | linear 12.06% (cost 87.22) clip 0.678
+   6 gate   on  37.2% d2  89.9% partial         near0  55.6%/ 14.9% canc 0.341 rot 0.02 inp 0.00 (sumsq/z 1.0) pos 0.28 offset -0.52 | linear 19.10% (cost 80.18) clip 0.488
+   7 store  on  94.1% d2  99.2% one-line rule   near0  13.4%/  8.7% canc 0.977 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.98 offset +5.61 | linear 99.28% (cost -0.00) clip 0.000
+   8 gate   on  19.4% d2 100.0% one-line rule   near0   7.1%/  6.3% canc 0.959 rot 0.00 inp 0.38 (sumsq/z 1.0) pos 0.63 offset -287.16 | linear 13.20% (cost 86.09) clip 0.735
+   9 memory on  98.0% d2  98.0% nearly constant near0   4.0%/ 15.8% canc 0.304 rot 0.24 inp 0.00 (sumsq/z 2.6) pos 0.62 offset +1.08 | linear 99.28% (cost 0.00) clip 0.000
+  10 gate   on  24.5% d2  99.1% one-line rule   near0  13.3%/  3.1% canc 0.760 rot 0.01 inp 0.00 (sumsq/z 0.9) pos 0.08 offset -0.25 | linear 20.28% (cost 79.00) clip 0.482
+  11 memory on  57.8% d2  76.6% partial         near0  18.9%/ 49.8% canc 0.140 rot 0.38 inp 0.00 (sumsq/z 3.6) pos 0.02 offset -0.12 | linear 81.37% (cost 17.91) clip 0.375
+  12 hiding on  72.1% d2  94.3% partial         near0   7.6%/ 21.3% canc 0.247 rot 0.22 inp 0.13 (sumsq/z 3.7) pos 0.40 offset +1.69 | linear 87.66% (cost 11.62) clip 0.141
+  13 gate   on  23.4% d2  99.4% one-line rule   near0   6.1%/  2.3% canc 0.960 rot 0.16 inp 0.00 (sumsq/z 0.7) pos 0.22 offset -0.44 | linear 12.76% (cost 86.52) clip 0.626
+  14 hiding on  74.4% d2  92.6% partial         near0   7.8%/ 15.9% canc 0.299 rot 0.13 inp 0.26 (sumsq/z 1.9) pos 0.44 offset +1.98 | linear 85.26% (cost 14.02) clip 0.121
+  15 memory on  78.8% d2  78.8% no rule         near0  13.8%/ 37.2% canc 0.188 rot 0.38 inp 0.00 (sumsq/z 9.6) pos 0.28 offset +0.52 | linear 99.07% (cost 0.21) clip 0.077
+  16 memory on  52.1% d2  86.9% partial         near0  66.6%/ 18.6% canc 0.389 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.23 offset -0.45 | linear 15.81% (cost 83.47) clip 0.436
+  17 gate   on  33.4% d2  99.8% one-line rule   near0   7.8%/ 11.6% canc 0.417 rot 0.00 inp 0.65 (sumsq/z 1.0) pos 0.24 offset -1.30 | linear 29.81% (cost 69.47) clip 0.600
+  18 memory on  51.2% d2  69.8% partial         near0   7.2%/ 33.0% canc 0.164 rot 0.45 inp 0.00 (sumsq/z 10.1) pos 0.00 offset -0.06 | linear 98.36% (cost 0.93) clip 0.421
+  19 gate   on  39.5% d2  90.2% partial         near0  54.0%/ 14.6% canc 0.385 rot 0.03 inp 0.00 (sumsq/z 1.0) pos 0.32 offset -0.57 | linear 24.83% (cost 74.45) clip 0.518
+  20 gate   on  42.3% d2  91.1% partial         near0  60.4%/  9.6% canc 0.551 rot 0.05 inp 0.00 (sumsq/z 1.0) pos 0.33 offset -0.58 | linear 25.44% (cost 73.84) clip 0.515
+  21 memory on  83.9% d2  83.9% no rule         near0  15.3%/ 41.9% canc 0.145 rot 0.25 inp 0.00 (sumsq/z 3.9) pos 0.30 offset +0.55 | linear 99.22% (cost 0.07) clip 0.084
+  22 memory on  70.5% d2  78.7% partial         near0  10.0%/ 47.4% canc 0.188 rot 0.52 inp 0.00 (sumsq/z 6.1) pos 0.13 offset +0.32 | linear 92.95% (cost 6.34) clip 0.169
+  23 hiding on  70.9% d2  95.3% one-line rule   near0   7.7%/ 17.7% canc 0.278 rot 0.41 inp 0.57 (sumsq/z 1.0) pos 0.35 offset +1.68 | linear 53.39% (cost 45.89) clip 0.154
+  24 memory on  53.4% d2  67.0% partial         near0  14.6%/ 47.9% canc 0.128 rot 0.50 inp 0.00 (sumsq/z 17.4) pos 0.00 offset -0.04 | linear 97.77% (cost 1.51) clip 0.331
+  25 memory on  85.8% d2  94.9% partial         near0  10.5%/ 46.7% canc 0.125 rot 0.55 inp 0.00 (sumsq/z 4.0) pos 0.67 offset +1.18 | linear 99.25% (cost 0.03) clip 0.008
+  26 hiding on  76.6% d2  95.2% one-line rule   near0   7.7%/ 14.6% canc 0.324 rot 0.03 inp 0.38 (sumsq/z 1.2) pos 0.49 offset +2.42 | linear 85.24% (cost 14.04) clip 0.105
+  27 memory on  53.0% d2  83.0% partial         near0  18.7%/ 50.3% canc 0.119 rot 0.45 inp 0.00 (sumsq/z 5.1) pos 0.01 offset +0.09 | linear 82.17% (cost 17.12) clip 0.278
+  28 hiding on  75.7% d2  95.0% one-line rule   near0   7.7%/ 20.0% canc 0.246 rot 0.13 inp 0.26 (sumsq/z 1.8) pos 0.47 offset +2.34 | linear 87.75% (cost 11.53) clip 0.112
+  29 gate   on  44.9% d2  71.9% partial         near0  20.2%/ 61.0% canc 0.071 rot 0.36 inp 0.00 (sumsq/z 6.0) pos 0.05 offset -0.19 | linear 79.83% (cost 19.46) clip 0.347
+  30 memory on  93.7% d2  99.2% one-line rule   near0  18.1%/ 14.7% canc 0.808 rot 0.03 inp 0.00 (sumsq/z 0.8) pos 0.70 offset +1.28 | linear 99.27% (cost 0.01) clip 0.001
+  31 gate   on  23.1% d2  98.3% one-line rule   near0  23.4%/  9.9% canc 0.452 rot 0.02 inp 0.04 (sumsq/z 1.0) pos 0.28 offset -0.53 | linear 18.63% (cost 80.65) clip 0.497
+zoo32 4: 32 neurons, acc 99.06%, dominant pattern 1.3% of steps 4-8, modes 180:1.22 145:0.72 153:0.64 180:0.54 0:1.00 0:0.97 100:0.44 43:0.66 0:0.65 47:0.47 180:0.05 60:0.25 0:0.27 0:0.40
+   0 gate   on  23.9% d2  98.6% one-line rule   near0  47.2%/ 16.3% canc 0.291 rot 0.02 inp 0.01 (sumsq/z 1.1) pos 0.21 offset -0.44 | linear 9.86% (cost 89.19) clip 0.428
+   1 gate   on   8.7% d2  94.8% partial         near0  39.9%/ 28.9% canc 0.201 rot 0.37 inp 0.00 (sumsq/z 4.1) pos 0.28 offset -0.52 | linear 5.93% (cost 93.13) clip 0.470
+   2 gate   on  35.3% d2  85.1% partial         near0   9.3%/ 47.3% canc 0.111 rot 0.51 inp 0.00 (sumsq/z 1042.1) pos 0.16 offset -0.37 | linear 84.66% (cost 14.39) clip 0.507
+   3 store  on  99.6% d2  99.6% nearly constant near0  13.1%/ 10.5% canc 0.947 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 1.00 offset +61.67 | linear 99.05% (cost 0.00) clip 0.000
+   4 hiding on  80.6% d2  99.9% one-line rule   near0   7.1%/  6.4% canc 0.902 rot 0.00 inp 0.34 (sumsq/z 1.1) pos 0.63 offset +104.43 | linear 43.05% (cost 56.01) clip 0.078
+   5 gate   on  40.0% d2  86.1% partial         near0  69.3%/ 31.0% canc 0.165 rot 0.04 inp 0.00 (sumsq/z 1.0) pos 0.18 offset -0.39 | linear 30.57% (cost 68.48) clip 0.395
+   6 memory on  82.6% d2  82.6% no rule         near0   9.6%/ 39.5% canc 0.140 rot 0.48 inp 0.00 (sumsq/z 457.0) pos 0.32 offset +0.57 | linear 99.04% (cost 0.02) clip 0.023
+   7 memory on  99.3% d2  99.3% nearly constant near0  10.4%/ 13.7% canc 0.393 rot 0.35 inp 0.00 (sumsq/z 1.6) pos 0.84 offset +1.91 | linear 99.05% (cost 0.00) clip 0.000
+   8 memory on  46.3% d2  76.1% partial         near0  22.2%/ 36.7% canc 0.165 rot 0.50 inp 0.00 (sumsq/z 93.6) pos 0.14 offset +0.34 | linear 94.58% (cost 4.47) clip 0.150
+   9 gate   on  19.4% d2 100.0% one-line rule   near0   7.1%/  6.3% canc 0.936 rot 0.00 inp 0.38 (sumsq/z 1.0) pos 0.63 offset -488.92 | linear 6.77% (cost 92.29) clip 0.735
+  10 memory on  94.7% d2  94.7% no rule         near0  12.4%/ 17.6% canc 0.328 rot 0.48 inp 0.00 (sumsq/z 38.9) pos 0.56 offset +0.95 | linear 99.05% (cost 0.01) clip 0.008
+  11 gate   on  33.4% d2  85.2% partial         near0  77.1%/ 28.9% canc 0.173 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.18 offset -0.39 | linear 13.46% (cost 85.59) clip 0.387
+  12 hiding on  53.2% d2  92.5% partial         near0  74.5%/ 20.6% canc 0.233 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.16 offset -0.37 | linear 13.35% (cost 85.71) clip 0.382
+  13 memory on  67.5% d2  97.5% one-line rule   near0  76.3%/ 11.1% canc 0.395 rot 0.00 inp 0.00 (sumsq/z 1.0) pos 0.16 offset -0.36 | linear 18.08% (cost 80.98) clip 0.379
+  14 memory on  58.9% d2  72.5% partial         near0  16.5%/ 63.9% canc 0.076 rot 0.50 inp 0.00 (sumsq/z 158.3) pos 0.04 offset +0.17 | linear 98.46% (cost 0.59) clip 0.238
+  15 memory on  89.2% d2  98.4% one-line rule   near0   8.3%/ 30.6% canc 0.199 rot 0.47 inp 0.00 (sumsq/z 185.9) pos 0.62 offset +1.07 | linear 98.70% (cost 0.36) clip 0.027
+  16 memory on  99.0% d2  99.0% nearly constant near0   2.3%/  4.8% canc 0.343 rot 0.48 inp 0.00 (sumsq/z 5.6) pos 0.64 offset +1.12 | linear 99.05% (cost 0.01) clip 0.000
+  17 hiding on  75.1% d2  93.9% partial         near0   7.8%/ 19.9% canc 0.243 rot 0.40 inp 0.05 (sumsq/z 10.6) pos 0.45 offset +2.06 | linear 82.91% (cost 16.14) clip 0.117
+  18 gate   on  35.0% d2  74.7% partial         near0   9.3%/ 53.8% canc 0.091 rot 0.49 inp 0.00 (sumsq/z 533.2) pos 0.23 offset -0.46 | linear 96.72% (cost 2.34) clip 0.574
+  19 hiding on  67.7% d2  98.4% one-line rule   near0   7.8%/ 21.8% canc 0.220 rot 0.15 inp 0.48 (sumsq/z 1.3) pos 0.27 offset +1.35 | linear 50.64% (cost 48.41) clip 0.184
+  20 gate   on  27.5% d2  93.7% partial         near0  70.3%/ 20.1% canc 0.239 rot 0.05 inp 0.00 (sumsq/z 1.1) pos 0.19 offset -0.40 | linear 10.49% (cost 88.56) clip 0.397
+  21 memory on  83.2% d2  85.5% partial         near0   9.5%/ 56.4% canc 0.092 rot 0.52 inp 0.00 (sumsq/z 562.5) pos 0.49 offset +0.81 | linear 94.13% (cost 4.92) clip 0.049
+  22 hiding on  69.8% d2  95.6% one-line rule   near0   7.7%/ 19.8% canc 0.238 rot 0.25 inp 0.16 (sumsq/z 3.7) pos 0.32 offset +1.59 | linear 76.45% (cost 22.60) clip 0.164
+  23 memory on  71.7% d2  89.9% partial         near0   6.1%/ 23.8% canc 0.206 rot 0.48 inp 0.00 (sumsq/z 168.7) pos 0.10 offset +0.28 | linear 78.91% (cost 20.15) clip 0.238
+  24 gate   on  36.8% d2  82.6% partial         near0   9.0%/ 40.9% canc 0.135 rot 0.49 inp 0.00 (sumsq/z 0.8) pos 0.01 offset -0.07 | linear 81.58% (cost 17.47) clip 0.394
+  25 memory on  76.8% d2  81.3% partial         near0   6.6%/ 50.6% canc 0.100 rot 0.47 inp 0.00 (sumsq/z 95.2) pos 0.40 offset +0.68 | linear 98.06% (cost 1.00) clip 0.120
+  26 memory on  62.6% d2  76.6% partial         near0   9.6%/ 40.0% canc 0.141 rot 0.50 inp 0.00 (sumsq/z 242.7) pos 0.02 offset -0.11 | linear 84.40% (cost 14.66) clip 0.379
+  27 memory on  53.6% d2  70.1% partial         near0  11.3%/ 55.7% canc 0.077 rot 0.50 inp 0.00 (sumsq/z 2699.8) pos 0.01 offset -0.06 | linear 95.02% (cost 4.04) clip 0.333
+  28 memory on  84.9% d2  84.9% no rule         near0  10.4%/ 35.1% canc 0.153 rot 0.47 inp 0.00 (sumsq/z 113.4) pos 0.34 offset +0.60 | linear 99.00% (cost 0.05) clip 0.045
+  29 hiding on  67.7% d2  99.2% one-line rule   near0   7.8%/ 18.3% canc 0.259 rot 0.18 inp 0.34 (sumsq/z 1.9) pos 0.27 offset +1.37 | linear 51.89% (cost 47.16) clip 0.184
+  30 gate   on  37.2% d2  81.7% partial         near0  73.7%/ 42.9% canc 0.118 rot 0.01 inp 0.00 (sumsq/z 1.0) pos 0.19 offset -0.40 | linear 8.48% (cost 90.58) clip 0.395
+  31 gate   on  37.3% d2  91.7% partial         near0  24.6%/  2.3% canc 0.639 rot 0.70 inp 0.00 (sumsq/z 1.9) pos 0.29 offset -0.54 | linear 30.00% (cost 69.06) clip 0.638

@@ -1,0 +1,2 @@
+menu plus v18's clock variables: base 0.961; all 16 0.747; store 0.961, detect 0.961, keep 0.960, flip 0.948, clock0 0.930, clock1 0.919, clock2 0.937, flag 0.962, mem0 0.787, mem1 0.793, mem2 0.825, mem3 0.798, mem4 0.795, mem5 0.806, mem6 0.839, mem7 0.894
+plus v18's memory variables too: base 0.961; all 16 0.674; store 0.961, detect 0.729, keep 0.960, flip 0.947, clock0 0.926, clock1 0.912, clock2 0.931, flag 0.962, mem0 0.802, mem1 0.810, mem2 0.851, mem3 0.799, mem4 0.793, mem5 0.803, mem6 0.836, mem7 0.894

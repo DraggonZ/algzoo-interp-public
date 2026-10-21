@@ -1,0 +1,15 @@
+ARC's 16 neurons   | v19: best 0.86, above 0.9 11, above 0.7 13 of 16 | v21: best 0.71, above 0.9 3, above 0.7 14 of 28 | v7z: best 0.73, above 0.9 3, above 0.7 7 of 18
+SAE 32x k4         | v19: best 0.86, above 0.9 11, above 0.7 12 of 16 | v21: best 0.70, above 0.9 3, above 0.7 16 of 28 | v7z: best 0.68, above 0.9 3, above 0.7 5 of 18
+SAE 128x k8        | v19: best 0.86, above 0.9 11, above 0.7 12 of 16 | v21: best 0.73, above 0.9 3, above 0.7 16 of 28 | v7z: best 0.65, above 0.9 3, above 0.7 5 of 18
+TC 16x k2          | v19: best 0.83, above 0.9 11, above 0.7 11 of 16 | v21: best 0.70, above 0.9 4, above 0.7 15 of 28 | v7z: best 0.65, above 0.9 3, above 0.7 4 of 18
+TC 16x k4          | v19: best 0.87, above 0.9 11, above 0.7 13 of 16 | v21: best 0.71, above 0.9 4, above 0.7 16 of 28 | v7z: best 0.67, above 0.9 3, above 0.7 6 of 18
+TC 16x k8          | v19: best 0.84, above 0.9 11, above 0.7 11 of 16 | v21: best 0.70, above 0.9 4, above 0.7 14 of 28 | v7z: best 0.70, above 0.9 3, above 0.7 5 of 18
+TC 32x k2          | v19: best 0.83, above 0.9 11, above 0.7 12 of 16 | v21: best 0.69, above 0.9 4, above 0.7 14 of 28 | v7z: best 0.62, above 0.9 2, above 0.7 5 of 18
+TC 32x k4          | v19: best 0.85, above 0.9 11, above 0.7 12 of 16 | v21: best 0.71, above 0.9 4, above 0.7 15 of 28 | v7z: best 0.69, above 0.9 3, above 0.7 6 of 18
+TC 32x k8          | v19: best 0.88, above 0.9 11, above 0.7 13 of 16 | v21: best 0.73, above 0.9 4, above 0.7 14 of 28 | v7z: best 0.75, above 0.9 2, above 0.7 7 of 18
+TC 64x k2          | v19: best 0.84, above 0.9 11, above 0.7 11 of 16 | v21: best 0.68, above 0.9 4, above 0.7 13 of 28 | v7z: best 0.61, above 0.9 3, above 0.7 5 of 18
+TC 64x k4          | v19: best 0.85, above 0.9 11, above 0.7 12 of 16 | v21: best 0.72, above 0.9 4, above 0.7 13 of 28 | v7z: best 0.66, above 0.9 3, above 0.7 6 of 18
+TC 64x k8          | v19: best 0.85, above 0.9 11, above 0.7 12 of 16 | v21: best 0.72, above 0.9 4, above 0.7 14 of 28 | v7z: best 0.67, above 0.9 3, above 0.7 5 of 18
+TC 128x k2         | v19: best 0.83, above 0.9 11, above 0.7 11 of 16 | v21: best 0.69, above 0.9 4, above 0.7 13 of 28 | v7z: best 0.60, above 0.9 3, above 0.7 4 of 18
+TC 128x k4         | v19: best 0.87, above 0.9 11, above 0.7 13 of 16 | v21: best 0.71, above 0.9 4, above 0.7 13 of 28 | v7z: best 0.62, above 0.9 2, above 0.7 6 of 18
+TC 128x k8         | v19: best 0.87, above 0.9 11, above 0.7 13 of 16 | v21: best 0.73, above 0.9 4, above 0.7 16 of 28 | v7z: best 0.68, above 0.9 3, above 0.7 8 of 18

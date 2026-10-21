@@ -1,0 +1,6 @@
+blind 8->2 predicted 0.1548 ARC 0.1545
+row4 only            saved    4.2  rows 1
+in2 only             saved   -6.6  rows 1
+in2 + blind          saved   -3.9  rows 1
+row4 + in2           saved   12.3  rows 2
+row4 + in2 + blind   saved   15.4  rows 2

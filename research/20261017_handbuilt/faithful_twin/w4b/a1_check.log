@@ -1,0 +1,11 @@
+r3b (v27b level_exact): accuracy 92.16
+{'late': True, 'level': False, 'refs': False}: n=17 accuracy 92.16, answers differing from r3b 0.000%, largest score difference 7.00e-12
+{'late': True, 'level': True, 'refs': False}: n=18 accuracy 92.20, answers differing from r3b 0.394%, largest score difference 5.19e-01
+full: n=20 accuracy 92.20, answers differing from r3b 0.394%, largest score difference 5.19e-01
+LG vs d one step earlier: max error 8.881784197001252e-16
+C7 vs g relu(m1(t-1) - x_t): max rel error 1.4551915228366853e-15
+c7: on after records 0.100, on elsewhere 1.000
+c6: on after records 0.100, on elsewhere 0.935
+c1: on after records 0.100, on elsewhere 0.951
+Q: on after records 0.100, on elsewhere 0.825
+late: on after records 0.208, on elsewhere 0.245

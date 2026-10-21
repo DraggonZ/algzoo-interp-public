@@ -1,0 +1,7 @@
+score_memory_rule_v2.py sha256 45d18216a799; rule hide_wrap.py
+64 weights covered, 26 constants, 2 kinds; relative weight error 0.0641; structure 68 bits; lookup table 1916 bits
+  share 0.001: constants 190 bits (7.3 each) + structure 68 + rest 1786; net -128
+  share 0.002: constants 177 bits (6.8 each) + structure 68 + rest 1801; net -130
+  share 0.005: constants 160 bits (6.1 each) + structure 68 + rest 1852; net -164
+KL from ARC 0.5151 (budget 0.02); accuracy 0.8561 (ARC 0.9531)
+NET -128.0

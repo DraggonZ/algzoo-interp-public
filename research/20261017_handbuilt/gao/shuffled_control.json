@@ -1,0 +1,90 @@
+[
+ {
+  "group": "cancellers",
+  "kind": "ours",
+  "label": "account",
+  "size": 0.15882155025854539,
+  "acc": 0.55908,
+  "shuffled": 0.54334
+ },
+ {
+  "group": "cancellers",
+  "kind": "misreading",
+  "label": "wave from m2",
+  "size": 0.23179885422697064,
+  "acc": 0.42554,
+  "shuffled": 0.51016
+ },
+ {
+  "group": "cancellers",
+  "kind": "misreading",
+  "label": "no wave",
+  "size": 0.2728169669258609,
+  "acc": 0.18064,
+  "shuffled": 0.46328
+ },
+ {
+  "group": "cancellers",
+  "kind": "misreading",
+  "label": "angle +20",
+  "size": 0.2153585968633619,
+  "acc": 0.38636,
+  "shuffled": 0.45984
+ },
+ {
+  "group": "store+detector",
+  "kind": "ours",
+  "label": "account",
+  "size": 0.09630439632301165,
+  "acc": 0.85094,
+  "shuffled": 0.85162
+ },
+ {
+  "group": "store+detector",
+  "kind": "misreading",
+  "label": "store tracks second",
+  "size": 0.4111378419943325,
+  "acc": 0.43448,
+  "shuffled": 0.50418
+ },
+ {
+  "group": "keep gate",
+  "kind": "ours",
+  "label": "account",
+  "size": 0.2532697121672547,
+  "acc": 0.87158,
+  "shuffled": 0.90322
+ },
+ {
+  "group": "keep gate",
+  "kind": "misreading",
+  "label": "gate vs largest",
+  "size": 0.4564017948753125,
+  "acc": 0.6668,
+  "shuffled": 0.76954
+ },
+ {
+  "group": "memory",
+  "kind": "ours",
+  "label": "account",
+  "size": 0.8302270681001475,
+  "acc": 0.50902,
+  "shuffled": 0.47768
+ },
+ {
+  "group": "memory",
+  "kind": "misreading",
+  "label": "keep above half",
+  "size": 0.830843558560309,
+  "acc": 0.50234,
+  "shuffled": 0.47436
+ },
+ {
+  "group": "memory",
+  "kind": "misreading",
+  "label": "keep all",
+  "size": 0.8237782777368384,
+  "acc": 0.50166,
+  "shuffled": 0.48014
+ }
+]

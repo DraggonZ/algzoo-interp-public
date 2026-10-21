@@ -1,0 +1,21 @@
+{"kind": "resid", "seed": -1, "search": "r9", "base": 182.83, "best": "rows (7,) hiding", "best_net": 198.67, "gain": 15.83, "n": 45, "iters": 0, "singular": 0}
+{"kind": "resid", "seed": 0, "search": "r9", "base": 183.59, "best": "rows (1,) hiding", "best_net": 189.49, "gain": 5.9, "n": 45, "iters": 11, "singular": 0}
+{"kind": "resid", "seed": 1, "search": "r9", "base": 129.91, "best": "rows (1, 6, 8) memory", "best_net": 146.4, "gain": 16.49, "n": 45, "iters": 11, "singular": 0}
+{"kind": "resid", "seed": 2, "search": "r9", "base": 146.11, "best": "rows (6,) hiding", "best_net": 146.92, "gain": 0.81, "n": 45, "iters": 11, "singular": 0}
+{"kind": "resid", "seed": 3, "search": "r9", "base": 169.98, "best": "rows (1, 6) memory", "best_net": 173.18, "gain": 3.19, "n": 45, "iters": 11, "singular": 0}
+{"kind": "resid", "seed": 4, "search": "r9", "base": 117.31, "best": "rows (1, 8) memory", "best_net": 146.8, "gain": 29.5, "n": 45, "iters": 11, "singular": 0}
+{"kind": "resid", "seed": 5, "search": "r9", "base": 170.54, "best": "rows (1, 6, 8) hiding", "best_net": 176.29, "gain": 5.75, "n": 45, "iters": 11, "singular": 0}
+{"kind": "resid", "seed": 6, "search": "r9", "base": 164.59, "best": "rows (6, 8) hiding", "best_net": 168.0, "gain": 3.41, "n": 45, "iters": 11, "singular": 0}
+{"kind": "resid", "seed": 7, "search": "r9", "base": 164.35, "best": "rows (7,) hiding", "best_net": 181.42, "gain": 17.07, "n": 45, "iters": 11, "singular": 0}
+{"kind": "resid", "seed": 8, "search": "r9", "base": 123.97, "best": "rows (1, 6, 8) memory", "best_net": 146.67, "gain": 22.7, "n": 45, "iters": 11, "singular": 0}
+{"kind": "resid", "seed": 9, "search": "r9", "base": 141.86, "best": "rows (1, 8) memory", "best_net": 157.36, "gain": 15.5, "n": 45, "iters": 11, "singular": 0}
+{"kind": "resid", "seed": 10, "search": "r9", "base": 73.07, "best": "rows (1, 6) all", "best_net": 120.61, "gain": 47.54, "n": 45, "iters": 11, "singular": 0}
+{"kind": "resid", "seed": 11, "search": "r9", "base": 92.51, "best": "rows (8,) all", "best_net": 169.11, "gain": 76.6, "n": 45, "iters": 11, "singular": 0}
+{"kind": "resid", "seed": 12, "search": "r9", "base": 69.33, "best": "rows (1, 8) memory", "best_net": 95.65, "gain": 26.32, "n": 45, "iters": 11, "singular": 0}
+{"kind": "resid", "seed": 13, "search": "r9", "base": 160.81, "best": "rows (8,) memory", "best_net": 180.35, "gain": 19.54, "n": 45, "iters": 11, "singular": 0}
+{"kind": "resid", "seed": 14, "search": "r9", "base": 116.82, "best": "rows (1,) all", "best_net": 129.36, "gain": 12.54, "n": 45, "iters": 11, "singular": 0}
+{"kind": "resid", "seed": 15, "search": "r9", "base": 178.1, "best": "rows (6,) hiding", "best_net": 177.56, "gain": -0.54, "n": 45, "iters": 11, "singular": 0}
+{"kind": "resid", "seed": 16, "search": "r9", "base": 151.28, "best": "rows (6, 7, 8) hiding", "best_net": 172.18, "gain": 20.9, "n": 45, "iters": 11, "singular": 0}
+{"kind": "resid", "seed": 17, "search": "r9", "base": 159.04, "best": "rows (1,) all", "best_net": 188.24, "gain": 29.19, "n": 45, "iters": 11, "singular": 0}
+{"kind": "resid", "seed": 18, "search": "r9", "base": 141.38, "best": "rows (6, 8) hiding", "best_net": 153.07, "gain": 11.7, "n": 45, "iters": 11, "singular": 0}
+{"kind": "resid", "seed": 19, "search": "r9", "base": 175.3, "best": "rows (6,) memory", "best_net": 179.39, "gain": 4.09, "n": 45, "iters": 11, "singular": 0}

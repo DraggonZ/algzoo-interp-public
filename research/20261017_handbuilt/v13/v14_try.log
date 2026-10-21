@@ -1,0 +1,5 @@
+trained: all 0.953 | onepos 0.224 last step 0.944 step 8 0.973 in a row 0.962 ordinary 0.962 | wrong: third 0.61 largest 0.15 onepos 0.18
+v14 hide 1.0                       all 0.634 | onepos 0.088 last step 0.646 step 8 0.265 in a row 0.498 ordinary 0.775 | wrong: third 0.26 largest 0.57 onepos 0.03
+v14 hide 1.1                       all 0.651 | onepos 0.101 last step 0.646 step 8 0.281 in a row 0.523 ordinary 0.793 | wrong: third 0.31 largest 0.48 onepos 0.03
+v14 hide 1.3                       all 0.602 | onepos 0.098 last step 0.646 step 8 0.287 in a row 0.522 ordinary 0.700 | wrong: third 0.33 largest 0.37 onepos 0.02
+v14 hide 1.6                       all 0.499 | onepos 0.100 last step 0.646 step 8 0.280 in a row 0.475 ordinary 0.532 | wrong: third 0.30 largest 0.25 onepos 0.02

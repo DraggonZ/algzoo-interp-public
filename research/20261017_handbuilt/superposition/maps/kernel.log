@@ -1,0 +1,6 @@
+kept smaller numbers: 5328 (2640 fit, 2688 scored)
+  offsets to second and third              held-out share of variance explained  -4.8% (191 cells)
+  offsets to second, third and largest     held-out share of variance explained -96.0% (1060 cells)
+  offset to second only                    held-out share of variance explained   0.2% (17 cells)
+  offset to third only                     held-out share of variance explained  -0.6% (17 cells)
+  signed slope on scored lists: median -0.19, mean 0.05, sd 16.94

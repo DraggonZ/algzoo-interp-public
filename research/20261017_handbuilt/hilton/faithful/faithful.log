@@ -1,0 +1,22 @@
+== hand-built v18ts_matched2.npz
+   trained network 95.23%   hand-built network on its own 91.65%
+   (1) Hilton's metric, gap as noise (12 copies): predicted 9.88% (copies 5.2-11.9) against the trained 95.23%
+       straight path H + 0.25 (T - H): 30.24%
+       straight path H + 0.5 (T - H): 35.09%
+       straight path H + 0.75 (T - H): 40.24%
+   (2) store and detector (2, 4)    hand-built values patched in:  85.43%   everything else patched in:  22.30%
+   (2) cancelling (1, 6, 7, 8)      hand-built values patched in:  18.91%   everything else patched in:  26.48%
+   (2) keep gate (5)                hand-built values patched in:  48.90%   everything else patched in:  18.74%
+   (2) late gate (9)                hand-built values patched in:  75.00%   everything else patched in:  22.56%
+   (2) memory (0, 3, 10-15)         hand-built values patched in:  26.37%   everything else patched in:  33.27%
+== hand-built v18g50_matched.npz
+   trained network 95.23%   hand-built network on its own 95.26%
+   (1) Hilton's metric, gap as noise (12 copies): predicted 9.99% (copies 8.8-11.3) against the trained 95.23%
+       straight path H + 0.25 (T - H): 22.99%
+       straight path H + 0.5 (T - H): 26.05%
+       straight path H + 0.75 (T - H): 30.07%
+   (2) store and detector (2, 4)    hand-built values patched in:  85.43%   everything else patched in:  20.10%
+   (2) cancelling (1, 6, 7, 8)      hand-built values patched in:  16.17%   everything else patched in:  26.48%
+   (2) keep gate (5)                hand-built values patched in:  48.91%   everything else patched in:  16.69%
+   (2) late gate (9)                hand-built values patched in:  75.00%   everything else patched in:  20.43%
+   (2) memory (0, 3, 10-15)         hand-built values patched in:  26.31%   everything else patched in:  26.97%

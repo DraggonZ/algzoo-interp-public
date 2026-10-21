@@ -1,0 +1,10 @@
+min read linearly from h10: R2 -0.84 (uncentred fit, no bias) beta [ 0.01 -0.01 -0.02 -0.   -0.1  -0.   -0.02  0.03 -0.02 -0.02 -0.01 -0.01
+ -0.   -0.   -0.01  0.  ]
+row 0: input-direction terms hiding -11.53 others +6.23; change in its next-step score per unit arrival -4.31
+row 1: input-direction terms hiding -3.54 others +3.64; change in its next-step score per unit arrival -4.37
+row 2: input-direction terms hiding -2.97 others +4.30; change in its next-step score per unit arrival -4.40
+row 3: input-direction terms hiding -2.79 others +5.09; change in its next-step score per unit arrival -4.38
+row 4: input-direction terms hiding -2.71 others +5.51; change in its next-step score per unit arrival -4.57
+row 5: input-direction terms hiding -4.91 others +5.79; change in its next-step score per unit arrival -4.65
+row 6: input-direction terms hiding -5.62 others +5.70; change in its next-step score per unit arrival -4.66
+row 7: input-direction terms hiding -3.55 others +2.91; change in its next-step score per unit arrival -4.89

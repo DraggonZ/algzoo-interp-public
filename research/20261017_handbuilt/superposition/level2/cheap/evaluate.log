@@ -1,0 +1,49 @@
+ARC: true 95.32  TLQ m1 95.42 (2679 lists)  m4 95.15 (10744)  quasi-random lists 95.41 / 95.30  1s
+100: true 94.81  TLQ m1 94.44 (2302 lists)  m4 94.92 (9369)  quasi-random lists 94.61 / 94.74  2s
+101: true 91.34  TLQ m1 90.82 (2576 lists)  m4 91.97 (9917)  quasi-random lists 90.41 / 91.16  2s
+102: true 91.25  TLQ m1 91.13 (2386 lists)  m4 91.03 (9676)  quasi-random lists 90.53 / 90.85  3s
+103: true 95.32  TLQ m1 94.97 (2922 lists)  m4 95.26 (11779)  quasi-random lists 95.38 / 95.41  3s
+104: true 91.23  TLQ m1 90.90 (2729 lists)  m4 91.31 (10429)  quasi-random lists 90.69 / 91.14  4s
+105: true 89.86  TLQ m1 89.03 (2438 lists)  m4 89.97 (9471)  quasi-random lists 89.99 / 89.39  4s
+106: true 94.84  TLQ m1 94.44 (2400 lists)  m4 94.89 (9564)  quasi-random lists 94.62 / 94.50  5s
+107: true 92.13  TLQ m1 92.63 (2520 lists)  m4 92.62 (10060)  quasi-random lists 91.94 / 92.05  5s
+108: true 93.86  TLQ m1 93.54 (2487 lists)  m4 93.97 (10368)  quasi-random lists 93.93 / 93.61  6s
+109: true 94.05  TLQ m1 93.84 (2356 lists)  m4 94.03 (9151)  quasi-random lists 94.06 / 93.84  7s
+110: true 91.18  TLQ m1 91.11 (2799 lists)  m4 91.02 (11120)  quasi-random lists 91.64 / 91.38  7s
+111: true 96.00  TLQ m1 96.33 (2654 lists)  m4 95.95 (11106)  quasi-random lists 95.67 / 95.83  8s
+112: true 91.46  TLQ m1 91.90 (2520 lists)  m4 91.47 (10134)  quasi-random lists 92.06 / 91.57  9s
+113: true 90.44  TLQ m1 90.64 (2531 lists)  m4 90.74 (10069)  quasi-random lists 90.60 / 90.41  9s
+114: true 89.79  TLQ m1 90.02 (2664 lists)  m4 89.98 (10436)  quasi-random lists 89.26 / 89.47  10s
+115: true 95.20  TLQ m1 95.66 (2423 lists)  m4 94.91 (10163)  quasi-random lists 94.59 / 94.71  11s
+200: true 93.24  TLQ m1 92.78 (2444 lists)  m4 93.32 (9863)  quasi-random lists 93.37 / 92.98  11s
+201: true 94.38  TLQ m1 93.81 (2951 lists)  m4 94.38 (11695)  quasi-random lists 94.75 / 94.47  12s
+202: true 89.72  TLQ m1 89.06 (2528 lists)  m4 90.11 (10014)  quasi-random lists 90.19 / 89.44  12s
+203: true 89.88  TLQ m1 89.59 (2613 lists)  m4 89.84 (10291)  quasi-random lists 89.78 / 89.88  13s
+204: true 88.93  TLQ m1 88.58 (2468 lists)  m4 89.22 (9631)  quasi-random lists 89.22 / 89.05  14s
+205: true 93.62  TLQ m1 93.69 (3078 lists)  m4 93.83 (12256)  quasi-random lists 93.53 / 93.52  14s
+206: true 91.29  TLQ m1 91.65 (2632 lists)  m4 91.48 (10483)  quasi-random lists 91.15 / 91.51  15s
+207: true 91.14  TLQ m1 91.31 (2412 lists)  m4 91.03 (9794)  quasi-random lists 92.62 / 91.63  16s
+208: true 84.03  TLQ m1 84.16 (3335 lists)  m4 84.46 (13887)  quasi-random lists 83.45 / 83.78  17s
+209: true 95.89  TLQ m1 95.98 (2719 lists)  m4 95.65 (10874)  quasi-random lists 95.48 / 95.94  18s
+210: true 96.15  TLQ m1 95.89 (2366 lists)  m4 96.02 (9673)  quasi-random lists 96.58 / 95.79  18s
+211: true 93.47  TLQ m1 92.87 (2447 lists)  m4 93.86 (9375)  quasi-random lists 94.16 / 93.77  19s
+212: true 84.53  TLQ m1 84.71 (2876 lists)  m4 84.65 (11418)  quasi-random lists 83.90 / 84.11  19s
+213: true 93.89  TLQ m1 93.54 (3334 lists)  m4 94.36 (12514)  quasi-random lists 94.03 / 94.08  21s
+214: true 94.84  TLQ m1 94.23 (2300 lists)  m4 94.80 (9290)  quasi-random lists 94.48 / 94.57  21s
+215: true 92.60  TLQ m1 93.63 (2473 lists)  m4 92.89 (10286)  quasi-random lists 92.48 / 92.51  22s
+s0.0025#0: true 92.22  TLQ m1 92.48 (3497 lists)  m4 92.24 (13792)  quasi-random lists 92.45 / 92.28  23s
+s0.0025#99: true 87.64  TLQ m1 87.62 (3809 lists)  m4 87.99 (14691)  quasi-random lists 87.24 / 87.95  122s
+s0.005#0: true 77.78  TLQ m1 78.01 (4899 lists)  m4 77.89 (18645)  quasi-random lists 77.83 / 77.80  124s
+s0.005#99: true 70.58  TLQ m1 71.21 (4647 lists)  m4 70.84 (18841)  quasi-random lists 70.69 / 70.95  246s
+
+RMSE in points (one deterministic estimate per network); sampling = sqrt(mean p(1-p) / n) at TLQ's operation count
+  ARC                    m 1: TLQ 0.098 (mean error +0.098), cost 2679 list-equivalents = 1.59e+07 operations; plain sampling 0.408; quasi-random lists 0.091
+  ARC                    m 4: TLQ 0.167 (mean error -0.167), cost 10744 list-equivalents = 6.36e+07 operations; plain sampling 0.204; quasi-random lists 0.018
+  development 200-215    m 1: TLQ 0.458 (mean error -0.132), cost 2686 list-equivalents = 1.59e+07 operations; plain sampling 0.527; quasi-random lists 0.526
+  development 200-215    m 4: TLQ 0.258 (mean error +0.145), cost 10709 list-equivalents = 6.34e+07 operations; plain sampling 0.264; quasi-random lists 0.253
+  held out 100-115       m 1: TLQ 0.395 (mean error -0.084), cost 2544 list-equivalents = 1.51e+07 operations; plain sampling 0.515; quasi-random lists 0.446
+  held out 100-115       m 4: TLQ 0.246 (mean error +0.080), cost 10176 list-equivalents = 6.02e+07 operations; plain sampling 0.258; quasi-random lists 0.262
+  noisy s 0.0025         m 1: TLQ 0.290 (mean error +0.007), cost 3331 list-equivalents = 1.97e+07 operations; plain sampling 0.499; quasi-random lists 0.346
+  noisy s 0.0025         m 4: TLQ 0.164 (mean error +0.008), cost 13157 list-equivalents = 7.79e+07 operations; plain sampling 0.251; quasi-random lists 0.199
+  noisy s 0.005          m 1: TLQ 0.444 (mean error +0.035), cost 4671 list-equivalents = 2.77e+07 operations; plain sampling 0.575; quasi-random lists 0.466
+  noisy s 0.005          m 4: TLQ 0.291 (mean error +0.063), cost 18470 list-equivalents = 1.09e+08 operations; plain sampling 0.289; quasi-random lists 0.226

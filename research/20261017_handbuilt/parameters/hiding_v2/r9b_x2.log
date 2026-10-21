@@ -1,0 +1,29 @@
+uncovered ['1->1', '5->1', '8->1', '9->1', '1->6', '6->6', '8->6', '9->6', '1->8', '8->8']
+1->1 0.409 exact gain +4.8
+5->1 0.118 exact gain +3.5
+8->1 -0.12 exact gain +4.6
+9->1 -0.686 exact gain +4.4
+1->6 -0.135 exact gain +4.1
+6->6 0.361 exact gain +4.4
+8->6 -0.082 exact gain +4.1
+9->6 -0.64 exact gain +4.4
+1->8 0.634 exact gain +4.8
+8->8 0.615 exact gain +4.9
+all exact +45.2
+row7 exact +43.5
+  7 col 0 exact +0.3
+  7 col 1 exact +1.8
+  7 col 2 exact +0.7
+  7 col 3 exact +0.1
+  7 col 4 exact +0.9
+  7 col 5 exact +0.0
+  7 col 6 exact +2.4
+  7 col 7 exact +0.9
+  7 col 8 exact +2.3
+  7 col 9 exact +0.0
+  7 col 10 exact +0.1
+  7 col 11 exact +0.1
+  7 col 12 exact +0.0
+  7 col 13 exact +0.1
+  7 col 14 exact +1.1
+  7 col 15 exact +0.4

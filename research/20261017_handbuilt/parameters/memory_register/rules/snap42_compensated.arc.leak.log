@@ -1,0 +1,5 @@
+leak_check: rule snap42_compensated.py, 296 covered weights, 69 constants, relative perturbation 0.05, draws [11, 12, 13]
+  draw 11: slope +0.9881; rms change of rule weights 8.05e-02 (of ARC's 8.09e-02)
+  draw 12: slope +0.9786; rms change of rule weights 8.35e-02 (of ARC's 8.44e-02)
+  draw 13: slope +0.9943; rms change of rule weights 8.87e-02 (of ARC's 8.90e-02)
+LEAK +0.9870 0.9943 FAIL

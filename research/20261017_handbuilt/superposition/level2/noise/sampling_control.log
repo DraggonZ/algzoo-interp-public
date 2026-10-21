@@ -1,0 +1,4 @@
+s = 0.001:  720 random lists RMSE 0.94 points;  2160 random lists RMSE 0.56 points;  10000 random lists RMSE 0.22 points;
+s = 0.0025:  720 random lists RMSE 1.14 points;  2160 random lists RMSE 0.69 points;  10000 random lists RMSE 0.28 points;
+s = 0.005:  720 random lists RMSE 1.65 points;  2160 random lists RMSE 0.88 points;  10000 random lists RMSE 0.40 points;
+s = 0.01:  720 random lists RMSE 1.95 points;  2160 random lists RMSE 1.00 points;  10000 random lists RMSE 0.47 points;

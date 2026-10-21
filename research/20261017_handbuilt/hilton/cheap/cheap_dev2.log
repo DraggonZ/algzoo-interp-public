@@ -1,0 +1,20 @@
+ ARC: true 95.32, converged 95.32; own tangents 94.88 (1634 runs); median of 36 tangents 94.56 (978 runs); median of 12 tangents 95.80 (930 runs)
+ 200: true 93.24, converged 93.56; own tangents 93.22 (1660 runs); median of 36 tangents 93.76 (986 runs); median of 12 tangents 94.34 (938 runs)
+ 201: true 94.38, converged 94.13; own tangents 90.29 (1651 runs); median of 36 tangents 92.01 (990 runs); median of 12 tangents 90.96 (942 runs)
+ 202: true 89.72, converged 90.59; own tangents 91.21 (1651 runs); median of 36 tangents 91.72 (994 runs); median of 12 tangents 91.05 (946 runs)
+ 203: true 89.88, converged 89.86; own tangents 89.36 (1626 runs); median of 36 tangents 90.08 (973 runs); median of 12 tangents 89.78 (925 runs)
+ 204: true 88.93, converged 88.72; own tangents 88.62 (1627 runs); median of 36 tangents 89.31 (960 runs); median of 12 tangents 88.17 (912 runs)
+ 205: true 93.62, converged 94.02; own tangents 94.41 (1669 runs); median of 36 tangents 93.63 (1000 runs); median of 12 tangents 93.79 (952 runs)
+ 206: true 91.29, converged 90.93; own tangents 91.19 (1616 runs); median of 36 tangents 92.20 (961 runs); median of 12 tangents 90.48 (913 runs)
+ 207: true 91.14, converged 90.29; own tangents 89.02 (1658 runs); median of 36 tangents 90.95 (984 runs); median of 12 tangents 92.06 (936 runs)
+ 208: true 84.03, converged 85.21; own tangents 84.49 (1717 runs); median of 36 tangents 88.85 (1016 runs); median of 12 tangents 88.98 (968 runs)
+ 209: true 95.89, converged 96.22; own tangents 95.06 (1653 runs); median of 36 tangents 96.02 (1004 runs); median of 12 tangents 94.84 (956 runs)
+ 210: true 96.15, converged 96.27; own tangents 95.37 (1615 runs); median of 36 tangents 95.55 (961 runs); median of 12 tangents 95.74 (913 runs)
+ 211: true 93.47, converged 93.55; own tangents 92.02 (1619 runs); median of 36 tangents 92.54 (964 runs); median of 12 tangents 92.49 (916 runs)
+ 212: true 84.53, converged 84.44; own tangents 85.01 (1692 runs); median of 36 tangents 86.43 (1012 runs); median of 12 tangents 86.99 (964 runs)
+ 213: true 93.89, converged 94.37; own tangents 93.41 (1636 runs); median of 36 tangents 95.64 (986 runs); median of 12 tangents 95.69 (938 runs)
+ 214: true 94.84, converged 94.02; own tangents 93.62 (1640 runs); median of 36 tangents 94.69 (987 runs); median of 12 tangents 94.97 (939 runs)
+ 215: true 92.60, converged 93.16; own tangents 91.55 (1642 runs); median of 36 tangents 92.94 (978 runs); median of 12 tangents 93.15 (930 runs)
+own tangents: mean cost 1647 runs (1092 step-equivalents, tangents as full runs); RMSE against converged 1.25, against truth 1.36 (mean error -0.60); sampling at that many runs 0.52
+median of 36 tangents: mean cost 984 runs (429 step-equivalents, tangents as full runs); RMSE against converged 1.32, against truth 1.58 (mean error +0.47); sampling at that many runs 0.67
+median of 12 tangents: mean cost 936 runs (381 step-equivalents, tangents as full runs); RMSE against converged 1.56, against truth 1.77 (mean error +0.37); sampling at that many runs 0.69

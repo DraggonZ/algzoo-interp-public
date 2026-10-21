@@ -1,0 +1,3 @@
+agree with ARC 0.946; accuracy 0.9708
+old largest: spill at offsets -2,-1,+1,+2 as share of its own weight: [-0.23 -0.17 -0.05 -0.06]
+kept number: spill at offsets -2,-1,+1,+2 as share of its own weight: [-0.01 -0.   -0.01 -0.01]

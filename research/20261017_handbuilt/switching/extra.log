@@ -1,0 +1,14 @@
+neuron 3 shared per-age value (ages -1..9): -0.6 0.2 0.7 1.4 -2.9 1.7 1.2 0.3 -1.6 -3.1 -1.8  constant -2.28
+== compact-65: acc 93.96 (-1.41) agree-answer 96.1
+   on/off agreement with the network's own run: 0:0.990 3:0.849 10:0.986 11:0.980 12:0.952 13:0.968 14:0.944 15:0.832  (all 0.9375)
+== compact-65 with 3 on one shared per-age value (54 numbers): acc 93.97 (-1.40) agree-answer 96.1
+   on/off agreement with the network's own run: 0:0.990 3:0.849 10:0.986 11:0.980 12:0.952 13:0.968 14:0.944 15:0.832  (all 0.9375)
+compact-65 change by group: new largest at step 9: -2.76 last new largest at steps 0-2: -2.57 rest: -0.61
+   0 back on its own sign, recovered: new largest at step 9: +0.65 last new largest at steps 0-2: -0.24 rest: -0.00
+   3 back on its own sign, recovered: new largest at step 9: +0.57 last new largest at steps 0-2: +0.01 rest: -0.10
+   10 back on its own sign, recovered: new largest at step 9: -0.05 last new largest at steps 0-2: +0.39 rest: +0.04
+   11 back on its own sign, recovered: new largest at step 9: +0.00 last new largest at steps 0-2: -0.18 rest: -0.05
+   12 back on its own sign, recovered: new largest at step 9: +0.23 last new largest at steps 0-2: +0.06 rest: +0.01
+   13 back on its own sign, recovered: new largest at step 9: +0.20 last new largest at steps 0-2: +0.34 rest: -0.03
+   14 back on its own sign, recovered: new largest at step 9: +0.82 last new largest at steps 0-2: +0.36 rest: +0.05
+   15 back on its own sign, recovered: new largest at step 9: +0.91 last new largest at steps 0-2: +1.61 rest: +0.33

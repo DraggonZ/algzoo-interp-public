@@ -1,0 +1,32 @@
+== ../paper/tweet/handbuilt_matched.npz
+   input weights: 0.03
+   recurrent into largest  from largest:  1.00  from gates:  0.00  from hiding:  0.00  from memory:  0.00
+   recurrent into gates    from largest: -0.02  from gates:  0.73  from hiding:  0.03  from memory:  0.00
+   recurrent into hiding   from largest:  0.25  from gates:  0.00  from hiding:  0.41  from memory:  0.00
+   recurrent into memory   from largest: -0.55  from gates:  0.06  from hiding: -0.01  from memory:  0.26
+   readout        largest:  0.42  gates:  0.10  hiding:  0.48  memory:  0.31
+   whole recurrent matrix -0.08  (random relabelling: median 0.00, 95th pct 0.09)
+== v18ts_matched2.npz
+   input weights: 0.99
+   recurrent into largest  from largest:  1.00  from gates:  0.00  from hiding:  0.00  from memory:  0.00
+   recurrent into gates    from largest: -0.05  from gates:  0.00  from hiding:  0.15  from memory:  0.00
+   recurrent into hiding   from largest:  0.82  from gates:  0.00  from hiding:  0.23  from memory:  0.00
+   recurrent into memory   from largest: -0.36  from gates:  0.06  from hiding:  0.11  from memory:  0.26
+   readout        largest:  0.82  gates:  0.06  hiding:  0.40  memory:  0.30
+   whole recurrent matrix 0.03  (random relabelling: median 0.00, 95th pct 0.11)
+== v18ts_matched2.npz
+   input weights: 0.99
+   recurrent into largest  from largest:  1.00  from gates:  0.00  from hiding:  0.00  from memory:  0.00
+   recurrent into gates    from largest: -0.05  from gates:  0.00  from hiding:  0.15  from memory:  0.00
+   recurrent into hiding   from largest:  0.82  from gates:  0.00  from hiding:  0.23  from memory:  0.00
+   recurrent into memory   from largest: -0.36  from gates:  0.06  from hiding:  0.11  from memory:  0.26
+   readout        largest:  0.82  gates:  0.06  hiding:  0.40  memory:  0.30
+   whole recurrent matrix 0.03  (random relabelling: median 0.00, 95th pct 0.11)
+== v18g50_matched.npz
+   input weights: 0.99
+   recurrent into largest  from largest:  1.00  from gates:  0.00  from hiding:  0.00  from memory:  0.00
+   recurrent into gates    from largest: -0.05  from gates:  0.00  from hiding:  0.15  from memory:  0.00
+   recurrent into hiding   from largest:  0.81  from gates:  0.00  from hiding:  0.23  from memory:  0.00
+   recurrent into memory   from largest: -0.36  from gates:  0.06  from hiding:  0.11  from memory:  0.26
+   readout        largest:  0.82  gates:  0.06  hiding:  0.40  memory:  0.30
+   whole recurrent matrix 0.04  (random relabelling: median 0.00, 95th pct 0.11)

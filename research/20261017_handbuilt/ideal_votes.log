@@ -1,0 +1,32 @@
+raw x  perfect-kernel acc 0.9892
+   1 freq 36deg   acc 0.2399
+   1 freq 30deg   acc 0.2356
+   1 freq 42deg   acc 0.2459
+   2 freq 36,72   acc 0.4206
+   2 freq 18,36   acc 0.2679
+   3 freq 36      acc 0.5882
+   4 freq 36      acc 0.7898
+rectified  perfect-kernel acc 0.9904
+   1 freq 36deg   acc 0.4259
+   1 freq 30deg   acc 0.4263
+   1 freq 42deg   acc 0.4223
+   2 freq 36,72   acc 0.6884
+   2 freq 18,36   acc 0.4692
+   3 freq 36      acc 0.8471
+   4 freq 36      acc 0.9244
+
+kernels shaped by offset (K0=1):
+   trained-like    raw  acc 0.6829
+   trained-like    rect acc 0.8774
+   nbr .4, rest 0  raw  acc 0.7417
+   nbr .4, rest 0  rect acc 0.9102
+   nbr .6, rest 0  raw  acc 0.6055
+   nbr .6, rest 0  rect acc 0.8127
+   nbr .8, rest 0  raw  acc 0.4791
+   nbr .8, rest 0  rect acc 0.6887
+   delta           raw  acc 0.9892
+   delta           rect acc 0.9904
+
+real	0m0.977s
+user	0m7.713s
+sys	0m0.125s

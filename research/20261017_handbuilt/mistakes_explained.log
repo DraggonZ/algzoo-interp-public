@@ -1,0 +1,8 @@
+283500 lists with three positive numbers; ARC answers the third in 2.98%, mechanism predicts 3.06%
+of ARC's third-answers, predicted: 58.3%; of predicted, ARC agrees: 56.8%
+  fourth >= 0.75 of second (could be kept): share 11%; ARC third-answers 8.52%, predicted 9.27%; recall 51%, precision 47%
+  fourth 0 to 0.75: share 77%; ARC third-answers 2.29%, predicted 2.38%; recall 62%, precision 60%
+  fourth negative: share 12%; ARC third-answers 2.29%, predicted 1.71%; recall 60%, precision 81%
+(a) exact largest, fillers fixed at -0.46: rate 3.08%; recall 61%, precision 59%
+(b) real fillers, largest on the grid: rate 2.89%; recall 88%, precision 91%
+(c) both simplifications: rate 3.01%; recall 58%, precision 57%

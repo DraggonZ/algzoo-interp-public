@@ -1,0 +1,10 @@
+w 0.8: P-table correlation with ARC 0.32; RMS ARC 0.61, this 0.73; hiding leftover match 38%
+w 0.6: P-table correlation with ARC 0.34; RMS ARC 0.61, this 0.82; hiding leftover match 38%
+w 0.4: P-table correlation with ARC 0.36; RMS ARC 0.61, this 0.84; hiding leftover match 38%
+w 0.2: P-table correlation with ARC 0.37; RMS ARC 0.61, this 0.83; hiding leftover match 38%
+network                               acc ARC mistakes: all     L     T | near ties, third wins: all | by x_L/x_S <1.1 1.1-1.25 1.25-1.5 1.5-2 2-3 >3 | by order LST LTS SLT TLS STL TSL
+v7z w 0.8 + hiding leftover        91.99%             18.1%  3.0% 25.9% |  24.4% |   22   23   24   25   27   28 |   54   20   36   35    2    0
+v7z w 0.6 + hiding leftover        88.89%             20.1%  2.4% 29.1% |  31.5% |   30   31   31   32   33   32 |   54   18   41   30   31   16
+v7z w 0.4 + hiding leftover        84.73%             20.7%  1.8% 30.1% |  30.9% |   29   30   31   31   32   32 |   54   18   40   27   31   16
+v7z w 0.2 + hiding leftover        82.23%             20.9%  1.1% 30.4% |  31.0% |   30   31   31   31   32   31 |   54   18   39   24   34   17
+5 trained (family)                 95.82%             26.4% 25.5% 28.0% |  20.9% |   23   19   19   20   22   29 |   26   18   24   20   18   21

@@ -1,0 +1,3 @@
+no flip, clock gain 10000: all 0.922 | onepos 0.111 last 0.843 step8 0.876 row 0.976 ord 0.936 | wrong: third 0.43 largest 0.01 onepos 0.13
+no flip, clock gain 100: all 0.918 | onepos 0.110 last 0.839 step8 0.868 row 0.972 ord 0.932 | wrong: third 0.42 largest 0.05 onepos 0.12
+no flip, clock gain 30: all 0.908 | onepos 0.101 last 0.831 step8 0.850 row 0.965 ord 0.922 | wrong: third 0.39 largest 0.13 onepos 0.11

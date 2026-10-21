@@ -1,0 +1,7 @@
+g =   10: accuracy 0.9209; partly off one step after a record 0.038
+g =   15: accuracy 0.9328; partly off one step after a record 0.025
+g =   20: accuracy 0.9390; partly off one step after a record 0.019
+g =   30: accuracy 0.9457; partly off one step after a record 0.012
+g =   50: accuracy 0.9511; partly off one step after a record 0.007
+g =  100: accuracy 0.9546; partly off one step after a record 0.003
+g =  300: accuracy 0.9562; partly off one step after a record 0.001

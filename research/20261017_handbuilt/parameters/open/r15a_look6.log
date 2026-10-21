@@ -1,0 +1,15 @@
+FIT_SEED 101
+r14a (min arrival, offset)                    v2  +192.8   v2c  +197.9   gain 0.924
+top3, min arrival                             v2  +168.5   v2c  +208.5   gain 0.902
+top3, fresh arrival                           v2  +168.6   v2c  +210.4   gain 0.965
+top3, fresh below the third-largest           v2  +170.4   v2c  +206.4   gain 0.990
+FIT_SEED 102
+r14a (min arrival, offset)                    v2  +193.1   v2c  +198.3   gain 0.924
+top3, min arrival                             v2  +168.8   v2c  +209.4   gain 0.903
+top3, fresh arrival                           v2  +169.7   v2c  +212.3   gain 0.967
+top3, fresh below the third-largest           v2  +170.8   v2c  +207.3   gain 0.991
+FIT_SEED 103
+r14a (min arrival, offset)                    v2  +193.1   v2c  +198.4   gain 0.924
+top3, min arrival                             v2  +169.1   v2c  +210.8   gain 0.903
+top3, fresh arrival                           v2  +167.2   v2c  +210.2   gain 0.966
+top3, fresh below the third-largest           v2  +168.1   v2c  +206.1   gain 0.990

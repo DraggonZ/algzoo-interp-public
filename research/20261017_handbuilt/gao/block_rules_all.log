@@ -1,0 +1,10 @@
+memory neuron  0: on/off agreement 0.874 (on 0.752 of steps)
+memory neuron  3: on/off agreement 0.898 (on 0.767 of steps)
+memory neuron 10: on/off agreement 0.946 (on 0.885 of steps)
+memory neuron 11: on/off agreement 0.942 (on 0.875 of steps)
+memory neuron 12: on/off agreement 0.939 (on 0.902 of steps)
+memory neuron 13: on/off agreement 0.960 (on 0.904 of steps)
+memory neuron 14: on/off agreement 0.963 (on 0.861 of steps)
+memory neuron 15: on/off agreement 0.857 (on 0.728 of steps)
+neuron 0 by its rule, 15 by formula sign            : all 16 replaced 0.854
+all memory neurons by formula sign (0 by its rule)  : all 16 replaced 0.864

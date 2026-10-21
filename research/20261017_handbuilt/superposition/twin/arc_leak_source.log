@@ -1,0 +1,6 @@
+ARC, coefficient of a positive smaller number on the second-over-third lead (per unit, second's coefficient = 1):
+  runner-up when the second arrived: median -0.026, |.| median 0.073, n 46,922
+  runner-up when the third arrived:  median +0.007, |.| median 0.097, n 47,230
+  runner-up at both arrivals:        median +nan, |.| median nan, n 0
+  neither:                           median -0.001, |.| median 0.011, n 318,485
+the largest: median +0.001, |.| median 0.050, n 200,000 | the largest, when it arrived between the third and the second: median -0.002, |.| median 0.048, n 66,858 | before both: median +0.007, |.| median 0.086, n 66,611 | after both: median +0.001, |.| median 0.029, n 66,531

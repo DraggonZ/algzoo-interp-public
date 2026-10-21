@@ -1,0 +1,6 @@
+gap 0.0: mem6 off at step 9 on 11.82% of lists; pre/m8 quantiles 0.1% 0.000 1% 0.000 10% 0.000 50% 0.668; accuracy off 88.4 on 92.8; answer at 1 when wrong 5.1%
+   largest at 1: pre/m8 quantiles 0.1% 0.000 1% 0.000 50% 0.000 99% 0.000
+   lists with the largest at position 1: mem6 off 100.0%, others 0.8%
+gap 1.0: mem6 off at step 9 on 0.06% of lists; pre/m8 quantiles 0.1% 0.000 1% 0.025 10% 0.265 50% 0.927; accuracy off 12.1 on 88.5; answer at 1 when wrong 30.3%
+   largest at 1: pre/m8 quantiles 0.1% 0.000 1% 0.005 50% 0.302 99% 0.941
+   lists with the largest at position 1: mem6 off 0.1%, others 0.1%

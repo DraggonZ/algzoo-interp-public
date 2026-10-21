@@ -1,0 +1,10 @@
+six trained: ratio 1.16; share of summed squared error from seed 1 0.48, seed 4 0.31, ARC 0.17
+bootstrap over the six models: ratio median 1.16, 10-90% 0.59-1.68, 2.5-97.5% 0.30-1.92
+normal-errors view, 95% range for the true mean squared error: 0.42x to 4.85x the observed -> ratio 0.48-5.63
+  with 8 fresh models the same range would be 0.46x-3.67x
+  with 12 fresh models the same range would be 0.51x-2.72x
+  with 16 fresh models the same range would be 0.55x-2.32x
+break-even cost (ratio 1): 1209 runs; ratio 3: 3627 runs
+copies sigma 0.005: 32 copies, mean accuracy 0.913; estimate RMSE 1.35 vs sampling at 1400 runs 0.75 -> ratio 3.3
+copies sigma 0.01: 32 copies, mean accuracy 0.803; estimate RMSE 2.66 vs sampling at 1400 runs 1.05 -> ratio 6.4
+copies sigma 0.02: 32 copies, mean accuracy 0.638; estimate RMSE 2.16 vs sampling at 1400 runs 1.26 -> ratio 2.9

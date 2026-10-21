@@ -1,0 +1,12 @@
+first steps of one list: x, m1, jump, newmax, age
+[[-0.79  -2.035  0.603  0.744 -0.31   0.367  1.71   1.061  0.708  0.688]
+ [ 0.     0.     0.     0.603  0.744  0.744  0.744  1.71   1.71   1.71 ]
+ [ 0.     0.     0.603  0.141  0.     0.     0.966  0.     0.     0.   ]
+ [ 0.     0.     1.     1.     0.     0.     1.     0.     0.     0.   ]
+ [-1.    -1.     0.     0.     1.     2.     0.     1.     2.     3.   ]]
+neuron 2: error rms 1.36 -> 1.18 after regression; x prev -0.00, m1 prev +0.59, m2 prev +0.60, jump prev +0.01, jump 2 back -0.89, newmax prev -0.05, age prev -0.04, 1 +0.05
+   without jump prev: rms 1.18
+   input error (other sources) rms 1.01, mean +0.25; regressed on x, m1, m2, jump, jump prev, newmax, age, 1: [ 0.009  0.145  0.507  0.01  -0.205 -0.239 -0.115  0.204] -> rms 0.96
+neuron 4: error rms 0.31 -> 0.26 after regression; x prev -0.10, m1 prev -0.11, m2 prev -0.02, jump prev +0.21, jump 2 back +0.14, newmax prev -0.31, age prev +0.02, 1 -0.01
+   without jump prev: rms 0.27
+   input error (other sources) rms 0.91, mean -0.65; regressed on x, m1, m2, jump, jump prev, newmax, age, 1: [-0.003 -0.765 -0.024  0.002  0.759  0.044  0.02  -0.065] -> rms 0.71

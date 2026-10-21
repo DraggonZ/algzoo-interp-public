@@ -1,0 +1,23 @@
+ratio by age: 1:17.69 2:17.59 3:18.48 4:18.16 5:16.93 6:15.56 7:14.76 8:14.88 9:15.87
+residual spread (robust SD, units of L): 1:0.40 2:0.46 3:0.29 4:0.58 5:1.28 6:2.00 7:2.38 8:2.19 9:1.67
+TC 32x k8 ft lam 1: single-step unexplained variance 1.19% before, 4.76% after; dead 1; random-list accuracy every step 29.6% -> 59.6%, last step 40.3% -> 42.3%
+TC 128x k8 ft lam 1: single-step unexplained variance 0.70% before, 5.98% after; dead 59; random-list accuracy every step 36.5% -> 71.9%, last step 56.7% -> 50.0%
+TC 128x k8 ft lam 10: single-step unexplained variance 0.70% before, 9.96% after; dead 60; random-list accuracy every step 36.5% -> 77.5%, last step 56.7% -> 45.9%
+TC 128x k4 ft lam 1: single-step unexplained variance 3.18% before, 18.16% after; dead 61; random-list accuracy every step 22.2% -> 30.5%, last step 41.7% -> 35.4%
+ARC + noise 0.7% unexpl., every: random-list accuracy 42.7%
+ARC + noise 0.7% unexpl., last: random-list accuracy 68.6%
+ARC + noise 0.1% unexpl., every: random-list accuracy 67.8%
+ARC + noise 0.1% unexpl., last: random-list accuracy 87.8%
+network                               acc ARC mistakes: all     L     T | near ties, third wins: all | by x_L/x_S <1.1 1.1-1.25 1.25-1.5 1.5-2 2-3 >3 | by order LST LTS SLT TLS STL TSL
+ARC + noise 0.7% unexpl., every    45.60%             31.5% 29.5% 34.5% |  25.7% |   25   25   26   27   26   23 |   26   27   26   24   26   24
+ARC + noise 0.7% unexpl., last     70.03%             43.9% 42.4% 48.4% |  31.9% |   28   31   32   34   34   33 |   33   34   32   35   27   30
+ARC + noise 0.1% unexpl., every    69.83%             43.6% 40.5% 48.5% |  32.0% |   29   31   32   33   34   32 |   35   32   33   32   29   32
+ARC + noise 0.1% unexpl., last     88.42%             58.8% 55.8% 64.3% |  30.0% |   25   28   29   31   34   38 |   35   32   33   33   21   26
+TC 32x k8 ft lam 1, every step     62.24%             33.1% 29.9% 37.4% |  28.6% |   26   30   30   29   28   25 |   38   24   37   16   31   25
+TC 32x k8 ft lam 1, last step      43.13%             34.0% 32.4% 35.3% |  26.7% |   25   26   27   27   28   28 |   21   37   26   19   37   19
+TC 128x k8 ft lam 1, every step    74.41%             39.0% 38.2% 42.1% |  32.1% |   30   32   33   33   32   31 |   36   34   31   28   32   31
+TC 128x k8 ft lam 1, last step     50.92%             32.3% 38.2% 32.1% |  25.7% |   24   25   26   26   28   27 |   14   38   17   29   28   28
+TC 128x k8 ft lam 10, every step   79.34%             39.8% 35.8% 41.0% |  33.4% |   30   34   35   34   34   32 |   37   35   31   32   35   30
+TC 128x k8 ft lam 10, last step    47.31%             29.1% 29.8% 31.0% |  26.1% |   26   26   26   26   26   25 |   19   36   17   29   26   31
+TC 128x k4 ft lam 1, every step    35.11%             22.9% 27.2% 22.8% |  20.3% |   18   20   21   22   20   18 |   30   12   23   21   13   22
+TC 128x k4 ft lam 1, last step     37.48%             26.1% 25.4% 28.8% |  22.2% |   21   21   22   23   23   23 |   24   24   23   18   25   19

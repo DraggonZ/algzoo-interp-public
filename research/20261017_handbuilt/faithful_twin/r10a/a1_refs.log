@@ -1,0 +1,19 @@
+switch-off point fitted as p P + m M + c (P at step 1, M at step 2, test number k steps after)
+ 1 step: slot1 E1: p -0.00 m 1.00 (ARC p 0.18, ok) | slot6 E6: p 1.00 m 0.00 (ARC p 1.01, ok) | slot7 clock2: p -0.00 m 1.00 (ARC p 0.00, ok) | slot8 runnerup: p 1.00 m 0.00 (ARC p 1.10, ok)
+ 2 step: slot1 E1: p 1.00 m 0.00 (ARC p 0.95, ok) | slot6 E6: p -0.00 m 1.00 (ARC p 0.23, ok) | slot7 clock2: p -0.00 m 1.00 (ARC p 0.00, ok) | slot8 runnerup: p 1.00 m 0.00 (ARC p 0.77, ok)
+
+job 7 parts (random lists, steps 1-9): off at records, on elsewhere, R2 of reference on largest/second mix
+ slot1 E1: off 1.000 on 0.962 R2 0.734 (M 0.70, S 0.18)
+ slot6 E6: off 1.000 on 0.945 R2 0.734 (M 0.70, S 0.18)
+ slot7 clock2: off 1.000 on 1.000 R2 0.973 (M 0.93, S -0.03)
+ slot8 runnerup: off 1.000 on 0.830 R2 0.796 (M 0.06, S 0.55)
+
+accuracy (200k lists): 95.18  (probes have no outgoing weights)
+
+counterfactual scan: E1's reference at step 5 (two steps after the record) against x_4 = s P, P = 1
+ s 0.5: E1 switches off at x_5 = 1.000
+ s 0.9: E1 switches off at x_5 = 1.000
+ s 1.1: E1 switches off at x_5 = 1.101
+ s 1.2: E1 switches off at x_5 = 1.200
+ s 1.4: E1 switches off at x_5 = 1.400
+ s 1.6: E1 switches off at x_5 = 1.600

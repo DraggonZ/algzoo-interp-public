@@ -1,0 +1,8 @@
+mean |negative| / second    0-0.5    (21.07% of lists): right  96.7%
+mean |negative| / second  0.5-1      (42.61% of lists): right  96.6%
+mean |negative| / second    1-2      (26.04% of lists): right  95.9%
+mean |negative| / second    2-5      ( 7.37% of lists): right  94.5%
+mean |negative| / second    5-10     ( 1.12% of lists): right  91.8%
+mean |negative| / second   10-30     ( 0.51% of lists): right  87.8%
+mean |negative| / second   30-100    ( 0.15% of lists): right  80.0%
+mean |negative| / second  100-1e+09  ( 0.06% of lists): right  73.8%
