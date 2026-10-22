@@ -88,7 +88,6 @@ def draw(P, rows, title, out):
     big = [float(np.abs(a).max()) for a in (wi, wh, wo)]
     print(out, "max |weight| input, recurrent, readout:", [round(b, 1) for b in big])
 
-draw([np.asarray(p, float) for p in example()], rows_arc, "Trained by ARC (16 neurons)", "fig_v4_weights_arc.png")
 A = [np.asarray(p, float) for p in example()]; RA = rms(A)
 P16 = [np.asarray(p, float) for p in load("r6a_gap").weights()]
 P16 = rescale(P16, RA)
@@ -107,5 +106,9 @@ def chain_order(P, rows, is_cell):
     return rest[:first] + cells + rest[first:]
 rows_16 = chain_order(P16, rows_16, lambda r: r[2] == "memory")
 rows_24 = chain_order(P24, rows_24, lambda r: r[1].startswith("memory") and r[0] != I["linear"])
+# ARC's memory rows in the same slot order as the 16-neuron copy, so the two figures line up row for row
+_slots16 = [r[0] for r in rows_16 if r[2] == "memory"]
+rows_arc = [r for r in rows_arc if r[2] != "memory"] + sorted([r for r in rows_arc if r[2] == "memory"], key=lambda r: _slots16.index(r[0]))
+draw([np.asarray(p, float) for p in example()], rows_arc, "Trained by ARC (16 neurons)", "fig_v4_weights_arc.png")
 draw(P16, rows_16, "Built by hand, 16 neurons", "fig_v4_weights_hb16.png")
 draw(P24, rows_24, "Built by hand, 24 neurons", "fig_v4_weights_hb24.png")
