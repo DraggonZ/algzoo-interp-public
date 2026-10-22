@@ -95,5 +95,17 @@ P16 = rescale(P16, RA)
 P24 = [np.asarray(p, float) for p in w24.weights()]
 slot = {r[0]: r[1].split("(")[-1].rstrip(")") for r in rows_24}
 P24 = rescale(P24, np.array([RA[int(slot[i])] if slot[i].isdigit() else np.median(RA) for i in range(24)]))
+def chain_order(P, rows, is_cell):
+    """Sort the delay-chain memory cells by the position each one adds to (its largest readout weight), so the
+    chain shows as a diagonal; label each with that position. Other rows keep their order."""
+    cells = [r for r in rows if is_cell(r)]
+    pos = {r[0]: int(np.argmax(np.abs(P[2][:, r[0]]))) + 1 for r in cells}
+    cells = sorted(cells, key=lambda r: pos[r[0]])
+    cells = [(r[0], f"memory, position {pos[r[0]]}  ({r[1].split('(')[-1]}", r[2]) for r in cells]
+    first = min(i for i, r in enumerate(rows) if is_cell(r))
+    rest = [r for r in rows if not is_cell(r)]
+    return rest[:first] + cells + rest[first:]
+rows_16 = chain_order(P16, rows_16, lambda r: r[2] == "memory")
+rows_24 = chain_order(P24, rows_24, lambda r: r[1].startswith("memory") and r[0] != I["linear"])
 draw(P16, rows_16, "Built by hand, 16 neurons", "fig_v4_weights_hb16.png")
 draw(P24, rows_24, "Built by hand, 24 neurons", "fig_v4_weights_hb24.png")
